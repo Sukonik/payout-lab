@@ -1,5 +1,15 @@
 # 🧪 Payout Lab
 
+> **Live site: https://sukonik.github.io/payout-lab/**
+
+| | |
+|---|---|
+| **What it is** | Free dividend calculator that shows what each share pays, when, and how fragile your income is |
+| **Hosting** | GitHub Pages, static files only (`index.html` + `data.json`), no backend |
+| **Data** | Refreshed on weekdays by a GitHub Action from Yahoo Finance's public endpoint, no API key |
+| **Privacy** | Portfolios stay in your browser's local storage, no accounts, no third-party requests |
+| **Status** | Pre-launch. Numbers are starter estimates until the first data refresh succeeds, and the site says so |
+
 **Stress-test the dividend portfolio you already own.**
 
 Payout Lab is a free, privacy-first dividend calculator. Enter your holdings and it shows what they pay, when they pay it, and how fragile that income is. There is no signup and no broker linking, and nothing leaves your browser.
