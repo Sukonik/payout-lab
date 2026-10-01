@@ -4,12 +4,13 @@
 
 Payout Lab is a free, privacy-first dividend calculator. Enter your holdings and it shows what they pay, when they pay it, and how fragile that income is. There is no signup and no broker linking, and nothing leaves your browser.
 
-It is a single static file (`index.html`) with no build step, no backend and no dependencies beyond two Google Fonts.
+It is one static page (`index.html`) plus a data file (`data.json`), with no build step, backend or API key.
 
 ## Features
 
 | Tool | What it answers |
 |---|---|
+| **Per-share payouts** | Search any ticker to see what one share pays per payment, how often, and in which months, with price, yearly total and yield. |
 | **Holdings table** | Portfolio value, yearly income, average monthly income and yield for the shares you enter. |
 | **Monthly income calendar** | Which months the money arrives, based on each holding's payout schedule (monthly, quarterly cycles, semi-annual, annual). |
 | **Dividend cut test** | "If this holding cuts its dividend by X%, what happens to my income?" |
@@ -22,11 +23,12 @@ Other details:
 - Light and dark themes (follows the system setting).
 - Portfolio saved in `localStorage` only (key `payoutlab.v1`).
 - Mobile-friendly, with safe-area insets.
-- Built-in starter database of about 28 popular dividend stocks and ETFs, plus a one-click sample portfolio.
+- About 28 popular dividend stocks and ETFs built in, plus a one-click sample portfolio.
+- No third-party requests from the page (system fonts, no trackers).
 
 ## Run locally
 
-Open `index.html` in a browser. You can also serve it:
+Serve the folder (needed so the page can load `data.json`; opening `index.html` directly also works with the built-in starter numbers):
 
 ```bash
 python3 -m http.server 8000
@@ -34,30 +36,33 @@ python3 -m http.server 8000
 
 ## Deploy
 
-No build step. Any static host works:
+Static files only: `index.html` + `data.json`. Cloudflare Pages, Netlify, or GitHub Pages all work with no build step.
 
-- **Cloudflare Pages**: connect the repo, leave the build command empty and set the output directory to `/`.
-- **Netlify**: drag the folder into Netlify Drop, or connect the repo.
-- **GitHub Pages**: serve from the root of the branch.
+## Data: real numbers, no API key
 
-## Data
+The page reads `data.json`. A scheduled GitHub Action (`.github/workflows/update-data.yml`) runs `scripts/update-data.mjs` every weekday after the US close. It pulls price and dividend history from Yahoo Finance's public chart endpoint, then works out for each ticker:
 
-The `DB` object near the top of the `<script>` block holds the starter data (price, yearly dividend per share, payout schedule, qualified flag). **The figures are approximate placeholders. Replace them with verified numbers before a public launch.** `DATA_AS_OF` controls the label shown under the title.
+- `p` price
+- `d` dividends paid in the last 12 months, per share
+- `per` the most recent payment per share
+- `s` pay schedule (monthly, quarterly cycle, twice a year, yearly)
 
-To add a ticker, add an entry:
+and commits the result. If a ticker fails, its old values stay. If everything fails, the file is left untouched.
 
-```js
-SCHD:{n:"Schwab US Dividend Equity ETF", p:27.5, d:1.03, s:"Q3", q:true}
-```
+**Until the first run, `data.json` holds approximate starter estimates and the site says so.** Trigger the first refresh from the repo's Actions tab (Refresh dividend data, then Run workflow).
 
-Schedules: `M` monthly, `Q1`/`Q2`/`Q3` quarterly (Jan/Apr/Jul/Oct, Feb/May/Aug/Nov, Mar/Jun/Sep/Dec), `S` twice a year, `A` yearly.
+Things to know:
+- Yahoo's endpoint is unofficial and has no SLA or published terms for commercial redistribution. For a paid product, review their terms and consider a licensed source later.
+- Pay months come from ex-dividend dates, which usually land a few weeks before the cash arrives.
+- Tax type (`q`) is not provided by the feed. It is kept from the seed data, so check it for new tickers.
+- To add a ticker, add an entry to `data.json` such as `"AVGO": {"n": "Broadcom", "p": 1, "d": 0}` and the next refresh fills it in.
 
 ## Monetization roadmap
 
 The product has a clear audience (income investors) and an obvious trust angle (no data collection). Suggested path, cheapest first:
 
 1. **Launch free and collect traffic.** Ship on a custom domain and add basic privacy-friendly analytics (Plausible or Cloudflare Web Analytics). Write SEO pages around the queries people already search, such as "dividend calculator", "dividend cut calculator" and "how many shares of SCHD for $1,000 a month".
-2. **Verified live data.** The biggest quality gap is the hardcoded starter data. Pull prices and dividends from a market data API (for example Financial Modeling Prep, Polygon or Tiingo) through a small serverless function so API keys stay private. Check each provider's terms for commercial and redistribution use first.
+2. **Licensed data.** The free Yahoo-based refresh is fine for launch. Before charging, move to a provider whose terms allow commercial use (for example Financial Modeling Prep, Polygon or Tiingo), called from a serverless function so keys stay private.
 3. **Pro tier ($4 to $8/month or ~$40/year).** Candidates for gating:
    - Unlimited saved portfolios and cloud sync across devices.
    - CSV import from brokers.
@@ -78,7 +83,10 @@ The product has a clear audience (income investors) and an obvious trust angle (
 ## Project structure
 
 ```
-index.html   # the entire app: HTML, CSS, JS, starter data
+index.html                          # the whole app: HTML, CSS, JS
+data.json                           # prices and dividends, refreshed daily
+scripts/update-data.mjs             # the refresh script (Node 20, no deps)
+.github/workflows/update-data.yml   # schedule for the refresh
 README.md
 LICENSE      # MPL-2.0
 ```

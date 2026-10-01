@@ -1,0 +1,21 @@
+name: Refresh dividend data
+on:
+  schedule:
+    - cron: "17 22 * * 1-5"   # weekdays after US market close
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: node scripts/update-data.mjs
+      - name: Commit changes
+        run: |
+          git config user.name "payout-lab-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data.json
+          git diff --cached --quiet || (git commit -m "Refresh dividend data" && git push)

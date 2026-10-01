@@ -1,0 +1,202 @@
+{
+ "updated": null,
+ "source": "seed estimates, awaiting first refresh",
+ "tickers": {
+  "SCHD": {
+   "n": "Schwab US Dividend Equity ETF",
+   "p": 27.5,
+   "d": 1.03,
+   "s": "Q3",
+   "q": true
+  },
+  "VYM": {
+   "n": "Vanguard High Dividend Yield ETF",
+   "p": 135.0,
+   "d": 3.4,
+   "s": "Q3",
+   "q": true
+  },
+  "VIG": {
+   "n": "Vanguard Dividend Appreciation ETF",
+   "p": 205.0,
+   "d": 3.4,
+   "s": "Q3",
+   "q": true
+  },
+  "DGRO": {
+   "n": "iShares Core Dividend Growth ETF",
+   "p": 63.0,
+   "d": 1.42,
+   "s": "Q3",
+   "q": true
+  },
+  "SPYD": {
+   "n": "SPDR Portfolio S&P 500 High Dividend ETF",
+   "p": 44.0,
+   "d": 1.9,
+   "s": "Q3",
+   "q": true
+  },
+  "SPYV": {
+   "n": "SPDR Portfolio S&P 500 Value ETF",
+   "p": 54.0,
+   "d": 1.1,
+   "s": "Q3",
+   "q": true
+  },
+  "SCHB": {
+   "n": "Schwab US Broad Market ETF",
+   "p": 25.0,
+   "d": 0.33,
+   "s": "Q3",
+   "q": true
+  },
+  "JEPI": {
+   "n": "JPMorgan Equity Premium Income ETF",
+   "p": 57.0,
+   "d": 4.5,
+   "s": "M",
+   "q": false
+  },
+  "JEPQ": {
+   "n": "JPMorgan Nasdaq Equity Premium Income ETF",
+   "p": 56.0,
+   "d": 5.6,
+   "s": "M",
+   "q": false
+  },
+  "O": {
+   "n": "Realty Income",
+   "p": 57.0,
+   "d": 3.22,
+   "s": "M",
+   "q": false
+  },
+  "STAG": {
+   "n": "STAG Industrial",
+   "p": 36.0,
+   "d": 1.49,
+   "s": "M",
+   "q": false
+  },
+  "MAIN": {
+   "n": "Main Street Capital",
+   "p": 60.0,
+   "d": 3.06,
+   "s": "M",
+   "q": false
+  },
+  "VZ": {
+   "n": "Verizon",
+   "p": 43.0,
+   "d": 2.71,
+   "s": "Q2",
+   "q": true
+  },
+  "T": {
+   "n": "AT&T",
+   "p": 27.0,
+   "d": 1.11,
+   "s": "Q2",
+   "q": true
+  },
+  "KO": {
+   "n": "Coca-Cola",
+   "p": 70.0,
+   "d": 2.04,
+   "s": "Q1",
+   "q": true
+  },
+  "PEP": {
+   "n": "PepsiCo",
+   "p": 145.0,
+   "d": 5.69,
+   "s": "Q3",
+   "q": true
+  },
+  "PG": {
+   "n": "Procter & Gamble",
+   "p": 158.0,
+   "d": 4.23,
+   "s": "Q2",
+   "q": true
+  },
+  "JNJ": {
+   "n": "Johnson & Johnson",
+   "p": 165.0,
+   "d": 5.2,
+   "s": "Q3",
+   "q": true
+  },
+  "ABBV": {
+   "n": "AbbVie",
+   "p": 195.0,
+   "d": 6.56,
+   "s": "Q2",
+   "q": true
+  },
+  "PFE": {
+   "n": "Pfizer",
+   "p": 25.0,
+   "d": 1.72,
+   "s": "Q3",
+   "q": true
+  },
+  "MO": {
+   "n": "Altria",
+   "p": 58.0,
+   "d": 4.24,
+   "s": "Q1",
+   "q": true
+  },
+  "XOM": {
+   "n": "Exxon Mobil",
+   "p": 112.0,
+   "d": 4.12,
+   "s": "Q3",
+   "q": true
+  },
+  "CVX": {
+   "n": "Chevron",
+   "p": 155.0,
+   "d": 6.84,
+   "s": "Q3",
+   "q": true
+  },
+  "HD": {
+   "n": "Home Depot",
+   "p": 380.0,
+   "d": 9.2,
+   "s": "Q3",
+   "q": true
+  },
+  "MSFT": {
+   "n": "Microsoft",
+   "p": 500.0,
+   "d": 3.64,
+   "s": "Q3",
+   "q": true
+  },
+  "AAPL": {
+   "n": "Apple",
+   "p": 230.0,
+   "d": 1.04,
+   "s": "Q2",
+   "q": true
+  },
+  "GOOGL": {
+   "n": "Alphabet",
+   "p": 200.0,
+   "d": 0.84,
+   "s": "Q3",
+   "q": true
+  },
+  "META": {
+   "n": "Meta Platforms",
+   "p": 700.0,
+   "d": 2.1,
+   "s": "Q3",
+   "q": true
+  }
+ }
+}
