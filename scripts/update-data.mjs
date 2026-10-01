@@ -19,7 +19,13 @@ export function fromTiingo(rows) {
   if (!Array.isArray(rows) || !rows.length) return null;
   const price = rows[rows.length - 1].close;
   if (!(price > 0)) return null;
-  const events = rows.filter((r) => r.divCash > 0).map((r) => ({ t: Date.parse(r.date), a: r.divCash }));
+  // divCash is the amount as paid at the time. Divide by every LATER split so old payments are comparable to today's share count.
+  const events = [];
+  let laterSplits = 1;
+  for (let i = rows.length - 1; i >= 0; i--) {
+    if (rows[i].divCash > 0) events.push({ t: Date.parse(rows[i].date), a: rows[i].divCash / laterSplits });
+    if (rows[i].splitFactor > 0) laterSplits *= rows[i].splitFactor;
+  }
   return { price, events };
 }
 
@@ -87,7 +93,11 @@ async function main() {
       try {
         const raw = await fetcher(t);
         if (!raw) throw new Error("no data");
-        Object.assign(db.tickers[t], summarize(raw), { src: name });
+        const sum = summarize(raw);
+        // A price with no dividends usually means this provider lacks dividend data for the ticker; try the next one.
+        if (!(sum.d > 0) && name !== attempts[attempts.length - 1][0]) throw new Error("no dividends reported");
+        for (const k of ["per", "s", "last", "hist", "g3", "g5"]) delete db.tickers[t][k];
+        Object.assign(db.tickers[t], sum, { src: name });
         used[name] = (used[name] || 0) + 1;
         ok++;
         break;

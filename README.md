@@ -6,7 +6,7 @@
 |---|---|
 | **What it is** | Free dividend calculator that shows what each share pays, when, and how fragile your income is |
 | **Hosting** | GitHub Pages via Actions (`.github/workflows/pages.yml`), static files only (`index.html` + `data.json`), no backend. One-time setup: Settings → Pages → Source: **GitHub Actions** |
-| **Data** | Refreshed on weekdays by a GitHub Action from Yahoo Finance's public endpoint, no API key |
+| **Data** | Refreshed on weekdays by a GitHub Action from Tiingo (API key stored as a repo secret), with Yahoo Finance as fallback |
 | **Privacy** | Portfolios stay in your browser's local storage, no accounts, no third-party requests |
 | **Status** | Pre-launch. Numbers are starter estimates until the first data refresh succeeds, and the site says so |
 
@@ -49,24 +49,25 @@ python3 -m http.server 8000
 
 Static files only: `index.html` + `data.json`. Cloudflare Pages, Netlify, or GitHub Pages all work with no build step.
 
-## Data: real numbers, no API key
+## Data: real numbers
 
-The page reads `data.json`. A scheduled GitHub Action (`.github/workflows/update-data.yml`) runs `scripts/update-data.mjs` every weekday after the US close. It pulls price and dividend history from Yahoo Finance's public chart endpoint, then works out for each ticker:
+The page reads `data.json`. A scheduled GitHub Action (`.github/workflows/update-data.yml`) runs `scripts/update-data.mjs` every weekday after the US close. For each ticker it tries **Tiingo** first (needs the `TIINGO_TOKEN` repo secret) and falls back to **Yahoo Finance's** public endpoint if Tiingo has no data for that ticker. It then works out:
 
-- `p` price
+- `p` price (latest close)
 - `d` dividends paid in the last 12 months, per share
 - `per` the most recent payment per share
 - `s` pay schedule (monthly, quarterly cycle, twice a year, yearly)
 - `type` one of `EQUITY_STANDARD`, `ETF_PASS_THROUGH`, `ADR_VARIABLE`; picks which explanation the card shows (set by hand, not by the feed)
 - `hist` the last 8 payments, shown as a small bar chart (shows steady vs jagged payouts)
 - `g3`, `g5` dividend growth per year over 3 and 5 years, when enough history exists
+- `src` which provider supplied that ticker
 
-and commits the result. If a ticker fails, its old values stay. If everything fails, the file is left untouched.
+and commits the result. If a ticker fails on every provider, its old values stay. If everything fails, the file is left untouched. A successful refresh redeploys the site.
 
-**Until the first run, `data.json` holds approximate starter estimates and the site says so.** Trigger the first refresh from the repo's Actions tab (Refresh dividend data, then Run workflow).
+**Until a refresh succeeds, `data.json` holds approximate starter estimates and the site says so.** Trigger one from the repo's Actions tab (Refresh dividend data, then Run workflow).
 
 Things to know:
-- Yahoo's endpoint is unofficial and has no SLA or published terms for commercial redistribution. For a paid product, review their terms and consider a licensed source later.
+- Check Tiingo's terms for displaying data on a public or paid site before charging, and upgrade to their commercial plan if the free plan does not cover it. Yahoo's endpoint is unofficial and has no commercial terms, so it is only a fallback.
 - Pay months come from ex-dividend dates, which usually land a few weeks before the cash arrives.
 - Tax type (`q`) is not provided by the feed. It is kept from the seed data, so check it for new tickers.
 - To add a ticker, add an entry to `data.json` such as `"AVGO": {"n": "Broadcom", "p": 1, "d": 0}` and the next refresh fills it in.
@@ -76,7 +77,7 @@ Things to know:
 The product has a clear audience (income investors) and an obvious trust angle (no data collection). Suggested path, cheapest first:
 
 1. **Launch free and collect traffic.** Ship on a custom domain and add basic privacy-friendly analytics (Plausible or Cloudflare Web Analytics). Write SEO pages around the queries people already search, such as "dividend calculator", "dividend cut calculator" and "how many shares of SCHD for $1,000 a month".
-2. **Licensed data.** The free Yahoo-based refresh is fine for launch. Before charging, move to a provider whose terms allow commercial use (for example Financial Modeling Prep, Polygon or Tiingo), called from a serverless function so keys stay private.
+2. **Licensed data.** Before charging, confirm your data provider's plan allows commercial display (Tiingo commercial plan, or Financial Modeling Prep, Polygon/Massive, EODHD). The key stays in a GitHub secret and the browser never calls the API.
 3. **Pro tier ($4 to $8/month or ~$40/year).** Candidates for gating:
    - Unlimited saved portfolios and cloud sync across devices.
    - CSV import from brokers.
