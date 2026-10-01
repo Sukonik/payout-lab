@@ -354,8 +354,9 @@ function histHtml(e){
     o+='<p class="note">Last '+h.length+' payments, '+money(min,4)+' to '+money(max,4)+'. '+(max/min>1.15?'Payments vary a lot from one to the next.':'Payments are steady.')+'</p>';
   }
   if(e.g3!=null||e.g5!=null)o+='<p class="note">Dividend growth per year: '+(e.g3!=null?'3-year '+pct(e.g3,1):'')+(e.g3!=null&&e.g5!=null?', ':'')+(e.g5!=null?'5-year '+pct(e.g5,1):'')+'.</p>';
-  if(e.adr)o+='<p class="note"><b>Foreign ADR:</b> the dollar amount moves with the exchange rate and foreign tax withholding, so it can change every payment even if the company keeps its dividend flat.</p>';
-  else if(/ETF|Fund/i.test(e.n))o+='<p class="note"><b>ETF:</b> each payout is a pass-through of whatever its holdings paid that quarter, so amounts rise and fall.</p>';
+  if(e.type==="ADR_VARIABLE")o+='<p class="note"><b>Foreign ADR:</b> the dollar amount moves with the exchange rate and foreign tax withholding, so it can change every payment even if the company keeps its dividend flat.</p>';
+  else if(e.type==="ETF_PASS_THROUGH")o+='<p class="note"><b>ETF:</b> each payout is a pass-through of whatever its holdings paid that quarter, so amounts rise and fall.</p>';
+  else if(e.type==="EQUITY_STANDARD"&&e.g5!=null)o+='<p class="note"><b>Stock:</b> payouts are set by the board, so they usually step up in small, regular increments.</p>';
   return o;
 }
 function fillTickers(){$("tickers").innerHTML=Object.keys(DB).map(function(k){return '<option value="'+k+'">'+esc(DB[k].n)+'</option>'}).join("")}

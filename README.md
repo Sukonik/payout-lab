@@ -47,6 +47,7 @@ The page reads `data.json`. A scheduled GitHub Action (`.github/workflows/update
 - `d` dividends paid in the last 12 months, per share
 - `per` the most recent payment per share
 - `s` pay schedule (monthly, quarterly cycle, twice a year, yearly)
+- `type` one of `EQUITY_STANDARD`, `ETF_PASS_THROUGH`, `ADR_VARIABLE`; picks which explanation the card shows (set by hand, not by the feed)
 - `hist` the last 8 payments, shown as a small bar chart (shows steady vs jagged payouts)
 - `g3`, `g5` dividend growth per year over 3 and 5 years, when enough history exists
 
