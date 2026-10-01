@@ -51,7 +51,7 @@ Static files only: `index.html` + `data.json`. Cloudflare Pages, Netlify, or Git
 
 ## Data: real numbers
 
-The page reads `data.json`. A scheduled GitHub Action (`.github/workflows/update-data.yml`) runs `scripts/update-data.mjs` three times each weekday. Each run refreshes the 45 stalest tickers (Tiingo's free plan allows about 50 symbols an hour), so the whole list cycles in a few days. You can run it by hand with a bigger batch from the Actions tab. For each ticker it tries **Tiingo** first (needs the `TIINGO_TOKEN` repo secret) and falls back to **Yahoo Finance's** public endpoint if Tiingo has no data for that ticker. It then works out:
+The page reads `data.json`. A scheduled GitHub Action (`.github/workflows/update-data.yml`) runs `scripts/update-data.mjs` three times each weekday. Each run refreshes the 45 stalest tickers (Tiingo's free plan allows about 50 symbols an hour), so the whole list cycles in a few days. You can run it by hand with a bigger batch from the Actions tab. For each ticker it tries **Tiingo** first (needs the `TIINGO_TOKEN` repo secret) and falls back to **Yahoo Finance's** public endpoint only if Tiingo has no data for that ticker. If Tiingo reports a rate limit (HTTP 429), the run stops and the remaining tickers wait for the next run. It then works out:
 
 - `p` price (latest close)
 - `d` dividends paid in the last 12 months, per share

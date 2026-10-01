@@ -64,7 +64,7 @@ const BATCH = Number(process.env.BATCH) || 45;
 
 async function getJson(url, headers = {}) {
   const res = await fetch(url, { headers });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  if (!res.ok) throw Object.assign(new Error(`HTTP ${res.status}`), { status: res.status });
   return res.json();
 }
 
@@ -93,7 +93,9 @@ async function main() {
     .sort((a, b) => (db.tickers[a].u || "").localeCompare(db.tickers[b].u || ""))
     .slice(0, BATCH);
   console.log(`Refreshing ${queue.length} of ${Object.keys(db.tickers).length} tickers (stalest first)`);
+  let rateLimited = false;
   for (const t of queue) {
+    if (rateLimited) break;
     const attempts = [...(TIINGO_TOKEN ? [["Tiingo", fetchTiingo]] : []), ["Yahoo Finance", fetchYahoo]];
     for (const [name, fetcher] of attempts) {
       try {
@@ -118,11 +120,20 @@ async function main() {
         break;
       } catch (e) {
         console.warn(`${t}: ${name} failed (${e.message})`);
+        if (name === "Tiingo" && e.status === 429) {
+          // Out of quota: stop here so the rest stay stale for the next run instead of silently switching to the unlicensed fallback.
+          rateLimited = true;
+          console.warn("Tiingo rate limit hit. Stopping this run; remaining tickers will be refreshed next time.");
+          break;
+        }
       }
     }
     await new Promise((r) => setTimeout(r, 400));
   }
-  if (ok === 0) throw new Error("No ticker refreshed; leaving data.json untouched");
+  if (ok === 0) {
+    console.warn("No ticker refreshed; leaving data.json untouched");
+    return;
+  }
   db.updated = new Date().toISOString();
   db.source = Object.keys(used).join(" + ");
   console.log("Sources used:", used);
