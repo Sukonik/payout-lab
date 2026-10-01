@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Payout Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef2f3; --card:#ffffff; --ink:#14263a; --muted:#5b6b7a; --line:#d5dee3;
+  --accent:#0f7c7a; --accent-soft:#dcefee; --amber:#b7791f; --amber-soft:#f6ead3;
+  --red:#b42318; --red-soft:#f8e1de; --glass:#f4f8f9;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1a24; --card:#16242f; --ink:#e6eef3; --muted:#93a5b3; --line:#26394a;
+    --accent:#3cc4bd; --accent-soft:#173a3c; --amber:#e0a83a; --amber-soft:#3a2f17;
+    --red:#f0776a; --red-soft:#3d1f1c; --glass:#1b2d3a; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1a24; --card:#16242f; --ink:#e6eef3; --muted:#93a5b3; --line:#26394a;
+  --accent:#3cc4bd; --accent-soft:#173a3c; --amber:#e0a83a; --amber-soft:#3a2f17;
+  --red:#f0776a; --red-soft:#3d1f1c; --glass:#1b2d3a; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.55 "Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-variant-numeric:tabular-nums}
+h1,h2,h3{font-family:"Bricolage Grotesque","Atkinson Hyperlegible",system-ui,sans-serif;margin:0;line-height:1.15}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 20px 48px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;margin-bottom:24px}
+header h1{font-size:clamp(2rem,5vw,3rem);font-weight:700;letter-spacing:-.02em}
+header p{margin:6px 0 0;color:var(--muted);max-width:56ch}
+.asof{font-size:.85rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--card)}
+section.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:18px}
+.panel h2{font-size:1.3rem;font-weight:700}
+.panel .lede{color:var(--muted);margin:4px 0 14px;font-size:.95rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:18px}
+.grid section.panel{margin-bottom:0}
+.addrow{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;margin:14px 0}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:.85rem;color:var(--muted)}
+input,select{font:inherit;color:var(--ink);background:var(--glass);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:0}
+input[type=number]{width:100%}
+input[type=range]{width:100%;accent-color:var(--accent);padding:0;background:none;border:0}
+input:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button{font:inherit;cursor:pointer;border-radius:8px;padding:9px 14px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--card);font-weight:700}
+button.ghost{background:transparent}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:760px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+th{font-size:.82rem;color:var(--muted);font-weight:700;background:var(--glass)}
+tr:last-child td{border-bottom:0}
+td input,td select{width:100%;padding:6px 8px}
+td.num,th.num{text-align:right}
+.sub{font-size:.8rem;color:var(--muted);max-width:26ch;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.badge{font-size:.72rem;margin-left:6px;padding:1px 7px;border-radius:999px;background:var(--amber-soft);color:var(--amber)}
+.x{padding:4px 10px;line-height:1;font-size:1.1rem;background:transparent;border-color:transparent;color:var(--muted)}
+.x:hover{color:var(--red)}
+.empty{padding:22px;text-align:center;color:var(--muted)}
+.totals{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:14px}
+.totals div{display:flex;flex-direction:column}
+.totals span{font-size:.82rem;color:var(--muted)}
+.totals b{font-size:1.25rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:12px}
+.stat{background:var(--glass);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column}
+.stat span{font-size:.8rem;color:var(--muted)}
+.stat b{font-size:1.2rem}
+.stat small{color:var(--muted);font-size:.8rem}
+.neg{color:var(--red)} .pos{color:var(--accent)}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.rangehead{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted)}
+.rangehead b{color:var(--ink)}
+.muted{color:var(--muted)}
+.note{font-size:.92rem;margin:12px 0 0}
+.check{display:flex;gap:8px;align-items:center;font-size:.9rem}
+
+/* The one bold element: the income calendar as a rack of test tubes */
+.rack{display:grid;grid-template-columns:repeat(12,minmax(44px,1fr));gap:8px;align-items:end;min-width:600px;padding:6px 2px 0}
+.rackwrap{overflow-x:auto}
+.tube{display:flex;flex-direction:column;align-items:center;gap:6px}
+.tube .amt{font-size:.78rem;color:var(--muted);white-space:nowrap}
+.tube .glass{position:relative;width:34px;height:190px;border:2px solid var(--line);border-top:0;
+  border-radius:0 0 17px 17px;background:var(--glass);overflow:hidden}
+.tube .glass::before{content:"";position:absolute;top:0;left:-5px;right:-5px;height:2px;background:var(--line)}
+.tube .liquid{position:absolute;left:0;right:0;bottom:0;background:var(--accent);border-radius:0 0 15px 15px;
+  transition:height .5s cubic-bezier(.2,.8,.2,1)}
+.tube .liquid::after{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:rgba(255,255,255,.35)}
+.tube.thin .liquid{background:var(--amber)}
+.tube.thin .glass{border-color:var(--amber)}
+.tube .mlab{font-size:.85rem;font-weight:700}
+.legend{display:flex;gap:16px;font-size:.82rem;color:var(--muted);margin-top:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+
+.hbar{display:grid;grid-template-columns:64px 1fr 56px;gap:10px;align-items:center;margin:6px 0;font-size:.9rem}
+.ht{height:10px;background:var(--glass);border-radius:5px;overflow:hidden}
+.hf{height:100%;background:var(--accent);border-radius:5px}
+.hbar.top .hf{background:var(--amber)}
+.hv{text-align:right;color:var(--muted)}
+.progress{height:12px;background:var(--glass);border-radius:6px;overflow:hidden;margin:10px 0 4px}
+.progress div{height:100%;background:var(--accent)}
+svg.path{width:100%;height:auto;display:block;margin-top:12px}
+footer{color:var(--muted);font-size:.85rem;margin-top:24px;max-width:80ch}
+@media (prefers-reduced-motion: reduce){.tube .liquid{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>🧪 Payout Lab</h1>
+      <p>Stress-test the dividend portfolio you already own. No signup, no broker linking, and nothing leaves your browser.</p>
+    </div>
+    <div class="asof" id="asof"></div>
+  </header>
+
+  <section class="panel" id="holdingsPanel">
+    <h2>Your holdings</h2>
+    <p class="lede">Type a ticker and share count. Popular tickers fill in automatically. Anything else, enter the price, yearly dividend per share, and pay schedule yourself. Every number is editable.</p>
+    <div class="addrow">
+      <label class="f" style="flex:1 1 160px">Ticker
+        <input id="tk" list="tickers" autocomplete="off" placeholder="e.g. SCHD" style="text-transform:uppercase">
+      </label>
+      <datalist id="tickers"></datalist>
+      <label class="f" style="flex:0 1 130px">Shares
+        <input id="sh" type="number" min="0" step="any" placeholder="100">
+      </label>
+      <button class="primary" id="addBtn">Add holding</button>
+      <button class="ghost" id="sampleBtn">Load sample portfolio</button>
+      <button class="ghost" id="clearBtn">Clear all</button>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr>
+          <th>Ticker</th><th>Shares</th><th>Price</th><th>Dividend / share / yr</th><th>Pays</th><th>Tax type</th><th class="num">Yearly income</th><th></th>
+        </tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <div class="totals">
+      <div><span>Portfolio value</span><b id="tVal">$0</b></div>
+      <div><span>Yearly income</span><b id="tInc">$0</b></div>
+      <div><span>Average month</span><b id="tMo">$0</b></div>
+      <div><span>Yield</span><b id="tYld">0%</b></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Monthly income calendar</h2>
+    <p class="lede">When your dividends actually land. Amber tubes are thin months, under half your average.</p>
+    <div class="rackwrap"><div class="rack" id="cal"></div></div>
+    <div class="legend"><span><i style="background:var(--accent)"></i>Normal month</span><span><i style="background:var(--amber)"></i>Thin month</span></div>
+    <p class="note" id="calNote"></p>
+  </section>
+
+  <div class="grid">
+    <section class="panel">
+      <h2>Dividend cut test</h2>
+      <p class="lede">Pick a holding and cut its payout. See what you lose and how it moves your goal date.</p>
+      <div class="controls">
+        <label class="f">Holding <select id="cutT"></select></label>
+        <div>
+          <div class="rangehead"><span>Cut size</span><b id="cutPctV"></b></div>
+          <input type="range" min="0" max="100" step="5" data-s="cutPct">
+        </div>
+      </div>
+      <div id="cutOut"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Concentration check</h2>
+      <p class="lede">How much of your income depends on your biggest payers.</p>
+      <div class="stats" id="concBig"></div>
+      <div id="conc" style="margin-top:12px"></div>
+      <p class="note" id="concNote"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Goal timeline</h2>
+      <p class="lede">Set a monthly income target. The slow-growth slider shows whether your timeline holds up if dividend growth stalls.</p>
+      <div class="controls">
+        <label class="f">Monthly income goal ($)<input type="number" min="0" step="50" data-s="target"></label>
+        <label class="f">Adding each month ($)<input type="number" min="0" step="50" data-s="contrib"></label>
+      </div>
+      <div class="controls" style="margin-top:12px">
+        <div>
+          <div class="rangehead"><span>Expected dividend growth</span><b id="growthV"></b></div>
+          <input type="range" min="0" max="12" step="0.5" data-s="growth">
+        </div>
+        <div>
+          <div class="rangehead"><span>Slow-growth scenario</span><b id="slowV"></b></div>
+          <input type="range" min="0" max="12" step="0.5" data-s="slow">
+        </div>
+      </div>
+      <label class="check" style="margin-top:10px"><input type="checkbox" data-s="reinvest"> Reinvest dividends</label>
+      <div id="goalOut"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Add-money test</h2>
+      <p class="lede">Put a lump sum into one of your holdings and see how much sooner you reach your goal.</p>
+      <div class="controls">
+        <label class="f">Holding <select id="addT"></select></label>
+        <label class="f">Amount ($)<input type="number" min="0" step="500" data-s="addAmt"></label>
+      </div>
+      <div id="addOut"></div>
+    </section>
+
+    <section class="panel" style="grid-column:1/-1">
+      <h2>Taxable account vs IRA</h2>
+      <p class="lede">What your income looks like after tax in each account type. Set "Tax type" per holding in the table above. REITs and most covered-call funds are usually taxed as ordinary income.</p>
+      <div class="controls">
+        <label class="f">Qualified dividend rate (%)<input type="number" min="0" max="40" step="1" data-s="qRate"></label>
+        <label class="f">Ordinary income rate (%)<input type="number" min="0" max="60" step="1" data-s="oRate"></label>
+        <label class="f">State and local rate (%)<input type="number" min="0" max="20" step="0.25" data-s="stRate"></label>
+      </div>
+      <div id="taxOut"></div>
+    </section>
+  </div>
+
+  <footer>
+    Payout Lab is an educational calculator. It does not recommend buying or selling anything, and it is not tax or investment advice. You choose every holding and every scenario; the tool only does the math. Starter data is approximate and may be out of date, so check figures against each company's or fund's own announcements. Projections assume new money and reinvested dividends earn your current portfolio yield and that share prices stay flat.
+  </footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+var DATA_AS_OF = "Starter data: approximate, mid-2026";
+var SCHED = {M:[1,2,3,4,5,6,7,8,9,10,11,12],Q1:[1,4,7,10],Q2:[2,5,8,11],Q3:[3,6,9,12],S:[6,12],A:[12]};
+var SCHED_LABEL = {M:"Monthly",Q1:"Jan Apr Jul Oct",Q2:"Feb May Aug Nov",Q3:"Mar Jun Sep Dec",S:"Twice a year",A:"Once a year"};
+var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+// Approximate starter data. p = price, d = yearly dividend per share, s = schedule, q = qualified
+var DB = {
+  SCHD:{n:"Schwab US Dividend Equity ETF",p:27.5,d:1.03,s:"Q3",q:true},
+  VYM:{n:"Vanguard High Dividend Yield ETF",p:135,d:3.4,s:"Q3",q:true},
+  VIG:{n:"Vanguard Dividend Appreciation ETF",p:205,d:3.4,s:"Q3",q:true},
+  DGRO:{n:"iShares Core Dividend Growth ETF",p:63,d:1.42,s:"Q3",q:true},
+  SPYD:{n:"SPDR Portfolio S&P 500 High Dividend ETF",p:44,d:1.9,s:"Q3",q:true},
+  SPYV:{n:"SPDR Portfolio S&P 500 Value ETF",p:54,d:1.1,s:"Q3",q:true},
+  SCHB:{n:"Schwab US Broad Market ETF",p:25,d:0.33,s:"Q3",q:true},
+  JEPI:{n:"JPMorgan Equity Premium Income ETF",p:57,d:4.5,s:"M",q:false},
+  JEPQ:{n:"JPMorgan Nasdaq Equity Premium Income ETF",p:56,d:5.6,s:"M",q:false},
+  O:{n:"Realty Income",p:57,d:3.22,s:"M",q:false},
+  STAG:{n:"STAG Industrial",p:36,d:1.49,s:"M",q:false},
+  MAIN:{n:"Main Street Capital",p:60,d:3.06,s:"M",q:false},
+  VZ:{n:"Verizon",p:43,d:2.71,s:"Q2",q:true},
+  T:{n:"AT&T",p:27,d:1.11,s:"Q2",q:true},
+  KO:{n:"Coca-Cola",p:70,d:2.04,s:"Q1",q:true},
+  PEP:{n:"PepsiCo",p:145,d:5.69,s:"Q3",q:true},
+  PG:{n:"Procter & Gamble",p:158,d:4.23,s:"Q2",q:true},
+  JNJ:{n:"Johnson & Johnson",p:165,d:5.2,s:"Q3",q:true},
+  ABBV:{n:"AbbVie",p:195,d:6.56,s:"Q2",q:true},
+  PFE:{n:"Pfizer",p:25,d:1.72,s:"Q3",q:true},
+  MO:{n:"Altria",p:58,d:4.24,s:"Q1",q:true},
+  XOM:{n:"Exxon Mobil",p:112,d:4.12,s:"Q3",q:true},
+  CVX:{n:"Chevron",p:155,d:6.84,s:"Q3",q:true},
+  HD:{n:"Home Depot",p:380,d:9.2,s:"Q3",q:true},
+  MSFT:{n:"Microsoft",p:500,d:3.64,s:"Q3",q:true},
+  AAPL:{n:"Apple",p:230,d:1.04,s:"Q2",q:true},
+  GOOGL:{n:"Alphabet",p:200,d:0.84,s:"Q3",q:true},
+  META:{n:"Meta Platforms",p:700,d:2.1,s:"Q3",q:true}
+};
+var SAMPLE = [["SCHD",300],["O",80],["JEPI",60],["VZ",50],["KO",40],["ABBV",15],["MSFT",5]];
+var KEY = "payoutlab.v1";
+var S = {holdings:[],target:2000,contrib:500,growth:6,slow:2,reinvest:true,cutT:"",cutPct:50,addT:"",addAmt:10000,qRate:15,oRate:24,stRate:5};
+
+function $(id){return document.getElementById(id)}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function money(v,d){d=d||0;var a=Math.abs(v||0).toLocaleString(undefined,{minimumFractionDigits:d,maximumFractionDigits:d});return (v<0?"-":"")+"$"+a}
+function pct(v,d){return ((v||0)*100).toFixed(d==null?1:d)+"%"}
+function num(v){var n=parseFloat(v);return isFinite(n)?n:0}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function load(){try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);if(o&&Array.isArray(o.holdings)){for(var k in o){if(k in S)S[k]=o[k]}}}}catch(e){}}
+
+function inc(h){return num(h.shares)*num(h.div)}
+function totals(hs){var v=0,i=0;hs.forEach(function(h){v+=num(h.shares)*num(h.price);i+=inc(h)});return {value:v,income:i,yield:v>0?i/v:0}}
+function calendar(hs){var m=[0,0,0,0,0,0,0,0,0,0,0,0];hs.forEach(function(h){var ms=SCHED[h.s]||SCHED.Q3;var per=inc(h)/ms.length;ms.forEach(function(x){m[x-1]+=per})});return m}
+
+// Month-by-month projection. Returns months to reach target, or null if not within 50 years.
+function simulate(annual,y,target,C,g,reinvest){
+  var M=annual/12; if(target<=0||M>=target) return 0;
+  var gm=Math.pow(1+g/100,1/12)-1;
+  for(var k=1;k<=600;k++){M*=1+gm;var buy=C+(reinvest?M:0);M+=buy*y/12;if(M>=target)return k}
+  return null;
+}
+function path(annual,y,C,g,reinvest,n){
+  var M=annual/12,out=[M],gm=Math.pow(1+g/100,1/12)-1;
+  for(var k=1;k<=n;k++){M*=1+gm;var buy=C+(reinvest?M:0);M+=buy*y/12;out.push(M)}
+  return out;
+}
+function dur(m){
+  if(m===null)return "50+ years"; if(m===0)return "Already there";
+  var y=Math.floor(m/12),r=m%12,p=[];
+  if(y)p.push(y+(y>1?" yrs":" yr")); if(r)p.push(r+(r>1?" mos":" mo")); return p.join(" ");
+}
+function when(m){if(m===null)return "Not within 50 years";var d=new Date();d.setDate(1);d.setMonth(d.getMonth()+m);return MONTHS[d.getMonth()]+" "+d.getFullYear()}
+function shift(a,b){ // b relative to a
+  if(a===null&&b===null)return "Both beyond 50 years";
+  if(b===null)return "Pushes goal past 50 years";
+  if(a===null)return "Brings goal within reach";
+  var d=b-a; if(d===0)return "No change"; return dur(Math.abs(d))+(d>0?" later":" sooner");
+}
+
+function fillSelect(id,hs,key){
+  var sel=$(id),cur=S[key];
+  if(!hs.some(function(h){return h.t===cur})){cur=hs.length?hs[0].t:"";S[key]=cur}
+  sel.innerHTML=hs.length?hs.map(function(h){return '<option value="'+esc(h.t)+'"'+(h.t===cur?" selected":"")+'>'+esc(h.t)+'</option>'}).join(""):'<option value="">No holdings</option>';
+}
+
+function renderHoldings(){
+  var tb=$("rows");
+  if(!S.holdings.length){tb.innerHTML='<tr><td colspan="8" class="empty">No holdings yet. Add a ticker above, or load the sample portfolio to try it out.</td></tr>';return}
+  tb.innerHTML=S.holdings.map(function(h,i){
+    var opts=Object.keys(SCHED).map(function(k){return '<option value="'+k+'"'+(h.s===k?" selected":"")+'>'+SCHED_LABEL[k]+'</option>'}).join("");
+    return '<tr>'+
+      '<td><b>'+esc(h.t)+'</b>'+(h.manual?'<span class="badge">manual</span>':'')+'<div class="sub" title="'+esc(h.n||"")+'">'+esc(h.n||"")+'</div></td>'+
+      '<td><input type="number" min="0" step="any" data-i="'+i+'" data-k="shares" value="'+h.shares+'" aria-label="Shares of '+esc(h.t)+'"></td>'+
+      '<td><input type="number" min="0" step="any" data-i="'+i+'" data-k="price" value="'+h.price+'" aria-label="Price of '+esc(h.t)+'"></td>'+
+      '<td><input type="number" min="0" step="any" data-i="'+i+'" data-k="div" value="'+h.div+'" aria-label="Yearly dividend per share of '+esc(h.t)+'"></td>'+
+      '<td><select data-i="'+i+'" data-k="s" aria-label="Pay schedule of '+esc(h.t)+'">'+opts+'</select></td>'+
+      '<td><select data-i="'+i+'" data-k="q" aria-label="Tax type of '+esc(h.t)+'"><option value="1"'+(h.q?" selected":"")+'>Qualified</option><option value="0"'+(!h.q?" selected":"")+'>Ordinary</option></select></td>'+
+      '<td class="num" id="inc'+i+'">'+money(inc(h))+'</td>'+
+      '<td><button class="x" data-rm="'+i+'" aria-label="Remove '+esc(h.t)+'">×</button></td></tr>';
+  }).join("");
+}
+
+function renderCalendar(hs,T){
+  var m=calendar(hs),avg=T.income/12,max=Math.max.apply(null,m.concat([1e-9]));
+  $("cal").innerHTML=m.map(function(v,i){
+    var thin=avg>0&&v<avg*0.5,h=v>0?Math.max(3,v/max*100):0;
+    return '<div class="tube'+(thin?" thin":"")+'"><div class="amt">'+money(v)+'</div><div class="glass"><div class="liquid" style="height:'+h+'%"></div></div><div class="mlab">'+MONTHS[i]+'</div></div>';
+  }).join("");
+  if(avg<=0){$("calNote").textContent="Add holdings that pay a dividend to fill the rack.";return}
+  var hi=m.indexOf(Math.max.apply(null,m)),lo=m.indexOf(Math.min.apply(null,m));
+  var thin=[];m.forEach(function(v,i){if(v<avg*0.5)thin.push(MONTHS[i])});
+  $("calNote").innerHTML="Average month: <b>"+money(avg)+"</b>. Biggest is "+MONTHS[hi]+" at "+money(m[hi])+", smallest is "+MONTHS[lo]+" at "+money(m[lo])+". "+
+    (thin.length?"Thin months: <b>"+thin.join(", ")+"</b>.":"No month falls below half the average.");
+}
+
+function renderConc(hs,T){
+  var arr=hs.map(function(h){return {t:h.t,v:inc(h)}}).filter(function(x){return x.v>0}).sort(function(a,b){return b.v-a.v});
+  if(!arr.length){$("concBig").innerHTML="";$("conc").innerHTML="";$("concNote").textContent="Add holdings that pay a dividend to see this.";return}
+  var t1=arr[0].v/T.income,t2=(arr[0].v+(arr[1]?arr[1].v:0))/T.income;
+  $("concBig").innerHTML='<div class="stat"><span>Top holding</span><b>'+pct(t1,0)+'</b><small>'+esc(arr[0].t)+'</small></div>'+
+    '<div class="stat"><span>Top two</span><b>'+pct(t2,0)+'</b><small>'+arr.slice(0,2).map(function(x){return esc(x.t)}).join(" + ")+'</small></div>'+
+    '<div class="stat"><span>Paying holdings</span><b>'+arr.length+'</b><small>of '+hs.length+' total</small></div>';
+  $("conc").innerHTML=arr.map(function(x,i){return '<div class="hbar'+(i<2?" top":"")+'"><b>'+esc(x.t)+'</b><div class="ht"><div class="hf" style="width:'+(x.v/arr[0].v*100)+'%"></div></div><span class="hv">'+pct(x.v/T.income,1)+'</span></div>'}).join("");
+  $("concNote").textContent=t1>=0.4?"Over 40% of your income comes from one holding, so a cut there would hit your total hard.":
+    t2>=0.5?"Half or more of your income comes from your top two holdings.":"Your income is spread fairly evenly; no single holding dominates.";
+}
+
+function renderCut(hs,T){
+  fillSelect("cutT",hs,"cutT");$("cutPctV").textContent=S.cutPct+"%";
+  var h=hs.filter(function(x){return x.t===S.cutT})[0];
+  if(!h||T.income<=0){$("cutOut").innerHTML='<p class="muted note">Add a dividend-paying holding to run this test.</p>';return}
+  var loss=inc(h)*S.cutPct/100,after=T.income-loss;
+  var a=simulate(T.income,T.yield,S.target,S.contrib,S.growth,S.reinvest);
+  var b=simulate(after,T.value>0?after/T.value:0,S.target,S.contrib,S.growth,S.reinvest);
+  $("cutOut").innerHTML='<div class="stats">'+
+    '<div class="stat"><span>Income lost</span><b class="neg">-'+money(loss)+'/yr</b><small>'+money(loss/12)+' a month</small></div>'+
+    '<div class="stat"><span>New yearly income</span><b>'+money(after)+'</b><small>'+pct(loss/T.income,1)+' below today</small></div>'+
+    '<div class="stat"><span>Goal date</span><b>'+shift(a,b)+'</b><small>'+when(b)+'</small></div></div>';
+}
+
+function renderGoal(hs,T){
+  $("growthV").textContent=S.growth+"%";$("slowV").textContent=S.slow+"%";
+  if(T.income<=0){$("goalOut").innerHTML='<p class="muted note">Add a dividend-paying holding to project your timeline.</p>';return}
+  var a=simulate(T.income,T.yield,S.target,S.contrib,S.growth,S.reinvest);
+  var b=simulate(T.income,T.yield,S.target,S.contrib,S.slow,S.reinvest);
+  var now=T.income/12,prog=S.target>0?Math.min(1,now/S.target):1;
+  var html='<div class="progress" role="progressbar" aria-valuenow="'+Math.round(prog*100)+'" aria-valuemin="0" aria-valuemax="100"><div style="width:'+(prog*100)+'%"></div></div>'+
+    '<div class="muted" style="font-size:.85rem">'+money(now)+' of '+money(S.target)+' a month today ('+pct(prog,0)+')</div>'+
+    '<div class="stats">'+
+    '<div class="stat"><span>At '+S.growth+'% growth</span><b>'+dur(a)+'</b><small>'+when(a)+'</small></div>'+
+    '<div class="stat"><span>At '+S.slow+'% growth</span><b>'+dur(b)+'</b><small>'+when(b)+'</small></div>'+
+    '<div class="stat"><span>Slowdown costs</span><b class="'+(b!==a?"neg":"")+'">'+shift(a,b)+'</b><small>difference in goal date</small></div></div>';
+  // chart
+  var n=Math.min(600,Math.max(24,(a===null?0:a),(b===null?0:b))+12);
+  if(a===null&&b===null)n=600;
+  var pa=path(T.income,T.yield,S.contrib,S.growth,S.reinvest,n),pb=path(T.income,T.yield,S.contrib,S.slow,S.reinvest,n);
+  var top=Math.max(S.target*1.15,pa[n],pb[n]),W=600,H=200,P=6;
+  function pts(p){return p.map(function(v,i){return (P+i/n*(W-2*P)).toFixed(1)+","+(H-P-v/top*(H-2*P)).toFixed(1)}).join(" ")}
+  var ty=(H-P-S.target/top*(H-2*P)).toFixed(1);
+  html+='<svg class="path" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Monthly income projection over '+Math.round(n/12)+' years">'+
+    '<line x1="'+P+'" x2="'+(W-P)+'" y1="'+ty+'" y2="'+ty+'" style="stroke:var(--muted);stroke-dasharray:4 4;stroke-width:1"/>'+
+    '<text x="'+(W-P)+'" y="'+(ty-6)+'" text-anchor="end" style="fill:var(--muted);font-size:12px">Goal '+money(S.target)+'/mo</text>'+
+    '<polyline points="'+pts(pb)+'" style="fill:none;stroke:var(--amber);stroke-width:2.5"/>'+
+    '<polyline points="'+pts(pa)+'" style="fill:none;stroke:var(--accent);stroke-width:2.5"/>'+
+    '<text x="'+P+'" y="'+(H-P-4)+'" style="fill:var(--muted);font-size:12px">Today</text>'+
+    '<text x="'+(W-P)+'" y="'+(H-P-4)+'" text-anchor="end" style="fill:var(--muted);font-size:12px">+'+Math.round(n/12)+' yrs</text></svg>'+
+    '<div class="legend"><span><i style="background:var(--accent)"></i>Expected growth</span><span><i style="background:var(--amber)"></i>Slow growth</span></div>';
+  $("goalOut").innerHTML=html;
+}
+
+function renderAdd(hs,T){
+  fillSelect("addT",hs,"addT");
+  var h=hs.filter(function(x){return x.t===S.addT})[0];
+  if(!h){$("addOut").innerHTML='<p class="muted note">Add a holding to run this test.</p>';return}
+  if(!(num(h.price)>0)){$("addOut").innerHTML='<p class="muted note">Enter a price for '+esc(h.t)+' in the table to run this test.</p>';return}
+  var amt=num(S.addAmt),sh=amt/num(h.price),add=sh*num(h.div),ni=T.income+add,nv=T.value+amt;
+  var a=simulate(T.income,T.yield,S.target,S.contrib,S.growth,S.reinvest);
+  var b=simulate(ni,nv>0?ni/nv:0,S.target,S.contrib,S.growth,S.reinvest);
+  $("addOut").innerHTML='<div class="stats">'+
+    '<div class="stat"><span>Buys about</span><b>'+sh.toFixed(sh<10?2:0)+' shares</b><small>at '+money(num(h.price),2)+' each</small></div>'+
+    '<div class="stat"><span>Added income</span><b class="pos">+'+money(add)+'/yr</b><small>'+money(add/12)+' a month</small></div>'+
+    '<div class="stat"><span>Goal date</span><b>'+shift(a,b)+'</b><small>'+when(b)+'</small></div></div>';
+}
+
+function renderTax(hs,T){
+  var q=0,o=0,ordList=[];
+  hs.forEach(function(h){var v=inc(h);if(h.q)q+=v;else{o+=v;if(v>0)ordList.push(h.t)}});
+  var st=num(S.stRate),taxQ=q*(num(S.qRate)+st)/100,taxO=o*(num(S.oRate)+st)/100,net=T.income-taxQ-taxO;
+  var trad=T.income*(1-(num(S.oRate)+st)/100);
+  if(T.income<=0){$("taxOut").innerHTML='<p class="muted note">Add a dividend-paying holding to compare accounts.</p>';return}
+  $("taxOut").innerHTML='<div class="stats">'+
+    '<div class="stat"><span>Taxable account</span><b>'+money(net/12)+'/mo</b><small>'+money(net)+'/yr after '+money(taxQ+taxO)+' tax</small></div>'+
+    '<div class="stat"><span>Roth IRA</span><b class="pos">'+money(T.income/12)+'/mo</b><small>No tax on qualified withdrawals</small></div>'+
+    '<div class="stat"><span>Traditional IRA</span><b>'+money(T.income/12)+'/mo</b><small>Untaxed while invested; about '+money(trad/12)+'/mo if withdrawn at your ordinary rate</small></div>'+
+    '<div class="stat"><span>Tax drag in taxable</span><b class="neg">'+pct(T.income>0?(taxQ+taxO)/T.income:0,1)+'</b><small>of your dividend income</small></div></div>'+
+    '<p class="note muted">'+(ordList.length?"Taxed as ordinary income in a taxable account: "+ordList.map(esc).join(", ")+". These lose the most to tax outside an IRA.":"All your income is set as qualified.")+' Rates are your inputs; this is a rough estimate, not tax advice.</p>';
+}
+
+function renderAnalysis(){
+  var hs=S.holdings,T=totals(hs);
+  $("tVal").textContent=money(T.value);$("tInc").textContent=money(T.income);$("tMo").textContent=money(T.income/12);$("tYld").textContent=pct(T.yield,2);
+  hs.forEach(function(h,i){var c=$("inc"+i);if(c)c.textContent=money(inc(h))});
+  renderCalendar(hs,T);renderConc(hs,T);renderCut(hs,T);renderGoal(hs,T);renderAdd(hs,T);renderTax(hs,T);
+}
+function renderAll(){renderHoldings();renderAnalysis()}
+
+function addHolding(t,shares){
+  t=String(t||"").trim().toUpperCase();shares=num(shares);
+  if(!t||!(shares>0))return false;
+  var ex=S.holdings.filter(function(h){return h.t===t})[0];
+  if(ex){ex.shares=num(ex.shares)+shares;return true}
+  var d=DB[t];
+  S.holdings.push(d?{t:t,n:d.n,shares:shares,price:d.p,div:d.d,s:d.s,q:d.q}:{t:t,n:"Enter price, dividend, and schedule",shares:shares,price:0,div:0,s:"Q3",q:true,manual:true});
+  return true;
+}
+
+// Wiring
+$("asof").textContent=DATA_AS_OF;
+$("tickers").innerHTML=Object.keys(DB).map(function(k){return '<option value="'+k+'">'+esc(DB[k].n)+'</option>'}).join("");
+$("addBtn").addEventListener("click",function(){
+  var ok=addHolding($("tk").value,$("sh").value);
+  if(!ok){($("tk").value.trim()?$("sh"):$("tk")).focus();return}
+  $("tk").value="";$("sh").value="";$("tk").focus();renderAll();save();
+});
+[$("tk"),$("sh")].forEach(function(el){el.addEventListener("keydown",function(e){if(e.key==="Enter")$("addBtn").click()})});
+$("sampleBtn").addEventListener("click",function(){S.holdings=[];SAMPLE.forEach(function(x){addHolding(x[0],x[1])});renderAll();save()});
+$("clearBtn").addEventListener("click",function(){if(!S.holdings.length||confirm("Remove all holdings?")){S.holdings=[];renderAll();save()}});
+$("rows").addEventListener("input",function(e){
+  var el=e.target,i=el.getAttribute("data-i"),k=el.getAttribute("data-k");if(i===null||!k)return;
+  var h=S.holdings[+i];if(!h)return;
+  if(k==="s")h.s=el.value;else if(k==="q")h.q=el.value==="1";else h[k]=num(el.value);
+  if(k==="price"||k==="div")h.manual=false;
+  renderAnalysis();save();
+});
+$("rows").addEventListener("click",function(e){var b=e.target.closest("[data-rm]");if(!b)return;S.holdings.splice(+b.getAttribute("data-rm"),1);renderAll();save()});
+$("cutT").addEventListener("change",function(){S.cutT=this.value;renderAnalysis();save()});
+$("addT").addEventListener("change",function(){S.addT=this.value;renderAnalysis();save()});
+Array.prototype.forEach.call(document.querySelectorAll("[data-s]"),function(el){
+  var k=el.getAttribute("data-s");
+  el.addEventListener("input",function(){S[k]=el.type==="checkbox"?el.checked:num(el.value);renderAnalysis();save()});
+});
+function syncInputs(){Array.prototype.forEach.call(document.querySelectorAll("[data-s]"),function(el){var k=el.getAttribute("data-s");if(el.type==="checkbox")el.checked=!!S[k];else el.value=S[k]})}
+
+load();syncInputs();renderAll();
+})();
+</script>
+</body>
+</html>
