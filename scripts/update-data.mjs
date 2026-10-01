@@ -59,6 +59,8 @@ export function summarize({ price, events }, now = Date.now()) {
 const round = (v, d) => Math.round(v * 10 ** d) / 10 ** d;
 
 const TIINGO_TOKEN = process.env.TIINGO_TOKEN;
+// Tiingo's free plan allows ~50 symbols/hour, so each run refreshes only the stalest tickers.
+const BATCH = Number(process.env.BATCH) || 45;
 
 async function getJson(url, headers = {}) {
   const res = await fetch(url, { headers });
@@ -87,7 +89,11 @@ async function main() {
   const db = JSON.parse(readFileSync(FILE, "utf8"));
   const used = {};
   let ok = 0;
-  for (const t of Object.keys(db.tickers)) {
+  const queue = Object.keys(db.tickers)
+    .sort((a, b) => (db.tickers[a].u || "").localeCompare(db.tickers[b].u || ""))
+    .slice(0, BATCH);
+  console.log(`Refreshing ${queue.length} of ${Object.keys(db.tickers).length} tickers (stalest first)`);
+  for (const t of queue) {
     const attempts = [...(TIINGO_TOKEN ? [["Tiingo", fetchTiingo]] : []), ["Yahoo Finance", fetchYahoo]];
     for (const [name, fetcher] of attempts) {
       try {
@@ -96,8 +102,17 @@ async function main() {
         const sum = summarize(raw);
         // A price with no dividends usually means this provider lacks dividend data for the ticker; try the next one.
         if (!(sum.d > 0) && name !== attempts[attempts.length - 1][0]) throw new Error("no dividends reported");
-        for (const k of ["per", "s", "last", "hist", "g3", "g5"]) delete db.tickers[t][k];
-        Object.assign(db.tickers[t], sum, { src: name });
+        const old = db.tickers[t];
+        if (!(sum.d > 0) && old.d > 0) {
+          // Nobody reports dividends for a ticker we believe pays one: refresh the price only and flag the rest as an estimate.
+          Object.assign(old, { p: sum.p, est: true, src: name, u: new Date().toISOString() });
+          console.warn(`${t}: no dividend data from any provider, kept old dividend as estimate`);
+          ok++;
+          break;
+        }
+        for (const k of ["per", "last", "hist", "g3", "g5", "est"]) delete old[k];
+        Object.assign(old, sum, { src: name, u: new Date().toISOString() });
+        if (!old.s) old.s = "Q3";
         used[name] = (used[name] || 0) + 1;
         ok++;
         break;

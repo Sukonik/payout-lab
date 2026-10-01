@@ -335,7 +335,8 @@ function perPay(h){return num(h.div)/(SCHED[h.s]||SCHED.Q3).length}
 function dbPer(t){var e=DB[t];return e.per>0?e.per:e.d/(SCHED[e.s]||SCHED.Q3).length}
 function renderPS(){
   var q=$("psq").value.trim().toUpperCase(),qn=q.toLowerCase();
-  var keys=Object.keys(DB).sort().filter(function(k){return !q||k.indexOf(q)===0||DB[k].n.toLowerCase().indexOf(qn)>=0});
+  var all=Object.keys(DB).sort().filter(function(k){return !q||k.indexOf(q)===0||DB[k].n.toLowerCase().indexOf(qn)>=0});
+  var keys=all.slice(0,40);
   var card=$("psCard");
   if(q&&DB[q]){var e=DB[q],pp=dbPer(q),n=(SCHED[e.s]||SCHED.Q3).length;
     card.innerHTML='<div class="psbig"><div><span>'+esc(q)+' pays</span><b>'+money(pp,4)+' <small>per share, '+n+'x a year</small></b></div>'+
@@ -344,7 +345,7 @@ function renderPS(){
       '<p class="note">100 shares would pay about '+money(pp*100,2)+' each time and '+money(e.d*100,2)+' a year.</p>';
   }else card.innerHTML="";
   $("psRows").innerHTML=keys.length?keys.map(function(k){var e=DB[k];
-    return '<tr><td><b>'+esc(k)+'</b><div class="sub">'+esc(e.n)+'</div></td><td class="num">'+money(e.p,2)+'</td><td class="num"><b>'+money(dbPer(k),4)+'</b></td><td>'+SCHED_LABEL[e.s]+'</td><td class="num">'+money(e.d,2)+'</td><td class="num">'+pct(e.p>0?e.d/e.p:0,2)+'</td><td><button class="ghost" data-add="'+esc(k)+'">Add</button></td></tr>'}).join(""):'<tr><td colspan="7" class="empty">No match. You can still add any ticker below and enter its numbers yourself.</td></tr>';
+    return '<tr><td><b>'+esc(k)+'</b>'+(e.est?'<span class="badge">estimate</span>':'')+'<div class="sub">'+esc(e.n)+'</div></td><td class="num">'+money(e.p,2)+'</td><td class="num"><b>'+money(dbPer(k),4)+'</b></td><td>'+SCHED_LABEL[e.s]+'</td><td class="num">'+money(e.d,2)+'</td><td class="num">'+pct(e.p>0?e.d/e.p:0,2)+'</td><td><button class="ghost" data-add="'+esc(k)+'">Add</button></td></tr>'}).join("")+(all.length>keys.length?'<tr><td colspan="7" class="empty">Showing '+keys.length+' of '+all.length+'. Type to narrow it down.</td></tr>':""):'<tr><td colspan="7" class="empty">No match. You can still add any ticker below and enter its numbers yourself.</td></tr>';
 }
 function histHtml(e){
   var h=e.hist,o="";
@@ -489,7 +490,7 @@ function renderAnalysis(){
 function renderAll(){renderHoldings();renderAnalysis()}
 
 function addHolding(t,shares){
-  t=String(t||"").trim().toUpperCase();shares=num(shares);
+  t=String(t||"").trim().toUpperCase().replace(".","-");shares=num(shares);
   if(!t||!(shares>0))return false;
   var ex=S.holdings.filter(function(h){return h.t===t})[0];
   if(ex){ex.shares=num(ex.shares)+shares;return true}

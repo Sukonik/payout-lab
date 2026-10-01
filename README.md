@@ -34,7 +34,7 @@ Other details:
 - Portfolio saved in `localStorage` only (key `payoutlab.v1`).
 - Mobile-friendly, with safe-area insets.
 - Two foreign ADRs (LYG, NTDOY) with an explanation of why their dollar payouts move with FX and withholding.
-- About 28 popular dividend stocks and ETFs built in, plus a one-click sample portfolio.
+- Universe of about 590 tickers: the S&P 500, about 70 leading ETFs (broad market, dividend, covered-call, sector, bond) and two foreign ADRs. Tickers appear in search once they have been refreshed. Plus a one-click sample portfolio.
 - No third-party requests from the page (system fonts, no trackers).
 
 ## Run locally
@@ -51,7 +51,7 @@ Static files only: `index.html` + `data.json`. Cloudflare Pages, Netlify, or Git
 
 ## Data: real numbers
 
-The page reads `data.json`. A scheduled GitHub Action (`.github/workflows/update-data.yml`) runs `scripts/update-data.mjs` every weekday after the US close. For each ticker it tries **Tiingo** first (needs the `TIINGO_TOKEN` repo secret) and falls back to **Yahoo Finance's** public endpoint if Tiingo has no data for that ticker. It then works out:
+The page reads `data.json`. A scheduled GitHub Action (`.github/workflows/update-data.yml`) runs `scripts/update-data.mjs` three times each weekday. Each run refreshes the 45 stalest tickers (Tiingo's free plan allows about 50 symbols an hour), so the whole list cycles in a few days. You can run it by hand with a bigger batch from the Actions tab. For each ticker it tries **Tiingo** first (needs the `TIINGO_TOKEN` repo secret) and falls back to **Yahoo Finance's** public endpoint if Tiingo has no data for that ticker. It then works out:
 
 - `p` price (latest close)
 - `d` dividends paid in the last 12 months, per share
@@ -60,7 +60,8 @@ The page reads `data.json`. A scheduled GitHub Action (`.github/workflows/update
 - `type` one of `EQUITY_STANDARD`, `ETF_PASS_THROUGH`, `ADR_VARIABLE`; picks which explanation the card shows (set by hand, not by the feed)
 - `hist` the last 8 payments, shown as a small bar chart (shows steady vs jagged payouts)
 - `g3`, `g5` dividend growth per year over 3 and 5 years, when enough history exists
-- `src` which provider supplied that ticker
+- `src` which provider supplied that ticker, `u` when it was last refreshed
+- `est` true when no provider reported dividends for a ticker that should pay one, so the dividend is a starter estimate
 
 and commits the result. If a ticker fails on every provider, its old values stay. If everything fails, the file is left untouched. A successful refresh redeploys the site.
 
@@ -70,7 +71,9 @@ Things to know:
 - Check Tiingo's terms for displaying data on a public or paid site before charging, and upgrade to their commercial plan if the free plan does not cover it. Yahoo's endpoint is unofficial and has no commercial terms, so it is only a fallback.
 - Pay months come from ex-dividend dates, which usually land a few weeks before the cash arrives.
 - Tax type (`q`) is not provided by the feed. It is kept from the seed data, so check it for new tickers.
-- To add a ticker, add an entry to `data.json` such as `"AVGO": {"n": "Broadcom", "p": 1, "d": 0}` and the next refresh fills it in.
+- To add a ticker, add an entry to `data.json` such as `"XYZ":{"n":"Example Corp","q":true,"type":"EQUITY_STANDARD"}`. It has no `u` date, so the next refresh picks it up first.
+- The S&P 500 list came from the open `datasets/s-and-p-500-companies` repo and will drift as the index changes. Tax type (`q`) for new tickers is a rough default: ordinary for REITs, bond funds and covered-call funds, qualified for the rest. Verify before relying on it.
+- Tiingo's free plan also caps unique symbols per month. If it runs out, the script falls back to Yahoo for the rest.
 
 ## Monetization roadmap
 
