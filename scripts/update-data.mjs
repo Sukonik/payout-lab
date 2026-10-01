@@ -5,14 +5,27 @@ import { readFileSync, writeFileSync } from "node:fs";
 const FILE = new URL("../data.json", import.meta.url);
 const SCHEDULES = { 12: "M", 2: "S", 1: "A" };
 
-// Pure function so it can be tested without network access.
-export function summarize(chart, now = Date.now()) {
+// Provider adapters: each returns { price, events: [{ t: ms, a: amount }] } or null.
+export function fromYahoo(chart) {
   const r = chart?.chart?.result?.[0];
   const price = r?.meta?.regularMarketPrice;
   if (!r || !(price > 0)) return null;
-  const events = Object.values(r.events?.dividends ?? {})
-    .map((e) => ({ t: e.date * 1000, a: e.amount }))
-    .sort((a, b) => a.t - b.t);
+  const events = Object.values(r.events?.dividends ?? {}).map((e) => ({ t: e.date * 1000, a: e.amount }));
+  return { price, events };
+}
+
+// Tiingo daily prices: [{ date, close, divCash, ... }] in date order. divCash is the cash dividend on its ex-date.
+export function fromTiingo(rows) {
+  if (!Array.isArray(rows) || !rows.length) return null;
+  const price = rows[rows.length - 1].close;
+  if (!(price > 0)) return null;
+  const events = rows.filter((r) => r.divCash > 0).map((r) => ({ t: Date.parse(r.date), a: r.divCash }));
+  return { price, events };
+}
+
+// Pure function so it can be tested without network access.
+export function summarize({ price, events }, now = Date.now()) {
+  events = [...events].sort((a, b) => a.t - b.t);
   const yearAgo = now - 365 * 864e5;
   const ttm = events.filter((e) => e.t > yearAgo);
   const out = { p: round(price, 2) };
@@ -39,28 +52,55 @@ export function summarize(chart, now = Date.now()) {
 
 const round = (v, d) => Math.round(v * 10 ** d) / 10 ** d;
 
+const TIINGO_TOKEN = process.env.TIINGO_TOKEN;
+
+async function getJson(url, headers = {}) {
+  const res = await fetch(url, { headers });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
+}
+
+async function fetchTiingo(t) {
+  const start = new Date(Date.now() - 7 * 365 * 864e5).toISOString().slice(0, 10);
+  const rows = await getJson(
+    `https://api.tiingo.com/tiingo/daily/${encodeURIComponent(t)}/prices?startDate=${start}`,
+    { Authorization: `Token ${TIINGO_TOKEN}`, "Content-Type": "application/json" }
+  );
+  return fromTiingo(rows);
+}
+
+async function fetchYahoo(t) {
+  const chart = await getJson(
+    `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(t)}?range=7y&interval=1mo&events=div`,
+    { "User-Agent": "Mozilla/5.0 (payout-lab data refresh)" }
+  );
+  return fromYahoo(chart);
+}
+
 async function main() {
   const db = JSON.parse(readFileSync(FILE, "utf8"));
+  const used = {};
   let ok = 0;
   for (const t of Object.keys(db.tickers)) {
-    try {
-      const res = await fetch(
-        `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(t)}?range=7y&interval=1mo&events=div`,
-        { headers: { "User-Agent": "Mozilla/5.0 (payout-lab data refresh)" } }
-      );
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const s = summarize(await res.json());
-      if (!s) throw new Error("no data");
-      Object.assign(db.tickers[t], s);
-      ok++;
-    } catch (e) {
-      console.warn(`${t}: kept old values (${e.message})`);
+    const attempts = [...(TIINGO_TOKEN ? [["Tiingo", fetchTiingo]] : []), ["Yahoo Finance", fetchYahoo]];
+    for (const [name, fetcher] of attempts) {
+      try {
+        const raw = await fetcher(t);
+        if (!raw) throw new Error("no data");
+        Object.assign(db.tickers[t], summarize(raw), { src: name });
+        used[name] = (used[name] || 0) + 1;
+        ok++;
+        break;
+      } catch (e) {
+        console.warn(`${t}: ${name} failed (${e.message})`);
+      }
     }
     await new Promise((r) => setTimeout(r, 400));
   }
   if (ok === 0) throw new Error("No ticker refreshed; leaving data.json untouched");
   db.updated = new Date().toISOString();
-  db.source = "Yahoo Finance";
+  db.source = Object.keys(used).join(" + ");
+  console.log("Sources used:", used);
   writeFileSync(FILE, JSON.stringify(db, null, 1) + "\n");
   console.log(`Refreshed ${ok}/${Object.keys(db.tickers).length} tickers`);
 }
