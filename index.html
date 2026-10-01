@@ -107,6 +107,10 @@ td.num,th.num{text-align:right}
 svg.path{width:100%;height:auto;display:block;margin-top:12px}
 footer{color:var(--muted);font-size:.85rem;margin-top:24px;max-width:80ch}
 @media (prefers-reduced-motion: reduce){.tube .liquid{transition:none}}
+.hist{display:flex;gap:8px;align-items:flex-end;margin-top:12px;height:78px}
+.hist div{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;flex:1;max-width:48px}
+.hist i{display:block;width:100%;background:var(--accent);border-radius:4px 4px 0 0}
+.hist span{font-size:.65rem;color:var(--muted)}
 .psbig{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:10px;margin-top:12px}
 .psbig>div{background:var(--accent-soft);border-radius:10px;padding:10px 14px}
 .psbig span{display:block;font-size:.8rem;color:var(--muted)}
@@ -336,10 +340,23 @@ function renderPS(){
   if(q&&DB[q]){var e=DB[q],pp=dbPer(q),n=(SCHED[e.s]||SCHED.Q3).length;
     card.innerHTML='<div class="psbig"><div><span>'+esc(q)+' pays</span><b>'+money(pp,4)+' <small>per share, '+n+'x a year</small></b></div>'+
       '<div><span>Per year</span><b>'+money(e.d,2)+'</b></div><div><span>Yield</span><b>'+pct(e.p>0?e.d/e.p:0,2)+'</b></div><div><span>Months</span><b style="font-size:1rem">'+SCHED_LABEL[e.s]+'</b></div></div>'+
+      histHtml(e)+
       '<p class="note">100 shares would pay about '+money(pp*100,2)+' each time and '+money(e.d*100,2)+' a year.</p>';
   }else card.innerHTML="";
   $("psRows").innerHTML=keys.length?keys.map(function(k){var e=DB[k];
     return '<tr><td><b>'+esc(k)+'</b><div class="sub">'+esc(e.n)+'</div></td><td class="num">'+money(e.p,2)+'</td><td class="num"><b>'+money(dbPer(k),4)+'</b></td><td>'+SCHED_LABEL[e.s]+'</td><td class="num">'+money(e.d,2)+'</td><td class="num">'+pct(e.p>0?e.d/e.p:0,2)+'</td><td><button class="ghost" data-add="'+esc(k)+'">Add</button></td></tr>'}).join(""):'<tr><td colspan="7" class="empty">No match. You can still add any ticker below and enter its numbers yourself.</td></tr>';
+}
+function histHtml(e){
+  var h=e.hist,o="";
+  if(h&&h.length>1){
+    var max=Math.max.apply(null,h.map(function(x){return x.a})),min=Math.min.apply(null,h.map(function(x){return x.a}));
+    o+='<div class="hist" aria-label="Recent payments per share">'+h.map(function(x){return '<div title="'+esc(x.d)+': '+money(x.a,4)+'"><i style="height:'+Math.max(6,Math.round(x.a/max*56))+'px"></i><span>'+esc(x.d.slice(2,7))+'</span></div>'}).join("")+'</div>';
+    o+='<p class="note">Last '+h.length+' payments, '+money(min,4)+' to '+money(max,4)+'. '+(max/min>1.15?'Payments vary a lot from one to the next.':'Payments are steady.')+'</p>';
+  }
+  if(e.g3!=null||e.g5!=null)o+='<p class="note">Dividend growth per year: '+(e.g3!=null?'3-year '+pct(e.g3,1):'')+(e.g3!=null&&e.g5!=null?', ':'')+(e.g5!=null?'5-year '+pct(e.g5,1):'')+'.</p>';
+  if(e.adr)o+='<p class="note"><b>Foreign ADR:</b> the dollar amount moves with the exchange rate and foreign tax withholding, so it can change every payment even if the company keeps its dividend flat.</p>';
+  else if(/ETF|Fund/i.test(e.n))o+='<p class="note"><b>ETF:</b> each payout is a pass-through of whatever its holdings paid that quarter, so amounts rise and fall.</p>';
+  return o;
 }
 function fillTickers(){$("tickers").innerHTML=Object.keys(DB).map(function(k){return '<option value="'+k+'">'+esc(DB[k].n)+'</option>'}).join("")}
 function fillSelect(id,hs,key){

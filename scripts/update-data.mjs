@@ -25,6 +25,15 @@ export function summarize(chart, now = Date.now()) {
   out.per = round(last.a, 4);
   out.s = freq === 4 ? `Q${((month - 1) % 3) + 1}` : SCHEDULES[freq];
   out.last = new Date(last.t).toISOString().slice(0, 10);
+  out.hist = events.slice(-8).map((e) => ({ d: new Date(e.t).toISOString().slice(0, 10), a: round(e.a, 4) }));
+  // Growth: trailing-12-month dividends vs the same window 3 and 5 years ago.
+  const window = (yrs) => events
+    .filter((e) => e.t > now - (yrs + 1) * 365 * 864e5 && e.t <= now - yrs * 365 * 864e5)
+    .reduce((s, e) => s + e.a, 0);
+  for (const yrs of [3, 5]) {
+    const old = window(yrs);
+    if (old > 0 && events[0].t <= now - yrs * 365 * 864e5) out[`g${yrs}`] = round((out.d / old) ** (1 / yrs) - 1, 4);
+  }
   return out;
 }
 
@@ -36,7 +45,7 @@ async function main() {
   for (const t of Object.keys(db.tickers)) {
     try {
       const res = await fetch(
-        `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(t)}?range=2y&interval=1d&events=div`,
+        `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(t)}?range=7y&interval=1mo&events=div`,
         { headers: { "User-Agent": "Mozilla/5.0 (payout-lab data refresh)" } }
       );
       if (!res.ok) throw new Error(`HTTP ${res.status}`);

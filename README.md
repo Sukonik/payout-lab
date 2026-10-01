@@ -23,6 +23,7 @@ Other details:
 - Light and dark themes (follows the system setting).
 - Portfolio saved in `localStorage` only (key `payoutlab.v1`).
 - Mobile-friendly, with safe-area insets.
+- Two foreign ADRs (LYG, NTDOY) with an explanation of why their dollar payouts move with FX and withholding.
 - About 28 popular dividend stocks and ETFs built in, plus a one-click sample portfolio.
 - No third-party requests from the page (system fonts, no trackers).
 
@@ -46,6 +47,8 @@ The page reads `data.json`. A scheduled GitHub Action (`.github/workflows/update
 - `d` dividends paid in the last 12 months, per share
 - `per` the most recent payment per share
 - `s` pay schedule (monthly, quarterly cycle, twice a year, yearly)
+- `hist` the last 8 payments, shown as a small bar chart (shows steady vs jagged payouts)
+- `g3`, `g5` dividend growth per year over 3 and 5 years, when enough history exists
 
 and commits the result. If a ticker fails, its old values stay. If everything fails, the file is left untouched.
 

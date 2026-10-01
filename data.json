@@ -197,6 +197,22 @@
    "d": 2.1,
    "s": "Q3",
    "q": true
+  },
+  "LYG": {
+   "n": "Lloyds Banking Group (ADR)",
+   "p": 4.5,
+   "d": 0.17,
+   "s": "S",
+   "q": false,
+   "adr": true
+  },
+  "NTDOY": {
+   "n": "Nintendo (ADR)",
+   "p": 13,
+   "d": 0.17,
+   "s": "S",
+   "q": false,
+   "adr": true
   }
  }
 }
