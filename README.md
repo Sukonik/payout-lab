@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **What it is** | Free dividend calculator that shows what each share pays, when, and how fragile your income is |
-| **Hosting** | GitHub Pages, static files only (`index.html` + `data.json`), no backend |
+| **Hosting** | GitHub Pages via Actions (`.github/workflows/pages.yml`), static files only (`index.html` + `data.json`), no backend. One-time setup: Settings → Pages → Source: **GitHub Actions** |
 | **Data** | Refreshed on weekdays by a GitHub Action from Yahoo Finance's public endpoint, no API key |
 | **Privacy** | Portfolios stay in your browser's local storage, no accounts, no third-party requests |
 | **Status** | Pre-launch. Numbers are starter estimates until the first data refresh succeeds, and the site says so |
