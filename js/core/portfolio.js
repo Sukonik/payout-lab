@@ -38,7 +38,8 @@ export function editField(packet, index, key, value, now = new Date().toISOStrin
   const map = { price: "price", div: "dividend", s: "schedule", q: "tax" };
   const f = h.fields[map[key]];
   if (!f) return false;
-  f.v = key === "s" ? value : key === "q" ? value === true || value === "1" : Math.max(0, num(value));
+  const cap = key === "price" ? LIMITS.maxPrice : LIMITS.maxDividend;
+  f.v = key === "s" ? value : key === "q" ? value === true || value === "1" : Math.min(cap, Math.max(0, num(value)));
   f.src = "user"; f.manual = true; f.asOf = now;
   if (key === "s") f.basis = "user";
   if (key === "div") f.basis = null;

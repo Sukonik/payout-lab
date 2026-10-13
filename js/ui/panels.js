@@ -3,13 +3,16 @@
 import { $, esc, money, pct } from "./dom.js";
 import { dur, inc, path, shift, simulate, taxSummary, when, num } from "../core/calc.js";
 
+// Fill a holding picker and return the holding in effect. A stale choice falls back to the first holding for display only:
+// rendering never writes into the portfolio, so it cannot change a saved file behind the user's back.
 function fillSelect(id, hs, settings, key) {
   const sel = $(id);
   let cur = settings[key];
-  if (!hs.some((h) => h.t === cur)) { cur = hs.length ? hs[0].t : ""; settings[key] = cur; }
+  if (!hs.some((h) => h.t === cur)) cur = hs.length ? hs[0].t : "";
   sel.innerHTML = hs.length
     ? hs.map((h) => `<option value="${esc(h.t)}"${h.t === cur ? " selected" : ""}>${esc(h.t)}</option>`).join("")
     : '<option value="">No holdings</option>';
+  return cur;
 }
 
 export function renderConc(hs, T) {
@@ -25,9 +28,9 @@ export function renderConc(hs, T) {
 }
 
 export function renderCut(hs, T, S) {
-  fillSelect("cutT", hs, S, "cutT");
+  const pick = fillSelect("cutT", hs, S, "cutT");
   $("cutPctV").textContent = S.cutPct + "%";
-  const h = hs.find((x) => x.t === S.cutT);
+  const h = hs.find((x) => x.t === pick);
   if (!h || T.income <= 0) { $("cutOut").innerHTML = '<p class="muted note">Add a dividend-paying holding to run this test.</p>'; return; }
   const loss = (inc(h) * S.cutPct) / 100, after = T.income - loss;
   const a = simulate(T.income, T.yield, S.target, S.contrib, S.growth, S.reinvest);
@@ -68,8 +71,8 @@ export function renderGoal(hs, T, S) {
 }
 
 export function renderAdd(hs, T, S) {
-  fillSelect("addT", hs, S, "addT");
-  const h = hs.find((x) => x.t === S.addT);
+  const pick = fillSelect("addT", hs, S, "addT");
+  const h = hs.find((x) => x.t === pick);
   if (!h) { $("addOut").innerHTML = '<p class="muted note">Add a holding to run this test.</p>'; return; }
   if (!(num(h.price) > 0)) { $("addOut").innerHTML = `<p class="muted note">Enter a price for ${esc(h.t)} in the table to run this test.</p>`; return; }
   const amt = num(S.addAmt), sh = amt / num(h.price), add = sh * num(h.div), ni = T.income + add, nv = T.value + amt;

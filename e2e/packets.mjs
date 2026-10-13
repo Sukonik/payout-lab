@@ -26,6 +26,7 @@ await a.waitForFunction(() => /Device\s+saved/.test(document.querySelector("#sta
 check("shares can be fractional", (await holdingsOf(a))[0][0] === "12.5");
 const pk1 = await savePacket(a, "one.payout");
 check("file name is predictable", /^my-portfolio-\d{8}-[0-9a-z]{6}\.payout$/.test(pk1.suggested), pk1.suggested);
+await a.waitForFunction(() => /Packet\s+saved/.test(document.querySelector("#status").innerText)).catch(() => {});
 check("status says packet saved", /Packet\s+saved/.test(await statusText(a)));
 const text1 = JSON.parse(fs.readFileSync(pk1.file, "utf8"));
 check("packet has format, version, ids, checksum", text1.format === "payout-packet" && text1.schemaVersion === 1 && /^pf_/.test(text1.portfolioId) && text1.checksum?.alg === "sha-256");

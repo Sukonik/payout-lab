@@ -1,129 +1,112 @@
 # 🧪 Payout Lab
 
+**Stress-test the dividend portfolio you already own.** Free, no signup, no broker linking. Your portfolio is a small file that you own.
+
 > **Live site: https://sukonik.github.io/payout-lab/**
 
-| | |
+## Releases
+
+| Version | Status | Site | Release record |
+|---|---|---|---|
+| **V1** | Preserved baseline | https://sukonik.github.io/payout-lab/v1/ | Commit [`475287d`](https://github.com/Sukonik/payout-lab/commit/475287db7b2646dee2968c10c91301747dd02489) (verified deployed by Pages run [38339910088](https://github.com/Sukonik/payout-lab/actions/runs/38339910088)) |
+| **V2 · Portable Workspace** | Releasing | https://sukonik.github.io/payout-lab/ (current) | Release commit and date are recorded here as soon as the release commit exists. Built from PRs [#21](https://github.com/Sukonik/payout-lab/pull/21), [#22](https://github.com/Sukonik/payout-lab/pull/22), [#23](https://github.com/Sukonik/payout-lab/pull/23), [#24](https://github.com/Sukonik/payout-lab/pull/24) |
+| **V3 · Access & Receipts** | Planned | Pending deployment | Not started. See the [roadmap](#roadmap) |
+
+- The main address always shows the latest release. A **preserved build** is the exact web files from its release commit, deployed under its own path (`/v1/`), so old links keep working even after the main site moves on. Preserved builds use the price file as it was at release and do not update.
+- Releases are recorded by **commit**, which is permanent. Git tags have not been created yet (tag pushes were not possible from the automation that built V2). To add one: `git tag -a v2.0.0 <release commit> && git push origin v2.0.0`.
+- Release notes and verification results: [`docs/release-v2.md`](docs/release-v2.md).
+
+## What it does
+
+- **Overview**: yearly and monthly income, yield, a rack of test tubes showing income by month (tap a tube to see who pays that month), data freshness and a concentration summary.
+- **Portfolio**: add holdings, edit shares and values, import a CSV, check for newer market data and choose what to apply.
+- **Lab**: dividend cut test, concentration check, goal timeline, add-money test, taxable vs IRA.
+- **Receipts**: your packet and what is saved on this device, explained plainly.
+- **Explore**: search any of about 590 tickers (the S&P 500, leading ETFs and two foreign ADRs) to see what one share pays, how often, and the last payments.
+
+## Your portfolio is a file
+
+Payout Lab has no accounts and no server. The site is static and your data stays in your browser.
+
+| Word | What it means |
 |---|---|
-| **What it is** | Free dividend calculator that shows what each share pays, when, and how fragile your income is |
-| **Hosting** | GitHub Pages via Actions (`.github/workflows/pages.yml`), static files only (`index.html` + `data.json`), no backend. One-time setup: Settings → Pages → Source: **GitHub Actions** |
-| **Data** | Refreshed on weekdays by a GitHub Action from Tiingo (API key stored as a repo secret), with Yahoo Finance as fallback |
-| **Privacy** | Portfolios stay in your browser's local storage, no accounts, no third-party requests |
-| **Status** | Pre-launch. Numbers are starter estimates until the first data refresh succeeds, and the site says so |
+| **Packet** | A `.payout` file with your whole portfolio: holdings, settings and saved reports. It is your account. Open it on any device to continue. It is plain JSON, **not encrypted**, so keep it private. [Format](docs/packet-format.md) |
+| **Device** | A copy this browser remembers so you can press *Continue* next time. Convenient, but browsers can clear site data, so it is **not a backup**. It is not synced between devices, and browser sync of bookmarks or passwords does not sync it. |
+| **Bookmark** | Opens the website. On this browser it continues your remembered portfolio. On another device it cannot bring your portfolio back: open your packet there. |
 
-**Stress-test the dividend portfolio you already own.**
+The header always shows both states, **Device** and **Packet**, and **Save packet** is available on every tab. Opening a packet never replaces your work by itself: you see a summary, and older or diverging copies open as separate copies so nothing is silently overwritten.
 
-Payout Lab is a free, privacy-first dividend calculator. Enter your holdings and it shows what they pay, when they pay it, and how fragile that income is. There is no signup and no broker linking, and nothing leaves your browser.
+## Data
 
-It is one static page (`index.html`) plus a data file (`data.json`), with no build step, backend or API key.
+Prices and dividends come from `data.json`, refreshed on weekdays by a scheduled GitHub Action ([`update-data.yml`](.github/workflows/update-data.yml)). It uses Tiingo (API key stored as a repository secret) and falls back to Yahoo Finance only for tickers Tiingo has no data for. Each run refreshes the 45 stalest tickers, so the whole list cycles in a few days. If Tiingo reports a rate limit the run stops and the rest wait for next time.
 
-## Features
+Per ticker the file carries price `p`, dividends paid in the last 12 months `d`, the latest payment `per`, the pay schedule `s`, the last ex-dividend date `last`, recent payments `hist`, growth `g3`/`g5`, the provider `src` and when it was refreshed `u`.
 
-| Tool | What it answers |
-|---|---|
-| **Per-share payouts** | Search any ticker to see what one share pays per payment, how often, and in which months, with price, yearly total and yield. |
-| **Continue screen** | Returning visitors see "Continue <portfolio>" with last-edited and last-packet times, plus a plain list of other portfolios on the device. First-time visitors choose a name and whether to remember it on the device. |
-| **CSV import** | Import holdings from any CSV with a ticker and shares column. You map columns, preview every effect, and choose whether to update, replace or add. Only mapped columns are read; account-style columns are ignored. Not tied to any broker. |
-| **Holdings table** | Portfolio value, yearly income, average monthly income and yield for the shares you enter. |
-| **Monthly income calendar** | Which months the money arrives, based on each holding's payout schedule (monthly, quarterly cycles, semi-annual, annual). |
-| **Dividend cut test** | "If this holding cuts its dividend by X%, what happens to my income?" |
-| **Concentration check** | How much of your income depends on your largest holdings. |
-| **Goal timeline** | When you reach a monthly income goal given monthly contributions, dividend growth, a slow-growth scenario and optional reinvestment. |
-| **Add-money test** | What a lump sum added to one holding does to income and yield. |
-| **Taxable vs IRA** | Estimated tax drag using qualified and ordinary rates plus state tax. |
-
-Other details:
-- Light and dark themes (follows the system setting).
-- Portfolio saved in `localStorage` only (key `payoutlab.v1`).
-- Mobile-friendly, with safe-area insets.
-- Two foreign ADRs (LYG, NTDOY) with an explanation of why their dollar payouts move with FX and withholding.
-- Universe of about 590 tickers: the S&P 500, about 70 leading ETFs (broad market, dividend, covered-call, sector, bond) and two foreign ADRs. Tickers appear in search once they have been refreshed. Plus a one-click sample portfolio.
-- No third-party requests from the page (system fonts, no trackers).
-
-## Run locally
-
-Serve the folder (the app uses ES modules and loads `data.json`, so opening `index.html` straight from disk will not work):
-
-```bash
-python3 -m http.server 8000
-```
-
-## Deploy
-
-Static files only: `index.html` + `data.json`. Cloudflare Pages, Netlify, or GitHub Pages all work with no build step.
-
-## Data: real numbers
-
-The page reads `data.json`. A scheduled GitHub Action (`.github/workflows/update-data.yml`) runs `scripts/update-data.mjs` three times each weekday. Each run refreshes the 45 stalest tickers (Tiingo's free plan allows about 50 symbols an hour), so the whole list cycles in a few days. You can run it by hand with a bigger batch from the Actions tab. For each ticker it tries **Tiingo** first (needs the `TIINGO_TOKEN` repo secret) and falls back to **Yahoo Finance's** public endpoint only if Tiingo has no data for that ticker. If Tiingo reports a rate limit (HTTP 429), the run stops and the remaining tickers wait for the next run. It then works out:
-
-- `p` price (latest close)
-- `d` dividends paid in the last 12 months, per share
-- `per` the most recent payment per share
-- `s` pay schedule (monthly, quarterly cycle, twice a year, yearly)
-- `type` one of `EQUITY_STANDARD`, `ETF_PASS_THROUGH`, `ADR_VARIABLE`; picks which explanation the card shows (set by hand, not by the feed)
-- `hist` the last 8 payments, shown as a small bar chart (shows steady vs jagged payouts)
-- `g3`, `g5` dividend growth per year over 3 and 5 years, when enough history exists
-- `src` which provider supplied that ticker, `u` when it was last refreshed
-- `est` true when no provider reported dividends for a ticker that should pay one, so the dividend is a starter estimate
-
-and commits the result. `last` is the last **ex-dividend** date, not a cash date. The page treats pay months as estimates and says so.
-
-In the app, a portfolio keeps its own dated copy of every value. A new data file never rewrites it: **Portfolio → Check for updates** shows what changed (with provider and date), protects values you entered, flags provider data that is itself stale, and applies only what you choose. You can also choose whether "dividend per share" means the last 12 months or the current rate.
-
-If a ticker fails on every provider, its old values stay. If everything fails, the file is left untouched. A successful refresh redeploys the site.
-
-**Until a refresh succeeds, `data.json` holds approximate starter estimates and the site says so.** Trigger one from the repo's Actions tab (Refresh dividend data, then Run workflow).
+In the app, **a portfolio keeps its own dated copy of every value**. A new data file never rewrites it. *Portfolio → Check for updates* shows what changed with provider and date, protects values you typed, flags provider data that is itself stale, and applies only what you choose. You can pick whether "dividend per share" means the **last 12 months** or the **current rate**.
 
 Things to know:
-- Check Tiingo's terms for displaying data on a public or paid site before charging, and upgrade to their commercial plan if the free plan does not cover it. Yahoo's endpoint is unofficial and has no commercial terms, so it is only a fallback.
-- Pay months come from ex-dividend dates, which usually land a few weeks before the cash arrives.
-- Tax type (`q`) is not provided by the feed. It is kept from the seed data, so check it for new tickers.
-- To add a ticker, add an entry to `data.json` such as `"XYZ":{"n":"Example Corp","q":true,"type":"EQUITY_STANDARD"}`. It has no `u` date, so the next refresh picks it up first.
-- The S&P 500 list came from the open `datasets/s-and-p-500-companies` repo and will drift as the index changes. Tax type (`q`) for new tickers is a rough default: ordinary for REITs, bond funds and covered-call funds, qualified for the rest. Verify before relying on it.
-- Tiingo's free plan also caps unique symbols per month. If it runs out, the script falls back to Yahoo for the rest.
+- Pay months come from **ex-dividend dates**, which land a few weeks before cash arrives. The app calls them estimates. Exact pay dates are not available yet.
+- The data cannot separate special or one-off payments from regular ones, so the 12-month total can include them.
+- Tax type (`q`) is not in the feed; new tickers get a rough default (ordinary for REITs, bond funds and covered-call funds, qualified otherwise). Check it.
+- The S&P 500 list came from the open `datasets/s-and-p-500-companies` repo and drifts as the index changes. Add a ticker by adding an entry to `data.json`; it has no `u` date, so the next refresh picks it up first.
+- Check Tiingo's terms for displaying data on a public or paid site before charging. Yahoo's endpoint is unofficial and has no commercial terms, so it is only a fallback.
 
-## Monetization roadmap
+## Privacy and cost
 
-The product has a clear audience (income investors) and an obvious trust angle (no data collection). Suggested path, cheapest first:
+- **Nothing you enter is uploaded.** Calculations, packets, CSV parsing and storage all run in the browser. The page makes no third-party requests (system fonts, no trackers, no analytics).
+- **$0 to run.** GitHub Pages hosts the static files; a free GitHub Action refreshes public data. There is no database, no per-user backend and no paid service. A custom domain is optional. If the site moves to a new web address, the copies remembered in the browser do not move, so save a packet first.
+- **Browser support.** Current Chrome, Edge and Firefox, and Safari or iOS 16.4 and later (the app uses `<dialog>`, `:has()` and ES modules, with fallbacks for `color-mix`). The automated checks run in **Chromium only**, including phone-size emulation. It has **not yet been verified on a physical iPhone or in Safari or Firefox**.
 
-1. **Launch free and collect traffic.** Ship on a custom domain and add basic privacy-friendly analytics (Plausible or Cloudflare Web Analytics). Write SEO pages around the queries people already search, such as "dividend calculator", "dividend cut calculator" and "how many shares of SCHD for $1,000 a month".
-2. **Licensed data.** Before charging, confirm your data provider's plan allows commercial display (Tiingo commercial plan, or Financial Modeling Prep, Polygon/Massive, EODHD). The key stays in a GitHub secret and the browser never calls the API.
-3. **Pro tier ($4 to $8/month or ~$40/year).** Candidates for gating:
-   - Unlimited saved portfolios and cloud sync across devices.
-   - CSV import from brokers.
-   - Live prices and dividend-calendar alerts.
-   - Exportable PDF or CSV reports.
-   - DRIP backtesting and multi-scenario comparison.
-   - Keep the core calculator free so it keeps ranking and sharing.
-   - Payments: Stripe Checkout or Lemon Squeezy, with Cloudflare Workers or Supabase for auth and entitlements.
-4. **Affiliate links, used carefully.** Broker referral links and tax-software links, placed clearly and labelled. Avoid anything that reads as a recommendation to buy a specific security.
-5. **Sponsorship or light display ads.** Only if traffic justifies it. Ads would weaken the "nothing leaves your browser" promise.
+## Roadmap
 
-### Before charging money
+**V3 · Access & Receipts** (planned): saved **report receipts** you can compare over time with an explanation of what changed; **workspace bookmarks** and optional **snapshot links** that carry a dated copy in the link itself (never a server account); and **QR cards** generated in the browser. Tracked in [#2](https://github.com/Sukonik/payout-lab/issues/2) with tickets #6, #7 and #8.
 
-- **Compliance:** the calculator must stay educational and must not recommend securities. Keep the disclaimer and have it reviewed for your jurisdiction. Give it a Terms of Service and Privacy Policy page.
-- **Accuracy:** verify the starter data and the tax math before charging for anything.
-- **Privacy positioning:** if you add accounts or cloud sync, update the "nothing leaves your browser" claim, because it will no longer be true for paid users.
+Later and optional, each needing its own feasibility review: encrypted packets, passkeys or password-manager unlock keys (#10), and themed Collections (#1).
+
+### Keeping it free to run
+
+The earlier idea of a paid tier with cloud sync no longer fits: accounts and servers are exactly what this design avoids, and paid sync would cost money to operate. Options that keep operating cost at $0 and keep the privacy promise:
+
+- Stay free and open source. Optional supporter links (GitHub Sponsors or similar) cost nothing to run.
+- Clearly labelled affiliate links, written so they never read as a recommendation to buy a security.
+- Anything paid must run entirely in the browser with no server, and its data must be licensed for commercial display.
+- Ads and trackers would break the "nothing leaves your browser" promise.
+
+Before charging for anything: keep the educational disclaimer reviewed for your jurisdiction, add Terms and a Privacy Policy, verify the data licence, and re-check every privacy claim above.
+
+## Run it yourself
+
+```bash
+python3 -m http.server 8000     # the app uses ES modules and data.json, so serve it; opening index.html from disk will not work
+npm test                        # unit tests (Node 20+, no dependencies)
+node e2e/release.mjs            # release checks in Chromium (needs Playwright; see e2e/lib.mjs)
+```
+
+Deploy is automatic: pushing to `main` runs [`pages.yml`](.github/workflows/pages.yml), which calls `scripts/build-site.mjs` to assemble the current app plus the preserved builds listed in [`releases.json`](releases.json). One-time setup: Settings → Pages → Source: **GitHub Actions**.
+
+Browser checks in `e2e/`: `packets` (save/open/migration/storage), `workspace` (routing, layout, accessibility), `refresh` (data review), `import` (CSV), `return` (start screen), `regression-v1` (calculators match V1), `release` (the release standard), plus screenshot helpers.
 
 ## Project structure
 
 ```
-index.html                          # app shell: five views (Overview, Portfolio, Lab, Receipts, Explore) and the settings sheet
+index.html                          # app shell: start screen, five views, settings sheet
 css/app.css                         # design system (light and dark), phone-first layout
 js/app.js                           # controller: working packet, local save, open/save packets
-js/core/                            # pure logic, unit-tested: calc, packet schema, store, route, market data, portfolio ops
-js/ui/                              # rendering: views, tube rack, panels, explore, dialogs, shell (nav + router)
+js/core/                            # pure, unit-tested logic: calc, packet schema, store, route, market, refresh, csv
+js/ui/                              # rendering: views, tube rack, panels, explore, dialogs, shell, gate, data review, CSV import
 data.json                           # public prices and dividends, refreshed on a schedule
-docs/packet-format.md               # the .payout file format
+releases.json                       # preserved builds: version, path and exact commit
+docs/                               # packet format, release notes, screenshots
 tests/                              # unit tests (npm test)
-e2e/                                # browser checks (Playwright): packets, workspace, regression against V1, screenshots
-scripts/update-data.mjs             # the data refresh script (Node 20, no deps)
+e2e/                                # browser checks (Playwright)
+scripts/                            # update-data.mjs (refresh), build-site.mjs (Pages assembly)
 .github/workflows/                  # data refresh, Pages deploy, tests
 LICENSE                             # MPL-2.0
 ```
 
 ## Disclaimer
 
-Payout Lab is an educational calculator. It does not recommend buying or selling anything, and it is not tax or investment advice. Starter data is approximate and may be out of date.
+Payout Lab is an educational calculator. It does not recommend buying or selling anything, and it is not tax or investment advice. Data can be out of date, so check figures against each company's or fund's own announcements.
 
 ## License
 

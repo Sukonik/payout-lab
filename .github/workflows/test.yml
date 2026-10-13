@@ -3,7 +3,7 @@ on:
   pull_request:
   push:
     branches: [main]
-    paths: ["js/**", "tests/**", "scripts/**", "package.json", ".github/workflows/test.yml"]
+    paths: ["js/**", "css/**", "index.html", "e2e/**", "tests/**", "scripts/**", "releases.json", "package.json", ".github/workflows/test.yml"]
 permissions:
   contents: read
 jobs:
@@ -14,3 +14,19 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - run: npm test
+
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }   # the V1 regression check and release check read the baseline commit
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm install --no-save playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - name: Browser checks
+        run: |
+          for t in packets workspace refresh import return hardening regression-v1 release; do
+            echo "::group::$t"; node e2e/$t.mjs || { echo "::endgroup::"; exit 1; }; echo "::endgroup::"
+          done

@@ -13,7 +13,7 @@ export const LIMITS = {
   maxChars: 5 * 1024 * 1024,
   maxHoldings: 500,
   maxSnapshots: 50,
-  maxLineage: 100,
+  maxLineage: 200,
   maxName: 80,
   maxShares: 1e12,
   maxPrice: 1e7,
@@ -209,6 +209,17 @@ function validateReceipt(raw, i) {
 
 // ---------- settings ----------
 // Missing keys fall back to defaults (older/newer files); present-but-invalid keys are rejected.
+// Bounds for each scenario setting. Typed values are clamped to these so the app can never write a packet it cannot read back.
+export const SETTING_RANGE = {
+  target: [0, 1e7], contrib: [0, 1e7], growth: [0, 50], slow: [0, 50], cutPct: [0, 100], addAmt: [0, 1e9], qRate: [0, 100], oRate: [0, 100], stRate: [0, 100],
+};
+export function clampSetting(key, v) {
+  const r = SETTING_RANGE[key];
+  const n = typeof v === "number" ? v : parseFloat(v);
+  if (!r) return v;
+  return Number.isFinite(n) ? Math.min(r[1], Math.max(r[0], n)) : r[0];
+}
+
 export function normalizeSettings(raw, path = "settings") {
   const s = isObj(raw) ? raw : {};
   const d = DEFAULT_SETTINGS;
@@ -382,7 +393,7 @@ export function migrateLegacyV1(raw, { now = new Date().toISOString(), name = "M
   const seen = new Set();
   for (const h of Array.isArray(raw?.holdings) ? raw.holdings : []) {
     const ticker = normalizeTickerText(h?.t);
-    if (!TICKER_RE.test(ticker) || seen.has(ticker)) { skipped.push(String(h?.t ?? "?")); continue; }
+    if (!TICKER_RE.test(ticker) || seen.has(ticker) || packet.holdings.length >= LIMITS.maxHoldings) { skipped.push(String(h?.t ?? "?")); continue; }
     seen.add(ticker);
     const manual = !!h.manual;
     const mk = (v, max) => ({ v: clampNum(v, 0, max, 0), src: manual ? "user" : "legacy", asOf: null, manual });

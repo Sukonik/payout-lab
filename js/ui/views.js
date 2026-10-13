@@ -2,18 +2,16 @@
 import { $, esc, money, pct, tween, shortDate } from "./dom.js";
 import { MONTHS, SCHED_LABEL, inc, perPay } from "../core/calc.js";
 import { SRC_LABEL } from "../core/market.js";
+import { STALE_DAYS, ageDays } from "../core/refresh.js";
 import { renderRack, emptyRackHtml } from "./tubes.js";
 
 // ---------- data freshness (per value: provider-fresh, stale, estimate or manual) ----------
-const DAY = 86400000;
-export const STALE_DAYS = 7;
 const toCalcLite = (h) => ({ shares: h.shares, div: h.fields.dividend.v });
 
 export function fieldStatus(f, now = Date.now()) {
   if (f.manual) return "manual";
   if (f.src === "seed" || f.src === "legacy" || !f.asOf) return "estimate";
-  const age = (now - Date.parse(f.asOf + "T00:00:00Z")) / DAY;
-  return age > STALE_DAYS ? "stale" : "current";
+  return ageDays(f.asOf, now) > STALE_DAYS ? "stale" : "current";
 }
 
 // A holding's status is its weakest value: estimate < stale < current. Manual means the user owns the numbers.

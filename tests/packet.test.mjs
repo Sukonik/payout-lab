@@ -196,3 +196,33 @@ test("legacy migration tolerates garbage", () => {
     assert.equal(roundTrip(packet).ok, true);
   }
 });
+
+test("typed values are clamped to what a packet can hold, so the app never writes an unreadable file", async () => {
+  const { clampSetting, SETTING_RANGE } = await import("../js/core/packet.js");
+  assert.equal(clampSetting("growth", 150), 50);
+  assert.equal(clampSetting("growth", -5), 0);
+  assert.equal(clampSetting("qRate", "abc"), 0);
+  assert.equal(clampSetting("target", 5e12), 1e7);
+  assert.equal(clampSetting("addAmt", 12345), 12345);
+  // every clamped extreme passes validation
+  const p = samplePacket();
+  for (const [k, [lo, hi]] of Object.entries(SETTING_RANGE)) for (const v of [lo, hi]) p.settings[k] = clampSetting(k, v);
+  assert.equal(roundTrip(p).ok, true);
+});
+
+test("legacy migration stops at the holdings limit instead of producing an unopenable packet", () => {
+  const holdings = Array.from({ length: LIMITS.maxHoldings + 40 }, (_, i) => ({ t: `T${i}`, shares: 1, price: 1, div: 0, s: "Q3", q: true }));
+  const { packet, skipped } = migrateLegacyV1({ holdings }, { now: NOW });
+  assert.equal(packet.holdings.length, LIMITS.maxHoldings);
+  assert.equal(skipped.length, 40);
+  assert.equal(roundTrip(packet).ok, true);
+});
+
+test("history stays comparable across hundreds of revisions (the window is wide, and the app mints few)", () => {
+  assert.ok(LIMITS.maxLineage >= 200);
+  let a = newPacket({ now: NOW });
+  const b0 = a;
+  for (let i = 0; i < 150; i++) a = nextRevision(a);
+  assert.equal(compareRevisions(b0, a), "incoming-newer");
+  assert.equal(compareRevisions(a, b0), "incoming-older");
+});

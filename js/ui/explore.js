@@ -22,7 +22,7 @@ function histHtml(e) {
 
 export function fillTickers() {
   const T = getMarket().tickers;
-  $("tickers").innerHTML = Object.keys(T).map((k) => `<option value="${k}">${esc(T[k].n)}</option>`).join("");
+  $("tickers").innerHTML = Object.keys(T).map((k) => `<option value="${esc(k)}">${esc(T[k].n)}</option>`).join("");
 }
 
 export function renderExplore() {
