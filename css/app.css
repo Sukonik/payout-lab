@@ -219,6 +219,7 @@ td.num,th.num{text-align:right}
 .hist i{display:block;width:100%;background:var(--liq-a);border-radius:4px 4px 0 0}
 .hist span{font-size:.65rem;color:var(--muted)}
 .psbig{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.psbig>div:last-child:nth-child(even){grid-column:auto}
 .psbig>div{background:var(--accent-soft);border-radius:14px;padding:10px 14px}
 .psbig>div:first-child{grid-column:1/-1}
 .psbig span{display:block;font-size:.8rem;color:var(--muted);font-weight:600}
@@ -233,6 +234,17 @@ td.num,th.num{text-align:right}
 .privacy{font-size:.84rem;color:var(--muted);margin-top:12px}
 .foot{max-width:1120px;margin:20px auto 0;padding:0 16px;color:var(--muted);font-size:.84rem}
 .foot p+p{margin-top:10px}
+
+.mini{margin:12px 0 6px;font-size:.82rem;color:var(--muted)}
+.rv-list{max-height:min(56vh,460px);overflow:auto;margin:10px -4px;padding:0 4px}
+.rv-row{border-top:1px solid var(--line);padding:10px 0}
+.rv-row:first-child{border-top:0}
+.rv-row h3 small{font-weight:400}
+.rv-ch{display:flex;gap:10px;align-items:flex-start;padding:6px 0;font-size:.92rem;cursor:pointer}
+.rv-ch input{width:20px;height:20px;margin-top:2px;flex:none}
+.rv-conf{margin-top:8px;border-top:1px solid var(--line);padding-top:10px;font-size:.92rem}
+.rv-conf summary{cursor:pointer;color:var(--muted)}
+.updot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--amber);margin-left:6px;vertical-align:middle}
 
 /* ---------- bottom nav (phones) ---------- */
 .bottomnav{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
@@ -257,6 +269,7 @@ dialog .btns .btn.primary{order:3}
 .sheet-h{display:flex;align-items:center;justify-content:space-between;padding:16px 20px 8px}
 .set{padding:12px 20px 14px;border-top:1px solid var(--line)}
 .set h3{margin-bottom:8px}
+.seg.two{grid-template-columns:repeat(2,1fr)}
 .seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--glass);padding:4px;border-radius:12px}
 .seg label{display:block}
 .seg input{position:absolute;opacity:0;pointer-events:none}
@@ -291,7 +304,7 @@ dialog .btns .btn.primary{order:3}
   .readout{grid-template-columns:1.1fr 1.4fr;align-items:center}
   .totals{grid-template-columns:repeat(4,1fr)}
   .hide-s{display:table-cell}
-  .psbig{grid-template-columns:2fr 1fr 1fr 1.4fr}.psbig>div:first-child{grid-column:auto}
+  .psbig{grid-template-columns:repeat(4,1fr)}.psbig>div:first-child{grid-column:1/-1}
   .empty-hero{grid-template-columns:auto 1fr;gap:28px;padding:26px}
   .empty-rack .tsvg{width:30px}
 }

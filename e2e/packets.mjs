@@ -12,7 +12,7 @@ const newPage = async (ctx) => { const p = await ctx.newPage(); p.on("pageerror"
 const holdingsOf = (p) => p.$$eval("#rows .hrow", (rows) => rows.map((tr) => [...tr.querySelectorAll("input")].map((i) => i.value)));
 const statusText = (p) => p.innerText("#status");
 const go = async (p, v) => { await p.evaluate((h) => { location.hash = h; }, "#/" + v); await p.waitForSelector(`#view-${v}:not([hidden])`); };
-const closeSheet = async (p) => { await p.keyboard.press("Escape"); await p.waitForSelector("dialog[open]", { state: "detached" }); };
+const closeSheet = async (p) => { await p.keyboard.press("Escape"); await p.waitForSelector("body > dialog:not(#settings)", { state: "detached" }); };
 const savePacket = async (p, name) => { const [d] = await Promise.all([p.waitForEvent("download"), p.click("#saveBtn")]); const f = path.join(tmp, name); await d.saveAs(f); return { file: f, suggested: d.suggestedFilename() }; };
 const openPacket = async (p, file) => { await p.setInputFiles("#fileIn", file); await p.waitForSelector("dialog[open]"); };
 
@@ -51,7 +51,7 @@ await b.waitForFunction(() => /Device\s+saved/.test(document.querySelector("#sta
 console.log("3. cancelled and invalid imports change nothing");
 await openPacket(b, pk1.file);
 await b.click('dialog[open] [data-result="cancel"]');
-await b.waitForSelector("dialog[open]", { state: "detached" });
+await b.waitForSelector("body > dialog:not(#settings)", { state: "detached" });
 check("cancel leaves edits alone", (await holdingsOf(b))[1][0] === "99");
 const bad = path.join(tmp, "bad.payout"); fs.writeFileSync(bad, "{not json");
 await b.setInputFiles("#fileIn", bad); await b.waitForSelector("dialog[open]");

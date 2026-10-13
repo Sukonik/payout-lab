@@ -7,6 +7,7 @@ import { renderRack, emptyRackHtml } from "./tubes.js";
 // ---------- data freshness (per value: provider-fresh, stale, estimate or manual) ----------
 const DAY = 86400000;
 export const STALE_DAYS = 7;
+const toCalcLite = (h) => ({ shares: h.shares, div: h.fields.dividend.v });
 
 export function fieldStatus(f, now = Date.now()) {
   if (f.manual) return "manual";
@@ -38,18 +39,29 @@ export function freshnessSummary(packet, now = Date.now()) {
 
 export function provChip(h, now = Date.now()) {
   const f = h.fields;
-  const any = [f.price, f.dividend, f.schedule];
-  const man = any.filter((x) => x.manual).length;
   const st = holdingStatus(h, now);
   if (st === "manual") return '<span class="chipsrc manual" title="You entered these values. Data refreshes will not change them.">Your numbers</span>';
-  const base = f.price;
+  // Describe the provider-supplied values; name the ones that are yours.
+  const mine = [["price", f.price], ["dividend", f.dividend], ["months", f.schedule]].filter(([, x]) => x.manual).map(([n]) => n);
+  const base = [f.price, f.dividend, f.schedule].find((x) => !x.manual);
   const label = SRC_LABEL[base.src] || base.src;
   let txt, cls = "";
   if (st === "estimate") { txt = base.src === "legacy" ? "Earlier version · no date" : "Estimate · not live"; cls = " warn"; }
   else if (st === "stale") { txt = `${label} · ${shortDate(base.asOf)} · stale`; cls = " warn"; }
   else txt = `${label} · ${shortDate(base.asOf)}`;
-  if (man) txt += ` · ${man} yours`;
-  return `<span class="chipsrc${cls}" title="Where this holding's values came from and when they were observed">${esc(txt)}</span>`;
+  if (mine.length) txt += ` · ${mine.join(" + ")} yours`;
+  return `<span class="chipsrc${cls}" title="${esc(provDetail(h))}">${esc(txt)}</span>`;
+}
+
+// One line per value: who produced it and when. Pay months are estimates while only ex-dividend dates are known.
+export function provDetail(h) {
+  const f = h.fields;
+  const one = (name, x, extra = "") => `${name}: ${x.manual ? "yours" : SRC_LABEL[x.src] || x.src}${x.asOf ? ", observed " + shortDate(x.asOf) : x.manual ? "" : ", no date"}${extra}`;
+  return [
+    one("Price", f.price),
+    one(f.dividend.basis === "indicated" ? "Dividend (current rate)" : f.dividend.basis === "trailing" ? "Dividend (last 12 months)" : "Dividend", f.dividend),
+    one("Pay months", f.schedule, f.schedule.basis === "ex-date" ? ` (estimated from ex-dividend dates${f.schedule.exDate ? ", last " + shortDate(f.schedule.exDate) : ""}; pay date not available)` : ""),
+  ].join("\n");
 }
 
 // ---------- overview ----------
@@ -62,7 +74,7 @@ export function concSummaryHtml(hs, T) {
 }
 
 export function renderOverview(ctx) {
-  const { packet, hs, T, selectedMonth } = ctx;
+  const { packet, hs, T, selectedMonth, plan } = ctx;
   const empty = !packet.holdings.length;
   $("ovEmpty").hidden = !empty;
   $("ovMain").hidden = empty;
@@ -89,6 +101,12 @@ export function renderOverview(ctx) {
   const rows = [["ok", "current", "Current", "Provider data from the last " + STALE_DAYS + " days"], ["warn", "stale", "Stale", `Provider data older than ${STALE_DAYS} days`], ["warn", "estimate", "Estimate", "Starter or undated values"], ["", "manual", "Yours", "Values you entered"], ["", "mixed", "Mixed", "Some values are yours, the rest from a provider"]];
   $("fresh").innerHTML = rows.filter(([, k]) => f.counts[k] > 0).map(([tone, k, name, hint]) => `<div class="fresh-row"><span><span class="pill ${tone}"><i></i>${name}</span> <span class="muted">${esc(hint)}</span></span><b>${f.counts[k]}</b></div>`).join("") +
     `<p class="note muted">${f.newest ? `Provider values observed ${f.oldest === f.newest ? shortDate(f.newest) : `${shortDate(f.oldest)} to ${shortDate(f.newest)}`}.` : "No dated provider values yet."}</p>`;
+  const upd = plan ? plan.counts.update + plan.counts.protected : 0;
+  $("fresh").insertAdjacentHTML("beforeend", upd ? `<p class="note"><a href="#/portfolio">${upd} value${upd > 1 ? "s have" : " has"} newer data. Review in Portfolio →</a></p>` : "");
+  const exBased = packet.holdings.some((h) => inc(toCalcLite(h)) > 0 && h.fields.schedule.basis === "ex-date");
+  $("calBasis").textContent = exBased
+    ? "Months follow ex-dividend dates, so actual cash usually arrives a few weeks later. Exact pay dates are not available yet."
+    : "Months follow the pay schedule you set for each holding.";
   $("concSummary").innerHTML = concSummaryHtml(hs, T);
   return rack;
 }

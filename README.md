@@ -63,7 +63,11 @@ The page reads `data.json`. A scheduled GitHub Action (`.github/workflows/update
 - `src` which provider supplied that ticker, `u` when it was last refreshed
 - `est` true when no provider reported dividends for a ticker that should pay one, so the dividend is a starter estimate
 
-and commits the result. If a ticker fails on every provider, its old values stay. If everything fails, the file is left untouched. A successful refresh redeploys the site.
+and commits the result. `last` is the last **ex-dividend** date, not a cash date. The page treats pay months as estimates and says so.
+
+In the app, a portfolio keeps its own dated copy of every value. A new data file never rewrites it: **Portfolio → Check for updates** shows what changed (with provider and date), protects values you entered, flags provider data that is itself stale, and applies only what you choose. You can also choose whether "dividend per share" means the last 12 months or the current rate.
+
+If a ticker fails on every provider, its old values stay. If everything fails, the file is left untouched. A successful refresh redeploys the site.
 
 **Until a refresh succeeds, `data.json` holds approximate starter estimates and the site says so.** Trigger one from the repo's Actions tab (Refresh dividend data, then Run workflow).
 
