@@ -20,7 +20,7 @@ export function startRouter(onShow) {
     const r = parseFragment(location.hash);
     if (!r.valid) history.replaceState(null, "", "#/overview");
     show(r.view, userInitiated);
-    onShow?.(r);
+    onShow?.(r, userInitiated);
   };
   function show(view, userInitiated) {
     const changed = view !== current;

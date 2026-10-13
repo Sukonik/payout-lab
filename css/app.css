@@ -246,6 +246,36 @@ td.num,th.num{text-align:right}
 .rv-conf summary{cursor:pointer;color:var(--muted)}
 .updot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--amber);margin-left:6px;vertical-align:middle}
 
+/* ---------- start screen ---------- */
+.start{padding-top:8px}
+.start[hidden]{display:none}
+.start-in{max-width:620px;margin:6vh auto 0;padding:26px}
+.start h1{font-size:clamp(1.7rem,6vw,2.4rem);letter-spacing:-.02em;margin:4px 0 8px}
+.start .pn{color:var(--accent-strong)}
+.btn.big{min-height:52px;padding:0 26px;font-size:1.05rem}
+.linkbtn{background:none;border:0;padding:0;color:var(--accent-strong);text-decoration:underline;font:inherit;cursor:pointer}
+body[data-gate] .view,body[data-gate] .tabs,body[data-gate] .bottomnav,body[data-gate] .tag,body[data-gate] .save{display:none}
+body[data-gate] .brand{display:flex}
+body[data-gate] .top-in{grid-template-columns:1fr auto;grid-template-areas:"brand actions"}
+body[data-gate]{padding-bottom:36px}
+ul.gl{list-style:none;padding:0;margin:8px 0;display:grid;gap:8px}
+ul.gl li{display:flex;gap:10px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:8px 12px}
+.steps{padding-left:18px;margin:8px 0}.steps li{margin:6px 0}
+kbd{font:inherit;font-size:.82em;border:1px solid var(--line2);border-bottom-width:2px;border-radius:6px;padding:0 6px;background:var(--glass)}
+dialog.wide{max-width:min(760px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow:auto}
+dialog.wide .btns{position:sticky;bottom:-20px;background:var(--card);padding:12px 0 2px;margin-bottom:-6px;border-top:1px solid var(--line)}
+.mapbox{margin:8px 0;border:1px solid var(--line);border-radius:12px;padding:8px 12px}
+.mapbox summary{cursor:pointer;font-size:.88rem;list-style:none}
+.mapbox summary::-webkit-details-marker{display:none}
+.mapbox[open] summary{margin-bottom:8px}
+.map{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:10px 0}
+fieldset.modes{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:12px 0}
+fieldset.modes legend{font-weight:700;font-size:.9rem;padding:0 6px}
+.mode{display:flex;gap:10px;align-items:flex-start;padding:6px 0;cursor:pointer}
+.mode input{width:20px;height:20px;margin-top:3px;flex:none}
+.mode small{display:block;font-size:.8rem}
+.ptable td .neg{color:var(--coral)}
+
 /* ---------- bottom nav (phones) ---------- */
 .bottomnav{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
 .bottomnav a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;border-radius:12px;color:var(--muted);text-decoration:none;font-size:.7rem;font-weight:700;min-height:48px;justify-content:center}

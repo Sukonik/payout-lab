@@ -21,6 +21,8 @@ It is one static page (`index.html`) plus a data file (`data.json`), with no bui
 | Tool | What it answers |
 |---|---|
 | **Per-share payouts** | Search any ticker to see what one share pays per payment, how often, and in which months, with price, yearly total and yield. |
+| **Continue screen** | Returning visitors see "Continue <portfolio>" with last-edited and last-packet times, plus a plain list of other portfolios on the device. First-time visitors choose a name and whether to remember it on the device. |
+| **CSV import** | Import holdings from any CSV with a ticker and shares column. You map columns, preview every effect, and choose whether to update, replace or add. Only mapped columns are read; account-style columns are ignored. Not tied to any broker. |
 | **Holdings table** | Portfolio value, yearly income, average monthly income and yield for the shares you enter. |
 | **Monthly income calendar** | Which months the money arrives, based on each holding's payout schedule (monthly, quarterly cycles, semi-annual, annual). |
 | **Dividend cut test** | "If this holding cuts its dividend by X%, what happens to my income?" |

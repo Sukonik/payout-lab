@@ -12,7 +12,11 @@ const go = async (p, v) => { await p.evaluate((h) => { location.hash = h; }, "#/
 console.log("1. routing");
 const c1 = await browser.newContext({ viewport: { width: 1280, height: 860 } });
 let p = await open(c1);
-check("no hash opens the overview", (await view(p)) === "overview");
+check("a brand-new visitor sees the start screen", (await p.isVisible("#start")) && (await p.getAttribute("body", "data-gate")) === "first");
+check("the start screen replaces tabs and views while it is up", !(await p.isVisible("#tabs")) && !(await p.isVisible("#view-overview")));
+await p.click('[data-g="start"]'); await p.waitForSelector("#view-portfolio:not([hidden])");
+check("Start leaves the start screen and opens Portfolio", !(await p.isVisible("#start")) && (await p.isVisible("#tabs")));
+await go(p, "overview");
 check("empty state shown for a new portfolio", await p.isVisible("#ovEmpty") && !(await p.isVisible("#ovMain")));
 for (const v of ["portfolio", "lab", "receipts", "explore", "overview"]) { await go(p, v); check(`#/${v} shows ${v}`, (await view(p)) === v); check(`nav marks ${v} current`, (await p.getAttribute(`#tabs a[data-view="${v}"]`, "aria-current")) === "page"); }
 await p.evaluate(() => { location.hash = "#/nope"; }); await p.waitForTimeout(200);
