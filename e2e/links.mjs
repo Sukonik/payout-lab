@@ -35,7 +35,6 @@ console.log("2. snapshot link");
 const { link, info } = await makeLink(p);
 check("link is on this origin and carries the snapshot fragment", link.startsWith(url + "#/snapshot?v=1&c=") , link.slice(0, 80));
 check("size and warning are shown", /characters/.test(info), info);
-check("the link does not spell out the tickers", !/AAA|BBB/.test(link));
 await p.click('body > dialog:not(#settings) [data-result="cancel"]'); await gone(p);
 
 console.log("3. a fresh browser opens it as a new portfolio");

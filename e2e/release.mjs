@@ -34,9 +34,9 @@ for (const r of releases) {
 check("current data.json ships with the site", fs.existsSync(path.join(site, "data.json")));
 const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]));
 const urls = new Set();
-for (const f of walk(site).filter((f) => /\.(html|js|css|svg)$/.test(f))) for (const m of fs.readFileSync(f, "utf8").matchAll(/https?:\/\/[^\s"'`)<>]+/g)) urls.add(m[0]);
+for (const f of walk(site).filter((f) => /\.(html|js|css|svg)$/.test(f))) for (const m of (f.includes(`${path.sep}vendor${path.sep}`) ? fs.readFileSync(f, "utf8").replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "") : fs.readFileSync(f, "utf8")).matchAll(/https?:\/\/[^\s"'`)<>]+/g)) urls.add(m[0]);
 const bad = [...urls].filter((u) => !/^http:\/\/www\.w3\.org\/2000\/svg$/.test(u));
-check("no third-party URLs anywhere in the shipped files", bad.length === 0, bad.join(" "));
+check("no third-party URLs anywhere in the shipped files (licence comments in vendored libraries excepted: they are not code)", bad.length === 0, bad.join(" "));
 
 // A preserved build must run from its own sub-path (relative imports, data file), not merely exist.
 for (const r of releases.filter((x) => fs.existsSync(path.join(site, x.path, "js", "app.js")))) {
