@@ -38,6 +38,17 @@ for (const f of walk(site).filter((f) => /\.(html|js|css|svg)$/.test(f))) for (c
 const bad = [...urls].filter((u) => !/^http:\/\/www\.w3\.org\/2000\/svg$/.test(u));
 check("no third-party URLs anywhere in the shipped files", bad.length === 0, bad.join(" "));
 
+// A preserved build must run from its own sub-path (relative imports, data file), not merely exist.
+for (const r of releases.filter((x) => fs.existsSync(path.join(site, x.path, "js", "app.js")))) {
+  const pc = await browser.newContext(ctxOpts);
+  const pp = await open(pc, url + r.path + "/");
+  await ready(pp);
+  await pp.click('[data-g="start"]'); await pp.waitForSelector("#view-portfolio:not([hidden])");
+  await pp.fill("#tk", "SCHD"); await pp.fill("#sh", "10"); await pp.click("#addBtn");
+  check(`${r.version} preserved build runs from /${r.path}/ (start, add a holding, market data loads)`, (await pp.$$eval("#rows .hrow", (x) => x.length)) === 1 && /Tiingo|Yahoo|Estimate/.test(await pp.innerText("#rows")));
+  await pc.close();
+}
+
 console.log("\n2. migration from the real V1 build");
 let ctx = await browser.newContext(ctxOpts);
 const v1 = await open(ctx, url + "v1/");

@@ -6,6 +6,12 @@
       "path": "v1",
       "sha": "475287db7b2646dee2968c10c91301747dd02489",
       "title": "Original single-file dividend calculator"
+    },
+    {
+      "version": "V2",
+      "path": "v2",
+      "sha": "8f106b37ea01c5a1e29a04dbb6414e9dfaf71a9a",
+      "title": "Portable Workspace: packets, five tabs, CSV import, data provenance"
     }
   ]
 }
