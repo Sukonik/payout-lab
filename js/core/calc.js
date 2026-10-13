@@ -93,3 +93,15 @@ export function taxSummary(hs, T, s) {
   const taxO = (o * (num(s.oRate) + st)) / 100;
   return { q, o, ordList, taxQ, taxO, net: T.income - taxQ - taxO, trad: T.income * (1 - (num(s.oRate) + st) / 100) };
 }
+
+// Who pays in each month: [{ t, amount }] sorted by amount, for the tube-rack detail view. Same spreading rule as calendar().
+export function calendarDetail(hs) {
+  const out = Array.from({ length: 12 }, () => []);
+  hs.forEach((h) => {
+    const ms = SCHED[h.s] || SCHED.Q3;
+    const per = inc(h) / ms.length;
+    if (per > 0) ms.forEach((x) => out[x - 1].push({ t: h.t, amount: per }));
+  });
+  out.forEach((l) => l.sort((a, b) => b.amount - a.amount));
+  return out;
+}

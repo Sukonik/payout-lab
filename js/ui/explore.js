@@ -40,7 +40,7 @@ export function renderExplore() {
       : `<div class="psbig"><div><span>${esc(q)}</span><b>No dividend</b></div></div><p class="note">No dividend was reported for this ticker in the last 12 months.</p>`;
   } else card.innerHTML = "";
   $("psRows").innerHTML = keys.length
-    ? keys.map((k) => { const e = T[k]; return `<tr><td><b>${esc(k)}</b>${e.est ? '<span class="badge">estimate</span>' : ""}<div class="sub">${esc(e.n)}</div></td><td class="num">${money(e.p, 2)}</td><td class="num"><b>${e.d > 0 ? money(per(e), 4) : "—"}</b></td><td>${e.d > 0 ? SCHED_LABEL[e.s] : "No dividend"}</td><td class="num">${money(e.d, 2)}</td><td class="num">${pct(e.p > 0 ? e.d / e.p : 0, 2)}</td><td><button class="ghost" data-add="${esc(k)}">Add</button></td></tr>`; }).join("") +
+    ? keys.map((k) => { const e = T[k]; return `<tr><td><b>${esc(k)}</b>${e.est ? '<span class="badge">estimate</span>' : ""}<div class="sub">${esc(e.n)}</div></td><td class="num hide-s">${money(e.p, 2)}</td><td class="num"><b>${e.d > 0 ? money(per(e), 4) : "—"}</b></td><td class="hide-s">${e.d > 0 ? SCHED_LABEL[e.s] : "No dividend"}</td><td class="num">${money(e.d, 2)}</td><td class="num">${pct(e.p > 0 ? e.d / e.p : 0, 2)}</td><td><button class="btn ghost sm" data-add="${esc(k)}" aria-label="Add ${esc(k)} to portfolio">Add</button></td></tr>`; }).join("") +
       (all.length > keys.length ? `<tr><td colspan="7" class="empty">Showing ${keys.length} of ${all.length}. Type to narrow it down.</td></tr>` : "")
     : '<tr><td colspan="7" class="empty">No match. You can still add any ticker below and enter its numbers yourself.</td></tr>';
 }

@@ -1,7 +1,7 @@
 // Render functions for the analysis panels. They read calc holdings + settings and write into the DOM.
 // Formulas live in core/calc.js; nothing here changes a result.
 import { $, esc, money, pct } from "./dom.js";
-import { MONTHS, calendar, dur, inc, path, shift, simulate, taxSummary, when, num } from "../core/calc.js";
+import { dur, inc, path, shift, simulate, taxSummary, when, num } from "../core/calc.js";
 
 function fillSelect(id, hs, settings, key) {
   const sel = $(id);
@@ -10,20 +10,6 @@ function fillSelect(id, hs, settings, key) {
   sel.innerHTML = hs.length
     ? hs.map((h) => `<option value="${esc(h.t)}"${h.t === cur ? " selected" : ""}>${esc(h.t)}</option>`).join("")
     : '<option value="">No holdings</option>';
-}
-
-export function renderCalendar(hs, T) {
-  const m = calendar(hs), avg = T.income / 12, max = Math.max(...m, 1e-9);
-  $("cal").innerHTML = m.map((v, i) => {
-    const thin = avg > 0 && v < avg * 0.5, h = v > 0 ? Math.max(3, (v / max) * 100) : 0;
-    return `<div class="tube${thin ? " thin" : ""}"><div class="amt">${money(v)}</div><div class="glass"><div class="liquid" style="height:${h}%"></div></div><div class="mlab">${MONTHS[i]}</div></div>`;
-  }).join("");
-  if (avg <= 0) { $("calNote").textContent = "Add holdings that pay a dividend to fill the rack."; return; }
-  const hi = m.indexOf(Math.max(...m)), lo = m.indexOf(Math.min(...m));
-  const thin = [];
-  m.forEach((v, i) => { if (v < avg * 0.5) thin.push(MONTHS[i]); });
-  $("calNote").innerHTML = `Average month: <b>${money(avg)}</b>. Biggest is ${MONTHS[hi]} at ${money(m[hi])}, smallest is ${MONTHS[lo]} at ${money(m[lo])}. ` +
-    (thin.length ? `Thin months: <b>${thin.join(", ")}</b>.` : "No month falls below half the average.");
 }
 
 export function renderConc(hs, T) {

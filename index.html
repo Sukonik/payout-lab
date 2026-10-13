@@ -3,155 +3,275 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b161d" media="(prefers-color-scheme: dark)">
 <title>Payout Lab</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/app.css">
+<script>
+// Apply the saved appearance before first paint so there is no flash.
+try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+</script>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div>
-      <h1>🧪 Payout Lab</h1>
-      <p>Stress-test the dividend portfolio you already own. No signup, no broker linking, and nothing leaves your browser.</p>
-    </div>
-    <div class="asof" id="asof"></div>
-  </header>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="liqGrad" x1="0" x2="1"><stop offset="0" style="stop-color:var(--liq-a)"/><stop offset=".55" style="stop-color:var(--liq-b)"/><stop offset="1" style="stop-color:var(--liq-a)"/></linearGradient>
+    <linearGradient id="liqGradThin" x1="0" x2="1"><stop offset="0" style="stop-color:var(--thin-a)"/><stop offset=".55" style="stop-color:var(--thin-b)"/><stop offset="1" style="stop-color:var(--thin-a)"/></linearGradient>
+  </defs>
+</svg>
 
-  <div class="pbar" id="pbar" role="region" aria-label="Portfolio file">
-    <button class="pname" id="pnameBtn" aria-label="Rename or switch portfolio"><span id="pname">My portfolio</span> <span aria-hidden="true">▾</span></button>
-    <div class="chips" id="chips" aria-live="polite"></div>
-    <div class="actions">
-      <button id="openBtn">Open packet</button>
-      <button class="primary" id="saveBtn">Save packet</button>
-      <input type="file" id="fileIn" accept=".payout,.json,application/json,text/plain,application/octet-stream" hidden>
+<header class="top" id="top">
+  <div class="top-in">
+    <a class="brand" href="#/overview" aria-label="Payout Lab, go to overview">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M13 5h6v3h-1v6.5l5.2 9.6a3 3 0 0 1-2.6 4.4H11.4a3 3 0 0 1-2.6-4.4L14 14.5V8h-1z" fill="#fff" fill-opacity=".94"/><path d="M12 22h8l2.7 4.9c.2.4-.1.8-.5.8H9.8c-.4 0-.7-.4-.5-.8z" fill="var(--logo-liq)"/></svg>
+      <span class="brand-name">Payout Lab</span>
+    </a>
+    <button class="tag" id="tagBtn" aria-haspopup="dialog" aria-label="Portfolio and storage details">
+      <span class="tag-name"><span id="pname">My portfolio</span><svg class="ico chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></span>
+      <span class="tag-status" id="status" aria-live="polite"></span>
+    </button>
+    <nav class="tabs" id="tabs" aria-label="Main"></nav>
+    <div class="top-actions">
+      <button class="save" id="saveBtn" aria-label="Save packet"><span class="save-ico" id="saveIco"></span><span class="save-txt">Save packet</span><i class="save-dot" id="saveDot" hidden></i></button>
+      <button class="iconbtn" id="settingsBtn" aria-label="Settings" aria-haspopup="dialog"><span id="gearIco"></span></button>
     </div>
   </div>
+</header>
 
-  <section class="panel" id="pspPanel">
-    <h2>What does it pay per share?</h2>
-    <p class="lede">Search a ticker to see exactly what one share pays, how often, and in which months.</p>
-    <label class="f" style="max-width:360px">Search ticker or company
-      <input id="psq" autocomplete="off" placeholder="e.g. SCHD or Coca-Cola">
-    </label>
-    <div id="psCard"></div>
-    <div class="tablewrap" style="margin-top:12px">
-      <table>
-        <thead><tr><th>Ticker</th><th class="num">Price</th><th class="num">Per payment</th><th>Pays</th><th class="num">Per year</th><th class="num">Yield</th><th></th></tr></thead>
-        <tbody id="psRows"></tbody>
-      </table>
+<main id="main" tabindex="-1">
+
+  <!-- OVERVIEW -->
+  <section class="view" id="view-overview" data-view="overview" aria-labelledby="h-overview" hidden>
+    <h1 class="vh" id="h-overview" tabindex="-1">Overview</h1>
+
+    <div class="empty-hero card" id="ovEmpty" hidden>
+      <div class="empty-rack" aria-hidden="true" id="emptyRack"></div>
+      <div>
+        <h2>Your rack is empty</h2>
+        <p class="lede">Add what you own and Payout Lab shows what it pays, month by month, and how fragile that income is. Everything stays in your browser.</p>
+        <div class="row-actions">
+          <a class="btn primary" href="#/portfolio">Add holdings</a>
+          <button class="btn" id="ovOpen">Open a packet</button>
+          <button class="btn ghost" id="ovSample">Try a sample</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="ovMain">
+      <section class="readout card" aria-label="Portfolio readout">
+        <div class="ro-main">
+          <span class="eyebrow">Income each year</span>
+          <b class="big" id="roYear">$0</b>
+          <span class="ro-sub" id="roSub"></span>
+        </div>
+        <dl class="ro-grid">
+          <div><dt>Portfolio value</dt><dd id="roVal">$0</dd></div>
+          <div><dt>Average month</dt><dd id="roMo">$0</dd></div>
+          <div><dt>Yield</dt><dd id="roYld">0%</dd></div>
+          <div><dt>Paying holdings</dt><dd id="roPay">0</dd></div>
+        </dl>
+      </section>
+
+      <section class="card rackcard" aria-labelledby="h-rack">
+        <div class="card-h"><h2 id="h-rack">Income rack</h2><span class="hint">Estimated by month</span></div>
+        <div class="rack" id="cal" role="group" aria-label="Estimated income by month"></div>
+        <p class="rack-detail" id="calDetail" aria-live="polite"></p>
+        <div class="legend"><span><i class="lg lg-ok"></i>Normal month</span><span><i class="lg lg-thin"></i>Thin month (under half the average)</span><span><i class="lg lg-avg"></i>Average</span></div>
+        <p class="note" id="calNote"></p>
+      </section>
+
+      <div class="two">
+        <section class="card" aria-labelledby="h-fresh">
+          <div class="card-h"><h2 id="h-fresh">Data freshness</h2></div>
+          <div id="fresh"></div>
+        </section>
+        <section class="card" aria-labelledby="h-conc">
+          <div class="card-h"><h2 id="h-conc">Concentration</h2></div>
+          <div id="concSummary"></div>
+          <a class="more" href="#/lab">More in the Lab →</a>
+        </section>
+      </div>
     </div>
   </section>
 
-  <section class="panel" id="holdingsPanel">
-    <h2>Your holdings</h2>
-    <p class="lede">Type a ticker and share count. Popular tickers fill in automatically. Anything else, enter the price, yearly dividend per share, and pay schedule yourself. Every number is editable.</p>
-    <div class="addrow">
-      <label class="f" style="flex:1 1 160px">Ticker
-        <input id="tk" list="tickers" autocomplete="off" placeholder="e.g. SCHD" style="text-transform:uppercase">
+  <!-- PORTFOLIO -->
+  <section class="view" id="view-portfolio" data-view="portfolio" aria-labelledby="h-portfolio" hidden>
+    <h1 class="vh" id="h-portfolio" tabindex="-1">Portfolio</h1>
+    <section class="card" id="holdingsPanel" aria-labelledby="h-add">
+      <div class="card-h"><h2 id="h-add">Add a holding</h2></div>
+      <p class="lede">Type a ticker and how many shares you own. Known tickers fill in their price, dividend and schedule. For anything else, enter those yourself.</p>
+      <div class="addrow">
+        <label class="f grow">Ticker
+          <input id="tk" list="tickers" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="e.g. SCHD">
+        </label>
+        <datalist id="tickers"></datalist>
+        <label class="f shares">Shares
+          <input id="sh" type="number" min="0" step="any" inputmode="decimal" placeholder="100">
+        </label>
+        <button class="btn primary" id="addBtn">Add holding</button>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="h-hold">
+      <div class="card-h"><h2 id="h-hold">Your holdings</h2>
+        <div class="row-actions tight"><button class="btn ghost sm" id="sampleBtn">Try sample</button><button class="btn ghost sm" id="clearBtn">Clear all</button></div>
+      </div>
+      <div class="hlist" id="hlist">
+        <div class="hhead" aria-hidden="true"><span>Holding</span><span>Shares</span><span>Price</span><span>Dividend / yr</span><span class="r">Per payment</span><span>Pays</span><span>Tax</span><span class="r">Yearly income</span><span></span></div>
+        <div id="rows"></div>
+      </div>
+      <div class="totals">
+        <div><span>Portfolio value</span><b id="tVal">$0</b></div>
+        <div><span>Yearly income</span><b id="tInc">$0</b></div>
+        <div><span>Average month</span><b id="tMo">$0</b></div>
+        <div><span>Yield</span><b id="tYld">0%</b></div>
+      </div>
+    </section>
+  </section>
+
+  <!-- LAB -->
+  <section class="view" id="view-lab" data-view="lab" aria-labelledby="h-lab" hidden>
+    <h1 class="vh" id="h-lab" tabindex="-1">Lab</h1>
+    <p class="view-lede">Stress-test the portfolio you hold. Change a setting and every result updates.</p>
+    <div class="grid">
+      <section class="card" aria-labelledby="h-cut">
+        <div class="card-h"><h2 id="h-cut">Dividend cut test</h2></div>
+        <p class="lede">Pick a holding and cut its payout. See what you lose and how it moves your goal date.</p>
+        <div class="controls">
+          <label class="f">Holding <select id="cutT"></select></label>
+          <div><div class="rangehead"><span>Cut size</span><b id="cutPctV"></b></div><input type="range" min="0" max="100" step="5" data-s="cutPct" aria-label="Cut size"></div>
+        </div>
+        <div id="cutOut"></div>
+      </section>
+
+      <section class="card" aria-labelledby="h-conc2">
+        <div class="card-h"><h2 id="h-conc2">Concentration check</h2></div>
+        <p class="lede">How much of your income depends on your biggest payers.</p>
+        <div class="stats" id="concBig"></div>
+        <div id="conc" style="margin-top:12px"></div>
+        <p class="note" id="concNote"></p>
+      </section>
+
+      <section class="card" aria-labelledby="h-goal">
+        <div class="card-h"><h2 id="h-goal">Goal timeline</h2></div>
+        <p class="lede">Set a monthly income target. The slow-growth slider shows whether your timeline holds up if dividend growth stalls.</p>
+        <div class="controls">
+          <label class="f">Monthly income goal ($)<input type="number" min="0" step="50" inputmode="decimal" data-s="target"></label>
+          <label class="f">Adding each month ($)<input type="number" min="0" step="50" inputmode="decimal" data-s="contrib"></label>
+        </div>
+        <div class="controls" style="margin-top:12px">
+          <div><div class="rangehead"><span>Expected dividend growth</span><b id="growthV"></b></div><input type="range" min="0" max="12" step="0.5" data-s="growth" aria-label="Expected dividend growth"></div>
+          <div><div class="rangehead"><span>Slow-growth scenario</span><b id="slowV"></b></div><input type="range" min="0" max="12" step="0.5" data-s="slow" aria-label="Slow-growth scenario"></div>
+        </div>
+        <label class="check" style="margin-top:10px"><input type="checkbox" data-s="reinvest"> Reinvest dividends</label>
+        <div id="goalOut"></div>
+      </section>
+
+      <section class="card" aria-labelledby="h-addm">
+        <div class="card-h"><h2 id="h-addm">Add-money test</h2></div>
+        <p class="lede">Put a lump sum into one of your holdings and see how much sooner you reach your goal.</p>
+        <div class="controls">
+          <label class="f">Holding <select id="addT"></select></label>
+          <label class="f">Amount ($)<input type="number" min="0" step="500" inputmode="decimal" data-s="addAmt"></label>
+        </div>
+        <div id="addOut"></div>
+      </section>
+
+      <section class="card wide" aria-labelledby="h-tax">
+        <div class="card-h"><h2 id="h-tax">Taxable account vs IRA</h2></div>
+        <p class="lede">What your income looks like after tax in each account type. Set the tax type per holding in Portfolio. REITs and most covered-call funds are usually taxed as ordinary income.</p>
+        <div class="controls">
+          <label class="f">Qualified dividend rate (%)<input type="number" min="0" max="40" step="1" inputmode="decimal" data-s="qRate"></label>
+          <label class="f">Ordinary income rate (%)<input type="number" min="0" max="60" step="1" inputmode="decimal" data-s="oRate"></label>
+          <label class="f">State and local rate (%)<input type="number" min="0" max="20" step="0.25" inputmode="decimal" data-s="stRate"></label>
+        </div>
+        <div id="taxOut"></div>
+      </section>
+    </div>
+  </section>
+
+  <!-- RECEIPTS -->
+  <section class="view" id="view-receipts" data-view="receipts" aria-labelledby="h-receipts" hidden>
+    <h1 class="vh" id="h-receipts" tabindex="-1">Receipts</h1>
+    <section class="card packet-card" aria-labelledby="h-packet">
+      <div class="card-h"><h2 id="h-packet">Your packet</h2></div>
+      <p class="lede">A packet is a small <b>.payout</b> file holding your whole portfolio. It is your account: open it on any device to continue where you stopped.</p>
+      <div id="packetState"></div>
+      <div class="row-actions">
+        <button class="btn primary" id="rcSave">Save packet</button>
+        <button class="btn" id="rcOpen">Open packet</button>
+      </div>
+      <p class="privacy">The file contains your holdings and share counts, not encrypted. Keep it somewhere private. Payout Lab never receives it.</p>
+    </section>
+
+    <section class="card" aria-labelledby="h-local">
+      <div class="card-h"><h2 id="h-local">On this device</h2></div>
+      <div id="localState"></div>
+      <div class="row-actions"><button class="btn" id="rcPortfolios">Portfolios and storage</button></div>
+    </section>
+
+    <section class="card soon" aria-labelledby="h-soon">
+      <div class="card-h"><h2 id="h-soon">Coming in V3</h2></div>
+      <p class="lede">Saved reports you can compare over time, personal links and printable QR cards. Nothing here is switched on yet.</p>
+    </section>
+  </section>
+
+  <!-- EXPLORE -->
+  <section class="view" id="view-explore" data-view="explore" aria-labelledby="h-explore" hidden>
+    <h1 class="vh" id="h-explore" tabindex="-1">Explore</h1>
+    <section class="card" id="pspPanel" aria-labelledby="h-psp">
+      <div class="card-h"><h2 id="h-psp">What does it pay per share?</h2></div>
+      <p class="lede">Search a ticker to see exactly what one share pays, how often, and in which months.</p>
+      <label class="f search">Search ticker or company
+        <input id="psq" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. SCHD or Coca-Cola">
       </label>
-      <datalist id="tickers"></datalist>
-      <label class="f" style="flex:0 1 130px">Shares
-        <input id="sh" type="number" min="0" step="any" placeholder="100">
-      </label>
-      <button class="primary" id="addBtn">Add holding</button>
-      <button class="ghost" id="sampleBtn">Load sample portfolio</button>
-      <button class="ghost" id="clearBtn">Clear all</button>
-    </div>
-    <div class="tablewrap">
-      <table>
-        <thead><tr>
-          <th>Ticker</th><th>Shares</th><th>Price</th><th>Dividend / share / yr</th><th class="num">Per payment</th><th>Pays</th><th>Tax type</th><th class="num">Yearly income</th><th></th>
-        </tr></thead>
-        <tbody id="rows"></tbody>
-      </table>
-    </div>
-    <div class="totals">
-      <div><span>Portfolio value</span><b id="tVal">$0</b></div>
-      <div><span>Yearly income</span><b id="tInc">$0</b></div>
-      <div><span>Average month</span><b id="tMo">$0</b></div>
-      <div><span>Yield</span><b id="tYld">0%</b></div>
+      <div id="psCard"></div>
+      <div class="tablewrap" style="margin-top:12px">
+        <table class="ptable">
+          <thead><tr><th>Ticker</th><th class="num hide-s">Price</th><th class="num">Per payment</th><th class="hide-s">Pays</th><th class="num">Per year</th><th class="num">Yield</th><th></th></tr></thead>
+          <tbody id="psRows"></tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Payout Lab is an educational calculator. It does not recommend buying or selling anything, and it is not tax or investment advice. You choose every holding and every scenario; the tool only does the math. Starter data is approximate and may be out of date, so check figures against each company's or fund's own announcements. Projections assume new money and reinvested dividends earn your current portfolio yield and that share prices stay flat.</p>
+  <p class="privacy">Your portfolio stays in your browser. A <b>.payout</b> packet is a plain file that contains your holdings and share counts, so keep it somewhere private. This site never receives it.</p>
+</footer>
+
+<nav class="bottomnav" id="bottomnav" aria-label="Main"></nav>
+
+<dialog id="settings" class="sheet" aria-labelledby="h-settings">
+  <div class="sheet-h"><h2 id="h-settings">Settings</h2><button class="iconbtn" data-close aria-label="Close settings">✕</button></div>
+  <section class="set">
+    <h3>Appearance</h3>
+    <div class="seg" role="radiogroup" aria-label="Appearance">
+      <label><input type="radio" name="theme" value="auto"><span>Match device</span></label>
+      <label><input type="radio" name="theme" value="light"><span>Light</span></label>
+      <label><input type="radio" name="theme" value="dark"><span>Dark</span></label>
     </div>
   </section>
-
-  <section class="panel">
-    <h2>Monthly income calendar</h2>
-    <p class="lede">When your dividends actually land. Amber tubes are thin months, under half your average.</p>
-    <div class="rackwrap"><div class="rack" id="cal"></div></div>
-    <div class="legend"><span><i style="background:var(--accent)"></i>Normal month</span><span><i style="background:var(--amber)"></i>Thin month</span></div>
-    <p class="note" id="calNote"></p>
+  <section class="set">
+    <h3>Storage</h3>
+    <label class="switch"><input type="checkbox" id="remChk"><span class="track" aria-hidden="true"></span><span>Remember portfolios on this device</span></label>
+    <p class="privacy" id="storageNote"></p>
+    <button class="btn danger sm" id="forgetBtn">Delete this portfolio from this device</button>
   </section>
+  <section class="set">
+    <h3>Privacy</h3>
+    <p class="privacy">Nothing you enter is uploaded. Calculations, packets and storage all happen in your browser. The only network requests are for this page and the public price file.</p>
+  </section>
+  <section class="set">
+    <h3>About</h3>
+    <p class="privacy" id="aboutNote"></p>
+  </section>
+</dialog>
 
-  <div class="grid">
-    <section class="panel">
-      <h2>Dividend cut test</h2>
-      <p class="lede">Pick a holding and cut its payout. See what you lose and how it moves your goal date.</p>
-      <div class="controls">
-        <label class="f">Holding <select id="cutT"></select></label>
-        <div>
-          <div class="rangehead"><span>Cut size</span><b id="cutPctV"></b></div>
-          <input type="range" min="0" max="100" step="5" data-s="cutPct">
-        </div>
-      </div>
-      <div id="cutOut"></div>
-    </section>
-
-    <section class="panel">
-      <h2>Concentration check</h2>
-      <p class="lede">How much of your income depends on your biggest payers.</p>
-      <div class="stats" id="concBig"></div>
-      <div id="conc" style="margin-top:12px"></div>
-      <p class="note" id="concNote"></p>
-    </section>
-
-    <section class="panel">
-      <h2>Goal timeline</h2>
-      <p class="lede">Set a monthly income target. The slow-growth slider shows whether your timeline holds up if dividend growth stalls.</p>
-      <div class="controls">
-        <label class="f">Monthly income goal ($)<input type="number" min="0" step="50" data-s="target"></label>
-        <label class="f">Adding each month ($)<input type="number" min="0" step="50" data-s="contrib"></label>
-      </div>
-      <div class="controls" style="margin-top:12px">
-        <div>
-          <div class="rangehead"><span>Expected dividend growth</span><b id="growthV"></b></div>
-          <input type="range" min="0" max="12" step="0.5" data-s="growth">
-        </div>
-        <div>
-          <div class="rangehead"><span>Slow-growth scenario</span><b id="slowV"></b></div>
-          <input type="range" min="0" max="12" step="0.5" data-s="slow">
-        </div>
-      </div>
-      <label class="check" style="margin-top:10px"><input type="checkbox" data-s="reinvest"> Reinvest dividends</label>
-      <div id="goalOut"></div>
-    </section>
-
-    <section class="panel">
-      <h2>Add-money test</h2>
-      <p class="lede">Put a lump sum into one of your holdings and see how much sooner you reach your goal.</p>
-      <div class="controls">
-        <label class="f">Holding <select id="addT"></select></label>
-        <label class="f">Amount ($)<input type="number" min="0" step="500" data-s="addAmt"></label>
-      </div>
-      <div id="addOut"></div>
-    </section>
-
-    <section class="panel" style="grid-column:1/-1">
-      <h2>Taxable account vs IRA</h2>
-      <p class="lede">What your income looks like after tax in each account type. Set "Tax type" per holding in the table above. REITs and most covered-call funds are usually taxed as ordinary income.</p>
-      <div class="controls">
-        <label class="f">Qualified dividend rate (%)<input type="number" min="0" max="40" step="1" data-s="qRate"></label>
-        <label class="f">Ordinary income rate (%)<input type="number" min="0" max="60" step="1" data-s="oRate"></label>
-        <label class="f">State and local rate (%)<input type="number" min="0" max="20" step="0.25" data-s="stRate"></label>
-      </div>
-      <div id="taxOut"></div>
-    </section>
-  </div>
-
-
-<footer>
-    Payout Lab is an educational calculator. It does not recommend buying or selling anything, and it is not tax or investment advice. You choose every holding and every scenario; the tool only does the math. Starter data is approximate and may be out of date, so check figures against each company's or fund's own announcements. Projections assume new money and reinvested dividends earn your current portfolio yield and that share prices stay flat.
-  <br><br><span class="privacy">Your portfolio stays in your browser. A <b>.payout</b> packet is a plain file that contains your holdings and share counts, so keep it somewhere private. This site never receives it.</span>
-  </footer>
-</div>
 <noscript><p style="padding:20px">Payout Lab needs JavaScript. Nothing is uploaded; everything runs in your browser.</p></noscript>
 <script type="module" src="js/app.js"></script>
 </body>

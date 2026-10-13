@@ -15,14 +15,20 @@ fs.copyFileSync(path.join(root, "data.json"), path.join(old, "data.json")); // s
 const A = await serve(old), B = await serve(root);
 const browser = await launch();
 const panels = ["#tVal", "#tInc", "#tMo", "#tYld", "#cal", "#calNote", "#concBig", "#conc", "#concNote", "#cutOut", "#goalOut", "#addOut", "#taxOut"];
-const read = async (p) => Object.fromEntries(await Promise.all(panels.map(async (s) => [s, (await p.$eval(s, (e) => e.innerHTML)).replace(/\s+/g, " ")])));
+// The tube rack was redrawn in V2, so compare what it shows (the twelve month amounts), not its markup.
+const read = async (p) => Object.fromEntries(await Promise.all(panels.map(async (s) => [s, s === "#cal"
+  ? await p.$$eval("#cal .tube", (els) => els.map((e) => e.getAttribute("data-amt") ?? e.querySelector(".amt")?.textContent).join("|"))
+  : (await p.$eval(s, (e) => e.innerHTML)).replace(/\s+/g, " ")])));
+const go = async (p, view) => { await p.evaluate((v) => { location.hash = "#/" + v; }, view); await p.waitForTimeout(150); };
 
 async function drive(base, label) {
   const ctx = await browser.newContext(); const p = await ctx.newPage();
   await p.goto(base); await p.waitForTimeout(500);
+  await go(p, "portfolio");
   await p.click("#sampleBtn");
   const out = { sample: await read(p) };
   // exercise the scenario controls identically
+  await go(p, "lab");
   await p.fill('[data-s="target"]', "3200"); await p.fill('[data-s="contrib"]', "750");
   await p.$eval('[data-s="growth"]', (e) => { e.value = 9; e.dispatchEvent(new Event("input", { bubbles: true })); });
   await p.$eval('[data-s="cutPct"]', (e) => { e.value = 80; e.dispatchEvent(new Event("input", { bubbles: true })); });
@@ -30,6 +36,7 @@ async function drive(base, label) {
   await p.fill('[data-s="qRate"]', "20"); await p.fill('[data-s="oRate"]', "32");
   await p.uncheck('[data-s="reinvest"]');
   out.scenarios = await read(p);
+  await go(p, "portfolio");
   await p.fill('[data-i="1"][data-k="shares"]', "123.456"); await p.fill('[data-i="2"][data-k="div"]', "5.5"); await p.selectOption('[data-i="3"][data-k="s"]', "A"); await p.selectOption('[data-i="4"][data-k="q"]', "0");
   out.edited = await read(p);
   await ctx.close();
