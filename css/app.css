@@ -246,6 +246,12 @@ td.num,th.num{text-align:right}
 .rv-conf summary{cursor:pointer;color:var(--muted)}
 .updot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--amber);margin-left:6px;vertical-align:middle}
 
+/* ---------- links ---------- */
+.linkrow{display:flex;gap:8px;align-items:stretch}
+.linkrow input,.linkbox{flex:1;min-width:0;font-family:var(--mono);font-size:.78rem}
+textarea.linkbox{width:100%;min-height:92px;resize:vertical;font:inherit;font-family:var(--mono);font-size:.74rem;color:var(--ink);background:var(--glass);border:1px solid var(--line2);border-radius:10px;padding:8px 10px;word-break:break-all}
+.sizepill{display:inline-block;margin:6px 0}
+
 /* ---------- reports and comparison ---------- */
 .rclist{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
 .rcrow{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--glass);display:grid;gap:8px}

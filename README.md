@@ -84,6 +84,8 @@ node e2e/release.mjs            # release checks in Chromium (needs Playwright; 
 
 Deploy is automatic: pushing to `main` runs [`pages.yml`](.github/workflows/pages.yml), which calls `scripts/build-site.mjs` to assemble the current app plus the preserved builds listed in [`releases.json`](releases.json). One-time setup: Settings → Pages → Source: **GitHub Actions**.
 
+Link format, sizes and safety: [`docs/links.md`](docs/links.md).
+
 Browser checks in `e2e/`: `packets` (save/open/migration/storage), `workspace` (routing, layout, accessibility), `refresh` (data review), `import` (CSV), `return` (start screen), `regression-v1` (calculators match V1), `release` (the release standard), plus screenshot helpers.
 
 ## Project structure
