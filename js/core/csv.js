@@ -174,7 +174,8 @@ export function parseRows(rows, mapping) {
     num("dividend", "Annual dividend", LIMITS.maxDividend);
     const sc = parseSchedule(cell("schedule"));
     if (sc.value) r.schedule = sc.value; else if (sc.warning) r.warnings.push(sc.warning);
-    r.name = cell("name").slice(0, 120);
+    // An export defuses formula-looking text with a leading apostrophe; take it back off so names round-trip.
+    r.name = cell("name").replace(/^'(?=[=+\-@\t\r])/, "").slice(0, 120);
     const cur = cell("currency").toUpperCase();
     if (cur && cur !== "USD") r.warnings.push(`Currency ${cur.slice(0, 5)}: Payout Lab works in US dollars and does not convert.`);
     if (r.aliasOf) r.warnings.push(`${r.aliasOf} was matched to ${r.ticker}.`);
@@ -197,9 +198,12 @@ export function consolidate(parsed) {
       else if (k !== "name" && r[k] !== null && r[k] !== "" && r[k] !== g[k]) g.warnings.push(`Rows ${g.rows.join(", ")} give different ${k} values. The first was kept.`);
     }
   }
-  const list = [...good.values()];
+  let list = [...good.values()];
   for (const g of list) if (g.rows.length > 1) g.warnings.unshift(`${g.ticker} appears on rows ${g.rows.join(", ")}. Shares were added together.`);
-  return { rows: list, invalid, merged };
+  // Combined lots must stay inside the same limits as a single row; otherwise the packet could not be reopened.
+  const over = list.filter((g) => g.shares > LIMITS.maxShares);
+  if (over.length) { invalid += over.length; list = list.filter((g) => g.shares <= LIMITS.maxShares); }
+  return { rows: list, invalid, merged, overLimit: over.map((g) => g.ticker) };
 }
 
 // ---------- plan ----------
@@ -215,7 +219,7 @@ export function buildImportPlan(packet, rows, mode) {
     const h = existing.get(r.ticker);
     const own = ["price", "dividend", "schedule"].filter((k) => r[k] !== null && r[k] !== "");
     if (!h) return { ticker: r.ticker, action: "new", from: 0, to: r.shares, own, known: r.known };
-    const to = mode === "add" ? h.shares + r.shares : r.shares;
+    const to = Math.min(LIMITS.maxShares, mode === "add" ? h.shares + r.shares : r.shares);
     return { ticker: r.ticker, action: Math.abs(to - h.shares) < 1e-9 && !own.length ? "same" : mode === "add" ? "increase" : "update", from: h.shares, to, own, known: r.known };
   });
   const inFile = new Set(rows.map((r) => r.ticker));

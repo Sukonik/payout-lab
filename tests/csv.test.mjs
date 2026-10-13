@@ -195,3 +195,38 @@ test("CSV export defuses spreadsheet formulas and quotes awkward text", () => {
   assert.equal(back.rows.length, 2);
   assert.equal(back.rows[1].name, "Realty, Inc");
 });
+
+test("names defused for export come back clean on re-import", () => {
+  const p = newPacket();
+  p.holdings.push({ id: "h_abcd", ticker: "ZZZ1", name: "=Special Fund", shares: 2, fields: holdingFromMarket("ZZZ1", 1, { p: 1, d: 1, s: "Q3", q: true }).fields });
+  const csv = holdingsToCsv(p);
+  assert.match(csv, /'=Special Fund/);
+  const { rows } = load(csv);
+  assert.equal(rows[0].name, "=Special Fund");
+  const cons = consolidate(rows);
+  const q = newPacket(); applyImportPlan(q, cons.rows, buildImportPlan(q, cons.rows, "set"));
+  assert.equal(q.holdings[0].name, "=Special Fund", "no apostrophe accumulates");
+});
+
+test("lots that add up past the share limit are rejected, not clamped silently", () => {
+  const { rows } = load("Symbol,Quantity\nBIG,600000000000\nBIG,600000000000\nOK,5\n");
+  const c = consolidate(rows);
+  assert.deepEqual(c.rows.map((r) => r.ticker), ["OK"]);
+  assert.deepEqual(c.overLimit, ["BIG"]);
+  assert.equal(c.invalid, 1);
+  const p = newPacket();
+  const plan = buildImportPlan(p, c.rows, "set");
+  applyImportPlan(p, c.rows, plan);
+  assert.equal(parsePacketText(serializePacket(p)).ok, true);
+});
+
+test("'add' never produces more shares than a packet can hold", () => {
+  const p = newPacket();
+  p.holdings.push(holdingFromMarket("SCHD", 9e11, { p: 1, d: 1, s: "Q3", q: true }));
+  const { rows } = load("Symbol,Quantity\nSCHD,9e11\n");
+  const c = consolidate(rows);
+  const plan = buildImportPlan(p, c.rows, "add");
+  assert.equal(plan.items[0].to, 1e12);
+  applyImportPlan(p, c.rows, plan);
+  assert.equal(p.holdings[0].shares, 1e12);
+});

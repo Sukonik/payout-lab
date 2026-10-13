@@ -1,0 +1,115 @@
+// Regression checks for problems found in the independent code review of V2.
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { launch, serve, check, done } from "./lib.mjs";
+import { newId } from "../js/core/packet.js";
+
+const root = path.resolve(new URL("..", import.meta.url).pathname);
+const { server, url } = await serve(root);
+const browser = await launch();
+const errors = [];
+const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "payout-h-"));
+const day = (n) => new Date(Date.now() - n * 864e5).toISOString();
+const entry = (o) => ({ n: "Name", p: 100, d: 4, s: "Q3", q: true, src: "Tiingo", u: day(1), last: day(20).slice(0, 10), per: 1, ...o });
+const market = { updated: day(1), source: "Tiingo", tickers: { SCHD: entry({ n: "Schwab ETF", p: 32, d: 1.05 }), O: entry({ n: "Realty Income", p: 54, d: 3.2, s: "M" }), KO: entry({ n: "Coca-Cola", p: 70, d: 2, s: "Q1" }) } };
+const newCtx = async (o = {}) => { const c = await browser.newContext({ viewport: { width: 1280, height: 900 }, ...o }); await c.route("**/data.json", (r) => r.fulfill({ json: market })); return c; };
+const open = async (c, hash = "#/portfolio") => { const p = await c.newPage(); p.on("pageerror", (e) => errors.push(e.message)); p.on("console", (m) => { if (m.type() === "error") errors.push(m.text()); }); await p.goto(url + hash); await p.waitForFunction(() => document.documentElement.dataset.ready); return p; };
+const add = async (p, t, n) => { await p.fill("#tk", t); await p.fill("#sh", String(n)); await p.click("#addBtn"); };
+const settle = (p) => p.waitForFunction(() => /Device\s+saved/.test(document.querySelector("#status").innerText));
+const gone = (p) => p.waitForSelector("body > dialog:not(#settings)", { state: "detached" });
+const idb = (p) => p.evaluate(async () => new Promise((res) => { const q = indexedDB.open("payoutlab"); q.onsuccess = () => { const t = q.result.transaction("kv").objectStore("kv"); const r = t.getAll(), k = t.getAllKeys(); r.onsuccess = () => { k.onsuccess = () => res(Object.fromEntries(k.result.map((key, i) => [key, r.result[i]]))); }; }; }));
+const go = async (p, v) => { await p.evaluate((h) => { location.hash = h; }, "#/" + v); await p.waitForSelector(`#view-${v}:not([hidden])`); };
+const save = async (p, name) => { const [d] = await Promise.all([p.waitForEvent("download"), p.click("#saveBtn")]); const f = path.join(tmp, name); await d.saveAs(f); return f; };
+const rev = async (p) => { await p.click("#tagBtn"); await p.waitForSelector("dialog[open]"); const t = await p.innerText("dialog[open]"); await p.keyboard.press("Escape"); await gone(p); return /Revision (\w+)/.exec(t)[1]; };
+
+console.log("1. out-of-range typing can never make an unreadable backup");
+let c = await newCtx(); let p = await open(c);
+await add(p, "SCHD", 10);
+await p.fill('[data-i="0"][data-k="price"]', "1000000000"); await p.dispatchEvent('[data-i="0"][data-k="price"]', "change");
+await p.fill('[data-i="0"][data-k="div"]', "5000000"); await p.dispatchEvent('[data-i="0"][data-k="div"]', "change");
+check("price and dividend are clamped to the packet limits and the field shows it", (await p.inputValue('[data-i="0"][data-k="price"]')) === "10000000" && (await p.inputValue('[data-i="0"][data-k="div"]')) === "1000000");
+await go(p, "lab");
+await p.fill('[data-s="oRate"]', "150"); await p.dispatchEvent('[data-s="oRate"]', "change");
+await p.fill('[data-s="stRate"]', "-5"); await p.dispatchEvent('[data-s="stRate"]', "change");
+await p.fill('[data-s="target"]', "5000000000"); await p.dispatchEvent('[data-s="target"]', "change");
+check("scenario settings are clamped too", (await p.inputValue('[data-s="oRate"]')) === "100" && (await p.inputValue('[data-s="stRate"]')) === "0" && (await p.inputValue('[data-s="target"]')) === "10000000");
+const f1 = await save(p, "clamped.payout");
+const c2 = await newCtx(); const p2 = await open(c2, "");
+await p2.setInputFiles("#fileIn", f1); await p2.waitForSelector("dialog[open]");
+check("the saved packet opens in a fresh browser", /Open this packet\?/.test(await p2.innerText("dialog[open]")) && !/Couldn't open/.test(await p2.innerText("dialog[open]")));
+await p2.click('dialog[open] [data-result="open-new"]'); await gone(p2);
+await c2.close();
+
+console.log("2. guest mode keeps nothing, including backups");
+const g = await newCtx(); const gp = await open(g, "");
+await gp.fill("#gName", "Guest"); await gp.uncheck("#gRem"); await gp.click('[data-g="start"]'); await gp.waitForSelector("#view-portfolio:not([hidden])");
+await add(gp, "SCHD", 5);
+await gp.click("#sampleBtn"); await gp.waitForSelector("dialog[open]"); await gp.click('dialog[open] [data-result="ok"]'); await gone(gp);
+await gp.setInputFiles("#csvIn", { name: "x.csv", mimeType: "text/csv", buffer: Buffer.from("Symbol,Quantity\nO,3\n") });
+await gp.waitForSelector("dialog[open] #ciBody table"); await gp.click("dialog[open] #ciApply"); await gone(gp);
+check("the import message does not claim a backup that was never kept", /No local backup was kept/.test(await gp.innerText("#toast")), await gp.innerText("#toast"));
+await gp.click("#clearBtn"); await gp.waitForSelector("dialog[open]"); await gp.click('dialog[open] [data-result="ok"]'); await gone(gp);
+const store = await idb(gp).catch(() => ({}));
+check("no portfolio and no backup was written to the browser", !Object.keys(store).some((k) => /^[pb]:/.test(k)), Object.keys(store).join());
+gp.on("dialog", (d) => d.accept());
+await g.close();
+
+console.log("3. revisions only start when editing starts after a copy may exist elsewhere");
+c = await newCtx(); p = await open(c, "#/portfolio");
+await add(p, "SCHD", 10); await settle(p);
+const r1 = await rev(p);
+await p.fill('[data-i="0"][data-k="shares"]', "11"); await settle(p);
+await p.fill('[data-i="0"][data-k="shares"]', "12"); await settle(p);
+const r2 = await rev(p);
+check("many edits in one session stay one open revision", r1 === r2, `${r1} vs ${r2}`);
+const f2 = await save(p, "r.payout");
+await p.fill('[data-i="0"][data-k="shares"]', "13"); await settle(p);
+const r3 = await rev(p);
+check("the first edit after saving a packet starts a new revision", r3 !== r2);
+check("and the status says there are changes since the last packet", /Packet\s+changed/.test(await p.innerText("#status")));
+// unsaved edits must not hide a difference from an older packet
+await p.fill('[data-i="0"][data-k="shares"]', "14");
+await p.setInputFiles("#fileIn", f2); await p.waitForSelector("dialog[open]");
+const rel = await p.innerText("dialog[open]");
+check("opening an older copy while you have newer edits never says 'identical'", !/exactly this version/.test(rel) && /older version/.test(rel), rel.slice(0, 220));
+await p.click('dialog[open] [data-result="cancel"]'); await gone(p);
+check("cancelled: the edits are still there", (await p.inputValue('[data-i="0"][data-k="shares"]')) === "14");
+
+console.log("4. drawing a tab never changes the saved portfolio");
+const stale = JSON.parse(fs.readFileSync(f2, "utf8")); delete stale.checksum;
+stale.portfolioId = newId("pf"); stale.revisionId = newId("rv"); stale.lineage = [stale.revisionId]; stale.parentRevisionId = null; stale.settings.cutT = "ZZZ"; stale.settings.addT = "QQQ";
+const f3 = path.join(tmp, "stale-picks.payout"); fs.writeFileSync(f3, JSON.stringify(stale));
+const c3 = await newCtx(); const p3 = await open(c3, "");
+await p3.setInputFiles("#fileIn", f3); await p3.waitForSelector("dialog[open]"); await p3.click('dialog[open] [data-result="open-new"]'); await gone(p3); await p3.waitForSelector("#view-overview:not([hidden])");
+await go(p3, "lab"); await go(p3, "overview"); await go(p3, "lab"); await p3.waitForTimeout(900);
+check("a stale scenario pick is shown as the first holding but the file is not touched", /Packet\s+saved/.test(await p3.innerText("#status")) && !/saving/.test(await p3.innerText("#status")));
+const f4 = await save(p3, "stale2.payout");
+check("and the next packet keeps the original settings", JSON.parse(fs.readFileSync(f4, "utf8")).settings.cutT === "ZZZ");
+await c3.close();
+
+console.log("5. the last edit survives a fast app switch or tab close");
+const c5 = await newCtx(); const p5 = await open(c5, "#/portfolio");
+await add(p5, "SCHD", 10); await settle(p5);
+await p5.fill('[data-i="0"][data-k="shares"]', "77.5");
+await p5.evaluate(() => { Object.defineProperty(document, "visibilityState", { value: "hidden", configurable: true }); document.dispatchEvent(new Event("visibilitychange")); });
+await p5.waitForTimeout(250);
+const rec = Object.entries(await idb(p5)).find(([k]) => k.startsWith("p:"))[1];
+check("hiding the page saved immediately (before the debounce)", rec.packet.holdings[0].shares === 77.5);
+await c5.close();
+
+console.log("6. a hostile data file cannot reach the page or a packet");
+const evil = { updated: day(0), source: "x", tickers: { GOOD: entry({ n: "Good" }), BAD1: entry({ s: "NOPE", n: "<img src=x onerror=alert(1)>" }), "<img>": entry({}) } };
+const c6 = await browser.newContext({ viewport: { width: 1280, height: 900 } }); await c6.route("**/data.json", (r) => r.fulfill({ json: evil }));
+const p6 = await open(c6, "#/portfolio");
+await add(p6, "BAD1", 2); await settle(p6);
+check("an unknown schedule did not leak into the UI", !/undefined/.test(await p6.innerText("#rows")));
+check("no injected markup was created", (await p6.$$("#rows img, #tickers img, datalist img")).length === 0);
+const f6 = await save(p6, "evil.payout");
+const c7 = await newCtx(); const p7 = await open(c7, "");
+await p7.setInputFiles("#fileIn", f6); await p7.waitForSelector("dialog[open]");
+check("the packet made from it opens elsewhere", !/Couldn't open/.test(await p7.innerText("dialog[open]")));
+await c6.close(); await c7.close();
+
+check("no console or page errors", errors.length === 0, errors.join(" | "));
+await browser.close(); server.close(); done();

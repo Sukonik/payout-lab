@@ -8,7 +8,7 @@ const EPS = 1e-6;
 
 const PROVIDER = (e) => { const s = String(e.src || "").toLowerCase(); return s.startsWith("tiingo") ? "tiingo" : s.startsWith("yahoo") ? "yahoo" : null; };
 const differs = (a, b) => Math.abs(a - b) > EPS * Math.max(1, Math.abs(a), Math.abs(b));
-const ageDays = (asOf, now) => (asOf ? Math.floor((now - Date.parse(asOf + "T00:00:00Z")) / DAY) : null);
+export const ageDays = (asOf, now = Date.now()) => (asOf ? Math.floor((now - Date.parse(asOf + "T00:00:00Z")) / DAY) : null);
 
 export const FIELD_LABEL = { price: "Price", dividend: "Dividend per year", schedule: "Pay schedule" };
 

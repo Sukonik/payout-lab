@@ -20,14 +20,32 @@ A user can save a packet, open it in a fresh browser, continue working and keep 
 
 | Check | Result |
 |---|---|
-| Unit tests (`npm test`) | 63 passing: packets, store, calc, route, refresh, CSV |
+| Unit tests (`npm test`) | 72 passing: packets, store, calc, route, refresh, CSV, market data |
 | `e2e/packets.mjs` | 28: round trip into a fresh browser, bad files, copy-on-diverge, migration, denied storage |
 | `e2e/workspace.mjs` | 58: routing, edits across tabs, no sideways scroll at 320/360/390/768/1280px, contrast, reduced motion |
 | `e2e/refresh.mjs` | 36: review sheet, manual protection, stale data, basis switch, caveats |
 | `e2e/import.mjs` | 47: CSV safety, privacy, modes, formula-safe export |
 | `e2e/return.mjs` | 31: Continue, deep links, several portfolios, guest, blocked storage, cleared data |
+| `e2e/hardening.mjs` | 17: regressions for the code-review findings below |
 | `e2e/regression-v1.mjs` | 39/39 calculator outputs identical to V1 |
-| `e2e/release.mjs` | The site built exactly as deployed. The preserved V1 build is byte-identical to its commit and still works; a portfolio made in the **real V1 build** migrates intact (fractional shares, edited dividend, schedule, goal) with the V1 key untouched; a packet moves to a fresh browser, continues, and keeps an earlier saved report unchanged; no third-party URLs in any shipped file |
+| `e2e/release.mjs` (24) | The site built exactly as deployed. The preserved V1 build is byte-identical to its commit and still works; a portfolio made in the **real V1 build** migrates intact (fractional shares, edited dividend, schedule, goal) with the V1 key untouched; a packet moves to a fresh browser, continues, and keeps an earlier saved report unchanged; no third-party URLs in any shipped file |
+
+## Independent code review
+
+Before release, an independent review of `js/` found real problems. All were fixed and are covered by tests.
+
+| Finding | Fix |
+|---|---|
+| Typing an extreme price, dividend or rate produced a packet the app could not reopen | Entries are clamped to packet limits; the app also re-reads every packet it writes and refuses to download one it could not open |
+| Local backups were written even in guest mode | Backups follow the "remember on this device" setting; messages no longer claim a backup that was not kept |
+| A new revision on every autosave overflowed the history window and later made true ancestors look "diverged" | Revisions start only when editing begins after a copy may exist elsewhere (loaded, opened or exported); window widened to 200 |
+| Import compared an incoming packet with unsaved state | Follows from the revision change; checked end to end |
+| Combined CSV lots and legacy portfolios could exceed packet limits | Rejected or capped, with a message |
+| Public price data was not validated | `data.json` entries are rebuilt from known fields and bounds |
+| Two different staleness thresholds | One rule shared by the Overview and the review sheet |
+| Drawing a tab could change saved settings silently | Rendering no longer writes into the portfolio |
+| Fragile save when closing the page | Saves on `visibilitychange` as well as `pagehide` |
+| Re-importing an export added apostrophes to names | The export's formula guard is removed on import |
 
 ## Known limits
 

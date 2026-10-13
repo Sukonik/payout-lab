@@ -1,6 +1,6 @@
 // Application controller: one working packet, saved on this device (optional) and exported to .payout files.
 import {
-  APP_VERSION, asSeparateCopy, compareRevisions, migrateLegacyV1, newPacket, nextRevision, packetFileName, parsePacketText, serializePacket, summarize,
+  APP_VERSION, asSeparateCopy, clampSetting, compareRevisions, migrateLegacyV1, newPacket, nextRevision, packetFileName, parsePacketText, serializePacket, summarize,
 } from "./core/packet.js";
 import { LEGACY_KEY, openStore } from "./core/store.js";
 import { inc, num, perPay, totals } from "./core/calc.js";
@@ -21,7 +21,8 @@ import { applyTheme, buildNav, currentTheme, startRouter } from "./ui/shell.js";
 
 const state = {
   store: null, packet: null, meta: {}, app: { remember: true },
-  dirty: false,            // edits not yet turned into a revision
+  dirty: false,            // edits not yet written to this device
+  sealed: true,            // the current revision may exist outside this tab (loaded, opened or exported): the next edit starts a new one
   onDevice: false,         // this portfolio exists in local storage (an untouched empty one is never stored)
   deviceSavedAt: null,     // when the working copy last reached this device's storage
   saveError: null, timer: null,
@@ -34,10 +35,12 @@ function goView(v) { hideGate(); router?.go(v); }
 const nowIso = () => new Date().toISOString();
 const canRemember = () => state.app.remember !== false && state.store.persistent;
 
-function commitRevision() {
-  if (!state.dirty) return;
+// A revision is minted when editing starts after the current one may have been seen elsewhere (loaded from storage, opened from a
+// packet, or exported). Edits after that mutate the same open revision, so history stays short and comparing copies stays exact.
+function openRevision() {
+  if (!state.sealed) return;
   state.packet = nextRevision(state.packet, nowIso());
-  state.dirty = false;
+  state.sealed = false;
 }
 
 async function persist(metaPatch = {}, { force = false } = {}) {
@@ -59,15 +62,23 @@ async function persist(metaPatch = {}, { force = false } = {}) {
 
 async function flush() {
   clearTimeout(state.timer);
-  if (state.dirty) { commitRevision(); state.meta.lastEditedAt = nowIso(); }
+  if (state.dirty) { state.packet.savedAt = nowIso(); state.meta.lastEditedAt = state.packet.savedAt; state.dirty = false; }
   await persist(state.meta.lastEditedAt ? { lastEditedAt: state.meta.lastEditedAt } : {});
 }
 
 function mark() {
+  openRevision();
   state.dirty = true;
   renderChrome();
   clearTimeout(state.timer);
-  if (canRemember()) state.timer = setTimeout(flush, 700);
+  if (canRemember()) state.timer = setTimeout(flush, 500);
+}
+
+// A local backup keeps your last version when an import, sample or clear replaces it. It is a stored copy of your holdings, so
+// it follows the same rule as everything else: no backup when this portfolio is not remembered on this device.
+async function backupSafe(reason, packet = state.packet) {
+  if (!canRemember()) return false;
+  try { await state.store.backup(packet, reason); return true; } catch { return false; }
 }
 
 async function refreshLocalList() { state.localList = canRemember() ? await state.store.list().catch(() => []) : []; }
@@ -129,7 +140,7 @@ function renderAll() { renderChrome(); renderHoldings(); syncInputs(); renderAna
 // ---------- switching portfolios ----------
 async function activate(packet, meta = {}, { stored = false } = {}) {
   clearTimeout(state.timer);
-  state.packet = packet; state.meta = meta; state.dirty = false; state.deviceSavedAt = null; state.saveError = null; state.onDevice = stored; state.selectedMonth = null;
+  state.packet = packet; state.meta = meta; state.dirty = false; state.sealed = true; state.deviceSavedAt = null; state.saveError = null; state.onDevice = stored; state.selectedMonth = null;
   await refreshLocalList();
   renderAll();
 }
@@ -155,13 +166,21 @@ function download(name, text, type = "application/octet-stream") {
 
 async function savePacket() {
   clearTimeout(state.timer);
-  if (state.dirty) { commitRevision(); state.meta.lastEditedAt = nowIso(); }
+  if (state.dirty) { state.packet.savedAt = nowIso(); state.meta.lastEditedAt = state.packet.savedAt; state.dirty = false; }
   const text = serializePacket(state.packet);
+  // Never hand the user a backup that this app could not open again.
+  const check = parsePacketText(text);
+  if (!check.ok) {
+    await choose(`<h2>Can't save this packet</h2><p>One of the values is outside what a packet can hold: ${esc(check.error.message)}</p><p class="muted">Nothing was downloaded. Fix that value and try again.</p><div class="btns"><button class="btn primary" data-result="ok">OK</button></div>`);
+    return false;
+  }
   download(packetFileName(state.packet), text);
+  state.sealed = true;                              // this revision now exists outside the browser: the next edit starts a new one
   state.meta = { ...state.meta, lastExportedAt: nowIso(), lastExportedRevisionId: state.packet.revisionId };
   await persist();
   renderChrome();
   toast(`Packet saved: ${packetFileName(state.packet)}. It contains your holdings, so keep it private.`);
+  return true;
 }
 
 const REL_TEXT = {
@@ -217,10 +236,10 @@ async function offerImport(incoming, warnings, fileName) {
     await persist();
     toast(`Opened as a separate copy: “${copy.portfolioName}”.`);
   } else if (choice === "replace") {
-    try { await state.store.backup(local.packet, "replaced by imported packet"); } catch { /* backup is best-effort */ }
+    const kept = await backupSafe("replaced by imported packet", local.packet);
     await activate(incoming, { lastEditedAt: t, lastExportedAt: t, lastExportedRevisionId: incoming.revisionId });
     await persist();
-    toast("Replaced. The previous version is kept as a local backup.");
+    toast(kept ? "Replaced. The previous version is kept as a local backup." : "Replaced. No local backup was kept (this portfolio is not remembered on this device).");
   }
   goView("overview");
 }
@@ -262,11 +281,11 @@ async function importCsvFile(file) {
   if (!file) return;
   const out = await openCsvImport(file, state.packet);
   if (!out) return;                                   // cancelled, invalid or too large: nothing changed
-  try { await state.store.backup(state.packet, "before CSV import"); } catch { /* best-effort */ }
+  const kept = await backupSafe("before CSV import");
   applyImportPlan(state.packet, out.rows, out.plan);
   renderHoldings(); renderAnalysis(); mark();
   await flush();                                      // makes this import its own revision
-  toast(`Imported ${out.rows.length} holding${out.rows.length === 1 ? "" : "s"}${out.skipped ? `, skipped ${out.skipped} row${out.skipped > 1 ? "s" : ""}` : ""}. Revision ${state.packet.revisionId.slice(3, 9)}. Your previous version is kept as a local backup.`, 7000);
+  toast(`Imported ${out.rows.length} holding${out.rows.length === 1 ? "" : "s"}${out.skipped ? `, skipped ${out.skipped} row${out.skipped > 1 ? "s" : ""}` : ""}. Revision ${state.packet.revisionId.slice(3, 9)}. ${kept ? "Your previous version is kept as a local backup." : "No local backup was kept (this portfolio is not remembered on this device), so save a packet if you want one."}`, 7000);
 }
 
 // ---------- start screen ----------
@@ -388,7 +407,7 @@ function wire() {
   [$("tk"), $("sh")].forEach((el) => el.addEventListener("keydown", (e) => { if (e.key === "Enter") $("addBtn").click(); }));
   const sample = async () => {
     if (state.packet.holdings.length && !(await confirmDialog({ title: "Replace your holdings with the sample?", body: "Your current holdings in this portfolio will be replaced by a sample portfolio. Save a packet first if you want to keep them.", ok: "Replace with sample", danger: true }))) return;
-    if (state.packet.holdings.length) { try { await state.store.backup(state.packet, "replaced by sample portfolio"); } catch { /* best-effort */ } }
+    if (state.packet.holdings.length) await backupSafe("replaced by sample portfolio");
     loadSample(state.packet); renderHoldings(); renderAnalysis(); mark();
   };
   $("sampleBtn").addEventListener("click", sample);
@@ -396,7 +415,7 @@ function wire() {
   $("clearBtn").addEventListener("click", async () => {
     if (!state.packet.holdings.length) return;
     if (!(await confirmDialog({ title: "Remove all holdings?", body: "This empties the current portfolio. Save a packet first if you want a copy.", ok: "Remove all", danger: true }))) return;
-    try { await state.store.backup(state.packet, "holdings cleared"); } catch { /* best-effort */ }
+    await backupSafe("holdings cleared");
     state.packet.holdings = []; renderHoldings(); renderAnalysis(); mark();
   });
   $("rows").addEventListener("input", (e) => {
@@ -406,7 +425,13 @@ function wire() {
     if (editField(state.packet, +i, k, value, nowIso().slice(0, 10))) { renderAnalysis(); mark(); }
   });
   // Refresh a row's provenance chip when an edit is finished (not per keystroke, which keeps focus stable).
-  $("rows").addEventListener("change", (e) => { const i = e.target.getAttribute?.("data-i"); if (i !== null && i !== undefined) refreshRowChip(state.packet, +i); });
+  $("rows").addEventListener("change", (e) => {
+    const el = e.target, i = el.getAttribute?.("data-i"), k = el.getAttribute?.("data-k");
+    if (i === null || i === undefined) return;
+    const h = state.packet.holdings[+i];
+    if (h && (k === "shares" || k === "price" || k === "div")) el.value = k === "shares" ? h.shares : k === "price" ? h.fields.price.v : h.fields.dividend.v;
+    refreshRowChip(state.packet, +i);
+  });
   $("rows").addEventListener("click", (e) => {
     const b = e.target.closest("[data-rm]"); if (!b) return;
     removeHolding(state.packet, +b.getAttribute("data-rm")); renderHoldings(); renderAnalysis(); mark();
@@ -415,7 +440,8 @@ function wire() {
   $("addT").addEventListener("change", function () { state.packet.settings.addT = this.value; renderAnalysis(); mark(); });
   document.querySelectorAll("[data-s]").forEach((el) => {
     const k = el.getAttribute("data-s");
-    el.addEventListener("input", () => { state.packet.settings[k] = el.type === "checkbox" ? el.checked : num(el.value); renderAnalysis(); mark(); });
+    el.addEventListener("input", () => { state.packet.settings[k] = el.type === "checkbox" ? el.checked : clampSetting(k, num(el.value)); renderAnalysis(); mark(); });
+    el.addEventListener("change", () => { if (el.type !== "checkbox") el.value = state.packet.settings[k]; });
   });
   $("cal").addEventListener("click", (e) => {
     const b = e.target.closest("[data-month]"); if (!b) return;
@@ -452,7 +478,10 @@ function wire() {
   document.querySelectorAll('input[name="theme"]').forEach((r) => r.addEventListener("change", () => { if (r.checked) applyTheme(r.value); }));
   $("remChk").addEventListener("change", (e) => setRemember(e.target.checked));
   $("forgetBtn").addEventListener("click", forgetCurrent);
-  window.addEventListener("pagehide", () => { if (state.dirty && canRemember()) { commitRevision(); state.store.save(state.packet, { ...state.meta, lastEditedAt: nowIso() }).catch(() => {}); } });
+  // Save as soon as the page is hidden (tab switch, app switch on a phone, close). visibilitychange is the reliable one on mobile.
+  const saveNow = () => { if (state.dirty && canRemember()) flush(); };
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") saveNow(); });
+  window.addEventListener("pagehide", saveNow);
   window.addEventListener("beforeunload", (e) => {
     if (!canRemember() && state.packet.holdings.length && exportedState() !== "current") { e.preventDefault(); e.returnValue = ""; }
   });
