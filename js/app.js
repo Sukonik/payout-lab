@@ -15,7 +15,8 @@ import { renderDataCard, reviewUpdates } from "./ui/data.js";
 import { TEMPLATE_CSV, applyImportPlan, holdingsToCsv } from "./core/csv.js";
 import { openCsvImport } from "./ui/csvimport.js";
 import { bookmarkHelp, gateVisible, hideGate, showGate } from "./ui/gate.js";
-import { parseFragment } from "./core/route.js";
+import { buildFragment, parseFragment } from "./core/route.js";
+import { LINK, decodeSnapshot, encodeSnapshot, rateLength, snapshotLink, workspaceLink } from "./core/link.js";
 import { addReceipt, buildReceipt, compareReceipts, parseReceiptText, serializeReceipt } from "./core/receipt.js";
 import { comparisonReportHtml, receiptReportHtml } from "./core/report.js";
 import { compareHtml, optionList, renderReports, resolveReceipt, titleOf } from "./ui/receipts.js";
@@ -87,6 +88,15 @@ async function backupSafe(reason, packet = state.packet) {
 
 async function refreshLocalList() { state.localList = canRemember() ? await state.store.list().catch(() => []) : []; }
 
+// The page's own address without its fragment: works under /payout-lab/, on a custom domain, or locally.
+const baseUrl = () => location.origin + location.pathname;
+
+async function copyText(text, input) {
+  try { await navigator.clipboard.writeText(text); return true; } catch { /* clipboard blocked: fall back to selecting the text */ }
+  if (input) { input.focus(); input.select(); }
+  return false;
+}
+
 // ---------- status: where does this work live? ----------
 function exportedState() {
   const m = state.meta;
@@ -117,6 +127,7 @@ function renderChrome() {
   $("saveDot").hidden = !(p.holdings.length && s.exported !== "current");
   $("saveBtn").setAttribute("aria-label", s.exported === "current" ? "Save packet (up to date)" : "Save packet (changes not saved to a packet yet)");
   renderReceiptsState(s, state.localList);
+  try { $("wsLink").value = workspaceLink(baseUrl(), p.portfolioId, "overview"); } catch { $("wsLink").value = ""; }
 }
 
 // ---------- rendering ----------
@@ -168,7 +179,7 @@ async function saveReport() {
   const r = buildReceipt(state.packet, { label: $("rcLabel").value, now: nowIso() });
   let res = addReceipt(state.packet, r);
   if (!res.added && res.reason === "full") {
-    const ch = await choose(`<h2>You have ${LIMITS.maxSnapshots} saved reports</h2><p>Saving another removes the oldest one. Reports live inside your packet, so save a packet first if you want to keep the full history.</p><div class="btns"><button class="btn" data-result="cancel">Cancel</button><button class="btn" data-result="packet">Save packet first</button><button class="btn primary" data-result="trim">Remove the oldest and save</button></div>`);
+    const ch = await choose(`<h2>You have ${LIMITS.maxSnapshots} saved reports</h2><p>Saving another removes the oldest one. Reports live inside your packet, so save a packet first if you want to keep the full history.</p><div class="btns"><button data-result="cancel">Cancel</button><button data-result="packet">Save packet first</button><button class="primary" data-result="trim">Remove the oldest and save</button></div>`);
     if (ch === "packet") { await savePacket(); toast("Packet saved. Save the report again to replace the oldest one."); return; }
     if (ch !== "trim") return;
     res = addReceipt(state.packet, r, { trimOldest: true });
@@ -190,15 +201,15 @@ async function deleteReport(id) {
 
 async function openReportFile(file) {
   if (!file) return;
-  if (file.size > 1024 * 1024) { await choose(`<h2>That file is too large</h2><p>Reports are small. This does not look like one.</p><div class="btns"><button class="btn primary" data-result="ok">OK</button></div>`); return; }
+  if (file.size > 1024 * 1024) { await choose(`<h2>That file is too large</h2><p>Reports are small. This does not look like one.</p><div class="btns"><button class="primary" data-result="ok">OK</button></div>`); return; }
   let text;
   try { text = await file.text(); } catch { toast("That file could not be read."); return; }
   const r = parseReceiptText(text);
-  if (!r.ok) { await choose(`<h2>Couldn't open that report</h2><p>${esc(r.error.message)}</p><p class="muted">Nothing was changed.</p><div class="btns"><button class="btn primary" data-result="ok">OK</button></div>`); return; }
+  if (!r.ok) { await choose(`<h2>Couldn't open that report</h2><p>${esc(r.error.message)}</p><p class="muted">Nothing was changed.</p><div class="btns"><button class="primary" data-result="ok">OK</button></div>`); return; }
   const rc = r.receipt, have = state.packet.snapshots.some((x) => x.id === rc.id), full = state.packet.snapshots.length >= LIMITS.maxSnapshots;
   const warn = r.warnings.map((w) => `<div class="callout">${esc(w)}</div>`).join("");
   const other = rc.portfolioId !== state.packet.portfolioId ? `<div class="callout">This report is from <b>${esc(rc.portfolioName)}</b>, a different portfolio. You can still compare it, but differences may not be your own changes.</div>` : "";
-  const choice = await choose(`<h2>Open this report?</h2>${warn}${other}<dl class="dl"><dt>Name</dt><dd>${esc(titleOf(rc))}</dd><dt>Portfolio</dt><dd>${esc(rc.portfolioName)}</dd><dt>Saved</dt><dd>${esc(dateTime(rc.capturedAt))}</dd><dt>Data</dt><dd>${esc(rc.dataAsOf.newest ? "as of " + rc.dataAsOf.newest : "no dated data")}</dd><dt>Income</dt><dd>${money(rc.outputs.income)} a year · ${money(rc.outputs.value)} value</dd><dt>Holdings</dt><dd>${rc.holdings.length}</dd></dl><p class="privacy">Read in your browser only. Opening it does not change your holdings.</p><div class="btns"><button class="btn" data-result="cancel">Cancel</button>${have ? "" : full ? "" : '<button class="btn" data-result="add">Add to my reports</button>'}<button class="btn primary" data-result="compare">Compare with today</button></div>${have ? '<p class="note muted">You already have this report in your history.</p>' : full ? `<p class="note muted">Your history is full (${LIMITS.maxSnapshots}), so this one can only be compared.</p>` : ""}`);
+  const choice = await choose(`<h2>Open this report?</h2>${warn}${other}<dl class="dl"><dt>Name</dt><dd>${esc(titleOf(rc))}</dd><dt>Portfolio</dt><dd>${esc(rc.portfolioName)}</dd><dt>Saved</dt><dd>${esc(dateTime(rc.capturedAt))}</dd><dt>Data</dt><dd>${esc(rc.dataAsOf.newest ? "as of " + rc.dataAsOf.newest : "no dated data")}</dd><dt>Income</dt><dd>${money(rc.outputs.income)} a year · ${money(rc.outputs.value)} value</dd><dt>Holdings</dt><dd>${rc.holdings.length}</dd></dl><p class="privacy">Read in your browser only. Opening it does not change your holdings.</p><div class="btns"><button data-result="cancel">Cancel</button>${have ? "" : full ? "" : '<button data-result="add">Add to my reports</button>'}<button class="primary" data-result="compare">Compare with today</button></div>${have ? '<p class="note muted">You already have this report in your history.</p>' : full ? `<p class="note muted">Your history is full (${LIMITS.maxSnapshots}), so this one can only be compared.</p>` : ""}`);
   if (!choice || choice === "cancel") return;
   if (choice === "add") { const res = addReceipt(state.packet, rc); if (res.added) { mark(); state.cmp = { a: rc.id, b: "cur" }; toast("Added to your reports."); } }
   else { if (!have && !state.workbench.some((x) => x.id === rc.id)) state.workbench.push(rc); state.cmp = { a: have ? rc.id : "wb:" + rc.id, b: "cur" }; }
@@ -219,7 +230,7 @@ async function ensureCurrentIsSafe(actionLabel) {
   const p = state.packet;
   if (canRemember() || !p.holdings.length) return true;
   if (exportedState() === "current") return true;
-  const r = await choose(`<h2>Your current portfolio isn't saved</h2><p>This browser isn't remembering it, and it has changes that aren't in a packet. ${esc(actionLabel)} would discard them.</p><div class="btns"><button class="btn" data-result="cancel">Cancel</button><button class="btn" data-result="discard">Discard changes</button><button class="btn primary" data-result="save">Save packet first</button></div>`);
+  const r = await choose(`<h2>Your current portfolio isn't saved</h2><p>This browser isn't remembering it, and it has changes that aren't in a packet. ${esc(actionLabel)} would discard them.</p><div class="btns"><button data-result="cancel">Cancel</button><button data-result="discard">Discard changes</button><button class="primary" data-result="save">Save packet first</button></div>`);
   if (r === "save") { await savePacket(); return true; }
   return r === "discard";
 }
@@ -240,7 +251,7 @@ async function savePacket() {
   // Never hand the user a backup that this app could not open again.
   const check = parsePacketText(text);
   if (!check.ok) {
-    await choose(`<h2>Can't save this packet</h2><p>One of the values is outside what a packet can hold: ${esc(check.error.message)}</p><p class="muted">Nothing was downloaded. Fix that value and try again.</p><div class="btns"><button class="btn primary" data-result="ok">OK</button></div>`);
+    await choose(`<h2>Can't save this packet</h2><p>One of the values is outside what a packet can hold: ${esc(check.error.message)}</p><p class="muted">Nothing was downloaded. Fix that value and try again.</p><div class="btns"><button class="primary" data-result="ok">OK</button></div>`);
     return false;
   }
   download(packetFileName(state.packet), text);
@@ -261,11 +272,11 @@ const REL_TEXT = {
 
 async function importPacketFile(file) {
   if (!file) return;
-  if (file.size > 6 * 1024 * 1024) { await choose(`<h2>That file is too large</h2><p>Payout packets are small. This doesn't look like one.</p><div class="btns"><button class="btn primary" data-result="ok">OK</button></div>`); return; }
+  if (file.size > 6 * 1024 * 1024) { await choose(`<h2>That file is too large</h2><p>Payout packets are small. This doesn't look like one.</p><div class="btns"><button class="primary" data-result="ok">OK</button></div>`); return; }
   let text;
   try { text = await file.text(); } catch { toast("That file could not be read."); return; }
   const r = parsePacketText(text);
-  if (!r.ok) { await choose(`<h2>Couldn't open that file</h2><p>${esc(r.error.message)}</p><p class="muted">Your current portfolio was not changed.</p><div class="btns"><button class="btn primary" data-result="ok">OK</button></div>`); return; }
+  if (!r.ok) { await choose(`<h2>Couldn't open that file</h2><p>${esc(r.error.message)}</p><p class="muted">Your current portfolio was not changed.</p><div class="btns"><button class="primary" data-result="ok">OK</button></div>`); return; }
   await offerImport(r.packet, r.warnings, file.name);
 }
 
@@ -280,15 +291,15 @@ async function offerImport(incoming, warnings, fileName) {
   let body, buttons;
   if (rel === "new") {
     body = "This is a portfolio you don't have on this device yet. Opening it keeps your current portfolio too.";
-    buttons = `<button class="btn" data-result="cancel">Cancel</button><button class="btn primary" data-result="open-new">Open this portfolio</button>`;
+    buttons = `<button data-result="cancel">Cancel</button><button class="primary" data-result="open-new">Open this portfolio</button>`;
   } else if (rel === "identical") {
-    body = REL_TEXT.identical; buttons = `<button class="btn primary" data-result="cancel">OK</button>`;
+    body = REL_TEXT.identical; buttons = `<button class="primary" data-result="cancel">OK</button>`;
   } else if (rel === "incoming-newer") {
     body = REL_TEXT[rel];
-    buttons = `<button class="btn" data-result="cancel">Cancel</button><button class="btn" data-result="copy">Open as separate copy</button><button class="btn primary" data-result="replace">Continue from this packet</button>`;
+    buttons = `<button data-result="cancel">Cancel</button><button data-result="copy">Open as separate copy</button><button class="primary" data-result="replace">Continue from this packet</button>`;
   } else {
     body = REL_TEXT[rel];
-    buttons = `<button class="btn" data-result="cancel">Cancel</button><button class="btn" data-result="replace">Replace mine (backup kept)</button><button class="btn primary" data-result="copy">Open as separate copy</button>`;
+    buttons = `<button data-result="cancel">Cancel</button><button data-result="replace">Replace mine (backup kept)</button><button class="primary" data-result="copy">Open as separate copy</button>`;
   }
   const choice = await choose(`<h2>Open this packet?</h2>${warn}<p>${esc(body)}</p>${dl}${guest}<p class="privacy">Nothing is uploaded. This file is read in your browser only.</p><div class="btns">${buttons}</div>`);
   if (!choice || choice === "cancel") return;
@@ -325,7 +336,7 @@ async function openPortfolioSheet() {
     `<p class="muted">Revision ${esc(state.packet.revisionId.slice(3, 9))} · ${state.packet.holdings.length} holdings</p>` +
     row(s.device, "Device") + row(s.packet, "Packet") +
     (rows ? `<h3 style="margin-top:14px">Portfolios on this device</h3><ul class="plist">${rows}</ul>` : "") +
-    `<div class="btns"><button class="btn" data-result="rename">Rename</button><button class="btn" data-result="new">New portfolio</button><button class="btn" data-result="open-packet">Open packet</button><button class="btn primary" data-result="save">Save packet</button></div>`);
+    `<div class="btns"><button data-result="rename">Rename</button><button data-result="new">New portfolio</button><button data-result="open-packet">Open packet</button><button class="primary" data-result="save">Save packet</button></div>`);
   if (r === "rename") {
     const name = await askText({ title: "Rename portfolio", label: "Name", value: state.packet.portfolioName });
     if (name && name.trim()) { state.packet.portfolioName = name.trim().slice(0, 80); mark(); await flush(); }
@@ -414,6 +425,67 @@ async function checkForUpdates() {
   } finally { btn.disabled = false; btn.textContent = "Check for updates"; }
 }
 
+// ---------- snapshot links ----------
+async function makeSnapshotLink() {
+  if (!state.packet.holdings.length) { toast("Add holdings first. A snapshot link is a copy of them."); return; }
+  const now = nowIso();
+  let link = "", enc = null, version = 0;
+  const label = { short: "Short: fits in most messages and a QR card.", medium: "Medium: some chat and email apps may cut a link this long. A packet file is safer.", "too-large": "Too large for a link." };
+  const r = await choose(`<h2>Create a snapshot link</h2>` +
+    `<div class="callout"><b>This link contains a copy of your holdings and share counts, inside the web address.</b> Anyone who has the link can read them. It is <b>not encrypted</b>: your browser history and anyone you send it to can see the contents.</div>` +
+    `<p>It is a <b>dated snapshot</b> (${esc(dateTime(now))}). It does not update. If you change your portfolio, make a new link; old links keep showing the old copy. Saved reports are not included.</p>` +
+    `<label class="f">Name shown on the copy<input id="snName" maxlength="80" autocomplete="off" value="${esc(state.packet.portfolioName)}"></label><p class="privacy" style="margin-top:4px">Don't put your own name or account details here.</p>` +
+    `<label class="check" style="margin:12px 0"><input type="checkbox" id="snOk"> I understand that anyone with this link can see my holdings</label>` +
+    `<div id="snInfo" class="muted" aria-live="polite"></div><div id="snBox"></div>` +
+    `<div class="btns"><button data-result="cancel">Cancel</button><button class="primary" id="snCopy" disabled data-result="copy">Copy link</button></div>`, {
+    onMount(d) {
+      const nameEl = d.querySelector("#snName"), ok = d.querySelector("#snOk"), info = d.querySelector("#snInfo"), box = d.querySelector("#snBox"), btn = d.querySelector("#snCopy");
+      const refresh = async () => {
+        const mine = ++version;
+        const e = await encodeSnapshot(state.packet, { name: nameEl.value.trim() || state.packet.portfolioName, now });
+        if (mine !== version) return;
+        enc = e; link = e.rating === "too-large" ? "" : snapshotLink(baseUrl(), e.params);
+        info.innerHTML = e.rating === "too-large"
+          ? `<span class="pill bad"><i></i>${e.chars.toLocaleString()} characters</span> This portfolio is too large for a link (the limit is ${LINK.maxChars.toLocaleString()}). Nothing was shortened. Use <b>Save packet</b> to move it instead.`
+          : `<span class="pill ${e.rating === "short" ? "ok" : "warn"} sizepill"><i></i>${e.chars.toLocaleString()} characters</span> ${esc(label[e.rating])}${e.compressed ? "" : " This browser cannot compress links, so it is longer than usual."}`;
+        box.innerHTML = ok.checked && link ? `<textarea class="linkbox" readonly aria-label="Snapshot link">${esc(link)}</textarea>` : "";
+        btn.disabled = !(ok.checked && link);
+      };
+      nameEl.addEventListener("input", refresh); ok.addEventListener("change", refresh); refresh();
+    },
+  });
+  if (r !== "copy" || !link) return;
+  const done = await copyText(link, null);
+  toast(done ? `Snapshot link copied (dated ${dateTime(now)}). Anyone with it can see your holdings.` : "Your browser blocked copying. Open Create a snapshot link again and copy it from the box.", 6000);
+}
+
+async function handleSnapshotLink(parsed) {
+  history.replaceState(null, "", "#/overview");        // never leave the payload sitting in the address bar or history
+  const fail = async (title, msg) => { await choose(`<h2>${esc(title)}</h2><p>${esc(msg)}</p><p class="muted">Nothing was changed. If you were sent this link, ask for a packet file instead.</p><div class="btns"><button data-result="packet">Open a packet</button><button class="primary" data-result="ok">OK</button></div>`).then((x) => { if (x === "packet") $("fileIn").click(); }); };
+  if (parsed.bad) { await fail("That link is damaged", "It is missing parts or has characters that cannot belong to a Payout Lab snapshot."); return; }
+  const d = await decodeSnapshot(parsed.params);
+  if (!d.ok) { await fail("Couldn't open that link", d.error.message); return; }
+  const pk = d.packet;
+  const choice = await choose(`<h2>Open this snapshot?</h2><p>A snapshot link is a <b>fixed, dated copy</b>${d.madeAt ? ` made ${esc(dateTime(d.madeAt))}` : ""}. It does not update, and it is not connected to the person who made it.</p><dl class="dl"><dt>Name</dt><dd>${esc(pk.portfolioName)}</dd><dt>Holdings</dt><dd>${pk.holdings.length} (${esc(pk.holdings.slice(0, 8).map((h) => h.ticker).join(", "))}${pk.holdings.length > 8 ? "…" : ""})</dd></dl><p class="privacy">Read in your browser only. It opens as a <b>new portfolio</b>; your own portfolios are not touched.</p><div class="btns"><button data-result="cancel">Cancel</button><button class="primary" data-result="open">Open as a new portfolio</button></div>`);
+  if (choice !== "open") return;
+  if (!(await ensureCurrentIsSafe("Opening this snapshot"))) return;
+  await flush();
+  const t = nowIso();
+  await activate(pk, { lastEditedAt: t });
+  await persist({}, { force: true });
+  toast(`Opened “${pk.portfolioName}” as a new portfolio. Your own portfolios are untouched.`);
+  goView("overview");
+}
+
+async function handleWorkspaceLink(parsed) {
+  const id = parsed.params.p;
+  if (!/^pf_[0-9a-z]{8,32}$/.test(id) || id === state.packet.portfolioId) return;
+  const rec = state.store.persistent ? await state.store.load(id) : null;
+  if (rec) { await flush(); await activate(rec.packet, rec.meta, { stored: true }); await state.store.setApp({ lastActiveId: id }); toast(`Opened “${rec.packet.portfolioName}” from your bookmark.`); return; }
+  const r = await choose(`<h2>That portfolio isn't on this device</h2><p>This bookmark points to a portfolio that isn't stored in this browser. <b>A bookmark carries no data and cannot bring it back.</b> If you have its packet (a .payout file), open it here.</p><div class="btns"><button data-result="ok">Continue without it</button><button class="primary" data-result="packet">Open a packet</button></div>`);
+  if (r === "packet") $("fileIn").click();
+}
+
 // ---------- settings sheet ----------
 async function setRemember(on) {
   state.app.remember = on;
@@ -431,7 +503,7 @@ async function setRemember(on) {
 }
 
 async function forgetCurrent() {
-  const r = await choose(`<h2>Delete this portfolio from this device?</h2><p>This removes “${esc(state.packet.portfolioName)}” from this browser's memory and clears the screen. Packet files you saved are not touched. Save a packet first if you don't have one.</p><div class="btns"><button class="btn" data-result="cancel">Cancel</button><button class="btn" data-result="save">Save packet first</button><button class="btn danger" data-result="delete">Delete from device</button></div>`);
+  const r = await choose(`<h2>Delete this portfolio from this device?</h2><p>This removes “${esc(state.packet.portfolioName)}” from this browser's memory and clears the screen. Packet files you saved are not touched. Save a packet first if you don't have one.</p><div class="btns"><button data-result="cancel">Cancel</button><button data-result="save">Save packet first</button><button class="btn danger" data-result="delete">Delete from device</button></div>`);
   if (r === "save") { await savePacket(); return; }
   if (r !== "delete") return;
   clearTimeout(state.timer);
@@ -525,6 +597,14 @@ function wire() {
     $("tk").value = b.getAttribute("data-add");
     setTimeout(() => $("sh").focus(), 50);
   });
+  $("snapMake").addEventListener("click", makeSnapshotLink);
+  $("wsCopy").addEventListener("click", async () => { toast(await copyText($("wsLink").value, $("wsLink")) ? "Bookmark link copied. It opens this portfolio on this browser only." : "Select the link and copy it."); });
+  $("wsLink").addEventListener("focus", (e) => e.target.select());
+  window.addEventListener("hashchange", (ev) => {
+    const r = parseFragment(new URL(ev.newURL).hash);   // the router may already have tidied location.hash
+    if (r.kind === "snapshot") handleSnapshotLink(r);
+    else if (r.params?.p) handleWorkspaceLink(r);
+  });
   $("rcSaveReport").addEventListener("click", saveReport);
   $("rcLabel").addEventListener("keydown", (e) => { if (e.key === "Enter") saveReport(); });
   $("rcOpenReport").addEventListener("click", () => $("rcFile").click());
@@ -575,6 +655,7 @@ function wire() {
 
 // ---------- boot ----------
 async function boot() {
+  const initialHash = location.hash;       // read before the router tidies the address
   buildNav();
   router = startRouter((r, user) => { if (user && gateVisible()) hideGate(); if (r.view === "receipts" && state.packet) renderReceipts(); });
   state.store = await openStore();
@@ -607,8 +688,11 @@ async function boot() {
   if (rec && state.app.remember !== false) await activate(rec.packet, rec.meta, { stored: true });
   else await activate(newPacket({ now: nowIso() }), {});
   if (migratedNote) toast(migratedNote, 7000);
-  // A deep link (#/lab, a bookmark with a view) goes straight in. Otherwise show Continue / first-run.
-  if (!parseFragment(location.hash).explicit) await startScreen(rec && state.app.remember !== false ? "returning" : "first");
+  // A deep link (#/lab, a bookmark with a view, a snapshot link) goes straight in. Otherwise show Continue / first-run.
+  const incoming = parseFragment(initialHash);
+  if (incoming.kind === "snapshot") await handleSnapshotLink(incoming);
+  else if (incoming.params?.p) await handleWorkspaceLink(incoming);
+  if (!incoming.explicit) await startScreen(rec && state.app.remember !== false ? "returning" : "first");
   document.documentElement.dataset.ready = "1";
 }
 
