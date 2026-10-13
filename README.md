@@ -101,15 +101,15 @@ The product has a clear audience (income investors) and an obvious trust angle (
 ## Project structure
 
 ```
-index.html                          # app shell
-css/app.css                         # styles
+index.html                          # app shell: five views (Overview, Portfolio, Lab, Receipts, Explore) and the settings sheet
+css/app.css                         # design system (light and dark), phone-first layout
 js/app.js                           # controller: working packet, local save, open/save packets
-js/core/                            # pure logic, unit-tested: calc, packet schema, store, market data, portfolio ops
-js/ui/                              # rendering and dialogs
+js/core/                            # pure logic, unit-tested: calc, packet schema, store, route, market data, portfolio ops
+js/ui/                              # rendering: views, tube rack, panels, explore, dialogs, shell (nav + router)
 data.json                           # public prices and dividends, refreshed on a schedule
 docs/packet-format.md               # the .payout file format
 tests/                              # unit tests (npm test)
-e2e/                                # browser checks (Playwright; see e2e/lib.mjs)
+e2e/                                # browser checks (Playwright): packets, workspace, regression against V1, screenshots
 scripts/update-data.mjs             # the data refresh script (Node 20, no deps)
 .github/workflows/                  # data refresh, Pages deploy, tests
 LICENSE                             # MPL-2.0
