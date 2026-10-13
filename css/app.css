@@ -252,6 +252,30 @@ td.num,th.num{text-align:right}
 textarea.linkbox{width:100%;min-height:92px;resize:vertical;font:inherit;font-family:var(--mono);font-size:.74rem;color:var(--ink);background:var(--glass);border:1px solid var(--line2);border-radius:10px;padding:8px 10px;word-break:break-all}
 .sizepill{display:inline-block;margin:6px 0}
 
+/* ---------- portfolio card ---------- */
+.ctype{border:0;margin:8px 0;padding:0;display:grid;gap:8px}
+.ctype label{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line2);border-radius:12px;cursor:pointer}
+.ctype label:has(input:checked){border-color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,transparent)}
+.ctype span{display:grid;gap:2px} .ctype input{margin-top:3px;width:20px;height:20px;flex:none}
+.ctype small{color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+/* The card is always black on white: scanners need the contrast, whatever the theme. */
+.pcard{background:#fff;color:#111;border:1px solid #ccc;border-radius:14px;padding:16px;margin:12px 0;max-width:420px}
+.pcard-top{display:flex;justify-content:space-between;font-size:.85rem;color:#555}
+.pcard-top b{color:#111}
+.pcard-qr{margin:10px auto;width:min(100%,320px)} .pcard-qr svg{display:block;width:100%;height:auto}
+.pcard h3{margin:6px 0;font-size:1.1rem;color:#111;word-break:break-word}
+.pcard dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:.85rem;margin:6px 0}
+.pcard dt{color:#666} .pcard dd{margin:0;color:#111;word-break:break-word}
+.pcard p{font-size:.82rem;color:#333;margin:6px 0 0}
+dialog.carddlg{max-width:min(94vw,520px)}
+#cardPrint{display:none}
+@media print{
+  body.printing-card > *:not(#cardPrint){display:none !important}
+  body.printing-card #cardPrint{display:block !important;padding:24px}
+  body.printing-card .pcard{max-width:none;width:12cm;border:1px solid #000;margin:0 auto}
+}
+
 /* ---------- reports and comparison ---------- */
 .rclist{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
 .rcrow{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--glass);display:grid;gap:8px}
