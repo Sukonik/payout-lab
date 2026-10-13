@@ -153,7 +153,7 @@ function validateHolding(raw, i) {
 }
 
 // ---------- receipts (frozen snapshots; created from V3 onwards but part of the schema now) ----------
-function validateReceipt(raw, i) {
+export function validateReceipt(raw, i) {
   const p = `snapshots[${i}]`;
   if (!isObj(raw)) bad("bad_type", `${p} must be an object`, p);
   const holdings = Array.isArray(raw.holdings) ? raw.holdings : bad("bad_type", `${p}.holdings must be a list`, `${p}.holdings`);

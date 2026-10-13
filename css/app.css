@@ -246,6 +246,31 @@ td.num,th.num{text-align:right}
 .rv-conf summary{cursor:pointer;color:var(--muted)}
 .updot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--amber);margin-left:6px;vertical-align:middle}
 
+/* ---------- reports and comparison ---------- */
+.rclist{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.rcrow{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--glass);display:grid;gap:8px}
+.rcrow h3{font-size:1rem}
+.rcrow small{color:var(--muted)}
+.rcnums{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:.9rem}
+.rcact{display:flex;flex-wrap:wrap;gap:6px}
+.cmp-h{margin:12px 0 4px;font-size:.95rem}
+.cmp-wrap{overflow-x:auto}
+.cmp-t{width:100%;border-collapse:collapse;margin:8px 0;font-size:.92rem}
+.cmp-t th,.cmp-t td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right}
+.cmp-t th:first-child,.cmp-t td:first-child{text-align:left}
+.cmp-t th{font-size:.76rem;color:var(--muted);background:transparent}
+.abar{display:grid;grid-template-columns:minmax(120px,1.2fr) 2fr minmax(70px,.6fr);gap:10px;align-items:center;margin:6px 0;font-size:.9rem}
+.abar .tr{height:12px;background:var(--glass);border-radius:6px;position:relative;overflow:hidden}
+.abar .fl{position:absolute;top:0;bottom:0;border-radius:6px}
+.abar .fl.p{background:var(--liq-a);left:50%}.abar .fl.n{background:var(--coral);right:50%}
+.abar .tr::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--line2)}
+.abar b{text-align:right}
+.cmp-note{background:var(--amber-soft);border-radius:12px;padding:10px 12px;font-size:.9rem;margin:10px 0}
+.cmp-zero{background:var(--accent-soft);border-radius:12px;padding:12px 14px;font-weight:600;margin:10px 0}
+.mon{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:2px;font-size:.66rem;text-align:center;margin:6px 0}
+.mon b{display:block;font-weight:700}
+.badge2{font-size:.72rem;padding:1px 8px;border-radius:999px;background:var(--amber-soft);color:var(--amber);font-weight:700;margin-left:6px}
+
 /* ---------- start screen ---------- */
 .start{padding-top:8px}
 .start[hidden]{display:none}
