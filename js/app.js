@@ -1,6 +1,6 @@
 // Application controller: one working packet, saved on this device (optional) and exported to .payout files.
 import {
-  APP_VERSION, asSeparateCopy, clampSetting, compareRevisions, migrateLegacyV1, newPacket, nextRevision, packetFileName, parsePacketText, serializePacket, summarize,
+  APP_VERSION, LIMITS, asSeparateCopy, clampSetting, compareRevisions, migrateLegacyV1, slug, newPacket, nextRevision, packetFileName, parsePacketText, serializePacket, summarize,
 } from "./core/packet.js";
 import { LEGACY_KEY, openStore } from "./core/store.js";
 import { inc, num, perPay, totals } from "./core/calc.js";
@@ -16,6 +16,9 @@ import { TEMPLATE_CSV, applyImportPlan, holdingsToCsv } from "./core/csv.js";
 import { openCsvImport } from "./ui/csvimport.js";
 import { bookmarkHelp, gateVisible, hideGate, showGate } from "./ui/gate.js";
 import { parseFragment } from "./core/route.js";
+import { addReceipt, buildReceipt, compareReceipts, parseReceiptText, serializeReceipt } from "./core/receipt.js";
+import { comparisonReportHtml, receiptReportHtml } from "./core/report.js";
+import { compareHtml, optionList, renderReports, resolveReceipt, titleOf } from "./ui/receipts.js";
 import { refreshRowChip, renderHoldingRows, renderOverview, renderReceiptsState } from "./ui/views.js";
 import { applyTheme, buildNav, currentTheme, startRouter } from "./ui/shell.js";
 
@@ -27,6 +30,7 @@ const state = {
   deviceSavedAt: null,     // when the working copy last reached this device's storage
   saveError: null, timer: null,
   selectedMonth: null, localList: [], market: null, plan: null,
+  cmp: { a: null, b: "cur" }, workbench: [],   // comparison choices; reports opened from files live here, not in the portfolio
 };
 let router = null;
 function goView(v) { hideGate(); router?.go(v); }
@@ -135,12 +139,77 @@ function syncInputs() {
   document.querySelectorAll("[data-s]").forEach((el) => { const k = el.getAttribute("data-s"); if (el.type === "checkbox") el.checked = !!S[k]; else el.value = S[k]; });
 }
 
-function renderAll() { renderChrome(); renderHoldings(); syncInputs(); renderAnalysis(); renderExplore(); }
+function renderAll() { renderChrome(); renderHoldings(); syncInputs(); renderAnalysis(); renderExplore(); renderReceipts(); }
+
+// ---------- saved reports and comparison ----------
+function renderReceipts() {
+  renderReports(state.packet, state.workbench);
+  const opts = optionList(state.packet, state.workbench);
+  const ids = opts.map((o) => o.id);
+  if (!ids.includes(state.cmp.b)) state.cmp.b = "cur";
+  if (!ids.includes(state.cmp.a) || state.cmp.a === undefined) state.cmp.a = state.packet.snapshots[0]?.id ?? (state.workbench[0] ? "wb:" + state.workbench[0].id : "cur");
+  const fill = (id, v) => { $(id).innerHTML = opts.map((o) => `<option value="${esc(o.id)}"${o.id === v ? " selected" : ""}>${esc(o.name)}</option>`).join(""); };
+  fill("cmpA", state.cmp.a); fill("cmpB", state.cmp.b);
+  const A = resolveReceipt(state.cmp.a, state.packet, state.workbench), B = resolveReceipt(state.cmp.b, state.packet, state.workbench);
+  $("cmpOut").innerHTML = A && B ? compareHtml(compareReceipts(A, B), A, B) : '<p class="muted">Choose two things to compare.</p>';
+}
+
+function openPrintable(html, name) {
+  const url = URL.createObjectURL(new Blob([html], { type: "text/html" }));
+  const w = window.open(url, "_blank", "noopener");
+  if (!w) { download(name, html, "text/html"); toast("Your browser blocked the new tab, so the report was downloaded. Open it and print from there."); }
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+}
+
+const reportFileName = (r, ext) => `payout-report-${slug(r.portfolioName)}-${r.capturedAt.slice(0, 10).replace(/-/g, "")}-${r.id.slice(3, 9)}${ext}`;
+
+async function saveReport() {
+  if (!state.packet.holdings.length) { toast("Add holdings before saving a report."); return; }
+  const r = buildReceipt(state.packet, { label: $("rcLabel").value, now: nowIso() });
+  let res = addReceipt(state.packet, r);
+  if (!res.added && res.reason === "full") {
+    const ch = await choose(`<h2>You have ${LIMITS.maxSnapshots} saved reports</h2><p>Saving another removes the oldest one. Reports live inside your packet, so save a packet first if you want to keep the full history.</p><div class="btns"><button class="btn" data-result="cancel">Cancel</button><button class="btn" data-result="packet">Save packet first</button><button class="btn primary" data-result="trim">Remove the oldest and save</button></div>`);
+    if (ch === "packet") { await savePacket(); toast("Packet saved. Save the report again to replace the oldest one."); return; }
+    if (ch !== "trim") return;
+    res = addReceipt(state.packet, r, { trimOldest: true });
+  }
+  if (!res.added) return;
+  $("rcLabel").value = "";
+  state.cmp = { a: r.id, b: "cur" };
+  mark(); renderReceipts();
+  toast(res.trimmed ? `Report saved. The oldest one (${titleOf(res.trimmed)}) was removed.` : "Report saved. It will not change when prices update. Save a packet to keep it with your portfolio.");
+}
+
+async function deleteReport(id) {
+  const r = state.packet.snapshots.find((x) => x.id === id);
+  if (!r) return;
+  if (!(await confirmDialog({ title: "Delete this report?", body: `“${esc(titleOf(r))}” will be removed from this portfolio. Packets you already saved still contain it.`, ok: "Delete report", danger: true }))) return;
+  state.packet.snapshots = state.packet.snapshots.filter((x) => x.id !== id);
+  mark(); renderReceipts();
+}
+
+async function openReportFile(file) {
+  if (!file) return;
+  if (file.size > 1024 * 1024) { await choose(`<h2>That file is too large</h2><p>Reports are small. This does not look like one.</p><div class="btns"><button class="btn primary" data-result="ok">OK</button></div>`); return; }
+  let text;
+  try { text = await file.text(); } catch { toast("That file could not be read."); return; }
+  const r = parseReceiptText(text);
+  if (!r.ok) { await choose(`<h2>Couldn't open that report</h2><p>${esc(r.error.message)}</p><p class="muted">Nothing was changed.</p><div class="btns"><button class="btn primary" data-result="ok">OK</button></div>`); return; }
+  const rc = r.receipt, have = state.packet.snapshots.some((x) => x.id === rc.id), full = state.packet.snapshots.length >= LIMITS.maxSnapshots;
+  const warn = r.warnings.map((w) => `<div class="callout">${esc(w)}</div>`).join("");
+  const other = rc.portfolioId !== state.packet.portfolioId ? `<div class="callout">This report is from <b>${esc(rc.portfolioName)}</b>, a different portfolio. You can still compare it, but differences may not be your own changes.</div>` : "";
+  const choice = await choose(`<h2>Open this report?</h2>${warn}${other}<dl class="dl"><dt>Name</dt><dd>${esc(titleOf(rc))}</dd><dt>Portfolio</dt><dd>${esc(rc.portfolioName)}</dd><dt>Saved</dt><dd>${esc(dateTime(rc.capturedAt))}</dd><dt>Data</dt><dd>${esc(rc.dataAsOf.newest ? "as of " + rc.dataAsOf.newest : "no dated data")}</dd><dt>Income</dt><dd>${money(rc.outputs.income)} a year · ${money(rc.outputs.value)} value</dd><dt>Holdings</dt><dd>${rc.holdings.length}</dd></dl><p class="privacy">Read in your browser only. Opening it does not change your holdings.</p><div class="btns"><button class="btn" data-result="cancel">Cancel</button>${have ? "" : full ? "" : '<button class="btn" data-result="add">Add to my reports</button>'}<button class="btn primary" data-result="compare">Compare with today</button></div>${have ? '<p class="note muted">You already have this report in your history.</p>' : full ? `<p class="note muted">Your history is full (${LIMITS.maxSnapshots}), so this one can only be compared.</p>` : ""}`);
+  if (!choice || choice === "cancel") return;
+  if (choice === "add") { const res = addReceipt(state.packet, rc); if (res.added) { mark(); state.cmp = { a: rc.id, b: "cur" }; toast("Added to your reports."); } }
+  else { if (!have && !state.workbench.some((x) => x.id === rc.id)) state.workbench.push(rc); state.cmp = { a: have ? rc.id : "wb:" + rc.id, b: "cur" }; }
+  renderReceipts();
+  $("cmpCard").scrollIntoView({ behavior: "smooth" });
+}
 
 // ---------- switching portfolios ----------
 async function activate(packet, meta = {}, { stored = false } = {}) {
   clearTimeout(state.timer);
-  state.packet = packet; state.meta = meta; state.dirty = false; state.sealed = true; state.deviceSavedAt = null; state.saveError = null; state.onDevice = stored; state.selectedMonth = null;
+  state.packet = packet; state.meta = meta; state.dirty = false; state.sealed = true; state.deviceSavedAt = null; state.saveError = null; state.onDevice = stored; state.selectedMonth = null; state.workbench = []; state.cmp = { a: null, b: "cur" };
   await refreshLocalList();
   renderAll();
 }
@@ -456,6 +525,23 @@ function wire() {
     $("tk").value = b.getAttribute("data-add");
     setTimeout(() => $("sh").focus(), 50);
   });
+  $("rcSaveReport").addEventListener("click", saveReport);
+  $("rcLabel").addEventListener("keydown", (e) => { if (e.key === "Enter") saveReport(); });
+  $("rcOpenReport").addEventListener("click", () => $("rcFile").click());
+  $("rcFile").addEventListener("change", async (e) => { const f = e.target.files[0]; e.target.value = ""; await openReportFile(f); });
+  $("rcList").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-act]"); if (!b) return;
+    const id = b.dataset.id, r = state.packet.snapshots.find((x) => x.id === id);
+    if (b.dataset.act === "compare") { state.cmp = { a: id, b: "cur" }; renderReceipts(); $("cmpCard").scrollIntoView({ behavior: "smooth" }); }
+    else if (b.dataset.act === "delete") deleteReport(id);
+    else if (r && b.dataset.act === "export") download(reportFileName(r, ".json"), serializeReceipt(r), "application/json");
+    else if (r && b.dataset.act === "print") openPrintable(receiptReportHtml(r), reportFileName(r, ".html"));
+  });
+  $("cmpA").addEventListener("change", (e) => { state.cmp.a = e.target.value; renderReceipts(); });
+  $("cmpB").addEventListener("change", (e) => { state.cmp.b = e.target.value; renderReceipts(); });
+  const cmpDoc = () => { const A = resolveReceipt(state.cmp.a, state.packet, state.workbench), B = resolveReceipt(state.cmp.b, state.packet, state.workbench); return A && B ? comparisonReportHtml(compareReceipts(A, B), A, B, titleOf(A), titleOf(B)) : null; };
+  $("cmpPrint").addEventListener("click", () => { const h = cmpDoc(); if (h) openPrintable(h, "payout-comparison.html"); });
+  $("cmpDownload").addEventListener("click", () => { const h = cmpDoc(); if (h) download("payout-comparison.html", h, "text/html"); });
   $("checkBtn").addEventListener("click", checkForUpdates);
   $("csvPick").addEventListener("click", () => $("csvIn").click());
   $("csvIn").addEventListener("change", async (e) => { const f = e.target.files[0]; e.target.value = ""; await importCsvFile(f); });
@@ -490,7 +576,7 @@ function wire() {
 // ---------- boot ----------
 async function boot() {
   buildNav();
-  router = startRouter((r, user) => { if (user && gateVisible()) hideGate(); });
+  router = startRouter((r, user) => { if (user && gateVisible()) hideGate(); if (r.view === "receipts" && state.packet) renderReceipts(); });
   state.store = await openStore();
   state.app = { remember: true, ...(await state.store.getApp()) };
   state.market = await loadMarket();

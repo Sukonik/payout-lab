@@ -226,6 +226,27 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
   <!-- RECEIPTS -->
   <section class="view" id="view-receipts" data-view="receipts" aria-labelledby="h-receipts" hidden>
     <h1 class="vh" id="h-receipts" tabindex="-1">Receipts</h1>
+
+    <section class="card" id="rcCard" aria-labelledby="h-reports">
+      <div class="card-h"><h2 id="h-reports">Saved reports</h2></div>
+      <p class="lede">A report is a dated copy of your portfolio and what it produced. It never changes when prices update, so you can compare it with today or with another report later. Reports are stored inside your packet.</p>
+      <div class="addrow">
+        <label class="f grow">Name (optional)<input id="rcLabel" maxlength="120" autocomplete="off" placeholder="e.g. After the October dividend"></label>
+        <button class="btn primary" id="rcSaveReport">Save a report now</button>
+      </div>
+      <ul class="rclist" id="rcList"></ul>
+      <div class="row-actions"><button class="btn ghost" id="rcOpenReport">Open a report file</button><input type="file" id="rcFile" accept=".json,application/json,text/plain" hidden></div>
+    </section>
+
+    <section class="card" id="cmpCard" hidden aria-labelledby="h-cmp">
+      <div class="card-h"><h2 id="h-cmp">Compare</h2></div>
+      <div class="controls">
+        <label class="f">From<select id="cmpA"></select></label>
+        <label class="f">To<select id="cmpB"></select></label>
+      </div>
+      <div id="cmpOut" aria-live="polite"></div>
+      <div class="row-actions"><button class="btn" id="cmpPrint">Print or save as PDF</button><button class="btn ghost" id="cmpDownload">Download as HTML</button></div>
+    </section>
     <section class="card packet-card" aria-labelledby="h-packet">
       <div class="card-h"><h2 id="h-packet">Your packet</h2></div>
       <p class="lede">A packet is a small <b>.payout</b> file holding your whole portfolio. It is your account: open it on any device to continue where you stopped.</p>
@@ -249,10 +270,6 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
       <div class="row-actions"><button class="btn" id="rcBookmark">How to bookmark</button></div>
     </section>
 
-    <section class="card soon" aria-labelledby="h-soon">
-      <div class="card-h"><h2 id="h-soon">Coming in V3</h2></div>
-      <p class="lede">Saved reports you can compare over time, personal links and printable QR cards. Nothing here is switched on yet.</p>
-    </section>
   </section>
 
   <!-- EXPLORE -->
