@@ -1,9 +1,10 @@
 // Small promise-based dialogs built on the native <dialog> element (focus trap, Esc to close, backdrop).
 import { esc } from "./dom.js";
 
-function open(html, { onMount } = {}) {
+function open(html, { onMount, className } = {}) {
   return new Promise((resolve) => {
     const d = document.createElement("dialog");
+    if (className) d.className = className;
     d.innerHTML = html;
     document.body.appendChild(d);
     let result = null;

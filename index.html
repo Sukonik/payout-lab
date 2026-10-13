@@ -43,6 +43,11 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
 
 <main id="main" tabindex="-1">
 
+  <!-- START SCREEN (returning users, first run) -->
+  <section class="start" id="start" hidden aria-labelledby="h-start">
+    <div class="start-in card" id="startBody"></div>
+  </section>
+
   <!-- OVERVIEW -->
   <section class="view" id="view-overview" data-view="overview" aria-labelledby="h-overview" hidden>
     <h1 class="vh" id="h-overview" tabindex="-1">Overview</h1>
@@ -144,6 +149,17 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
         <div><span>Yield</span><b id="tYld">0%</b></div>
       </div>
     </section>
+
+    <section class="card" aria-labelledby="h-csv">
+      <div class="card-h"><h2 id="h-csv">Import or export a CSV</h2></div>
+      <p class="lede">Bring in holdings from any spreadsheet or brokerage download that has a ticker and a share count. Payout Lab is not connected to any broker. The file is read in your browser and never uploaded, and you preview every change first.</p>
+      <div class="row-actions">
+        <button class="btn" id="csvPick">Choose a CSV file</button>
+        <button class="btn ghost" id="csvTemplate">Download template</button>
+        <button class="btn ghost" id="csvExport">Export holdings as CSV</button>
+        <input type="file" id="csvIn" accept=".csv,text/csv,text/plain,application/vnd.ms-excel" hidden>
+      </div>
+    </section>
   </section>
 
   <!-- LAB -->
@@ -225,6 +241,12 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
       <div class="card-h"><h2 id="h-local">On this device</h2></div>
       <div id="localState"></div>
       <div class="row-actions"><button class="btn" id="rcPortfolios">Portfolios and storage</button></div>
+    </section>
+
+    <section class="card" aria-labelledby="h-bm">
+      <div class="card-h"><h2 id="h-bm">Come back later</h2></div>
+      <p class="lede">A bookmark opens Payout Lab. On this browser it continues the portfolio it remembers; on another device you open your packet. If this site ever moves to a new web address, the copies remembered here do not move with it, so save a packet first.</p>
+      <div class="row-actions"><button class="btn" id="rcBookmark">How to bookmark</button></div>
     </section>
 
     <section class="card soon" aria-labelledby="h-soon">

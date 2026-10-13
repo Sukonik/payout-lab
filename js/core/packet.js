@@ -103,6 +103,7 @@ function src(v, path) {
 
 export function normalizeTickerText(t) { return String(t ?? "").trim().toUpperCase(); }
 const TICKER_RE = /^[A-Z0-9][A-Z0-9.\-]{0,14}$/;
+export const TICKER_RE_PUBLIC = TICKER_RE;
 
 // ---------- holdings ----------
 // Every value field carries provenance: { v, src, asOf, manual }.

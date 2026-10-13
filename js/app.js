@@ -12,6 +12,10 @@ import { askText, choose, confirmDialog, toast } from "./ui/dialogs.js";
 import { renderAdd, renderConc, renderCut, renderGoal, renderTax } from "./ui/panels.js";
 import { fillTickers, renderExplore } from "./ui/explore.js";
 import { renderDataCard, reviewUpdates } from "./ui/data.js";
+import { TEMPLATE_CSV, applyImportPlan, holdingsToCsv } from "./core/csv.js";
+import { openCsvImport } from "./ui/csvimport.js";
+import { bookmarkHelp, gateVisible, hideGate, showGate } from "./ui/gate.js";
+import { parseFragment } from "./core/route.js";
 import { refreshRowChip, renderHoldingRows, renderOverview, renderReceiptsState } from "./ui/views.js";
 import { applyTheme, buildNav, currentTheme, startRouter } from "./ui/shell.js";
 
@@ -24,6 +28,7 @@ const state = {
   selectedMonth: null, localList: [], market: null, plan: null,
 };
 let router = null;
+function goView(v) { hideGate(); router?.go(v); }
 
 // ---------- persistence ----------
 const nowIso = () => new Date().toISOString();
@@ -140,8 +145,8 @@ async function ensureCurrentIsSafe(actionLabel) {
 }
 
 // ---------- save / open packets ----------
-function download(name, text) {
-  const url = URL.createObjectURL(new Blob([text], { type: "application/octet-stream" }));
+function download(name, text, type = "application/octet-stream") {
+  const url = URL.createObjectURL(new Blob([text], { type }));
   const a = document.createElement("a");
   a.href = url; a.download = name; a.rel = "noopener";
   document.body.appendChild(a); a.click(); a.remove();
@@ -217,7 +222,7 @@ async function offerImport(incoming, warnings, fileName) {
     await persist();
     toast("Replaced. The previous version is kept as a local backup.");
   }
-  router?.go("overview");
+  goView("overview");
 }
 
 // ---------- portfolio sheet (the specimen tag) ----------
@@ -243,13 +248,61 @@ async function openPortfolioSheet() {
     await flush();
     await activate(newPacket({ name: name.trim() || "My portfolio", now: nowIso() }), {});
     await persist({ lastEditedAt: nowIso() }, { force: true });
-    router?.go("portfolio");
+    goView("portfolio");
   } else if (r === "save") await savePacket();
   else if (r === "open-packet") $("fileIn").click();
   else if (r && r.startsWith("open:")) {
     const rec = await state.store.load(r.slice(5));
     if (rec) { await activate(rec.packet, rec.meta, { stored: true }); await state.store.setApp({ lastActiveId: rec.packet.portfolioId }); }
   }
+}
+
+// ---------- CSV import / export ----------
+async function importCsvFile(file) {
+  if (!file) return;
+  const out = await openCsvImport(file, state.packet);
+  if (!out) return;                                   // cancelled, invalid or too large: nothing changed
+  try { await state.store.backup(state.packet, "before CSV import"); } catch { /* best-effort */ }
+  applyImportPlan(state.packet, out.rows, out.plan);
+  renderHoldings(); renderAnalysis(); mark();
+  await flush();                                      // makes this import its own revision
+  toast(`Imported ${out.rows.length} holding${out.rows.length === 1 ? "" : "s"}${out.skipped ? `, skipped ${out.skipped} row${out.skipped > 1 ? "s" : ""}` : ""}. Revision ${state.packet.revisionId.slice(3, 9)}. Your previous version is kept as a local backup.`, 7000);
+}
+
+// ---------- start screen ----------
+async function startScreen(mode) {
+  await refreshLocalList();
+  const on = {
+    continue: () => goView("overview"),
+    open: async (id) => { const rec = await state.store.load(id); if (rec) { await activate(rec.packet, rec.meta, { stored: true }); await state.store.setApp({ lastActiveId: id }); goView("overview"); } },
+    packet: () => $("fileIn").click(),
+    bookmark: async () => { const r = await bookmarkHelp(); if (r === "copied") toast("Link copied."); else if (r === "manual") toast("Select the link and copy it."); },
+    sample: async () => {
+      if (!(await ensureCurrentIsSafe("Starting a sample"))) return;
+      await flush();
+      const pk = newPacket({ name: "Sample portfolio", now: nowIso() });
+      loadSample(pk);
+      await activate(pk, {});
+      await persist({ lastEditedAt: nowIso() }, { force: true });
+      goView("overview");
+    },
+    create: async (name, remember) => {
+      if (mode === "first") {
+        state.packet.portfolioName = (name || "").trim().slice(0, 80) || "My portfolio";
+        await setRemember(!!remember && state.store.persistent);
+        if (canRemember()) await persist({ lastEditedAt: nowIso() }, { force: true });
+        renderChrome(); goView("portfolio"); return;
+      }
+      if (!(await ensureCurrentIsSafe("Starting a new portfolio"))) return;
+      const nm = await askText({ title: "New portfolio", label: "Name", value: "My portfolio", ok: "Create" });
+      if (nm === null) return;
+      await flush();
+      await activate(newPacket({ name: nm.trim() || "My portfolio", now: nowIso() }), {});
+      await persist({ lastEditedAt: nowIso() }, { force: true });
+      goView("portfolio");
+    },
+  };
+  showGate({ mode, packet: state.packet, meta: state.meta, list: state.localList, persistent: state.store.persistent, on });
 }
 
 // ---------- market data: review before anything changes ----------
@@ -301,7 +354,15 @@ async function forgetCurrent() {
   toast("Deleted from this device.");
 }
 
-function fillSettings() {
+async function persistNote() {
+  try {
+    if (!navigator.storage?.persisted) return "";
+    const ok = await navigator.storage.persisted();
+    return ok ? " Your browser has agreed to keep this data unless you clear it." : " Your browser may remove this data when device storage runs low.";
+  } catch { return ""; }
+}
+
+async function fillSettings() {
   const th = currentTheme();
   document.querySelectorAll('input[name="theme"]').forEach((r) => { r.checked = r.value === th; });
   $("remChk").checked = state.app.remember !== false;
@@ -309,7 +370,7 @@ function fillSettings() {
   $("storageNote").textContent = !state.store.persistent
     ? "This browser isn't letting the site store data, so nothing can be remembered. Packets still work."
     : state.app.remember === false ? "Guest mode: nothing is kept in this browser. Save a packet to keep your work."
-    : `Kept in this browser (${state.store.kind === "indexeddb" ? "IndexedDB" : "local storage"}). Clearing site data removes it, so keep a packet as your backup. This is not synced between devices.`;
+    : `Kept in this browser (${state.store.kind === "indexeddb" ? "IndexedDB" : "local storage"}). Clearing site data removes it, so keep a packet as your backup. Browser sync for bookmarks or passwords does not sync this portfolio.${await persistNote()}`;
   $("forgetBtn").hidden = !(state.onDevice && state.store.persistent);
   const m = state.market;
   $("aboutNote").textContent = `Payout Lab ${APP_VERSION}. Public prices ${m?.loaded && m.updated ? "updated " + m.updated.slice(0, 10) + (m.source ? " · " + m.source : "") : "are starter estimates (not live)"}. Open source (MPL-2.0).`;
@@ -365,11 +426,16 @@ function wire() {
   $("psq").addEventListener("input", renderExplore);
   $("psRows").addEventListener("click", (e) => {
     const b = e.target.closest("[data-add]"); if (!b) return;
-    router.go("portfolio");
+    goView("portfolio");
     $("tk").value = b.getAttribute("data-add");
     setTimeout(() => $("sh").focus(), 50);
   });
   $("checkBtn").addEventListener("click", checkForUpdates);
+  $("csvPick").addEventListener("click", () => $("csvIn").click());
+  $("csvIn").addEventListener("change", async (e) => { const f = e.target.files[0]; e.target.value = ""; await importCsvFile(f); });
+  $("csvTemplate").addEventListener("click", () => download("payout-lab-holdings-template.csv", TEMPLATE_CSV, "text/csv"));
+  $("csvExport").addEventListener("click", () => { if (!state.packet.holdings.length) { toast("There are no holdings to export yet."); return; } download(`${packetFileName(state.packet).replace(/\.payout$/, "")}.csv`, holdingsToCsv(state.packet), "text/csv"); });
+  $("rcBookmark").addEventListener("click", async () => { const r = await bookmarkHelp(); if (r === "copied") toast("Link copied."); else if (r === "manual") toast("Select the link and copy it."); });
   document.querySelectorAll('input[name="basis"]').forEach((r) => r.addEventListener("change", () => { if (r.checked) { state.packet.settings.dividendBasis = r.value; renderAnalysis(); mark(); } }));
   $("saveBtn").addEventListener("click", savePacket);
   $("rcSave").addEventListener("click", savePacket);
@@ -381,7 +447,7 @@ function wire() {
   $("tagBtn").addEventListener("click", openPortfolioSheet);
   $("rcPortfolios").addEventListener("click", openPortfolioSheet);
   // settings sheet
-  $("settingsBtn").addEventListener("click", () => { fillSettings(); $("settings").showModal(); });
+  $("settingsBtn").addEventListener("click", async () => { await fillSettings(); $("settings").showModal(); });
   $("settings").addEventListener("click", (e) => { if (e.target === $("settings") || e.target.closest("[data-close]")) $("settings").close(); });
   document.querySelectorAll('input[name="theme"]').forEach((r) => r.addEventListener("change", () => { if (r.checked) applyTheme(r.value); }));
   $("remChk").addEventListener("change", (e) => setRemember(e.target.checked));
@@ -395,7 +461,7 @@ function wire() {
 // ---------- boot ----------
 async function boot() {
   buildNav();
-  router = startRouter();
+  router = startRouter((r, user) => { if (user && gateVisible()) hideGate(); });
   state.store = await openStore();
   state.app = { remember: true, ...(await state.store.getApp()) };
   state.market = await loadMarket();
@@ -426,6 +492,8 @@ async function boot() {
   if (rec && state.app.remember !== false) await activate(rec.packet, rec.meta, { stored: true });
   else await activate(newPacket({ now: nowIso() }), {});
   if (migratedNote) toast(migratedNote, 7000);
+  // A deep link (#/lab, a bookmark with a view) goes straight in. Otherwise show Continue / first-run.
+  if (!parseFragment(location.hash).explicit) await startScreen(rec && state.app.remember !== false ? "returning" : "first");
   document.documentElement.dataset.ready = "1";
 }
 
