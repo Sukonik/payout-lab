@@ -1,5 +1,7 @@
 # V2 · Portable Workspace: release notes
 
+**Released 2026-10-13 · release commit [`8f106b3`](https://github.com/Sukonik/payout-lab/commit/8f106b37ea01c5a1e29a04dbb6414e9dfaf71a9a) · deployed by [Pages run 38449323089](https://github.com/Sukonik/payout-lab/actions/runs/38449323089) (success).** Preserved at `/v2/`.
+
 **Scope** (from roadmap [#2](https://github.com/Sukonik/payout-lab/issues/2)): a five-tab redesign, portable `.payout` packets, local portfolio continuation, CSV import and accurate data provenance.
 
 ## What shipped
@@ -10,7 +12,7 @@
 | [#22](https://github.com/Sukonik/payout-lab/pull/22) | #5 | Overview, Portfolio, Lab, Receipts and Explore tabs; specimen tag with separate Device and Packet states; redesigned test-tube rack; settings sheet; light and dark |
 | [#23](https://github.com/Sukonik/payout-lab/pull/23) | #4 | Refresh preview, per-value provenance, protected manual values, ex-date vs pay-date, trailing vs current-rate dividends |
 | [#24](https://github.com/Sukonik/payout-lab/pull/24) | #9, #10 (core) | CSV import with mapping, preview and explicit update/replace/add; Continue start screen; bookmark help |
-| release PR | | Preserved V1 build at `/v1/`, `scripts/build-site.mjs`, release checks, README and these notes |
+| [#25](https://github.com/Sukonik/payout-lab/pull/25) | #2 | Preserved V1 build at `/v1/`, `scripts/build-site.mjs`, release checks, README and these notes |
 
 ## Release standard
 
