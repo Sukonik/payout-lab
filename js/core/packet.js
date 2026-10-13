@@ -139,8 +139,12 @@ function validateHolding(raw, i) {
       dividend: field(f.dividend, `${p}.fields.dividend`, (v, q) => numIn(v, q, 0, LIMITS.maxDividend), (r, q) => ({
         basis: r.basis === undefined || r.basis === null ? null : oneOf(r.basis, ["trailing", "indicated"], `${q}.basis`),
       })),
+      // exDate: last ex-dividend date the provider reported. payDate: actual cash date, null unless a permitted source supplies it.
+      // They are distinct on purpose: months derived from ex-dates are estimates of when cash arrives.
       schedule: field(f.schedule, `${p}.fields.schedule`, (v, q) => oneOf(v, Object.keys(SCHED), q), (r, q) => ({
         basis: oneOf(r.basis ?? "unknown", SCHEDULE_BASES, `${q}.basis`),
+        exDate: isoDate(r.exDate ?? null, `${q}.exDate`),
+        payDate: isoDate(r.payDate ?? null, `${q}.payDate`),
       })),
       tax: field(f.tax, `${p}.fields.tax`, bool),
     },
@@ -387,7 +391,7 @@ export function migrateLegacyV1(raw, { now = new Date().toISOString(), name = "M
       fields: {
         price: mk(h.price, LIMITS.maxPrice),
         dividend: { ...mk(h.div, LIMITS.maxDividend), basis: null },
-        schedule: { v: Object.keys(SCHED).includes(h.s) ? h.s : "Q3", src: manual ? "user" : "legacy", asOf: null, manual, basis: manual ? "user" : "unknown" },
+        schedule: { v: Object.keys(SCHED).includes(h.s) ? h.s : "Q3", src: manual ? "user" : "legacy", asOf: null, manual, basis: manual ? "user" : "unknown", exDate: null, payDate: null },
         tax: { v: h.q !== false, src: manual ? "user" : "legacy", asOf: null, manual },
       },
     });

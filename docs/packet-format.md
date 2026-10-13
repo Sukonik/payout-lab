@@ -35,7 +35,7 @@ The checksum catches **accidental** damage. It is not a signature: anyone can ed
   "fields": {
     "price":    { "v": 32.65, "src": "tiingo", "asOf": "2026-10-12", "manual": false },
     "dividend": { "v": 1.055, "src": "tiingo", "asOf": "2026-10-12", "manual": false, "basis": "trailing" },
-    "schedule": { "v": "Q3",  "src": "tiingo", "asOf": "2026-10-12", "manual": false, "basis": "ex-date" },
+    "schedule": { "v": "Q3",  "src": "tiingo", "asOf": "2026-10-12", "manual": false, "basis": "ex-date", "exDate": "2026-09-23", "payDate": null },
     "tax":      { "v": true,  "src": "data",   "asOf": null,         "manual": false }
   }
 }
@@ -46,7 +46,10 @@ The checksum catches **accidental** damage. It is not a signature: anyone can ed
 * `asOf` is the date the provider observed the value, or `null` if unknown. It is never the date the file was saved.
 * `manual: true` means you set the value yourself. Manual values are protected from data refreshes.
 * `dividend.v` is the yearly dividend per share. `basis` says whether it is a trailing 12-month total or an indicated forward rate.
-* `schedule.v` is one of `M`, `Q1`, `Q2`, `Q3`, `S`, `A`. `schedule.basis: "ex-date"` means the months were derived from ex-dividend dates, not known cash-payment dates.
+* `schedule.v` is one of `M`, `Q1`, `Q2`, `Q3`, `S`, `A`. `schedule.basis: "ex-date"` means the months were derived from ex-dividend dates, not known cash-payment dates, so the calendar months are **estimates** of when cash arrives (usually a few weeks later).
+* `schedule.exDate` is the last ex-dividend date the provider reported. `schedule.payDate` is the actual cash date and stays `null` unless a permitted source supplies it. Payout Lab never invents a pay date.
+* `dividend.basis` is `trailing` (everything paid in the last 12 months, including any special or one-off payments, which the data cannot separate from regular ones) or `indicated` (the latest payment times how often it is paid). Your choice is saved in `settings.dividendBasis`.
+* Provider values are only ever replaced through the **Review data updates** sheet. Values with `manual: true` are shown as "Replace yours" choices and are never changed unless you pick them.
 * `tax.v` is `true` for qualified dividends, `false` for ordinary income.
 
 ## Settings

@@ -1,7 +1,7 @@
 // Per-share ticker research (the "what does it pay per share?" search).
 import { $, esc, money, pct } from "./dom.js";
 import { SCHED, SCHED_LABEL } from "../core/calc.js";
-import { getMarket } from "../core/market.js";
+import { dividendHint, getMarket, indicatedAnnual } from "../core/market.js";
 
 const per = (e) => (e.per > 0 ? e.per : e.d / (SCHED[e.s] || SCHED.Q3).length);
 
@@ -33,10 +33,17 @@ export function renderExplore() {
   const card = $("psCard");
   if (q && T[q] && T[q].p > 0) {
     const e = T[q], pp = per(e), n = (SCHED[e.s] || SCHED.Q3).length;
+    const hint = dividendHint(e);
     card.innerHTML = e.d > 0
       ? `<div class="psbig"><div><span>${esc(q)} pays</span><b>${money(pp, 4)} <small>per share, ${n}x a year</small></b></div>` +
-        `<div><span>Per year</span><b>${money(e.d, 2)}</b></div><div><span>Yield</span><b>${pct(e.p > 0 ? e.d / e.p : 0, 2)}</b></div><div><span>Months</span><b style="font-size:1rem">${SCHED_LABEL[e.s]}</b></div></div>` +
-        histHtml(e) + `<p class="note">100 shares would pay about ${money(pp * 100, 2)} each time and ${money(e.d * 100, 2)} a year.</p>`
+        `<div><span>Last 12 months</span><b>${money(e.d, 2)}</b></div>` +
+        `<div><span>Current rate</span><b>${money(indicatedAnnual(e), 2)}</b></div>` +
+        `<div><span>Yield (12 months)</span><b>${pct(e.p > 0 ? e.d / e.p : 0, 2)}</b></div>` +
+        `<div><span>Ex-dividend months</span><b style="font-size:1rem">${SCHED_LABEL[e.s]}</b></div></div>` +
+        (hint ? `<p class="note">${esc(hint)}</p>` : "") +
+        histHtml(e) +
+        `<p class="note">100 shares would pay about ${money(pp * 100, 2)} each time and ${money(e.d * 100, 2)} over the last 12 months.</p>` +
+        `<p class="note muted">Months come from ex-dividend dates; cash usually arrives a few weeks later and exact pay dates are not available yet. Special one-time payments are not separated from regular ones.</p>`
       : `<div class="psbig"><div><span>${esc(q)}</span><b>No dividend</b></div></div><p class="note">No dividend was reported for this ticker in the last 12 months.</p>`;
   } else card.innerHTML = "";
   $("psRows").innerHTML = keys.length

@@ -20,7 +20,7 @@ export function addHolding(packet, input, shares) {
   if (existing) { existing.shares = Math.min(LIMITS.maxShares, existing.shares + shares); return { ok: true, status: "merged", ticker, aliasOf }; }
   if (packet.holdings.length >= LIMITS.maxHoldings) return { ok: false, reason: "too_many" };
   const entry = lookup(ticker);
-  packet.holdings.push(entry ? holdingFromMarket(ticker, shares, entry) : manualHolding(ticker, shares));
+  packet.holdings.push(entry ? holdingFromMarket(ticker, shares, entry, packet.settings.dividendBasis) : manualHolding(ticker, shares));
   return { ok: true, status: entry ? "added" : "added-manual", ticker, aliasOf };
 }
 

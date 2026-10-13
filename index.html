@@ -76,11 +76,12 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
       </section>
 
       <section class="card rackcard" aria-labelledby="h-rack">
-        <div class="card-h"><h2 id="h-rack">Income rack</h2><span class="hint">Estimated by month</span></div>
+        <div class="card-h"><h2 id="h-rack">Income rack</h2><span class="hint">Months are estimates</span></div>
         <div class="rack" id="cal" role="group" aria-label="Estimated income by month"></div>
         <p class="rack-detail" id="calDetail" aria-live="polite"></p>
         <div class="legend"><span><i class="lg lg-ok"></i>Normal month</span><span><i class="lg lg-thin"></i>Thin month (under half the average)</span><span><i class="lg lg-avg"></i>Average</span></div>
         <p class="note" id="calNote"></p>
+        <p class="note muted" id="calBasis"></p>
       </section>
 
       <div class="two">
@@ -113,6 +114,19 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
         </label>
         <button class="btn primary" id="addBtn">Add holding</button>
       </div>
+    </section>
+
+    <section class="card" id="dataCard" aria-labelledby="h-data">
+      <div class="card-h"><h2 id="h-data">Market data</h2><span class="pill" id="dataPill"><i></i></span></div>
+      <p class="lede" id="dataLede"></p>
+      <h3 class="mini">Dividend per share means</h3>
+      <div class="seg two" role="radiogroup" aria-label="Dividend per share basis">
+        <label><input type="radio" name="basis" value="trailing"><span>Last 12 months</span></label>
+        <label><input type="radio" name="basis" value="indicated"><span>Current rate</span></label>
+      </div>
+      <p class="note muted" id="basisNote"></p>
+      <div class="row-actions"><button class="btn" id="checkBtn">Check for updates</button></div>
+      <p class="note muted" id="reviewHint"></p>
     </section>
 
     <section class="card" aria-labelledby="h-hold">

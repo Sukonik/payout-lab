@@ -4,12 +4,14 @@ import {
 } from "./core/packet.js";
 import { LEGACY_KEY, openStore } from "./core/store.js";
 import { inc, num, perPay, totals } from "./core/calc.js";
-import { loadMarket } from "./core/market.js";
+import { getMarket, loadMarket } from "./core/market.js";
+import { applyRefreshPlan, buildRefreshPlan } from "./core/refresh.js";
 import { addHolding, editField, loadSample, removeHolding, toCalc } from "./core/portfolio.js";
 import { $, ago, clock, dateTime, esc, money, pct } from "./ui/dom.js";
 import { askText, choose, confirmDialog, toast } from "./ui/dialogs.js";
 import { renderAdd, renderConc, renderCut, renderGoal, renderTax } from "./ui/panels.js";
 import { fillTickers, renderExplore } from "./ui/explore.js";
+import { renderDataCard, reviewUpdates } from "./ui/data.js";
 import { refreshRowChip, renderHoldingRows, renderOverview, renderReceiptsState } from "./ui/views.js";
 import { applyTheme, buildNav, currentTheme, startRouter } from "./ui/shell.js";
 
@@ -19,7 +21,7 @@ const state = {
   onDevice: false,         // this portfolio exists in local storage (an untouched empty one is never stored)
   deviceSavedAt: null,     // when the working copy last reached this device's storage
   saveError: null, timer: null,
-  selectedMonth: null, localList: [], market: null,
+  selectedMonth: null, localList: [], market: null, plan: null,
 };
 let router = null;
 
@@ -100,11 +102,15 @@ function renderChrome() {
 // ---------- rendering ----------
 function renderHoldings() { renderHoldingRows(state.packet); }
 
+function currentPlan() { return buildRefreshPlan(state.packet, state.market.tickers); }
+
 function renderAnalysis() {
   const hs = toCalc(state.packet), S = state.packet.settings, T = totals(hs);
+  state.plan = currentPlan();
+  renderDataCard({ packet: state.packet, market: state.market, plan: state.plan });
   $("tVal").textContent = money(T.value); $("tInc").textContent = money(T.income); $("tMo").textContent = money(T.income / 12); $("tYld").textContent = pct(T.yield, 2);
   hs.forEach((h, i) => { const c = $("inc" + i); if (c) c.textContent = money(inc(h)); const d = $("pp" + i); if (d) d.textContent = money(perPay(h), 4); });
-  renderOverview({ packet: state.packet, hs, T, selectedMonth: state.selectedMonth });
+  renderOverview({ packet: state.packet, hs, T, selectedMonth: state.selectedMonth, plan: state.plan });
   renderConc(hs, T); renderCut(hs, T, S); renderGoal(hs, T, S); renderAdd(hs, T, S); renderTax(hs, T, S);
 }
 
@@ -246,6 +252,27 @@ async function openPortfolioSheet() {
   }
 }
 
+// ---------- market data: review before anything changes ----------
+async function checkForUpdates() {
+  const btn = $("checkBtn");
+  btn.disabled = true; btn.textContent = "Checking…";
+  try {
+    await loadMarket();
+    state.market = getMarket();
+    fillTickers(); renderExplore();
+    if (!state.market.loaded) { toast("Couldn't reach the data file. Your values were not changed."); return; }
+    const plan = currentPlan();
+    renderAnalysis();
+    if (!plan.rows.some((r) => r.changes.length || r.notes.length)) { toast(`Everything is up to date (data from ${state.market.updated?.slice(0, 10) ?? "the latest file"}).`); return; }
+    const picked = await reviewUpdates(plan, state.market);
+    if (picked && picked.length) {
+      const n = applyRefreshPlan(state.packet, plan, picked, state.market.tickers);
+      renderHoldings(); renderAnalysis(); mark();
+      toast(`${n} value${n === 1 ? "" : "s"} updated. Your own values were kept unless you chose to replace them.`);
+    }
+  } finally { btn.disabled = false; btn.textContent = "Check for updates"; }
+}
+
 // ---------- settings sheet ----------
 async function setRemember(on) {
   state.app.remember = on;
@@ -342,6 +369,8 @@ function wire() {
     $("tk").value = b.getAttribute("data-add");
     setTimeout(() => $("sh").focus(), 50);
   });
+  $("checkBtn").addEventListener("click", checkForUpdates);
+  document.querySelectorAll('input[name="basis"]').forEach((r) => r.addEventListener("change", () => { if (r.checked) { state.packet.settings.dividendBasis = r.value; renderAnalysis(); mark(); } }));
   $("saveBtn").addEventListener("click", savePacket);
   $("rcSave").addEventListener("click", savePacket);
   const pick = () => $("fileIn").click();
@@ -370,7 +399,6 @@ async function boot() {
   state.store = await openStore();
   state.app = { remember: true, ...(await state.store.getApp()) };
   state.market = await loadMarket();
-  $("aboutNote").textContent = "";
   fillTickers();
 
   // 1. Bring a V1 portfolio forward once. The V1 key stays untouched, and a copy is kept in the new store.

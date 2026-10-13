@@ -1,6 +1,7 @@
 // Public market data (data.json) and helpers that turn a market entry into a portfolio holding.
 // Market data is public and separate from personal portfolio data. A holding keeps its own dated copy of the values it uses.
 import { newId } from "./packet.js";
+import { SCHED } from "./calc.js";
 
 export const SRC_LABEL = {
   tiingo: "Tiingo", yahoo: "Yahoo Finance", seed: "Starter estimate", user: "You", csv: "CSV import", legacy: "Earlier version", data: "Payout Lab data",
@@ -60,15 +61,15 @@ function providerOf(e) {
 export function asOfOf(e) { return typeof e.u === "string" ? e.u.slice(0, 10) : null; }
 
 // Build a holding from a market entry. Values carry the provider and the date the provider observed them.
-export function holdingFromMarket(ticker, shares, e) {
+export function holdingFromMarket(ticker, shares, e, basis = "trailing") {
   const prov = providerOf(e), asOf = asOfOf(e);
   const estDiv = e.est === true || !asOf;
   return {
     id: newId("h"), ticker, name: e.n || "", shares,
     fields: {
       price: { v: e.p, src: prov, asOf, manual: false },
-      dividend: { v: e.d, src: estDiv ? "seed" : prov, asOf: estDiv ? null : asOf, manual: false, basis: estDiv ? null : "trailing" },
-      schedule: { v: e.s || "Q3", src: asOf ? prov : "seed", asOf, manual: false, basis: asOf ? "ex-date" : "unknown" },
+      dividend: { v: estDiv ? e.d : marketDividend(e, basis), src: estDiv ? "seed" : prov, asOf: estDiv ? null : asOf, manual: false, basis: estDiv ? null : basis },
+      schedule: { v: e.s || "Q3", src: asOf ? prov : "seed", asOf, manual: false, basis: asOf ? "ex-date" : "unknown", exDate: asOf && typeof e.last === "string" ? e.last : null, payDate: null },
       tax: { v: e.q !== false, src: "data", asOf: null, manual: false },
     },
   };
@@ -81,7 +82,23 @@ export function manualHolding(ticker, shares) {
     id: newId("h"), ticker, name: "", shares,
     fields: {
       price: { v: 0, ...u }, dividend: { v: 0, ...u, basis: null },
-      schedule: { v: "Q3", ...u, basis: "user" }, tax: { v: true, ...u },
+      schedule: { v: "Q3", ...u, basis: "user", exDate: null, payDate: null }, tax: { v: true, ...u },
     },
   };
+}
+
+// ---------- trailing vs indicated dividends ----------
+// "Last 12 months" (d) adds up what was paid. "Current rate" multiplies the latest payment by how often it is paid.
+// They answer different questions: the second reacts faster to a raise or cut and ignores one-off extras.
+export function paymentsPerYear(e) { return (SCHED[e.s] || SCHED.Q3).length; }
+export function indicatedAnnual(e) { return e.per > 0 ? e.per * paymentsPerYear(e) : e.d; }
+export function marketDividend(e, basis) { return basis === "indicated" ? indicatedAnnual(e) : e.d; }
+
+// A plain-language hint when the two disagree. The data cannot tell a special payment from an irregular one, so it says "may".
+export function dividendHint(e) {
+  if (!(e.d > 0) || !(e.per > 0)) return null;
+  const r = e.d / indicatedAnnual(e);
+  if (r > 1.15) return "The last 12 months add up to more than the current rate. That can mean a special or extra payment, or a recent cut.";
+  if (r < 0.85) return "The current rate is higher than the last 12 months. That can mean a recent raise, or a payment that has not happened yet this year.";
+  return null;
 }
