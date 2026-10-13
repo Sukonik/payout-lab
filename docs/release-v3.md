@@ -1,6 +1,6 @@
 # V3 · Access & Receipts: release notes
 
-**Released 2026-10-13.** Live at the main address. The release commit, its deploy run and a preserved `/v3/` copy are recorded in the change that follows deployment (see the README release table); until then V3 is only the current main build.
+**Released 2026-10-13 · release commit [`e094a6d`](https://github.com/Sukonik/payout-lab/commit/e094a6dced32c6950c4e635eded3accbcc589157) · app code deployed by [Pages run 38456071536](https://github.com/Sukonik/payout-lab/actions/runs/38456071536) (success).** Live at the main address and preserved at `/v3/`. Later commits to main are documentation only.
 
 **Scope** (roadmap [#2](https://github.com/Sukonik/payout-lab/issues/2)): saved reports you can compare over time, personal links, QR Portfolio Cards and a polished device transfer. Built on V2's portable `.payout` packets. Recurring cost stays $0, no signup, nothing uploaded.
 

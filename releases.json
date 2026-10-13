@@ -12,6 +12,12 @@
       "path": "v2",
       "sha": "8f106b37ea01c5a1e29a04dbb6414e9dfaf71a9a",
       "title": "Portable Workspace: packets, five tabs, CSV import, data provenance"
+    },
+    {
+      "version": "V3",
+      "path": "v3",
+      "sha": "e094a6dced32c6950c4e635eded3accbcc589157",
+      "title": "Access & Receipts: saved reports, comparison, bookmarks, snapshot links, QR cards"
     }
   ]
 }
