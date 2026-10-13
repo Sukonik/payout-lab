@@ -1,0 +1,112 @@
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { launch, serve, check, done } from "./lib.mjs";
+
+const root = path.resolve(new URL("..", import.meta.url).pathname);
+const { server, url } = await serve(root);
+const browser = await launch();
+const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "payout-e2e-"));
+const errors = [];
+const newPage = async (ctx) => { const p = await ctx.newPage(); p.on("pageerror", (e) => errors.push(e.message)); p.on("console", (m) => { if (m.type() === "error") errors.push(m.text()); }); await p.goto(url); await p.waitForSelector("#chips .chip"); return p; };
+const holdingsOf = (p) => p.$$eval("#rows tr", (trs) => trs.map((tr) => [...tr.querySelectorAll("input")].map((i) => i.value)));
+const savePacket = async (p, name) => { const [d] = await Promise.all([p.waitForEvent("download"), p.click("#saveBtn")]); const f = path.join(tmp, name); await d.saveAs(f); return { file: f, suggested: d.suggestedFilename() }; };
+const openPacket = async (p, file) => { await p.setInputFiles("#fileIn", file); await p.waitForSelector("dialog[open]"); };
+
+console.log("1. build a portfolio, save a packet");
+const ctxA = await browser.newContext();
+const a = await newPage(ctxA);
+await a.click("#sampleBtn");
+await a.fill('[data-i="0"][data-k="shares"]', "12.5");
+await a.fill('[data-s="target"]', "3500");
+await a.waitForFunction(() => document.querySelector("#chips").innerText.includes("Saved on this device"));
+check("shares can be fractional", (await holdingsOf(a))[0][0] === "12.5");
+const pk1 = await savePacket(a, "one.payout");
+check("file name is predictable", /^my-portfolio-\d{8}-[0-9a-z]{6}\.payout$/.test(pk1.suggested), pk1.suggested);
+check("status says packet saved", (await a.innerText("#chips")).includes("Packet saved"));
+const text1 = JSON.parse(fs.readFileSync(pk1.file, "utf8"));
+check("packet has format, version, ids, checksum", text1.format === "payout-packet" && text1.schemaVersion === 1 && /^pf_/.test(text1.portfolioId) && text1.checksum?.alg === "sha-256");
+
+console.log("2. open it in a fresh browser with no local data and continue");
+const ctxB = await browser.newContext();
+const b = await newPage(ctxB);
+check("fresh browser starts empty", (await holdingsOf(b)).length === 0 || (await b.innerText("#rows")).includes("No holdings yet"));
+await openPacket(b, pk1.file);
+check("summary shown before anything changes", (await b.innerText("dialog")).includes("Open this packet?") && (await b.innerText("#rows")).includes("No holdings yet"));
+await b.click('dialog [data-result="open-new"]');
+await b.waitForFunction(() => document.querySelectorAll("#rows tr").length === 7);
+check("holdings restored", (await holdingsOf(b))[0][0] === "12.5" && (await holdingsOf(b)).length === 7);
+check("settings restored", (await b.inputValue('[data-s="target"]')) === "3500");
+check("same portfolio identity and revision", (await b.getAttribute("#chips .chip:last-child", "title")).includes(text1.revisionId));
+await b.fill('[data-i="1"][data-k="shares"]', "99");
+await b.waitForFunction(() => document.querySelector("#chips").innerText.includes("Saved on this device"));
+
+console.log("3. cancelled and invalid imports change nothing");
+await openPacket(b, pk1.file);
+await b.click('dialog [data-result="cancel"]');
+await b.waitForSelector("dialog", { state: "detached" });
+check("cancel leaves edits alone", (await holdingsOf(b))[1][0] === "99");
+const bad = path.join(tmp, "bad.payout"); fs.writeFileSync(bad, "{not json");
+await b.setInputFiles("#fileIn", bad); await b.waitForSelector("dialog[open]");
+check("malformed file explained", (await b.innerText("dialog")).includes("not valid packet data"));
+await b.click('dialog [data-result="ok"]');
+const fut = path.join(tmp, "future.payout"); const fj = { ...text1, schemaVersion: 99 }; fs.writeFileSync(fut, JSON.stringify(fj));
+await b.setInputFiles("#fileIn", fut); await b.waitForSelector("dialog[open]");
+check("future version rejected cleanly", (await b.innerText("dialog")).includes("newer version"));
+await b.click('dialog [data-result="ok"]');
+const neg = path.join(tmp, "neg.payout"); const nj = JSON.parse(JSON.stringify(text1)); delete nj.checksum; nj.holdings[0].shares = -5; fs.writeFileSync(neg, JSON.stringify(nj));
+await b.setInputFiles("#fileIn", neg); await b.waitForSelector("dialog[open]");
+check("negative shares rejected", (await b.innerText("dialog")).includes("between 0"));
+await b.click('dialog [data-result="ok"]');
+check("work untouched after all rejections", (await holdingsOf(b))[1][0] === "99");
+
+console.log("4. older/diverging packets become separate copies, never silent replacement");
+await openPacket(b, pk1.file);
+const rel = await b.innerText("dialog");
+check("explains this is an older version", rel.includes("older version"), rel.slice(0, 200));
+await b.click('dialog [data-result="copy"]');
+await b.waitForFunction(() => document.querySelector("#pname").innerText.includes("(copy)"));
+await b.click("#pnameBtn"); await b.waitForSelector("dialog[open]");
+check("both portfolios retained", (await b.$$eval("dialog ul.plist li", (l) => l.length)) === 2);
+await b.click('dialog [data-result="close"]');
+
+console.log("5. reload remembers the last portfolio on this device");
+await b.reload(); await b.waitForSelector("#chips .chip");
+check("continues the copy after reload", (await b.innerText("#pname")).includes("(copy)"));
+
+console.log("6. legacy V1 storage is migrated once, original kept");
+const ctxL = await browser.newContext();
+await ctxL.addInitScript(() => { if (!localStorage.getItem("payoutlab.v1")) localStorage.setItem("payoutlab.v1", JSON.stringify({ holdings: [{ t: "SCHD", n: "Schwab", shares: 300, price: 27.5, div: 1.03, s: "Q3", q: true }, { t: "ZZZ", n: "Mine", shares: 4.5, price: 8, div: 0.5, s: "S", q: false, manual: true }], target: 2750, growth: 8 })); });
+const l = await newPage(ctxL);
+check("legacy holdings arrive", (await holdingsOf(l)).length === 2 && (await holdingsOf(l))[1][0] === "4.5");
+check("legacy slider arrives", (await l.inputValue('[data-s="target"]')) === "2750");
+check("manual badge kept", (await l.innerText("#rows")).includes("manual"));
+await l.reload(); await l.waitForSelector("#chips .chip");
+await l.click("#pnameBtn"); await l.waitForSelector("dialog[open]");
+check("repeatable: no duplicate account after reload", (await l.$$eval("dialog ul.plist li", (x) => x.length)) === 1);
+await l.click('dialog [data-result="close"]');
+check("V1 key untouched", await l.evaluate(() => !!localStorage.getItem("payoutlab.v1")));
+
+console.log("7. storage denied (private mode style): files still work");
+const ctxD = await browser.newContext();
+await ctxD.addInitScript(() => { Object.defineProperty(window, "indexedDB", { value: undefined }); Storage.prototype.setItem = () => { throw new DOMException("denied", "SecurityError"); }; });
+const dn = await newPage(ctxD);
+await dn.click("#sampleBtn");
+check("tells the user nothing is remembered", (await dn.innerText("#chips")).includes("can't remember"));
+const pkD = await savePacket(dn, "denied.payout");
+check("packet still saves", fs.statSync(pkD.file).size > 500);
+const ctxE = await browser.newContext();
+const e = await newPage(ctxE);
+await openPacket(e, pkD.file); await e.click('dialog [data-result="open-new"]');
+await e.waitForFunction(() => document.querySelectorAll("#rows tr").length === 7);
+check("and opens elsewhere", true);
+
+console.log("8. no network calls carry portfolio data");
+const reqs = [];
+const ctxN = await browser.newContext();
+const n = await ctxN.newPage(); n.on("request", (r) => reqs.push(r.url()));
+await n.goto(url); await n.click("#sampleBtn"); await n.waitForTimeout(900);
+check("only same-origin requests", reqs.every((u) => u.startsWith(url)), reqs.filter((u) => !u.startsWith(url)).join(","));
+
+check("no console/page errors", errors.length === 0, errors.join(" | "));
+await browser.close(); server.close(); done();

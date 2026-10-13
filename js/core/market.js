@@ -1,0 +1,87 @@
+// Public market data (data.json) and helpers that turn a market entry into a portfolio holding.
+// Market data is public and separate from personal portfolio data. A holding keeps its own dated copy of the values it uses.
+import { newId } from "./packet.js";
+
+export const SRC_LABEL = {
+  tiingo: "Tiingo", yahoo: "Yahoo Finance", seed: "Starter estimate", user: "You", csv: "CSV import", legacy: "Earlier version", data: "Payout Lab data",
+};
+
+// Used only if data.json cannot be loaded, so the sample portfolio still works offline. Marked as estimates.
+const FALLBACK = {
+  SCHD: { n: "Schwab US Dividend Equity ETF", p: 27.5, d: 1.03, s: "Q3", q: true },
+  O: { n: "Realty Income", p: 57, d: 3.22, s: "M", q: false },
+  JEPI: { n: "JPMorgan Equity Premium Income ETF", p: 57, d: 4.5, s: "M", q: false },
+  VZ: { n: "Verizon", p: 43, d: 2.71, s: "Q2", q: true },
+  KO: { n: "Coca-Cola", p: 70, d: 2.04, s: "Q1", q: true },
+  ABBV: { n: "AbbVie", p: 195, d: 6.56, s: "Q2", q: true },
+  MSFT: { n: "Microsoft", p: 500, d: 3.64, s: "Q3", q: true },
+};
+export const SAMPLE = [["SCHD", 300], ["O", 80], ["JEPI", 60], ["VZ", 50], ["KO", 40], ["ABBV", 15], ["MSFT", 5]];
+
+let market = { updated: null, source: null, tickers: { ...FALLBACK }, loaded: false };
+
+export function getMarket() { return market; }
+export function setMarket(m) { market = m; }
+export function lookup(t) { const e = market.tickers[t]; return e && e.p > 0 ? e : null; }
+
+export async function loadMarket(url = "data.json", fetchFn = globalThis.fetch) {
+  try {
+    const r = await fetchFn(url, { cache: "no-cache" });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const j = await r.json();
+    if (!j || typeof j.tickers !== "object") throw new Error("bad data");
+    const tickers = {};
+    for (const [k, v] of Object.entries(j.tickers)) if (v && v.p > 0 && v.d >= 0) tickers[k] = v;
+    market = { updated: typeof j.updated === "string" ? j.updated : null, source: typeof j.source === "string" ? j.source : null, tickers, loaded: true };
+  } catch {
+    market = { ...market, loaded: false };
+  }
+  return market;
+}
+
+// Explicit symbol aliases: a dotted class share like BRK.B is stored as BRK-B in the data. Only applied when the alias exists.
+export function resolveTicker(input) {
+  const t = String(input ?? "").trim().toUpperCase();
+  if (!t) return { ticker: "", aliasOf: null };
+  if (lookup(t)) return { ticker: t, aliasOf: null };
+  if (t.includes(".")) {
+    const dash = t.replace(/\./g, "-");
+    if (lookup(dash)) return { ticker: dash, aliasOf: t };
+  }
+  return { ticker: t, aliasOf: null };
+}
+
+function providerOf(e) {
+  const s = String(e.src || "").toLowerCase();
+  if (s.startsWith("tiingo")) return "tiingo";
+  if (s.startsWith("yahoo")) return "yahoo";
+  return "seed";
+}
+export function asOfOf(e) { return typeof e.u === "string" ? e.u.slice(0, 10) : null; }
+
+// Build a holding from a market entry. Values carry the provider and the date the provider observed them.
+export function holdingFromMarket(ticker, shares, e) {
+  const prov = providerOf(e), asOf = asOfOf(e);
+  const estDiv = e.est === true || !asOf;
+  return {
+    id: newId("h"), ticker, name: e.n || "", shares,
+    fields: {
+      price: { v: e.p, src: prov, asOf, manual: false },
+      dividend: { v: e.d, src: estDiv ? "seed" : prov, asOf: estDiv ? null : asOf, manual: false, basis: estDiv ? null : "trailing" },
+      schedule: { v: e.s || "Q3", src: asOf ? prov : "seed", asOf, manual: false, basis: asOf ? "ex-date" : "unknown" },
+      tax: { v: e.q !== false, src: "data", asOf: null, manual: false },
+    },
+  };
+}
+
+// A ticker we have no data for: the user must supply the numbers, so they are protected as manual.
+export function manualHolding(ticker, shares) {
+  const u = { src: "user", asOf: null, manual: true };
+  return {
+    id: newId("h"), ticker, name: "", shares,
+    fields: {
+      price: { v: 0, ...u }, dividend: { v: 0, ...u, basis: null },
+      schedule: { v: "Q3", ...u, basis: "user" }, tax: { v: true, ...u },
+    },
+  };
+}

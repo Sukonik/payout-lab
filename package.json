@@ -1,0 +1,10 @@
+{
+  "name": "payout-lab",
+  "private": true,
+  "type": "module",
+  "description": "Payout Lab: a free, static, no-signup dividend portfolio tracker with portable .payout files.",
+  "license": "MPL-2.0",
+  "scripts": {
+    "test": "node --test"
+  }
+}
