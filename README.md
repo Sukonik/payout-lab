@@ -39,7 +39,7 @@ Other details:
 
 ## Run locally
 
-Serve the folder (needed so the page can load `data.json`; opening `index.html` directly also works with the built-in starter numbers):
+Serve the folder (the app uses ES modules and loads `data.json`, so opening `index.html` straight from disk will not work):
 
 ```bash
 python3 -m http.server 8000
@@ -101,12 +101,18 @@ The product has a clear audience (income investors) and an obvious trust angle (
 ## Project structure
 
 ```
-index.html                          # the whole app: HTML, CSS, JS
-data.json                           # prices and dividends, refreshed daily
-scripts/update-data.mjs             # the refresh script (Node 20, no deps)
-.github/workflows/update-data.yml   # schedule for the refresh
-README.md
-LICENSE      # MPL-2.0
+index.html                          # app shell
+css/app.css                         # styles
+js/app.js                           # controller: working packet, local save, open/save packets
+js/core/                            # pure logic, unit-tested: calc, packet schema, store, market data, portfolio ops
+js/ui/                              # rendering and dialogs
+data.json                           # public prices and dividends, refreshed on a schedule
+docs/packet-format.md               # the .payout file format
+tests/                              # unit tests (npm test)
+e2e/                                # browser checks (Playwright; see e2e/lib.mjs)
+scripts/update-data.mjs             # the data refresh script (Node 20, no deps)
+.github/workflows/                  # data refresh, Pages deploy, tests
+LICENSE                             # MPL-2.0
 ```
 
 ## Disclaimer
