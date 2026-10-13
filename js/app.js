@@ -16,6 +16,7 @@ import { TEMPLATE_CSV, applyImportPlan, holdingsToCsv } from "./core/csv.js";
 import { openCsvImport } from "./ui/csvimport.js";
 import { bookmarkHelp, gateVisible, hideGate, showGate } from "./ui/gate.js";
 import { buildFragment, parseFragment } from "./core/route.js";
+import { openCardDialog } from "./ui/qrcard.js";
 import { LINK, decodeSnapshot, encodeSnapshot, rateLength, snapshotLink, workspaceLink } from "./core/link.js";
 import { addReceipt, buildReceipt, compareReceipts, parseReceiptText, serializeReceipt } from "./core/receipt.js";
 import { comparisonReportHtml, receiptReportHtml } from "./core/report.js";
@@ -598,6 +599,7 @@ function wire() {
     setTimeout(() => $("sh").focus(), 50);
   });
   $("snapMake").addEventListener("click", makeSnapshotLink);
+  $("cardMake").addEventListener("click", () => openCardDialog({ packet: state.packet, base: baseUrl(), copyText, download, now: nowIso() }));
   $("wsCopy").addEventListener("click", async () => { toast(await copyText($("wsLink").value, $("wsLink")) ? "Bookmark link copied. It opens this portfolio on this browser only." : "Select the link and copy it."); });
   $("wsLink").addEventListener("focus", (e) => e.target.select());
   window.addEventListener("hashchange", (ev) => {

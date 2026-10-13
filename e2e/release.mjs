@@ -34,9 +34,9 @@ for (const r of releases) {
 check("current data.json ships with the site", fs.existsSync(path.join(site, "data.json")));
 const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]));
 const urls = new Set();
-for (const f of walk(site).filter((f) => /\.(html|js|css|svg)$/.test(f))) for (const m of fs.readFileSync(f, "utf8").matchAll(/https?:\/\/[^\s"'`)<>]+/g)) urls.add(m[0]);
+for (const f of walk(site).filter((f) => /\.(html|js|css|svg)$/.test(f))) for (const m of (f.includes(`${path.sep}vendor${path.sep}`) ? fs.readFileSync(f, "utf8").replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "") : fs.readFileSync(f, "utf8")).matchAll(/https?:\/\/[^\s"'`)<>]+/g)) urls.add(m[0]);
 const bad = [...urls].filter((u) => !/^http:\/\/www\.w3\.org\/2000\/svg$/.test(u));
-check("no third-party URLs anywhere in the shipped files", bad.length === 0, bad.join(" "));
+check("no third-party URLs anywhere in the shipped files (licence comments in vendored libraries excepted: they are not code)", bad.length === 0, bad.join(" "));
 
 // A preserved build must run from its own sub-path (relative imports, data file), not merely exist.
 for (const r of releases.filter((x) => fs.existsSync(path.join(site, x.path, "js", "app.js")))) {
@@ -125,6 +125,55 @@ check("no view scrolls sideways on a 390px phone", overflow.length === 0, overfl
 const [d3] = await Promise.all([m.waitForEvent("download"), m.click("#saveBtn")]);
 check("Save packet works with touch emulation", (await d3.suggestedFilename()).endsWith(".payout"));
 await iphone.close();
+
+console.log("\n5. V3 on the deployed build: receipts, comparison, links, QR, device transfer");
+{
+  const { createRequire } = await import("node:module");
+  let jsQR = null; try { jsQR = createRequire(import.meta.url)("jsqr"); } catch { if (process.env.CI) throw new Error("jsqr is required in CI"); }
+  const DLG = "body > dialog:not(#settings)";
+  const go = async (p, v) => { await p.evaluate((h) => { location.hash = h; }, "#/" + v); await p.waitForSelector(`#view-${v}:not([hidden])`); };
+  const settle = (p) => p.waitForFunction(() => /Device\s+saved/.test(document.querySelector("#status").innerText));
+  const a = await open(await browser.newContext({ ...ctxOpts, acceptDownloads: true }), url); await ready(a);
+  await a.click('[data-g="start"]'); await a.waitForSelector("#view-portfolio:not([hidden])");
+  for (const [t, n] of [["SCHD", 100], ["O", 50]]) { await a.fill("#tk", t); await a.fill("#sh", String(n)); await a.click("#addBtn"); }
+  await settle(a); await go(a, "receipts");
+  await a.fill("#rcLabel", "Baseline"); await a.click("#rcSaveReport"); await a.waitForTimeout(200);
+  await go(a, "portfolio"); await a.fill('[data-i="0"][data-k="shares"]', "300"); await a.dispatchEvent('[data-i="0"][data-k="shares"]', "change"); await settle(a);
+  await go(a, "receipts");
+  const cmpText = await a.innerText("#cmpOut");
+  check("comparison explains what changed income (holdings vs market data)", /What changed your income/.test(cmpText) && /100 → 300/.test(cmpText), cmpText.slice(0, 120));
+  const ws = await a.inputValue("#wsLink");
+  check("workspace bookmark holds only an id and is built on the deployed address", ws.startsWith(url + "#/overview?p=pf_") && !/SCHD/.test(ws), ws);
+  await a.click("#snapMake"); await a.waitForSelector("#snName"); await a.check("#snOk"); await a.waitForSelector("textarea.linkbox");
+  const snap = await a.inputValue("textarea.linkbox");
+  check("snapshot link is short enough and on the deployed address", snap.startsWith(url + "#/snapshot?v=1&c=") && snap.length < 2000, String(snap.length));
+  await a.click(`${DLG} [data-result="cancel"]`); await gone(a);
+  // another device: the snapshot opens as a new portfolio, the bookmark explains it cannot restore
+  const b = await open(await browser.newContext(ctxOpts), url); await ready(b);
+  await b.evaluate((l) => { location.hash = l.slice(l.indexOf("#")); }, snap); await b.waitForSelector(DLG + " h2");
+  check("a snapshot link opens as a preview on another device", /Open this snapshot/.test(await b.innerText(DLG)) && /SCHD/.test(await b.innerText(DLG)));
+  await b.click(`${DLG} [data-result="open"]`); await gone(b); await settle(b); await go(b, "portfolio");
+  check("it opened as a new portfolio with the copied shares", (await b.$eval('[data-i="0"][data-k="shares"]', (e) => e.value)) === "300");
+  const c = await open(await browser.newContext(ctxOpts), url); await ready(c);
+  await c.evaluate((l) => { location.hash = l.slice(l.indexOf("#")); }, ws); await c.waitForSelector(DLG + " h2");
+  check("a bookmark on a device without the portfolio says it cannot restore it", /isn't on this device/.test(await c.innerText(DLG)) && /cannot bring it back/.test(await c.innerText(DLG)));
+  await c.click(`${DLG} [data-result="ok"]`); await gone(c);
+  // QR card scans back to the link
+  await a.click("#cardMake"); await a.waitForSelector(".pcard");
+  const [dq] = await Promise.all([a.waitForEvent("download"), a.click("#ctPng")]); const qf = path.join(tmp, "card.png"); await dq.saveAs(qf);
+  if (jsQR) {
+    const px = await a.evaluate(async (src) => { const i = new Image(); i.src = src; await i.decode(); const cv = document.createElement("canvas"); cv.width = i.width; cv.height = i.height; const x = cv.getContext("2d"); x.drawImage(i, 0, 0); return { w: i.width, h: i.height, d: Array.from(x.getImageData(0, 0, i.width, i.height).data) }; }, "data:image/png;base64," + fs.readFileSync(qf).toString("base64"));
+    check("the QR card PNG scans back to the workspace bookmark", jsQR(Uint8ClampedArray.from(px.d), px.w, px.h)?.data === ws);
+  }
+  await a.keyboard.press("Escape"); await gone(a);
+  // packet carries reports to another device and comparison still works there
+  const [dp] = await Promise.all([a.waitForEvent("download"), a.click("#saveBtn")]); const pf = path.join(tmp, "v3.payout"); await dp.saveAs(pf);
+  const e = await open(await browser.newContext(ctxOpts), url); await ready(e);
+  await e.setInputFiles("#fileIn", pf); await e.waitForSelector("dialog[open]"); await e.click('dialog[open] [data-result="open-new"]'); await gone(e);
+  await go(e, "receipts");
+  check("on a fresh device the packet brings the saved report back", /Baseline/.test(await e.innerText("#rcList")));
+  check("and comparison explains the change there too", /100 → 300/.test(await e.innerText("#cmpOut")));
+}
 
 check("no requests left this origin", external.length === 0, external.join(","));
 // The preserved V1 page never had a favicon, so the browser asks for /v1/favicon.ico. That is V1's own behaviour, not a broken link.
