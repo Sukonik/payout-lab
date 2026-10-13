@@ -1,0 +1,11 @@
+{
+  "note": "Preserved builds. Each entry is deployed under /<path>/ from the source at that exact commit. Commits are immutable, so these links keep working even if the main site moves on.",
+  "releases": [
+    {
+      "version": "V1",
+      "path": "v1",
+      "sha": "475287db7b2646dee2968c10c91301747dd02489",
+      "title": "Original single-file dividend calculator"
+    }
+  ]
+}
