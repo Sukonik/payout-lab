@@ -9,19 +9,19 @@
 | Version | Status | Site | Release record |
 |---|---|---|---|
 | **V1** | Preserved baseline | https://sukonik.github.io/payout-lab/v1/ | Commit [`475287d`](https://github.com/Sukonik/payout-lab/commit/475287db7b2646dee2968c10c91301747dd02489) (verified deployed by Pages run [38339910088](https://github.com/Sukonik/payout-lab/actions/runs/38339910088)) |
-| **V2 · Portable Workspace** | **Released** 2026-10-13 · current | https://sukonik.github.io/payout-lab/ · preserved at https://sukonik.github.io/payout-lab/v2/ | Commit [`8f106b3`](https://github.com/Sukonik/payout-lab/commit/8f106b37ea01c5a1e29a04dbb6414e9dfaf71a9a) (deployed by Pages run [38449323089](https://github.com/Sukonik/payout-lab/actions/runs/38449323089)). Merged PRs [#21](https://github.com/Sukonik/payout-lab/pull/21) packets, [#22](https://github.com/Sukonik/payout-lab/pull/22) five tabs, [#23](https://github.com/Sukonik/payout-lab/pull/23) data provenance, [#24](https://github.com/Sukonik/payout-lab/pull/24) CSV and Continue, [#25](https://github.com/Sukonik/payout-lab/pull/25) release |
-| **V3 · Access & Receipts** | Planned | Pending deployment | Not started. See the [roadmap](#roadmap) |
+| **V2 · Portable Workspace** | Released 2026-10-13 · superseded | https://sukonik.github.io/payout-lab/ · preserved at https://sukonik.github.io/payout-lab/v2/ | Commit [`8f106b3`](https://github.com/Sukonik/payout-lab/commit/8f106b37ea01c5a1e29a04dbb6414e9dfaf71a9a) (deployed by Pages run [38449323089](https://github.com/Sukonik/payout-lab/actions/runs/38449323089)). Merged PRs [#21](https://github.com/Sukonik/payout-lab/pull/21) packets, [#22](https://github.com/Sukonik/payout-lab/pull/22) five tabs, [#23](https://github.com/Sukonik/payout-lab/pull/23) data provenance, [#24](https://github.com/Sukonik/payout-lab/pull/24) CSV and Continue, [#25](https://github.com/Sukonik/payout-lab/pull/25) release |
+| **V3 · Access & Receipts** | **Released** 2026-10-13 · current | https://sukonik.github.io/payout-lab/ | Commit and Pages run are recorded in the next change after deployment, together with the preserved `/v3/` copy. Merged PRs [#27](https://github.com/Sukonik/payout-lab/pull/27) saved reports and comparison, [#28](https://github.com/Sukonik/payout-lab/pull/28) bookmarks and snapshot links, [#29](https://github.com/Sukonik/payout-lab/pull/29) QR cards. Notes: [`docs/release-v3.md`](docs/release-v3.md) |
 
 - The main address always shows the latest release. A **preserved build** is the exact web files from its release commit, deployed under its own path (`/v1/`), so old links keep working even after the main site moves on. Preserved builds use the price file as it was at release and do not update.
 - Releases are recorded by **commit**, which is permanent. Git tags have not been created yet (tag pushes were not possible from the automation that built V2). To add one: `git tag -a v2.0.0 <release commit> && git push origin v2.0.0`.
-- Release notes and verification results: [`docs/release-v2.md`](docs/release-v2.md).
+- Release notes and verification results: [`docs/release-v2.md`](docs/release-v2.md), [`docs/release-v3.md`](docs/release-v3.md).
 
 ## What it does
 
 - **Overview**: yearly and monthly income, yield, a rack of test tubes showing income by month (tap a tube to see who pays that month), data freshness and a concentration summary.
 - **Portfolio**: add holdings, edit shares and values, import a CSV, check for newer market data and choose what to apply.
 - **Lab**: dividend cut test, concentration check, goal timeline, add-money test, taxable vs IRA.
-- **Receipts**: your packet and what is saved on this device, explained plainly.
+- **Receipts**: saved **reports** (frozen, dated copies) you can compare with an explanation of what changed (your holdings, market data or assumptions), plus your packet, what is saved on this device, links and **QR cards**.
 - **Explore**: search any of about 590 tickers (the S&P 500, leading ETFs and two foreign ADRs) to see what one share pays, how often, and the last payments.
 
 ## Your portfolio is a file
@@ -33,6 +33,8 @@ Payout Lab has no accounts and no server. The site is static and your data stays
 | **Packet** | A `.payout` file with your whole portfolio: holdings, settings and saved reports. It is your account. Open it on any device to continue. It is plain JSON, **not encrypted**, so keep it private. [Format](docs/packet-format.md) |
 | **Device** | A copy this browser remembers so you can press *Continue* next time. Convenient, but browsers can clear site data, so it is **not a backup**. It is not synced between devices, and browser sync of bookmarks or passwords does not sync it. |
 | **Bookmark** | Opens the website. On this browser it continues your remembered portfolio. On another device it cannot bring your portfolio back: open your packet there. |
+| **Snapshot link** | A dated copy of your holdings **inside the link**. It works anywhere and never updates, but **anyone with the link can read your holdings** (not encrypted). Too large for a link? You are told to use a packet. [Details](docs/links.md) |
+| **QR card** | A QR code with the name, ID and date, to save or print. Default is a bookmark with no holdings in it; a card that carries your holdings is a separate, explicit choice. [Details](docs/qr.md) |
 
 The header always shows both states, **Device** and **Packet**, and **Save packet** is available on every tab. Opening a packet never replaces your work by itself: you see a summary, and older or diverging copies open as separate copies so nothing is silently overwritten.
 
@@ -59,7 +61,9 @@ Things to know:
 
 ## Roadmap
 
-**V3 · Access & Receipts** (planned): saved **report receipts** you can compare over time with an explanation of what changed; **workspace bookmarks** and optional **snapshot links** that carry a dated copy in the link itself (never a server account); and **QR cards** generated in the browser. Tracked in [#2](https://github.com/Sukonik/payout-lab/issues/2) with tickets #6, #7 and #8.
+**Done:** V1 baseline, V2 Portable Workspace and V3 Access & Receipts (roadmap [#2](https://github.com/Sukonik/payout-lab/issues/2)).
+
+**Not done yet:** verification on a physical iPhone, Safari and Firefox; scanning a QR card with a real phone camera.
 
 Later and optional, each needing its own feasibility review: encrypted packets, passkeys or password-manager unlock keys (#10), and themed Collections (#1).
 
@@ -78,7 +82,7 @@ Before charging for anything: keep the educational disclaimer reviewed for your 
 
 ```bash
 python3 -m http.server 8000     # the app uses ES modules and data.json, so serve it; opening index.html from disk will not work
-npm test                        # unit tests (Node 20+, no dependencies)
+npm test                        # unit tests (Node 20+, no dependencies; QR decode tests also use jsqr if you `npm install --no-save jsqr`)
 node e2e/release.mjs            # release checks in Chromium (needs Playwright; see e2e/lib.mjs)
 ```
 
@@ -86,7 +90,7 @@ Deploy is automatic: pushing to `main` runs [`pages.yml`](.github/workflows/page
 
 Link format, sizes and safety: [`docs/links.md`](docs/links.md). QR cards: [`docs/qr.md`](docs/qr.md).
 
-Browser checks in `e2e/`: `packets` (save/open/migration/storage), `workspace` (routing, layout, accessibility), `refresh` (data review), `import` (CSV), `return` (start screen), `regression-v1` (calculators match V1), `release` (the release standard), plus screenshot helpers.
+Browser checks in `e2e/`: `packets` (save/open/migration/storage), `workspace` (routing, layout, accessibility), `refresh` (data review), `import` (CSV), `return` (start screen), `receipts` (reports and comparison), `links` (bookmarks and snapshot links), `qr` (cards decoded back to their link), `regression-v1` (calculators match V1), `release` (the release standard on the built site), plus screenshot helpers.
 
 ## Project structure
 
@@ -94,7 +98,8 @@ Browser checks in `e2e/`: `packets` (save/open/migration/storage), `workspace` (
 index.html                          # app shell: start screen, five views, settings sheet
 css/app.css                         # design system (light and dark), phone-first layout
 js/app.js                           # controller: working packet, local save, open/save packets
-js/core/                            # pure, unit-tested logic: calc, packet schema, store, route, market, refresh, csv
+js/core/                            # pure, unit-tested logic: calc, packet schema, store, route, market, refresh, csv, receipts, links, qr
+js/vendor/                          # vendored Nayuki QR generator (MIT, see THIRD_PARTY_NOTICES.md)
 js/ui/                              # rendering: views, tube rack, panels, explore, dialogs, shell, gate, data review, CSV import
 data.json                           # public prices and dividends, refreshed on a schedule
 releases.json                       # preserved builds: version, path and exact commit
