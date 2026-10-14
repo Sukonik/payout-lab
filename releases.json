@@ -18,6 +18,12 @@
       "path": "v3",
       "sha": "e094a6dced32c6950c4e635eded3accbcc589157",
       "title": "Access & Receipts: saved reports, comparison, bookmarks, snapshot links, QR cards"
+    },
+    {
+      "version": "V4",
+      "path": "v4",
+      "sha": "ca5c417ce6875636d1b503d468ebc74c17b5b0ee",
+      "title": "Splits: split history, announced splits, compare, what-if"
     }
   ]
 }
