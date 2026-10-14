@@ -120,7 +120,7 @@ const m = await open(iphone, url); await ready(m);
 await m.click('[data-g="start"]'); await m.waitForSelector("#view-portfolio:not([hidden])");
 await m.fill("#tk", "SCHD"); await m.fill("#sh", "100"); await m.click("#addBtn");
 let overflow = [];
-for (const v of ["overview", "portfolio", "lab", "receipts", "explore"]) { await m.evaluate((h) => { location.hash = h; }, "#/" + v); await m.waitForSelector(`#view-${v}:not([hidden])`); if (await m.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1)) overflow.push(v); }
+for (const v of ["overview", "portfolio", "lab", "receipts", "explore", "splits"]) { await m.evaluate((h) => { location.hash = h; }, "#/" + v); await m.waitForSelector(`#view-${v}:not([hidden])`); if (await m.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1)) overflow.push(v); }
 check("no view scrolls sideways on a 390px phone", overflow.length === 0, overflow.join());
 const [d3] = await Promise.all([m.waitForEvent("download"), m.click("#saveBtn")]);
 check("Save packet works with touch emulation", (await d3.suggestedFilename()).endsWith(".payout"));

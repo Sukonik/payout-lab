@@ -11,6 +11,8 @@ import { $, ago, clock, dateTime, esc, money, pct } from "./ui/dom.js";
 import { askText, choose, confirmDialog, toast } from "./ui/dialogs.js";
 import { renderAdd, renderConc, renderCut, renderGoal, renderTax } from "./ui/panels.js";
 import { fillTickers, renderExplore } from "./ui/explore.js";
+import { initSplits, renderSplits } from "./ui/splits.js";
+import { loadSplits } from "./core/splits.js";
 import { renderDataCard, reviewUpdates } from "./ui/data.js";
 import { TEMPLATE_CSV, applyImportPlan, holdingsToCsv } from "./core/csv.js";
 import { openCsvImport } from "./ui/csvimport.js";
@@ -151,7 +153,7 @@ function syncInputs() {
   document.querySelectorAll("[data-s]").forEach((el) => { const k = el.getAttribute("data-s"); if (el.type === "checkbox") el.checked = !!S[k]; else el.value = S[k]; });
 }
 
-function renderAll() { renderChrome(); renderHoldings(); syncInputs(); renderAnalysis(); renderExplore(); renderReceipts(); }
+function renderAll() { renderChrome(); renderHoldings(); syncInputs(); renderAnalysis(); renderExplore(); renderSplits(); renderReceipts(); }
 
 // ---------- saved reports and comparison ----------
 function renderReceipts() {
@@ -410,7 +412,7 @@ async function checkForUpdates() {
   const btn = $("checkBtn");
   btn.disabled = true; btn.textContent = "Checking…";
   try {
-    await loadMarket();
+    await Promise.all([loadMarket(), loadSplits()]);
     state.market = getMarket();
     fillTickers(); renderExplore();
     if (!state.market.loaded) { toast("Couldn't reach the data file. Your values were not changed."); return; }
@@ -592,6 +594,7 @@ function wire() {
     renderAnalysis();
   });
   $("psq").addEventListener("input", renderExplore);
+  initSplits({ holdings: () => state.packet.holdings });
   $("psRows").addEventListener("click", (e) => {
     const b = e.target.closest("[data-add]"); if (!b) return;
     goView("portfolio");
@@ -662,7 +665,7 @@ async function boot() {
   router = startRouter((r, user) => { if (user && gateVisible()) hideGate(); if (r.view === "receipts" && state.packet) renderReceipts(); });
   state.store = await openStore();
   state.app = { remember: true, ...(await state.store.getApp()) };
-  state.market = await loadMarket();
+  [state.market] = await Promise.all([loadMarket(), loadSplits()]);
   fillTickers();
 
   // 1. Bring a V1 portfolio forward once. The V1 key stays untouched, and a copy is kept in the new store.
