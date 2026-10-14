@@ -22,6 +22,7 @@
 - **Portfolio**: add holdings, edit shares and values, import a CSV, check for newer market data and choose what to apply.
 - **Lab**: dividend cut test, concentration check, goal timeline, add-money test, taxable vs IRA.
 - **Receipts**: saved **reports** (frozen, dated copies) you can compare with an explanation of what changed (your holdings, market data or assumptions), plus your packet, what is saved on this device, links and **QR cards**.
+- **Splits**: a ledger of stock splits by day, month and year (forward splits first, reverse on request), announced splits with their source, a Google-vs-Lucid style compare, a what-if for your share count, and which of your holdings have split. [Details](docs/splits.md)
 - **Explore**: search any of about 590 tickers (the S&P 500, leading ETFs and two foreign ADRs) to see what one share pays, how often, and the last payments.
 
 ## Your portfolio is a file

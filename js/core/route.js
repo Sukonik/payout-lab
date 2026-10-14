@@ -1,7 +1,7 @@
 // Static fragment routing for GitHub Pages: #/<view>?key=value. No server rewrites needed.
 // The same grammar carries workspace bookmarks and snapshot links later (see issue #7), so keep it small and strict.
-export const VIEWS = ["overview", "portfolio", "lab", "receipts", "explore"];
-export const VIEW_LABELS = { overview: "Overview", portfolio: "Portfolio", lab: "Lab", receipts: "Receipts", explore: "Explore" };
+export const VIEWS = ["overview", "portfolio", "lab", "receipts", "explore", "splits"];
+export const VIEW_LABELS = { overview: "Overview", portfolio: "Portfolio", lab: "Lab", receipts: "Receipts", explore: "Explore", splits: "Splits" };
 
 const KEY_RE = /^[a-z][a-z0-9_]{0,15}$/;
 const VAL_RE = /^[A-Za-z0-9_.~-]{0,64}$/;

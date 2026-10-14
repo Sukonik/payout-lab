@@ -4,6 +4,7 @@ const P = {
   portfolio: '<rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7"/><path d="M3 12.5h18"/>',
   lab: '<path d="M10 3h4"/><path d="M10.5 3v6L5.2 18.2A2.2 2.2 0 0 0 7.1 21.5h9.8a2.2 2.2 0 0 0 1.9-3.3L13.5 9V3"/><path d="M7.5 15.5h9"/><circle cx="11" cy="18.2" r=".6"/><circle cx="14" cy="17.2" r=".6"/>',
   receipts: '<path d="M6 3h12v18l-2.4-1.6L13.2 21 12 19.9 10.8 21l-2.4-1.6L6 21z"/><path d="M9 8h6M9 12h6M9 16h3"/>',
+  splits: '<path d="M3 12h5"/><path d="M8 12c3 0 3-6 7-6h5"/><path d="M8 12h12"/><path d="M8 12c3 0 3 6 7 6h5"/><path d="m18 4 2 2-2 2m0 8 2 2-2 2" opacity=".6"/>',
   explore: '<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/><path d="M11 8v6M8 11h6" opacity=".55"/>',
   save: '<path d="M12 4v11"/><path d="m7.5 10.8 4.5 4.5 4.5-4.5"/><path d="M5 19.5h14"/>',
   open: '<path d="M4 19.5V6.5A1.5 1.5 0 0 1 5.5 5H10l2 2.5h6.5A1.5 1.5 0 0 1 20 9v1"/><path d="M3.8 19.5 6.3 11a1.5 1.5 0 0 1 1.4-1.1H21a.9.9 0 0 1 .9 1.2L19.6 18.4a1.5 1.5 0 0 1-1.4 1.1z"/>',

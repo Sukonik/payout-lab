@@ -30,6 +30,6 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - name: Browser checks
         run: |
-          for t in packets workspace refresh import return hardening receipts links qr regression-v1 release; do
+          for t in packets workspace refresh import return hardening receipts links qr splits regression-v1 release; do
             echo "::group::$t"; node e2e/$t.mjs || { echo "::endgroup::"; exit 1; }; echo "::endgroup::"
           done
