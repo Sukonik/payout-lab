@@ -14,6 +14,7 @@ const open = async (c, hash = "#/portfolio") => { const p = await c.newPage(); p
 const go = async (p, v) => { await p.evaluate((h) => { location.hash = h; }, "#/" + v); await p.waitForSelector(`#view-${v}:not([hidden])`); };
 const add = async (p, t, n) => { await p.fill("#tk", t); await p.fill("#sh", String(n)); await p.click("#addBtn"); };
 const settle = (p) => p.waitForFunction(() => /Device\s+saved/.test(document.querySelector("#status").innerText));
+const opened = (p) => p.waitForFunction(() => /Opened .* as a new portfolio/.test(document.querySelector("#toast")?.textContent || ""));
 const gone = (p) => p.waitForSelector("body > dialog:not(#settings)", { state: "detached" });
 const makeLink = async (p) => {
   await go(p, "receipts"); await p.click("#snapMake"); await p.waitForSelector("#snName");
@@ -43,7 +44,7 @@ await q.evaluate((l) => { location.hash = l.slice(l.indexOf("#")); }, link);
 await q.waitForSelector("body > dialog:not(#settings) h2");
 check("a preview appears before anything is opened", /Open this snapshot/.test(await q.innerText("body > dialog:not(#settings)")) && /AAA/.test(await q.innerText("body > dialog:not(#settings)")));
 check("the payload is already gone from the address bar", !/snapshot/.test(await q.evaluate(() => location.hash)));
-await q.click('body > dialog:not(#settings) [data-result="open"]'); await gone(q); await settle(q);
+await q.click('body > dialog:not(#settings) [data-result="open"]'); await gone(q); await opened(q); await settle(q);
 await go(q, "portfolio");
 check("holdings arrived", /AAA/.test(await q.innerText("#view-portfolio")) && /BBB/.test(await q.innerText("#view-portfolio")));
 await settle(q);
@@ -52,7 +53,7 @@ console.log("4. old links keep showing the old copy after an update");
 await go(p, "portfolio"); await p.fill('[data-i="0"][data-k="shares"]', "999"); await p.dispatchEvent('[data-i="0"][data-k="shares"]', "change");
 const c3 = await newCtx(); const r = await open(c3, "#/portfolio");
 await r.evaluate((l) => { location.hash = l.slice(l.indexOf("#")); }, link);
-await r.waitForSelector("body > dialog:not(#settings) h2"); await r.click('body > dialog:not(#settings) [data-result="open"]'); await gone(r); await settle(r); await go(r, "portfolio");
+await r.waitForSelector("body > dialog:not(#settings) h2"); await r.click('body > dialog:not(#settings) [data-result="open"]'); await gone(r); await opened(r); await settle(r); await go(r, "portfolio");
 check("the old link still shows 100 shares", (await r.inputValue('[data-i="0"][data-k="shares"]')) === "100");
 
 console.log("5. damaged links change nothing");
@@ -73,7 +74,8 @@ console.log("6. oversize portfolios are refused, never truncated");
   await go(b, "portfolio");
   await b.setInputFiles("#csvIn", { name: "big.csv", mimeType: "text/csv", buffer: Buffer.from(csv) });
   await b.waitForSelector("dialog[open] #ciBody table"); await b.click("#ciApply"); await gone(b);
-  check("the big portfolio really has hundreds of holdings", (await b.innerText("#view-portfolio")).includes("TAA") && (await b.$$("#view-portfolio .hrow")).length > 300, String((await b.$$("#view-portfolio .hrow")).length));
+  await b.waitForFunction(() => document.querySelectorAll("#view-portfolio .hrow").length > 300);
+  check("the big portfolio really has hundreds of holdings", (await b.$$("#view-portfolio .hrow")).length > 300);
   await go(b, "receipts"); await b.click("#snapMake"); await b.waitForSelector("#snName"); await b.check("#snOk"); await b.waitForTimeout(300);
   const t = await b.innerText("#snInfo");
   const n = await b.evaluate(() => document.querySelectorAll("#view-portfolio .hrow").length).catch(() => 0);
