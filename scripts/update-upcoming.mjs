@@ -3,6 +3,7 @@
 import fs from "node:fs";
 import { archiveDone, fromNasdaqRows, reconcileUpcoming, sanitizeSplitsFile } from "../js/core/splits.js";
 
+const PAGE = "https://www.nasdaq.com/market-activity/stock-splits";
 const URL_ = "https://api.nasdaq.com/api/calendar/splits";
 const HEADERS = { "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36", Accept: "application/json, text/plain, */*" };
 
@@ -17,7 +18,7 @@ async function main() {
     if (!Array.isArray(rows)) throw new Error("unexpected response shape (no data.rows)");
   } catch (e) { console.error(`Nasdaq calendar unavailable: ${e.message}. splits.json left unchanged.`); process.exit(1); }
 
-  const { rows: fetched, dropped } = fromNasdaqRows(rows, today);
+  const { rows: fetched, dropped } = fromNasdaqRows(rows, today, PAGE);
   console.log(`calendar rows: ${rows.length}, parsed: ${fetched.length}, dropped: ${dropped}`);
   if (rows.length && !fetched.length) { console.error("Every row failed to parse; the response format has probably changed. splits.json left unchanged."); process.exit(1); }
 

@@ -144,7 +144,7 @@ test("calendar rows become announced entries with source, link and as-of date; b
     { symbol: "XYZ", name: "Xyz", ratio: "1 : 8", executionDate: "11/25/2026" },
     { symbol: "BAD", name: "Bad", ratio: "n/a", executionDate: "11/25/2026" },
     { symbol: "bad ticker", ratio: "2 : 1", executionDate: "11/25/2026" }, null,
-  ], "2026-10-14");
+  ], "2026-10-14", "https://www.nasdaq.com/market-activity/stock-splits");
   assert.equal(rows.length, 2); assert.equal(dropped, 3);
   assert.deepEqual([rows[0].t, rows[0].a, rows[0].b, rows[0].exDate, rows[0].announced, rows[0].status, rows[0].src], ["ABC", 10, 1, "2026-11-20", "2026-10-01", "announced", "Nasdaq calendar"]);
   assert.ok(rows[0].url.startsWith("https://")); assert.equal(rows[1].b, 8);

@@ -181,12 +181,12 @@ export function parseUsDate(v) {
   return isDay(t) ? t : null;
 }
 
-export const NASDAQ_URL = "https://www.nasdaq.com/market-activity/stock-splits";
-export function fromNasdaqRows(rows, asOf) {
+// The page the data came from is passed in by the caller, so no external address is baked into the shipped app code.
+export function fromNasdaqRows(rows, asOf, url = "") {
   const out = []; let dropped = 0;
   for (const r of Array.isArray(rows) ? rows : []) {
     const ratio = parseRatio(r?.ratio), exDate = parseUsDate(r?.executionDate), t = String(r?.symbol ?? "").trim().toUpperCase();
-    const u = ratio && exDate ? sanitizeUpcoming({ t, n: r.name, ...ratio, exDate, announced: parseUsDate(r.announcedDate) || undefined, payDate: parseUsDate(r.payableDate) || undefined, status: "announced", src: "Nasdaq calendar", url: NASDAQ_URL, asOf }) : null;
+    const u = ratio && exDate ? sanitizeUpcoming({ t, n: r.name, ...ratio, exDate, announced: parseUsDate(r.announcedDate) || undefined, payDate: parseUsDate(r.payableDate) || undefined, status: "announced", src: "Nasdaq calendar", url, asOf }) : null;
     if (u) out.push(u); else dropped++;
   }
   return { rows: out, dropped };
