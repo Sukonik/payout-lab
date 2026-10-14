@@ -162,3 +162,63 @@ export function compareTickers(file, market, t1, t2) {
   };
   return [one(t1), one(t2)];
 }
+
+// ---------- announced splits from Nasdaq's public calendar (via the refresh Action) ----------
+// Nasdaq's calendar API is undocumented, so every field is parsed defensively and anything unreadable is dropped and counted.
+// Row shape (as used by the open-source EventCalendar client): { symbol, name, ratio: "2 : 1", payableDate, executionDate, announcedDate } with MM/DD/YYYY dates.
+export function parseRatio(v) {
+  const m = /^\s*(\d{1,4})\s*(?::|-?\s*for\s*-?|\/)\s*(\d{1,4})\s*$/i.exec(String(v ?? ""));
+  if (!m) return null;
+  const a = Number(m[1]), b = Number(m[2]);
+  if (!isInt(a) || !isInt(b) || a === b) return null;
+  const g = gcd(a, b);
+  return { a: a / g, b: b / g };
+}
+export function parseUsDate(v) {
+  const m = /^\s*(\d{1,2})\/(\d{1,2})\/(\d{4})\s*$/.exec(String(v ?? ""));
+  if (m) { const iso = `${m[3]}-${m[1].padStart(2, "0")}-${m[2].padStart(2, "0")}`; return isDay(iso) ? iso : null; }
+  const t = String(v ?? "").trim();
+  return isDay(t) ? t : null;
+}
+
+export const NASDAQ_URL = "https://www.nasdaq.com/market-activity/stock-splits";
+export function fromNasdaqRows(rows, asOf) {
+  const out = []; let dropped = 0;
+  for (const r of Array.isArray(rows) ? rows : []) {
+    const ratio = parseRatio(r?.ratio), exDate = parseUsDate(r?.executionDate), t = String(r?.symbol ?? "").trim().toUpperCase();
+    const u = ratio && exDate ? sanitizeUpcoming({ t, n: r.name, ...ratio, exDate, announced: parseUsDate(r.announcedDate) || undefined, payDate: parseUsDate(r.payableDate) || undefined, status: "announced", src: "Nasdaq calendar", url: NASDAQ_URL, asOf }) : null;
+    if (u) out.push(u); else dropped++;
+  }
+  return { rows: out, dropped };
+}
+
+// Keep hand-kept entries as they are, refresh calendar entries, and be careful about what disappears:
+// a calendar entry that is no longer listed before its date is marked unverified rather than deleted or trusted.
+export function reconcileUpcoming(prev, fetched, today) {
+  const key = (u) => `${u.t}|${u.exDate}`;
+  const fresh = new Map(fetched.map((u) => [key(u), u]));
+  const out = [];
+  for (const u of prev) {
+    if (u.src !== "Nasdaq calendar") { out.push(u); continue; }       // manual entries are never touched
+    if (fresh.has(key(u))) continue;                                   // replaced below
+    if (u.exDate >= today) out.push({ ...u, status: u.status === "cancelled" ? "cancelled" : "unverified" });
+  }
+  const manual = new Set(out.map(key));
+  for (const u of fresh.values()) if (!manual.has(key(u))) out.push(u);
+  return out.sort((x, y) => (x.exDate < y.exDate ? -1 : x.exDate > y.exDate ? 1 : x.t < y.t ? -1 : 1));
+}
+
+// A calendar-announced split whose date has passed becomes history (not yet cross-checked) for tickers we track.
+// The Tiingo refresh replaces it with feed data. Returns the entries moved, so callers can report them.
+export function archiveDone(file, today, known) {
+  const moved = [];
+  const keep = [];
+  for (const u of file.upcoming) {
+    if (u.exDate < today && u.status !== "cancelled" && u.status !== "unverified" && known.has(u.t)) {
+      const v = file.tickers[u.t] || (file.tickers[u.t] = { n: u.n, s: [], u: null });
+      if (!v.s.some((s) => s.d === u.exDate)) { v.s.push({ d: u.exDate, a: u.a, b: u.b, src: u.src, ver: 0 }); v.s.sort((x, y) => (x.d < y.d ? -1 : 1)); moved.push(u); }
+    } else if (u.exDate >= today || u.status === "unverified" || u.status === "cancelled") keep.push(u);
+  }
+  file.upcoming = keep;
+  return moved;
+}

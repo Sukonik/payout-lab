@@ -20,6 +20,9 @@ jobs:
         env:
           TIINGO_TOKEN: ${{ secrets.TIINGO_TOKEN }}
           BATCH: ${{ inputs.batch }}
+      - name: Announced splits (Nasdaq public calendar)
+        run: node scripts/update-upcoming.mjs
+        continue-on-error: true   # unofficial endpoint: a failure is reported but must not block the history refresh or the commit
       - name: Commit changes
         run: |
           git config user.name "payout-lab-bot"

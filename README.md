@@ -47,6 +47,8 @@ Per ticker the file carries price `p`, dividends paid in the last 12 months `d`,
 
 In the app, **a portfolio keeps its own dated copy of every value**. A new data file never rewrites it. *Portfolio → Check for updates* shows what changed with provider and date, protects values you typed, flags provider data that is itself stale, and applies only what you choose. You can pick whether "dividend per share" means the **last 12 months** or the **current rate**.
 
+Stock split history and announced splits come from separate sources ([`docs/splits.md`](docs/splits.md) lists each one, its status and its limits).
+
 Things to know:
 - Pay months come from **ex-dividend dates**, which land a few weeks before cash arrives. The app calls them estimates. Exact pay dates are not available yet.
 - The data cannot separate special or one-off payments from regular ones, so the 12-month total can include them.
