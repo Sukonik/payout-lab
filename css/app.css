@@ -377,7 +377,7 @@ fieldset.modes legend{font-weight:700;font-size:.9rem;padding:0 6px}
 .bottomnav{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(6,1fr);background:var(--card);background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
 .bottomnav a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;border-radius:12px;color:var(--muted);text-decoration:none;font-size:.66rem;font-weight:700;min-height:48px;justify-content:center}
 .bottomnav a[aria-current="page"]{color:var(--accent-strong);background:var(--accent-soft)}
-body:has(input:focus,select:focus) .bottomnav{display:none}
+body:has(input:not([type=radio]):not([type=checkbox]):not([type=range]):focus,select:focus) .bottomnav{display:none}
 
 /* ---------- dialogs + sheets ---------- */
 dialog{border:1px solid var(--line);border-radius:20px;background:var(--card);color:var(--ink);padding:20px;max-width:min(540px,calc(100vw - 24px));width:100%;box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}

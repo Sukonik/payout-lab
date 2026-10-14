@@ -662,7 +662,7 @@ function wire() {
 async function boot() {
   const initialHash = location.hash;       // read before the router tidies the address
   buildNav();
-  router = startRouter((r, user) => { if (user && gateVisible()) hideGate(); if (r.view === "receipts" && state.packet) renderReceipts(); });
+  router = startRouter((r, user) => { if (user && gateVisible()) hideGate(); if (r.view === "receipts" && state.packet) renderReceipts(); if (r.view === "splits" && state.packet) renderSplits(); });
   state.store = await openStore();
   state.app = { remember: true, ...(await state.store.getApp()) };
   [state.market] = await Promise.all([loadMarket(), loadSplits()]);
