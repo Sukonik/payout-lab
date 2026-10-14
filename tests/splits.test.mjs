@@ -127,3 +127,55 @@ test("loadSplits keeps working when the file is missing or broken", async () => 
   assert.equal((await loadSplits("x", async () => ({ ok: true, json: async () => ({ nope: 1 }) }))).loaded, false);
   assert.equal((await loadSplits("x", async () => ({ ok: true, json: async () => seed }))).loaded, true);
 });
+
+import { archiveDone, fromNasdaqRows, parseRatio, parseUsDate, reconcileUpcoming } from "../js/core/splits.js";
+
+test("calendar ratios and dates in the formats seen in Nasdaq-style rows are read, anything else is refused", () => {
+  assert.deepEqual(parseRatio("2 : 1"), { a: 2, b: 1 }); assert.deepEqual(parseRatio("1:10"), { a: 1, b: 10 });
+  assert.deepEqual(parseRatio("3-for-2"), { a: 3, b: 2 }); assert.deepEqual(parseRatio("10 for 1"), { a: 10, b: 1 }); assert.deepEqual(parseRatio("4 : 2"), { a: 2, b: 1 });
+  for (const bad of ["", null, "2", "2 : 2", "0 : 1", "a:b", "5000 : 1", "2 : 1 : 3"]) assert.equal(parseRatio(bad), null, String(bad));
+  assert.equal(parseUsDate("10/20/2026"), "2026-10-20"); assert.equal(parseUsDate("1/5/2027"), "2027-01-05"); assert.equal(parseUsDate("2026-10-20"), "2026-10-20");
+  assert.equal(parseUsDate("13/40/2026"), null); assert.equal(parseUsDate("N/A"), null);
+});
+
+test("calendar rows become announced entries with source, link and as-of date; broken rows are counted and dropped", () => {
+  const { rows, dropped } = fromNasdaqRows([
+    { symbol: "abc", name: "Abc Corp", ratio: "10 : 1", executionDate: "11/20/2026", announcedDate: "10/01/2026", payableDate: "11/19/2026" },
+    { symbol: "XYZ", name: "Xyz", ratio: "1 : 8", executionDate: "11/25/2026" },
+    { symbol: "BAD", name: "Bad", ratio: "n/a", executionDate: "11/25/2026" },
+    { symbol: "bad ticker", ratio: "2 : 1", executionDate: "11/25/2026" }, null,
+  ], "2026-10-14", "https://www.nasdaq.com/market-activity/stock-splits");
+  assert.equal(rows.length, 2); assert.equal(dropped, 3);
+  assert.deepEqual([rows[0].t, rows[0].a, rows[0].b, rows[0].exDate, rows[0].announced, rows[0].status, rows[0].src], ["ABC", 10, 1, "2026-11-20", "2026-10-01", "announced", "Nasdaq calendar"]);
+  assert.ok(rows[0].url.startsWith("https://")); assert.equal(rows[1].b, 8);
+  assert.deepEqual(fromNasdaqRows("nope", "2026-10-14"), { rows: [], dropped: 0 });
+});
+
+test("reconcile keeps manual entries, refreshes calendar ones and distrusts a vanished one", () => {
+  const manual = { t: "MAN", a: 2, b: 1, exDate: "2026-11-01", status: "confirmed", src: "8-K", url: "" };
+  const gone = { t: "GONE", a: 3, b: 1, exDate: "2026-11-05", status: "announced", src: "Nasdaq calendar", url: "" };
+  const old = { t: "OLD", a: 3, b: 1, exDate: "2026-10-01", status: "announced", src: "Nasdaq calendar", url: "" };
+  const stay = { t: "STAY", a: 5, b: 1, exDate: "2026-11-10", status: "announced", src: "Nasdaq calendar", url: "", announced: "2026-10-01" };
+  const fresh = [{ ...stay, announced: "2026-10-02" }, { t: "NEW", a: 4, b: 1, exDate: "2026-11-12", status: "announced", src: "Nasdaq calendar", url: "" }, { ...manual, src: "Nasdaq calendar", status: "announced" }];
+  const out = reconcileUpcoming([manual, gone, old, stay], fresh, "2026-10-14");
+  const by = Object.fromEntries(out.map((u) => [u.t, u]));
+  assert.equal(by.MAN.src, "8-K"); assert.equal(by.MAN.status, "confirmed", "a hand-kept entry wins over the calendar");
+  assert.equal(by.GONE.status, "unverified", "no longer listed: distrusted, not deleted");
+  assert.ok(!by.OLD, "past calendar entries not listed any more are dropped");
+  assert.equal(by.STAY.announced, "2026-10-02"); assert.ok(by.NEW);
+  assert.deepEqual(out.map((u) => u.t), ["MAN", "GONE", "STAY", "NEW"].sort((x, y) => (by[x].exDate < by[y].exDate ? -1 : 1)));
+});
+
+test("a done calendar split becomes unverified history for tracked tickers only, and is not added twice", () => {
+  const mk = () => sanitizeSplitsFile({ tickers: { ABC: { n: "Abc", s: [{ d: "2020-01-01", a: 2, b: 1 }] } }, upcoming: [
+    { t: "ABC", a: 10, b: 1, exDate: "2026-10-01", status: "announced", src: "Nasdaq calendar" },
+    { t: "ZZZ", a: 10, b: 1, exDate: "2026-10-01", status: "announced", src: "Nasdaq calendar" },
+    { t: "QQQ", a: 10, b: 1, exDate: "2026-10-01", status: "unverified", src: "Nasdaq calendar" },
+    { t: "NEXT", a: 2, b: 1, exDate: "2026-12-01", status: "announced", src: "Nasdaq calendar" }] });
+  const f = mk(); const moved = archiveDone(f, "2026-10-14", new Set(["ABC", "QQQ", "NEXT"]));
+  assert.deepEqual(moved.map((m) => m.t), ["ABC"]);
+  assert.deepEqual(f.tickers.ABC.s.map((s) => [s.d, s.ver]), [["2020-01-01", 0], ["2026-10-01", 0]]);
+  assert.deepEqual(f.upcoming.map((u) => u.t).sort(), ["NEXT", "QQQ"], "untracked and unverified ones are not promoted to history");
+  const g = mk(); g.tickers.ABC.s.push({ d: "2026-10-01", a: 10, b: 1, src: "Tiingo", ver: 1 });
+  assert.equal(archiveDone(g, "2026-10-14", new Set(["ABC"])).length, 0, "already in history: not duplicated");
+});
