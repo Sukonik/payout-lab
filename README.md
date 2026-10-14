@@ -10,11 +10,12 @@
 |---|---|---|---|
 | **V1** | Preserved baseline | https://sukonik.github.io/payout-lab/v1/ | Commit [`475287d`](https://github.com/Sukonik/payout-lab/commit/475287db7b2646dee2968c10c91301747dd02489) (verified deployed by Pages run [38339910088](https://github.com/Sukonik/payout-lab/actions/runs/38339910088)) |
 | **V2 · Portable Workspace** | Released 2026-10-13 · superseded | https://sukonik.github.io/payout-lab/v2/ | Commit [`8f106b3`](https://github.com/Sukonik/payout-lab/commit/8f106b37ea01c5a1e29a04dbb6414e9dfaf71a9a) (deployed by Pages run [38449323089](https://github.com/Sukonik/payout-lab/actions/runs/38449323089)). Merged PRs [#21](https://github.com/Sukonik/payout-lab/pull/21) packets, [#22](https://github.com/Sukonik/payout-lab/pull/22) five tabs, [#23](https://github.com/Sukonik/payout-lab/pull/23) data provenance, [#24](https://github.com/Sukonik/payout-lab/pull/24) CSV and Continue, [#25](https://github.com/Sukonik/payout-lab/pull/25) release |
-| **V3 · Access & Receipts** | **Released** 2026-10-13 · current | https://sukonik.github.io/payout-lab/ · preserved at https://sukonik.github.io/payout-lab/v3/ | Commit [`e094a6d`](https://github.com/Sukonik/payout-lab/commit/e094a6dced32c6950c4e635eded3accbcc589157) (app code deployed by Pages run [38456071536](https://github.com/Sukonik/payout-lab/actions/runs/38456071536)). Merged PRs [#27](https://github.com/Sukonik/payout-lab/pull/27) saved reports and comparison, [#28](https://github.com/Sukonik/payout-lab/pull/28) bookmarks and snapshot links, [#29](https://github.com/Sukonik/payout-lab/pull/29) QR cards. Notes: [`docs/release-v3.md`](docs/release-v3.md) |
+| **V3 · Access & Receipts** | Released 2026-10-13 · superseded | https://sukonik.github.io/payout-lab/v3/ | Commit [`e094a6d`](https://github.com/Sukonik/payout-lab/commit/e094a6dced32c6950c4e635eded3accbcc589157) (app code deployed by Pages run [38456071536](https://github.com/Sukonik/payout-lab/actions/runs/38456071536)). Merged PRs [#27](https://github.com/Sukonik/payout-lab/pull/27) saved reports and comparison, [#28](https://github.com/Sukonik/payout-lab/pull/28) bookmarks and snapshot links, [#29](https://github.com/Sukonik/payout-lab/pull/29) QR cards. Notes: [`docs/release-v3.md`](docs/release-v3.md) |
+| **V4 · Splits** | **Released** 2026-10-14 · current | https://sukonik.github.io/payout-lab/ · preserved at https://sukonik.github.io/payout-lab/v4/ | Commit [`ca5c417`](https://github.com/Sukonik/payout-lab/commit/ca5c417ce6875636d1b503d468ebc74c17b5b0ee) (deployed by Pages run [38645364791](https://github.com/Sukonik/payout-lab/actions/runs/38645364791)). Merged PRs [#33](https://github.com/Sukonik/payout-lab/pull/33) split data and refresh, [#34](https://github.com/Sukonik/payout-lab/pull/34) Splits tab. Notes: [`docs/release-v4.md`](docs/release-v4.md) |
 
 - The main address always shows the latest release. A **preserved build** is the exact web files from its release commit, deployed under its own path (`/v1/`), so old links keep working even after the main site moves on. Preserved builds use the price file as it was at release and do not update.
 - Releases are recorded by **commit**, which is permanent. Git tags have not been created yet (tag pushes were not possible from the automation that built V2). To add one: `git tag -a v2.0.0 <release commit> && git push origin v2.0.0`.
-- Release notes and verification results: [`docs/release-v2.md`](docs/release-v2.md), [`docs/release-v3.md`](docs/release-v3.md).
+- Release notes and verification results: [`docs/release-v2.md`](docs/release-v2.md), [`docs/release-v3.md`](docs/release-v3.md), [`docs/release-v4.md`](docs/release-v4.md).
 
 ## What it does
 
@@ -62,9 +63,9 @@ Things to know:
 
 ## Roadmap
 
-**Done:** V1 baseline, V2 Portable Workspace and V3 Access & Receipts (roadmap [#2](https://github.com/Sukonik/payout-lab/issues/2)).
+**Done:** V1 baseline, V2 Portable Workspace, V3 Access & Receipts and V4 Splits (roadmap [#2](https://github.com/Sukonik/payout-lab/issues/2)).
 
-**Not done yet:** verification on a physical iPhone, Safari and Firefox; scanning a QR card with a real phone camera.
+**Not done yet:** automated discovery of announced splits (the announced list is hand-kept, see [#32](https://github.com/Sukonik/payout-lab/issues/32)); verification on a physical iPhone, Safari and Firefox; scanning a QR card with a real phone camera.
 
 Later and optional, each needing its own feasibility review: encrypted packets, passkeys or password-manager unlock keys (#10), and themed Collections (#1).
 

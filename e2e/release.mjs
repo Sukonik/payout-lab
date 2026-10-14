@@ -152,7 +152,7 @@ console.log("\n5. V3 on the deployed build: receipts, comparison, links, QR, dev
   const b = await open(await browser.newContext(ctxOpts), url); await ready(b);
   await b.evaluate((l) => { location.hash = l.slice(l.indexOf("#")); }, snap); await b.waitForSelector(DLG + " h2");
   check("a snapshot link opens as a preview on another device", /Open this snapshot/.test(await b.innerText(DLG)) && /SCHD/.test(await b.innerText(DLG)));
-  await b.click(`${DLG} [data-result="open"]`); await gone(b); await settle(b); await go(b, "portfolio");
+  await b.click(`${DLG} [data-result="open"]`); await gone(b); await b.waitForFunction(() => /Opened .* as a new portfolio/.test(document.querySelector("#toast")?.textContent || "")); await settle(b); await go(b, "portfolio");
   check("it opened as a new portfolio with the copied shares", (await b.$eval('[data-i="0"][data-k="shares"]', (e) => e.value)) === "300");
   const c = await open(await browser.newContext(ctxOpts), url); await ready(c);
   await c.evaluate((l) => { location.hash = l.slice(l.indexOf("#")); }, ws); await c.waitForSelector(DLG + " h2");
