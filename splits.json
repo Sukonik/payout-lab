@@ -1,60 +1,8 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-10-14T00:00:00.000Z",
- "upcomingAsOf": "2026-10-14",
+ "updated": "2026-10-15T08:35:05.217Z",
+ "upcomingAsOf": "2026-10-15",
  "tickers": {
-  "GOOGL": {
-   "n": "Alphabet Inc. (Class A)",
-   "s": [
-    {
-     "d": "2022-07-18",
-     "a": 20,
-     "b": 1,
-     "src": "public record, cross-checked",
-     "ver": 1
-    }
-   ],
-   "u": null
-  },
-  "NFLX": {
-   "n": "Netflix",
-   "s": [
-    {
-     "d": "2025-11-17",
-     "a": 10,
-     "b": 1,
-     "src": "public record, cross-checked",
-     "ver": 1
-    }
-   ],
-   "u": null
-  },
-  "ORLY": {
-   "n": "O'Reilly Automotive",
-   "s": [
-    {
-     "d": "2025-06-10",
-     "a": 15,
-     "b": 1,
-     "src": "public record, cross-checked",
-     "ver": 1
-    }
-   ],
-   "u": null
-  },
-  "LCID": {
-   "n": "Lucid Group",
-   "s": [
-    {
-     "d": "2025-09-02",
-     "a": 1,
-     "b": 10,
-     "src": "public record, cross-checked",
-     "ver": 1
-    }
-   ],
-   "u": null
-  },
   "AAPL": {
    "n": "Apple",
    "s": [
@@ -62,58 +10,27 @@
      "d": "2014-06-09",
      "a": 7,
      "b": 1,
-     "src": "public record, not yet cross-checked",
-     "ver": 0
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 645.57,
+     "post": 93.7
     },
     {
      "d": "2020-08-31",
      "a": 4,
      "b": 1,
-     "src": "public record, not yet cross-checked",
-     "ver": 0
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 499.23,
+     "post": 129.04
     }
    ],
-   "u": null
+   "u": "2026-10-15"
   },
-  "NVDA": {
-   "n": "NVIDIA",
-   "s": [
-    {
-     "d": "2021-07-20",
-     "a": 4,
-     "b": 1,
-     "src": "public record, not yet cross-checked",
-     "ver": 0
-    },
-    {
-     "d": "2024-06-10",
-     "a": 10,
-     "b": 1,
-     "src": "public record, not yet cross-checked",
-     "ver": 0
-    }
-   ],
-   "u": null
-  },
-  "TSLA": {
-   "n": "Tesla",
-   "s": [
-    {
-     "d": "2020-08-31",
-     "a": 5,
-     "b": 1,
-     "src": "public record, not yet cross-checked",
-     "ver": 0
-    },
-    {
-     "d": "2022-08-25",
-     "a": 3,
-     "b": 1,
-     "src": "public record, not yet cross-checked",
-     "ver": 0
-    }
-   ],
-   "u": null
+  "ABBV": {
+   "n": "AbbVie",
+   "s": [],
+   "u": "2026-10-15"
   },
   "AMZN": {
    "n": "Amazon",
@@ -154,18 +71,223 @@
    ],
    "u": null
   },
-  "WMT": {
-   "n": "Walmart",
+  "CVX": {
+   "n": "Chevron",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "DGRO": {
+   "n": "iShares Core Dividend Growth ETF",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "GOOGL": {
+   "n": "Alphabet Inc. (Class A)",
    "s": [
     {
-     "d": "2024-02-26",
-     "a": 3,
+     "d": "2022-07-18",
+     "a": 20,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 2235.55,
+     "post": 109.03
+    }
+   ],
+   "u": "2026-10-15"
+  },
+  "HD": {
+   "n": "Home Depot",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "JEPI": {
+   "n": "JPMorgan Equity Premium Income ETF",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "JEPQ": {
+   "n": "JPMorgan Nasdaq Equity Premium Income ETF",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "JNJ": {
+   "n": "Johnson & Johnson",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "KO": {
+   "n": "Coca-Cola",
+   "s": [
+    {
+     "d": "2012-08-13",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 78.79,
+     "post": 39.3
+    }
+   ],
+   "u": "2026-10-15"
+  },
+  "LCID": {
+   "n": "Lucid Group",
+   "s": [
+    {
+     "d": "2025-09-02",
+     "a": 1,
+     "b": 10,
+     "src": "public record, cross-checked",
+     "ver": 1
+    }
+   ],
+   "u": null
+  },
+  "LYG": {
+   "n": "Lloyds Banking Group (ADR)",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "MAIN": {
+   "n": "Main Street Capital",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "META": {
+   "n": "Meta Platforms",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "MO": {
+   "n": "Altria",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "MSFT": {
+   "n": "Microsoft",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "NFLX": {
+   "n": "Netflix",
+   "s": [
+    {
+     "d": "2025-11-17",
+     "a": 10,
+     "b": 1,
+     "src": "public record, cross-checked",
+     "ver": 1
+    }
+   ],
+   "u": null
+  },
+  "NTDOY": {
+   "n": "Nintendo (ADR)",
+   "s": [
+    {
+     "d": "2022-10-04",
+     "a": 5,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 50.1001,
+     "post": 10.74
+    }
+   ],
+   "u": "2026-10-15"
+  },
+  "NVDA": {
+   "n": "NVIDIA",
+   "s": [
+    {
+     "d": "2021-07-20",
+     "a": 4,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    },
+    {
+     "d": "2024-06-10",
+     "a": 10,
      "b": 1,
      "src": "public record, not yet cross-checked",
      "ver": 0
     }
    ],
    "u": null
+  },
+  "O": {
+   "n": "Realty Income",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "ORLY": {
+   "n": "O'Reilly Automotive",
+   "s": [
+    {
+     "d": "2025-06-10",
+     "a": 15,
+     "b": 1,
+     "src": "public record, cross-checked",
+     "ver": 1
+    }
+   ],
+   "u": null
+  },
+  "PEP": {
+   "n": "PepsiCo",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "PFE": {
+   "n": "Pfizer",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "PG": {
+   "n": "Procter & Gamble",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "SCHB": {
+   "n": "Schwab US Broad Market ETF",
+   "s": [
+    {
+     "d": "2022-03-11",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 100.67,
+     "post": 49.6
+    },
+    {
+     "d": "2024-10-11",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 66.7,
+     "post": 22.4
+    }
+   ],
+   "u": "2026-10-15"
+  },
+  "SCHD": {
+   "n": "Schwab US Dividend Equity ETF",
+   "s": [
+    {
+     "d": "2024-10-11",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 84.62,
+     "post": 28.54
+    }
+   ],
+   "u": "2026-10-15"
   },
   "SMCI": {
    "n": "Super Micro Computer",
@@ -179,7 +301,124 @@
     }
    ],
    "u": null
+  },
+  "SPYD": {
+   "n": "SPDR Portfolio S&P 500 High Dividend ETF",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "SPYV": {
+   "n": "SPDR Portfolio S&P 500 Value ETF",
+   "s": [
+    {
+     "d": "2017-10-16",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 117.746,
+     "post": 29.48
+    }
+   ],
+   "u": "2026-10-15"
+  },
+  "STAG": {
+   "n": "STAG Industrial",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "T": {
+   "n": "AT&T",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "TSLA": {
+   "n": "Tesla",
+   "s": [
+    {
+     "d": "2020-08-31",
+     "a": 5,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    },
+    {
+     "d": "2022-08-25",
+     "a": 3,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "VIG": {
+   "n": "Vanguard Dividend Appreciation ETF",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "VYM": {
+   "n": "Vanguard High Dividend Yield ETF",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "VZ": {
+   "n": "Verizon",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "WMT": {
+   "n": "Walmart",
+   "s": [
+    {
+     "d": "2024-02-26",
+     "a": 3,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "XOM": {
+   "n": "Exxon Mobil",
+   "s": [],
+   "u": "2026-10-15"
   }
  },
- "upcoming": []
+ "upcoming": [
+  {
+   "t": "BTOC",
+   "n": "Armlogi Holding Corp.",
+   "a": 1,
+   "b": 16,
+   "exDate": "2026-10-15",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-15"
+  },
+  {
+   "t": "AMTD",
+   "n": "AMTD IDEA Group",
+   "a": 1,
+   "b": 60,
+   "exDate": "2026-10-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-15"
+  },
+  {
+   "t": "LU",
+   "n": "Lufax Holding Ltd",
+   "a": 1,
+   "b": 10,
+   "exDate": "2026-10-23",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-15"
+  }
+ ]
 }
