@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-10-15T08:35:05.217Z",
- "upcomingAsOf": "2026-10-15",
+ "updated": "2026-10-16T08:29:46.504Z",
+ "upcomingAsOf": "2026-10-16",
  "tickers": {
   "AAPL": {
    "n": "Apple",
@@ -32,6 +32,134 @@
    "s": [],
    "u": "2026-10-15"
   },
+  "ACGL": {
+   "n": "Arch Capital Group",
+   "s": [
+    {
+     "d": "2011-05-12",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 101.37,
+     "post": 34.84
+    },
+    {
+     "d": "2018-06-21",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 81.05,
+     "post": 26.36
+    }
+   ],
+   "u": "2026-10-16"
+  },
+  "ADI": {
+   "n": "Analog Devices",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "ADM": {
+   "n": "Archer Daniels Midland",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AEE": {
+   "n": "Ameren",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AEP": {
+   "n": "American Electric Power",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AIG": {
+   "n": "American International Group",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AIZ": {
+   "n": "Assurant",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AJG": {
+   "n": "Arthur J. Gallagher & Co.",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "ALL": {
+   "n": "Allstate",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "ALLE": {
+   "n": "Allegion",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AMAT": {
+   "n": "Applied Materials",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AMCR": {
+   "n": "Amcor",
+   "s": [
+    {
+     "d": "2026-01-15",
+     "a": 1,
+     "b": 5,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 8.82,
+     "post": 44.16
+    }
+   ],
+   "u": "2026-10-16"
+  },
+  "AME": {
+   "n": "Ametek",
+   "s": [
+    {
+     "d": "2010-12-22",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 59.85,
+     "post": 39.3
+    },
+    {
+     "d": "2012-07-02",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 49.91,
+     "post": 33.51
+    }
+   ],
+   "u": "2026-10-16"
+  },
+  "AMGN": {
+   "n": "Amgen",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AMP": {
+   "n": "Ameriprise Financial",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AMT": {
+   "n": "American Tower",
+   "s": [],
+   "u": "2026-10-16"
+  },
   "AMZN": {
    "n": "Amazon",
    "s": [
@@ -39,11 +167,114 @@
      "d": "2022-06-06",
      "a": 20,
      "b": 1,
-     "src": "public record, not yet cross-checked",
-     "ver": 0
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 2447,
+     "post": 124.79
     }
    ],
-   "u": null
+   "u": "2026-10-16"
+  },
+  "ANET": {
+   "n": "Arista Networks",
+   "s": [
+    {
+     "d": "2021-11-18",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 528.32,
+     "post": 132.55
+    },
+    {
+     "d": "2024-12-04",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 414.46,
+     "post": 105.43
+    }
+   ],
+   "u": "2026-10-16"
+  },
+  "AON": {
+   "n": "Aon plc",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "APA": {
+   "n": "APA Corporation",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "APH": {
+   "n": "Amphenol",
+   "s": [
+    {
+     "d": "2014-10-10",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 98.68,
+     "post": 45.7
+    },
+    {
+     "d": "2021-03-05",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 120.08,
+     "post": 61.56
+    },
+    {
+     "d": "2024-06-12",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 134.43,
+     "post": 68.69
+    },
+    {
+     "d": "2026-09-03",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 160.08,
+     "post": 82.07
+    }
+   ],
+   "u": "2026-10-16"
+  },
+  "APO": {
+   "n": "Apollo Global Management",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "APP": {
+   "n": "AppLovin",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "APTV": {
+   "n": "Aptiv",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "ARES": {
+   "n": "Ares Management",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "ATO": {
+   "n": "Atmos Energy",
+   "s": [],
+   "u": "2026-10-16"
   },
   "AVGO": {
    "n": "Broadcom",
@@ -57,6 +288,16 @@
     }
    ],
    "u": null
+  },
+  "AWK": {
+   "n": "American Water Works",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AXP": {
+   "n": "American Express",
+   "s": [],
+   "u": "2026-10-16"
   },
   "CMG": {
    "n": "Chipotle",
@@ -80,6 +321,21 @@
    "n": "iShares Core Dividend Growth ETF",
    "s": [],
    "u": "2026-10-15"
+  },
+  "GOOG": {
+   "n": "Alphabet Inc. (Class C)",
+   "s": [
+    {
+     "d": "2022-07-18",
+     "a": 20,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 2255.34,
+     "post": 109.91
+    }
+   ],
+   "u": "2026-10-16"
   },
   "GOOGL": {
    "n": "Alphabet Inc. (Class A)",
@@ -143,6 +399,21 @@
     }
    ],
    "u": null
+  },
+  "LNT": {
+   "n": "Alliant Energy",
+   "s": [
+    {
+     "d": "2016-05-20",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 71.48,
+     "post": 35.91
+    }
+   ],
+   "u": "2026-10-16"
   },
   "LYG": {
    "n": "Lloyds Banking Group (ADR)",
@@ -388,15 +659,15 @@
  },
  "upcoming": [
   {
-   "t": "BTOC",
-   "n": "Armlogi Holding Corp.",
+   "t": "KNDI",
+   "n": "Kandi Technologies Group, Inc.",
    "a": 1,
-   "b": 16,
-   "exDate": "2026-10-15",
+   "b": 10,
+   "exDate": "2026-10-16",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-15"
+   "asOf": "2026-10-16"
   },
   {
    "t": "AMTD",
@@ -407,7 +678,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-15"
+   "asOf": "2026-10-16"
   },
   {
    "t": "LU",
@@ -418,7 +689,62 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-15"
+   "asOf": "2026-10-16"
+  },
+  {
+   "t": "EFG",
+   "n": "iShares MSCI EAFE Growth ETF",
+   "a": 3,
+   "b": 1,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-16"
+  },
+  {
+   "t": "EFV",
+   "n": "iShares MSCI EAFE Value ETF",
+   "a": 2,
+   "b": 1,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-16"
+  },
+  {
+   "t": "ITA",
+   "n": "iShares U.S. Aerospace & Defense ETF",
+   "a": 3,
+   "b": 1,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-16"
+  },
+  {
+   "t": "MTUM",
+   "n": "iShares MSCI USA Momentum Factor ETF",
+   "a": 4,
+   "b": 1,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-16"
+  },
+  {
+   "t": "QUAL",
+   "n": "iShares MSCI USA Quality Factor ETF",
+   "a": 4,
+   "b": 1,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-16"
   }
  ]
 }
