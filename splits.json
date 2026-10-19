@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-10-16T08:29:46.504Z",
- "upcomingAsOf": "2026-10-16",
+ "updated": "2026-10-19T09:17:48.445Z",
+ "upcomingAsOf": "2026-10-19",
  "tickers": {
   "AAPL": {
    "n": "Apple",
@@ -65,6 +65,16 @@
    "n": "Archer Daniels Midland",
    "s": [],
    "u": "2026-10-16"
+  },
+  "ADP": {
+   "n": "Automatic Data Processing",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "ADSK": {
+   "n": "Autodesk",
+   "s": [],
+   "u": "2026-10-19"
   },
   "AEE": {
    "n": "Ameren",
@@ -283,21 +293,225 @@
      "d": "2024-07-15",
      "a": 10,
      "b": 1,
-     "src": "public record, not yet cross-checked",
-     "ver": 0
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 1700.67,
+     "post": 171.42
     }
    ],
-   "u": null
+   "u": "2026-10-19"
+  },
+  "AVY": {
+   "n": "Avery Dennison",
+   "s": [],
+   "u": "2026-10-19"
   },
   "AWK": {
    "n": "American Water Works",
    "s": [],
    "u": "2026-10-16"
   },
+  "AXON": {
+   "n": "Axon Enterprise",
+   "s": [],
+   "u": "2026-10-19"
+  },
   "AXP": {
    "n": "American Express",
    "s": [],
    "u": "2026-10-16"
+  },
+  "AZO": {
+   "n": "AutoZone",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BA": {
+   "n": "Boeing",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BAC": {
+   "n": "Bank of America",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BALL": {
+   "n": "Ball Corporation",
+   "s": [
+    {
+     "d": "2011-02-16",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 73.73,
+     "post": 36.83
+    },
+    {
+     "d": "2017-05-17",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 80.81,
+     "post": 39.98
+    }
+   ],
+   "u": "2026-10-19"
+  },
+  "BAX": {
+   "n": "Baxter International",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BBY": {
+   "n": "Best Buy",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BDX": {
+   "n": "Becton Dickinson",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BE": {
+   "n": "Bloom Energy",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BF-B": {
+   "n": "Brown–Forman",
+   "s": [
+    {
+     "d": "2012-08-13",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 92.17,
+     "post": 61.48
+    },
+    {
+     "d": "2016-08-19",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 99.65,
+     "post": 50.4
+    },
+    {
+     "d": "2018-03-01",
+     "a": 5,
+     "b": 4,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 69.79,
+     "post": 55.37
+    }
+   ],
+   "u": "2026-10-19"
+  },
+  "BG": {
+   "n": "Bunge Global",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BIIB": {
+   "n": "Biogen",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BKNG": {
+   "n": "Booking Holdings",
+   "s": [
+    {
+     "d": "2026-04-06",
+     "a": 25,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 4194.31,
+     "post": 176.19
+    }
+   ],
+   "u": "2026-10-19"
+  },
+  "BKR": {
+   "n": "Baker Hughes",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BLK": {
+   "n": "BlackRock",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BMY": {
+   "n": "Bristol Myers Squibb",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BNY": {
+   "n": "BNY Mellon",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BR": {
+   "n": "Broadridge Financial Solutions",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BRK-B": {
+   "n": "Berkshire Hathaway",
+   "s": [
+    {
+     "d": "2010-01-21",
+     "a": 50,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 3476,
+     "post": 72.72
+    }
+   ],
+   "u": "2026-10-19"
+  },
+  "BRO": {
+   "n": "Brown & Brown",
+   "s": [
+    {
+     "d": "2018-03-29",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 51.02,
+     "post": 25.44
+    }
+   ],
+   "u": "2026-10-19"
+  },
+  "BSX": {
+   "n": "Boston Scientific",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BX": {
+   "n": "Blackstone Inc.",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BXP": {
+   "n": "BXP, Inc.",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "CHRW": {
+   "n": "C.H. Robinson",
+   "s": [],
+   "u": "2026-10-19"
   },
   "CMG": {
    "n": "Chipotle",
@@ -603,6 +817,21 @@
    "s": [],
    "u": "2026-10-15"
   },
+  "TECH": {
+   "n": "Bio-Techne",
+   "s": [
+    {
+     "d": "2022-11-30",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 327.07,
+     "post": 84.99
+    }
+   ],
+   "u": "2026-10-19"
+  },
   "TSLA": {
    "n": "Tesla",
    "s": [
@@ -655,20 +884,14 @@
    "n": "Exxon Mobil",
    "s": [],
    "u": "2026-10-15"
+  },
+  "XYZ": {
+   "n": "Block, Inc.",
+   "s": [],
+   "u": "2026-10-19"
   }
  },
  "upcoming": [
-  {
-   "t": "KNDI",
-   "n": "Kandi Technologies Group, Inc.",
-   "a": 1,
-   "b": 10,
-   "exDate": "2026-10-16",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-16"
-  },
   {
    "t": "AMTD",
    "n": "AMTD IDEA Group",
@@ -678,7 +901,51 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
+  },
+  {
+   "t": "CAPS",
+   "n": "Capstone Holding Corp.",
+   "a": 1,
+   "b": 30,
+   "exDate": "2026-10-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-19"
+  },
+  {
+   "t": "FRGT",
+   "n": "Freight Technologies, Inc.",
+   "a": 1,
+   "b": 10,
+   "exDate": "2026-10-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-19"
+  },
+  {
+   "t": "GP",
+   "n": "GreenPower Motor Company Inc.",
+   "a": 1,
+   "b": 5,
+   "exDate": "2026-10-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-19"
+  },
+  {
+   "t": "OBAI",
+   "n": "Our Bond, Inc.",
+   "a": 1,
+   "b": 20,
+   "exDate": "2026-10-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-19"
   },
   {
    "t": "LU",
@@ -689,7 +956,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   },
   {
    "t": "EFG",
@@ -700,7 +967,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   },
   {
    "t": "EFV",
@@ -711,7 +978,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   },
   {
    "t": "ITA",
@@ -722,7 +989,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   },
   {
    "t": "MTUM",
@@ -733,7 +1000,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   },
   {
    "t": "QUAL",
@@ -744,7 +1011,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   }
  ]
 }
