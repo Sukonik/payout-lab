@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-10-19T09:17:48.445Z",
- "upcomingAsOf": "2026-10-19",
+ "updated": "2026-10-20T08:52:13.336Z",
+ "upcomingAsOf": "2026-10-20",
  "tickers": {
   "AAPL": {
    "n": "Apple",
@@ -508,10 +508,144 @@
    "s": [],
    "u": "2026-10-19"
   },
+  "C": {
+   "n": "Citigroup",
+   "s": [
+    {
+     "d": "2011-05-09",
+     "a": 1,
+     "b": 10,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 4.52,
+     "post": 44.16
+    }
+   ],
+   "u": "2026-10-20"
+  },
+  "CAH": {
+   "n": "Cardinal Health",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CARR": {
+   "n": "Carrier Global",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CASY": {
+   "n": "Casey's",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CAT": {
+   "n": "Caterpillar Inc.",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CB": {
+   "n": "Chubb Limited",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CBOE": {
+   "n": "Cboe Global Markets",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CBRE": {
+   "n": "CBRE Group",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CCL": {
+   "n": "Carnival Corporation",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CDNS": {
+   "n": "Cadence Design Systems",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CDW": {
+   "n": "CDW Corporation",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CF": {
+   "n": "CF Industries",
+   "s": [
+    {
+     "d": "2015-06-18",
+     "a": 5,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 316.68,
+     "post": 64.25
+    }
+   ],
+   "u": "2026-10-20"
+  },
+  "CFG": {
+   "n": "Citizens Financial Group",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CHD": {
+   "n": "Church & Dwight",
+   "s": [
+    {
+     "d": "2011-06-02",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 82,
+     "post": 40.75
+    },
+    {
+     "d": "2016-09-02",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 99.75,
+     "post": 49.97
+    }
+   ],
+   "u": "2026-10-20"
+  },
   "CHRW": {
    "n": "C.H. Robinson",
    "s": [],
    "u": "2026-10-19"
+  },
+  "CHTR": {
+   "n": "Charter Communications",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CI": {
+   "n": "Cigna",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CIEN": {
+   "n": "Ciena",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CINF": {
+   "n": "Cincinnati Financial",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CLX": {
+   "n": "Clorox",
+   "s": [],
+   "u": "2026-10-20"
   },
   "CMG": {
    "n": "Chipotle",
@@ -520,11 +654,97 @@
      "d": "2024-06-26",
      "a": 50,
      "b": 1,
-     "src": "public record, not yet cross-checked",
-     "ver": 0
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 3283.04,
+     "post": 65.86
     }
    ],
-   "u": null
+   "u": "2026-10-20"
+  },
+  "CNC": {
+   "n": "Centene Corporation",
+   "s": [
+    {
+     "d": "2015-02-20",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 120.67,
+     "post": 59.85
+    },
+    {
+     "d": "2019-02-07",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 126.16,
+     "post": 63.91
+    }
+   ],
+   "u": "2026-10-20"
+  },
+  "CNP": {
+   "n": "CenterPoint Energy",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "COF": {
+   "n": "Capital One",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "COR": {
+   "n": "Cencora",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CPT": {
+   "n": "Camden Property Trust",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CRL": {
+   "n": "Charles River Laboratories",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CSCO": {
+   "n": "Cisco",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CTAS": {
+   "n": "Cintas",
+   "s": [
+    {
+     "d": "2024-09-12",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 819.83,
+     "post": 206.02
+    }
+   ],
+   "u": "2026-10-20"
+  },
+  "CVNA": {
+   "n": "Carvana",
+   "s": [
+    {
+     "d": "2026-05-08",
+     "a": 5,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 400.02,
+     "post": 77.94
+    }
+   ],
+   "u": "2026-10-20"
   },
   "CVX": {
    "n": "Chevron",
@@ -774,6 +994,11 @@
    ],
    "u": "2026-10-15"
   },
+  "SCHW": {
+   "n": "Charles Schwab Corporation",
+   "s": [],
+   "u": "2026-10-20"
+  },
   "SMCI": {
    "n": "Super Micro Computer",
    "s": [
@@ -893,59 +1118,26 @@
  },
  "upcoming": [
   {
-   "t": "AMTD",
-   "n": "AMTD IDEA Group",
-   "a": 1,
-   "b": 60,
-   "exDate": "2026-10-19",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-19"
-  },
-  {
-   "t": "CAPS",
-   "n": "Capstone Holding Corp.",
-   "a": 1,
-   "b": 30,
-   "exDate": "2026-10-19",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-19"
-  },
-  {
-   "t": "FRGT",
-   "n": "Freight Technologies, Inc.",
-   "a": 1,
-   "b": 10,
-   "exDate": "2026-10-19",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-19"
-  },
-  {
-   "t": "GP",
-   "n": "GreenPower Motor Company Inc.",
-   "a": 1,
-   "b": 5,
-   "exDate": "2026-10-19",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-19"
-  },
-  {
-   "t": "OBAI",
-   "n": "Our Bond, Inc.",
+   "t": "MBRX",
+   "n": "Moleculin Biotech, Inc.",
    "a": 1,
    "b": 20,
-   "exDate": "2026-10-19",
+   "exDate": "2026-10-20",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-19"
+   "asOf": "2026-10-20"
+  },
+  {
+   "t": "REVB",
+   "n": "Revelation Biosciences, Inc.",
+   "a": 1,
+   "b": 7,
+   "exDate": "2026-10-20",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-20"
   },
   {
    "t": "LU",
@@ -956,7 +1148,18 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-19"
+   "asOf": "2026-10-20"
+  },
+  {
+   "t": "NYSX",
+   "n": "Global X Funds Global X NYSE 100 ETF",
+   "a": 5,
+   "b": 1,
+   "exDate": "2026-10-30",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-20"
   },
   {
    "t": "EFG",
@@ -967,7 +1170,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-19"
+   "asOf": "2026-10-20"
   },
   {
    "t": "EFV",
@@ -978,7 +1181,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-19"
+   "asOf": "2026-10-20"
   },
   {
    "t": "ITA",
@@ -989,7 +1192,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-19"
+   "asOf": "2026-10-20"
   },
   {
    "t": "MTUM",
@@ -1000,7 +1203,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-19"
+   "asOf": "2026-10-20"
   },
   {
    "t": "QUAL",
@@ -1011,7 +1214,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-19"
+   "asOf": "2026-10-20"
   }
  ]
 }
