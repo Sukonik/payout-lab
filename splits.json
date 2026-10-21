@@ -1554,13 +1554,14 @@
   },
   {
    "t": "SOXX",
-   "n": "iShares PHLX SOX Semiconductor Sector Index Fund",
+   "n": "iShares Semiconductor ETF",
    "a": 3,
    "b": 1,
    "exDate": "2026-11-05",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "announced": "2026-08-21",
+   "status": "confirmed",
+   "src": "iShares Trust prospectus supplement (SEC 497)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001100663/000119312526361162/d133118d497.htm",
    "asOf": "2026-10-21"
   }
  ]

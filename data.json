@@ -24776,6 +24776,1563 @@
    ],
    "g3": 0.0465,
    "g5": 0.4615
+  },
+  "SOXX": {
+   "n": "iShares Semiconductor ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 510.21,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "NYSX": {
+   "n": "Global X NYSE 100 ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 126.32,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "BETZ": {
+   "n": "Roundhill Sports Betting & iGaming ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 16.8,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "CABZ": {
+   "n": "Roundhill Robotaxi, Autonomous Vehicles & Technology ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 18.24,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "CCML": {
+   "n": "Roundhill MLCC & Electronic Components ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 23.59,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "CHAT": {
+   "n": "Roundhill Generative AI & Technology ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 81.22,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "DRAM": {
+   "n": "Roundhill Memory ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 49.13,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "HUMN": {
+   "n": "Roundhill Humanoid Robotics ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 27.3,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "LOHA": {
+   "n": "Roundhill HALO ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 25.92,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "LYTE": {
+   "n": "Roundhill Photonics & Optics ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 20.39,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "MAGC": {
+   "n": "Roundhill China Magnificent Seven ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 17.56,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "MAGS": {
+   "n": "Roundhill Magnificent Seven ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 72.87,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "MARS": {
+   "n": "Roundhill Space & Technology ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 23.15,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "MEME": {
+   "n": "Roundhill Meme Stock ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 7.13,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "METV": {
+   "n": "Roundhill Metaverse ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 21.53,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "NCLD": {
+   "n": "Roundhill Neocloud ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 17.17,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "NERD": {
+   "n": "Roundhill Video Games ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 23.26,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "OZEM": {
+   "n": "Roundhill GLP-1 & Weight Loss ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 29.94,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "UX": {
+   "n": "Roundhill Uranium ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 27.94,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "WEED": {
+   "n": "Roundhill Cannabis ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 19.65,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "AAPW": {
+   "n": "Roundhill AAPL WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 41.63,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "AMDW": {
+   "n": "Roundhill AMD WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 86.76,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "AMZW": {
+   "n": "Roundhill AMZN WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 35.47,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "ARMW": {
+   "n": "Roundhill ARM WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 32.12,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "AVGW": {
+   "n": "Roundhill AVGO WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 29.64,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "BABW": {
+   "n": "Roundhill BABA WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 18.02,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "BRKW": {
+   "n": "Roundhill BRKB WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 41.28,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "COIW": {
+   "n": "Roundhill COIN WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 8.01,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "COSW": {
+   "n": "Roundhill COST WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 39.76,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "GOOW": {
+   "n": "Roundhill GOOGL WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 56.04,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "HOOW": {
+   "n": "Roundhill HOOD WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 23.03,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "METW": {
+   "n": "Roundhill META WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 27.2,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "MSFW": {
+   "n": "Roundhill MSFT WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 33.43,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "MSTW": {
+   "n": "Roundhill MSTR WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 4.66,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "NFLW": {
+   "n": "Roundhill NFLX WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 13.0,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "NVDW": {
+   "n": "Roundhill NVDA WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 35.07,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "PLTW": {
+   "n": "Roundhill PLTR WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 25.91,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "TSLW": {
+   "n": "Roundhill TSLA WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 18.28,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "UBEW": {
+   "n": "Roundhill UBER WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 22.47,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "UNHW": {
+   "n": "Roundhill UNH WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 48.75,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "GDXW": {
+   "n": "Roundhill Gold Miners WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 36.01,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "GLDW": {
+   "n": "Roundhill Gold WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 38.3,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "TOPW": {
+   "n": "Roundhill Top WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 33.38,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "TSYW": {
+   "n": "Roundhill Treasury Bond WeeklyPay ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 39.19,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "MAGY": {
+   "n": "Roundhill Magnificent Seven Covered Call ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 43.2,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "QDTE": {
+   "n": "Roundhill Nasdaq-100 0DTE Covered Call Strategy ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 28.46,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "RDTE": {
+   "n": "Roundhill Russell 2000 0DTE Covered Call Strategy ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 25.61,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "TPAY": {
+   "n": "Roundhill S&P 500 Target 10 Managed Distribution ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 53.58,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "WEEK": {
+   "n": "Roundhill Weekly T-Bill ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 100.02,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "XDTE": {
+   "n": "Roundhill S&P 500 0DTE Covered Call Strategy ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 38.33,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "XPAY": {
+   "n": "Roundhill S&P 500 Target 20 Managed Distribution ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 51.65,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "YBTC": {
+   "n": "Roundhill Bitcoin Covered Call Strategy ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 18.97,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "YETH": {
+   "n": "Roundhill Ether Covered Call Strategy ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 9.06,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "XBOX": {
+   "n": "Roundhill Box Spread ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 101.37,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "XDIV": {
+   "n": "Roundhill S&P 500 Accumulating ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 31.62,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "MAGX": {
+   "n": "Roundhill Daily 2X Long Magnificent Seven ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 63.21,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "RAM": {
+   "n": "Roundhill RAM 2X Long DRAM Daily Target ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 8.83,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "XX": {
+   "n": "Roundhill S&P 500 Target 10,000 2030 ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 25.65,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SCHA": {
+   "n": "Schwab U.S. Small-Cap ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 32.68,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SCHM": {
+   "n": "Schwab U.S. Mid-Cap ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 34.74,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SCHH": {
+   "n": "Schwab U.S. REIT ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 22.42,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SCHZ": {
+   "n": "Schwab U.S. Aggregate Bond ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 22.28,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SCHR": {
+   "n": "Schwab Intermediate-Term U.S. Treasury ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 23.85,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SCHI": {
+   "n": "Schwab 5-10 Year Corporate Bond ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 21.57,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SCHE": {
+   "n": "Schwab Emerging Markets Equity ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 35.78,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SCHC": {
+   "n": "Schwab International Small-Cap Equity ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 48.95,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SCHK": {
+   "n": "Schwab 1000 Index ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 37.15,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SCMB": {
+   "n": "Schwab Municipal Bond ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 24.44,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "FNDX": {
+   "n": "Schwab Fundamental U.S. Large Company ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 32.71,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "FNDF": {
+   "n": "Schwab Fundamental International Equity ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 54.13,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "FNDA": {
+   "n": "Schwab Fundamental U.S. Small Company ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 35.73,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "FNDE": {
+   "n": "Schwab Fundamental Emerging Markets Equity ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 42.39,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "FNDC": {
+   "n": "Schwab Fundamental International Small Company ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 49.6,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SCHJ": {
+   "n": "Schwab 1-5 Year Corporate Bond ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 24.15,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SCHQ": {
+   "n": "Schwab Long-Term U.S. Treasury ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 29.21,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SCYB": {
+   "n": "Schwab High Yield Bond ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 25.1,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VT": {
+   "n": "Vanguard Total World Stock ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 158.58,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VEU": {
+   "n": "Vanguard FTSE All-World ex-US ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 82.16,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VBR": {
+   "n": "Vanguard Small-Cap Value ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 239.29,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VBK": {
+   "n": "Vanguard Small-Cap Growth ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 335.21,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VOT": {
+   "n": "Vanguard Mid-Cap Growth ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 293.98,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VOE": {
+   "n": "Vanguard Mid-Cap Value ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 207.54,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VFH": {
+   "n": "Vanguard Financials ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 136.03,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VDE": {
+   "n": "Vanguard Energy ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 189.84,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VIS": {
+   "n": "Vanguard Industrials ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 321.82,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VOX": {
+   "n": "Vanguard Communication Services ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 187.54,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VAW": {
+   "n": "Vanguard Materials ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 226.66,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VCR": {
+   "n": "Vanguard Consumer Discretionary ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 385.29,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VCLT": {
+   "n": "Vanguard Long-Term Corporate Bond ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 69.83,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VGIT": {
+   "n": "Vanguard Intermediate-Term Treasury ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 57.01,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VGSH": {
+   "n": "Vanguard Short-Term Treasury ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 57.63,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VGLT": {
+   "n": "Vanguard Long-Term Treasury ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 51.48,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "BSV": {
+   "n": "Vanguard Short-Term Bond ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 76.53,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "BIV": {
+   "n": "Vanguard Intermediate-Term Bond ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 73.4,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "BLV": {
+   "n": "Vanguard Long-Term Bond ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 64.22,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VTEB": {
+   "n": "Vanguard Tax-Exempt Bond ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 48.0,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VGK": {
+   "n": "Vanguard FTSE Europe ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 87.57,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VPL": {
+   "n": "Vanguard FTSE Pacific ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 110.77,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "MGK": {
+   "n": "Vanguard Mega Cap Growth ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 91.6,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "MGV": {
+   "n": "Vanguard Mega Cap Value ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 166.7,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VV": {
+   "n": "Vanguard Large-Cap ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 356.47,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VXF": {
+   "n": "Vanguard Extended Market ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 231.86,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VTIP": {
+   "n": "Vanguard Short-Term Inflation-Protected Securities ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 48.67,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VMBS": {
+   "n": "Vanguard Mortgage-Backed Securities ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 44.88,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VIGI": {
+   "n": "Vanguard International Dividend Appreciation ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 97.95,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VUSB": {
+   "n": "Vanguard Ultra-Short Bond ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 49.5,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IWF": {
+   "n": "iShares Russell 1000 Growth ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 123.54,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IWB": {
+   "n": "iShares Russell 1000 ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 422.22,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IWV": {
+   "n": "iShares Russell 3000 ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 437.77,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IWR": {
+   "n": "iShares Russell Mid-Cap ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 110.18,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IWS": {
+   "n": "iShares Russell Mid-Cap Value ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 168.16,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IWP": {
+   "n": "iShares Russell Mid-Cap Growth ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 136.91,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IWO": {
+   "n": "iShares Russell 2000 Growth ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 350.54,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IWN": {
+   "n": "iShares Russell 2000 Value ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 210.98,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IJH": {
+   "n": "iShares Core S&P Mid-Cap ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 73.4,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IJR": {
+   "n": "iShares Core S&P Small-Cap ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 137.79,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IJK": {
+   "n": "iShares S&P Mid-Cap 400 Growth ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 109.87,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IJJ": {
+   "n": "iShares S&P Mid-Cap 400 Value ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 143.08,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IJS": {
+   "n": "iShares S&P Small-Cap 600 Value ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 130.03,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IJT": {
+   "n": "iShares S&P Small-Cap 600 Growth ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 162.06,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "EEM": {
+   "n": "iShares MSCI Emerging Markets ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 63.58,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "EFA": {
+   "n": "iShares MSCI EAFE ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 104.08,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IEMG": {
+   "n": "iShares Core MSCI Emerging Markets ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 77.69,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "EFG": {
+   "n": "iShares MSCI EAFE Growth ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 119.93,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "EFV": {
+   "n": "iShares MSCI EAFE Value ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 79.43,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "ITOT": {
+   "n": "iShares Core S&P Total U.S. Stock Market ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 168.4,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IXUS": {
+   "n": "iShares Core MSCI Total International Stock ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 94.08,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IUSG": {
+   "n": "iShares Core S&P U.S. Growth ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 192.13,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IUSV": {
+   "n": "iShares Core S&P U.S. Value ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 115.01,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IUSB": {
+   "n": "iShares Core Total USD Bond Market ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 44.42,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "MBB": {
+   "n": "iShares MBS ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 90.52,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "EMB": {
+   "n": "iShares J.P. Morgan USD Emerging Markets Bond ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 91.44,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IBIT": {
+   "n": "iShares Bitcoin Trust ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 47.82,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "ETHA": {
+   "n": "iShares Ethereum Trust ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 56.41,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IYW": {
+   "n": "iShares U.S. Technology ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 257.18,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IGV": {
+   "n": "iShares Expanded Tech-Software Sector ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 108.89,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IGM": {
+   "n": "iShares Expanded Tech Sector ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 162.69,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IXN": {
+   "n": "iShares Global Tech ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 141.24,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IYF": {
+   "n": "iShares U.S. Financials ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 130.29,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IYH": {
+   "n": "iShares U.S. Healthcare ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 75.24,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IYE": {
+   "n": "iShares U.S. Energy ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 71.69,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IYJ": {
+   "n": "iShares U.S. Industrials ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 158.12,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IYK": {
+   "n": "iShares U.S. Consumer Staples ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 76.65,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IYC": {
+   "n": "iShares U.S. Consumer Discretionary ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 99.88,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IYM": {
+   "n": "iShares U.S. Basic Materials ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 183.28,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IYR": {
+   "n": "iShares U.S. Real Estate ETF",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 97.08,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IYZ": {
+   "n": "iShares U.S. Telecommunications ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 39.5,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "ITA": {
+   "n": "iShares U.S. Aerospace & Defense ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 205.7,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "ICLN": {
+   "n": "iShares Global Clean Energy ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 16.51,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "MTUM": {
+   "n": "iShares MSCI USA Momentum Factor ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 299.61,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "QUAL": {
+   "n": "iShares MSCI USA Quality Factor ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 226.06,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "USMV": {
+   "n": "iShares MSCI USA Min Vol Factor ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 102.38,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "VLUE": {
+   "n": "iShares MSCI USA Value Factor ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 194.48,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SIZE": {
+   "n": "iShares MSCI USA Size Factor ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 180.15,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IGF": {
+   "n": "iShares Global Infrastructure ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 64.43,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IFRA": {
+   "n": "iShares U.S. Infrastructure ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 56.97,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IBB": {
+   "n": "iShares Biotechnology ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 211.54,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "ITB": {
+   "n": "iShares U.S. Home Construction ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 86.58,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IAI": {
+   "n": "iShares U.S. Broker-Dealers & Securities Exchanges ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 178.92,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IAK": {
+   "n": "iShares U.S. Insurance ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 146.76,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IHI": {
+   "n": "iShares U.S. Medical Devices ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 53.41,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IHF": {
+   "n": "iShares U.S. Healthcare Providers ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 59.96,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "EWJ": {
+   "n": "iShares MSCI Japan ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 95.69,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "EWZ": {
+   "n": "iShares MSCI Brazil ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 42.51,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "EWY": {
+   "n": "iShares MSCI South Korea ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 156.81,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "EWT": {
+   "n": "iShares MSCI Taiwan ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 109.01,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "INDA": {
+   "n": "iShares MSCI India ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 47.31,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "FXI": {
+   "n": "iShares China Large-Cap ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 32.96,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "ACWI": {
+   "n": "iShares MSCI ACWI ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 159.56,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "URTH": {
+   "n": "iShares MSCI World ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 208.57,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "IAU": {
+   "n": "iShares Gold Trust",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 77.71,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "SLV": {
+   "n": "iShares Silver Trust",
+   "q": false,
+   "type": "ETF_PASS_THROUGH",
+   "p": 52.26,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
+  },
+  "EZU": {
+   "n": "iShares MSCI Eurozone ETF",
+   "q": true,
+   "type": "ETF_PASS_THROUGH",
+   "p": 66.08,
+   "d": 0,
+   "src": "seed",
+   "s": "Q3"
   }
  }
 }
