@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-10-21T08:52:01.274Z",
- "upcomingAsOf": "2026-10-21",
+ "updated": "2026-10-22T08:54:40.311Z",
+ "upcomingAsOf": "2026-10-22",
  "tickers": {
   "AAPL": {
    "n": "Apple",
@@ -992,10 +992,54 @@
    "s": [],
    "u": "2026-10-15"
   },
+  "D": {
+   "n": "Dominion Energy",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DAL": {
+   "n": "Delta Air Lines",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DASH": {
+   "n": "DoorDash",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DD": {
+   "n": "DuPont",
+   "s": [
+    {
+     "d": "2019-06-03",
+     "a": 1,
+     "b": 3,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 30.52,
+     "post": 76.1
+    },
+    {
+     "d": "2026-06-24",
+     "a": 1,
+     "b": 3,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 46.67,
+     "post": 137.82
+    }
+   ],
+   "u": "2026-10-22"
+  },
   "DDOG": {
    "n": "Datadog",
    "s": [],
    "u": "2026-10-21"
+  },
+  "DE": {
+   "n": "Deere & Company",
+   "s": [],
+   "u": "2026-10-22"
   },
   "DECK": {
    "n": "Deckers Brands",
@@ -1021,10 +1065,25 @@
    ],
    "u": "2026-10-21"
   },
+  "DELL": {
+   "n": "Dell Technologies",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DG": {
+   "n": "Dollar General",
+   "s": [],
+   "u": "2026-10-22"
+  },
   "DGRO": {
    "n": "iShares Core Dividend Growth ETF",
    "s": [],
    "u": "2026-10-15"
+  },
+  "DHI": {
+   "n": "D. R. Horton",
+   "s": [],
+   "u": "2026-10-22"
   },
   "DHR": {
    "n": "Danaher Corporation",
@@ -1041,10 +1100,74 @@
    ],
    "u": "2026-10-21"
   },
+  "DLR": {
+   "n": "Digital Realty",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DLTR": {
+   "n": "Dollar Tree",
+   "s": [
+    {
+     "d": "2010-06-25",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 62.69,
+     "post": 42.01
+    },
+    {
+     "d": "2012-06-27",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 110.98,
+     "post": 53.48
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "DOV": {
+   "n": "Dover Corporation",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DOW": {
+   "n": "Dow Inc.",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DPZ": {
+   "n": "Domino's",
+   "s": [],
+   "u": "2026-10-22"
+  },
   "DRI": {
    "n": "Darden Restaurants",
    "s": [],
    "u": "2026-10-21"
+  },
+  "DTE": {
+   "n": "DTE Energy",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DUK": {
+   "n": "Duke Energy",
+   "s": [
+    {
+     "d": "2012-07-03",
+     "a": 1,
+     "b": 3,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 23.28,
+     "post": 68.69
+    }
+   ],
+   "u": "2026-10-22"
   },
   "DVA": {
    "n": "DaVita",
@@ -1061,10 +1184,153 @@
    ],
    "u": "2026-10-21"
   },
+  "DVN": {
+   "n": "Devon Energy",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DXCM": {
+   "n": "Dexcom",
+   "s": [
+    {
+     "d": "2022-06-13",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 293.85,
+     "post": 68.06
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "EBAY": {
+   "n": "eBay Inc.",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "ECHO": {
+   "n": "EchoStar",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "ECL": {
+   "n": "Ecolab",
+   "s": [],
+   "u": "2026-10-22"
+  },
   "ED": {
    "n": "Consolidated Edison",
    "s": [],
    "u": "2026-10-21"
+  },
+  "EIX": {
+   "n": "Edison International",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "ELV": {
+   "n": "Elevance Health",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "EME": {
+   "n": "Emcor",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "EMR": {
+   "n": "Emerson Electric",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "EOG": {
+   "n": "EOG Resources",
+   "s": [
+    {
+     "d": "2014-04-01",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 196.17,
+     "post": 98.98
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "EQT": {
+   "n": "EQT Corporation",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "ETN": {
+   "n": "Eaton Corporation",
+   "s": [
+    {
+     "d": "2011-03-01",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 110.78,
+     "post": 53.55
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "ETR": {
+   "n": "Entergy",
+   "s": [
+    {
+     "d": "2024-12-13",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 148.27,
+     "post": 74.24
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "EW": {
+   "n": "Edwards Lifesciences",
+   "s": [
+    {
+     "d": "2010-05-28",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 103.85,
+     "post": 50.53
+    },
+    {
+     "d": "2015-12-14",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 159.71,
+     "post": 80.53
+    },
+    {
+     "d": "2020-06-01",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 224.72,
+     "post": 74.27
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "FANG": {
+   "n": "Diamondback Energy",
+   "s": [],
+   "u": "2026-10-22"
   },
   "FIX": {
    "n": "Comfort Systems USA",
@@ -1443,15 +1709,26 @@
  },
  "upcoming": [
   {
-   "t": "EHGO",
-   "n": "Eshallgo Inc.",
+   "t": "AXNX",
+   "n": "Axonex AI Group Limited",
    "a": 1,
-   "b": 5,
-   "exDate": "2026-10-21",
+   "b": 3,
+   "exDate": "2026-10-22",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-21"
+   "asOf": "2026-10-22"
+  },
+  {
+   "t": "DKI",
+   "n": "DarkIris Inc.",
+   "a": 1,
+   "b": 50,
+   "exDate": "2026-10-22",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-22"
   },
   {
    "t": "LU",
@@ -1462,7 +1739,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-21"
+   "asOf": "2026-10-22"
   },
   {
    "t": "BUUU",
@@ -1473,7 +1750,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-21"
+   "asOf": "2026-10-22"
   },
   {
    "t": "ENHA",
@@ -1484,7 +1761,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-21"
+   "asOf": "2026-10-22"
   },
   {
    "t": "NYSX",
@@ -1495,7 +1772,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-21"
+   "asOf": "2026-10-22"
   },
   {
    "t": "EFG",
@@ -1506,7 +1783,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-21"
+   "asOf": "2026-10-22"
   },
   {
    "t": "EFV",
@@ -1517,7 +1794,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-21"
+   "asOf": "2026-10-22"
   },
   {
    "t": "ITA",
@@ -1528,7 +1805,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-21"
+   "asOf": "2026-10-22"
   },
   {
    "t": "MTUM",
@@ -1539,7 +1816,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-21"
+   "asOf": "2026-10-22"
   },
   {
    "t": "QUAL",
@@ -1550,7 +1827,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-21"
+   "asOf": "2026-10-22"
   },
   {
    "t": "SOXX",
@@ -1561,7 +1838,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-21"
+   "asOf": "2026-10-22"
   }
  ]
 }
