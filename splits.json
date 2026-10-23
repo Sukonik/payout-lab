@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-10-22T08:54:40.311Z",
- "upcomingAsOf": "2026-10-22",
+ "updated": "2026-10-23T08:49:51.552Z",
+ "upcomingAsOf": "2026-10-23",
  "tickers": {
   "AAPL": {
    "n": "Apple",
@@ -1224,10 +1224,44 @@
    "s": [],
    "u": "2026-10-21"
   },
+  "EFX": {
+   "n": "Equifax",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "EG": {
+   "n": "Everest Group",
+   "s": [],
+   "u": "2026-10-23"
+  },
   "EIX": {
    "n": "Edison International",
    "s": [],
    "u": "2026-10-22"
+  },
+  "EL": {
+   "n": "Estée Lauder Companies (The)",
+   "s": [
+    {
+     "d": "2011-11-23",
+     "a": 21,
+     "b": 20,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 110.98,
+     "post": 107.61
+    },
+    {
+     "d": "2012-01-23",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 116.03,
+     "post": 57.48
+    }
+   ],
+   "u": "2026-10-23"
   },
   "ELV": {
    "n": "Elevance Health",
@@ -1259,10 +1293,30 @@
    ],
    "u": "2026-10-22"
   },
+  "EQIX": {
+   "n": "Equinix",
+   "s": [],
+   "u": "2026-10-23"
+  },
   "EQT": {
    "n": "EQT Corporation",
    "s": [],
    "u": "2026-10-22"
+  },
+  "ERIE": {
+   "n": "Erie Indemnity",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "ES": {
+   "n": "Eversource Energy",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "ESS": {
+   "n": "Essex Property Trust",
+   "s": [],
+   "u": "2026-10-23"
   },
   "ETN": {
    "n": "Eaton Corporation",
@@ -1293,6 +1347,11 @@
     }
    ],
    "u": "2026-10-22"
+  },
+  "EVRG": {
+   "n": "Evergy",
+   "s": [],
+   "u": "2026-10-23"
   },
   "EW": {
    "n": "Edwards Lifesciences",
@@ -1327,15 +1386,186 @@
    ],
    "u": "2026-10-22"
   },
+  "EXC": {
+   "n": "Exelon",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "EXE": {
+   "n": "Expand Energy",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "EXPD": {
+   "n": "Expeditors International",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "EXPE": {
+   "n": "Expedia Group",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "EXR": {
+   "n": "Extra Space Storage",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "F": {
+   "n": "Ford Motor Company",
+   "s": [],
+   "u": "2026-10-23"
+  },
   "FANG": {
    "n": "Diamondback Energy",
    "s": [],
    "u": "2026-10-22"
   },
+  "FAST": {
+   "n": "Fastenal",
+   "s": [
+    {
+     "d": "2011-05-23",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 65.71,
+     "post": 32.4
+    },
+    {
+     "d": "2019-05-23",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 64.28,
+     "post": 31.34
+    },
+    {
+     "d": "2025-05-22",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 81.46,
+     "post": 40.715
+    }
+   ],
+   "u": "2026-10-23"
+  },
+  "FDS": {
+   "n": "FactSet",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FDX": {
+   "n": "FedEx",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FDXF": {
+   "n": "FedEx Freight",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FE": {
+   "n": "FirstEnergy",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FERG": {
+   "n": "Ferguson Enterprises",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FFIV": {
+   "n": "F5, Inc.",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FICO": {
+   "n": "Fair Isaac",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FIS": {
+   "n": "Fidelity National Information Services",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FISV": {
+   "n": "Fiserv",
+   "s": [
+    {
+     "d": "2013-12-17",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 113.38,
+     "post": 56.61
+    },
+    {
+     "d": "2018-03-20",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 147.24,
+     "post": 73.46
+    }
+   ],
+   "u": "2026-10-23"
+  },
+  "FITB": {
+   "n": "Fifth Third Bancorp",
+   "s": [],
+   "u": "2026-10-23"
+  },
   "FIX": {
    "n": "Comfort Systems USA",
    "s": [],
    "u": "2026-10-21"
+  },
+  "FLEX": {
+   "n": "Flex Ltd.",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FRT": {
+   "n": "Federal Realty Investment Trust",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FSLR": {
+   "n": "First Solar",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FTNT": {
+   "n": "Fortinet",
+   "s": [
+    {
+     "d": "2011-06-02",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 49.7,
+     "post": 23.51
+    },
+    {
+     "d": "2022-06-23",
+     "a": 5,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 278.44,
+     "post": 56.8
+    }
+   ],
+   "u": "2026-10-23"
   },
   "GLW": {
    "n": "Corning Inc.",
@@ -1526,6 +1756,11 @@
    ],
    "u": null
   },
+  "P": {
+   "n": "Everpure",
+   "s": [],
+   "u": "2026-10-23"
+  },
   "PEP": {
    "n": "PepsiCo",
    "s": [],
@@ -1709,26 +1944,15 @@
  },
  "upcoming": [
   {
-   "t": "AXNX",
-   "n": "Axonex AI Group Limited",
+   "t": "HCAI",
+   "n": "Huachen AI Parking Management Technology Holding Co., Ltd.",
    "a": 1,
-   "b": 3,
-   "exDate": "2026-10-22",
+   "b": 20,
+   "exDate": "2026-10-23",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-22"
-  },
-  {
-   "t": "DKI",
-   "n": "DarkIris Inc.",
-   "a": 1,
-   "b": 50,
-   "exDate": "2026-10-22",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-22"
+   "asOf": "2026-10-23"
   },
   {
    "t": "LU",
@@ -1739,7 +1963,40 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-22"
+   "asOf": "2026-10-23"
+  },
+  {
+   "t": "NIVF",
+   "n": "NewGenIvf Group Limited",
+   "a": 1,
+   "b": 8,
+   "exDate": "2026-10-23",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-23"
+  },
+  {
+   "t": "PASW",
+   "n": "Ping An Biomedical Co., Ltd.",
+   "a": 1,
+   "b": 40,
+   "exDate": "2026-10-23",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-23"
+  },
+  {
+   "t": "BUUU",
+   "n": "BUUU Group Limited",
+   "a": 10,
+   "b": 1,
+   "exDate": "2026-10-26",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-23"
   },
   {
    "t": "BUUU",
@@ -1747,7 +2004,7 @@
    "a": 10,
    "b": 1,
    "exDate": "2026-10-27",
-   "status": "announced",
+   "status": "unverified",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
    "asOf": "2026-10-22"
@@ -1761,7 +2018,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-22"
+   "asOf": "2026-10-23"
   },
   {
    "t": "NYSX",
@@ -1772,7 +2029,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-22"
+   "asOf": "2026-10-23"
   },
   {
    "t": "EFG",
@@ -1783,7 +2040,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-22"
+   "asOf": "2026-10-23"
   },
   {
    "t": "EFV",
@@ -1794,7 +2051,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-22"
+   "asOf": "2026-10-23"
   },
   {
    "t": "ITA",
@@ -1805,7 +2062,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-22"
+   "asOf": "2026-10-23"
   },
   {
    "t": "MTUM",
@@ -1816,7 +2073,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-22"
+   "asOf": "2026-10-23"
   },
   {
    "t": "QUAL",
@@ -1827,7 +2084,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-22"
+   "asOf": "2026-10-23"
   },
   {
    "t": "SOXX",
@@ -1838,7 +2095,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-22"
+   "asOf": "2026-10-23"
   }
  ]
 }
