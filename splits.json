@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-10-23T08:49:51.552Z",
- "upcomingAsOf": "2026-10-23",
+ "updated": "2026-10-26T09:20:57.440Z",
+ "upcomingAsOf": "2026-10-26",
  "tickers": {
   "AAPL": {
    "n": "Apple",
@@ -379,6 +379,21 @@
    "n": "Bloom Energy",
    "s": [],
    "u": "2026-10-19"
+  },
+  "BEN": {
+   "n": "Franklin Resources",
+   "s": [
+    {
+     "d": "2013-07-26",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 143.95,
+     "post": 48.66
+    }
+   ],
+   "u": "2026-10-26"
   },
   "BF-B": {
    "n": "Brown–Forman",
@@ -1129,6 +1144,11 @@
    ],
    "u": "2026-10-22"
   },
+  "DOC": {
+   "n": "Healthpeak Properties",
+   "s": [],
+   "u": "2026-10-26"
+  },
   "DOV": {
    "n": "Dover Corporation",
    "s": [],
@@ -1454,6 +1474,21 @@
    ],
    "u": "2026-10-23"
   },
+  "FCX": {
+   "n": "Freeport-McMoRan",
+   "s": [
+    {
+     "d": "2011-02-02",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 114.07,
+     "post": 56.26
+    }
+   ],
+   "u": "2026-10-26"
+  },
   "FDS": {
    "n": "FactSet",
    "s": [],
@@ -1533,6 +1568,16 @@
    "s": [],
    "u": "2026-10-23"
   },
+  "FOX": {
+   "n": "Fox Corporation (Class B)",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "FOXA": {
+   "n": "Fox Corporation (Class A)",
+   "s": [],
+   "u": "2026-10-26"
+  },
   "FRT": {
    "n": "Federal Realty Investment Trust",
    "s": [],
@@ -1567,10 +1612,119 @@
    ],
    "u": "2026-10-23"
   },
+  "FTV": {
+   "n": "Fortive",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GD": {
+   "n": "General Dynamics",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GDDY": {
+   "n": "GoDaddy",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GE": {
+   "n": "GE Aerospace",
+   "s": [
+    {
+     "d": "2021-08-02",
+     "a": 1,
+     "b": 8,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 12.95,
+     "post": 100.6
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "GEHC": {
+   "n": "GE HealthCare",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GEN": {
+   "n": "Gen Digital",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GEV": {
+   "n": "GE Vernova",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GILD": {
+   "n": "Gilead Sciences",
+   "s": [
+    {
+     "d": "2013-01-28",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 79.36,
+     "post": 39.44
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "GIS": {
+   "n": "General Mills",
+   "s": [
+    {
+     "d": "2010-06-09",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 75.14,
+     "post": 37.5
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "GL": {
+   "n": "Globe Life",
+   "s": [
+    {
+     "d": "2011-07-05",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 64.53,
+     "post": 42.93
+    },
+    {
+     "d": "2014-07-02",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 82.6189,
+     "post": 54.83
+    }
+   ],
+   "u": "2026-10-26"
+  },
   "GLW": {
    "n": "Corning Inc.",
    "s": [],
    "u": "2026-10-21"
+  },
+  "GM": {
+   "n": "General Motors",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GNRC": {
+   "n": "Generac",
+   "s": [],
+   "u": "2026-10-26"
   },
   "GOOG": {
    "n": "Alphabet Inc. (Class C)",
@@ -1602,10 +1756,105 @@
    ],
    "u": "2026-10-15"
   },
+  "GPC": {
+   "n": "Genuine Parts Company",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GPN": {
+   "n": "Global Payments",
+   "s": [
+    {
+     "d": "2015-11-03",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 136.23,
+     "post": 67.56
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "GRMN": {
+   "n": "Garmin",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GS": {
+   "n": "Goldman Sachs",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "HAL": {
+   "n": "Halliburton",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "HAS": {
+   "n": "Hasbro",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "HCA": {
+   "n": "HCA Healthcare",
+   "s": [],
+   "u": "2026-10-26"
+  },
   "HD": {
    "n": "Home Depot",
    "s": [],
    "u": "2026-10-15"
+  },
+  "HIG": {
+   "n": "Hartford (The)",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "HLT": {
+   "n": "Hilton Worldwide",
+   "s": [
+    {
+     "d": "2017-01-04",
+     "a": 1,
+     "b": 3,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 27.39,
+     "post": 58
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "HPE": {
+   "n": "Hewlett Packard Enterprise",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "HSIC": {
+   "n": "Henry Schein",
+   "s": [
+    {
+     "d": "2017-09-15",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 161.15,
+     "post": 82.88
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "HSY": {
+   "n": "Hershey Company (The)",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "IT": {
+   "n": "Gartner",
+   "s": [],
+   "u": "2026-10-26"
   },
   "JEPI": {
    "n": "JPMorgan Equity Premium Income ETF",
@@ -1944,48 +2193,15 @@
  },
  "upcoming": [
   {
-   "t": "HCAI",
-   "n": "Huachen AI Parking Management Technology Holding Co., Ltd.",
-   "a": 1,
-   "b": 20,
-   "exDate": "2026-10-23",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-23"
-  },
-  {
-   "t": "LU",
-   "n": "Lufax Holding Ltd",
-   "a": 1,
-   "b": 10,
-   "exDate": "2026-10-23",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-23"
-  },
-  {
-   "t": "NIVF",
-   "n": "NewGenIvf Group Limited",
+   "t": "BDRX",
+   "n": "Biodexa Pharmaceuticals plc",
    "a": 1,
    "b": 8,
-   "exDate": "2026-10-23",
+   "exDate": "2026-10-26",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-23"
-  },
-  {
-   "t": "PASW",
-   "n": "Ping An Biomedical Co., Ltd.",
-   "a": 1,
-   "b": 40,
-   "exDate": "2026-10-23",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-23"
+   "asOf": "2026-10-26"
   },
   {
    "t": "BUUU",
@@ -1996,7 +2212,117 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-23"
+   "asOf": "2026-10-26"
+  },
+  {
+   "t": "COCH",
+   "n": "Envoy Medical, Inc.",
+   "a": 1,
+   "b": 10,
+   "exDate": "2026-10-26",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-26"
+  },
+  {
+   "t": "GCTK",
+   "n": "GlucoTrack, Inc.",
+   "a": 1,
+   "b": 2,
+   "exDate": "2026-10-26",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-26"
+  },
+  {
+   "t": "HCTI",
+   "n": "Healthcare Triangle, Inc.",
+   "a": 1,
+   "b": 20,
+   "exDate": "2026-10-26",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-26"
+  },
+  {
+   "t": "HKPD",
+   "n": "Cellyan Biotechnology Co., Ltd",
+   "a": 1,
+   "b": 20,
+   "exDate": "2026-10-26",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-26"
+  },
+  {
+   "t": "IPW",
+   "n": "iPower Inc.",
+   "a": 1,
+   "b": 12,
+   "exDate": "2026-10-26",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-26"
+  },
+  {
+   "t": "LHSW",
+   "n": "Lianhe Sowell International Group Ltd",
+   "a": 1,
+   "b": 8,
+   "exDate": "2026-10-26",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-26"
+  },
+  {
+   "t": "PPCB",
+   "n": "Propanc Biopharma, Inc.",
+   "a": 1,
+   "b": 10,
+   "exDate": "2026-10-26",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-26"
+  },
+  {
+   "t": "SBFM",
+   "n": "Sunshine Biopharma Inc.",
+   "a": 1,
+   "b": 20,
+   "exDate": "2026-10-26",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-26"
+  },
+  {
+   "t": "SXTC",
+   "n": "China SXT Pharmaceuticals, Inc.",
+   "a": 1,
+   "b": 100,
+   "exDate": "2026-10-26",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-26"
+  },
+  {
+   "t": "TWG",
+   "n": "Top Wealth Group Holding Limited",
+   "a": 1,
+   "b": 100,
+   "exDate": "2026-10-26",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-26"
   },
   {
    "t": "BUUU",
@@ -2018,7 +2344,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-23"
+   "asOf": "2026-10-26"
   },
   {
    "t": "NYSX",
@@ -2029,7 +2355,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-23"
+   "asOf": "2026-10-26"
   },
   {
    "t": "EFG",
@@ -2040,7 +2366,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-23"
+   "asOf": "2026-10-26"
   },
   {
    "t": "EFV",
@@ -2051,7 +2377,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-23"
+   "asOf": "2026-10-26"
   },
   {
    "t": "ITA",
@@ -2062,7 +2388,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-23"
+   "asOf": "2026-10-26"
   },
   {
    "t": "MTUM",
@@ -2073,7 +2399,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-23"
+   "asOf": "2026-10-26"
   },
   {
    "t": "QUAL",
@@ -2084,7 +2410,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-23"
+   "asOf": "2026-10-26"
   },
   {
    "t": "SOXX",
@@ -2095,7 +2421,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-23"
+   "asOf": "2026-10-26"
   }
  ]
 }
