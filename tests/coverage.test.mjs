@@ -37,3 +37,15 @@ test("coverage counts ETFs and stocks separately", () => {
   const c = coverage({ A: { type: "ETF_PASS_THROUGH" }, B: { type: "EQUITY_STANDARD" } }, { C: { type: "ETF_PASS_THROUGH" }, B: { type: "EQUITY_STANDARD" } });
   assert.deepEqual(c, { stocks: 1, etfs: 2 });
 });
+
+import { coverageBlock, applyBlock } from "../scripts/update-readme-coverage.mjs";
+
+test("the README coverage block is rewritten between its markers and nothing else changes", () => {
+  const block = coverageBlock({ tickers: { A: { type: "ETF_PASS_THROUGH" }, B: {} } }, { C: { type: "ETF_PASS_THROUGH" }, A: { type: "ETF_PASS_THROUGH" } }, "2026-10-27");
+  assert.match(block, /1 stocks and 1 ETFs have live data \(2 tickers\)/);
+  assert.match(block, /1 more are in/);
+  const out = applyBlock("top\n<!-- coverage:start -->\nold\n<!-- coverage:end -->\nbottom", block);
+  assert.ok(out.startsWith("top\n") && out.endsWith("\nbottom"));
+  assert.equal(out.includes("old"), false);
+  assert.equal(applyBlock("no markers", block), null);
+});
