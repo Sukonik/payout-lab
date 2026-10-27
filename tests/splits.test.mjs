@@ -94,9 +94,11 @@ test("the ledger is newest first, filters by kind and search, and groups by year
   const rows = ledger(file, { GOOGL: { p: 300 } });
   assert.ok(rows.every((r, i) => i === 0 || rows[i - 1].d >= r.d));
   assert.ok(filterLedger(rows).every((r) => r.kind === "forward") && !filterLedger(rows).some((r) => r.t === "LCID"));
-  assert.deepEqual(filterLedger(rows, { kind: "reverse" }).map((r) => r.t), ["LCID"]);
+  const rev = filterLedger(rows, { kind: "reverse" });
+  assert.ok(rev.length > 0 && rev.every((r) => r.kind === "reverse") && rev.some((r) => r.t === "LCID"), "reverse lists only reverse splits, including Lucid (the live data holds more than Lucid now)");
   assert.ok(filterLedger(rows, { kind: "all" }).some((r) => r.t === "LCID"));
-  assert.deepEqual(filterLedger(rows, { kind: "all", query: "alpha" }).map((r) => r.t), ["GOOGL"]);
+  const alpha = filterLedger(rows, { kind: "all", query: "alpha" });
+  assert.ok(alpha.some((r) => r.t === "GOOGL") && alpha.every((r) => /alpha/i.test(`${r.t} ${r.n || r.name || ""}`)), "searching by company name finds Alphabet (and its other share class)");
   assert.deepEqual(filterLedger(rows, { kind: "all", since: "2025-01-01" }).map((r) => r.d.slice(0, 4)).filter((y) => y < "2025"), []);
   const years = yearGroups(filterLedger(rows, { kind: "all" })).map((g) => g.year);
   assert.deepEqual(years, [...new Set(years)], "each year appears once");
