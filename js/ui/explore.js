@@ -20,6 +20,14 @@ function histHtml(e) {
   return o;
 }
 
+// A split changes the share count and the price, not what a holding is worth. f is shares after per share before.
+export const splitLabel = (f) => (f >= 1 ? `${+f.toFixed(4)}-for-1 split` : `1-for-${+(1 / f).toFixed(2)} reverse split`);
+
+function splitHtml(e) {
+  if (!e.sp || !e.sp.length) return "";
+  return `<p class="note"><b>Split history:</b> ${e.sp.map((x) => `${esc(splitLabel(x.f))} on ${esc(x.d)}`).join("; ")}. A split changes the share count and the price, not the value of what you own.</p>`;
+}
+
 export function fillTickers() {
   const T = getMarket().tickers;
   $("tickers").innerHTML = Object.keys(T).map((k) => `<option value="${esc(k)}">${esc(T[k].n)}</option>`).join("");
@@ -42,9 +50,10 @@ export function renderExplore() {
         `<div><span>Ex-dividend months</span><b style="font-size:1rem">${SCHED_LABEL[e.s]}</b></div></div>` +
         (hint ? `<p class="note">${esc(hint)}</p>` : "") +
         histHtml(e) +
+        splitHtml(e) +
         `<p class="note">100 shares would pay about ${money(pp * 100, 2)} each time and ${money(e.d * 100, 2)} over the last 12 months.</p>` +
         `<p class="note muted">Months come from ex-dividend dates; cash usually arrives a few weeks later and exact pay dates are not available yet. Special one-time payments are not separated from regular ones.</p>`
-      : `<div class="psbig"><div><span>${esc(q)}</span><b>No dividend</b></div></div><p class="note">No dividend was reported for this ticker in the last 12 months.</p>`;
+      : `<div class="psbig"><div><span>${esc(q)}</span><b>No dividend</b></div></div><p class="note">No dividend was reported for this ticker in the last 12 months.</p>${splitHtml(e)}`;
   } else card.innerHTML = "";
   $("psRows").innerHTML = keys.length
     ? keys.map((k) => { const e = T[k]; return `<tr><td><b>${esc(k)}</b>${e.est ? '<span class="badge">estimate</span>' : ""}<div class="sub">${esc(e.n)}</div></td><td class="num hide-s">${money(e.p, 2)}</td><td class="num"><b>${e.d > 0 ? money(per(e), 4) : "—"}</b></td><td class="hide-s">${e.d > 0 ? SCHED_LABEL[e.s] : "No dividend"}</td><td class="num">${money(e.d, 2)}</td><td class="num">${pct(e.p > 0 ? e.d / e.p : 0, 2)}</td><td><button class="btn ghost sm" data-add="${esc(k)}" aria-label="Add ${esc(k)} to portfolio">Add</button></td></tr>`; }).join("") +
