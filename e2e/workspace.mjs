@@ -67,14 +67,14 @@ for (const [w, h] of [[320, 640], [360, 740], [390, 844], [768, 1024], [1280, 86
   const q = await open(ctx, "#/portfolio");
   await q.click("#sampleBtn");
   let bad = [];
-  for (const v of ["overview", "portfolio", "lab", "receipts", "explore"]) {
+  for (const v of ["overview", "portfolio", "lab", "receipts", "explore", "splits"]) {
     await go(q, v); await q.waitForTimeout(120);
     const o = await q.evaluate(() => ({ sw: document.documentElement.scrollWidth, iw: window.innerWidth }));
     if (o.sw > o.iw + 1) bad.push(`${v} ${o.sw}>${o.iw}`);
   }
   check(`${w}px wide`, bad.length === 0, bad.join(", "));
   if (w === 390) {
-    check("bottom nav visible on phones with five items", (await q.isVisible("#bottomnav")) && (await q.locator("#bottomnav a").count()) === 5);
+    check("bottom nav visible on phones with six items", (await q.isVisible("#bottomnav")) && (await q.locator("#bottomnav a").count()) === 6);
     check("desktop tabs hidden on phones", !(await q.isVisible("#tabs")));
     const small = await q.evaluate(() => [...document.querySelectorAll("button,a.btn,#bottomnav a,input:not([type=range]):not([type=checkbox]),select")].filter((e) => e.offsetParent && !e.closest("dialog:not([open])")).map((e) => { const r = e.getBoundingClientRect(); return { n: (e.id || e.className || e.tagName).toString().slice(0, 20), h: r.height, w: r.width }; }).filter((x) => x.h < 36 || x.w < 36));
     check("touch targets are at least 36px", small.length === 0, JSON.stringify(small.slice(0, 5)));

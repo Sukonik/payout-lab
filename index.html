@@ -303,6 +303,49 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
       </div>
     </section>
   </section>
+  <section class="view" id="view-splits" data-view="splits" aria-labelledby="h-splits" hidden>
+    <h1 class="vh" id="h-splits" tabindex="-1">Splits</h1>
+    <section class="card" aria-labelledby="h-spintro">
+      <div class="card-h"><h2 id="h-spintro">Stock splits</h2><span class="hint" id="spCount"></span></div>
+      <p class="lede">A split changes <b>how many shares you hold and what each one costs</b>, not what you own. A forward split (Alphabet, 20-for-1) makes each share cheaper to buy. A reverse split (Lucid, 1-for-10) does the opposite. This tab shows what happened and what has been announced. It does not predict splits or tell you what to buy.</p>
+      <fieldset class="kindseg"><legend class="sr">Kind of split</legend>
+        <label><input type="radio" name="spk" value="forward" checked><span>Forward</span></label>
+        <label><input type="radio" name="spk" value="reverse"><span>Reverse</span></label>
+        <label><input type="radio" name="spk" value="all"><span>Both</span></label>
+      </fieldset>
+      <label class="f search" style="margin-top:12px">Search ticker or company
+        <input id="spQ" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. GOOGL or Netflix">
+      </label>
+      <p class="note muted" id="spStatus"></p>
+    </section>
+
+    <section class="card" aria-labelledby="h-spup">
+      <div class="card-h"><h2 id="h-spup">Announced, not yet done</h2></div>
+      <div id="spUp"></div>
+    </section>
+
+    <section class="card" aria-labelledby="h-spled">
+      <div class="card-h"><h2 id="h-spled">Split history</h2><span class="hint">Newest first · date is the first day at the new share count</span></div>
+      <div id="spLedger"></div>
+    </section>
+
+    <section class="card" id="spCmp" aria-labelledby="h-spcmp">
+      <div class="card-h"><h2 id="h-spcmp">Compare two stocks</h2></div>
+      <div class="cmpin"><label class="f">First ticker<input id="spCmpA" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="10"></label><label class="f">Second ticker<input id="spCmpB" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="10"></label></div>
+      <div id="spCmpOut"></div>
+    </section>
+
+    <section class="card" id="spWi" aria-labelledby="h-spwi">
+      <div class="card-h"><h2 id="h-spwi">What would a split do to my shares?</h2></div>
+      <div class="cmpin wi"><label class="f">Shares you hold<input id="spWiShares" type="number" inputmode="decimal" min="0" step="any"></label><label class="f">New shares<input id="spWiA" type="number" inputmode="numeric" min="1" max="1000" step="1"></label><label class="f">for every<input id="spWiB" type="number" inputmode="numeric" min="1" max="1000" step="1"></label></div>
+      <div id="spWiOut"></div>
+    </section>
+
+    <section class="card" aria-labelledby="h-spmine">
+      <div class="card-h"><h2 id="h-spmine">Your holdings with a split in their history</h2></div>
+      <div id="spMine"></div>
+    </section>
+  </section>
 </main>
 
 <footer class="foot">

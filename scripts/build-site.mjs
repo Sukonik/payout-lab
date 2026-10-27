@@ -6,7 +6,7 @@ import { cpSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } fr
 import path from "node:path";
 
 const root = path.resolve(new URL("..", import.meta.url).pathname);
-const WEB = ["index.html", "data.json", "favicon.svg", "css", "js"];
+const WEB = ["index.html", "data.json", "splits.json", "favicon.svg", "css", "js"];
 const out = path.resolve(process.argv[2] || "_site");
 
 rmSync(out, { recursive: true, force: true });

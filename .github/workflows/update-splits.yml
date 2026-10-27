@@ -1,0 +1,31 @@
+name: Refresh split data
+on:
+  schedule:
+    - cron: "41 3 * * 1-5"   # once per weekday, away from the dividend refresh so the free Tiingo hourly limit is not shared
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: "Tickers to refresh this run"
+        default: "45"
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: node scripts/update-splits.mjs
+        env:
+          TIINGO_TOKEN: ${{ secrets.TIINGO_TOKEN }}
+          BATCH: ${{ inputs.batch }}
+      - name: Announced splits (Nasdaq public calendar)
+        run: node scripts/update-upcoming.mjs
+        continue-on-error: true   # unofficial endpoint: a failure is reported but must not block the history refresh or the commit
+      - name: Commit changes
+        run: |
+          git config user.name "payout-lab-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add splits.json
+          git diff --cached --quiet || (git commit -m "Refresh split data" && git push)

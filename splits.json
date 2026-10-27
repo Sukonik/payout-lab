@@ -1,0 +1,2567 @@
+{
+ "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
+ "updated": "2026-10-27T09:20:10.112Z",
+ "upcomingAsOf": "2026-10-27",
+ "tickers": {
+  "AAPL": {
+   "n": "Apple",
+   "s": [
+    {
+     "d": "2014-06-09",
+     "a": 7,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 645.57,
+     "post": 93.7
+    },
+    {
+     "d": "2020-08-31",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 499.23,
+     "post": 129.04
+    }
+   ],
+   "u": "2026-10-15"
+  },
+  "ABBV": {
+   "n": "AbbVie",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "ACGL": {
+   "n": "Arch Capital Group",
+   "s": [
+    {
+     "d": "2011-05-12",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 101.37,
+     "post": 34.84
+    },
+    {
+     "d": "2018-06-21",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 81.05,
+     "post": 26.36
+    }
+   ],
+   "u": "2026-10-16"
+  },
+  "ADI": {
+   "n": "Analog Devices",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "ADM": {
+   "n": "Archer Daniels Midland",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "ADP": {
+   "n": "Automatic Data Processing",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "ADSK": {
+   "n": "Autodesk",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "AEE": {
+   "n": "Ameren",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AEP": {
+   "n": "American Electric Power",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AIG": {
+   "n": "American International Group",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AIZ": {
+   "n": "Assurant",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AJG": {
+   "n": "Arthur J. Gallagher & Co.",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "ALL": {
+   "n": "Allstate",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "ALLE": {
+   "n": "Allegion",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AMAT": {
+   "n": "Applied Materials",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AMCR": {
+   "n": "Amcor",
+   "s": [
+    {
+     "d": "2026-01-15",
+     "a": 1,
+     "b": 5,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 8.82,
+     "post": 44.16
+    }
+   ],
+   "u": "2026-10-16"
+  },
+  "AME": {
+   "n": "Ametek",
+   "s": [
+    {
+     "d": "2010-12-22",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 59.85,
+     "post": 39.3
+    },
+    {
+     "d": "2012-07-02",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 49.91,
+     "post": 33.51
+    }
+   ],
+   "u": "2026-10-16"
+  },
+  "AMGN": {
+   "n": "Amgen",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AMP": {
+   "n": "Ameriprise Financial",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AMT": {
+   "n": "American Tower",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AMZN": {
+   "n": "Amazon",
+   "s": [
+    {
+     "d": "2022-06-06",
+     "a": 20,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 2447,
+     "post": 124.79
+    }
+   ],
+   "u": "2026-10-16"
+  },
+  "ANET": {
+   "n": "Arista Networks",
+   "s": [
+    {
+     "d": "2021-11-18",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 528.32,
+     "post": 132.55
+    },
+    {
+     "d": "2024-12-04",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 414.46,
+     "post": 105.43
+    }
+   ],
+   "u": "2026-10-16"
+  },
+  "AON": {
+   "n": "Aon plc",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "APA": {
+   "n": "APA Corporation",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "APH": {
+   "n": "Amphenol",
+   "s": [
+    {
+     "d": "2014-10-10",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 98.68,
+     "post": 45.7
+    },
+    {
+     "d": "2021-03-05",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 120.08,
+     "post": 61.56
+    },
+    {
+     "d": "2024-06-12",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 134.43,
+     "post": 68.69
+    },
+    {
+     "d": "2026-09-03",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 160.08,
+     "post": 82.07
+    }
+   ],
+   "u": "2026-10-16"
+  },
+  "APO": {
+   "n": "Apollo Global Management",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "APP": {
+   "n": "AppLovin",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "APTV": {
+   "n": "Aptiv",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "ARES": {
+   "n": "Ares Management",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "ATO": {
+   "n": "Atmos Energy",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AVGO": {
+   "n": "Broadcom",
+   "s": [
+    {
+     "d": "2024-07-15",
+     "a": 10,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 1700.67,
+     "post": 171.42
+    }
+   ],
+   "u": "2026-10-19"
+  },
+  "AVY": {
+   "n": "Avery Dennison",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "AWK": {
+   "n": "American Water Works",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AXON": {
+   "n": "Axon Enterprise",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "AXP": {
+   "n": "American Express",
+   "s": [],
+   "u": "2026-10-16"
+  },
+  "AZO": {
+   "n": "AutoZone",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BA": {
+   "n": "Boeing",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BAC": {
+   "n": "Bank of America",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BALL": {
+   "n": "Ball Corporation",
+   "s": [
+    {
+     "d": "2011-02-16",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 73.73,
+     "post": 36.83
+    },
+    {
+     "d": "2017-05-17",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 80.81,
+     "post": 39.98
+    }
+   ],
+   "u": "2026-10-19"
+  },
+  "BAX": {
+   "n": "Baxter International",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BBY": {
+   "n": "Best Buy",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BDX": {
+   "n": "Becton Dickinson",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BE": {
+   "n": "Bloom Energy",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BEN": {
+   "n": "Franklin Resources",
+   "s": [
+    {
+     "d": "2013-07-26",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 143.95,
+     "post": 48.66
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "BF-B": {
+   "n": "Brown–Forman",
+   "s": [
+    {
+     "d": "2012-08-13",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 92.17,
+     "post": 61.48
+    },
+    {
+     "d": "2016-08-19",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 99.65,
+     "post": 50.4
+    },
+    {
+     "d": "2018-03-01",
+     "a": 5,
+     "b": 4,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 69.79,
+     "post": 55.37
+    }
+   ],
+   "u": "2026-10-19"
+  },
+  "BG": {
+   "n": "Bunge Global",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BIIB": {
+   "n": "Biogen",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BKNG": {
+   "n": "Booking Holdings",
+   "s": [
+    {
+     "d": "2026-04-06",
+     "a": 25,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 4194.31,
+     "post": 176.19
+    }
+   ],
+   "u": "2026-10-19"
+  },
+  "BKR": {
+   "n": "Baker Hughes",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BLK": {
+   "n": "BlackRock",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BMY": {
+   "n": "Bristol Myers Squibb",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BNY": {
+   "n": "BNY Mellon",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BR": {
+   "n": "Broadridge Financial Solutions",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BRK-B": {
+   "n": "Berkshire Hathaway",
+   "s": [
+    {
+     "d": "2010-01-21",
+     "a": 50,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 3476,
+     "post": 72.72
+    }
+   ],
+   "u": "2026-10-19"
+  },
+  "BRO": {
+   "n": "Brown & Brown",
+   "s": [
+    {
+     "d": "2018-03-29",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 51.02,
+     "post": 25.44
+    }
+   ],
+   "u": "2026-10-19"
+  },
+  "BSX": {
+   "n": "Boston Scientific",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BX": {
+   "n": "Blackstone Inc.",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "BXP": {
+   "n": "BXP, Inc.",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "C": {
+   "n": "Citigroup",
+   "s": [
+    {
+     "d": "2011-05-09",
+     "a": 1,
+     "b": 10,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 4.52,
+     "post": 44.16
+    }
+   ],
+   "u": "2026-10-20"
+  },
+  "CAH": {
+   "n": "Cardinal Health",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CARR": {
+   "n": "Carrier Global",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CASY": {
+   "n": "Casey's",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CAT": {
+   "n": "Caterpillar Inc.",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CB": {
+   "n": "Chubb Limited",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CBOE": {
+   "n": "Cboe Global Markets",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CBRE": {
+   "n": "CBRE Group",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CCI": {
+   "n": "Crown Castle",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "CCL": {
+   "n": "Carnival Corporation",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CDNS": {
+   "n": "Cadence Design Systems",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CDW": {
+   "n": "CDW Corporation",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CEG": {
+   "n": "Constellation Energy",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "CF": {
+   "n": "CF Industries",
+   "s": [
+    {
+     "d": "2015-06-18",
+     "a": 5,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 316.68,
+     "post": 64.25
+    }
+   ],
+   "u": "2026-10-20"
+  },
+  "CFG": {
+   "n": "Citizens Financial Group",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CHD": {
+   "n": "Church & Dwight",
+   "s": [
+    {
+     "d": "2011-06-02",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 82,
+     "post": 40.75
+    },
+    {
+     "d": "2016-09-02",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 99.75,
+     "post": 49.97
+    }
+   ],
+   "u": "2026-10-20"
+  },
+  "CHRW": {
+   "n": "C.H. Robinson",
+   "s": [],
+   "u": "2026-10-19"
+  },
+  "CHTR": {
+   "n": "Charter Communications",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CI": {
+   "n": "Cigna",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CIEN": {
+   "n": "Ciena",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CINF": {
+   "n": "Cincinnati Financial",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CL": {
+   "n": "Colgate-Palmolive",
+   "s": [
+    {
+     "d": "2013-05-16",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 124.55,
+     "post": 62.38
+    }
+   ],
+   "u": "2026-10-21"
+  },
+  "CLX": {
+   "n": "Clorox",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CMCSA": {
+   "n": "Comcast",
+   "s": [
+    {
+     "d": "2017-02-21",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 75.32,
+     "post": 37.89
+    }
+   ],
+   "u": "2026-10-21"
+  },
+  "CME": {
+   "n": "CME Group",
+   "s": [
+    {
+     "d": "2012-07-23",
+     "a": 5,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 257,
+     "post": 51.12
+    }
+   ],
+   "u": "2026-10-21"
+  },
+  "CMG": {
+   "n": "Chipotle",
+   "s": [
+    {
+     "d": "2024-06-26",
+     "a": 50,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 3283.04,
+     "post": 65.86
+    }
+   ],
+   "u": "2026-10-20"
+  },
+  "CMI": {
+   "n": "Cummins",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "CMS": {
+   "n": "CMS Energy",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "CNC": {
+   "n": "Centene Corporation",
+   "s": [
+    {
+     "d": "2015-02-20",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 120.67,
+     "post": 59.85
+    },
+    {
+     "d": "2019-02-07",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 126.16,
+     "post": 63.91
+    }
+   ],
+   "u": "2026-10-20"
+  },
+  "CNP": {
+   "n": "CenterPoint Energy",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "COF": {
+   "n": "Capital One",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "COHR": {
+   "n": "Coherent Corp.",
+   "s": [
+    {
+     "d": "2011-06-27",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 48.76,
+     "post": 24.78
+    }
+   ],
+   "u": "2026-10-21"
+  },
+  "COIN": {
+   "n": "Coinbase",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "COO": {
+   "n": "Cooper Companies (The)",
+   "s": [
+    {
+     "d": "2024-02-20",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 372.01,
+     "post": 95.7
+    }
+   ],
+   "u": "2026-10-21"
+  },
+  "COP": {
+   "n": "ConocoPhillips",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "COR": {
+   "n": "Cencora",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "COST": {
+   "n": "Costco",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "CPAY": {
+   "n": "Corpay",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "CPRT": {
+   "n": "Copart",
+   "s": [
+    {
+     "d": "2012-03-29",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 52.84,
+     "post": 26.24
+    },
+    {
+     "d": "2017-04-11",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 60.11,
+     "post": 30.12
+    },
+    {
+     "d": "2022-11-04",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 113.39,
+     "post": 57.38
+    },
+    {
+     "d": "2023-08-22",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 86.98,
+     "post": 43.79
+    }
+   ],
+   "u": "2026-10-21"
+  },
+  "CPT": {
+   "n": "Camden Property Trust",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CRH": {
+   "n": "CRH plc",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "CRL": {
+   "n": "Charles River Laboratories",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CRWD": {
+   "n": "CrowdStrike",
+   "s": [
+    {
+     "d": "2026-07-02",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 772.74,
+     "post": 193.98
+    }
+   ],
+   "u": "2026-10-21"
+  },
+  "CSCO": {
+   "n": "Cisco",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "CSGP": {
+   "n": "CoStar Group",
+   "s": [
+    {
+     "d": "2021-06-28",
+     "a": 10,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 882.65,
+     "post": 84.92
+    }
+   ],
+   "u": "2026-10-21"
+  },
+  "CSX": {
+   "n": "CSX Corporation",
+   "s": [
+    {
+     "d": "2011-06-16",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 72.98,
+     "post": 24.3
+    },
+    {
+     "d": "2021-06-29",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 95.32,
+     "post": 31.56
+    }
+   ],
+   "u": "2026-10-21"
+  },
+  "CTAS": {
+   "n": "Cintas",
+   "s": [
+    {
+     "d": "2024-09-12",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 819.83,
+     "post": 206.02
+    }
+   ],
+   "u": "2026-10-20"
+  },
+  "CTSH": {
+   "n": "Cognizant",
+   "s": [
+    {
+     "d": "2014-03-10",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 107.22,
+     "post": 52.9
+    }
+   ],
+   "u": "2026-10-21"
+  },
+  "CTVA": {
+   "n": "Corteva",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "CVNA": {
+   "n": "Carvana",
+   "s": [
+    {
+     "d": "2026-05-08",
+     "a": 5,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 400.02,
+     "post": 77.94
+    }
+   ],
+   "u": "2026-10-20"
+  },
+  "CVS": {
+   "n": "CVS Health",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "CVX": {
+   "n": "Chevron",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "D": {
+   "n": "Dominion Energy",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DAL": {
+   "n": "Delta Air Lines",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DASH": {
+   "n": "DoorDash",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DD": {
+   "n": "DuPont",
+   "s": [
+    {
+     "d": "2019-06-03",
+     "a": 1,
+     "b": 3,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 30.52,
+     "post": 76.1
+    },
+    {
+     "d": "2026-06-24",
+     "a": 1,
+     "b": 3,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 46.67,
+     "post": 137.82
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "DDOG": {
+   "n": "Datadog",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "DE": {
+   "n": "Deere & Company",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DECK": {
+   "n": "Deckers Brands",
+   "s": [
+    {
+     "d": "2010-07-06",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 141.8,
+     "post": 44.43
+    },
+    {
+     "d": "2024-09-17",
+     "a": 6,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 937.68,
+     "post": 155.1
+    }
+   ],
+   "u": "2026-10-21"
+  },
+  "DELL": {
+   "n": "Dell Technologies",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DG": {
+   "n": "Dollar General",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DGRO": {
+   "n": "iShares Core Dividend Growth ETF",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "DHI": {
+   "n": "D. R. Horton",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DHR": {
+   "n": "Danaher Corporation",
+   "s": [
+    {
+     "d": "2010-06-14",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 78.67,
+     "post": 39.66
+    }
+   ],
+   "u": "2026-10-21"
+  },
+  "DLR": {
+   "n": "Digital Realty",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DLTR": {
+   "n": "Dollar Tree",
+   "s": [
+    {
+     "d": "2010-06-25",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 62.69,
+     "post": 42.01
+    },
+    {
+     "d": "2012-06-27",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 110.98,
+     "post": 53.48
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "DOC": {
+   "n": "Healthpeak Properties",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "DOV": {
+   "n": "Dover Corporation",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DOW": {
+   "n": "Dow Inc.",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DPZ": {
+   "n": "Domino's",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DRI": {
+   "n": "Darden Restaurants",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "DTE": {
+   "n": "DTE Energy",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DUK": {
+   "n": "Duke Energy",
+   "s": [
+    {
+     "d": "2012-07-03",
+     "a": 1,
+     "b": 3,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 23.28,
+     "post": 68.69
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "DVA": {
+   "n": "DaVita",
+   "s": [
+    {
+     "d": "2013-09-09",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 110.59,
+     "post": 56.04
+    }
+   ],
+   "u": "2026-10-21"
+  },
+  "DVN": {
+   "n": "Devon Energy",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "DXCM": {
+   "n": "Dexcom",
+   "s": [
+    {
+     "d": "2022-06-13",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 293.85,
+     "post": 68.06
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "EBAY": {
+   "n": "eBay Inc.",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "ECHO": {
+   "n": "EchoStar",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "ECL": {
+   "n": "Ecolab",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "ED": {
+   "n": "Consolidated Edison",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "EFX": {
+   "n": "Equifax",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "EG": {
+   "n": "Everest Group",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "EIX": {
+   "n": "Edison International",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "EL": {
+   "n": "Estée Lauder Companies (The)",
+   "s": [
+    {
+     "d": "2011-11-23",
+     "a": 21,
+     "b": 20,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 110.98,
+     "post": 107.61
+    },
+    {
+     "d": "2012-01-23",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 116.03,
+     "post": 57.48
+    }
+   ],
+   "u": "2026-10-23"
+  },
+  "ELV": {
+   "n": "Elevance Health",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "EME": {
+   "n": "Emcor",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "EMR": {
+   "n": "Emerson Electric",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "EOG": {
+   "n": "EOG Resources",
+   "s": [
+    {
+     "d": "2014-04-01",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 196.17,
+     "post": 98.98
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "EQIX": {
+   "n": "Equinix",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "EQT": {
+   "n": "EQT Corporation",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "ERIE": {
+   "n": "Erie Indemnity",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "ES": {
+   "n": "Eversource Energy",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "ESS": {
+   "n": "Essex Property Trust",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "ETN": {
+   "n": "Eaton Corporation",
+   "s": [
+    {
+     "d": "2011-03-01",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 110.78,
+     "post": 53.55
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "ETR": {
+   "n": "Entergy",
+   "s": [
+    {
+     "d": "2024-12-13",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 148.27,
+     "post": 74.24
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "EVRG": {
+   "n": "Evergy",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "EW": {
+   "n": "Edwards Lifesciences",
+   "s": [
+    {
+     "d": "2010-05-28",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 103.85,
+     "post": 50.53
+    },
+    {
+     "d": "2015-12-14",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 159.71,
+     "post": 80.53
+    },
+    {
+     "d": "2020-06-01",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 224.72,
+     "post": 74.27
+    }
+   ],
+   "u": "2026-10-22"
+  },
+  "EXC": {
+   "n": "Exelon",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "EXE": {
+   "n": "Expand Energy",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "EXPD": {
+   "n": "Expeditors International",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "EXPE": {
+   "n": "Expedia Group",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "EXR": {
+   "n": "Extra Space Storage",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "F": {
+   "n": "Ford Motor Company",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FANG": {
+   "n": "Diamondback Energy",
+   "s": [],
+   "u": "2026-10-22"
+  },
+  "FAST": {
+   "n": "Fastenal",
+   "s": [
+    {
+     "d": "2011-05-23",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 65.71,
+     "post": 32.4
+    },
+    {
+     "d": "2019-05-23",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 64.28,
+     "post": 31.34
+    },
+    {
+     "d": "2025-05-22",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 81.46,
+     "post": 40.715
+    }
+   ],
+   "u": "2026-10-23"
+  },
+  "FCX": {
+   "n": "Freeport-McMoRan",
+   "s": [
+    {
+     "d": "2011-02-02",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 114.07,
+     "post": 56.26
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "FDS": {
+   "n": "FactSet",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FDX": {
+   "n": "FedEx",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FDXF": {
+   "n": "FedEx Freight",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FE": {
+   "n": "FirstEnergy",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FERG": {
+   "n": "Ferguson Enterprises",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FFIV": {
+   "n": "F5, Inc.",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FICO": {
+   "n": "Fair Isaac",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FIS": {
+   "n": "Fidelity National Information Services",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FISV": {
+   "n": "Fiserv",
+   "s": [
+    {
+     "d": "2013-12-17",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 113.38,
+     "post": 56.61
+    },
+    {
+     "d": "2018-03-20",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 147.24,
+     "post": 73.46
+    }
+   ],
+   "u": "2026-10-23"
+  },
+  "FITB": {
+   "n": "Fifth Third Bancorp",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FIX": {
+   "n": "Comfort Systems USA",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "FLEX": {
+   "n": "Flex Ltd.",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FOX": {
+   "n": "Fox Corporation (Class B)",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "FOXA": {
+   "n": "Fox Corporation (Class A)",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "FRT": {
+   "n": "Federal Realty Investment Trust",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FSLR": {
+   "n": "First Solar",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "FTNT": {
+   "n": "Fortinet",
+   "s": [
+    {
+     "d": "2011-06-02",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 49.7,
+     "post": 23.51
+    },
+    {
+     "d": "2022-06-23",
+     "a": 5,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 278.44,
+     "post": 56.8
+    }
+   ],
+   "u": "2026-10-23"
+  },
+  "FTV": {
+   "n": "Fortive",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GD": {
+   "n": "General Dynamics",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GDDY": {
+   "n": "GoDaddy",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GE": {
+   "n": "GE Aerospace",
+   "s": [
+    {
+     "d": "2021-08-02",
+     "a": 1,
+     "b": 8,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 12.95,
+     "post": 100.6
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "GEHC": {
+   "n": "GE HealthCare",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GEN": {
+   "n": "Gen Digital",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GEV": {
+   "n": "GE Vernova",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GILD": {
+   "n": "Gilead Sciences",
+   "s": [
+    {
+     "d": "2013-01-28",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 79.36,
+     "post": 39.44
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "GIS": {
+   "n": "General Mills",
+   "s": [
+    {
+     "d": "2010-06-09",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 75.14,
+     "post": 37.5
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "GL": {
+   "n": "Globe Life",
+   "s": [
+    {
+     "d": "2011-07-05",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 64.53,
+     "post": 42.93
+    },
+    {
+     "d": "2014-07-02",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 82.6189,
+     "post": 54.83
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "GLW": {
+   "n": "Corning Inc.",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "GM": {
+   "n": "General Motors",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GNRC": {
+   "n": "Generac",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GOOG": {
+   "n": "Alphabet Inc. (Class C)",
+   "s": [
+    {
+     "d": "2022-07-18",
+     "a": 20,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 2255.34,
+     "post": 109.91
+    }
+   ],
+   "u": "2026-10-16"
+  },
+  "GOOGL": {
+   "n": "Alphabet Inc. (Class A)",
+   "s": [
+    {
+     "d": "2022-07-18",
+     "a": 20,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 2235.55,
+     "post": 109.03
+    }
+   ],
+   "u": "2026-10-15"
+  },
+  "GPC": {
+   "n": "Genuine Parts Company",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GPN": {
+   "n": "Global Payments",
+   "s": [
+    {
+     "d": "2015-11-03",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 136.23,
+     "post": 67.56
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "GRMN": {
+   "n": "Garmin",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "GS": {
+   "n": "Goldman Sachs",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "HAL": {
+   "n": "Halliburton",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "HAS": {
+   "n": "Hasbro",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "HBAN": {
+   "n": "Huntington Bancshares",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "HCA": {
+   "n": "HCA Healthcare",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "HD": {
+   "n": "Home Depot",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "HIG": {
+   "n": "Hartford (The)",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "HII": {
+   "n": "Huntington Ingalls Industries",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "HLT": {
+   "n": "Hilton Worldwide",
+   "s": [
+    {
+     "d": "2017-01-04",
+     "a": 1,
+     "b": 3,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 27.39,
+     "post": 58
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "HON": {
+   "n": "Honeywell Technologies",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "HONA": {
+   "n": "Honeywell Aerospace",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "HPE": {
+   "n": "Hewlett Packard Enterprise",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "HPQ": {
+   "n": "HP Inc.",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "HRL": {
+   "n": "Hormel Foods",
+   "s": [
+    {
+     "d": "2011-02-15",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 51.64,
+     "post": 25.86
+    },
+    {
+     "d": "2016-02-10",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 82.86,
+     "post": 41.67
+    }
+   ],
+   "u": "2026-10-27"
+  },
+  "HSIC": {
+   "n": "Henry Schein",
+   "s": [
+    {
+     "d": "2017-09-15",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 161.15,
+     "post": 82.88
+    }
+   ],
+   "u": "2026-10-26"
+  },
+  "HST": {
+   "n": "Host Hotels & Resorts",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "HSY": {
+   "n": "Hershey Company (The)",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "HUBB": {
+   "n": "Hubbell Incorporated",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "HUM": {
+   "n": "Humana",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "HWM": {
+   "n": "Howmet Aerospace",
+   "s": [
+    {
+     "d": "2016-10-06",
+     "a": 1,
+     "b": 3,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 10.4,
+     "post": 31.78
+    }
+   ],
+   "u": "2026-10-27"
+  },
+  "IBKR": {
+   "n": "Interactive Brokers",
+   "s": [
+    {
+     "d": "2025-06-18",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 208.17,
+     "post": 52.6
+    }
+   ],
+   "u": "2026-10-27"
+  },
+  "IBM": {
+   "n": "IBM",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "ICE": {
+   "n": "Intercontinental Exchange",
+   "s": [
+    {
+     "d": "2016-11-04",
+     "a": 5,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 269.47,
+     "post": 53.37
+    }
+   ],
+   "u": "2026-10-27"
+  },
+  "IDXX": {
+   "n": "Idexx Laboratories",
+   "s": [
+    {
+     "d": "2015-06-16",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 132.44,
+     "post": 66.435
+    }
+   ],
+   "u": "2026-10-27"
+  },
+  "IEX": {
+   "n": "IDEX Corporation",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "IFF": {
+   "n": "International Flavors & Fragrances",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "ILMN": {
+   "n": "Illumina, Inc.",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "INCY": {
+   "n": "Incyte",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "INTC": {
+   "n": "Intel",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "INTU": {
+   "n": "Intuit",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "INVH": {
+   "n": "Invitation Homes",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "IP": {
+   "n": "International Paper",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "IQV": {
+   "n": "IQVIA",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "IR": {
+   "n": "Ingersoll Rand",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "IRM": {
+   "n": "Iron Mountain",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "ISRG": {
+   "n": "Intuitive Surgical",
+   "s": [
+    {
+     "d": "2017-10-06",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 1089.68,
+     "post": 361.47
+    },
+    {
+     "d": "2021-10-05",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 970.5,
+     "post": 330.07
+    }
+   ],
+   "u": "2026-10-27"
+  },
+  "IT": {
+   "n": "Gartner",
+   "s": [],
+   "u": "2026-10-26"
+  },
+  "ITW": {
+   "n": "Illinois Tool Works",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "IVZ": {
+   "n": "Invesco",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "JBHT": {
+   "n": "J.B. Hunt",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "JEPI": {
+   "n": "JPMorgan Equity Premium Income ETF",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "JEPQ": {
+   "n": "JPMorgan Nasdaq Equity Premium Income ETF",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "JNJ": {
+   "n": "Johnson & Johnson",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "KO": {
+   "n": "Coca-Cola",
+   "s": [
+    {
+     "d": "2012-08-13",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 78.79,
+     "post": 39.3
+    }
+   ],
+   "u": "2026-10-15"
+  },
+  "LCID": {
+   "n": "Lucid Group",
+   "s": [
+    {
+     "d": "2025-09-02",
+     "a": 1,
+     "b": 10,
+     "src": "public record, cross-checked",
+     "ver": 1
+    }
+   ],
+   "u": null
+  },
+  "LNT": {
+   "n": "Alliant Energy",
+   "s": [
+    {
+     "d": "2016-05-20",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 71.48,
+     "post": 35.91
+    }
+   ],
+   "u": "2026-10-16"
+  },
+  "LYG": {
+   "n": "Lloyds Banking Group (ADR)",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "MAIN": {
+   "n": "Main Street Capital",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "META": {
+   "n": "Meta Platforms",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "MO": {
+   "n": "Altria",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "MSFT": {
+   "n": "Microsoft",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "NFLX": {
+   "n": "Netflix",
+   "s": [
+    {
+     "d": "2025-11-17",
+     "a": 10,
+     "b": 1,
+     "src": "public record, cross-checked",
+     "ver": 1
+    }
+   ],
+   "u": null
+  },
+  "NTDOY": {
+   "n": "Nintendo (ADR)",
+   "s": [
+    {
+     "d": "2022-10-04",
+     "a": 5,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 50.1001,
+     "post": 10.74
+    }
+   ],
+   "u": "2026-10-15"
+  },
+  "NVDA": {
+   "n": "NVIDIA",
+   "s": [
+    {
+     "d": "2021-07-20",
+     "a": 4,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    },
+    {
+     "d": "2024-06-10",
+     "a": 10,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "O": {
+   "n": "Realty Income",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "ORLY": {
+   "n": "O'Reilly Automotive",
+   "s": [
+    {
+     "d": "2025-06-10",
+     "a": 15,
+     "b": 1,
+     "src": "public record, cross-checked",
+     "ver": 1
+    }
+   ],
+   "u": null
+  },
+  "P": {
+   "n": "Everpure",
+   "s": [],
+   "u": "2026-10-23"
+  },
+  "PEP": {
+   "n": "PepsiCo",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "PFE": {
+   "n": "Pfizer",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "PG": {
+   "n": "Procter & Gamble",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "PODD": {
+   "n": "Insulet Corporation",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "SCHB": {
+   "n": "Schwab US Broad Market ETF",
+   "s": [
+    {
+     "d": "2022-03-11",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 100.67,
+     "post": 49.6
+    },
+    {
+     "d": "2024-10-11",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 66.7,
+     "post": 22.4
+    }
+   ],
+   "u": "2026-10-15"
+  },
+  "SCHD": {
+   "n": "Schwab US Dividend Equity ETF",
+   "s": [
+    {
+     "d": "2024-10-11",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 84.62,
+     "post": 28.54
+    }
+   ],
+   "u": "2026-10-15"
+  },
+  "SCHW": {
+   "n": "Charles Schwab Corporation",
+   "s": [],
+   "u": "2026-10-20"
+  },
+  "SMCI": {
+   "n": "Super Micro Computer",
+   "s": [
+    {
+     "d": "2024-10-01",
+     "a": 10,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "SPYD": {
+   "n": "SPDR Portfolio S&P 500 High Dividend ETF",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "SPYV": {
+   "n": "SPDR Portfolio S&P 500 Value ETF",
+   "s": [
+    {
+     "d": "2017-10-16",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 117.746,
+     "post": 29.48
+    }
+   ],
+   "u": "2026-10-15"
+  },
+  "STAG": {
+   "n": "STAG Industrial",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "STZ": {
+   "n": "Constellation Brands",
+   "s": [],
+   "u": "2026-10-21"
+  },
+  "T": {
+   "n": "AT&T",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "TECH": {
+   "n": "Bio-Techne",
+   "s": [
+    {
+     "d": "2022-11-30",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 327.07,
+     "post": 84.99
+    }
+   ],
+   "u": "2026-10-19"
+  },
+  "TSLA": {
+   "n": "Tesla",
+   "s": [
+    {
+     "d": "2020-08-31",
+     "a": 5,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    },
+    {
+     "d": "2022-08-25",
+     "a": 3,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "VIG": {
+   "n": "Vanguard Dividend Appreciation ETF",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "VYM": {
+   "n": "Vanguard High Dividend Yield ETF",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "VZ": {
+   "n": "Verizon",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "WMT": {
+   "n": "Walmart",
+   "s": [
+    {
+     "d": "2024-02-26",
+     "a": 3,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "XOM": {
+   "n": "Exxon Mobil",
+   "s": [],
+   "u": "2026-10-15"
+  },
+  "XYZ": {
+   "n": "Block, Inc.",
+   "s": [],
+   "u": "2026-10-19"
+  }
+ },
+ "upcoming": [
+  {
+   "t": "BUUU",
+   "n": "BUUU Group Limited",
+   "a": 10,
+   "b": 1,
+   "exDate": "2026-10-27",
+   "status": "unverified",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-22"
+  },
+  {
+   "t": "ENLV",
+   "n": "Enlivex Ltd.",
+   "a": 1,
+   "b": 16,
+   "exDate": "2026-10-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "NUWE",
+   "n": "Nuwellis, Inc.",
+   "a": 1,
+   "b": 9,
+   "exDate": "2026-10-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "PARA",
+   "n": "Banzai International, Inc.",
+   "a": 1,
+   "b": 10,
+   "exDate": "2026-10-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "SCAG",
+   "n": "Scage Future",
+   "a": 1,
+   "b": 15,
+   "exDate": "2026-10-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "ENHA",
+   "n": "Enhanced Group Inc.",
+   "a": 1,
+   "b": 10,
+   "exDate": "2026-10-29",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "NYSX",
+   "n": "Global X Funds Global X NYSE 100 ETF",
+   "a": 5,
+   "b": 1,
+   "exDate": "2026-10-30",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "EFG",
+   "n": "iShares MSCI EAFE Growth ETF",
+   "a": 3,
+   "b": 1,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "EFV",
+   "n": "iShares MSCI EAFE Value ETF",
+   "a": 2,
+   "b": 1,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "ITA",
+   "n": "iShares U.S. Aerospace & Defense ETF",
+   "a": 3,
+   "b": 1,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "MTUM",
+   "n": "iShares MSCI USA Momentum Factor ETF",
+   "a": 4,
+   "b": 1,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "QUAL",
+   "n": "iShares MSCI USA Quality Factor ETF",
+   "a": 4,
+   "b": 1,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "SOXX",
+   "n": "iShares PHLX SOX Semiconductor Sector Index Fund",
+   "a": 3,
+   "b": 1,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  }
+ ]
+}

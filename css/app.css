@@ -252,6 +252,48 @@ td.num,th.num{text-align:right}
 textarea.linkbox{width:100%;min-height:92px;resize:vertical;font:inherit;font-family:var(--mono);font-size:.74rem;color:var(--ink);background:var(--glass);border:1px solid var(--line2);border-radius:10px;padding:8px 10px;word-break:break-all}
 .sizepill{display:inline-block;margin:6px 0}
 
+/* ---------- splits ---------- */
+.kindseg{border:0;margin:14px 0 0;padding:3px;display:inline-grid;grid-auto-flow:column;gap:2px;background:var(--glass);border:1px solid var(--line);border-radius:12px;max-width:100%}
+.kindseg label{position:relative;cursor:pointer}
+.kindseg input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.kindseg span{display:block;padding:9px 18px;border-radius:9px;font-weight:700;font-size:.92rem;color:var(--muted);min-height:44px;line-height:26px}
+.kindseg input:checked+span{background:var(--card);box-shadow:var(--shadow);color:var(--accent-strong)}
+.kindseg input:focus-visible+span{outline:3px solid var(--accent)}
+.syear{display:flex;align-items:baseline;gap:10px;margin:22px 0 8px;font-size:1.5rem;font-weight:800;letter-spacing:-.02em;border-bottom:2px solid var(--line);padding-bottom:4px}
+.syear:first-child{margin-top:6px} .syear i{font-style:normal;font-size:.8rem;font-weight:700;color:var(--muted)}
+.sevents{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.sevent{display:grid;grid-template-columns:76px minmax(0,1fr);gap:14px;padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--glass)}
+.sevent.reverse{border-left:4px solid var(--coral)} .sevent.forward{border-left:4px solid var(--accent)}
+.sevent.upc{background:var(--accent-soft)}
+.dblock{display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:12px;background:var(--card);border:1px solid var(--line2);padding:6px 4px;height:fit-content;font-family:var(--font-d);text-align:center;line-height:1}
+.dblock b{font-size:1.9rem;font-weight:800;letter-spacing:-.03em}
+.dblock span{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:var(--accent-strong);margin-top:3px}
+.dblock i{font-style:normal;font-size:.78rem;color:var(--muted);margin-top:2px}
+.shead{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px}
+.stk{font-size:1.15rem;letter-spacing:.02em} .sname{color:var(--muted);font-size:.9rem}
+.spills{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;align-items:center}
+.ratio{display:inline-block;font-family:var(--mono);font-weight:800;font-size:.85rem;padding:2px 9px;border-radius:8px;background:var(--card);border:1px solid var(--line2)}
+.ratio.reverse{color:var(--coral)} .ratio.forward{color:var(--accent-strong)}
+.sfx{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
+.fwrap{display:inline-flex;align-items:center;gap:8px;max-width:100%}.mult{font-family:var(--mono);font-size:1.05rem;color:var(--accent-strong)}.fission{max-width:100%;height:auto;flex:none}
+.sg-glass{fill:none;stroke:var(--glass-line);stroke-width:1.2} .sg-liq{fill:var(--liq-a)} .sg-small .sg-liq{fill:var(--liq-b)}
+.sg-arrow{fill:none;stroke:var(--muted);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.sdl{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px 16px;margin:0;flex:1 1 220px}
+.sdl div{min-width:0} .sdl dt{font-size:.74rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.sdl dd{margin:1px 0 0;font-weight:700;font-size:.95rem;word-break:break-word} .sdl dd.up{color:var(--accent-strong)} .sdl dd.down{color:var(--coral)}
+.snote{margin-top:8px}.sact{display:flex;gap:8px;margin-top:10px}
+.cmpin{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}.cmpin.wi{grid-template-columns:repeat(3,1fr)}
+.cmpgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cmpcol{border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--glass);min-width:0}
+.cmpcol .sdl{grid-template-columns:1fr 1fr}.cmpmini{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.minelist{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.minelist li{border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--glass)}
+@media (max-width:520px){
+  .sevent{grid-template-columns:62px minmax(0,1fr);gap:10px;padding:12px}
+  .dblock b{font-size:1.5rem}.cmpgrid{grid-template-columns:1fr}.cmpin.wi{grid-template-columns:1fr 1fr 1fr}
+  .kindseg span{padding:9px 12px}
+}
+
 /* ---------- portfolio card ---------- */
 .ctype{border:0;margin:8px 0;padding:0;display:grid;gap:8px}
 .ctype label{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line2);border-radius:12px;cursor:pointer}
@@ -332,10 +374,10 @@ fieldset.modes legend{font-weight:700;font-size:.9rem;padding:0 6px}
 .ptable td .neg{color:var(--coral)}
 
 /* ---------- bottom nav (phones) ---------- */
-.bottomnav{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);background:var(--card);background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
-.bottomnav a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;border-radius:12px;color:var(--muted);text-decoration:none;font-size:.7rem;font-weight:700;min-height:48px;justify-content:center}
+.bottomnav{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(6,1fr);background:var(--card);background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+.bottomnav a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;border-radius:12px;color:var(--muted);text-decoration:none;font-size:.66rem;font-weight:700;min-height:48px;justify-content:center}
 .bottomnav a[aria-current="page"]{color:var(--accent-strong);background:var(--accent-soft)}
-body:has(input:focus,select:focus) .bottomnav{display:none}
+body:has(input:not([type=radio]):not([type=checkbox]):not([type=range]):focus,select:focus) .bottomnav{display:none}
 
 /* ---------- dialogs + sheets ---------- */
 dialog{border:1px solid var(--line);border-radius:20px;background:var(--card);color:var(--ink);padding:20px;max-width:min(540px,calc(100vw - 24px));width:100%;box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
