@@ -1,7 +1,7 @@
 name: Refresh dividend data
 on:
   schedule:
-    - cron: "17 * * * *"   # hourly, every day; each run adds new seed tickers first and refreshes the stalest (45 per run keeps inside the Tiingo free hourly limit)
+    - cron: "17 */3 * * *"   # every 3 hours, every day; each run adds new seed tickers first and refreshes the stalest (45 per run keeps inside the Tiingo free hourly limit). Each data change redeploys the site, and Actions artifact storage is limited, so keep this modest
   workflow_dispatch:
     inputs:
       batch:
