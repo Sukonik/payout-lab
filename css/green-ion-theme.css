@@ -99,3 +99,12 @@ label.f{gap:8px}
 .more{margin-top:16px}
 .tablewrap{margin-top:16px}
 h2{line-height:1.25}
+
+/* ---------- daily UX pass 2026-10-27: phone overflow on Splits, bigger touch targets ---------- */
+.fission{flex:0 1 auto;min-width:0}
+.mult{flex:none}
+@media (max-width:899px),(pointer:coarse){
+  .btn.sm{min-height:44px}
+  .more{display:inline-flex;align-items:center;min-height:44px;margin-top:8px}
+  .sevent a,.minelist a{display:inline-block;padding-block:12px}
+}
