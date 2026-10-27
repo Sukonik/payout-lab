@@ -1,0 +1,76 @@
+/* Green Ion theme for Payout Lab. Maps the app's colour variables onto the Green Ion palette (css/green-ion.css) and polishes
+   existing components. Load after app.css. No class names or markup change. Green Ion v1.0.0. */
+:root{
+  --bg:#f4f8f5; --bg2:#e9f1ec; --card:#ffffff; --ink:#0b1f17; --muted:#4a6256; --line:#d5e2da; --line2:#b9cfc3;
+  --accent:#087a45; --accent-ink:#ffffff; --accent-soft:#d9f5e5; --accent-strong:#06532f;
+  --amber:#8a4b00; --amber-soft:#fbe9c6; --coral:#b02a1b; --coral-soft:#fbdcd5; --glass:#f0f6f2; --glass-line:#9ab5a6;
+  --liq-a:#0a9453; --liq-b:#5ee79b; --thin-a:#c0780c; --thin-b:#f3c25d; --men:#c9f7dc; --men-thin:#fbe0a0;
+  --shadow:0 1px 0 rgba(8,40,24,.04),0 14px 32px -18px rgba(8,60,34,.35); --r:18px; --gi-glow:rgba(18,184,102,.26);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#07120d; --bg2:#0b1c14; --card:#0e1d16; --ink:#e8f5ee; --muted:#9bb8a8; --line:#1f3a2d; --line2:#2c5140;
+    --accent:#3ddc84; --accent-ink:#04230f; --accent-soft:#12402a; --accent-strong:#8bf0b8;
+    --amber:#f5b544; --amber-soft:#3a2b10; --coral:#ff8a7a; --coral-soft:#431f1a; --glass:#132a20; --glass-line:#4f7a64;
+    --liq-a:#17b865; --liq-b:#7bf0b0; --thin-a:#d98f1c; --thin-b:#ffd277; --men:#c9ffe0; --men-thin:#ffe9b8;
+    --shadow:0 1px 0 rgba(0,0,0,.25),0 16px 36px -18px rgba(0,0,0,.8); --gi-glow:rgba(61,220,132,.28);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#07120d; --bg2:#0b1c14; --card:#0e1d16; --ink:#e8f5ee; --muted:#9bb8a8; --line:#1f3a2d; --line2:#2c5140;
+  --accent:#3ddc84; --accent-ink:#04230f; --accent-soft:#12402a; --accent-strong:#8bf0b8;
+  --amber:#f5b544; --amber-soft:#3a2b10; --coral:#ff8a7a; --coral-soft:#431f1a; --glass:#132a20; --glass-line:#4f7a64;
+  --liq-a:#17b865; --liq-b:#7bf0b0; --thin-a:#d98f1c; --thin-b:#ffd277; --men:#c9ffe0; --men-thin:#ffe9b8;
+  --shadow:0 1px 0 rgba(0,0,0,.25),0 16px 36px -18px rgba(0,0,0,.8); --gi-glow:rgba(61,220,132,.28);
+}
+
+/* ambient ion glow behind the page */
+body{background-image:radial-gradient(1000px 460px at 82% -10%,var(--gi-glow),transparent 70%),radial-gradient(700px 360px at 0% 0%,color-mix(in srgb,var(--accent-soft) 60%,transparent),transparent 70%)}
+::selection{background:var(--accent);color:var(--accent-ink)}
+:focus-visible{outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 55%,transparent)}
+
+/* header and primary action */
+.top{border-bottom-color:var(--line)}
+.logo{border-radius:10px;box-shadow:0 6px 16px -8px var(--gi-glow)}
+.save,.btn.primary{background-color:var(--accent);background-image:linear-gradient(180deg,color-mix(in srgb,var(--accent) 88%,#fff),var(--accent));border-color:transparent;
+  box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 10px 22px -12px var(--gi-glow);transition:transform .12s cubic-bezier(.2,.8,.2,1),box-shadow .2s,filter .12s}
+.save:hover,.btn.primary:hover{box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 14px 28px -10px var(--gi-glow)}
+.btn{border-radius:12px;transition:transform .12s cubic-bezier(.2,.8,.2,1),border-color .15s,background .15s,box-shadow .2s}
+.btn:active,.save:active{transform:translateY(1px) scale(.985)}
+.btn:not(.primary):not(.ghost):hover{border-color:var(--accent);background:var(--accent-soft)}
+
+/* surfaces */
+.card{border-radius:var(--r);transition:border-color .2s,box-shadow .2s}
+@media (hover:hover){.card:hover{border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}}
+.readout{background:linear-gradient(160deg,var(--card),color-mix(in srgb,var(--accent-soft) 70%,var(--card)));border-color:color-mix(in srgb,var(--accent) 25%,var(--line))}
+.big{background:linear-gradient(100deg,var(--ink),color-mix(in srgb,var(--accent) 80%,var(--ink)));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* fields */
+input,select{border-radius:12px;background:var(--glass);border-color:var(--line2);transition:border-color .15s,box-shadow .15s,background .15s}
+input:hover,select:hover{border-color:var(--glass-line)}
+input:focus,select:focus{border-color:var(--accent);background:var(--card)}
+.seg{background:var(--glass);border:1px solid var(--line);border-radius:14px}
+.seg input:checked+span{box-shadow:0 1px 2px rgba(8,40,24,.12),0 0 0 1px color-mix(in srgb,var(--accent) 30%,transparent)}
+
+/* navigation: pill tabs on desktop, an Ionic-style tab bar on phones */
+.tabs a,.tabs button{border-radius:999px;transition:background .15s,color .15s}
+.tabs a[aria-current="page"],.tabs button[aria-current="page"]{background:var(--accent-soft);color:var(--accent-strong);box-shadow:0 0 0 1px color-mix(in srgb,var(--accent) 25%,transparent) inset}
+.bottomnav{border-top-color:var(--line);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4)}
+.bottomnav a{border-radius:14px;transition:background .15s,color .15s}
+.bottomnav a[aria-current="page"]{background:var(--accent-soft);color:var(--accent-strong)}
+
+/* pills and badges */
+.pill{border-radius:999px}
+.pill.ok i{background:var(--accent)}
+
+/* tables */
+.tablewrap{border-radius:14px;background:var(--card)}
+.ptable thead th{background:var(--glass)}
+@media (hover:hover){.ptable tbody tr:hover td{background:color-mix(in srgb,var(--accent-soft) 55%,transparent)}}
+
+/* sheets and toasts */
+.sheet,.sheet-bottom{box-shadow:var(--shadow);border-color:var(--line)}
+.sheet::backdrop{background:rgba(3,14,9,.55);backdrop-filter:blur(3px)}
+.toast{border-radius:999px;box-shadow:var(--shadow)}
+@media (prefers-reduced-motion: reduce){.btn,.save,.card,input,select{transition:none}.btn:active,.save:active{transform:none}}
+input[type=checkbox],input[type=radio],input[type=range]{accent-color:var(--accent)}

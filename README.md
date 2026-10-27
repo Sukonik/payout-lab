@@ -44,6 +44,8 @@ The header always shows both states, **Device** and **Packet**, and **Save packe
 
 Prices and dividends come from `data.json`, refreshed hourly by a scheduled GitHub Action ([`update-data.yml`](.github/workflows/update-data.yml)). It uses Tiingo (API key stored as a repository secret) and falls back to Yahoo Finance only for tickers Tiingo has no data for. Each hourly run handles 45 tickers (new seed tickers first, then the stalest), so the whole list cycles in about a day once the seed has filled in. If Tiingo reports a rate limit the run stops and the rest wait for next time.
 
+**Theme: Green Ion.** The look comes from Green Ion, a small dependency-free design system (`css/green-ion.css`, vendored from the SunAgentic `green-ion/` folder) with a Payout Lab mapping in `css/green-ion-theme.css`. It keeps every class name and all behavior, adds an ion-green palette with WCAG AA contrast in light and dark, press and hover feedback, and a phone tab bar. Colors in the app are CSS variables, so changing the theme means editing one file.
+
 <!-- coverage:start -->
 **Coverage on 2026-10-27:** 507 stocks and 80 ETFs have live data (587 tickers). 558 more are in `tickers-seed.json` waiting for their first data fetch; with them the list reaches 609 stocks and 536 ETFs. Target: at least 500 stocks and 400 ETFs.
 <!-- coverage:end -->
