@@ -11,11 +11,7 @@ export function fromYahoo(chart) {
   const price = r?.meta?.regularMarketPrice;
   if (!r || !(price > 0)) return null;
   const events = Object.values(r.events?.dividends ?? {}).map((e) => ({ t: e.date * 1000, a: e.amount }));
-  // Splits: numerator/denominator is shares after per share before, so 10:1 is 10 and a 1-for-8 reverse split is 0.125.
-  const splits = Object.values(r.events?.splits ?? {})
-    .filter((e) => e.numerator > 0 && e.denominator > 0 && e.numerator !== e.denominator)
-    .map((e) => ({ t: e.date * 1000, f: e.numerator / e.denominator }));
-  return { price, events, splits };
+  return { price, events };
 }
 
 // Tiingo daily prices: [{ date, close, divCash, ... }] in date order. divCash is the cash dividend on its ex-date.
@@ -25,24 +21,20 @@ export function fromTiingo(rows) {
   if (!(price > 0)) return null;
   // divCash is the amount as paid at the time. Divide by every LATER split so old payments are comparable to today's share count.
   const events = [];
-  const splits = [];
   let laterSplits = 1;
   for (let i = rows.length - 1; i >= 0; i--) {
     if (rows[i].divCash > 0) events.push({ t: Date.parse(rows[i].date), a: rows[i].divCash / laterSplits });
-    if (rows[i].splitFactor > 0 && rows[i].splitFactor !== 1) splits.push({ t: Date.parse(rows[i].date), f: rows[i].splitFactor });
     if (rows[i].splitFactor > 0) laterSplits *= rows[i].splitFactor;
   }
-  return { price, events, splits };
+  return { price, events };
 }
 
 // Pure function so it can be tested without network access.
-export function summarize({ price, events, splits = [] }, now = Date.now()) {
+export function summarize({ price, events }, now = Date.now()) {
   events = [...events].sort((a, b) => a.t - b.t);
   const yearAgo = now - 365 * 864e5;
   const ttm = events.filter((e) => e.t > yearAgo);
   const out = { p: round(price, 2) };
-  // Split log: the last few splits, oldest first. f is shares after per share before (10 = 10-for-1, 0.125 = 1-for-8 reverse).
-  if (splits.length) out.sp = [...splits].sort((a, b) => a.t - b.t).slice(-6).map((x) => ({ d: new Date(x.t).toISOString().slice(0, 10), f: round(x.f, 4) }));
   if (!ttm.length) return { ...out, d: 0 };
   const count = ttm.length;
   const freq = count >= 10 ? 12 : count >= 3 ? 4 : count === 2 ? 2 : 1;
@@ -87,7 +79,7 @@ async function fetchTiingo(t) {
 
 async function fetchYahoo(t) {
   const chart = await getJson(
-    `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(t)}?range=7y&interval=1mo&events=div%2Csplit`,
+    `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(t)}?range=7y&interval=1mo&events=div`,
     { "User-Agent": "Mozilla/5.0 (payout-lab data refresh)" }
   );
   return fromYahoo(chart);
@@ -120,7 +112,7 @@ async function main() {
           ok++;
           break;
         }
-        for (const k of ["per", "last", "hist", "g3", "g5", "est", "sp"]) delete old[k];
+        for (const k of ["per", "last", "hist", "g3", "g5", "est"]) delete old[k];
         Object.assign(old, sum, { src: name, u: new Date().toISOString() });
         if (!old.s) old.s = "Q3";
         used[name] = (used[name] || 0) + 1;

@@ -44,8 +44,6 @@ Prices and dividends come from `data.json`, refreshed on weekdays by a scheduled
 
 Per ticker the file carries price `p`, dividends paid in the last 12 months `d`, the latest payment `per`, the pay schedule `s`, the last ex-dividend date `last`, recent payments `hist`, growth `g3`/`g5`, the provider `src` and when it was refreshed `u`.
 
-**Split log.** Each refresh also records the ticker's last few stock splits as `sp`: `[{ "d": "2024-06-10", "f": 10 }]`, where `f` is shares after per share before (10 is a 10-for-1 split, 0.125 is a 1-for-8 reverse split). The field appears only for tickers that have split in the 7-year window the refresh reads, so it fills in as the scheduled runs cycle through the list. Explore shows it as "Split history" on a ticker's card. A split changes the share count and the price, not the value of a holding, and the log reports splits that already happened; it does not predict them.
-
 In the app, **a portfolio keeps its own dated copy of every value**. A new data file never rewrites it. *Portfolio → Check for updates* shows what changed with provider and date, protects values you typed, flags provider data that is itself stale, and applies only what you choose. You can pick whether "dividend per share" means the **last 12 months** or the **current rate**.
 
 Things to know:

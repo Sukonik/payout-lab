@@ -57,10 +57,6 @@ export function sanitizeEntry(key, v) {
   if (isNum(v.g3, -1, 100)) e.g3 = v.g3;
   if (isNum(v.g5, -1, 100)) e.g5 = v.g5;
   if (Array.isArray(v.hist)) e.hist = v.hist.slice(-12).filter((h) => h && isDay(h.d) && isNum(h.a, 0, LIMITS.maxDividend)).map((h) => ({ d: h.d.slice(0, 10), a: h.a }));
-  if (Array.isArray(v.sp)) {
-    const sp = v.sp.slice(-6).filter((x) => x && isDay(x.d) && isNum(x.f, 0.001, 1000) && x.f !== 1).map((x) => ({ d: x.d.slice(0, 10), f: x.f }));
-    if (sp.length) e.sp = sp;
-  }
   return e;
 }
 
