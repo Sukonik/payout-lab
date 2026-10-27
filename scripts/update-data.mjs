@@ -58,6 +58,28 @@ export function summarize({ price, events }, now = Date.now()) {
 
 const round = (v, d) => Math.round(v * 10 ** d) / 10 ** d;
 
+// Coverage seed: tickers we want in data.json (tickers-seed.json). A seed ticker is added only when a provider returns a real
+// price for it, so nothing is ever published with made-up numbers. Names in the seed are labels.
+const SEED_FILE = new URL("../tickers-seed.json", import.meta.url);
+const SEED_SHARE = 0.65; // share of each run spent on tickers not in data.json yet; the rest keeps the stalest existing ones fresh
+
+// Pure function: which tickers this run should fetch. Missing seed tickers first (up to SEED_SHARE of the batch), then stalest existing.
+export function pickQueue(tickers, seed, batch) {
+  const missing = Object.keys(seed).filter((t) => !tickers[t]).sort();
+  const take = Math.min(missing.length, Math.max(0, Math.round(batch * SEED_SHARE)));
+  const stale = Object.keys(tickers)
+    .sort((a, b) => (tickers[a].u || "").localeCompare(tickers[b].u || ""))
+    .slice(0, batch - take);
+  return [...missing.slice(0, take), ...stale];
+}
+
+// Counts used by the coverage report and test.
+export function coverage(tickers, seed = {}) {
+  const all = { ...Object.fromEntries(Object.entries(seed).map(([t, v]) => [t, { type: v.type }])), ...tickers };
+  const etfs = Object.values(all).filter((v) => v.type === "ETF_PASS_THROUGH").length;
+  return { stocks: Object.keys(all).length - etfs, etfs };
+}
+
 const TIINGO_TOKEN = process.env.TIINGO_TOKEN;
 // Tiingo's free plan allows ~50 symbols/hour, so each run refreshes only the stalest tickers.
 const BATCH = Number(process.env.BATCH) || 45;
@@ -87,12 +109,12 @@ async function fetchYahoo(t) {
 
 async function main() {
   const db = JSON.parse(readFileSync(FILE, "utf8"));
+  let seed = {};
+  try { seed = JSON.parse(readFileSync(SEED_FILE, "utf8")).tickers ?? {}; } catch { console.warn("No tickers-seed.json; refreshing existing tickers only"); }
   const used = {};
-  let ok = 0;
-  const queue = Object.keys(db.tickers)
-    .sort((a, b) => (db.tickers[a].u || "").localeCompare(db.tickers[b].u || ""))
-    .slice(0, BATCH);
-  console.log(`Refreshing ${queue.length} of ${Object.keys(db.tickers).length} tickers (stalest first)`);
+  let ok = 0, added = 0;
+  const queue = pickQueue(db.tickers, seed, BATCH);
+  console.log(`Refreshing ${queue.length} tickers (${queue.filter((t) => !db.tickers[t]).length} new from the seed list, rest stalest first); data.json has ${Object.keys(db.tickers).length}`);
   let rateLimited = false;
   for (const t of queue) {
     if (rateLimited) break;
@@ -104,7 +126,8 @@ async function main() {
         const sum = summarize(raw);
         // A price with no dividends usually means this provider lacks dividend data for the ticker; try the next one.
         if (!(sum.d > 0) && name !== attempts[attempts.length - 1][0]) throw new Error("no dividends reported");
-        const old = db.tickers[t];
+        const isNew = !db.tickers[t];
+        const old = db.tickers[t] ?? { n: seed[t]?.n ?? t, type: seed[t]?.type, p: sum.p, d: 0, q: true };
         if (!(sum.d > 0) && old.d > 0) {
           // Nobody reports dividends for a ticker we believe pays one: refresh the price only and flag the rest as an estimate.
           Object.assign(old, { p: sum.p, est: true, src: name, u: new Date().toISOString() });
@@ -115,6 +138,7 @@ async function main() {
         for (const k of ["per", "last", "hist", "g3", "g5", "est"]) delete old[k];
         Object.assign(old, sum, { src: name, u: new Date().toISOString() });
         if (!old.s) old.s = "Q3";
+        if (isNew) { db.tickers[t] = old; added++; }
         used[name] = (used[name] || 0) + 1;
         ok++;
         break;
@@ -138,7 +162,9 @@ async function main() {
   db.source = Object.keys(used).join(" + ");
   console.log("Sources used:", used);
   writeFileSync(FILE, JSON.stringify(db, null, 1) + "\n");
-  console.log(`Refreshed ${ok}/${Object.keys(db.tickers).length} tickers`);
+  console.log(`Refreshed ${ok} tickers, ${added} added from the seed list; data.json now has ${Object.keys(db.tickers).length}`);
+  const c = coverage(db.tickers, seed);
+  console.log(`Coverage: ${c.stocks} stocks and ${c.etfs} ETFs (including seed tickers not fetched yet)`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) main();

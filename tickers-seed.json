@@ -1,0 +1,2389 @@
+{
+ "note": "Tickers Payout Lab should cover. scripts/update-data.mjs adds one only when a data provider returns a real price for it; names here are labels and a ticker with no data is skipped, never published with made-up numbers.",
+ "tickers": {
+  "AAAU": {
+   "n": "Goldman Sachs Physical Gold",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ACWI": {
+   "n": "iShares MSCI ACWI",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ACWX": {
+   "n": "iShares MSCI ACWI ex US",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "AEO": {
+   "n": "American Eagle Outfitters",
+   "type": "EQUITY_STANDARD"
+  },
+  "AFRM": {
+   "n": "Affirm",
+   "type": "EQUITY_STANDARD"
+  },
+  "AGG": {
+   "n": "iShares Core US Aggregate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "AIQ": {
+   "n": "Global X Artificial Intelligence and Technology",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ALAB": {
+   "n": "Astera Labs",
+   "type": "EQUITY_STANDARD"
+  },
+  "AMLP": {
+   "n": "Alerian MLP",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "AMZY": {
+   "n": "YieldMax AMZN Option Income Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ANET": {
+   "n": "Arista Networks",
+   "type": "EQUITY_STANDARD"
+  },
+  "ANF": {
+   "n": "Abercrombie and Fitch",
+   "type": "EQUITY_STANDARD"
+  },
+  "ANGL": {
+   "n": "VanEck Fallen Angel High Yield Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ANTW": {
+   "n": "Anthropic AI Lab Ecosystem ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "APLY": {
+   "n": "YieldMax AAPL Option Income Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "APP": {
+   "n": "AppLovin",
+   "type": "EQUITY_STANDARD"
+  },
+  "ARGT": {
+   "n": "Global X MSCI Argentina",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ARKB": {
+   "n": "ARK 21Shares Bitcoin",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ARKF": {
+   "n": "ARK Fintech Innovation",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ARKG": {
+   "n": "ARK Genomic Revolution",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ARKK": {
+   "n": "ARK Innovation",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ARKQ": {
+   "n": "ARK Autonomous Technology and Robotics",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ARKW": {
+   "n": "ARK Next Generation Internet",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ARKX": {
+   "n": "ARK Space Exploration and Innovation",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ARM": {
+   "n": "Arm Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "ASHR": {
+   "n": "Xtrackers Harvest CSI 300 China A-Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ASML": {
+   "n": "ASML Holding",
+   "type": "EQUITY_STANDARD"
+  },
+  "ASTS": {
+   "n": "AST SpaceMobile",
+   "type": "EQUITY_STANDARD"
+  },
+  "AVDE": {
+   "n": "Avantis International Equity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "AVDV": {
+   "n": "Avantis International Small Cap Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "AVEM": {
+   "n": "Avantis Emerging Markets Equity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "AVGV": {
+   "n": "Avantis All Equity Markets Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "AVLV": {
+   "n": "Avantis US Large Cap Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "AVUS": {
+   "n": "Avantis US Equity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "AVUV": {
+   "n": "Avantis US Small Cap Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BABA": {
+   "n": "Alibaba Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "BAR": {
+   "n": "GraniteShares Gold Trust",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BBCA": {
+   "n": "JPMorgan BetaBuilders Canada",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BBEU": {
+   "n": "JPMorgan BetaBuilders Europe",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BBIN": {
+   "n": "JPMorgan BetaBuilders International Equity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BBJP": {
+   "n": "JPMorgan BetaBuilders Japan",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BBUS": {
+   "n": "JPMorgan BetaBuilders US Equity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BIDU": {
+   "n": "Baidu",
+   "type": "EQUITY_STANDARD"
+  },
+  "BIL": {
+   "n": "SPDR Bloomberg 1-3 Month T-Bill",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BITB": {
+   "n": "Bitwise Bitcoin",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BITO": {
+   "n": "ProShares Bitcoin Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BIV": {
+   "n": "Vanguard Intermediate-Term Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BKCH": {
+   "n": "Global X Blockchain",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BKLN": {
+   "n": "Invesco Senior Loan",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BLOK": {
+   "n": "Amplify Transformational Data Sharing",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BLV": {
+   "n": "Vanguard Long-Term Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BND": {
+   "n": "Vanguard Total Bond Market",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BNDW": {
+   "n": "Vanguard Total World Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BNDX": {
+   "n": "Vanguard Total International Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BNO": {
+   "n": "United States Brent Oil Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BOND": {
+   "n": "PIMCO Active Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BOTZ": {
+   "n": "Global X Robotics and Artificial Intelligence",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BROS": {
+   "n": "Dutch Bros",
+   "type": "EQUITY_STANDARD"
+  },
+  "BRRR": {
+   "n": "Coinshares Valkyrie Bitcoin",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BSV": {
+   "n": "Vanguard Short-Term Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BTCO": {
+   "n": "Invesco Galaxy Bitcoin",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BUG": {
+   "n": "Global X Cybersecurity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BULL": {
+   "n": "Webull",
+   "type": "EQUITY_STANDARD"
+  },
+  "CAVA": {
+   "n": "Cava Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "CELH": {
+   "n": "Celsius Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "CHWY": {
+   "n": "Chewy",
+   "type": "EQUITY_STANDARD"
+  },
+  "CIBR": {
+   "n": "First Trust NASDAQ Cybersecurity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "CIEN": {
+   "n": "Ciena",
+   "type": "EQUITY_STANDARD"
+  },
+  "CLOU": {
+   "n": "Global X Cloud Computing",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "CLS": {
+   "n": "Celestica",
+   "type": "EQUITY_STANDARD"
+  },
+  "CLSK": {
+   "n": "CleanSpark",
+   "type": "EQUITY_STANDARD"
+  },
+  "CMF": {
+   "n": "iShares California Muni Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "COHR": {
+   "n": "Coherent",
+   "type": "EQUITY_STANDARD"
+  },
+  "CONY": {
+   "n": "YieldMax COIN Option Income Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "COPX": {
+   "n": "Global X Copper Miners",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "CORN": {
+   "n": "Teucrium Corn",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "CORZ": {
+   "n": "Core Scientific",
+   "type": "EQUITY_STANDARD"
+  },
+  "COTY": {
+   "n": "Coty",
+   "type": "EQUITY_STANDARD"
+  },
+  "COUR": {
+   "n": "Coursera",
+   "type": "EQUITY_STANDARD"
+  },
+  "COWZ": {
+   "n": "Pacer US Cash Cows 100",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "CPER": {
+   "n": "United States Copper Index",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "CPNG": {
+   "n": "Coupang",
+   "type": "EQUITY_STANDARD"
+  },
+  "CQQQ": {
+   "n": "Invesco China Technology",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "CRDO": {
+   "n": "Credo Technology",
+   "type": "EQUITY_STANDARD"
+  },
+  "CROX": {
+   "n": "Crocs",
+   "type": "EQUITY_STANDARD"
+  },
+  "CRWV": {
+   "n": "CoreWeave",
+   "type": "EQUITY_STANDARD"
+  },
+  "CWB": {
+   "n": "SPDR Bloomberg Convertible Securities",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DAPP": {
+   "n": "VanEck Digital Transformation",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DBA": {
+   "n": "Invesco DB Agriculture",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DBB": {
+   "n": "Invesco DB Base Metals",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DBC": {
+   "n": "Invesco DB Commodity Index Tracking",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DBO": {
+   "n": "Invesco DB Oil",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DECK": {
+   "n": "Deckers Outdoor",
+   "type": "EQUITY_STANDARD"
+  },
+  "DES": {
+   "n": "WisdomTree US SmallCap Dividend",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFAC": {
+   "n": "Dimensional US Core Equity 2",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFAI": {
+   "n": "Dimensional International Core Equity Market",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFAS": {
+   "n": "Dimensional US Small Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFAT": {
+   "n": "Dimensional US Targeted Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFAU": {
+   "n": "Dimensional US Core Equity Market",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFAX": {
+   "n": "Dimensional World ex US Core Equity 2",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFEM": {
+   "n": "Dimensional Emerging Markets Core Equity 2",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFEV": {
+   "n": "Dimensional Emerging Markets Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFIC": {
+   "n": "Dimensional International Core Equity 2",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFIV": {
+   "n": "Dimensional International Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFLV": {
+   "n": "Dimensional US Large Cap Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFSV": {
+   "n": "Dimensional US Small Cap Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFUS": {
+   "n": "Dimensional US Equity Market",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DFUV": {
+   "n": "Dimensional US Marketwide Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DHS": {
+   "n": "WisdomTree US High Dividend",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DIA": {
+   "n": "SPDR Dow Jones Industrial Average",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DIV": {
+   "n": "Global X SuperDividend US",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DIVB": {
+   "n": "iShares Core Dividend",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DLN": {
+   "n": "WisdomTree US LargeCap Dividend",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DOCU": {
+   "n": "Docusign",
+   "type": "EQUITY_STANDARD"
+  },
+  "DON": {
+   "n": "WisdomTree US MidCap Dividend",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DPZ": {
+   "n": "Dominos Pizza",
+   "type": "EQUITY_STANDARD"
+  },
+  "DRAM": {
+   "n": "Roundhill Memory ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DRIV": {
+   "n": "Global X Autonomous and Electric Vehicles",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DTD": {
+   "n": "WisdomTree US Total Dividend",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DUOL": {
+   "n": "Duolingo",
+   "type": "EQUITY_STANDARD"
+  },
+  "DVYE": {
+   "n": "iShares Emerging Markets Dividend",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DXJ": {
+   "n": "WisdomTree Japan Hedged Equity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EA": {
+   "n": "Electronic Arts",
+   "type": "EQUITY_STANDARD"
+  },
+  "EBIZ": {
+   "n": "Global X E-commerce",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EDV": {
+   "n": "Vanguard Extended Duration Treasury",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EEM": {
+   "n": "iShares MSCI Emerging Markets",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EFA": {
+   "n": "iShares MSCI EAFE",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EIDO": {
+   "n": "iShares MSCI Indonesia",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EMB": {
+   "n": "iShares JP Morgan USD Emerging Markets Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EMLC": {
+   "n": "VanEck J.P. Morgan EM Local Currency Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EMXC": {
+   "n": "iShares MSCI Emerging Markets ex China",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ENPH": {
+   "n": "Enphase Energy",
+   "type": "EQUITY_STANDARD"
+  },
+  "ENTG": {
+   "n": "Entegris",
+   "type": "EQUITY_STANDARD"
+  },
+  "EPI": {
+   "n": "WisdomTree India Earnings",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EPOL": {
+   "n": "iShares MSCI Poland",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EQAL": {
+   "n": "Invesco Russell 1000 Equal Weight",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ESGU": {
+   "n": "iShares ESG Aware MSCI USA",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ETHA": {
+   "n": "iShares Ethereum Trust",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ETHE": {
+   "n": "Grayscale Ethereum Trust",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ETSY": {
+   "n": "Etsy",
+   "type": "EQUITY_STANDARD"
+  },
+  "EWA": {
+   "n": "iShares MSCI Australia",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWC": {
+   "n": "iShares MSCI Canada",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWD": {
+   "n": "iShares MSCI Sweden",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWG": {
+   "n": "iShares MSCI Germany",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWH": {
+   "n": "iShares MSCI Hong Kong",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWI": {
+   "n": "iShares MSCI Italy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWJ": {
+   "n": "iShares MSCI Japan",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWL": {
+   "n": "iShares MSCI Switzerland",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWN": {
+   "n": "iShares MSCI Netherlands",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWP": {
+   "n": "iShares MSCI Spain",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWQ": {
+   "n": "iShares MSCI France",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWS": {
+   "n": "iShares MSCI Singapore",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWT": {
+   "n": "iShares MSCI Taiwan",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWU": {
+   "n": "iShares MSCI United Kingdom",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWW": {
+   "n": "iShares MSCI Mexico",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWY": {
+   "n": "iShares MSCI South Korea",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWZ": {
+   "n": "iShares MSCI Brazil",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EZA": {
+   "n": "iShares MSCI South Africa",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EZBC": {
+   "n": "Franklin Bitcoin",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EZU": {
+   "n": "iShares MSCI Eurozone",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FALN": {
+   "n": "iShares Fallen Angels USD Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FBND": {
+   "n": "Fidelity Total Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FBTC": {
+   "n": "Fidelity Wise Origin Bitcoin",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FBY": {
+   "n": "YieldMax META Option Income Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FCG": {
+   "n": "First Trust Natural Gas",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FCOM": {
+   "n": "Fidelity MSCI Communication Services",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FDIS": {
+   "n": "Fidelity MSCI Consumer Discretionary",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FDL": {
+   "n": "First Trust Morningstar Dividend Leaders",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FDN": {
+   "n": "First Trust Dow Jones Internet Index",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FENY": {
+   "n": "Fidelity MSCI Energy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FETH": {
+   "n": "Fidelity Ethereum Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FHLC": {
+   "n": "Fidelity MSCI Health Care",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FIDU": {
+   "n": "Fidelity MSCI Industrials",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FINX": {
+   "n": "Global X FinTech",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FIXD": {
+   "n": "First Trust TCW Opportunistic Fixed Income",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLCH": {
+   "n": "Franklin FTSE China",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLEE": {
+   "n": "Franklin FTSE Europe",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLJP": {
+   "n": "Franklin FTSE Japan",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLOT": {
+   "n": "iShares Floating Rate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FMAT": {
+   "n": "Fidelity MSCI Materials",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FNCL": {
+   "n": "Fidelity MSCI Financials",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FNDA": {
+   "n": "Schwab Fundamental US Small Company Index",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FNDE": {
+   "n": "Schwab Fundamental Emerging Markets Large Company Index",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FNDF": {
+   "n": "Schwab Fundamental International Large Company Index",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FNDX": {
+   "n": "Schwab Fundamental US Large Company Index",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FNGU": {
+   "n": "MicroSectors FANG+ 3X Leveraged ETN",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FPX": {
+   "n": "First Trust US Equity Opportunities",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FREL": {
+   "n": "Fidelity MSCI Real Estate",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FSLR": {
+   "n": "First Solar",
+   "type": "EQUITY_STANDARD"
+  },
+  "FSTA": {
+   "n": "Fidelity MSCI Consumer Staples",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FTEC": {
+   "n": "Fidelity MSCI Information Technology",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FUTY": {
+   "n": "Fidelity MSCI Utilities",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FVD": {
+   "n": "First Trust Value Line Dividend Index",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FXI": {
+   "n": "iShares China Large-Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GBIL": {
+   "n": "Goldman Sachs Access Treasury 0-1 Year",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GBTC": {
+   "n": "Grayscale Bitcoin Trust",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GDX": {
+   "n": "VanEck Gold Miners",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GDXJ": {
+   "n": "VanEck Junior Gold Miners",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GLD": {
+   "n": "SPDR Gold Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GLDM": {
+   "n": "SPDR Gold MiniShares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GLW": {
+   "n": "Corning",
+   "type": "EQUITY_STANDARD"
+  },
+  "GOOY": {
+   "n": "YieldMax GOOGL Option Income Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GOVT": {
+   "n": "iShares US Treasury Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GPIQ": {
+   "n": "Goldman Sachs Nasdaq-100 Core Premium Income",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GPIX": {
+   "n": "Goldman Sachs S&P 500 Core Premium Income",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GPS": {
+   "n": "Gap",
+   "type": "EQUITY_STANDARD"
+  },
+  "GRAB": {
+   "n": "Grab Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "GREK": {
+   "n": "Global X MSCI Greece",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GRID": {
+   "n": "First Trust NASDAQ Clean Edge Smart Grid Infrastructure",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GSG": {
+   "n": "iShares S&P GSCI Commodity-Indexed Trust",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GXC": {
+   "n": "SPDR S&P China",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "HACK": {
+   "n": "Amplify Cybersecurity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "HEDJ": {
+   "n": "WisdomTree Europe Hedged Equity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "HIMS": {
+   "n": "Hims and Hers Health",
+   "type": "EQUITY_STANDARD"
+  },
+  "HMC": {
+   "n": "Honda Motor",
+   "type": "EQUITY_STANDARD"
+  },
+  "HODL": {
+   "n": "VanEck Bitcoin",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "HPQ": {
+   "n": "HP",
+   "type": "EQUITY_STANDARD"
+  },
+  "HYD": {
+   "n": "VanEck High Yield Muni",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "HYG": {
+   "n": "iShares iBoxx High Yield Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IAI": {
+   "n": "iShares US Broker-Dealers and Securities Exchanges",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IAT": {
+   "n": "iShares US Regional Banks",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IAU": {
+   "n": "iShares Gold Trust",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IAUM": {
+   "n": "iShares Gold Trust Micro",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IBB": {
+   "n": "iShares Biotechnology",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IBDQ": {
+   "n": "iShares iBonds Dec 2026 Term Corporate",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IBIT": {
+   "n": "iShares Bitcoin Trust",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ICF": {
+   "n": "iShares Cohen and Steers REIT",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ICLN": {
+   "n": "iShares Global Clean Energy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ICSH": {
+   "n": "iShares Ultra Short-Term Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ICVT": {
+   "n": "iShares Convertible Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IDRV": {
+   "n": "iShares Self-Driving EV and Tech",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IEF": {
+   "n": "iShares 7-10 Year Treasury Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IEI": {
+   "n": "iShares 3-7 Year Treasury Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IEMG": {
+   "n": "iShares Core MSCI Emerging Markets",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IEV": {
+   "n": "iShares Europe",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IFRA": {
+   "n": "iShares US Infrastructure",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IGF": {
+   "n": "iShares Global Infrastructure",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IGIB": {
+   "n": "iShares 5-10 Year Investment Grade Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IGLB": {
+   "n": "iShares 10+ Year Investment Grade Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IGM": {
+   "n": "iShares Expanded Tech Sector",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IGSB": {
+   "n": "iShares 1-5 Year Investment Grade Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IGV": {
+   "n": "iShares Expanded Tech-Software Sector",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IHAK": {
+   "n": "iShares Cybersecurity and Tech",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IHF": {
+   "n": "iShares US Health Care Providers",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IHI": {
+   "n": "iShares US Medical Devices",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IJH": {
+   "n": "iShares Core S&P Mid-Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IJJ": {
+   "n": "iShares S&P Mid-Cap 400 Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IJK": {
+   "n": "iShares S&P Mid-Cap 400 Growth",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IJR": {
+   "n": "iShares Core S&P Small-Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IJS": {
+   "n": "iShares S&P Small-Cap 600 Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IJT": {
+   "n": "iShares S&P Small-Cap 600 Growth",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ILF": {
+   "n": "iShares Latin America 40",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "INDA": {
+   "n": "iShares MSCI India",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "INDY": {
+   "n": "iShares India 50",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IONQ": {
+   "n": "IonQ",
+   "type": "EQUITY_STANDARD"
+  },
+  "IREN": {
+   "n": "IREN",
+   "type": "EQUITY_STANDARD"
+  },
+  "ITA": {
+   "n": "iShares US Aerospace and Defense",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ITB": {
+   "n": "iShares US Home Construction",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ITOT": {
+   "n": "iShares Core S&P Total US Stock Market",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IUSB": {
+   "n": "iShares Core Total USD Bond Market",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IUSG": {
+   "n": "iShares Core S&P US Growth",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IUSV": {
+   "n": "iShares Core S&P US Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IVOO": {
+   "n": "Vanguard S&P Mid-Cap 400",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IVV": {
+   "n": "iShares Core S&P 500",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IWB": {
+   "n": "iShares Russell 1000",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IWC": {
+   "n": "iShares Micro-Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IWF": {
+   "n": "iShares Russell 1000 Growth",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IWL": {
+   "n": "iShares Russell Top 200",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IWM": {
+   "n": "iShares Russell 2000",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IWN": {
+   "n": "iShares Russell 2000 Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IWO": {
+   "n": "iShares Russell 2000 Growth",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IWP": {
+   "n": "iShares Russell Mid-Cap Growth",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IWR": {
+   "n": "iShares Russell Mid-Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IWS": {
+   "n": "iShares Russell Mid-Cap Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IWV": {
+   "n": "iShares Russell 3000",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IWY": {
+   "n": "iShares Russell Top 200 Growth",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IXUS": {
+   "n": "iShares Core MSCI Total International Stock",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IYC": {
+   "n": "iShares US Consumer Discretionary",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IYE": {
+   "n": "iShares US Energy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IYF": {
+   "n": "iShares US Financials",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IYG": {
+   "n": "iShares US Financial Services",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IYH": {
+   "n": "iShares US Healthcare",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IYJ": {
+   "n": "iShares US Industrials",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IYK": {
+   "n": "iShares US Consumer Staples",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IYM": {
+   "n": "iShares US Basic Materials",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IYR": {
+   "n": "iShares US Real Estate",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IYT": {
+   "n": "iShares Transportation Average",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IYW": {
+   "n": "iShares US Technology",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IYZ": {
+   "n": "iShares US Telecommunications",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "JBND": {
+   "n": "JPMorgan Active Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "JD": {
+   "n": "JD.com",
+   "type": "EQUITY_STANDARD"
+  },
+  "JEPY": {
+   "n": "Defiance S&P 500 Target Income",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "JETS": {
+   "n": "US Global Jets",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "JNK": {
+   "n": "SPDR Bloomberg High Yield Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "JPST": {
+   "n": "JPMorgan Ultra-Short Income",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "JWN": {
+   "n": "Nordstrom",
+   "type": "EQUITY_STANDARD"
+  },
+  "KBE": {
+   "n": "SPDR S&P Bank",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "KBWB": {
+   "n": "Invesco KBW Bank",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "KCE": {
+   "n": "SPDR S&P Capital Markets",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "KIE": {
+   "n": "SPDR S&P Insurance",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "KRE": {
+   "n": "SPDR S&P Regional Banking",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "KSS": {
+   "n": "Kohls",
+   "type": "EQUITY_STANDARD"
+  },
+  "KWEB": {
+   "n": "KraneShares CSI China Internet",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "LABU": {
+   "n": "Direxion Daily S&P Biotech Bull 3X Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "LCID": {
+   "n": "Lucid Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "LI": {
+   "n": "Li Auto",
+   "type": "EQUITY_STANDARD"
+  },
+  "LIT": {
+   "n": "Global X Lithium and Battery Tech",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "LPL": {
+   "n": "LG Display",
+   "type": "EQUITY_STANDARD"
+  },
+  "LQD": {
+   "n": "iShares iBoxx Investment Grade Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "LULU": {
+   "n": "Lululemon Athletica",
+   "type": "EQUITY_STANDARD"
+  },
+  "LUNR": {
+   "n": "Intuitive Machines",
+   "type": "EQUITY_STANDARD"
+  },
+  "M": {
+   "n": "Macys",
+   "type": "EQUITY_STANDARD"
+  },
+  "MAGS": {
+   "n": "Roundhill Magnificent Seven",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MARA": {
+   "n": "MARA Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "MBB": {
+   "n": "iShares MBS",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MCHI": {
+   "n": "iShares MSCI China",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MDB": {
+   "n": "MongoDB",
+   "type": "EQUITY_STANDARD"
+  },
+  "MDY": {
+   "n": "SPDR S&P MidCap 400",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MELI": {
+   "n": "MercadoLibre",
+   "type": "EQUITY_STANDARD"
+  },
+  "MGC": {
+   "n": "Vanguard Mega Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MGK": {
+   "n": "Vanguard Mega Cap Growth",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MGV": {
+   "n": "Vanguard Mega Cap Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MINT": {
+   "n": "PIMCO Enhanced Short Maturity Active",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MLPA": {
+   "n": "Global X MLP",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MN": {
+   "n": "Corgi MANGOS ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MOAT": {
+   "n": "VanEck Morningstar Wide Moat",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MOO": {
+   "n": "VanEck Agribusiness",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MORT": {
+   "n": "VanEck Mortgage REIT Income",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MSTR": {
+   "n": "Strategy",
+   "type": "EQUITY_STANDARD"
+  },
+  "MSTY": {
+   "n": "YieldMax MSTR Option Income Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MTUM": {
+   "n": "iShares MSCI USA Momentum Factor",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MUB": {
+   "n": "iShares National Muni Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "NBIS": {
+   "n": "Nebius Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "NEAR": {
+   "n": "iShares Short Maturity Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "NET": {
+   "n": "Cloudflare",
+   "type": "EQUITY_STANDARD"
+  },
+  "NFLY": {
+   "n": "YieldMax NFLX Option Income Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "NFRA": {
+   "n": "FlexShares STOXX Global Broad Infrastructure",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "NIO": {
+   "n": "NIO",
+   "type": "EQUITY_STANDARD"
+  },
+  "NLR": {
+   "n": "VanEck Uranium and Nuclear",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "NRDS": {
+   "n": "NerdWallet",
+   "type": "EQUITY_STANDARD"
+  },
+  "NTAP": {
+   "n": "NetApp",
+   "type": "EQUITY_STANDARD"
+  },
+  "NU": {
+   "n": "Nu Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "NVDY": {
+   "n": "YieldMax NVDA Option Income Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "NVO": {
+   "n": "Novo Nordisk",
+   "type": "EQUITY_STANDARD"
+  },
+  "NXTG": {
+   "n": "First Trust Indxx NextG",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "NYF": {
+   "n": "iShares New York Muni Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "NYT": {
+   "n": "New York Times",
+   "type": "EQUITY_STANDARD"
+  },
+  "OAIW": {
+   "n": "OpenAI Lab Ecosystem ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "OARK": {
+   "n": "YieldMax Innovation Option Income Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "OEF": {
+   "n": "iShares S&P 100",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "OIH": {
+   "n": "VanEck Oil Services",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "OKLO": {
+   "n": "Oklo",
+   "type": "EQUITY_STANDARD"
+  },
+  "OKTA": {
+   "n": "Okta",
+   "type": "EQUITY_STANDARD"
+  },
+  "ONEQ": {
+   "n": "Fidelity Nasdaq Composite Index",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ONON": {
+   "n": "On Holding",
+   "type": "EQUITY_STANDARD"
+  },
+  "ONTO": {
+   "n": "Onto Innovation",
+   "type": "EQUITY_STANDARD"
+  },
+  "OPRA": {
+   "n": "Opera",
+   "type": "EQUITY_STANDARD"
+  },
+  "ORBT": {
+   "n": "Tema Space and Satellite",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PALL": {
+   "n": "abrdn Physical Palladium Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PATH": {
+   "n": "UiPath",
+   "type": "EQUITY_STANDARD"
+  },
+  "PAVE": {
+   "n": "Global X US Infrastructure Development",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PBW": {
+   "n": "Invesco WilderHill Clean Energy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PCY": {
+   "n": "Invesco Emerging Markets Sovereign Debt",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PDBC": {
+   "n": "Invesco Optimum Yield Diversified Commodity Strategy No K-1",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PDD": {
+   "n": "PDD Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "PEY": {
+   "n": "Invesco High Yield Equity Dividend Achievers",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PFF": {
+   "n": "iShares Preferred and Income Securities",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PFFD": {
+   "n": "Global X US Preferred",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PGX": {
+   "n": "Invesco Preferred",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PICK": {
+   "n": "iShares MSCI Global Metals and Mining Producers",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PINS": {
+   "n": "Pinterest",
+   "type": "EQUITY_STANDARD"
+  },
+  "PPA": {
+   "n": "Invesco Aerospace and Defense",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PPLT": {
+   "n": "abrdn Physical Platinum Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PRNT": {
+   "n": "ARK 3D Printing",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PSI": {
+   "n": "Invesco Semiconductors",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PSQ": {
+   "n": "ProShares Short QQQ",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PSTG": {
+   "n": "Pure Storage",
+   "type": "EQUITY_STANDARD"
+  },
+  "QBTS": {
+   "n": "D-Wave Quantum",
+   "type": "EQUITY_STANDARD"
+  },
+  "QCLN": {
+   "n": "First Trust NASDAQ Clean Edge Green Energy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "QDTE": {
+   "n": "Roundhill Innovation-100 0DTE Covered Call Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "QLD": {
+   "n": "ProShares Ultra QQQ",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "QQQE": {
+   "n": "Direxion NASDAQ-100 Equal Weighted Index Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "QQQJ": {
+   "n": "Invesco Nasdaq Next Gen 100",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "QQQM": {
+   "n": "Invesco Nasdaq 100",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "QRVO": {
+   "n": "Qorvo",
+   "type": "EQUITY_STANDARD"
+  },
+  "QTUM": {
+   "n": "Defiance Quantum",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "QUAL": {
+   "n": "iShares MSCI USA Quality Factor",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RBLX": {
+   "n": "Roblox",
+   "type": "EQUITY_STANDARD"
+  },
+  "RDTE": {
+   "n": "Roundhill Russell 2000 0DTE Covered Call Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RDVY": {
+   "n": "First Trust Rising Dividend Achievers",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "REGL": {
+   "n": "ProShares S&P MidCap 400 Dividend Aristocrats",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "REM": {
+   "n": "iShares Mortgage Real Estate",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "REMX": {
+   "n": "VanEck Rare Earth and Strategic Metals",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "REZ": {
+   "n": "iShares Residential and Multisector Real Estate",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RGTI": {
+   "n": "Rigetti Computing",
+   "type": "EQUITY_STANDARD"
+  },
+  "RING": {
+   "n": "iShares MSCI Global Gold Miners",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RIOT": {
+   "n": "Riot Platforms",
+   "type": "EQUITY_STANDARD"
+  },
+  "RIVN": {
+   "n": "Rivian",
+   "type": "EQUITY_STANDARD"
+  },
+  "RKLB": {
+   "n": "Rocket Lab",
+   "type": "EQUITY_STANDARD"
+  },
+  "ROBO": {
+   "n": "ROBO Global Robotics and Automation",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ROKU": {
+   "n": "Roku",
+   "type": "EQUITY_STANDARD"
+  },
+  "RSP": {
+   "n": "Invesco S&P 500 Equal Weight",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RWR": {
+   "n": "SPDR Dow Jones REIT",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RWX": {
+   "n": "SPDR Dow Jones International Real Estate",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SAP": {
+   "n": "SAP",
+   "type": "EQUITY_STANDARD"
+  },
+  "SCHA": {
+   "n": "Schwab US Small-Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SCHC": {
+   "n": "Schwab International Small-Cap Equity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SCHE": {
+   "n": "Schwab Emerging Markets Equity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SCHH": {
+   "n": "Schwab US REIT",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SCHI": {
+   "n": "Schwab 5-10 Year Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SCHJ": {
+   "n": "Schwab 1-5 Year Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SCHK": {
+   "n": "Schwab 1000 Index",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SCHM": {
+   "n": "Schwab US Mid-Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SCHO": {
+   "n": "Schwab Short-Term US Treasury",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SCHP": {
+   "n": "Schwab US TIPS",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SCHQ": {
+   "n": "Schwab Long-Term US Treasury",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SCHR": {
+   "n": "Schwab Intermediate-Term US Treasury",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SCHZ": {
+   "n": "Schwab US Aggregate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SCZ": {
+   "n": "iShares MSCI EAFE Small-Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SDIV": {
+   "n": "Global X SuperDividend",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SE": {
+   "n": "Sea Limited",
+   "type": "EQUITY_STANDARD"
+  },
+  "SG": {
+   "n": "Sweetgreen",
+   "type": "EQUITY_STANDARD"
+  },
+  "SGDM": {
+   "n": "Sprott Gold Miners",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SGOL": {
+   "n": "abrdn Physical Gold Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SGOV": {
+   "n": "iShares 0-3 Month Treasury Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SH": {
+   "n": "ProShares Short S&P500",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SHAK": {
+   "n": "Shake Shack",
+   "type": "EQUITY_STANDARD"
+  },
+  "SHM": {
+   "n": "SPDR Nuveen Bloomberg Short Term Municipal Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SHOP": {
+   "n": "Shopify",
+   "type": "EQUITY_STANDARD"
+  },
+  "SHV": {
+   "n": "iShares Short Treasury Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SHY": {
+   "n": "iShares 1-3 Year Treasury Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SHYG": {
+   "n": "iShares 0-5 Year High Yield Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SIL": {
+   "n": "Global X Silver Miners",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SILJ": {
+   "n": "Amplify Junior Silver Miners",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SIVR": {
+   "n": "abrdn Physical Silver Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SJNK": {
+   "n": "SPDR Bloomberg Short Term High Yield Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SKX": {
+   "n": "Skechers",
+   "type": "EQUITY_STANDARD"
+  },
+  "SKYY": {
+   "n": "First Trust Cloud Computing",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SLV": {
+   "n": "iShares Silver Trust",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SLY": {
+   "n": "SPDR S&P 600 Small Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SMH": {
+   "n": "VanEck Semiconductor",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SMR": {
+   "n": "NuScale Power",
+   "type": "EQUITY_STANDARD"
+  },
+  "SNAP": {
+   "n": "Snap",
+   "type": "EQUITY_STANDARD"
+  },
+  "SNOW": {
+   "n": "Snowflake",
+   "type": "EQUITY_STANDARD"
+  },
+  "SNSR": {
+   "n": "Global X Internet of Things",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SOCL": {
+   "n": "Global X Social Media",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SOFI": {
+   "n": "SoFi Technologies",
+   "type": "EQUITY_STANDARD"
+  },
+  "SONY": {
+   "n": "Sony Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "SOUN": {
+   "n": "SoundHound AI",
+   "type": "EQUITY_STANDARD"
+  },
+  "SOXL": {
+   "n": "Direxion Daily Semiconductor Bull 3X Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SOXQ": {
+   "n": "Invesco PHLX Semiconductor",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SOXS": {
+   "n": "Direxion Daily Semiconductor Bear 3X Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SOXX": {
+   "n": "iShares Semiconductor",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SOYB": {
+   "n": "Teucrium Soybean",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPAB": {
+   "n": "SPDR Portfolio Aggregate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPCX": {
+   "n": "SpaceX",
+   "type": "EQUITY_STANDARD"
+  },
+  "SPDW": {
+   "n": "SPDR Portfolio Developed World ex-US",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPEM": {
+   "n": "SPDR Portfolio Emerging Markets",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPHB": {
+   "n": "Invesco S&P 500 High Beta",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPHY": {
+   "n": "SPDR Portfolio High Yield Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPIB": {
+   "n": "SPDR Portfolio Intermediate Term Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPIP": {
+   "n": "SPDR Portfolio TIPS",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPLB": {
+   "n": "SPDR Portfolio Long Term Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPLG": {
+   "n": "SPDR Portfolio S&P 500",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPLV": {
+   "n": "Invesco S&P 500 Low Volatility",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPMD": {
+   "n": "SPDR Portfolio S&P 400 Mid Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPOT": {
+   "n": "Spotify",
+   "type": "EQUITY_STANDARD"
+  },
+  "SPSB": {
+   "n": "SPDR Portfolio Short Term Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPSM": {
+   "n": "SPDR Portfolio S&P 600 Small Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPTI": {
+   "n": "SPDR Portfolio Intermediate Term Treasury",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPTL": {
+   "n": "SPDR Portfolio Long Term Treasury",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPTM": {
+   "n": "SPDR Portfolio S&P 1500 Composite",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPTS": {
+   "n": "SPDR Portfolio Short Term Treasury",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPXL": {
+   "n": "Direxion Daily S&P 500 Bull 3X Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPXU": {
+   "n": "ProShares UltraPro Short S&P500",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPYX": {
+   "n": "SPDR S&P 500 Fossil Fuel Reserves Free",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SQQQ": {
+   "n": "ProShares UltraPro Short QQQ",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SRLN": {
+   "n": "SPDR Blackstone Senior Loan",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SRVR": {
+   "n": "Pacer Benchmark Data and Infrastructure Real Estate",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SSO": {
+   "n": "ProShares Ultra S&P500",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "STIP": {
+   "n": "iShares 0-5 Year TIPS Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SUB": {
+   "n": "iShares Short-Term National Muni Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SUSA": {
+   "n": "iShares MSCI USA ESG Select",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SVOL": {
+   "n": "Simplify Volatility Premium",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TAN": {
+   "n": "Invesco Solar",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TDIV": {
+   "n": "First Trust NASDAQ Technology Dividend",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TEAM": {
+   "n": "Atlassian",
+   "type": "EQUITY_STANDARD"
+  },
+  "TECL": {
+   "n": "Direxion Daily Technology Bull 3X Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TER": {
+   "n": "Teradyne",
+   "type": "EQUITY_STANDARD"
+  },
+  "TFI": {
+   "n": "SPDR Nuveen Bloomberg Municipal Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TFLO": {
+   "n": "iShares Treasury Floating Rate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "THD": {
+   "n": "iShares MSCI Thailand",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TIP": {
+   "n": "iShares TIPS Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TLH": {
+   "n": "iShares 10-20 Year Treasury Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TLT": {
+   "n": "iShares 20+ Year Treasury Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TM": {
+   "n": "Toyota Motor",
+   "type": "EQUITY_STANDARD"
+  },
+  "TNA": {
+   "n": "Direxion Daily Small Cap Bull 3X Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TOTL": {
+   "n": "SPDR DoubleLine Total Return Tactical",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TQQQ": {
+   "n": "ProShares UltraPro QQQ",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TSLY": {
+   "n": "YieldMax TSLA Option Income Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TSM": {
+   "n": "Taiwan Semiconductor Manufacturing",
+   "type": "EQUITY_STANDARD"
+  },
+  "TTD": {
+   "n": "Trade Desk",
+   "type": "EQUITY_STANDARD"
+  },
+  "TTWO": {
+   "n": "Take-Two Interactive",
+   "type": "EQUITY_STANDARD"
+  },
+  "TUR": {
+   "n": "iShares MSCI Turkey",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TWLO": {
+   "n": "Twilio",
+   "type": "EQUITY_STANDARD"
+  },
+  "U": {
+   "n": "Unity Software",
+   "type": "EQUITY_STANDARD"
+  },
+  "UAA": {
+   "n": "Under Armour",
+   "type": "EQUITY_STANDARD"
+  },
+  "UFO": {
+   "n": "Procure Space",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ULTY": {
+   "n": "YieldMax Ultra Option Income Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "UNG": {
+   "n": "United States Natural Gas Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "UPRO": {
+   "n": "ProShares UltraPro S&P500",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "UPST": {
+   "n": "Upstart",
+   "type": "EQUITY_STANDARD"
+  },
+  "URA": {
+   "n": "Global X Uranium",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "URBN": {
+   "n": "Urban Outfitters",
+   "type": "EQUITY_STANDARD"
+  },
+  "URNM": {
+   "n": "Sprott Uranium Miners",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "USFR": {
+   "n": "WisdomTree Floating Rate Treasury",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "USHY": {
+   "n": "iShares Broad USD High Yield Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "USMV": {
+   "n": "iShares MSCI USA Min Vol Factor",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "USO": {
+   "n": "United States Oil Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "USRT": {
+   "n": "iShares Core US REIT",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "USSG": {
+   "n": "Xtrackers MSCI USA ESG Leaders Equity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "UTZ": {
+   "n": "Utz Brands",
+   "type": "EQUITY_STANDARD"
+  },
+  "VAW": {
+   "n": "Vanguard Materials",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VBK": {
+   "n": "Vanguard Small-Cap Growth",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VBR": {
+   "n": "Vanguard Small-Cap Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VCIT": {
+   "n": "Vanguard Intermediate-Term Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VCLT": {
+   "n": "Vanguard Long-Term Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VCR": {
+   "n": "Vanguard Consumer Discretionary",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VCSH": {
+   "n": "Vanguard Short-Term Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VDC": {
+   "n": "Vanguard Consumer Staples",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VDE": {
+   "n": "Vanguard Energy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VFH": {
+   "n": "Vanguard Financials",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VGIT": {
+   "n": "Vanguard Intermediate-Term Treasury",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VGK": {
+   "n": "Vanguard FTSE Europe",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VGLT": {
+   "n": "Vanguard Long-Term Treasury",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VGSH": {
+   "n": "Vanguard Short-Term Treasury",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VIGI": {
+   "n": "Vanguard International Dividend Appreciation",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VIS": {
+   "n": "Vanguard Industrials",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VIXY": {
+   "n": "ProShares VIX Short-Term Futures",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VLUE": {
+   "n": "iShares MSCI USA Value Factor",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VMBS": {
+   "n": "Vanguard Mortgage-Backed Securities",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VNM": {
+   "n": "VanEck Vietnam",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VNQ": {
+   "n": "Vanguard Real Estate",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VNQI": {
+   "n": "Vanguard Global ex-US Real Estate",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VOE": {
+   "n": "Vanguard Mid-Cap Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VONE": {
+   "n": "Vanguard Russell 1000",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VONG": {
+   "n": "Vanguard Russell 1000 Growth",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VONV": {
+   "n": "Vanguard Russell 1000 Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VOO": {
+   "n": "Vanguard S&P 500",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VOOG": {
+   "n": "Vanguard S&P 500 Growth",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VOOV": {
+   "n": "Vanguard S&P 500 Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VOT": {
+   "n": "Vanguard Mid-Cap Growth",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VOX": {
+   "n": "Vanguard Communication Services",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VPL": {
+   "n": "Vanguard FTSE Pacific",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VRT": {
+   "n": "Vertiv",
+   "type": "EQUITY_STANDARD"
+  },
+  "VSS": {
+   "n": "Vanguard FTSE All-World ex-US Small-Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VT": {
+   "n": "Vanguard Total World Stock",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VTEB": {
+   "n": "Vanguard Tax-Exempt Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VTHR": {
+   "n": "Vanguard Russell 3000",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VTIP": {
+   "n": "Vanguard Short-Term Inflation-Protected Securities",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VTWG": {
+   "n": "Vanguard Russell 2000 Growth",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VTWO": {
+   "n": "Vanguard Russell 2000",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VTWV": {
+   "n": "Vanguard Russell 2000 Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VV": {
+   "n": "Vanguard Large-Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VWOB": {
+   "n": "Vanguard Emerging Markets Government Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "W": {
+   "n": "Wayfair",
+   "type": "EQUITY_STANDARD"
+  },
+  "WCLD": {
+   "n": "WisdomTree Cloud Computing",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "WDC": {
+   "n": "Western Digital",
+   "type": "EQUITY_STANDARD"
+  },
+  "WEAT": {
+   "n": "Teucrium Wheat",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "WEBL": {
+   "n": "Direxion Daily Dow Jones Internet Bull 3X Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "WEBS": {
+   "n": "Direxion Daily Dow Jones Internet Bear 3X Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "WING": {
+   "n": "Wingstop",
+   "type": "EQUITY_STANDARD"
+  },
+  "WMG": {
+   "n": "Warner Music Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "XAR": {
+   "n": "SPDR S&P Aerospace and Defense",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XBI": {
+   "n": "SPDR S&P Biotech",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XDTE": {
+   "n": "Roundhill S&P 500 0DTE Covered Call Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XES": {
+   "n": "SPDR S&P Oil and Gas Equipment and Services",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XHB": {
+   "n": "SPDR S&P Homebuilders",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XHE": {
+   "n": "SPDR S&P Health Care Equipment",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XHS": {
+   "n": "SPDR S&P Health Care Services",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XITK": {
+   "n": "SPDR FactSet Innovative Technology",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XLG": {
+   "n": "Invesco S&P 500 Top 50",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XME": {
+   "n": "SPDR S&P Metals and Mining",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XNTK": {
+   "n": "SPDR NYSE Technology",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XOP": {
+   "n": "SPDR S&P Oil and Gas Exploration and Production",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XPEV": {
+   "n": "XPeng",
+   "type": "EQUITY_STANDARD"
+  },
+  "XPH": {
+   "n": "SPDR S&P Pharmaceuticals",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XRT": {
+   "n": "SPDR S&P Retail",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XSD": {
+   "n": "SPDR S&P Semiconductor",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XSW": {
+   "n": "SPDR S&P Software and Services",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XTL": {
+   "n": "SPDR S&P Telecom",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "YEXT": {
+   "n": "Yext",
+   "type": "EQUITY_STANDARD"
+  },
+  "YMAG": {
+   "n": "YieldMax Magnificent 7 Fund of Option Income ETFs",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "YMAX": {
+   "n": "YieldMax Universe Fund of Option Income ETFs",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ZM": {
+   "n": "Zoom Communications",
+   "type": "EQUITY_STANDARD"
+  },
+  "ZS": {
+   "n": "Zscaler",
+   "type": "EQUITY_STANDARD"
+  }
+ }
+}
