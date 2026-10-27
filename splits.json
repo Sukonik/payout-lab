@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-10-26T09:20:57.440Z",
- "upcomingAsOf": "2026-10-26",
+ "updated": "2026-10-27T09:20:10.112Z",
+ "upcomingAsOf": "2026-10-27",
  "tickers": {
   "AAPL": {
    "n": "Apple",
@@ -1796,6 +1796,11 @@
    "s": [],
    "u": "2026-10-26"
   },
+  "HBAN": {
+   "n": "Huntington Bancshares",
+   "s": [],
+   "u": "2026-10-27"
+  },
   "HCA": {
    "n": "HCA Healthcare",
    "s": [],
@@ -1810,6 +1815,11 @@
    "n": "Hartford (The)",
    "s": [],
    "u": "2026-10-26"
+  },
+  "HII": {
+   "n": "Huntington Ingalls Industries",
+   "s": [],
+   "u": "2026-10-27"
   },
   "HLT": {
    "n": "Hilton Worldwide",
@@ -1826,10 +1836,49 @@
    ],
    "u": "2026-10-26"
   },
+  "HON": {
+   "n": "Honeywell Technologies",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "HONA": {
+   "n": "Honeywell Aerospace",
+   "s": [],
+   "u": "2026-10-27"
+  },
   "HPE": {
    "n": "Hewlett Packard Enterprise",
    "s": [],
    "u": "2026-10-26"
+  },
+  "HPQ": {
+   "n": "HP Inc.",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "HRL": {
+   "n": "Hormel Foods",
+   "s": [
+    {
+     "d": "2011-02-15",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 51.64,
+     "post": 25.86
+    },
+    {
+     "d": "2016-02-10",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 82.86,
+     "post": 41.67
+    }
+   ],
+   "u": "2026-10-27"
   },
   "HSIC": {
    "n": "Henry Schein",
@@ -1846,15 +1895,189 @@
    ],
    "u": "2026-10-26"
   },
+  "HST": {
+   "n": "Host Hotels & Resorts",
+   "s": [],
+   "u": "2026-10-27"
+  },
   "HSY": {
    "n": "Hershey Company (The)",
    "s": [],
    "u": "2026-10-26"
   },
+  "HUBB": {
+   "n": "Hubbell Incorporated",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "HUM": {
+   "n": "Humana",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "HWM": {
+   "n": "Howmet Aerospace",
+   "s": [
+    {
+     "d": "2016-10-06",
+     "a": 1,
+     "b": 3,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 10.4,
+     "post": 31.78
+    }
+   ],
+   "u": "2026-10-27"
+  },
+  "IBKR": {
+   "n": "Interactive Brokers",
+   "s": [
+    {
+     "d": "2025-06-18",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 208.17,
+     "post": 52.6
+    }
+   ],
+   "u": "2026-10-27"
+  },
+  "IBM": {
+   "n": "IBM",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "ICE": {
+   "n": "Intercontinental Exchange",
+   "s": [
+    {
+     "d": "2016-11-04",
+     "a": 5,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 269.47,
+     "post": 53.37
+    }
+   ],
+   "u": "2026-10-27"
+  },
+  "IDXX": {
+   "n": "Idexx Laboratories",
+   "s": [
+    {
+     "d": "2015-06-16",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 132.44,
+     "post": 66.435
+    }
+   ],
+   "u": "2026-10-27"
+  },
+  "IEX": {
+   "n": "IDEX Corporation",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "IFF": {
+   "n": "International Flavors & Fragrances",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "ILMN": {
+   "n": "Illumina, Inc.",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "INCY": {
+   "n": "Incyte",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "INTC": {
+   "n": "Intel",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "INTU": {
+   "n": "Intuit",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "INVH": {
+   "n": "Invitation Homes",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "IP": {
+   "n": "International Paper",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "IQV": {
+   "n": "IQVIA",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "IR": {
+   "n": "Ingersoll Rand",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "IRM": {
+   "n": "Iron Mountain",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "ISRG": {
+   "n": "Intuitive Surgical",
+   "s": [
+    {
+     "d": "2017-10-06",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 1089.68,
+     "post": 361.47
+    },
+    {
+     "d": "2021-10-05",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 970.5,
+     "post": 330.07
+    }
+   ],
+   "u": "2026-10-27"
+  },
   "IT": {
    "n": "Gartner",
    "s": [],
    "u": "2026-10-26"
+  },
+  "ITW": {
+   "n": "Illinois Tool Works",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "IVZ": {
+   "n": "Invesco",
+   "s": [],
+   "u": "2026-10-27"
+  },
+  "JBHT": {
+   "n": "J.B. Hunt",
+   "s": [],
+   "u": "2026-10-27"
   },
   "JEPI": {
    "n": "JPMorgan Equity Premium Income ETF",
@@ -2025,6 +2248,11 @@
    "s": [],
    "u": "2026-10-15"
   },
+  "PODD": {
+   "n": "Insulet Corporation",
+   "s": [],
+   "u": "2026-10-27"
+  },
   "SCHB": {
    "n": "Schwab US Broad Market ETF",
    "s": [
@@ -2193,138 +2421,6 @@
  },
  "upcoming": [
   {
-   "t": "BDRX",
-   "n": "Biodexa Pharmaceuticals plc",
-   "a": 1,
-   "b": 8,
-   "exDate": "2026-10-26",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
-  },
-  {
-   "t": "BUUU",
-   "n": "BUUU Group Limited",
-   "a": 10,
-   "b": 1,
-   "exDate": "2026-10-26",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
-  },
-  {
-   "t": "COCH",
-   "n": "Envoy Medical, Inc.",
-   "a": 1,
-   "b": 10,
-   "exDate": "2026-10-26",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
-  },
-  {
-   "t": "GCTK",
-   "n": "GlucoTrack, Inc.",
-   "a": 1,
-   "b": 2,
-   "exDate": "2026-10-26",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
-  },
-  {
-   "t": "HCTI",
-   "n": "Healthcare Triangle, Inc.",
-   "a": 1,
-   "b": 20,
-   "exDate": "2026-10-26",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
-  },
-  {
-   "t": "HKPD",
-   "n": "Cellyan Biotechnology Co., Ltd",
-   "a": 1,
-   "b": 20,
-   "exDate": "2026-10-26",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
-  },
-  {
-   "t": "IPW",
-   "n": "iPower Inc.",
-   "a": 1,
-   "b": 12,
-   "exDate": "2026-10-26",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
-  },
-  {
-   "t": "LHSW",
-   "n": "Lianhe Sowell International Group Ltd",
-   "a": 1,
-   "b": 8,
-   "exDate": "2026-10-26",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
-  },
-  {
-   "t": "PPCB",
-   "n": "Propanc Biopharma, Inc.",
-   "a": 1,
-   "b": 10,
-   "exDate": "2026-10-26",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
-  },
-  {
-   "t": "SBFM",
-   "n": "Sunshine Biopharma Inc.",
-   "a": 1,
-   "b": 20,
-   "exDate": "2026-10-26",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
-  },
-  {
-   "t": "SXTC",
-   "n": "China SXT Pharmaceuticals, Inc.",
-   "a": 1,
-   "b": 100,
-   "exDate": "2026-10-26",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
-  },
-  {
-   "t": "TWG",
-   "n": "Top Wealth Group Holding Limited",
-   "a": 1,
-   "b": 100,
-   "exDate": "2026-10-26",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
-  },
-  {
    "t": "BUUU",
    "n": "BUUU Group Limited",
    "a": 10,
@@ -2336,6 +2432,50 @@
    "asOf": "2026-10-22"
   },
   {
+   "t": "ENLV",
+   "n": "Enlivex Ltd.",
+   "a": 1,
+   "b": 16,
+   "exDate": "2026-10-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "NUWE",
+   "n": "Nuwellis, Inc.",
+   "a": 1,
+   "b": 9,
+   "exDate": "2026-10-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "PARA",
+   "n": "Banzai International, Inc.",
+   "a": 1,
+   "b": 10,
+   "exDate": "2026-10-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
+   "t": "SCAG",
+   "n": "Scage Future",
+   "a": 1,
+   "b": 15,
+   "exDate": "2026-10-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-27"
+  },
+  {
    "t": "ENHA",
    "n": "Enhanced Group Inc.",
    "a": 1,
@@ -2344,7 +2484,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
+   "asOf": "2026-10-27"
   },
   {
    "t": "NYSX",
@@ -2355,7 +2495,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
+   "asOf": "2026-10-27"
   },
   {
    "t": "EFG",
@@ -2366,7 +2506,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
+   "asOf": "2026-10-27"
   },
   {
    "t": "EFV",
@@ -2377,7 +2517,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
+   "asOf": "2026-10-27"
   },
   {
    "t": "ITA",
@@ -2388,7 +2528,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
+   "asOf": "2026-10-27"
   },
   {
    "t": "MTUM",
@@ -2399,7 +2539,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
+   "asOf": "2026-10-27"
   },
   {
    "t": "QUAL",
@@ -2410,7 +2550,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
+   "asOf": "2026-10-27"
   },
   {
    "t": "SOXX",
@@ -2421,7 +2561,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-26"
+   "asOf": "2026-10-27"
   }
  ]
 }
