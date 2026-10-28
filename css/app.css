@@ -351,6 +351,7 @@ dialog.carddlg{max-width:min(94vw,520px)}
 .start .pn{color:var(--accent-strong)}
 .btn.big{min-height:52px;padding:0 26px;font-size:1.05rem}
 .linkbtn{background:none;border:0;padding:0;color:var(--accent-strong);text-decoration:underline;font:inherit;cursor:pointer}
+.privacy .linkbtn{min-height:44px;padding:0 6px}
 body[data-gate] .view,body[data-gate] .tabs,body[data-gate] .bottomnav,body[data-gate] .tag,body[data-gate] .save{display:none}
 body[data-gate] .brand{display:flex}
 body[data-gate] .top-in{grid-template-columns:1fr auto;grid-template-areas:"brand actions"}

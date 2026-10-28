@@ -10,6 +10,8 @@ const p = await ctx.newPage();
 const errors = [];
 p.on("pageerror", (e) => errors.push(e.message));
 await p.goto(url + "index.html");
+const gateSmall = await p.evaluate(() => [...document.querySelectorAll(".privacy .linkbtn")].filter((e) => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0 && b.height < 43.5; }).length);
+check("start screen: the bookmark link is at least 44px tall", gateSmall === 0, `${gateSmall} too small`);
 await p.click("button[data-g=sample]");
 await p.waitForSelector("#view-overview:not([hidden])");
 for (const v of ["overview", "portfolio", "lab", "receipts", "explore", "splits"]) {
