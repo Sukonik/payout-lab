@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-10-27T09:20:10.112Z",
- "upcomingAsOf": "2026-10-27",
+ "updated": "2026-10-28T10:00:15.757Z",
+ "upcomingAsOf": "2026-10-28",
  "tickers": {
   "AAPL": {
    "n": "Apple",
@@ -2074,10 +2074,25 @@
    "s": [],
    "u": "2026-10-27"
   },
+  "J": {
+   "n": "Jacobs Solutions",
+   "s": [],
+   "u": "2026-10-28"
+  },
   "JBHT": {
    "n": "J.B. Hunt",
    "s": [],
    "u": "2026-10-27"
+  },
+  "JBL": {
+   "n": "Jabil",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "JCI": {
+   "n": "Johnson Controls",
+   "s": [],
+   "u": "2026-10-28"
   },
   "JEPI": {
    "n": "JPMorgan Equity Premium Income ETF",
@@ -2089,10 +2104,75 @@
    "s": [],
    "u": "2026-10-15"
   },
+  "JKHY": {
+   "n": "Jack Henry & Associates",
+   "s": [],
+   "u": "2026-10-28"
+  },
   "JNJ": {
    "n": "Johnson & Johnson",
    "s": [],
    "u": "2026-10-15"
+  },
+  "JPM": {
+   "n": "JPMorgan Chase",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "KDP": {
+   "n": "Keurig Dr Pepper",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "KEY": {
+   "n": "KeyCorp",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "KEYS": {
+   "n": "Keysight Technologies",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "KHC": {
+   "n": "Kraft Heinz",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "KIM": {
+   "n": "Kimco Realty",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "KKR": {
+   "n": "KKR & Co.",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "KLAC": {
+   "n": "KLA Corporation",
+   "s": [
+    {
+     "d": "2026-06-12",
+     "a": 10,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 2411.64,
+     "post": 254.54
+    }
+   ],
+   "u": "2026-10-28"
+  },
+  "KMB": {
+   "n": "Kimberly-Clark",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "KMI": {
+   "n": "Kinder Morgan",
+   "s": [],
+   "u": "2026-10-28"
   },
   "KO": {
    "n": "Coca-Cola",
@@ -2109,6 +2189,31 @@
    ],
    "u": "2026-10-15"
   },
+  "KR": {
+   "n": "Kroger",
+   "s": [
+    {
+     "d": "2015-07-14",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 76.95,
+     "post": 38.2
+    }
+   ],
+   "u": "2026-10-28"
+  },
+  "KVUE": {
+   "n": "Kenvue",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "L": {
+   "n": "Loews Corporation",
+   "s": [],
+   "u": "2026-10-28"
+  },
   "LCID": {
    "n": "Lucid Group",
    "s": [
@@ -2121,6 +2226,56 @@
     }
    ],
    "u": null
+  },
+  "LDOS": {
+   "n": "Leidos",
+   "s": [
+    {
+     "d": "2013-09-30",
+     "a": 1,
+     "b": 4,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 16.03,
+     "post": 45.52
+    }
+   ],
+   "u": "2026-10-28"
+  },
+  "LEN": {
+   "n": "Lennar",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "LH": {
+   "n": "Labcorp",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "LHX": {
+   "n": "L3Harris",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "LII": {
+   "n": "Lennox International",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "LIN": {
+   "n": "Linde plc",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "LLY": {
+   "n": "Lilly (Eli)",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "LMT": {
+   "n": "Lockheed Martin",
+   "s": [],
+   "u": "2026-10-28"
   },
   "LNT": {
    "n": "Alliant Energy",
@@ -2137,10 +2292,55 @@
    ],
    "u": "2026-10-16"
   },
+  "LOW": {
+   "n": "Lowe's",
+   "s": [],
+   "u": "2026-10-28"
+  },
+  "LRCX": {
+   "n": "Lam Research",
+   "s": [
+    {
+     "d": "2024-10-03",
+     "a": 10,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 814.09,
+     "post": 81.11
+    }
+   ],
+   "u": "2026-10-28"
+  },
+  "LULU": {
+   "n": "Lululemon Athletica",
+   "s": [
+    {
+     "d": "2011-07-12",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 117.78,
+     "post": 59.92
+    }
+   ],
+   "u": "2026-10-28"
+  },
+  "LVS": {
+   "n": "Las Vegas Sands",
+   "s": [],
+   "u": "2026-10-28"
+  },
   "LYG": {
    "n": "Lloyds Banking Group (ADR)",
    "s": [],
    "u": "2026-10-15"
+  },
+  "LYV": {
+   "n": "Live Nation Entertainment",
+   "s": [],
+   "u": "2026-10-28"
   },
   "MAIN": {
    "n": "Main Street Capital",
@@ -2421,61 +2621,6 @@
  },
  "upcoming": [
   {
-   "t": "BUUU",
-   "n": "BUUU Group Limited",
-   "a": 10,
-   "b": 1,
-   "exDate": "2026-10-27",
-   "status": "unverified",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-22"
-  },
-  {
-   "t": "ENLV",
-   "n": "Enlivex Ltd.",
-   "a": 1,
-   "b": 16,
-   "exDate": "2026-10-27",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-27"
-  },
-  {
-   "t": "NUWE",
-   "n": "Nuwellis, Inc.",
-   "a": 1,
-   "b": 9,
-   "exDate": "2026-10-27",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-27"
-  },
-  {
-   "t": "PARA",
-   "n": "Banzai International, Inc.",
-   "a": 1,
-   "b": 10,
-   "exDate": "2026-10-27",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-27"
-  },
-  {
-   "t": "SCAG",
-   "n": "Scage Future",
-   "a": 1,
-   "b": 15,
-   "exDate": "2026-10-27",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-27"
-  },
-  {
    "t": "ENHA",
    "n": "Enhanced Group Inc.",
    "a": 1,
@@ -2484,7 +2629,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "t": "NYSX",
@@ -2495,7 +2640,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "t": "EFG",
@@ -2506,7 +2651,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "t": "EFV",
@@ -2517,7 +2662,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "t": "ITA",
@@ -2528,7 +2673,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "t": "MTUM",
@@ -2539,7 +2684,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "t": "QUAL",
@@ -2550,7 +2695,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "t": "SOXX",
@@ -2561,7 +2706,18 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
+  },
+  {
+   "t": "MMT",
+   "n": "Aberdeen Multi-Market Income Fund",
+   "a": 1,
+   "b": 4,
+   "exDate": "2026-11-09",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-28"
   }
  ]
 }
