@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T23:38:45.569Z",
+ "updated": "2026-10-29T10:27:22.994Z",
  "source": "Yahoo Finance",
  "tickers": {
   "SCHD": {
@@ -26919,6 +26919,94 @@
    "q": true,
    "src": "Yahoo Finance",
    "u": "2026-10-28T23:38:35.737Z",
+   "s": "Q3"
+  },
+  "CORZ": {
+   "n": "Core Scientific",
+   "type": "EQUITY_STANDARD",
+   "p": 15,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-10-29T10:27:20.117Z",
+   "s": "Q3"
+  },
+  "COTY": {
+   "n": "Coty",
+   "type": "EQUITY_STANDARD",
+   "p": 3.36,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-10-29T10:27:20.612Z",
+   "s": "Q3"
+  },
+  "COUR": {
+   "n": "Coursera",
+   "type": "EQUITY_STANDARD",
+   "p": 4.7,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-10-29T10:27:21.100Z",
+   "s": "Q3"
+  },
+  "COWZ": {
+   "n": "Pacer US Cash Cows 100",
+   "type": "ETF_PASS_THROUGH",
+   "p": 70.51,
+   "d": 1.36,
+   "q": true,
+   "per": 0.431,
+   "s": "Q3",
+   "last": "2026-09-03",
+   "hist": [
+    {
+     "d": "2024-12-27",
+     "a": 0.238
+    },
+    {
+     "d": "2025-03-06",
+     "a": 0.229
+    },
+    {
+     "d": "2025-06-05",
+     "a": 0.164
+    },
+    {
+     "d": "2025-09-04",
+     "a": 0.309
+    },
+    {
+     "d": "2025-12-30",
+     "a": 0.617
+    },
+    {
+     "d": "2026-03-05",
+     "a": 0.2
+    },
+    {
+     "d": "2026-06-04",
+     "a": 0.112
+    },
+    {
+     "d": "2026-09-03",
+     "a": 0.431
+    }
+   ],
+   "g3": 0.0996,
+   "g5": 0.1535,
+   "src": "Yahoo Finance",
+   "u": "2026-10-29T10:27:21.624Z"
+  },
+  "CPER": {
+   "n": "United States Copper Index",
+   "type": "ETF_PASS_THROUGH",
+   "p": 40.33,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-10-29T10:27:22.157Z",
    "s": "Q3"
   }
  }
