@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-10-28T10:00:15.757Z",
- "upcomingAsOf": "2026-10-28",
+ "updated": "2026-10-29T10:23:55.378Z",
+ "upcomingAsOf": "2026-10-29",
  "tickers": {
   "AAPL": {
    "n": "Apple",
@@ -2267,6 +2267,11 @@
    "s": [],
    "u": "2026-10-28"
   },
+  "LITE": {
+   "n": "Lumentum",
+   "s": [],
+   "u": "2026-10-29"
+  },
   "LLY": {
    "n": "Lilly (Eli)",
    "s": [],
@@ -2332,6 +2337,11 @@
    "s": [],
    "u": "2026-10-28"
   },
+  "LYB": {
+   "n": "LyondellBasell",
+   "s": [],
+   "u": "2026-10-29"
+  },
   "LYG": {
    "n": "Lloyds Banking Group (ADR)",
    "s": [],
@@ -2342,25 +2352,252 @@
    "s": [],
    "u": "2026-10-28"
   },
+  "MA": {
+   "n": "Mastercard",
+   "s": [
+    {
+     "d": "2014-01-22",
+     "a": 10,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 818.48,
+     "post": 83.3
+    }
+   ],
+   "u": "2026-10-29"
+  },
+  "MAA": {
+   "n": "Mid-America Apartment Communities",
+   "s": [],
+   "u": "2026-10-29"
+  },
   "MAIN": {
    "n": "Main Street Capital",
    "s": [],
    "u": "2026-10-15"
+  },
+  "MAR": {
+   "n": "Marriott International",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MAS": {
+   "n": "Masco",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MCD": {
+   "n": "McDonald's",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MCHP": {
+   "n": "Microchip Technology",
+   "s": [
+    {
+     "d": "2021-10-13",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 140.99,
+     "post": 70.25
+    }
+   ],
+   "u": "2026-10-29"
+  },
+  "MCK": {
+   "n": "McKesson Corporation",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MCO": {
+   "n": "Moody's Corporation",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MDLZ": {
+   "n": "Mondelez International",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MDT": {
+   "n": "Medtronic",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MET": {
+   "n": "MetLife",
+   "s": [],
+   "u": "2026-10-29"
   },
   "META": {
    "n": "Meta Platforms",
    "s": [],
    "u": "2026-10-15"
   },
+  "MGM": {
+   "n": "MGM Resorts",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MKC": {
+   "n": "McCormick & Company",
+   "s": [
+    {
+     "d": "2020-12-01",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 186.98,
+     "post": 93.64
+    }
+   ],
+   "u": "2026-10-29"
+  },
+  "MLM": {
+   "n": "Martin Marietta Materials",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MNST": {
+   "n": "Monster Beverage",
+   "s": [
+    {
+     "d": "2012-02-16",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 106.51,
+     "post": 52.99
+    },
+    {
+     "d": "2016-11-10",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 132.59,
+     "post": 42.33
+    },
+    {
+     "d": "2023-03-28",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 104.67,
+     "post": 51.6
+    },
+    {
+     "d": "2026-08-11",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 91.43,
+     "post": 45.53
+    }
+   ],
+   "u": "2026-10-29"
+  },
   "MO": {
    "n": "Altria",
    "s": [],
    "u": "2026-10-15"
   },
+  "MOS": {
+   "n": "Mosaic Company (The)",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MPC": {
+   "n": "Marathon Petroleum",
+   "s": [
+    {
+     "d": "2015-06-11",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 101.79,
+     "post": 52.03
+    }
+   ],
+   "u": "2026-10-29"
+  },
+  "MPWR": {
+   "n": "Monolithic Power Systems",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MRK": {
+   "n": "Merck & Co.",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MRNA": {
+   "n": "Moderna",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MRSH": {
+   "n": "Marsh McLennan",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MRVL": {
+   "n": "Marvell Technology",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MS": {
+   "n": "Morgan Stanley",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MSCI": {
+   "n": "MSCI",
+   "s": [],
+   "u": "2026-10-29"
+  },
   "MSFT": {
    "n": "Microsoft",
    "s": [],
    "u": "2026-10-15"
+  },
+  "MSI": {
+   "n": "Motorola Solutions",
+   "s": [
+    {
+     "d": "2011-01-04",
+     "a": 1,
+     "b": 7,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 9.11,
+     "post": 39.77
+    }
+   ],
+   "u": "2026-10-29"
+  },
+  "MTB": {
+   "n": "M&T Bank",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MTD": {
+   "n": "Mettler Toledo",
+   "s": [],
+   "u": "2026-10-29"
+  },
+  "MU": {
+   "n": "Micron Technology",
+   "s": [],
+   "u": "2026-10-29"
   },
   "NFLX": {
    "n": "Netflix",
@@ -2621,6 +2858,28 @@
  },
  "upcoming": [
   {
+   "t": "ATYR",
+   "n": "aTyr Pharma, Inc.",
+   "a": 1,
+   "b": 40,
+   "exDate": "2026-10-29",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-29"
+  },
+  {
+   "t": "AXG",
+   "n": "Solowin Holdings",
+   "a": 1,
+   "b": 200,
+   "exDate": "2026-10-29",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-29"
+  },
+  {
    "t": "ENHA",
    "n": "Enhanced Group Inc.",
    "a": 1,
@@ -2629,7 +2888,18 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-28"
+   "asOf": "2026-10-29"
+  },
+  {
+   "t": "OMEX",
+   "n": "Odyssey Marine Exploration, Inc.",
+   "a": 1,
+   "b": 25,
+   "exDate": "2026-10-29",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-10-29"
   },
   {
    "t": "NYSX",
@@ -2640,7 +2910,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-28"
+   "asOf": "2026-10-29"
   },
   {
    "t": "EFG",
@@ -2651,7 +2921,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-28"
+   "asOf": "2026-10-29"
   },
   {
    "t": "EFV",
@@ -2662,7 +2932,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-28"
+   "asOf": "2026-10-29"
   },
   {
    "t": "ITA",
@@ -2673,7 +2943,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-28"
+   "asOf": "2026-10-29"
   },
   {
    "t": "MTUM",
@@ -2684,7 +2954,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-28"
+   "asOf": "2026-10-29"
   },
   {
    "t": "QUAL",
@@ -2695,7 +2965,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-28"
+   "asOf": "2026-10-29"
   },
   {
    "t": "SOXX",
@@ -2706,7 +2976,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-28"
+   "asOf": "2026-10-29"
   },
   {
    "t": "MMT",
@@ -2717,7 +2987,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-28"
+   "asOf": "2026-10-29"
   }
  ]
 }
