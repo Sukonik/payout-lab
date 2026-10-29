@@ -4,7 +4,8 @@ import { $, esc, money, pct } from "./dom.js";
 import { getMarket } from "../core/market.js";
 import { afterSplit, compareTickers, dateParts, filterLedger, getSplits, holdingsWithSplits, kindOf, ledger, priceAfter, ratioLabel, upcomingView, yearGroups } from "../core/splits.js";
 
-const ui = { kind: "forward", query: "", cmpA: "GOOGL", cmpB: "LCID", wi: { shares: 10, a: 20, b: 1 } };
+const PAGE = 60;
+const ui = { kind: "forward", query: "", limit: PAGE, cmpA: "GOOGL", cmpB: "LCID", wi: { shares: 10, a: 20, b: 1 } };
 let getHoldings = () => [];
 const today = () => new Date().toISOString().slice(0, 10);
 const num = (v, d = 2) => Number(v).toLocaleString("en-US", { maximumFractionDigits: d });
@@ -69,10 +70,13 @@ function renderUpcoming(f) {
 
 function renderLedger(f, market) {
   const rows = filterLedger(ledger(f, market.tickers), { kind: ui.kind, query: ui.query });
-  const groups = yearGroups(rows);
+  const shown = rows.slice(0, ui.limit);
+  const groups = yearGroups(shown);
+  const left = rows.length - shown.length;
   $("spCount").textContent = `${rows.length} split${rows.length === 1 ? "" : "s"}`;
   $("spLedger").innerHTML = rows.length
-    ? groups.map((g) => `<h3 class="syear"><span>${g.year}</span><i>${g.rows.length}</i></h3><ul class="sevents">${g.rows.map(eventCard).join("")}</ul>`).join("")
+    ? groups.map((g) => `<h3 class="syear"><span>${g.year}</span><i>${g.rows.length}</i></h3><ul class="sevents">${g.rows.map(eventCard).join("")}</ul>`).join("") +
+      (left > 0 ? `<p class="note muted">Showing the newest ${shown.length} of ${rows.length}. Search a ticker to jump to one.</p><div class="row-actions"><button class="btn" type="button" data-spmore>Show ${Math.min(PAGE, left)} more</button></div>` : "")
     : `<p class="note muted">${ui.query ? "No splits match that search." : `No ${ui.kind === "all" ? "" : ui.kind + " "}splits recorded yet.`}</p>`;
 }
 
@@ -126,15 +130,16 @@ export function initSplits({ holdings }) {
   getHoldings = holdings;
   const view = $("view-splits");
   view.addEventListener("change", (e) => {
-    if (e.target.name === "spk") { ui.kind = e.target.value; renderSplits(); }
+    if (e.target.name === "spk") { ui.kind = e.target.value; ui.limit = PAGE; renderSplits(); }
   });
-  $("spQ").addEventListener("input", (e) => { ui.query = e.target.value; const f = getSplits(); renderLedger(f, getMarket()); });
+  $("spQ").addEventListener("input", (e) => { ui.query = e.target.value; ui.limit = PAGE; const f = getSplits(); renderLedger(f, getMarket()); });
   $("spCmpA").addEventListener("input", (e) => { ui.cmpA = e.target.value; renderCompare(getSplits(), getMarket()); });
   $("spCmpB").addEventListener("input", (e) => { ui.cmpB = e.target.value; renderCompare(getSplits(), getMarket()); });
   const wi = () => { ui.wi = { shares: Number($("spWiShares").value), a: Number($("spWiA").value), b: Number($("spWiB").value) }; renderWhatIf(); };
   ["spWiShares", "spWiA", "spWiB"].forEach((id) => $(id).addEventListener("input", wi));
   view.addEventListener("click", (e) => {
     const w = e.target.closest("[data-wi]"), c = e.target.closest("[data-cmp]");
+    if (e.target.closest("[data-spmore]")) { ui.limit += PAGE; renderLedger(getSplits(), getMarket()); return; }
     if (w) { const [, a, b] = w.dataset.wi.split("|"); $("spWiA").value = a; $("spWiB").value = b; wi(); $("spWi").scrollIntoView({ behavior: "smooth", block: "center" }); }
     if (c) { ui.cmpB = ui.cmpA; ui.cmpA = c.dataset.cmp; $("spCmpA").value = ui.cmpA; $("spCmpB").value = ui.cmpB; renderCompare(getSplits(), getMarket()); $("spCmp").scrollIntoView({ behavior: "smooth", block: "center" }); }
   });

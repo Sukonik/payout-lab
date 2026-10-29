@@ -23,5 +23,16 @@ for (const v of ["overview", "portfolio", "lab", "receipts", "explore", "splits"
   const small = await p.evaluate((v) => [...document.querySelectorAll(`#view-${v} .btn, #view-${v} .more`)].filter((e) => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0 && b.height < 43.5; }).length, v);
   check(`${v}: buttons and links are at least 44px tall`, small === 0, `${small} too small`);
 }
+await p.evaluate(() => { location.hash = "#/splits"; });
+await p.waitForSelector("#view-splits:not([hidden])");
+await p.waitForTimeout(300);
+const shownNow = await p.$$eval("#spLedger .sevents > li", (l) => l.length);
+const more = await p.$("#spLedger [data-spmore]");
+check("splits history shows at most 60 rows first", shownNow <= 60, `${shownNow} rows`);
+if (more) {
+  await more.click();
+  const after = await p.$$eval("#spLedger .sevents > li", (l) => l.length);
+  check("Show more adds rows to the splits history", after > shownNow, `${shownNow} -> ${after}`);
+}
 check("no page errors", errors.length === 0, errors.join("; "));
 await browser.close(); server.close(); done();
