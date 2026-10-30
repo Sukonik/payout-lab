@@ -192,7 +192,7 @@ svg.path{width:100%;height:auto;display:block;margin-top:12px}
 .hrow .val{font-weight:700}
 .hrow .c-in{display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed var(--line2);padding-top:10px}
 .hrow .c-in .val{font-size:1.2rem;font-family:var(--font-d)}
-.x{width:40px;height:40px;border-radius:12px;border:1px solid transparent;background:transparent;color:var(--muted);font-size:1.3rem;line-height:1;cursor:pointer}
+.x{width:44px;height:44px;border-radius:12px;border:1px solid transparent;background:transparent;color:var(--muted);font-size:1.3rem;line-height:1;cursor:pointer}
 .x:hover{color:var(--coral);border-color:var(--coral)}
 .empty{padding:26px 12px;text-align:center;color:var(--muted)}
 .chipsrc{display:inline-flex;align-items:center;gap:5px;margin-top:3px;font-size:.72rem;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--ink);border:1px solid transparent;max-width:100%}
