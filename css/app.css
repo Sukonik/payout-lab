@@ -102,7 +102,7 @@ main{max-width:1120px;margin:0 auto;padding:18px 16px 8px;outline:none}
 label.f{display:flex;flex-direction:column;gap:5px;font-size:.82rem;color:var(--muted);font-weight:600}
 input,select{font:inherit;font-size:16px;color:var(--ink);background:var(--glass);border:1px solid var(--line2);border-radius:10px;padding:9px 11px;min-height:44px;min-width:0;width:100%}
 input::placeholder{color:var(--muted);opacity:.75}
-input[type=range]{padding:0;background:none;border:0;accent-color:var(--accent);min-height:32px}
+input[type=range]{padding:0;background:none;border:0;accent-color:var(--accent);min-height:44px}
 input[type=checkbox],input[type=radio]{width:auto;min-height:0}
 .addrow{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:12px;align-items:end}
 .addrow .btn{grid-column:1/-1}
