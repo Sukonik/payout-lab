@@ -1,8 +1,13 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-10-30T10:26:44.453Z",
- "upcomingAsOf": "2026-10-30",
+ "updated": "2026-11-02T11:40:04.545Z",
+ "upcomingAsOf": "2026-11-02",
  "tickers": {
+  "A": {
+   "n": "Agilent Technologies",
+   "s": [],
+   "u": "2026-11-02"
+  },
   "AAPL": {
    "n": "Apple",
    "s": [
@@ -32,6 +37,16 @@
    "s": [],
    "u": "2026-10-15"
   },
+  "ABNB": {
+   "n": "Airbnb",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "ABT": {
+   "n": "Abbott Laboratories",
+   "s": [],
+   "u": "2026-11-02"
+  },
   "ACGL": {
    "n": "Arch Capital Group",
    "s": [
@@ -55,6 +70,16 @@
     }
    ],
    "u": "2026-10-16"
+  },
+  "ACN": {
+   "n": "Accenture",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "ADBE": {
+   "n": "Adobe Inc.",
+   "s": [],
+   "u": "2026-11-02"
   },
   "ADI": {
    "n": "Analog Devices",
@@ -86,6 +111,26 @@
    "s": [],
    "u": "2026-10-16"
   },
+  "AES": {
+   "n": "AES Corporation",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "AFL": {
+   "n": "Aflac",
+   "s": [
+    {
+     "d": "2018-03-19",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 90.49,
+     "post": 44.7
+    }
+   ],
+   "u": "2026-11-02"
+  },
   "AIG": {
    "n": "American International Group",
    "s": [],
@@ -100,6 +145,21 @@
    "n": "Arthur J. Gallagher & Co.",
    "s": [],
    "u": "2026-10-16"
+  },
+  "AKAM": {
+   "n": "Akamai Technologies",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "ALB": {
+   "n": "Albemarle Corporation",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "ALGN": {
+   "n": "Align Technology",
+   "s": [],
+   "u": "2026-11-02"
   },
   "ALL": {
    "n": "Allstate",
@@ -130,6 +190,11 @@
     }
    ],
    "u": "2026-10-16"
+  },
+  "AMD": {
+   "n": "Advanced Micro Devices",
+   "s": [],
+   "u": "2026-11-02"
   },
   "AME": {
    "n": "Ametek",
@@ -214,10 +279,48 @@
    "s": [],
    "u": "2026-10-16"
   },
+  "AOS": {
+   "n": "A. O. Smith",
+   "s": [
+    {
+     "d": "2010-11-16",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 57.53,
+     "post": 37.65
+    },
+    {
+     "d": "2013-05-16",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 79.9,
+     "post": 39.62
+    },
+    {
+     "d": "2016-10-06",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 101.73,
+     "post": 51.41
+    }
+   ],
+   "u": "2026-11-02"
+  },
   "APA": {
    "n": "APA Corporation",
    "s": [],
    "u": "2026-10-16"
+  },
+  "APD": {
+   "n": "Air Products",
+   "s": [],
+   "u": "2026-11-02"
   },
   "APH": {
    "n": "Amphenol",
@@ -275,6 +378,11 @@
    "n": "Aptiv",
    "s": [],
    "u": "2026-10-16"
+  },
+  "ARE": {
+   "n": "Alexandria Real Estate Equities",
+   "s": [],
+   "u": "2026-11-02"
   },
   "ARES": {
    "n": "Ares Management",
@@ -1094,6 +1202,11 @@
    "n": "iShares Core Dividend Growth ETF",
    "s": [],
    "u": "2026-10-15"
+  },
+  "DGX": {
+   "n": "Quest Diagnostics",
+   "s": [],
+   "u": "2026-11-02"
   },
   "DHI": {
    "n": "D. R. Horton",
@@ -2462,6 +2575,11 @@
    "s": [],
    "u": "2026-10-29"
   },
+  "MMM": {
+   "n": "3M",
+   "s": [],
+   "u": "2026-11-02"
+  },
   "MNST": {
    "n": "Monster Beverage",
    "s": [
@@ -2903,6 +3021,35 @@
    "s": [],
    "u": "2026-10-23"
   },
+  "PANW": {
+   "n": "Palo Alto Networks",
+   "s": [
+    {
+     "d": "2022-09-14",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 548.88,
+     "post": 182.06
+    },
+    {
+     "d": "2024-12-16",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 393.12,
+     "post": 202.5
+    }
+   ],
+   "u": "2026-11-02"
+  },
+  "PAYX": {
+   "n": "Paychex",
+   "s": [],
+   "u": "2026-11-02"
+  },
   "PCAR": {
    "n": "Paccar",
    "s": [
@@ -2918,6 +3065,16 @@
    ],
    "u": "2026-10-30"
   },
+  "PCG": {
+   "n": "PG&E Corporation",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "PEG": {
+   "n": "Public Service Enterprise Group",
+   "s": [],
+   "u": "2026-11-02"
+  },
   "PEP": {
    "n": "PepsiCo",
    "s": [],
@@ -2928,25 +3085,165 @@
    "s": [],
    "u": "2026-10-15"
   },
+  "PFG": {
+   "n": "Principal Financial Group",
+   "s": [],
+   "u": "2026-11-02"
+  },
   "PG": {
    "n": "Procter & Gamble",
    "s": [],
    "u": "2026-10-15"
+  },
+  "PGR": {
+   "n": "Progressive Corporation",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "PH": {
+   "n": "Parker Hannifin",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "PHM": {
+   "n": "PulteGroup",
+   "s": [],
+   "u": "2026-11-02"
   },
   "PKG": {
    "n": "Packaging Corporation of America",
    "s": [],
    "u": "2026-10-30"
   },
+  "PLD": {
+   "n": "Prologis",
+   "s": [],
+   "u": "2026-11-02"
+  },
   "PLTR": {
    "n": "Palantir Technologies",
    "s": [],
    "u": "2026-10-30"
   },
+  "PM": {
+   "n": "Philip Morris International",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "PNC": {
+   "n": "PNC Financial Services",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "PNR": {
+   "n": "Pentair",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "PNW": {
+   "n": "Pinnacle West Capital",
+   "s": [],
+   "u": "2026-11-02"
+  },
   "PODD": {
    "n": "Insulet Corporation",
    "s": [],
    "u": "2026-10-27"
+  },
+  "PPG": {
+   "n": "PPG Industries",
+   "s": [
+    {
+     "d": "2015-06-15",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 233.25,
+     "post": 115.43
+    }
+   ],
+   "u": "2026-11-02"
+  },
+  "PPL": {
+   "n": "PPL Corporation",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "PRU": {
+   "n": "Prudential Financial",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "PSA": {
+   "n": "Public Storage",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "PSX": {
+   "n": "Phillips 66",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "PTC": {
+   "n": "PTC Inc.",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "PWR": {
+   "n": "Quanta Services",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "PYPL": {
+   "n": "PayPal",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "Q": {
+   "n": "Qnity Electronics",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "QCOM": {
+   "n": "Qualcomm",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "RDDT": {
+   "n": "Reddit",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "REG": {
+   "n": "Regency Centers",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "RJF": {
+   "n": "Raymond James Financial",
+   "s": [
+    {
+     "d": "2021-09-22",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 128.85,
+     "post": 86.92
+    }
+   ],
+   "u": "2026-11-02"
+  },
+  "RL": {
+   "n": "Ralph Lauren Corporation",
+   "s": [],
+   "u": "2026-11-02"
+  },
+  "RTX": {
+   "n": "RTX Corporation",
+   "s": [],
+   "u": "2026-11-02"
   },
   "SCHB": {
    "n": "Schwab US Broad Market ETF",
@@ -3116,92 +3413,26 @@
  },
  "upcoming": [
   {
-   "t": "IVF",
-   "n": "INVO Fertility, Inc.",
+   "t": "RETO",
+   "n": "ReTo Eco-Solutions, Inc.",
    "a": 1,
-   "b": 4,
-   "exDate": "2026-10-30",
+   "b": 8,
+   "exDate": "2026-11-02",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
+   "asOf": "2026-11-02"
   },
   {
-   "t": "MASK",
-   "n": "3 E Network Technology Group Ltd",
+   "t": "VCIG",
+   "n": "VCI Global Limited",
    "a": 1,
-   "b": 4,
-   "exDate": "2026-10-30",
+   "b": 18,
+   "exDate": "2026-11-02",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
-  },
-  {
-   "t": "NXXT",
-   "n": "NextNRG, Inc.",
-   "a": 1,
-   "b": 10,
-   "exDate": "2026-10-30",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
-  },
-  {
-   "t": "NYSX",
-   "n": "Global X Funds Global X NYSE 100 ETF",
-   "a": 5,
-   "b": 1,
-   "exDate": "2026-10-30",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
-  },
-  {
-   "t": "RUBI",
-   "n": "Rubico Inc.",
-   "a": 1,
-   "b": 25,
-   "exDate": "2026-10-30",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
-  },
-  {
-   "t": "WFF",
-   "n": "WF Holding Limited",
-   "a": 1,
-   "b": 25,
-   "exDate": "2026-10-30",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
-  },
-  {
-   "t": "WHLR",
-   "n": "Wheeler Real Estate Investment Trust, Inc.",
-   "a": 1,
-   "b": 6,
-   "exDate": "2026-10-30",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
-  },
-  {
-   "t": "ZONE",
-   "n": "Zone Frontier Inc.",
-   "a": 1,
-   "b": 60,
-   "exDate": "2026-10-30",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
+   "asOf": "2026-11-02"
   },
   {
    "t": "EFG",
@@ -3212,7 +3443,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
+   "asOf": "2026-11-02"
   },
   {
    "t": "EFV",
@@ -3223,7 +3454,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
+   "asOf": "2026-11-02"
   },
   {
    "t": "ITA",
@@ -3234,7 +3465,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
+   "asOf": "2026-11-02"
   },
   {
    "t": "MTUM",
@@ -3245,7 +3476,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
+   "asOf": "2026-11-02"
   },
   {
    "t": "QUAL",
@@ -3256,7 +3487,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
+   "asOf": "2026-11-02"
   },
   {
    "t": "SOXX",
@@ -3267,7 +3498,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
+   "asOf": "2026-11-02"
   },
   {
    "t": "TOPS",
@@ -3278,7 +3509,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
+   "asOf": "2026-11-02"
   },
   {
    "t": "MMT",
@@ -3289,7 +3520,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-10-30"
+   "asOf": "2026-11-02"
   }
  ]
 }
