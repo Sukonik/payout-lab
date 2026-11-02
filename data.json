@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-01T23:08:40.218Z",
- "source": "Tiingo + Yahoo Finance",
+ "updated": "2026-11-02T11:42:44.063Z",
+ "source": "Yahoo Finance",
  "tickers": {
   "SCHD": {
    "n": "Schwab US Dividend Equity ETF",
@@ -37985,6 +37985,16 @@
    "g3": -0.2156,
    "src": "Tiingo",
    "u": "2026-11-01T23:08:31.032Z"
+  },
+  "QBTS": {
+   "n": "D-Wave Quantum",
+   "type": "EQUITY_STANDARD",
+   "p": 10.65,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-11-02T11:42:43.210Z",
+   "s": "Q3"
   }
  }
 }
