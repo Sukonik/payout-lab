@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-11-02T11:40:04.545Z",
- "upcomingAsOf": "2026-11-02",
+ "updated": "2026-11-03T11:19:27.293Z",
+ "upcomingAsOf": "2026-11-03",
  "tickers": {
   "A": {
    "n": "Agilent Technologies",
@@ -996,6 +996,21 @@
    "s": [],
    "u": "2026-10-20"
   },
+  "CRM": {
+   "n": "Salesforce",
+   "s": [
+    {
+     "d": "2013-04-18",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 167.35,
+     "post": 41.03
+    }
+   ],
+   "u": "2026-11-03"
+  },
   "CRWD": {
    "n": "CrowdStrike",
    "s": [
@@ -1959,6 +1974,11 @@
    "s": [],
    "u": "2026-10-27"
   },
+  "HOOD": {
+   "n": "Robinhood Markets",
+   "s": [],
+   "u": "2026-11-03"
+  },
   "HPE": {
    "n": "Hewlett Packard Enterprise",
    "s": [],
@@ -2445,6 +2465,11 @@
    ],
    "u": "2026-10-28"
   },
+  "LUV": {
+   "n": "Southwest Airlines",
+   "s": [],
+   "u": "2026-11-03"
+  },
   "LVS": {
    "n": "Las Vegas Sands",
    "s": [],
@@ -2830,6 +2855,21 @@
    "s": [],
    "u": "2026-10-30"
   },
+  "NOW": {
+   "n": "ServiceNow",
+   "s": [
+    {
+     "d": "2025-12-18",
+     "a": 5,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 782.39,
+     "post": 153.38
+    }
+   ],
+   "u": "2026-11-03"
+  },
   "NRG": {
    "n": "NRG Energy",
    "s": [],
@@ -3210,6 +3250,11 @@
    "s": [],
    "u": "2026-11-02"
   },
+  "RCL": {
+   "n": "Royal Caribbean Group",
+   "s": [],
+   "u": "2026-11-03"
+  },
   "RDDT": {
    "n": "Reddit",
    "s": [],
@@ -3219,6 +3264,16 @@
    "n": "Regency Centers",
    "s": [],
    "u": "2026-11-02"
+  },
+  "REGN": {
+   "n": "Regeneron Pharmaceuticals",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "RF": {
+   "n": "Regions Financial Corporation",
+   "s": [],
+   "u": "2026-11-03"
   },
   "RJF": {
    "n": "Raymond James Financial",
@@ -3240,10 +3295,131 @@
    "s": [],
    "u": "2026-11-02"
   },
+  "RMD": {
+   "n": "ResMed|",
+   "s": [
+    {
+     "d": "2010-08-31",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 60.38,
+     "post": 30.14
+    }
+   ],
+   "u": "2026-11-03"
+  },
+  "ROK": {
+   "n": "Rockwell Automation",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "ROL": {
+   "n": "Rollins, Inc.",
+   "s": [
+    {
+     "d": "2010-12-13",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 28.91,
+     "post": 19.37
+    },
+    {
+     "d": "2015-03-11",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 33.15,
+     "post": 22.44
+    },
+    {
+     "d": "2018-12-11",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 57.37,
+     "post": 38.23
+    },
+    {
+     "d": "2020-12-11",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 54.14,
+     "post": 36.67
+    }
+   ],
+   "u": "2026-11-03"
+  },
+  "ROP": {
+   "n": "Roper Technologies",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "ROST": {
+   "n": "Ross Stores",
+   "s": [
+    {
+     "d": "2011-12-16",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 92.82,
+     "post": 47
+    },
+    {
+     "d": "2015-06-12",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 97.86,
+     "post": 48.53
+    }
+   ],
+   "u": "2026-11-03"
+  },
+  "RSG": {
+   "n": "Republic Services",
+   "s": [],
+   "u": "2026-11-03"
+  },
   "RTX": {
    "n": "RTX Corporation",
    "s": [],
    "u": "2026-11-02"
+  },
+  "RVTY": {
+   "n": "Revvity",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SBAC": {
+   "n": "SBA Communications",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SBUX": {
+   "n": "Starbucks",
+   "s": [
+    {
+     "d": "2015-04-09",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 95.23,
+     "post": 47.96
+    }
+   ],
+   "u": "2026-11-03"
   },
   "SCHB": {
    "n": "Schwab US Broad Market ETF",
@@ -3289,6 +3465,31 @@
    "s": [],
    "u": "2026-10-20"
   },
+  "SHW": {
+   "n": "Sherwin-Williams",
+   "s": [
+    {
+     "d": "2021-04-01",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 738.01,
+     "post": 249.75
+    }
+   ],
+   "u": "2026-11-03"
+  },
+  "SJM": {
+   "n": "J.M. Smucker Company (The)",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SLB": {
+   "n": "Schlumberger",
+   "s": [],
+   "u": "2026-11-03"
+  },
   "SMCI": {
    "n": "Super Micro Computer",
    "s": [
@@ -3296,11 +3497,48 @@
      "d": "2024-10-01",
      "a": 10,
      "b": 1,
-     "src": "public record, not yet cross-checked",
-     "ver": 0
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 416.4,
+     "post": 40.55
     }
    ],
-   "u": null
+   "u": "2026-11-03"
+  },
+  "SNA": {
+   "n": "Snap-on",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SNDK": {
+   "n": "Sandisk",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SNPS": {
+   "n": "Synopsys",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SO": {
+   "n": "Southern Company",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SOLV": {
+   "n": "Solventum",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SPG": {
+   "n": "Simon Property Group",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SPGI": {
+   "n": "S&P Global",
+   "s": [],
+   "u": "2026-11-03"
   },
   "SPYD": {
    "n": "SPDR Portfolio S&P 500 High Dividend ETF",
@@ -3322,15 +3560,80 @@
    ],
    "u": "2026-10-15"
   },
+  "SRE": {
+   "n": "Sempra",
+   "s": [
+    {
+     "d": "2023-08-22",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 142.22,
+     "post": 71.3
+    }
+   ],
+   "u": "2026-11-03"
+  },
   "STAG": {
    "n": "STAG Industrial",
    "s": [],
    "u": "2026-10-15"
   },
+  "STE": {
+   "n": "Steris",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "STLD": {
+   "n": "Steel Dynamics",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "STT": {
+   "n": "State Street Corporation",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "STX": {
+   "n": "Seagate Technology",
+   "s": [],
+   "u": "2026-11-03"
+  },
   "STZ": {
    "n": "Constellation Brands",
    "s": [],
    "u": "2026-10-21"
+  },
+  "SW": {
+   "n": "Smurfit Westrock",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SWK": {
+   "n": "Stanley Black & Decker",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SWKS": {
+   "n": "Skyworks Solutions",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SYF": {
+   "n": "Synchrony Financial",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SYK": {
+   "n": "Stryker Corporation",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "SYY": {
+   "n": "Sysco",
+   "s": [],
+   "u": "2026-11-03"
   },
   "T": {
    "n": "AT&T",
@@ -3352,6 +3655,41 @@
    ],
    "u": "2026-10-19"
   },
+  "TGT": {
+   "n": "Target Corporation",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "TMUS": {
+   "n": "T-Mobile US",
+   "s": [
+    {
+     "d": "2013-05-01",
+     "a": 1,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 11.84,
+     "post": 16.52
+    }
+   ],
+   "u": "2026-11-03"
+  },
+  "TPR": {
+   "n": "Tapestry, Inc.",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "TRGP": {
+   "n": "Targa Resources",
+   "s": [],
+   "u": "2026-11-03"
+  },
+  "TROW": {
+   "n": "T. Rowe Price",
+   "s": [],
+   "u": "2026-11-03"
+  },
   "TSLA": {
    "n": "Tesla",
    "s": [
@@ -3371,6 +3709,11 @@
     }
    ],
    "u": null
+  },
+  "TTWO": {
+   "n": "Take-Two Interactive",
+   "s": [],
+   "u": "2026-11-03"
   },
   "VIG": {
    "n": "Vanguard Dividend Appreciation ETF",
@@ -3413,26 +3756,26 @@
  },
  "upcoming": [
   {
-   "t": "RETO",
-   "n": "ReTo Eco-Solutions, Inc.",
+   "t": "BJDX",
+   "n": "Bluejay Diagnostics, Inc.",
    "a": 1,
-   "b": 8,
-   "exDate": "2026-11-02",
+   "b": 4,
+   "exDate": "2026-11-03",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-02"
+   "asOf": "2026-11-03"
   },
   {
-   "t": "VCIG",
-   "n": "VCI Global Limited",
+   "t": "UFG",
+   "n": "Uni-Fuels Holdings Limited",
    "a": 1,
-   "b": 18,
-   "exDate": "2026-11-02",
+   "b": 10,
+   "exDate": "2026-11-03",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-02"
+   "asOf": "2026-11-03"
   },
   {
    "t": "EFG",
@@ -3443,7 +3786,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-02"
+   "asOf": "2026-11-03"
   },
   {
    "t": "EFV",
@@ -3454,7 +3797,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-02"
+   "asOf": "2026-11-03"
   },
   {
    "t": "ITA",
@@ -3465,7 +3808,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-02"
+   "asOf": "2026-11-03"
   },
   {
    "t": "MTUM",
@@ -3476,7 +3819,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-02"
+   "asOf": "2026-11-03"
   },
   {
    "t": "QUAL",
@@ -3487,7 +3830,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-02"
+   "asOf": "2026-11-03"
   },
   {
    "t": "SOXX",
@@ -3498,7 +3841,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-02"
+   "asOf": "2026-11-03"
   },
   {
    "t": "TOPS",
@@ -3509,7 +3852,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-02"
+   "asOf": "2026-11-03"
   },
   {
    "t": "MMT",
@@ -3520,7 +3863,29 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-02"
+   "asOf": "2026-11-03"
+  },
+  {
+   "t": "EMBJ",
+   "n": "Embraer S.A.",
+   "a": 4,
+   "b": 1,
+   "exDate": "2026-11-16",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-03"
+  },
+  {
+   "t": "SNDK",
+   "n": "Sandisk Corporation",
+   "a": 8,
+   "b": 1,
+   "exDate": "2026-11-20",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-03"
   }
  ]
 }
