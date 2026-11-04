@@ -109,7 +109,7 @@ input[type=checkbox],input[type=radio]{width:auto;min-height:0}
 .controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
 .rangehead{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted)}
 .rangehead b{color:var(--ink)}
-.check{display:flex;gap:10px;align-items:center;font-size:.92rem}
+.check{display:flex;gap:10px;align-items:center;font-size:.92rem;min-height:44px}
 .check input{width:20px;height:20px}
 input[data-i]{text-align:right}
 
