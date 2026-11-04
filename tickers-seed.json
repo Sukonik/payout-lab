@@ -1,6 +1,10 @@
 {
  "note": "Tickers Payout Lab should cover. scripts/update-data.mjs adds one only when a data provider returns a real price for it; names here are labels and a ticker with no data is skipped, never published with made-up numbers.",
  "tickers": {
+  "AA": {
+   "n": "Alcoa",
+   "type": "EQUITY_STANDARD"
+  },
   "AAAU": {
    "n": "Goldman Sachs Physical Gold",
    "type": "ETF_PASS_THROUGH"
@@ -12,6 +16,10 @@
   "ACWX": {
    "n": "iShares MSCI ACWI ex US",
    "type": "ETF_PASS_THROUGH"
+  },
+  "AEM": {
+   "n": "Agnico Eagle Mines",
+   "type": "EQUITY_STANDARD"
   },
   "AEO": {
    "n": "American Eagle Outfitters",
@@ -189,6 +197,10 @@
    "n": "Vanguard Intermediate-Term Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "BJ": {
+   "n": "BJ's Wholesale Club",
+   "type": "EQUITY_STANDARD"
+  },
   "BKCH": {
    "n": "Global X Blockchain",
    "type": "ETF_PASS_THROUGH"
@@ -253,8 +265,16 @@
    "n": "Webull",
    "type": "EQUITY_STANDARD"
   },
+  "CAG": {
+   "n": "Conagra Brands",
+   "type": "EQUITY_STANDARD"
+  },
   "CAVA": {
    "n": "Cava Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "CDE": {
+   "n": "Coeur Mining",
    "type": "EQUITY_STANDARD"
   },
   "CELH": {
@@ -343,6 +363,10 @@
   },
   "CRWV": {
    "n": "CoreWeave",
+   "type": "EQUITY_STANDARD"
+  },
+  "CUBE": {
+   "n": "CubeSmart",
    "type": "EQUITY_STANDARD"
   },
   "CWB": {
@@ -449,9 +473,17 @@
    "n": "iShares Core Dividend",
    "type": "ETF_PASS_THROUGH"
   },
+  "DKS": {
+   "n": "Dick's Sporting Goods",
+   "type": "EQUITY_STANDARD"
+  },
   "DLN": {
    "n": "WisdomTree US LargeCap Dividend",
    "type": "ETF_PASS_THROUGH"
+  },
+  "DOCN": {
+   "n": "DigitalOcean",
+   "type": "EQUITY_STANDARD"
   },
   "DOCU": {
    "n": "Docusign",
@@ -697,6 +729,10 @@
    "n": "Global X FinTech",
    "type": "ETF_PASS_THROUGH"
   },
+  "FIVE": {
+   "n": "Five Below",
+   "type": "EQUITY_STANDARD"
+  },
   "FIXD": {
    "n": "First Trust TCW Opportunistic Fixed Income",
    "type": "ETF_PASS_THROUGH"
@@ -757,6 +793,10 @@
    "n": "First Solar",
    "type": "EQUITY_STANDARD"
   },
+  "FSLY": {
+   "n": "Fastly",
+   "type": "EQUITY_STANDARD"
+  },
   "FSTA": {
    "n": "Fidelity MSCI Consumer Staples",
    "type": "ETF_PASS_THROUGH"
@@ -800,6 +840,10 @@
   "GLDM": {
    "n": "SPDR Gold MiniShares",
    "type": "ETF_PASS_THROUGH"
+  },
+  "GLPI": {
+   "n": "Gaming and Leisure Properties",
+   "type": "EQUITY_STANDARD"
   },
   "GLW": {
    "n": "Corning",
@@ -845,6 +889,10 @@
    "n": "SPDR S&P China",
    "type": "ETF_PASS_THROUGH"
   },
+  "H": {
+   "n": "Hyatt Hotels",
+   "type": "EQUITY_STANDARD"
+  },
   "HACK": {
    "n": "Amplify Cybersecurity",
    "type": "ETF_PASS_THROUGH"
@@ -853,8 +901,16 @@
    "n": "WisdomTree Europe Hedged Equity",
    "type": "ETF_PASS_THROUGH"
   },
+  "HEI": {
+   "n": "HEICO",
+   "type": "EQUITY_STANDARD"
+  },
   "HIMS": {
    "n": "Hims and Hers Health",
+   "type": "EQUITY_STANDARD"
+  },
+  "HL": {
+   "n": "Hecla Mining",
    "type": "EQUITY_STANDARD"
   },
   "HMC": {
@@ -867,6 +923,10 @@
   },
   "HPQ": {
    "n": "HP",
+   "type": "EQUITY_STANDARD"
+  },
+  "HUBS": {
+   "n": "HubSpot",
    "type": "EQUITY_STANDARD"
   },
   "HYD": {
@@ -1197,6 +1257,10 @@
    "n": "SPDR S&P Capital Markets",
    "type": "ETF_PASS_THROUGH"
   },
+  "KGC": {
+   "n": "Kinross Gold",
+   "type": "EQUITY_STANDARD"
+  },
   "KIE": {
    "n": "SPDR S&P Insurance",
    "type": "ETF_PASS_THROUGH"
@@ -1217,6 +1281,10 @@
    "n": "Direxion Daily S&P Biotech Bull 3X Shares",
    "type": "ETF_PASS_THROUGH"
   },
+  "LAMR": {
+   "n": "Lamar Advertising",
+   "type": "EQUITY_STANDARD"
+  },
   "LCID": {
    "n": "Lucid Group",
    "type": "EQUITY_STANDARD"
@@ -1228,6 +1296,10 @@
   "LIT": {
    "n": "Global X Lithium and Battery Tech",
    "type": "ETF_PASS_THROUGH"
+  },
+  "LOGI": {
+   "n": "Logitech International",
+   "type": "EQUITY_STANDARD"
   },
   "LPL": {
    "n": "LG Display",
@@ -1413,6 +1485,10 @@
    "n": "Okta",
    "type": "EQUITY_STANDARD"
   },
+  "OLLI": {
+   "n": "Ollie's Bargain Outlet",
+   "type": "EQUITY_STANDARD"
+  },
   "ONEQ": {
    "n": "Fidelity Nasdaq Composite Index",
    "type": "ETF_PASS_THROUGH"
@@ -1433,6 +1509,10 @@
    "n": "Tema Space and Satellite",
    "type": "ETF_PASS_THROUGH"
   },
+  "PAAS": {
+   "n": "Pan American Silver",
+   "type": "EQUITY_STANDARD"
+  },
   "PALL": {
    "n": "abrdn Physical Palladium Shares",
    "type": "ETF_PASS_THROUGH"
@@ -1443,6 +1523,10 @@
   },
   "PAVE": {
    "n": "Global X US Infrastructure Development",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PBJ": {
+   "n": "Invesco Food & Beverage ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "PBW": {
@@ -1460,6 +1544,10 @@
   "PDD": {
    "n": "PDD Holdings",
    "type": "EQUITY_STANDARD"
+  },
+  "PEJ": {
+   "n": "Invesco Leisure and Entertainment ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "PEY": {
    "n": "Invesco High Yield Equity Dividend Achievers",
@@ -1573,12 +1661,20 @@
    "n": "VanEck Rare Earth and Strategic Metals",
    "type": "ETF_PASS_THROUGH"
   },
+  "REXR": {
+   "n": "Rexford Industrial Realty",
+   "type": "EQUITY_STANDARD"
+  },
   "REZ": {
    "n": "iShares Residential and Multisector Real Estate",
    "type": "ETF_PASS_THROUGH"
   },
   "RGTI": {
    "n": "Rigetti Computing",
+   "type": "EQUITY_STANDARD"
+  },
+  "RH": {
+   "n": "RH",
    "type": "EQUITY_STANDARD"
   },
   "RING": {
@@ -1619,6 +1715,10 @@
   },
   "SAP": {
    "n": "SAP",
+   "type": "EQUITY_STANDARD"
+  },
+  "SCCO": {
+   "n": "Southern Copper",
    "type": "EQUITY_STANDARD"
   },
   "SCHA": {
@@ -2285,8 +2385,16 @@
    "n": "Direxion Daily Dow Jones Internet Bear 3X Shares",
    "type": "ETF_PASS_THROUGH"
   },
+  "WH": {
+   "n": "Wyndham Hotels & Resorts",
+   "type": "EQUITY_STANDARD"
+  },
   "WING": {
    "n": "Wingstop",
+   "type": "EQUITY_STANDARD"
+  },
+  "WIX": {
+   "n": "Wix.com",
    "type": "EQUITY_STANDARD"
   },
   "WMG": {
