@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-11-03T11:19:27.293Z",
- "upcomingAsOf": "2026-11-03",
+ "updated": "2026-11-04T11:32:43.576Z",
+ "upcomingAsOf": "2026-11-04",
  "tickers": {
   "A": {
    "n": "Agilent Technologies",
@@ -1914,6 +1914,11 @@
    "s": [],
    "u": "2026-10-26"
   },
+  "GWW": {
+   "n": "W. W. Grainger",
+   "s": [],
+   "u": "2026-11-04"
+  },
   "HAL": {
    "n": "Halliburton",
    "s": [],
@@ -3640,6 +3645,16 @@
    "s": [],
    "u": "2026-10-15"
   },
+  "TDG": {
+   "n": "TransDigm Group",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "TDY": {
+   "n": "Teledyne Technologies",
+   "s": [],
+   "u": "2026-11-04"
+  },
   "TECH": {
    "n": "Bio-Techne",
    "s": [
@@ -3655,10 +3670,59 @@
    ],
    "u": "2026-10-19"
   },
+  "TEL": {
+   "n": "TE Connectivity",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "TER": {
+   "n": "Teradyne",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "TFC": {
+   "n": "Truist Financial",
+   "s": [],
+   "u": "2026-11-04"
+  },
   "TGT": {
    "n": "Target Corporation",
    "s": [],
    "u": "2026-11-03"
+  },
+  "TJX": {
+   "n": "TJX Companies",
+   "s": [
+    {
+     "d": "2012-02-03",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 68.12,
+     "post": 34.53
+    },
+    {
+     "d": "2018-11-07",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 109.55,
+     "post": 55.42
+    }
+   ],
+   "u": "2026-11-04"
+  },
+  "TKO": {
+   "n": "TKO Group Holdings",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "TMO": {
+   "n": "Thermo Fisher Scientific",
+   "s": [],
+   "u": "2026-11-04"
   },
   "TMUS": {
    "n": "T-Mobile US",
@@ -3675,6 +3739,30 @@
    ],
    "u": "2026-11-03"
   },
+  "TPL": {
+   "n": "Texas Pacific Land Corporation",
+   "s": [
+    {
+     "d": "2024-03-27",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 1679.18,
+     "post": 576.33
+    },
+    {
+     "d": "2025-12-23",
+     "a": 3,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 908.4,
+     "post": 297.33
+    }
+   ],
+   "u": "2026-11-04"
+  },
   "TPR": {
    "n": "Tapestry, Inc.",
    "s": [],
@@ -3685,10 +3773,63 @@
    "s": [],
    "u": "2026-11-03"
   },
+  "TRMB": {
+   "n": "Trimble Inc.",
+   "s": [
+    {
+     "d": "2013-03-21",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 60.28,
+     "post": 29.44
+    }
+   ],
+   "u": "2026-11-04"
+  },
   "TROW": {
    "n": "T. Rowe Price",
    "s": [],
    "u": "2026-11-03"
+  },
+  "TRV": {
+   "n": "Travelers Companies (The)",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "TSCO": {
+   "n": "Tractor Supply",
+   "s": [
+    {
+     "d": "2010-09-03",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 71.41,
+     "post": 36.31
+    },
+    {
+     "d": "2013-09-27",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 132.33,
+     "post": 66.4
+    },
+    {
+     "d": "2024-12-20",
+     "a": 5,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 264.03,
+     "post": 53.92
+    }
+   ],
+   "u": "2026-11-04"
   },
   "TSLA": {
    "n": "Tesla",
@@ -3697,28 +3838,197 @@
      "d": "2020-08-31",
      "a": 5,
      "b": 1,
-     "src": "public record, not yet cross-checked",
-     "ver": 0
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 2213.4,
+     "post": 498.32
     },
     {
      "d": "2022-08-25",
      "a": 3,
      "b": 1,
-     "src": "public record, not yet cross-checked",
-     "ver": 0
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 891.29,
+     "post": 296.07
     }
    ],
-   "u": null
+   "u": "2026-11-04"
+  },
+  "TSN": {
+   "n": "Tyson Foods",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "TT": {
+   "n": "Trane Technologies",
+   "s": [],
+   "u": "2026-11-04"
   },
   "TTWO": {
    "n": "Take-Two Interactive",
    "s": [],
    "u": "2026-11-03"
   },
+  "TXN": {
+   "n": "Texas Instruments",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "TXT": {
+   "n": "Textron",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "TYL": {
+   "n": "Tyler Technologies",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "UAL": {
+   "n": "United Airlines Holdings",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "UBER": {
+   "n": "Uber",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "UDR": {
+   "n": "UDR, Inc.",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "UHS": {
+   "n": "Universal Health Services",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "ULTA": {
+   "n": "Ulta Beauty",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "UNH": {
+   "n": "UnitedHealth Group",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "UNP": {
+   "n": "Union Pacific Corporation",
+   "s": [
+    {
+     "d": "2014-06-09",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 201.86,
+     "post": 102.14
+    }
+   ],
+   "u": "2026-11-04"
+  },
+  "UPS": {
+   "n": "United Parcel Service",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "URI": {
+   "n": "United Rentals",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "USB": {
+   "n": "U.S. Bancorp",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "V": {
+   "n": "Visa Inc.",
+   "s": [
+    {
+     "d": "2015-03-19",
+     "a": 4,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 267.67,
+     "post": 66.81
+    }
+   ],
+   "u": "2026-11-04"
+  },
+  "VEEV": {
+   "n": "Veeva Systems",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "VICI": {
+   "n": "Vici Properties",
+   "s": [],
+   "u": "2026-11-04"
+  },
   "VIG": {
    "n": "Vanguard Dividend Appreciation ETF",
    "s": [],
    "u": "2026-10-15"
+  },
+  "VLO": {
+   "n": "Valero Energy",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "VLTO": {
+   "n": "Veralto",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "VMC": {
+   "n": "Vulcan Materials Company",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "VMRK": {
+   "n": "Vivmark Residential",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "VRSK": {
+   "n": "Verisk Analytics",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "VRSN": {
+   "n": "Verisign",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "VRT": {
+   "n": "Vertiv",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "VRTX": {
+   "n": "Vertex Pharmaceuticals",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "VST": {
+   "n": "Vistra Corp.",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "VTR": {
+   "n": "Ventas",
+   "s": [],
+   "u": "2026-11-04"
+  },
+  "VTRS": {
+   "n": "Viatris",
+   "s": [],
+   "u": "2026-11-04"
   },
   "VYM": {
    "n": "Vanguard High Dividend Yield ETF",
@@ -3743,6 +4053,39 @@
    ],
    "u": null
   },
+  "WRB": {
+   "n": "W. R. Berkley Corporation",
+   "s": [
+    {
+     "d": "2019-04-03",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 84.55,
+     "post": 56.77
+    },
+    {
+     "d": "2022-03-24",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 97.95,
+     "post": 65.34
+    },
+    {
+     "d": "2024-07-11",
+     "a": 3,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 79.63,
+     "post": 52.29
+    }
+   ],
+   "u": "2026-11-04"
+  },
   "XOM": {
    "n": "Exxon Mobil",
    "s": [],
@@ -3756,28 +4099,6 @@
  },
  "upcoming": [
   {
-   "t": "BJDX",
-   "n": "Bluejay Diagnostics, Inc.",
-   "a": 1,
-   "b": 4,
-   "exDate": "2026-11-03",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-03"
-  },
-  {
-   "t": "UFG",
-   "n": "Uni-Fuels Holdings Limited",
-   "a": 1,
-   "b": 10,
-   "exDate": "2026-11-03",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-03"
-  },
-  {
    "t": "EFG",
    "n": "iShares MSCI EAFE Growth ETF",
    "a": 3,
@@ -3786,7 +4107,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-03"
+   "asOf": "2026-11-04"
   },
   {
    "t": "EFV",
@@ -3797,7 +4118,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-03"
+   "asOf": "2026-11-04"
   },
   {
    "t": "ITA",
@@ -3808,7 +4129,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-03"
+   "asOf": "2026-11-04"
   },
   {
    "t": "MTUM",
@@ -3819,7 +4140,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-03"
+   "asOf": "2026-11-04"
   },
   {
    "t": "QUAL",
@@ -3830,7 +4151,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-03"
+   "asOf": "2026-11-04"
   },
   {
    "t": "SOXX",
@@ -3841,7 +4162,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-03"
+   "asOf": "2026-11-04"
   },
   {
    "t": "TOPS",
@@ -3852,7 +4173,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-03"
+   "asOf": "2026-11-04"
   },
   {
    "t": "MMT",
@@ -3863,7 +4184,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-03"
+   "asOf": "2026-11-04"
   },
   {
    "t": "EMBJ",
@@ -3874,7 +4195,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-03"
+   "asOf": "2026-11-04"
   },
   {
    "t": "SNDK",
@@ -3885,7 +4206,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-03"
+   "asOf": "2026-11-04"
   }
  ]
 }
