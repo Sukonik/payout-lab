@@ -34,5 +34,10 @@ if (more) {
   const after = await p.$$eval("#spLedger .sevents > li", (l) => l.length);
   check("Show more adds rows to the splits history", after > shownNow, `${shownNow} -> ${after}`);
 }
+await p.evaluate(() => { location.hash = "#/explore"; });
+await p.waitForSelector("#view-explore:not([hidden])");
+await p.waitForTimeout(300);
+const noTip = await p.$$eval("#view-explore td .sub", (l) => l.filter((e) => e.scrollWidth > e.clientWidth + 2 && !e.getAttribute("title")).length);
+check("explore: clipped company names carry the full name as a tooltip", noTip === 0, `${noTip} clipped without a title`);
 check("no page errors", errors.length === 0, errors.join("; "));
 await browser.close(); server.close(); done();
