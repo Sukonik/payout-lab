@@ -121,6 +121,14 @@
    "n": "AST SpaceMobile",
    "type": "EQUITY_STANDARD"
   },
+  "ATI": {
+   "n": "ATI Inc.",
+   "type": "EQUITY_STANDARD"
+  },
+  "AU": {
+   "n": "AngloGold Ashanti",
+   "type": "ADR_VARIABLE"
+  },
   "AVDE": {
    "n": "Avantis International Equity",
    "type": "ETF_PASS_THROUGH"
@@ -265,6 +273,10 @@
    "n": "Webull",
    "type": "EQUITY_STANDARD"
   },
+  "BURL": {
+   "n": "Burlington Stores",
+   "type": "EQUITY_STANDARD"
+  },
   "CAG": {
    "n": "Conagra Brands",
    "type": "EQUITY_STANDARD"
@@ -279,6 +291,10 @@
   },
   "CELH": {
    "n": "Celsius Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "CHRD": {
+   "n": "Chord Energy",
    "type": "EQUITY_STANDARD"
   },
   "CHWY": {
@@ -305,12 +321,20 @@
    "n": "CleanSpark",
    "type": "EQUITY_STANDARD"
   },
+  "CMC": {
+   "n": "Commercial Metals",
+   "type": "EQUITY_STANDARD"
+  },
   "CMF": {
    "n": "iShares California Muni Bond",
    "type": "ETF_PASS_THROUGH"
   },
   "COHR": {
    "n": "Coherent",
+   "type": "EQUITY_STANDARD"
+  },
+  "COLM": {
+   "n": "Columbia Sportswear",
    "type": "EQUITY_STANDARD"
   },
   "CONY": {
@@ -392,6 +416,10 @@
   "DBO": {
    "n": "Invesco DB Oil",
    "type": "ETF_PASS_THROUGH"
+  },
+  "DBX": {
+   "n": "Dropbox",
+   "type": "EQUITY_STANDARD"
   },
   "DECK": {
    "n": "Deckers Outdoor",
@@ -661,6 +689,10 @@
    "n": "iShares MSCI Brazil",
    "type": "ETF_PASS_THROUGH"
   },
+  "EXI": {
+   "n": "iShares Global Industrials ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "EZA": {
    "n": "iShares MSCI South Africa",
    "type": "ETF_PASS_THROUGH"
@@ -781,6 +813,10 @@
    "n": "MicroSectors FANG+ 3X Leveraged ETN",
    "type": "ETF_PASS_THROUGH"
   },
+  "FNV": {
+   "n": "Franco-Nevada",
+   "type": "EQUITY_STANDARD"
+  },
   "FPX": {
    "n": "First Trust US Equity Opportunities",
    "type": "ETF_PASS_THROUGH"
@@ -832,6 +868,10 @@
   "GDXJ": {
    "n": "VanEck Junior Gold Miners",
    "type": "ETF_PASS_THROUGH"
+  },
+  "GFI": {
+   "n": "Gold Fields",
+   "type": "ADR_VARIABLE"
   },
   "GLD": {
    "n": "SPDR Gold Shares",
@@ -1165,6 +1205,26 @@
    "n": "iShares Russell Top 200 Growth",
    "type": "ETF_PASS_THROUGH"
   },
+  "IXC": {
+   "n": "iShares Global Energy ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IXG": {
+   "n": "iShares Global Financials ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IXJ": {
+   "n": "iShares Global Healthcare ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IXN": {
+   "n": "iShares Global Tech ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IXP": {
+   "n": "iShares Global Comm Services ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "IXUS": {
    "n": "iShares Core MSCI Total International Stock",
    "type": "ETF_PASS_THROUGH"
@@ -1245,6 +1305,10 @@
    "n": "Nordstrom",
    "type": "EQUITY_STANDARD"
   },
+  "JXI": {
+   "n": "iShares Global Utilities ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "KBE": {
    "n": "SPDR S&P Bank",
    "type": "ETF_PASS_THROUGH"
@@ -1275,6 +1339,10 @@
   },
   "KWEB": {
    "n": "KraneShares CSI China Internet",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "KXI": {
+   "n": "iShares Global Consumer Staples ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "LABU": {
@@ -1361,6 +1429,10 @@
    "n": "Vanguard Mega Cap Value",
    "type": "ETF_PASS_THROUGH"
   },
+  "MGY": {
+   "n": "Magnolia Oil & Gas",
+   "type": "EQUITY_STANDARD"
+  },
   "MINT": {
    "n": "PIMCO Enhanced Short Maturity Active",
    "type": "ETF_PASS_THROUGH"
@@ -1401,6 +1473,10 @@
    "n": "iShares National Muni Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "MXI": {
+   "n": "iShares Global Materials ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "NBIS": {
    "n": "Nebius Group",
    "type": "EQUITY_STANDARD"
@@ -1428,6 +1504,10 @@
   "NLR": {
    "n": "VanEck Uranium and Nuclear",
    "type": "ETF_PASS_THROUGH"
+  },
+  "NOG": {
+   "n": "Northern Oil and Gas",
+   "type": "EQUITY_STANDARD"
   },
   "NRDS": {
    "n": "NerdWallet",
@@ -1669,6 +1749,10 @@
    "n": "iShares Residential and Multisector Real Estate",
    "type": "ETF_PASS_THROUGH"
   },
+  "RGLD": {
+   "n": "Royal Gold",
+   "type": "EQUITY_STANDARD"
+  },
   "RGTI": {
    "n": "Rigetti Computing",
    "type": "EQUITY_STANDARD"
@@ -1701,6 +1785,10 @@
    "n": "Roku",
    "type": "EQUITY_STANDARD"
   },
+  "RS": {
+   "n": "Reliance Steel & Aluminum",
+   "type": "EQUITY_STANDARD"
+  },
   "RSP": {
    "n": "Invesco S&P 500 Equal Weight",
    "type": "ETF_PASS_THROUGH"
@@ -1711,6 +1799,10 @@
   },
   "RWX": {
    "n": "SPDR Dow Jones International Real Estate",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RXI": {
+   "n": "iShares Global Consumer Discretionary ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "SAP": {
@@ -1860,6 +1952,10 @@
   "SLY": {
    "n": "SPDR S&P 600 Small Cap",
    "type": "ETF_PASS_THROUGH"
+  },
+  "SM": {
+   "n": "SM Energy",
+   "type": "EQUITY_STANDARD"
   },
   "SMH": {
    "n": "VanEck Semiconductor",
@@ -2399,6 +2495,10 @@
   },
   "WMG": {
    "n": "Warner Music Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "WPM": {
+   "n": "Wheaton Precious Metals",
    "type": "EQUITY_STANDARD"
   },
   "XAR": {
