@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-11-04T11:32:43.576Z",
- "upcomingAsOf": "2026-11-04",
+ "updated": "2026-11-05T11:28:43.856Z",
+ "upcomingAsOf": "2026-11-05",
  "tickers": {
   "A": {
    "n": "Agilent Technologies",
@@ -1243,6 +1243,11 @@
    ],
    "u": "2026-10-21"
   },
+  "DIS": {
+   "n": "Walt Disney Company (The)",
+   "s": [],
+   "u": "2026-11-05"
+  },
   "DLR": {
    "n": "Digital Realty",
    "s": [],
@@ -2206,6 +2211,11 @@
    "n": "Illinois Tool Works",
    "s": [],
    "u": "2026-10-27"
+  },
+  "IVV": {
+   "n": "iShares Core S&P 500 ETF",
+   "s": [],
+   "u": "2026-11-05"
   },
   "IVZ": {
    "n": "Invesco",
@@ -3255,6 +3265,11 @@
    "s": [],
    "u": "2026-11-02"
   },
+  "QQQ": {
+   "n": "Invesco QQQ Trust",
+   "s": [],
+   "u": "2026-11-05"
+  },
   "RCL": {
    "n": "Royal Caribbean Group",
    "s": [],
@@ -3544,6 +3559,11 @@
    "n": "S&P Global",
    "s": [],
    "u": "2026-11-03"
+  },
+  "SPY": {
+   "n": "SPDR S&P 500 ETF Trust",
+   "s": [],
+   "u": "2026-11-05"
   },
   "SPYD": {
    "n": "SPDR Portfolio S&P 500 High Dividend ETF",
@@ -3960,6 +3980,11 @@
    ],
    "u": "2026-11-04"
   },
+  "VEA": {
+   "n": "Vanguard FTSE Developed Markets ETF",
+   "s": [],
+   "u": "2026-11-05"
+  },
   "VEEV": {
    "n": "Veeva Systems",
    "s": [],
@@ -3995,6 +4020,21 @@
    "s": [],
    "u": "2026-11-04"
   },
+  "VOO": {
+   "n": "Vanguard S&P 500 ETF",
+   "s": [
+    {
+     "d": "2013-10-24",
+     "a": 1,
+     "b": 2,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 79.97,
+     "post": 160.46
+    }
+   ],
+   "u": "2026-11-05"
+  },
   "VRSK": {
    "n": "Verisk Analytics",
    "s": [],
@@ -4020,6 +4060,11 @@
    "s": [],
    "u": "2026-11-04"
   },
+  "VTI": {
+   "n": "Vanguard Total Stock Market ETF",
+   "s": [],
+   "u": "2026-11-05"
+  },
   "VTR": {
    "n": "Ventas",
    "s": [],
@@ -4029,6 +4074,36 @@
    "n": "Viatris",
    "s": [],
    "u": "2026-11-04"
+  },
+  "VTV": {
+   "n": "Vanguard Value ETF",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "VUG": {
+   "n": "Vanguard Growth ETF",
+   "s": [
+    {
+     "d": "2026-04-21",
+     "a": 6,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 492.58,
+     "post": 81.5
+    }
+   ],
+   "u": "2026-11-05"
+  },
+  "VWO": {
+   "n": "Vanguard FTSE Emerging Markets ETF",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "VXUS": {
+   "n": "Vanguard Total International Stock ETF",
+   "s": [],
+   "u": "2026-11-05"
   },
   "VYM": {
    "n": "Vanguard High Dividend Yield ETF",
@@ -4040,6 +4115,76 @@
    "s": [],
    "u": "2026-10-15"
   },
+  "WAB": {
+   "n": "Wabtec",
+   "s": [
+    {
+     "d": "2013-06-12",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 109.91,
+     "post": 53.42
+    }
+   ],
+   "u": "2026-11-05"
+  },
+  "WAT": {
+   "n": "Waters Corporation",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "WBD": {
+   "n": "Warner Bros. Discovery",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "WDAY": {
+   "n": "Workday, Inc.",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "WDC": {
+   "n": "Western Digital",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "WEC": {
+   "n": "WEC Energy Group",
+   "s": [
+    {
+     "d": "2011-03-02",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 58.64,
+     "post": 29.08
+    }
+   ],
+   "u": "2026-11-05"
+  },
+  "WELL": {
+   "n": "Welltower",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "WFC": {
+   "n": "Wells Fargo",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "WM": {
+   "n": "Waste Management",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "WMB": {
+   "n": "Williams Companies",
+   "s": [],
+   "u": "2026-11-05"
+  },
   "WMT": {
    "n": "Walmart",
    "s": [
@@ -4047,11 +4192,13 @@
      "d": "2024-02-26",
      "a": 3,
      "b": 1,
-     "src": "public record, not yet cross-checked",
-     "ver": 0
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 175.56,
+     "post": 59.6
     }
    ],
-   "u": null
+   "u": "2026-11-05"
   },
   "WRB": {
    "n": "W. R. Berkley Corporation",
@@ -4086,15 +4233,90 @@
    ],
    "u": "2026-11-04"
   },
+  "WSM": {
+   "n": "Williams-Sonoma, Inc.",
+   "s": [
+    {
+     "d": "2024-07-09",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 285.18,
+     "post": 142.22
+    }
+   ],
+   "u": "2026-11-05"
+  },
+  "WST": {
+   "n": "West Pharmaceutical Services",
+   "s": [
+    {
+     "d": "2013-09-27",
+     "a": 2,
+     "b": 1,
+     "src": "Tiingo",
+     "ver": 1,
+     "pre": 81.2,
+     "post": 40.93
+    }
+   ],
+   "u": "2026-11-05"
+  },
+  "WTW": {
+   "n": "Willis Towers Watson",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "WY": {
+   "n": "Weyerhaeuser",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "WYNN": {
+   "n": "Wynn Resorts",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "XEL": {
+   "n": "Xcel Energy",
+   "s": [],
+   "u": "2026-11-05"
+  },
   "XOM": {
    "n": "Exxon Mobil",
    "s": [],
    "u": "2026-10-15"
   },
+  "XYL": {
+   "n": "Xylem Inc.",
+   "s": [],
+   "u": "2026-11-05"
+  },
   "XYZ": {
    "n": "Block, Inc.",
    "s": [],
    "u": "2026-10-19"
+  },
+  "YUM": {
+   "n": "Yum! Brands",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "ZBH": {
+   "n": "Zimmer Biomet",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "ZBRA": {
+   "n": "Zebra Technologies",
+   "s": [],
+   "u": "2026-11-05"
+  },
+  "ZTS": {
+   "n": "Zoetis",
+   "s": [],
+   "u": "2026-11-05"
   }
  },
  "upcoming": [
@@ -4107,7 +4329,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-04"
+   "asOf": "2026-11-05"
   },
   {
    "t": "EFV",
@@ -4118,7 +4340,29 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-04"
+   "asOf": "2026-11-05"
+  },
+  {
+   "t": "EZGO",
+   "n": "EZGO Technologies Ltd.",
+   "a": 1,
+   "b": 3,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-05"
+  },
+  {
+   "t": "INM",
+   "n": "InMed Pharmaceuticals Inc.",
+   "a": 1,
+   "b": 10,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-05"
   },
   {
    "t": "ITA",
@@ -4129,7 +4373,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-04"
+   "asOf": "2026-11-05"
   },
   {
    "t": "MTUM",
@@ -4140,7 +4384,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-04"
+   "asOf": "2026-11-05"
   },
   {
    "t": "QUAL",
@@ -4151,7 +4395,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-04"
+   "asOf": "2026-11-05"
   },
   {
    "t": "SOXX",
@@ -4162,7 +4406,18 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-04"
+   "asOf": "2026-11-05"
+  },
+  {
+   "t": "XXII",
+   "n": "22nd Century Group, Inc",
+   "a": 1,
+   "b": 58,
+   "exDate": "2026-11-05",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-05"
   },
   {
    "t": "TOPS",
@@ -4173,7 +4428,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-04"
+   "asOf": "2026-11-05"
   },
   {
    "t": "MMT",
@@ -4184,7 +4439,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-04"
+   "asOf": "2026-11-05"
   },
   {
    "t": "EMBJ",
@@ -4195,7 +4450,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-04"
+   "asOf": "2026-11-05"
   },
   {
    "t": "SNDK",
@@ -4206,7 +4461,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-04"
+   "asOf": "2026-11-05"
   }
  ]
 }
