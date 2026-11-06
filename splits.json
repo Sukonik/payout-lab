@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-11-05T11:28:43.856Z",
- "upcomingAsOf": "2026-11-05",
+ "updated": "2026-11-06T11:27:25.761Z",
+ "upcomingAsOf": "2026-11-06",
  "tickers": {
   "A": {
    "n": "Agilent Technologies",
@@ -4317,107 +4317,126 @@
    "n": "Zoetis",
    "s": [],
    "u": "2026-11-05"
+  },
+  "ITA": {
+   "n": "iShares U.S. Aerospace & Defense ETF",
+   "s": [
+    {
+     "d": "2026-11-05",
+     "a": 3,
+     "b": 1,
+     "src": "Nasdaq calendar",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "MTUM": {
+   "n": "iShares MSCI USA Momentum Factor ETF",
+   "s": [
+    {
+     "d": "2026-11-05",
+     "a": 4,
+     "b": 1,
+     "src": "Nasdaq calendar",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "QUAL": {
+   "n": "iShares MSCI USA Quality Factor ETF",
+   "s": [
+    {
+     "d": "2026-11-05",
+     "a": 4,
+     "b": 1,
+     "src": "Nasdaq calendar",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "SOXX": {
+   "n": "iShares PHLX SOX Semiconductor Sector Index Fund",
+   "s": [
+    {
+     "d": "2026-11-05",
+     "a": 3,
+     "b": 1,
+     "src": "Nasdaq calendar",
+     "ver": 0
+    }
+   ],
+   "u": null
   }
  },
  "upcoming": [
   {
-   "t": "EFG",
-   "n": "iShares MSCI EAFE Growth ETF",
-   "a": 3,
-   "b": 1,
-   "exDate": "2026-11-05",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-05"
-  },
-  {
-   "t": "EFV",
-   "n": "iShares MSCI EAFE Value ETF",
-   "a": 2,
-   "b": 1,
-   "exDate": "2026-11-05",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-05"
-  },
-  {
-   "t": "EZGO",
-   "n": "EZGO Technologies Ltd.",
+   "t": "AIIO",
+   "n": "Robo.ai Inc.",
    "a": 1,
-   "b": 3,
-   "exDate": "2026-11-05",
+   "b": 25,
+   "exDate": "2026-11-06",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-05"
+   "asOf": "2026-11-06"
   },
   {
-   "t": "INM",
-   "n": "InMed Pharmaceuticals Inc.",
+   "t": "CDT",
+   "n": "CDT Equity Inc.",
+   "a": 1,
+   "b": 20,
+   "exDate": "2026-11-06",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "JSPR",
+   "n": "Jasper Therapeutics, Inc.",
+   "a": 1,
+   "b": 30,
+   "exDate": "2026-11-06",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "NEXR",
+   "n": "Nexera Technologies Ltd",
+   "a": 1,
+   "b": 8,
+   "exDate": "2026-11-06",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "NWGL",
+   "n": "CL Workshop Group Limited",
+   "a": 1,
+   "b": 80,
+   "exDate": "2026-11-06",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "ONCO",
+   "n": "Onconetix, Inc.",
    "a": 1,
    "b": 10,
-   "exDate": "2026-11-05",
+   "exDate": "2026-11-06",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-05"
-  },
-  {
-   "t": "ITA",
-   "n": "iShares U.S. Aerospace & Defense ETF",
-   "a": 3,
-   "b": 1,
-   "exDate": "2026-11-05",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-05"
-  },
-  {
-   "t": "MTUM",
-   "n": "iShares MSCI USA Momentum Factor ETF",
-   "a": 4,
-   "b": 1,
-   "exDate": "2026-11-05",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-05"
-  },
-  {
-   "t": "QUAL",
-   "n": "iShares MSCI USA Quality Factor ETF",
-   "a": 4,
-   "b": 1,
-   "exDate": "2026-11-05",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-05"
-  },
-  {
-   "t": "SOXX",
-   "n": "iShares PHLX SOX Semiconductor Sector Index Fund",
-   "a": 3,
-   "b": 1,
-   "exDate": "2026-11-05",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-05"
-  },
-  {
-   "t": "XXII",
-   "n": "22nd Century Group, Inc",
-   "a": 1,
-   "b": 58,
-   "exDate": "2026-11-05",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-05"
+   "asOf": "2026-11-06"
   },
   {
    "t": "TOPS",
@@ -4428,7 +4447,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-05"
+   "asOf": "2026-11-06"
   },
   {
    "t": "MMT",
@@ -4439,7 +4458,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-05"
+   "asOf": "2026-11-06"
   },
   {
    "t": "EMBJ",
@@ -4450,7 +4469,161 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-05"
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "BITI",
+   "n": "ProShares Short Bitcoin ETF",
+   "a": 1,
+   "b": 2,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "BITO",
+   "n": "ProShares Bitcoin ETF",
+   "a": 1,
+   "b": 2,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "DUG",
+   "n": "ProShares UltraShort Energy",
+   "a": 1,
+   "b": 2,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "DXD",
+   "n": "ProShares UltraShort Dow30",
+   "a": 1,
+   "b": 2,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "EET",
+   "n": "ProShares Ultra MSCI Emerging Markets",
+   "a": 3,
+   "b": 1,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "MZZ",
+   "n": "ProShares UltraShort MidCap400",
+   "a": 1,
+   "b": 4,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "QID",
+   "n": "ProShares UltraShort QQQ",
+   "a": 1,
+   "b": 4,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "REW",
+   "n": "ProShares UltraShort Technology",
+   "a": 1,
+   "b": 2,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "ROM",
+   "n": "ProShares Ultra Technology",
+   "a": 3,
+   "b": 1,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "RWM",
+   "n": "ProShares Short Russell2000",
+   "a": 1,
+   "b": 2,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "SMDD",
+   "n": "UltraPro Short MidCap400",
+   "a": 1,
+   "b": 2,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "SSG",
+   "n": "ProShares UltraShort Semiconductors",
+   "a": 1,
+   "b": 2,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "UBT",
+   "n": "ProShares Ultra 20+ Year Treasury",
+   "a": 1,
+   "b": 2,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
+  },
+  {
+   "t": "VIXM",
+   "n": "ProShares Trust VIX Mid-Term Futures ETF",
+   "a": 1,
+   "b": 2,
+   "exDate": "2026-11-19",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-06"
   },
   {
    "t": "SNDK",
@@ -4461,7 +4634,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-05"
+   "asOf": "2026-11-06"
   }
  ]
 }
