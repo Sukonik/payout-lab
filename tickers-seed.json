@@ -17,6 +17,10 @@
    "n": "iShares MSCI ACWI",
    "type": "ETF_PASS_THROUGH"
   },
+  "ACWV": {
+   "n": "iShares MSCI All Country World Min Vol Factor ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "ACWX": {
    "n": "iShares MSCI ACWI ex US",
    "type": "ETF_PASS_THROUGH"
@@ -72,6 +76,10 @@
   "ANTW": {
    "n": "Anthropic AI Lab Ecosystem ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "APLE": {
+   "n": "Apple Hospitality REIT",
+   "type": "EQUITY_STANDARD"
   },
   "APLY": {
    "n": "YieldMax AAPL Option Income Strategy",
@@ -257,6 +265,10 @@
    "n": "Global X Robotics and Artificial Intelligence",
    "type": "ETF_PASS_THROUGH"
   },
+  "BOX": {
+   "n": "Box Inc.",
+   "type": "EQUITY_STANDARD"
+  },
   "BROS": {
    "n": "Dutch Bros",
    "type": "EQUITY_STANDARD"
@@ -377,6 +389,10 @@
    "n": "Pacer US Cash Cows 100",
    "type": "ETF_PASS_THROUGH"
   },
+  "CPB": {
+   "n": "Campbell's Company",
+   "type": "EQUITY_STANDARD"
+  },
   "CPER": {
    "n": "United States Copper Index",
    "type": "ETF_PASS_THROUGH"
@@ -399,6 +415,10 @@
   },
   "CRWV": {
    "n": "CoreWeave",
+   "type": "EQUITY_STANDARD"
+  },
+  "CTRE": {
+   "n": "CareTrust REIT",
    "type": "EQUITY_STANDARD"
   },
   "CUBE": {
@@ -581,8 +601,16 @@
    "n": "iShares MSCI Emerging Markets",
    "type": "ETF_PASS_THROUGH"
   },
+  "EEMV": {
+   "n": "iShares MSCI Emerging Markets Min Vol Factor ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "EFA": {
    "n": "iShares MSCI EAFE",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EFAV": {
+   "n": "iShares MSCI EAFE Min Vol Factor ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "EIDO": {
@@ -813,6 +841,10 @@
    "n": "Fidelity MSCI Materials",
    "type": "ETF_PASS_THROUGH"
   },
+  "FN": {
+   "n": "Fabrinet",
+   "type": "EQUITY_STANDARD"
+  },
   "FNCL": {
    "n": "Fidelity MSCI Financials",
    "type": "ETF_PASS_THROUGH"
@@ -856,6 +888,10 @@
   "FREL": {
    "n": "Fidelity MSCI Real Estate",
    "type": "ETF_PASS_THROUGH"
+  },
+  "FROG": {
+   "n": "JFrog",
+   "type": "EQUITY_STANDARD"
   },
   "FSLR": {
    "n": "First Solar",
@@ -1085,12 +1121,24 @@
    "n": "iShares Core MSCI Emerging Markets",
    "type": "ETF_PASS_THROUGH"
   },
+  "IEUR": {
+   "n": "iShares Core MSCI Europe ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IEUS": {
+   "n": "iShares MSCI Europe Small-Cap ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "IEV": {
    "n": "iShares Europe",
    "type": "ETF_PASS_THROUGH"
   },
   "IFRA": {
    "n": "iShares US Infrastructure",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IGEB": {
+   "n": "iShares Investment Grade Bond Factor ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "IGF": {
@@ -1107,6 +1155,10 @@
   },
   "IGM": {
    "n": "iShares Expanded Tech Sector",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IGOV": {
+   "n": "iShares International Treasury Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "IGSB": {
@@ -1157,6 +1209,10 @@
    "n": "iShares Latin America 40",
    "type": "ETF_PASS_THROUGH"
   },
+  "ILTB": {
+   "n": "iShares Core 10+ Year USD Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "INDA": {
    "n": "iShares MSCI India",
    "type": "ETF_PASS_THROUGH"
@@ -1172,6 +1228,14 @@
   "IREN": {
    "n": "IREN",
    "type": "EQUITY_STANDARD"
+  },
+  "ISCF": {
+   "n": "iShares International Small-Cap Equity Factor ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ISTB": {
+   "n": "iShares Core 1-5 Year USD Bond ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "ITA": {
    "n": "iShares US Aerospace and Defense",
@@ -1341,6 +1405,10 @@
    "n": "US Global Jets",
    "type": "ETF_PASS_THROUGH"
   },
+  "JJSF": {
+   "n": "J&J Snack Foods",
+   "type": "EQUITY_STANDARD"
+  },
   "JNK": {
    "n": "SPDR Bloomberg High Yield Bond",
    "type": "ETF_PASS_THROUGH"
@@ -1436,6 +1504,10 @@
   "LQD": {
    "n": "iShares iBoxx Investment Grade Corporate Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "LSCC": {
+   "n": "Lattice Semiconductor",
+   "type": "EQUITY_STANDARD"
   },
   "LULU": {
    "n": "Lululemon Athletica",
@@ -1617,6 +1689,10 @@
    "n": "iShares S&P 100",
    "type": "ETF_PASS_THROUGH"
   },
+  "OHI": {
+   "n": "Omega Healthcare Investors",
+   "type": "EQUITY_STANDARD"
+  },
   "OIH": {
    "n": "VanEck Oil Services",
    "type": "ETF_PASS_THROUGH"
@@ -1689,6 +1765,10 @@
    "n": "PDD Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "PEGA": {
+   "n": "Pegasystems",
+   "type": "EQUITY_STANDARD"
+  },
   "PEJ": {
    "n": "Invesco Leisure and Entertainment ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1717,8 +1797,16 @@
    "n": "Pinterest",
    "type": "EQUITY_STANDARD"
   },
+  "PK": {
+   "n": "Park Hotels & Resorts",
+   "type": "EQUITY_STANDARD"
+  },
   "POOL": {
    "n": "Pool Corporation",
+   "type": "EQUITY_STANDARD"
+  },
+  "POST": {
+   "n": "Post Holdings",
    "type": "EQUITY_STANDARD"
   },
   "PPA": {
@@ -1760,6 +1848,10 @@
   "QLD": {
    "n": "ProShares Ultra QQQ",
    "type": "ETF_PASS_THROUGH"
+  },
+  "QLYS": {
+   "n": "Qualys",
+   "type": "EQUITY_STANDARD"
   },
   "QQQE": {
    "n": "Direxion NASDAQ-100 Equal Weighted Index Shares",
@@ -2277,6 +2369,10 @@
    "n": "Direxion Daily Small Cap Bull 3X Shares",
    "type": "ETF_PASS_THROUGH"
   },
+  "TNL": {
+   "n": "Travel + Leisure Co.",
+   "type": "EQUITY_STANDARD"
+  },
   "TOTL": {
    "n": "SPDR DoubleLine Total Return Tactical",
    "type": "ETF_PASS_THROUGH"
@@ -2440,6 +2536,10 @@
   "VGSH": {
    "n": "Vanguard Short-Term Treasury",
    "type": "ETF_PASS_THROUGH"
+  },
+  "VIAV": {
+   "n": "Viavi Solutions",
+   "type": "EQUITY_STANDARD"
   },
   "VIGI": {
    "n": "Vanguard International Dividend Appreciation",
