@@ -45,6 +45,10 @@
    "n": "iShares Core US Aggregate Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "AGI": {
+   "n": "Alamos Gold",
+   "type": "EQUITY_STANDARD"
+  },
   "AIQ": {
    "n": "Global X Artificial Intelligence and Technology",
    "type": "ETF_PASS_THROUGH"
@@ -209,6 +213,10 @@
    "n": "SPDR Bloomberg 1-3 Month T-Bill",
    "type": "ETF_PASS_THROUGH"
   },
+  "BILL": {
+   "n": "BILL Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "BITB": {
    "n": "Bitwise Bitcoin",
    "type": "ETF_PASS_THROUGH"
@@ -329,6 +337,14 @@
    "n": "Ciena",
    "type": "EQUITY_STANDARD"
   },
+  "CIVI": {
+   "n": "Civitas Resources",
+   "type": "EQUITY_STANDARD"
+  },
+  "CLF": {
+   "n": "Cleveland-Cliffs",
+   "type": "EQUITY_STANDARD"
+  },
   "CLOU": {
    "n": "Global X Cloud Computing",
    "type": "ETF_PASS_THROUGH"
@@ -351,6 +367,10 @@
   },
   "COHR": {
    "n": "Coherent",
+   "type": "EQUITY_STANDARD"
+  },
+  "COKE": {
+   "n": "Coca-Cola Consolidated",
    "type": "EQUITY_STANDARD"
   },
   "COLD": {
@@ -612,6 +632,18 @@
   "EFAV": {
    "n": "iShares MSCI EAFE Min Vol Factor ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "EFG": {
+   "n": "iShares MSCI EAFE Growth ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EFV": {
+   "n": "iShares MSCI EAFE Value ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EGO": {
+   "n": "Eldorado Gold",
+   "type": "EQUITY_STANDARD"
   },
   "EIDO": {
    "n": "iShares MSCI Indonesia",
@@ -1029,12 +1061,20 @@
    "n": "Honda Motor",
    "type": "EQUITY_STANDARD"
   },
+  "HMY": {
+   "n": "Harmony Gold Mining",
+   "type": "ADR_VARIABLE"
+  },
   "HODL": {
    "n": "VanEck Bitcoin",
    "type": "ETF_PASS_THROUGH"
   },
   "HPQ": {
    "n": "HP",
+   "type": "EQUITY_STANDARD"
+  },
+  "HRB": {
+   "n": "H&R Block",
    "type": "EQUITY_STANDARD"
   },
   "HUBS": {
@@ -1109,6 +1149,10 @@
    "n": "iShares Self-Driving EV and Tech",
    "type": "ETF_PASS_THROUGH"
   },
+  "IDU": {
+   "n": "iShares U.S. Utilities ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "IEF": {
    "n": "iShares 7-10 Year Treasury Bond",
    "type": "ETF_PASS_THROUGH"
@@ -1121,6 +1165,10 @@
    "n": "iShares Core MSCI Emerging Markets",
    "type": "ETF_PASS_THROUGH"
   },
+  "IEO": {
+   "n": "iShares U.S. Oil & Gas Exploration & Production ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "IEUR": {
    "n": "iShares Core MSCI Europe ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1131,6 +1179,10 @@
   },
   "IEV": {
    "n": "iShares Europe",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IEZ": {
+   "n": "iShares U.S. Oil Equipment & Services ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "IFRA": {
@@ -1171,6 +1223,10 @@
   },
   "IHAK": {
    "n": "iShares Cybersecurity and Tech",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IHE": {
+   "n": "iShares U.S. Pharmaceuticals ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "IHF": {
@@ -1233,6 +1289,10 @@
    "n": "iShares International Small-Cap Equity Factor ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "ISCG": {
+   "n": "iShares Morningstar Small-Cap Growth ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "ISTB": {
    "n": "iShares Core 1-5 Year USD Bond ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1261,8 +1321,16 @@
    "n": "iShares Core S&P US Value",
    "type": "ETF_PASS_THROUGH"
   },
+  "IVOG": {
+   "n": "Vanguard S&P Mid-Cap 400 Growth ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "IVOO": {
    "n": "Vanguard S&P Mid-Cap 400",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IVOV": {
+   "n": "Vanguard S&P Mid-Cap 400 Value ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "IVV": {
@@ -1589,6 +1657,10 @@
    "n": "VanEck Mortgage REIT Income",
    "type": "ETF_PASS_THROUGH"
   },
+  "MP": {
+   "n": "MP Materials",
+   "type": "EQUITY_STANDARD"
+  },
   "MSTR": {
    "n": "Strategy",
    "type": "EQUITY_STANDARD"
@@ -1596,6 +1668,10 @@
   "MSTY": {
    "n": "YieldMax MSTR Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
+  },
+  "MTDR": {
+   "n": "Matador Resources",
+   "type": "EQUITY_STANDARD"
   },
   "MTUM": {
    "n": "iShares MSCI USA Momentum Factor",
@@ -1725,6 +1801,10 @@
    "n": "Opera",
    "type": "EQUITY_STANDARD"
   },
+  "OR": {
+   "n": "OR Royalties",
+   "type": "EQUITY_STANDARD"
+  },
   "ORBT": {
    "n": "Tema Space and Satellite",
    "type": "ETF_PASS_THROUGH"
@@ -1744,6 +1824,10 @@
   "PAVE": {
    "n": "Global X US Infrastructure Development",
    "type": "ETF_PASS_THROUGH"
+  },
+  "PAYC": {
+   "n": "Paycom Software",
+   "type": "EQUITY_STANDARD"
   },
   "PBJ": {
    "n": "Invesco Food & Beverage ETF",
@@ -2037,6 +2121,10 @@
    "n": "Schwab US Aggregate Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "SCI": {
+   "n": "Service Corporation International",
+   "type": "EQUITY_STANDARD"
+  },
   "SCZ": {
    "n": "iShares MSCI EAFE Small-Cap",
    "type": "ETF_PASS_THROUGH"
@@ -2233,6 +2321,10 @@
    "n": "SPDR Portfolio S&P 400 Mid Cap",
    "type": "ETF_PASS_THROUGH"
   },
+  "SPMO": {
+   "n": "Invesco S&P 500 Momentum ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "SPOT": {
    "n": "Spotify",
    "type": "EQUITY_STANDARD"
@@ -2332,6 +2424,10 @@
   "TECL": {
    "n": "Direxion Daily Technology Bull 3X Shares",
    "type": "ETF_PASS_THROUGH"
+  },
+  "TENB": {
+   "n": "Tenable Holdings",
+   "type": "EQUITY_STANDARD"
   },
   "TER": {
    "n": "Teradyne",
@@ -2680,6 +2776,10 @@
   "WEBS": {
    "n": "Direxion Daily Dow Jones Internet Bear 3X Shares",
    "type": "ETF_PASS_THROUGH"
+  },
+  "WFRD": {
+   "n": "Weatherford International",
+   "type": "EQUITY_STANDARD"
   },
   "WH": {
    "n": "Wyndham Hotels & Resorts",
