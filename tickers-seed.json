@@ -9,6 +9,10 @@
    "n": "Goldman Sachs Physical Gold",
    "type": "ETF_PASS_THROUGH"
   },
+  "AAP": {
+   "n": "Advance Auto Parts",
+   "type": "EQUITY_STANDARD"
+  },
   "AAXJ": {
    "n": "iShares MSCI All Country Asia ex Japan ETF",
    "type": "ETF_PASS_THROUGH"
@@ -55,6 +59,10 @@
   },
   "ALAB": {
    "n": "Astera Labs",
+   "type": "EQUITY_STANDARD"
+  },
+  "AMH": {
+   "n": "American Homes 4 Rent",
    "type": "EQUITY_STANDARD"
   },
   "AMLP": {
@@ -241,6 +249,10 @@
    "n": "Invesco Senior Loan",
    "type": "ETF_PASS_THROUGH"
   },
+  "BLDR": {
+   "n": "Builders FirstSource",
+   "type": "EQUITY_STANDARD"
+  },
   "BLOK": {
    "n": "Amplify Transformational Data Sharing",
    "type": "ETF_PASS_THROUGH"
@@ -284,6 +296,10 @@
   "BRRR": {
    "n": "Coinshares Valkyrie Bitcoin",
    "type": "ETF_PASS_THROUGH"
+  },
+  "BRX": {
+   "n": "Brixmor Property Group",
+   "type": "EQUITY_STANDARD"
   },
   "BSV": {
    "n": "Vanguard Short-Term Bond",
@@ -989,6 +1005,10 @@
    "n": "Corning",
    "type": "EQUITY_STANDARD"
   },
+  "GNMA": {
+   "n": "iShares GNMA Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "GOOY": {
    "n": "YieldMax GOOGL Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
@@ -1073,6 +1093,10 @@
    "n": "HP",
    "type": "EQUITY_STANDARD"
   },
+  "HR": {
+   "n": "Healthcare Realty Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "HRB": {
    "n": "H&R Block",
    "type": "EQUITY_STANDARD"
@@ -1123,6 +1147,10 @@
   },
   "IBIT": {
    "n": "iShares Bitcoin Trust",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IBND": {
+   "n": "SPDR Bloomberg International Corporate Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "ICF": {
@@ -1187,6 +1215,10 @@
   },
   "IFRA": {
    "n": "iShares US Infrastructure",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IGE": {
+   "n": "iShares North American Natural Resources ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "IGEB": {
@@ -1269,6 +1301,10 @@
    "n": "iShares Core 10+ Year USD Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "IMTM": {
+   "n": "iShares MSCI Intl Momentum Factor ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "INDA": {
    "n": "iShares MSCI India",
    "type": "ETF_PASS_THROUGH"
@@ -1280,6 +1316,10 @@
   "IONQ": {
    "n": "IonQ",
    "type": "EQUITY_STANDARD"
+  },
+  "IQLT": {
+   "n": "iShares MSCI Intl Quality Factor ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "IREN": {
    "n": "IREN",
@@ -1293,6 +1333,10 @@
    "n": "iShares Morningstar Small-Cap Growth ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "ISCV": {
+   "n": "iShares Morningstar Small-Cap Value ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "ISTB": {
    "n": "iShares Core 1-5 Year USD Bond ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1303,6 +1347,10 @@
   },
   "ITB": {
    "n": "iShares US Home Construction",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ITM": {
+   "n": "VanEck Intermediate Muni ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "ITOT": {
@@ -1319,6 +1367,10 @@
   },
   "IUSV": {
    "n": "iShares Core S&P US Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IVLU": {
+   "n": "iShares MSCI Intl Value Factor ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "IVOG": {
@@ -1497,6 +1549,10 @@
    "n": "SPDR S&P Bank",
    "type": "ETF_PASS_THROUGH"
   },
+  "KBH": {
+   "n": "KB Home",
+   "type": "EQUITY_STANDARD"
+  },
   "KBWB": {
    "n": "Invesco KBW Bank",
    "type": "ETF_PASS_THROUGH"
@@ -1516,6 +1572,10 @@
   "KIE": {
    "n": "SPDR S&P Insurance",
    "type": "ETF_PASS_THROUGH"
+  },
+  "KMT": {
+   "n": "Kennametal",
+   "type": "EQUITY_STANDARD"
   },
   "KRE": {
    "n": "SPDR S&P Regional Banking",
@@ -1633,6 +1693,10 @@
    "n": "Magnolia Oil & Gas",
    "type": "EQUITY_STANDARD"
   },
+  "MHO": {
+   "n": "M/I Homes",
+   "type": "EQUITY_STANDARD"
+  },
   "MINT": {
    "n": "PIMCO Enhanced Short Maturity Active",
    "type": "ETF_PASS_THROUGH"
@@ -1673,6 +1737,10 @@
    "n": "Matador Resources",
    "type": "EQUITY_STANDARD"
   },
+  "MTH": {
+   "n": "Meritage Homes",
+   "type": "EQUITY_STANDARD"
+  },
   "MTUM": {
    "n": "iShares MSCI USA Momentum Factor",
    "type": "ETF_PASS_THROUGH"
@@ -1704,6 +1772,10 @@
   "NFRA": {
    "n": "FlexShares STOXX Global Broad Infrastructure",
    "type": "ETF_PASS_THROUGH"
+  },
+  "NHI": {
+   "n": "National Health Investors",
+   "type": "EQUITY_STANDARD"
   },
   "NIO": {
    "n": "NIO",
@@ -1760,6 +1832,10 @@
   "OARK": {
    "n": "YieldMax Innovation Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
+  },
+  "OC": {
+   "n": "Owens Corning",
+   "type": "EQUITY_STANDARD"
   },
   "OEF": {
    "n": "iShares S&P 100",
@@ -2189,6 +2265,10 @@
    "n": "Amplify Junior Silver Miners",
    "type": "ETF_PASS_THROUGH"
   },
+  "SITE": {
+   "n": "SiteOne Landscape Supply",
+   "type": "EQUITY_STANDARD"
+  },
   "SIVR": {
    "n": "abrdn Physical Silver Shares",
    "type": "ETF_PASS_THROUGH"
@@ -2216,6 +2296,10 @@
   "SM": {
    "n": "SM Energy",
    "type": "EQUITY_STANDARD"
+  },
+  "SMB": {
+   "n": "VanEck Short Muni ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "SMH": {
    "n": "VanEck Semiconductor",
@@ -2449,6 +2533,10 @@
    "n": "iShares TIPS Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "TKR": {
+   "n": "Timken",
+   "type": "EQUITY_STANDARD"
+  },
   "TLH": {
    "n": "iShares 10-20 Year Treasury Bond",
    "type": "ETF_PASS_THROUGH"
@@ -2469,6 +2557,10 @@
    "n": "Travel + Leisure Co.",
    "type": "EQUITY_STANDARD"
   },
+  "TOL": {
+   "n": "Toll Brothers",
+   "type": "EQUITY_STANDARD"
+  },
   "TOTL": {
    "n": "SPDR DoubleLine Total Return Tactical",
    "type": "ETF_PASS_THROUGH"
@@ -2476,6 +2568,10 @@
   "TQQQ": {
    "n": "ProShares UltraPro QQQ",
    "type": "ETF_PASS_THROUGH"
+  },
+  "TREX": {
+   "n": "Trex Company",
+   "type": "EQUITY_STANDARD"
   },
   "TRNO": {
    "n": "Terreno Realty",
@@ -2611,6 +2707,10 @@
   },
   "VDE": {
    "n": "Vanguard Energy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VEU": {
+   "n": "Vanguard FTSE All-World ex-US ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "VFH": {
