@@ -321,8 +321,16 @@
    "n": "Burlington Stores",
    "type": "EQUITY_STANDARD"
   },
+  "BWX": {
+   "n": "SPDR Bloomberg International Treasury Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "CAG": {
    "n": "Conagra Brands",
+   "type": "EQUITY_STANDARD"
+  },
+  "CARG": {
+   "n": "CarGurus",
    "type": "EQUITY_STANDARD"
   },
   "CAVA": {
@@ -335,6 +343,10 @@
   },
   "CELH": {
    "n": "Celsius Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "CHEF": {
+   "n": "Chefs' Warehouse",
    "type": "EQUITY_STANDARD"
   },
   "CHRD": {
@@ -372,6 +384,10 @@
   "CLSK": {
    "n": "CleanSpark",
    "type": "EQUITY_STANDARD"
+  },
+  "CMBS": {
+   "n": "iShares CMBS ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "CMC": {
    "n": "Commercial Metals",
@@ -629,6 +645,10 @@
    "n": "Global X E-commerce",
    "type": "ETF_PASS_THROUGH"
   },
+  "EBND": {
+   "n": "SPDR Bloomberg Emerging Markets Local Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "EDV": {
    "n": "Vanguard Extended Duration Treasury",
    "type": "ETF_PASS_THROUGH"
@@ -865,6 +885,10 @@
    "n": "Five Below",
    "type": "EQUITY_STANDARD"
   },
+  "FIVN": {
+   "n": "Five9",
+   "type": "EQUITY_STANDARD"
+  },
   "FIXD": {
    "n": "First Trust TCW Opportunistic Fixed Income",
    "type": "ETF_PASS_THROUGH"
@@ -883,6 +907,10 @@
   },
   "FLOT": {
    "n": "iShares Floating Rate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLRN": {
+   "n": "SPDR Bloomberg Investment Grade Floating Rate ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "FMAT": {
@@ -1109,8 +1137,16 @@
    "n": "VanEck High Yield Muni",
    "type": "ETF_PASS_THROUGH"
   },
+  "HYDB": {
+   "n": "iShares High Yield Bond Factor ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "HYG": {
    "n": "iShares iBoxx High Yield Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "HYGH": {
+   "n": "iShares Interest Rate Hedged High Yield Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "HYLB": {
@@ -1637,12 +1673,20 @@
    "n": "Lattice Semiconductor",
    "type": "EQUITY_STANDARD"
   },
+  "LTPZ": {
+   "n": "PIMCO 15+ Year U.S. TIPS Index ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "LULU": {
    "n": "Lululemon Athletica",
    "type": "EQUITY_STANDARD"
   },
   "LUNR": {
    "n": "Intuitive Machines",
+   "type": "EQUITY_STANDARD"
+  },
+  "LYFT": {
+   "n": "Lyft",
    "type": "EQUITY_STANDARD"
   },
   "M": {
@@ -1701,6 +1745,10 @@
    "n": "PIMCO Enhanced Short Maturity Active",
    "type": "ETF_PASS_THROUGH"
   },
+  "MKSI": {
+   "n": "MKS Inc.",
+   "type": "EQUITY_STANDARD"
+  },
   "MLPA": {
    "n": "Global X MLP",
    "type": "ETF_PASS_THROUGH"
@@ -1732,6 +1780,10 @@
   "MSTY": {
    "n": "YieldMax MSTR Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
+  },
+  "MTCH": {
+   "n": "Match Group",
+   "type": "EQUITY_STANDARD"
   },
   "MTDR": {
    "n": "Matador Resources",
@@ -1913,6 +1965,10 @@
    "n": "Invesco WilderHill Clean Energy",
    "type": "ETF_PASS_THROUGH"
   },
+  "PCOR": {
+   "n": "Procore Technologies",
+   "type": "EQUITY_STANDARD"
+  },
   "PCY": {
    "n": "Invesco Emerging Markets Sovereign Debt",
    "type": "ETF_PASS_THROUGH"
@@ -1944,6 +2000,10 @@
   "PFFD": {
    "n": "Global X US Preferred",
    "type": "ETF_PASS_THROUGH"
+  },
+  "PFGC": {
+   "n": "Performance Food Group",
+   "type": "EQUITY_STANDARD"
   },
   "PGX": {
    "n": "Invesco Preferred",
@@ -1991,6 +2051,10 @@
   },
   "PSTG": {
    "n": "Pure Storage",
+   "type": "EQUITY_STANDARD"
+  },
+  "PVH": {
+   "n": "PVH Corp.",
    "type": "EQUITY_STANDARD"
   },
   "QBTS": {
@@ -2137,6 +2201,10 @@
    "n": "iShares Global Consumer Discretionary ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "SANM": {
+   "n": "Sanmina",
+   "type": "EQUITY_STANDARD"
+  },
   "SAP": {
    "n": "SAP",
    "type": "EQUITY_STANDARD"
@@ -2200,6 +2268,10 @@
   "SCI": {
    "n": "Service Corporation International",
    "type": "EQUITY_STANDARD"
+  },
+  "SCMB": {
+   "n": "Schwab Municipal Bond ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "SCZ": {
    "n": "iShares MSCI EAFE Small-Cap",
@@ -2501,6 +2573,10 @@
    "n": "First Trust NASDAQ Technology Dividend",
    "type": "ETF_PASS_THROUGH"
   },
+  "TDTT": {
+   "n": "FlexShares iBoxx 3-Year Target Duration TIPS ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "TEAM": {
    "n": "Atlassian",
    "type": "EQUITY_STANDARD"
@@ -2573,6 +2649,10 @@
    "n": "Trex Company",
    "type": "EQUITY_STANDARD"
   },
+  "TRIP": {
+   "n": "Tripadvisor",
+   "type": "EQUITY_STANDARD"
+  },
   "TRNO": {
    "n": "Terreno Realty",
    "type": "EQUITY_STANDARD"
@@ -2640,6 +2720,10 @@
   "URNM": {
    "n": "Sprott Uranium Miners",
    "type": "ETF_PASS_THROUGH"
+  },
+  "USFD": {
+   "n": "US Foods",
+   "type": "EQUITY_STANDARD"
   },
   "USFR": {
    "n": "WisdomTree Floating Rate Treasury",
@@ -2889,6 +2973,10 @@
    "n": "Wingstop",
    "type": "EQUITY_STANDARD"
   },
+  "WIP": {
+   "n": "SPDR FTSE International Government Inflation-Protected Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "WIX": {
    "n": "Wix.com",
    "type": "EQUITY_STANDARD"
@@ -2973,6 +3061,10 @@
    "n": "SPDR S&P Telecom",
    "type": "ETF_PASS_THROUGH"
   },
+  "YELP": {
+   "n": "Yelp",
+   "type": "EQUITY_STANDARD"
+  },
   "YEXT": {
    "n": "Yext",
    "type": "EQUITY_STANDARD"
@@ -2984,6 +3076,14 @@
   "YMAX": {
    "n": "YieldMax Universe Fund of Option Income ETFs",
    "type": "ETF_PASS_THROUGH"
+  },
+  "Z": {
+   "n": "Zillow Group (Class C)",
+   "type": "EQUITY_STANDARD"
+  },
+  "ZG": {
+   "n": "Zillow Group (Class A)",
+   "type": "EQUITY_STANDARD"
   },
   "ZM": {
    "n": "Zoom Communications",
