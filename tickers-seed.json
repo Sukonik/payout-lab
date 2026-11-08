@@ -61,8 +61,20 @@
    "n": "Astera Labs",
    "type": "EQUITY_STANDARD"
   },
+  "ALGM": {
+   "n": "Allegro MicroSystems",
+   "type": "EQUITY_STANDARD"
+  },
+  "AMBA": {
+   "n": "Ambarella",
+   "type": "EQUITY_STANDARD"
+  },
   "AMH": {
    "n": "American Homes 4 Rent",
+   "type": "EQUITY_STANDARD"
+  },
+  "AMKR": {
+   "n": "Amkor Technology",
    "type": "EQUITY_STANDARD"
   },
   "AMLP": {
@@ -191,6 +203,10 @@
   },
   "BAR": {
    "n": "GraniteShares Gold Trust",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BATT": {
+   "n": "Amplify Lithium & Battery Technology ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "BBCA": {
@@ -327,6 +343,14 @@
   },
   "CAG": {
    "n": "Conagra Brands",
+   "type": "EQUITY_STANDARD"
+  },
+  "CALX": {
+   "n": "Calix",
+   "type": "EQUITY_STANDARD"
+  },
+  "CAMT": {
+   "n": "Camtek",
    "type": "EQUITY_STANDARD"
   },
   "CARG": {
@@ -581,6 +605,10 @@
    "n": "SPDR Dow Jones Industrial Average",
    "type": "ETF_PASS_THROUGH"
   },
+  "DIOD": {
+   "n": "Diodes Inc.",
+   "type": "EQUITY_STANDARD"
+  },
   "DIV": {
    "n": "Global X SuperDividend US",
    "type": "ETF_PASS_THROUGH"
@@ -813,6 +841,10 @@
    "n": "iShares Global Industrials ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "EXTR": {
+   "n": "Extreme Networks",
+   "type": "EQUITY_STANDARD"
+  },
   "EZA": {
    "n": "iShares MSCI South Africa",
    "type": "ETF_PASS_THROUGH"
@@ -949,6 +981,10 @@
    "n": "Franco-Nevada",
    "type": "EQUITY_STANDARD"
   },
+  "FORM": {
+   "n": "FormFactor",
+   "type": "EQUITY_STANDARD"
+  },
   "FPE": {
    "n": "First Trust Preferred Securities and Income ETF",
    "type": "ETF_PASS_THROUGH"
@@ -983,6 +1019,10 @@
   },
   "FTEC": {
    "n": "Fidelity MSCI Information Technology",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FTHI": {
+   "n": "First Trust BuyWrite Income ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "FUTY": {
@@ -1028,6 +1068,10 @@
   "GLPI": {
    "n": "Gaming and Leisure Properties",
    "type": "EQUITY_STANDARD"
+  },
+  "GLTR": {
+   "n": "abrdn Physical Precious Metals Basket Shares ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "GLW": {
    "n": "Corning",
@@ -1151,6 +1195,10 @@
   },
   "HYLB": {
    "n": "Xtrackers USD High Yield Corporate Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "HYS": {
+   "n": "PIMCO 0-5 Year High Yield Corporate Bond Index ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "IAGG": {
@@ -1281,6 +1329,10 @@
    "n": "iShares International Treasury Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "IGPT": {
+   "n": "Invesco AI and Next Gen Software ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "IGSB": {
    "n": "iShares 1-5 Year Investment Grade Corporate Bond",
    "type": "ETF_PASS_THROUGH"
@@ -1351,6 +1403,14 @@
   },
   "IONQ": {
    "n": "IonQ",
+   "type": "EQUITY_STANDARD"
+  },
+  "IPAY": {
+   "n": "Amplify Digital Payments ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IPGP": {
+   "n": "IPG Photonics",
    "type": "EQUITY_STANDARD"
   },
   "IQLT": {
@@ -1793,6 +1853,10 @@
    "n": "Meritage Homes",
    "type": "EQUITY_STANDARD"
   },
+  "MTSI": {
+   "n": "MACOM Technology Solutions",
+   "type": "EQUITY_STANDARD"
+  },
   "MTUM": {
    "n": "iShares MSCI USA Momentum Factor",
    "type": "ETF_PASS_THROUGH"
@@ -1851,6 +1915,10 @@
   },
   "NTAP": {
    "n": "NetApp",
+   "type": "EQUITY_STANDARD"
+  },
+  "NTNX": {
+   "n": "Nutanix",
    "type": "EQUITY_STANDARD"
   },
   "NU": {
@@ -1937,6 +2005,10 @@
    "n": "Tema Space and Satellite",
    "type": "ETF_PASS_THROUGH"
   },
+  "OSIS": {
+   "n": "OSI Systems",
+   "type": "EQUITY_STANDARD"
+  },
   "PAAS": {
    "n": "Pan American Silver",
    "type": "EQUITY_STANDARD"
@@ -2005,6 +2077,10 @@
    "n": "Performance Food Group",
    "type": "EQUITY_STANDARD"
   },
+  "PFXF": {
+   "n": "VanEck Preferred Securities ex Financials ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "PGX": {
    "n": "Invesco Preferred",
    "type": "ETF_PASS_THROUGH"
@@ -2019,6 +2095,10 @@
   },
   "PK": {
    "n": "Park Hotels & Resorts",
+   "type": "EQUITY_STANDARD"
+  },
+  "PLXS": {
+   "n": "Plexus",
    "type": "EQUITY_STANDARD"
   },
   "POOL": {
@@ -2043,6 +2123,10 @@
   },
   "PSI": {
    "n": "Invesco Semiconductors",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PSK": {
+   "n": "SPDR ICE Preferred Securities ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "PSQ": {
@@ -2153,6 +2237,10 @@
    "n": "Ryman Hospitality Properties",
    "type": "EQUITY_STANDARD"
   },
+  "RINF": {
+   "n": "ProShares Inflation Expectations ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "RING": {
    "n": "iShares MSCI Global Gold Miners",
    "type": "ETF_PASS_THROUGH"
@@ -2167,6 +2255,10 @@
   },
   "RKLB": {
    "n": "Rocket Lab",
+   "type": "EQUITY_STANDARD"
+  },
+  "RMBS": {
+   "n": "Rambus",
    "type": "EQUITY_STANDARD"
   },
   "ROBO": {
@@ -2359,6 +2451,10 @@
   },
   "SLV": {
    "n": "iShares Silver Trust",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SLX": {
+   "n": "VanEck Steel ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "SLY": {
@@ -2895,6 +2991,10 @@
   },
   "VRT": {
    "n": "Vertiv",
+   "type": "EQUITY_STANDARD"
+  },
+  "VSH": {
+   "n": "Vishay Intertechnology",
    "type": "EQUITY_STANDARD"
   },
   "VSS": {
