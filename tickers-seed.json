@@ -229,6 +229,10 @@
    "n": "JPMorgan BetaBuilders US Equity",
    "type": "ETF_PASS_THROUGH"
   },
+  "BBWI": {
+   "n": "Bath & Body Works",
+   "type": "EQUITY_STANDARD"
+  },
   "BIDU": {
    "n": "Baidu",
    "type": "EQUITY_STANDARD"
@@ -257,9 +261,17 @@
    "n": "BJ's Wholesale Club",
    "type": "EQUITY_STANDARD"
   },
+  "BJRI": {
+   "n": "BJ's Restaurants",
+   "type": "EQUITY_STANDARD"
+  },
   "BKCH": {
    "n": "Global X Blockchain",
    "type": "ETF_PASS_THROUGH"
+  },
+  "BKE": {
+   "n": "Buckle",
+   "type": "EQUITY_STANDARD"
   },
   "BKLN": {
    "n": "Invesco Senior Loan",
@@ -267,6 +279,10 @@
   },
   "BLDR": {
    "n": "Builders FirstSource",
+   "type": "EQUITY_STANDARD"
+  },
+  "BLMN": {
+   "n": "Bloomin' Brands",
    "type": "EQUITY_STANDARD"
   },
   "BLOK": {
@@ -345,6 +361,10 @@
    "n": "Conagra Brands",
    "type": "EQUITY_STANDARD"
   },
+  "CAKE": {
+   "n": "Cheesecake Factory",
+   "type": "EQUITY_STANDARD"
+  },
   "CALX": {
    "n": "Calix",
    "type": "EQUITY_STANDARD"
@@ -359,6 +379,10 @@
   },
   "CAVA": {
    "n": "Cava Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "CBRL": {
+   "n": "Cracker Barrel",
    "type": "EQUITY_STANDARD"
   },
   "CDE": {
@@ -605,6 +629,10 @@
    "n": "SPDR Dow Jones Industrial Average",
    "type": "ETF_PASS_THROUGH"
   },
+  "DIN": {
+   "n": "Dine Brands Global",
+   "type": "EQUITY_STANDARD"
+  },
   "DIOD": {
    "n": "Diodes Inc.",
    "type": "EQUITY_STANDARD"
@@ -667,6 +695,10 @@
   },
   "EA": {
    "n": "Electronic Arts",
+   "type": "EQUITY_STANDARD"
+  },
+  "EAT": {
+   "n": "Brinker International",
    "type": "EQUITY_STANDARD"
   },
   "EBIZ": {
@@ -751,6 +783,10 @@
   },
   "EQAL": {
    "n": "Invesco Russell 1000 Equal Weight",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ERTH": {
+   "n": "Invesco MSCI Sustainable Future ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "ESGU": {
@@ -1021,8 +1057,16 @@
    "n": "Fidelity MSCI Information Technology",
    "type": "ETF_PASS_THROUGH"
   },
+  "FTGC": {
+   "n": "First Trust Global Tactical Commodity Strategy Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FTHI": {
    "n": "First Trust BuyWrite Income ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FTXL": {
+   "n": "First Trust Nasdaq Semiconductor ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "FUTY": {
@@ -1035,6 +1079,10 @@
   },
   "FXI": {
    "n": "iShares China Large-Cap",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FXL": {
+   "n": "First Trust Technology AlphaDEX Fund",
    "type": "ETF_PASS_THROUGH"
   },
   "GBIL": {
@@ -1605,6 +1653,10 @@
    "n": "iShares US Telecommunications",
    "type": "ETF_PASS_THROUGH"
   },
+  "JACK": {
+   "n": "Jack in the Box",
+   "type": "EQUITY_STANDARD"
+  },
   "JBND": {
    "n": "JPMorgan Active Bond",
    "type": "ETF_PASS_THROUGH"
@@ -1673,6 +1725,10 @@
    "n": "Kennametal",
    "type": "EQUITY_STANDARD"
   },
+  "KOMP": {
+   "n": "SPDR S&P Kensho New Economies Composite ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "KRE": {
    "n": "SPDR S&P Regional Banking",
    "type": "ETF_PASS_THROUGH"
@@ -1704,6 +1760,10 @@
   "LEMB": {
    "n": "iShares J.P. Morgan EM Local Currency Bond ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "LEVI": {
+   "n": "Levi Strauss",
+   "type": "EQUITY_STANDARD"
   },
   "LI": {
    "n": "Li Auto",
@@ -2097,6 +2157,10 @@
    "n": "Park Hotels & Resorts",
    "type": "EQUITY_STANDARD"
   },
+  "PLAY": {
+   "n": "Dave & Buster's",
+   "type": "EQUITY_STANDARD"
+  },
   "PLXS": {
    "n": "Plexus",
    "type": "EQUITY_STANDARD"
@@ -2141,6 +2205,18 @@
    "n": "PVH Corp.",
    "type": "EQUITY_STANDARD"
   },
+  "PXE": {
+   "n": "Invesco Energy Exploration & Production ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PXJ": {
+   "n": "Invesco Oil & Gas Services ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PZZA": {
+   "n": "Papa John's",
+   "type": "EQUITY_STANDARD"
+  },
   "QBTS": {
    "n": "D-Wave Quantum",
    "type": "EQUITY_STANDARD"
@@ -2176,6 +2252,10 @@
   "QRVO": {
    "n": "Qorvo",
    "type": "EQUITY_STANDARD"
+  },
+  "QTEC": {
+   "n": "First Trust NASDAQ-100 Technology Sector Index Fund",
+   "type": "ETF_PASS_THROUGH"
   },
   "QTUM": {
    "n": "Defiance Quantum",
@@ -2375,6 +2455,10 @@
   },
   "SE": {
    "n": "Sea Limited",
+   "type": "EQUITY_STANDARD"
+  },
+  "SFM": {
+   "n": "Sprouts Farmers Market",
    "type": "EQUITY_STANDARD"
   },
   "SG": {
@@ -2777,6 +2861,10 @@
    "n": "Twilio",
    "type": "EQUITY_STANDARD"
   },
+  "TXRH": {
+   "n": "Texas Roadhouse",
+   "type": "EQUITY_STANDARD"
+  },
   "U": {
    "n": "Unity Software",
    "type": "EQUITY_STANDARD"
@@ -2787,6 +2875,10 @@
   },
   "UFO": {
    "n": "Procure Space",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "UGA": {
+   "n": "United States Gasoline Fund",
    "type": "ETF_PASS_THROUGH"
   },
   "ULTY": {
@@ -3061,6 +3153,10 @@
    "n": "Direxion Daily Dow Jones Internet Bear 3X Shares",
    "type": "ETF_PASS_THROUGH"
   },
+  "WEN": {
+   "n": "Wendy's",
+   "type": "EQUITY_STANDARD"
+  },
   "WFRD": {
    "n": "Weatherford International",
    "type": "EQUITY_STANDARD"
@@ -3155,6 +3251,10 @@
   },
   "XSW": {
    "n": "SPDR S&P Software and Services",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XT": {
+   "n": "iShares Exponential Technologies ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "XTL": {
