@@ -113,6 +113,10 @@
    "n": "AppLovin",
    "type": "EQUITY_STANDARD"
   },
+  "AR": {
+   "n": "Antero Resources",
+   "type": "EQUITY_STANDARD"
+  },
   "ARGT": {
    "n": "Global X MSCI Argentina",
    "type": "ETF_PASS_THROUGH"
@@ -357,6 +361,10 @@
    "n": "SPDR Bloomberg International Treasury Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "BWXT": {
+   "n": "BWX Technologies",
+   "type": "EQUITY_STANDARD"
+  },
   "CAG": {
    "n": "Conagra Brands",
    "type": "EQUITY_STANDARD"
@@ -384,6 +392,14 @@
   "CBRL": {
    "n": "Cracker Barrel",
    "type": "EQUITY_STANDARD"
+  },
+  "CCJ": {
+   "n": "Cameco",
+   "type": "EQUITY_STANDARD"
+  },
+  "CDC": {
+   "n": "VictoryShares US EQ Income Enhanced Volatility Wtd ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "CDE": {
    "n": "Coeur Mining",
@@ -444,6 +460,10 @@
   "CMF": {
    "n": "iShares California Muni Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "CNX": {
+   "n": "CNX Resources",
+   "type": "EQUITY_STANDARD"
   },
   "COHR": {
    "n": "Coherent",
@@ -621,6 +641,10 @@
    "n": "Dimensional US Marketwide Value",
    "type": "ETF_PASS_THROUGH"
   },
+  "DGS": {
+   "n": "WisdomTree Emerging Markets SmallCap Dividend Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
   "DHS": {
    "n": "WisdomTree US High Dividend",
    "type": "ETF_PASS_THROUGH"
@@ -783,6 +807,10 @@
   },
   "EQAL": {
    "n": "Invesco Russell 1000 Equal Weight",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EQWL": {
+   "n": "Invesco S&P 100 Equal Weight ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "ERTH": {
@@ -1085,6 +1113,10 @@
    "n": "First Trust Technology AlphaDEX Fund",
    "type": "ETF_PASS_THROUGH"
   },
+  "FXU": {
+   "n": "First Trust Utilities AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
   "GBIL": {
    "n": "Goldman Sachs Access Treasury 0-1 Year",
    "type": "ETF_PASS_THROUGH"
@@ -1144,6 +1176,10 @@
   "GPIX": {
    "n": "Goldman Sachs S&P 500 Core Premium Income",
    "type": "ETF_PASS_THROUGH"
+  },
+  "GPOR": {
+   "n": "Gulfport Energy",
+   "type": "EQUITY_STANDARD"
   },
   "GPS": {
    "n": "Gap",
@@ -1300,6 +1336,10 @@
   "ICVT": {
    "n": "iShares Convertible Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "IDA": {
+   "n": "IDACORP",
+   "type": "EQUITY_STANDARD"
   },
   "IDEV": {
    "n": "iShares Core MSCI International Developed Markets ETF",
@@ -1761,6 +1801,10 @@
    "n": "iShares J.P. Morgan EM Local Currency Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "LEU": {
+   "n": "Centrus Energy",
+   "type": "EQUITY_STANDARD"
+  },
   "LEVI": {
    "n": "Levi Strauss",
    "type": "EQUITY_STANDARD"
@@ -1993,6 +2037,10 @@
    "n": "Novo Nordisk",
    "type": "EQUITY_STANDARD"
   },
+  "NWE": {
+   "n": "NorthWestern Energy Group",
+   "type": "EQUITY_STANDARD"
+  },
   "NXTG": {
    "n": "First Trust Indxx NextG",
    "type": "ETF_PASS_THROUGH"
@@ -2020,6 +2068,10 @@
   "OEF": {
    "n": "iShares S&P 100",
    "type": "ETF_PASS_THROUGH"
+  },
+  "OGE": {
+   "n": "OGE Energy",
+   "type": "EQUITY_STANDARD"
   },
   "OHI": {
    "n": "Omega Healthcare Investors",
@@ -2167,6 +2219,10 @@
   },
   "POOL": {
    "n": "Pool Corporation",
+   "type": "EQUITY_STANDARD"
+  },
+  "POR": {
+   "n": "Portland General Electric",
    "type": "EQUITY_STANDARD"
   },
   "POST": {
@@ -2349,12 +2405,28 @@
    "n": "Roku",
    "type": "EQUITY_STANDARD"
   },
+  "RPG": {
+   "n": "Invesco S&P 500 Pure Growth ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RPV": {
+   "n": "Invesco S&P 500 Pure Value ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RRC": {
+   "n": "Range Resources",
+   "type": "EQUITY_STANDARD"
+  },
   "RS": {
    "n": "Reliance Steel & Aluminum",
    "type": "EQUITY_STANDARD"
   },
   "RSP": {
    "n": "Invesco S&P 500 Equal Weight",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RSPU": {
+   "n": "Invesco S&P 500 Equal Weight Utilities ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "RWO": {
@@ -2371,6 +2443,14 @@
   },
   "RXI": {
    "n": "iShares Global Consumer Discretionary ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RZG": {
+   "n": "Invesco S&P SmallCap 600 Pure Growth ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RZV": {
+   "n": "Invesco S&P SmallCap 600 Pure Value ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "SANM": {
@@ -2705,6 +2785,10 @@
    "n": "ProShares UltraPro Short QQQ",
    "type": "ETF_PASS_THROUGH"
   },
+  "SR": {
+   "n": "Spire",
+   "type": "EQUITY_STANDARD"
+  },
   "SRET": {
    "n": "Global X SuperDividend REIT ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2797,6 +2881,10 @@
    "n": "iShares 10-20 Year Treasury Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "TLN": {
+   "n": "Talen Energy",
+   "type": "EQUITY_STANDARD"
+  },
   "TLT": {
    "n": "iShares 20+ Year Treasury Bond",
    "type": "ETF_PASS_THROUGH"
@@ -2873,6 +2961,10 @@
    "n": "Under Armour",
    "type": "EQUITY_STANDARD"
   },
+  "UEC": {
+   "n": "Uranium Energy",
+   "type": "EQUITY_STANDARD"
+  },
   "UFO": {
    "n": "Procure Space",
    "type": "ETF_PASS_THROUGH"
@@ -2937,8 +3029,16 @@
    "n": "Xtrackers MSCI USA ESG Leaders Equity",
    "type": "ETF_PASS_THROUGH"
   },
+  "UTES": {
+   "n": "Virtus Reaves Utilities ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "UTZ": {
    "n": "Utz Brands",
+   "type": "EQUITY_STANDARD"
+  },
+  "UUUU": {
+   "n": "Energy Fuels",
    "type": "EQUITY_STANDARD"
   },
   "VAC": {
