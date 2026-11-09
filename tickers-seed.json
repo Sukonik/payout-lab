@@ -237,6 +237,10 @@
    "n": "Bath & Body Works",
    "type": "EQUITY_STANDARD"
   },
+  "BHP": {
+   "n": "BHP Group",
+   "type": "ADR_VARIABLE"
+  },
   "BIDU": {
    "n": "Baidu",
    "type": "EQUITY_STANDARD"
@@ -525,12 +529,20 @@
    "n": "Invesco China Technology",
    "type": "ETF_PASS_THROUGH"
   },
+  "CRAK": {
+   "n": "VanEck Oil Refiners ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "CRDO": {
    "n": "Credo Technology",
    "type": "EQUITY_STANDARD"
   },
   "CROX": {
    "n": "Crocs",
+   "type": "EQUITY_STANDARD"
+  },
+  "CRS": {
+   "n": "Carpenter Technology",
    "type": "EQUITY_STANDARD"
   },
   "CRWV": {
@@ -925,6 +937,10 @@
    "n": "iShares Fallen Angels USD Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "FAN": {
+   "n": "First Trust Global Wind Energy ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FBND": {
    "n": "Fidelity Total Bond",
    "type": "ETF_PASS_THROUGH"
@@ -1013,6 +1029,10 @@
    "n": "Fidelity MSCI Materials",
    "type": "ETF_PASS_THROUGH"
   },
+  "FMC": {
+   "n": "FMC Corporation",
+   "type": "EQUITY_STANDARD"
+  },
   "FN": {
    "n": "Fabrinet",
    "type": "EQUITY_STANDARD"
@@ -1081,6 +1101,18 @@
    "n": "Fidelity MSCI Consumer Staples",
    "type": "ETF_PASS_THROUGH"
   },
+  "FTA": {
+   "n": "First Trust Large Cap Value AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FTC": {
+   "n": "First Trust Large Cap Growth AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FTCS": {
+   "n": "First Trust Capital Strength ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FTEC": {
    "n": "Fidelity MSCI Information Technology",
    "type": "ETF_PASS_THROUGH"
@@ -1103,6 +1135,14 @@
   },
   "FVD": {
    "n": "First Trust Value Line Dividend Index",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FXG": {
+   "n": "First Trust Consumer Staples AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FXH": {
+   "n": "First Trust Health Care AlphaDEX Fund",
    "type": "ETF_PASS_THROUGH"
   },
   "FXI": {
@@ -1259,6 +1299,10 @@
   },
   "HUBS": {
    "n": "HubSpot",
+   "type": "EQUITY_STANDARD"
+  },
+  "HXL": {
+   "n": "Hexcel",
    "type": "EQUITY_STANDARD"
   },
   "HYD": {
@@ -1769,6 +1813,10 @@
    "n": "SPDR S&P Kensho New Economies Composite ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "KRBN": {
+   "n": "KraneShares Global Carbon Strategy ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "KRE": {
    "n": "SPDR S&P Regional Banking",
    "type": "ETF_PASS_THROUGH"
@@ -1913,6 +1961,10 @@
    "n": "MKS Inc.",
    "type": "EQUITY_STANDARD"
   },
+  "MLI": {
+   "n": "Mueller Industries",
+   "type": "EQUITY_STANDARD"
+  },
   "MLPA": {
    "n": "Global X MLP",
    "type": "ETF_PASS_THROUGH"
@@ -1944,6 +1996,10 @@
   "MSTY": {
    "n": "YieldMax MSTR Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
+  },
+  "MT": {
+   "n": "ArcelorMittal",
+   "type": "ADR_VARIABLE"
   },
   "MTCH": {
    "n": "Match Group",
@@ -2023,6 +2079,10 @@
   },
   "NTNX": {
    "n": "Nutanix",
+   "type": "EQUITY_STANDARD"
+  },
+  "NTR": {
+   "n": "Nutrien",
    "type": "EQUITY_STANDARD"
   },
   "NU": {
@@ -2209,6 +2269,10 @@
    "n": "Park Hotels & Resorts",
    "type": "EQUITY_STANDARD"
   },
+  "PKX": {
+   "n": "POSCO Holdings",
+   "type": "ADR_VARIABLE"
+  },
   "PLAY": {
    "n": "Dave & Buster's",
    "type": "EQUITY_STANDARD"
@@ -2381,6 +2445,10 @@
    "n": "iShares MSCI Global Gold Miners",
    "type": "ETF_PASS_THROUGH"
   },
+  "RIO": {
+   "n": "Rio Tinto",
+   "type": "ADR_VARIABLE"
+  },
   "RIOT": {
    "n": "Riot Platforms",
    "type": "EQUITY_STANDARD"
@@ -2537,6 +2605,10 @@
    "n": "Sea Limited",
    "type": "EQUITY_STANDARD"
   },
+  "SEDG": {
+   "n": "SolarEdge Technologies",
+   "type": "EQUITY_STANDARD"
+  },
   "SFM": {
    "n": "Sprouts Farmers Market",
    "type": "EQUITY_STANDARD"
@@ -2544,6 +2616,10 @@
   "SG": {
    "n": "Sweetgreen",
    "type": "EQUITY_STANDARD"
+  },
+  "SGDJ": {
+   "n": "Sprott Junior Gold Miners ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "SGDM": {
    "n": "Sprott Gold Miners",
@@ -2635,6 +2711,10 @@
   },
   "SMH": {
    "n": "VanEck Semiconductor",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SMOG": {
+   "n": "VanEck Low Carbon Energy ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "SMR": {
@@ -2781,6 +2861,10 @@
    "n": "SPDR S&P 500 Fossil Fuel Reserves Free",
    "type": "ETF_PASS_THROUGH"
   },
+  "SQM": {
+   "n": "Sociedad Quimica y Minera",
+   "type": "ADR_VARIABLE"
+  },
   "SQQQ": {
    "n": "ProShares UltraPro Short QQQ",
    "type": "ETF_PASS_THROUGH"
@@ -2843,6 +2927,10 @@
   },
   "TEAM": {
    "n": "Atlassian",
+   "type": "EQUITY_STANDARD"
+  },
+  "TECK": {
+   "n": "Teck Resources",
    "type": "EQUITY_STANDARD"
   },
   "TECL": {
@@ -2949,6 +3037,10 @@
    "n": "Twilio",
    "type": "EQUITY_STANDARD"
   },
+  "TX": {
+   "n": "Ternium",
+   "type": "ADR_VARIABLE"
+  },
   "TXRH": {
    "n": "Texas Roadhouse",
    "type": "EQUITY_STANDARD"
@@ -3044,6 +3136,10 @@
   "VAC": {
    "n": "Marriott Vacations Worldwide",
    "type": "EQUITY_STANDARD"
+  },
+  "VALE": {
+   "n": "Vale",
+   "type": "ADR_VARIABLE"
   },
   "VAW": {
    "n": "Vanguard Materials",
@@ -3279,6 +3375,10 @@
   },
   "WMG": {
    "n": "Warner Music Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "WOR": {
+   "n": "Worthington Enterprises",
    "type": "EQUITY_STANDARD"
   },
   "WPM": {
