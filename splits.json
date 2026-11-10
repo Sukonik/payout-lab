@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-11-09T12:05:34.771Z",
- "upcomingAsOf": "2026-11-09",
+ "updated": "2026-11-10T11:44:02.305Z",
+ "upcomingAsOf": "2026-11-10",
  "tickers": {
   "A": {
    "n": "Agilent Technologies",
@@ -4373,103 +4373,26 @@
  },
  "upcoming": [
   {
-   "t": "ADGM",
-   "n": "Adagio Medical Holdings, Inc",
+   "t": "NCI",
+   "n": "Neo-Concept International Group Holdings Limited",
    "a": 1,
-   "b": 30,
-   "exDate": "2026-11-09",
+   "b": 8,
+   "exDate": "2026-11-10",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
-   "t": "ALPS",
-   "n": "ALPS Group Inc",
-   "a": 1,
-   "b": 5,
-   "exDate": "2026-11-09",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
-  },
-  {
-   "t": "ARAY",
-   "n": "Accuray Incorporated",
-   "a": 1,
-   "b": 40,
-   "exDate": "2026-11-09",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
-  },
-  {
-   "t": "CISS",
-   "n": "C3is Inc.",
-   "a": 1,
-   "b": 5,
-   "exDate": "2026-11-09",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
-  },
-  {
-   "t": "MMT",
-   "n": "Aberdeen Multi-Market Income Fund",
-   "a": 1,
-   "b": 4,
-   "exDate": "2026-11-09",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
-  },
-  {
-   "t": "NXTS",
-   "n": "Nexentis Technologies Inc.",
-   "a": 1,
-   "b": 5,
-   "exDate": "2026-11-09",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
-  },
-  {
-   "t": "SMX",
-   "n": "SMX (Security Matters) Public Limited Company",
-   "a": 1,
-   "b": 3,
-   "exDate": "2026-11-09",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
-  },
-  {
-   "t": "STKH",
-   "n": "Steakholder Foods Ltd.",
-   "a": 1,
-   "b": 5,
-   "exDate": "2026-11-09",
-   "status": "announced",
-   "src": "Nasdaq calendar",
-   "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
-  },
-  {
-   "t": "WCT",
-   "n": "Wellchange Holdings Company Limited",
+   "t": "OFAL",
+   "n": "OFA Group",
    "a": 1,
    "b": 10,
-   "exDate": "2026-11-09",
+   "exDate": "2026-11-10",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "EMBJ",
@@ -4480,7 +4403,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "BITI",
@@ -4491,7 +4414,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "BITO",
@@ -4502,7 +4425,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "DUG",
@@ -4513,7 +4436,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "DXD",
@@ -4524,7 +4447,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "EET",
@@ -4535,7 +4458,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "MZZ",
@@ -4546,7 +4469,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "QID",
@@ -4557,7 +4480,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "REW",
@@ -4568,7 +4491,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "ROM",
@@ -4579,7 +4502,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "RWM",
@@ -4590,7 +4513,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "SMDD",
@@ -4601,7 +4524,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "SSG",
@@ -4612,7 +4535,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "UBT",
@@ -4623,7 +4546,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "VIXM",
@@ -4634,7 +4557,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   },
   {
    "t": "SNDK",
@@ -4645,7 +4568,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-09"
+   "asOf": "2026-11-10"
   }
  ]
 }
