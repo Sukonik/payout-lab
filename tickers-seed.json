@@ -17,6 +17,10 @@
    "n": "iShares MSCI All Country Asia ex Japan ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "ACI": {
+   "n": "Albertsons",
+   "type": "EQUITY_STANDARD"
+  },
   "ACWI": {
    "n": "iShares MSCI ACWI",
    "type": "ETF_PASS_THROUGH"
@@ -329,6 +333,10 @@
    "n": "Box Inc.",
    "type": "EQUITY_STANDARD"
   },
+  "BRBR": {
+   "n": "BellRing Brands",
+   "type": "EQUITY_STANDARD"
+  },
   "BROS": {
    "n": "Dutch Bros",
    "type": "EQUITY_STANDARD"
@@ -348,6 +356,10 @@
   "BTCO": {
    "n": "Invesco Galaxy Bitcoin",
    "type": "ETF_PASS_THROUGH"
+  },
+  "BUD": {
+   "n": "Anheuser-Busch InBev",
+   "type": "ADR_VARIABLE"
   },
   "BUG": {
    "n": "Global X Cybersecurity",
@@ -375,6 +387,10 @@
   },
   "CAKE": {
    "n": "Cheesecake Factory",
+   "type": "EQUITY_STANDARD"
+  },
+  "CALM": {
+   "n": "Cal-Maine Foods",
    "type": "EQUITY_STANDARD"
   },
   "CALX": {
@@ -569,6 +585,10 @@
    "n": "VanEck Digital Transformation",
    "type": "ETF_PASS_THROUGH"
   },
+  "DAR": {
+   "n": "Darling Ingredients",
+   "type": "EQUITY_STANDARD"
+  },
   "DBA": {
    "n": "Invesco DB Agriculture",
    "type": "ETF_PASS_THROUGH"
@@ -592,6 +612,10 @@
   "DECK": {
    "n": "Deckers Outdoor",
    "type": "EQUITY_STANDARD"
+  },
+  "DEO": {
+   "n": "Diageo",
+   "type": "ADR_VARIABLE"
   },
   "DES": {
    "n": "WisdomTree US SmallCap Dividend",
@@ -981,6 +1005,10 @@
    "n": "Fidelity Ethereum Fund",
    "type": "ETF_PASS_THROUGH"
   },
+  "FEX": {
+   "n": "First Trust Large Cap Core AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FHLC": {
    "n": "Fidelity MSCI Health Care",
    "type": "ETF_PASS_THROUGH"
@@ -1016,6 +1044,10 @@
   "FLJP": {
    "n": "Franklin FTSE Japan",
    "type": "ETF_PASS_THROUGH"
+  },
+  "FLO": {
+   "n": "Flowers Foods",
+   "type": "EQUITY_STANDARD"
   },
   "FLOT": {
    "n": "iShares Floating Rate Bond",
@@ -1064,6 +1096,10 @@
   "FNV": {
    "n": "Franco-Nevada",
    "type": "EQUITY_STANDARD"
+  },
+  "FNX": {
+   "n": "First Trust Mid Cap Core AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
   },
   "FORM": {
    "n": "FormFactor",
@@ -1137,6 +1173,10 @@
    "n": "First Trust Value Line Dividend Index",
    "type": "ETF_PASS_THROUGH"
   },
+  "FXD": {
+   "n": "First Trust Consumer Discretionary AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FXG": {
    "n": "First Trust Consumer Staples AlphaDEX Fund",
    "type": "ETF_PASS_THROUGH"
@@ -1153,8 +1193,36 @@
    "n": "First Trust Technology AlphaDEX Fund",
    "type": "ETF_PASS_THROUGH"
   },
+  "FXN": {
+   "n": "First Trust Energy AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FXO": {
+   "n": "First Trust Financials AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FXR": {
+   "n": "First Trust Industrials/Producer Durables AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FXU": {
    "n": "First Trust Utilities AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FXZ": {
+   "n": "First Trust Materials AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FYC": {
+   "n": "First Trust Small Cap Growth AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FYT": {
+   "n": "First Trust Small Cap Value AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FYX": {
+   "n": "First Trust Small Cap Core AlphaDEX Fund",
    "type": "ETF_PASS_THROUGH"
   },
   "GBIL": {
@@ -1200,6 +1268,10 @@
   "GNMA": {
    "n": "iShares GNMA Bond ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "GO": {
+   "n": "Grocery Outlet",
+   "type": "EQUITY_STANDARD"
   },
   "GOOY": {
    "n": "YieldMax GOOGL Option Income Strategy",
@@ -1532,6 +1604,10 @@
   "INDY": {
    "n": "iShares India 50",
    "type": "ETF_PASS_THROUGH"
+  },
+  "INGR": {
+   "n": "Ingredion",
+   "type": "EQUITY_STANDARD"
   },
   "IONQ": {
    "n": "IonQ",
@@ -1897,6 +1973,10 @@
    "n": "Intuitive Machines",
    "type": "EQUITY_STANDARD"
   },
+  "LW": {
+   "n": "Lamb Weston",
+   "type": "EQUITY_STANDARD"
+  },
   "LYFT": {
    "n": "Lyft",
    "type": "EQUITY_STANDARD"
@@ -2048,6 +2128,10 @@
   "NFRA": {
    "n": "FlexShares STOXX Global Broad Infrastructure",
    "type": "ETF_PASS_THROUGH"
+  },
+  "NGVC": {
+   "n": "Natural Grocers",
+   "type": "EQUITY_STANDARD"
   },
   "NHI": {
    "n": "National Health Investors",
@@ -2297,6 +2381,10 @@
    "n": "Invesco Aerospace and Defense",
    "type": "ETF_PASS_THROUGH"
   },
+  "PPC": {
+   "n": "Pilgrim's Pride",
+   "type": "EQUITY_STANDARD"
+  },
   "PPLT": {
    "n": "abrdn Physical Platinum Shares",
    "type": "ETF_PASS_THROUGH"
@@ -2521,6 +2609,10 @@
    "n": "Invesco S&P SmallCap 600 Pure Value ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "SAM": {
+   "n": "Boston Beer",
+   "type": "EQUITY_STANDARD"
+  },
   "SANM": {
    "n": "Sanmina",
    "type": "EQUITY_STANDARD"
@@ -2709,6 +2801,10 @@
    "n": "VanEck Short Muni ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "SMG": {
+   "n": "Scotts Miracle-Gro",
+   "type": "EQUITY_STANDARD"
+  },
   "SMH": {
    "n": "VanEck Semiconductor",
    "type": "ETF_PASS_THROUGH"
@@ -2716,6 +2812,10 @@
   "SMOG": {
    "n": "VanEck Low Carbon Energy ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "SMPL": {
+   "n": "Simply Good Foods",
+   "type": "EQUITY_STANDARD"
   },
   "SMR": {
    "n": "NuScale Power",
