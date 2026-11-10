@@ -21,6 +21,10 @@
    "n": "Albertsons",
    "type": "EQUITY_STANDARD"
   },
+  "ACM": {
+   "n": "AECOM",
+   "type": "EQUITY_STANDARD"
+  },
   "ACWI": {
    "n": "iShares MSCI ACWI",
    "type": "ETF_PASS_THROUGH"
@@ -204,6 +208,10 @@
   "AVUV": {
    "n": "Avantis US Small Cap Value",
    "type": "ETF_PASS_THROUGH"
+  },
+  "AYI": {
+   "n": "Acuity Inc.",
+   "type": "EQUITY_STANDARD"
   },
   "BABA": {
    "n": "Alibaba Group",
@@ -1033,6 +1041,10 @@
    "n": "First Trust TCW Opportunistic Fixed Income",
    "type": "ETF_PASS_THROUGH"
   },
+  "FLAU": {
+   "n": "Franklin FTSE Australia ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FLCH": {
    "n": "Franklin FTSE China",
    "type": "ETF_PASS_THROUGH"
@@ -1041,8 +1053,24 @@
    "n": "Franklin FTSE Europe",
    "type": "ETF_PASS_THROUGH"
   },
+  "FLGB": {
+   "n": "Franklin FTSE United Kingdom ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLGR": {
+   "n": "Franklin FTSE Germany ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FLJP": {
    "n": "Franklin FTSE Japan",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLKR": {
+   "n": "Franklin FTSE South Korea ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLMX": {
+   "n": "Franklin FTSE Mexico ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "FLO": {
@@ -1055,6 +1083,14 @@
   },
   "FLRN": {
    "n": "SPDR Bloomberg Investment Grade Floating Rate ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLSW": {
+   "n": "Franklin FTSE Switzerland ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLTW": {
+   "n": "Franklin FTSE Taiwan ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "FMAT": {
@@ -1103,6 +1139,10 @@
   },
   "FORM": {
    "n": "FormFactor",
+   "type": "EQUITY_STANDARD"
+  },
+  "FOUR": {
+   "n": "Shift4 Payments",
    "type": "EQUITY_STANDARD"
   },
   "FPE": {
@@ -1861,6 +1901,10 @@
    "n": "KB Home",
    "type": "EQUITY_STANDARD"
   },
+  "KBR": {
+   "n": "KBR Inc.",
+   "type": "EQUITY_STANDARD"
+  },
   "KBWB": {
    "n": "Invesco KBW Bank",
    "type": "ETF_PASS_THROUGH"
@@ -1953,6 +1997,10 @@
    "n": "LG Display",
    "type": "EQUITY_STANDARD"
   },
+  "LPLA": {
+   "n": "LPL Financial",
+   "type": "EQUITY_STANDARD"
+  },
   "LQD": {
    "n": "iShares iBoxx Investment Grade Corporate Bond",
    "type": "ETF_PASS_THROUGH"
@@ -2039,6 +2087,10 @@
   },
   "MKSI": {
    "n": "MKS Inc.",
+   "type": "EQUITY_STANDARD"
+  },
+  "MKTX": {
+   "n": "MarketAxess",
    "type": "EQUITY_STANDARD"
   },
   "MLI": {
@@ -2160,6 +2212,10 @@
   "NTAP": {
    "n": "NetApp",
    "type": "EQUITY_STANDARD"
+  },
+  "NTES": {
+   "n": "NetEase",
+   "type": "ADR_VARIABLE"
   },
   "NTNX": {
    "n": "Nutanix",
@@ -2285,6 +2341,10 @@
    "n": "Paycom Software",
    "type": "EQUITY_STANDARD"
   },
+  "PAYO": {
+   "n": "Payoneer",
+   "type": "EQUITY_STANDARD"
+  },
   "PBJ": {
    "n": "Invesco Food & Beverage ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2388,6 +2448,10 @@
   "PPLT": {
    "n": "abrdn Physical Platinum Shares",
    "type": "ETF_PASS_THROUGH"
+  },
+  "PRIM": {
+   "n": "Primoris Services",
+   "type": "EQUITY_STANDARD"
   },
   "PRNT": {
    "n": "ARK 3D Printing",
@@ -2985,6 +3049,10 @@
    "n": "Pacer Benchmark Data and Infrastructure Real Estate",
    "type": "ETF_PASS_THROUGH"
   },
+  "SSNC": {
+   "n": "SS&C Technologies",
+   "type": "EQUITY_STANDARD"
+  },
   "SSO": {
    "n": "ProShares Ultra S&P500",
    "type": "ETF_PASS_THROUGH"
@@ -2992,6 +3060,10 @@
   "STIP": {
    "n": "iShares 0-5 Year TIPS Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "STRL": {
+   "n": "Sterling Infrastructure",
+   "type": "EQUITY_STANDARD"
   },
   "SUB": {
    "n": "iShares Short-Term National Muni Bond",
@@ -3016,6 +3088,10 @@
   "TAP": {
    "n": "Molson Coors Beverage",
    "type": "EQUITY_STANDARD"
+  },
+  "TCOM": {
+   "n": "Trip.com Group",
+   "type": "ADR_VARIABLE"
   },
   "TDIV": {
    "n": "First Trust NASDAQ Technology Dividend",
@@ -3081,6 +3157,10 @@
    "n": "Toyota Motor",
    "type": "EQUITY_STANDARD"
   },
+  "TME": {
+   "n": "Tencent Music Entertainment",
+   "type": "ADR_VARIABLE"
+  },
   "TNA": {
    "n": "Direxion Daily Small Cap Bull 3X Shares",
    "type": "ETF_PASS_THROUGH"
@@ -3123,6 +3203,10 @@
   },
   "TTD": {
    "n": "Trade Desk",
+   "type": "EQUITY_STANDARD"
+  },
+  "TTEK": {
+   "n": "Tetra Tech",
    "type": "EQUITY_STANDARD"
   },
   "TTWO": {
@@ -3309,6 +3393,18 @@
    "n": "Vanguard International Dividend Appreciation",
    "type": "ETF_PASS_THROUGH"
   },
+  "VIOG": {
+   "n": "Vanguard S&P Small-Cap 600 Growth ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VIOO": {
+   "n": "Vanguard S&P Small-Cap 600 ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VIOV": {
+   "n": "Vanguard S&P Small-Cap 600 Value ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "VIS": {
    "n": "Vanguard Industrials",
    "type": "ETF_PASS_THROUGH"
@@ -3451,6 +3547,10 @@
   },
   "WEN": {
    "n": "Wendy's",
+   "type": "EQUITY_STANDARD"
+  },
+  "WEX": {
+   "n": "WEX Inc.",
    "type": "EQUITY_STANDARD"
   },
   "WFRD": {
