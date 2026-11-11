@@ -65,12 +65,20 @@
    "n": "Global X Artificial Intelligence and Technology",
    "type": "ETF_PASS_THROUGH"
   },
+  "AKR": {
+   "n": "Acadia Realty Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "ALAB": {
    "n": "Astera Labs",
    "type": "EQUITY_STANDARD"
   },
   "ALGM": {
    "n": "Allegro MicroSystems",
+   "type": "EQUITY_STANDARD"
+  },
+  "ALX": {
+   "n": "Alexander's",
    "type": "EQUITY_STANDARD"
   },
   "AMBA": {
@@ -207,6 +215,10 @@
   },
   "AVUV": {
    "n": "Avantis US Small Cap Value",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "AWAY": {
+   "n": "ETFMG Travel Tech ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "AYI": {
@@ -365,6 +377,10 @@
    "n": "Invesco Galaxy Bitcoin",
    "type": "ETF_PASS_THROUGH"
   },
+  "BTG": {
+   "n": "B2Gold",
+   "type": "EQUITY_STANDARD"
+  },
   "BUD": {
    "n": "Anheuser-Busch InBev",
    "type": "ADR_VARIABLE"
@@ -509,6 +525,10 @@
    "n": "Columbia Sportswear",
    "type": "EQUITY_STANDARD"
   },
+  "COM": {
+   "n": "Direxion Auspice Broad Commodity Strategy ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "CONY": {
    "n": "YieldMax COIN Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
@@ -557,6 +577,10 @@
    "n": "VanEck Oil Refiners ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "CRC": {
+   "n": "California Resources",
+   "type": "EQUITY_STANDARD"
+  },
   "CRDO": {
    "n": "Credo Technology",
    "type": "EQUITY_STANDARD"
@@ -580,6 +604,10 @@
   "CUBE": {
    "n": "CubeSmart",
    "type": "EQUITY_STANDARD"
+  },
+  "CUT": {
+   "n": "Invesco MSCI Global Timber ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "CWB": {
    "n": "SPDR Bloomberg Convertible Securities",
@@ -607,6 +635,10 @@
   },
   "DBC": {
    "n": "Invesco DB Commodity Index Tracking",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DBE": {
+   "n": "Invesco DB Energy Fund",
    "type": "ETF_PASS_THROUGH"
   },
   "DBO": {
@@ -721,6 +753,10 @@
    "n": "WisdomTree US LargeCap Dividend",
    "type": "ETF_PASS_THROUGH"
   },
+  "DNN": {
+   "n": "Denison Mines",
+   "type": "EQUITY_STANDARD"
+  },
   "DOCN": {
    "n": "DigitalOcean",
    "type": "EQUITY_STANDARD"
@@ -740,6 +776,10 @@
   "DRAM": {
    "n": "Roundhill Memory ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "DRH": {
+   "n": "DiamondRock Hospitality",
+   "type": "EQUITY_STANDARD"
   },
   "DRIV": {
    "n": "Global X Autonomous and Electric Vehicles",
@@ -1161,6 +1201,10 @@
    "n": "Fidelity MSCI Real Estate",
    "type": "ETF_PASS_THROUGH"
   },
+  "FRI": {
+   "n": "First Trust S&P REIT Index Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FROG": {
    "n": "JFrog",
    "type": "EQUITY_STANDARD"
@@ -1199,6 +1243,10 @@
   },
   "FTHI": {
    "n": "First Trust BuyWrite Income ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FTRI": {
+   "n": "First Trust Indxx Global Natural Resources Income ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "FTXL": {
@@ -1353,6 +1401,10 @@
    "n": "iShares S&P GSCI Commodity-Indexed Trust",
    "type": "ETF_PASS_THROUGH"
   },
+  "GUNR": {
+   "n": "FlexShares Morningstar Global Upstream Natural Resources Index Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
   "GXC": {
    "n": "SPDR S&P China",
    "type": "ETF_PASS_THROUGH"
@@ -1363,6 +1415,10 @@
   },
   "HACK": {
    "n": "Amplify Cybersecurity",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "HAUZ": {
+   "n": "Xtrackers International Real Estate ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "HEDJ": {
@@ -1893,6 +1949,10 @@
    "n": "iShares Global Utilities ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "KALU": {
+   "n": "Kaiser Aluminum",
+   "type": "EQUITY_STANDARD"
+  },
   "KBE": {
    "n": "SPDR S&P Bank",
    "type": "ETF_PASS_THROUGH"
@@ -1932,6 +1992,10 @@
   "KOMP": {
    "n": "SPDR S&P Kensho New Economies Composite ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "KOS": {
+   "n": "Kosmos Energy",
+   "type": "EQUITY_STANDARD"
   },
   "KRBN": {
    "n": "KraneShares Global Carbon Strategy ETF",
@@ -2241,6 +2305,10 @@
    "n": "NorthWestern Energy Group",
    "type": "EQUITY_STANDARD"
   },
+  "NXE": {
+   "n": "NexGen Energy",
+   "type": "EQUITY_STANDARD"
+  },
   "NXTG": {
    "n": "First Trust Indxx NextG",
    "type": "ETF_PASS_THROUGH"
@@ -2321,6 +2389,10 @@
    "n": "OSI Systems",
    "type": "EQUITY_STANDARD"
   },
+  "OUNZ": {
+   "n": "VanEck Merk Gold Trust",
+   "type": "ETF_PASS_THROUGH"
+  },
   "PAAS": {
    "n": "Pan American Silver",
    "type": "EQUITY_STANDARD"
@@ -2367,6 +2439,10 @@
   },
   "PDD": {
    "n": "PDD Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "PEB": {
+   "n": "Pebblebrook Hotel Trust",
    "type": "EQUITY_STANDARD"
   },
   "PEGA": {
@@ -2449,12 +2525,20 @@
    "n": "abrdn Physical Platinum Shares",
    "type": "ETF_PASS_THROUGH"
   },
+  "PR": {
+   "n": "Permian Resources",
+   "type": "EQUITY_STANDARD"
+  },
   "PRIM": {
    "n": "Primoris Services",
    "type": "EQUITY_STANDARD"
   },
   "PRNT": {
    "n": "ARK 3D Printing",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PSCE": {
+   "n": "Invesco S&P SmallCap Energy ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "PSI": {
@@ -2613,6 +2697,10 @@
    "n": "Rocket Lab",
    "type": "EQUITY_STANDARD"
   },
+  "RLJ": {
+   "n": "RLJ Lodging Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "RMBS": {
    "n": "Rambus",
    "type": "EQUITY_STANDARD"
@@ -2684,6 +2772,10 @@
   "SAP": {
    "n": "SAP",
    "type": "EQUITY_STANDARD"
+  },
+  "SBSW": {
+   "n": "Sibanye Stillwater",
+   "type": "ADR_VARIABLE"
   },
   "SCCO": {
    "n": "Southern Copper",
@@ -2800,6 +2892,10 @@
   "SHM": {
    "n": "SPDR Nuveen Bloomberg Short Term Municipal Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "SHO": {
+   "n": "Sunstone Hotel Investors",
+   "type": "EQUITY_STANDARD"
   },
   "SHOP": {
    "n": "Shopify",
@@ -3237,6 +3333,10 @@
    "n": "Under Armour",
    "type": "EQUITY_STANDARD"
   },
+  "UE": {
+   "n": "Urban Edge Properties",
+   "type": "EQUITY_STANDARD"
+  },
   "UEC": {
    "n": "Uranium Energy",
    "type": "EQUITY_STANDARD"
@@ -3360,6 +3460,10 @@
   "VDE": {
    "n": "Vanguard Energy",
    "type": "ETF_PASS_THROUGH"
+  },
+  "VET": {
+   "n": "Vermilion Energy",
+   "type": "EQUITY_STANDARD"
   },
   "VEU": {
    "n": "Vanguard FTSE All-World ex-US ETF",
@@ -3577,6 +3681,10 @@
    "n": "Warner Music Group",
    "type": "EQUITY_STANDARD"
   },
+  "WOOD": {
+   "n": "iShares Global Timber & Forestry ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "WOR": {
    "n": "Worthington Enterprises",
    "type": "EQUITY_STANDARD"
@@ -3608,6 +3716,10 @@
   "XHE": {
    "n": "SPDR S&P Health Care Equipment",
    "type": "ETF_PASS_THROUGH"
+  },
+  "XHR": {
+   "n": "Xenia Hotels & Resorts",
+   "type": "EQUITY_STANDARD"
   },
   "XHS": {
    "n": "SPDR S&P Health Care Services",
