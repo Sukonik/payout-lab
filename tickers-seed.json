@@ -261,6 +261,10 @@
    "n": "Bath & Body Works",
    "type": "EQUITY_STANDARD"
   },
+  "BETZ": {
+   "n": "Roundhill Sports Betting & iGaming ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "BHP": {
    "n": "BHP Group",
    "type": "ADR_VARIABLE"
@@ -405,6 +409,10 @@
    "n": "BWX Technologies",
    "type": "EQUITY_STANDARD"
   },
+  "BYD": {
+   "n": "Boyd Gaming",
+   "type": "EQUITY_STANDARD"
+  },
   "CAG": {
    "n": "Conagra Brands",
    "type": "EQUITY_STANDARD"
@@ -428,6 +436,10 @@
   "CARG": {
    "n": "CarGurus",
    "type": "EQUITY_STANDARD"
+  },
+  "CARZ": {
+   "n": "First Trust NASDAQ Global Auto Index Fund",
+   "type": "ETF_PASS_THROUGH"
   },
   "CAVA": {
    "n": "Cava Group",
@@ -455,6 +467,10 @@
   },
   "CHEF": {
    "n": "Chefs' Warehouse",
+   "type": "EQUITY_STANDARD"
+  },
+  "CHH": {
+   "n": "Choice Hotels International",
    "type": "EQUITY_STANDARD"
   },
   "CHRD": {
@@ -745,6 +761,10 @@
    "n": "iShares Core Dividend",
    "type": "ETF_PASS_THROUGH"
   },
+  "DKNG": {
+   "n": "DraftKings",
+   "type": "EQUITY_STANDARD"
+  },
   "DKS": {
    "n": "Dick's Sporting Goods",
    "type": "EQUITY_STANDARD"
@@ -853,6 +873,10 @@
    "n": "iShares MSCI Indonesia",
    "type": "ETF_PASS_THROUGH"
   },
+  "ELF": {
+   "n": "e.l.f. Beauty",
+   "type": "EQUITY_STANDARD"
+  },
   "ELS": {
    "n": "Equity LifeStyle Properties",
    "type": "EQUITY_STANDARD"
@@ -903,6 +927,10 @@
   },
   "ESGU": {
    "n": "iShares ESG Aware MSCI USA",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ESPO": {
+   "n": "VanEck Video Gaming and eSports ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "ETHA": {
@@ -1253,6 +1281,10 @@
    "n": "First Trust Nasdaq Semiconductor ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "FUN": {
+   "n": "Six Flags Entertainment",
+   "type": "EQUITY_STANDARD"
+  },
   "FUTY": {
    "n": "Fidelity MSCI Utilities",
    "type": "ETF_PASS_THROUGH"
@@ -1311,6 +1343,10 @@
   },
   "FYX": {
    "n": "First Trust Small Cap Core AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GAMR": {
+   "n": "Amplify Video Game Tech ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "GBIL": {
@@ -1429,6 +1465,10 @@
    "n": "HEICO",
    "type": "EQUITY_STANDARD"
   },
+  "HERO": {
+   "n": "Global X Video Games & Esports ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "HGV": {
    "n": "Hilton Grand Vacations",
    "type": "EQUITY_STANDARD"
@@ -1531,6 +1571,10 @@
   },
   "IBND": {
    "n": "SPDR Bloomberg International Corporate Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IBUY": {
+   "n": "Amplify Online Retail ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "ICF": {
@@ -1652,6 +1696,10 @@
   "IHF": {
    "n": "iShares US Health Care Providers",
    "type": "ETF_PASS_THROUGH"
+  },
+  "IHG": {
+   "n": "InterContinental Hotels Group",
+   "type": "ADR_VARIABLE"
   },
   "IHI": {
    "n": "iShares US Medical Devices",
@@ -1953,6 +2001,10 @@
    "n": "Kaiser Aluminum",
    "type": "EQUITY_STANDARD"
   },
+  "KARS": {
+   "n": "KraneShares Electric Vehicles and Future Mobility Index ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "KBE": {
    "n": "SPDR S&P Bank",
    "type": "ETF_PASS_THROUGH"
@@ -2004,6 +2056,14 @@
   "KRE": {
    "n": "SPDR S&P Regional Banking",
    "type": "ETF_PASS_THROUGH"
+  },
+  "KROP": {
+   "n": "Global X AgTech & Food Innovation ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "KRUS": {
+   "n": "Kura Sushi USA",
+   "type": "EQUITY_STANDARD"
   },
   "KSS": {
    "n": "Kohls",
@@ -2073,6 +2133,10 @@
    "n": "Lattice Semiconductor",
    "type": "EQUITY_STANDARD"
   },
+  "LTH": {
+   "n": "Life Time Group Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "LTPZ": {
    "n": "PIMCO 15+ Year U.S. TIPS Index ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2105,6 +2169,10 @@
    "n": "MARA Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "MAT": {
+   "n": "Mattel",
+   "type": "EQUITY_STANDARD"
+  },
   "MBB": {
    "n": "iShares MBS",
    "type": "ETF_PASS_THROUGH"
@@ -2112,6 +2180,10 @@
   "MCHI": {
    "n": "iShares MSCI China",
    "type": "ETF_PASS_THROUGH"
+  },
+  "MCRI": {
+   "n": "Monarch Casino & Resort",
+   "type": "EQUITY_STANDARD"
   },
   "MDB": {
    "n": "MongoDB",
@@ -2453,6 +2525,10 @@
    "n": "Invesco Leisure and Entertainment ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "PENN": {
+   "n": "PENN Entertainment",
+   "type": "EQUITY_STANDARD"
+  },
   "PEY": {
    "n": "Invesco High Yield Equity Dividend Achievers",
    "type": "ETF_PASS_THROUGH"
@@ -2497,9 +2573,17 @@
    "n": "Dave & Buster's",
    "type": "EQUITY_STANDARD"
   },
+  "PLNT": {
+   "n": "Planet Fitness",
+   "type": "EQUITY_STANDARD"
+  },
   "PLXS": {
    "n": "Plexus",
    "type": "EQUITY_STANDARD"
+  },
+  "PNQI": {
+   "n": "Invesco NASDAQ Internet ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "POOL": {
    "n": "Pool Corporation",
@@ -2609,6 +2693,10 @@
    "n": "Qorvo",
    "type": "EQUITY_STANDARD"
   },
+  "QSR": {
+   "n": "Restaurant Brands International",
+   "type": "EQUITY_STANDARD"
+  },
   "QTEC": {
    "n": "First Trust NASDAQ-100 Technology Sector Index Fund",
    "type": "ETF_PASS_THROUGH"
@@ -2673,6 +2761,10 @@
    "n": "Ryman Hospitality Properties",
    "type": "EQUITY_STANDARD"
   },
+  "RICK": {
+   "n": "RCI Hospitality Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "RINF": {
    "n": "ProShares Inflation Expectations ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2735,6 +2827,10 @@
   },
   "RSPU": {
    "n": "Invesco S&P 500 Equal Weight Utilities ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RTH": {
+   "n": "VanEck Retail ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "RWO": {
@@ -2929,6 +3025,10 @@
    "n": "abrdn Physical Silver Shares",
    "type": "ETF_PASS_THROUGH"
   },
+  "SIX": {
+   "n": "Six Flags",
+   "type": "EQUITY_STANDARD"
+  },
   "SJNK": {
    "n": "SPDR Bloomberg Short Term High Yield Bond",
    "type": "ETF_PASS_THROUGH"
@@ -2999,6 +3099,10 @@
   },
   "SOFI": {
    "n": "SoFi Technologies",
+   "type": "EQUITY_STANDARD"
+  },
+  "SONO": {
+   "n": "Sonos",
    "type": "EQUITY_STANDARD"
   },
   "SONY": {
@@ -3461,6 +3565,10 @@
    "n": "Vanguard Energy",
    "type": "ETF_PASS_THROUGH"
   },
+  "VEGI": {
+   "n": "iShares MSCI Agriculture Producers ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "VET": {
    "n": "Vermilion Energy",
    "type": "EQUITY_STANDARD"
@@ -3637,6 +3745,10 @@
    "n": "Western Digital",
    "type": "EQUITY_STANDARD"
   },
+  "WDFC": {
+   "n": "WD-40",
+   "type": "EQUITY_STANDARD"
+  },
   "WEAT": {
    "n": "Teucrium Wheat",
    "type": "ETF_PASS_THROUGH"
@@ -3775,6 +3887,10 @@
   },
   "YELP": {
    "n": "Yelp",
+   "type": "EQUITY_STANDARD"
+  },
+  "YETI": {
+   "n": "YETI Holdings",
    "type": "EQUITY_STANDARD"
   },
   "YEXT": {
