@@ -129,6 +129,10 @@
    "n": "AppLovin",
    "type": "EQUITY_STANDARD"
   },
+  "APPF": {
+   "n": "AppFolio",
+   "type": "EQUITY_STANDARD"
+  },
   "AR": {
    "n": "Antero Resources",
    "type": "EQUITY_STANDARD"
@@ -167,6 +171,10 @@
   },
   "ARM": {
    "n": "Arm Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "ARW": {
+   "n": "Arrow Electronics",
    "type": "EQUITY_STANDARD"
   },
   "ASHR": {
@@ -209,6 +217,10 @@
    "n": "Avantis US Large Cap Value",
    "type": "ETF_PASS_THROUGH"
   },
+  "AVT": {
+   "n": "Avnet",
+   "type": "EQUITY_STANDARD"
+  },
   "AVUS": {
    "n": "Avantis US Equity",
    "type": "ETF_PASS_THROUGH"
@@ -227,6 +239,10 @@
   },
   "BABA": {
    "n": "Alibaba Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "BAH": {
+   "n": "Booz Allen Hamilton",
    "type": "EQUITY_STANDARD"
   },
   "BAR": {
@@ -373,6 +389,18 @@
    "n": "Brixmor Property Group",
    "type": "EQUITY_STANDARD"
   },
+  "BSCQ": {
+   "n": "Invesco BulletShares 2026 Corporate Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BSCR": {
+   "n": "Invesco BulletShares 2027 Corporate Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BSCS": {
+   "n": "Invesco BulletShares 2028 Corporate Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "BSV": {
    "n": "Vanguard Short-Term Bond",
    "type": "ETF_PASS_THROUGH"
@@ -411,6 +439,14 @@
   },
   "BYD": {
    "n": "Boyd Gaming",
+   "type": "EQUITY_STANDARD"
+  },
+  "BYLD": {
+   "n": "iShares Yield Optimized Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "CACI": {
+   "n": "CACI International",
    "type": "EQUITY_STANDARD"
   },
   "CAG": {
@@ -472,6 +508,10 @@
   "CHH": {
    "n": "Choice Hotels International",
    "type": "EQUITY_STANDARD"
+  },
+  "CHKP": {
+   "n": "Check Point Software Technologies",
+   "type": "ADR_VARIABLE"
   },
   "CHRD": {
    "n": "Chord Energy",
@@ -901,6 +941,10 @@
    "n": "Entegris",
    "type": "EQUITY_STANDARD"
   },
+  "EPAM": {
+   "n": "EPAM Systems",
+   "type": "EQUITY_STANDARD"
+  },
   "EPI": {
    "n": "WisdomTree India Earnings",
    "type": "ETF_PASS_THROUGH"
@@ -1016,6 +1060,10 @@
   "EXI": {
    "n": "iShares Global Industrials ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "EXLS": {
+   "n": "ExlService Holdings",
+   "type": "EQUITY_STANDARD"
   },
   "EXTR": {
    "n": "Extreme Networks",
@@ -1277,6 +1325,10 @@
    "n": "First Trust Indxx Global Natural Resources Income ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "FTSM": {
+   "n": "First Trust Enhanced Short Maturity ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FTXL": {
    "n": "First Trust Nasdaq Semiconductor ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1369,6 +1421,10 @@
    "n": "Gold Fields",
    "type": "ADR_VARIABLE"
   },
+  "GHYG": {
+   "n": "iShares US & Intl High Yield Corp Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "GLD": {
    "n": "SPDR Gold Shares",
    "type": "ETF_PASS_THROUGH"
@@ -1376,6 +1432,10 @@
   "GLDM": {
    "n": "SPDR Gold MiniShares",
    "type": "ETF_PASS_THROUGH"
+  },
+  "GLOB": {
+   "n": "Globant",
+   "type": "ADR_VARIABLE"
   },
   "GLPI": {
    "n": "Gaming and Leisure Properties",
@@ -1439,6 +1499,10 @@
   },
   "GUNR": {
    "n": "FlexShares Morningstar Global Upstream Natural Resources Index Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GVI": {
+   "n": "iShares Intermediate Government/Credit Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "GXC": {
@@ -1563,6 +1627,18 @@
   },
   "IBDQ": {
    "n": "iShares iBonds Dec 2026 Term Corporate",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IBDR": {
+   "n": "iShares iBonds Dec 2028 Term Corporate ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IBDS": {
+   "n": "iShares iBonds Dec 2029 Term Corporate ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IBDT": {
+   "n": "iShares iBonds Dec 2030 Term Corporate ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "IBIT": {
@@ -2041,6 +2117,10 @@
    "n": "Kennametal",
    "type": "EQUITY_STANDARD"
   },
+  "KMX": {
+   "n": "CarMax",
+   "type": "EQUITY_STANDARD"
+  },
   "KOMP": {
    "n": "SPDR S&P Kensho New Economies Composite ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2165,6 +2245,10 @@
    "n": "Roundhill Magnificent Seven",
    "type": "ETF_PASS_THROUGH"
   },
+  "MANH": {
+   "n": "Manhattan Associates",
+   "type": "EQUITY_STANDARD"
+  },
   "MARA": {
    "n": "MARA Holdings",
    "type": "EQUITY_STANDARD"
@@ -2204,6 +2288,10 @@
   "MGK": {
    "n": "Vanguard Mega Cap Growth",
    "type": "ETF_PASS_THROUGH"
+  },
+  "MGNI": {
+   "n": "Magnite",
+   "type": "EQUITY_STANDARD"
   },
   "MGV": {
    "n": "Vanguard Mega Cap Value",
@@ -2805,6 +2893,10 @@
    "n": "Roku",
    "type": "EQUITY_STANDARD"
   },
+  "RPD": {
+   "n": "Rapid7",
+   "type": "EQUITY_STANDARD"
+  },
   "RPG": {
    "n": "Invesco S&P 500 Pure Growth ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2856,6 +2948,10 @@
   "RZV": {
    "n": "Invesco S&P SmallCap 600 Pure Value ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "S": {
+   "n": "SentinelOne",
+   "type": "EQUITY_STANDARD"
   },
   "SAM": {
    "n": "Boston Beer",
@@ -3093,6 +3189,10 @@
    "n": "Global X Internet of Things",
    "type": "ETF_PASS_THROUGH"
   },
+  "SNX": {
+   "n": "TD Synnex",
+   "type": "EQUITY_STANDARD"
+  },
   "SOCL": {
    "n": "Global X Social Media",
    "type": "ETF_PASS_THROUGH"
@@ -3137,6 +3237,10 @@
    "n": "SPDR Portfolio Aggregate Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "SPBO": {
+   "n": "State Street SPDR Portfolio Corporate Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "SPCX": {
    "n": "SpaceX",
    "type": "EQUITY_STANDARD"
@@ -3175,6 +3279,10 @@
   },
   "SPLV": {
    "n": "Invesco S&P 500 Low Volatility",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPMB": {
+   "n": "State Street SPDR Portfolio Mortgage Backed Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "SPMD": {
@@ -3685,6 +3793,10 @@
    "n": "Vanguard FTSE Pacific",
    "type": "ETF_PASS_THROUGH"
   },
+  "VRNS": {
+   "n": "Varonis Systems",
+   "type": "EQUITY_STANDARD"
+  },
   "VRT": {
    "n": "Vertiv",
    "type": "EQUITY_STANDARD"
@@ -3907,6 +4019,10 @@
   },
   "Z": {
    "n": "Zillow Group (Class C)",
+   "type": "EQUITY_STANDARD"
+  },
+  "ZETA": {
+   "n": "Zeta Global",
    "type": "EQUITY_STANDARD"
   },
   "ZG": {
