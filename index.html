@@ -323,8 +323,9 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
         <label><input type="radio" name="spk" value="all"><span>Both</span></label>
       </fieldset>
       <label class="f search" style="margin-top:12px">Search ticker or company
-        <input id="spQ" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. GOOGL or Netflix">
+        <input id="spQ" type="search" list="tickers" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. GOOGL or Netflix">
       </label>
+      <p class="note spfind" id="spFind" aria-live="polite"></p>
       <p class="note muted" id="spStatus"></p>
     </section>
 
@@ -340,7 +341,7 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
 
     <section class="card" id="spCmp" aria-labelledby="h-spcmp">
       <div class="card-h"><h2 id="h-spcmp">Compare two stocks</h2></div>
-      <div class="cmpin"><label class="f">First ticker<input id="spCmpA" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="10"></label><label class="f">Second ticker<input id="spCmpB" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="10"></label></div>
+      <div class="cmpin"><label class="f">First ticker<input id="spCmpA" list="tickers" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="10"></label><label class="f">Second ticker<input id="spCmpB" list="tickers" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="10"></label></div>
       <div id="spCmpOut"></div>
     </section>
 

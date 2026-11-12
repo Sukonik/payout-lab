@@ -196,6 +196,19 @@ async function saveReport() {
   toast(res.trimmed ? `Report saved. The oldest one (${titleOf(res.trimmed)}) was removed.` : "Report saved. It will not change when prices update. Save a packet to keep it with your portfolio.");
 }
 
+// A report's contents are frozen, but its name is only a label: renaming changes nothing it recorded.
+async function renameReport(id) {
+  const r = state.packet.snapshots.find((x) => x.id === id);
+  if (!r) return;
+  const v = await askText({ title: "Rename this report", label: "Name (optional)", value: r.label || "", ok: "Rename", max: 120 });
+  if (v === null) return;
+  const label = v.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, 120);
+  if (label === (r.label || "")) return;
+  r.label = label;
+  mark(); renderReceipts();
+  toast(label ? `Renamed to “${label}”. The numbers in the report did not change.` : "Name cleared. The report is shown by its date.");
+}
+
 async function deleteReport(id) {
   const r = state.packet.snapshots.find((x) => x.id === id);
   if (!r) return;
@@ -687,6 +700,7 @@ function wire() {
   $("liveTest").addEventListener("click", async () => { $("liveTestNote").textContent = "Testing…"; await setProxy($("proxyIn").value); testLive(); });
   initSplits({ holdings: () => state.packet.holdings });
   $("psRows").addEventListener("click", (e) => {
+    const sq = e.target.closest("[data-psq]"); if (sq) { $("psq").value = sq.dataset.psq; renderExplore(); return; }
     const b = e.target.closest("[data-add]"); if (!b) return;
     goView("portfolio");
     $("tk").value = b.getAttribute("data-add");
@@ -710,6 +724,7 @@ function wire() {
     const id = b.dataset.id, r = state.packet.snapshots.find((x) => x.id === id);
     if (b.dataset.act === "compare") { state.cmp = { a: id, b: "cur" }; renderReceipts(); $("cmpCard").scrollIntoView({ behavior: "smooth" }); }
     else if (b.dataset.act === "delete") deleteReport(id);
+    else if (b.dataset.act === "rename") renameReport(id);
     else if (r && b.dataset.act === "export") download(reportFileName(r, ".json"), serializeReceipt(r), "application/json");
     else if (r && b.dataset.act === "print") openPrintable(receiptReportHtml(r), reportFileName(r, ".html"));
   });

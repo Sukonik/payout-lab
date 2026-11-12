@@ -71,7 +71,7 @@ input:focus,select:focus{border-color:var(--accent);background:var(--card)}
 /* sheets and toasts */
 .sheet,.sheet-bottom{box-shadow:var(--shadow);border-color:var(--line)}
 .sheet::backdrop{background:rgba(3,14,9,.55);backdrop-filter:blur(3px)}
-.toast{border-radius:999px;box-shadow:var(--shadow)}
+.toast{border-radius:16px;box-shadow:var(--shadow);width:max-content;max-width:min(92vw,440px)}
 @media (prefers-reduced-motion: reduce){.btn,.save,.card,input,select{transition:none}.btn:active,.save:active{transform:none}}
 input[type=checkbox],input[type=radio],input[type=range]{accent-color:var(--accent)}
 

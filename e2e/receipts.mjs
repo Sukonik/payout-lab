@@ -155,5 +155,36 @@ check("no sideways scroll with a comparison open", await mp.evaluate(() => docum
 check("report actions are comfortable touch targets", await mp.$$eval("#rcList .rcact button", (bs) => bs.every((b) => b.getBoundingClientRect().height >= 32)));
 await m.close();
 
+console.log("10. reports can be renamed");
+{
+  const rc = await newCtx(); const rp = await open(rc); await add(rp, "AAA", 100); await add(rp, "BBB", 40); await settle(rp); await saveReport(rp, "Baseline");
+  const rowOf = () => rp.innerText("#rcList");
+  const before = await rp.evaluate(() => JSON.stringify(document.querySelector("#rcList").innerText));
+  check("every report has a Rename button", (await rp.$$("#rcList [data-act=rename]")).length === 1);
+  await rp.click("#rcList [data-act=rename]"); await rp.waitForSelector("body > dialog:not(#settings) input");
+  check("the dialog is prefilled with the current name", (await rp.inputValue("body > dialog:not(#settings) input")) === "Baseline");
+  await rp.keyboard.press("Escape"); await gone(rp);
+  check("cancelling changes nothing", (await rp.evaluate(() => JSON.stringify(document.querySelector("#rcList").innerText))) === before);
+  await rp.click("#rcList [data-act=rename]"); await rp.waitForSelector("body > dialog:not(#settings) input");
+  await rp.fill("body > dialog:not(#settings) input", "  Q4   check\u0007 "); await rp.keyboard.press("Enter"); await gone(rp);
+  check("the new name shows in the list, tidied (spaces collapsed, control characters gone)", /Q4 check/.test(await rowOf()) && !/Baseline/.test(await rowOf()) && !/\u0007/.test(await rowOf()), await rowOf());
+  await go(rp, "receipts");
+  check("and in the comparison menus", /Q4 check/.test(await rp.innerText("#cmpA")), await rp.innerText("#cmpA"));
+  const out1 = await rp.evaluate(() => document.querySelector("#cmpOut").innerText.replace(/Q4 check/g, "X"));
+  const [dl] = await Promise.all([rp.waitForEvent("download"), rp.click("#saveBtn")]); const f = path.join(tmp, "renamed.payout"); await dl.saveAs(f);
+  const pk = JSON.parse(fs.readFileSync(f, "utf8")); const rep = pk.snapshots[0];
+  check("the packet carries the new name and the frozen numbers are untouched", rep.label === "Q4 check" && rep.outputs.income > 0 && rep.holdings.length === 2, JSON.stringify({ l: rep.label }));
+  await rp.reload(); await rp.waitForFunction(() => document.documentElement.dataset.ready); await go(rp, "receipts");
+  check("the name survives a reload", /Q4 check/.test(await rowOf()));
+  await rp.click("#rcList [data-act=rename]"); await rp.waitForSelector("body > dialog:not(#settings) input"); await rp.fill("body > dialog:not(#settings) input", ""); await rp.keyboard.press("Enter"); await gone(rp);
+  check("an empty name falls back to the date", /Report · /.test(await rowOf()) && !/Q4 check/.test(await rowOf()), await rowOf());
+  await rp.click("#rcList [data-act=rename]"); await rp.waitForSelector("body > dialog:not(#settings) input"); await rp.fill("body > dialog:not(#settings) input", "x".repeat(300)); await rp.keyboard.press("Enter"); await gone(rp);
+  const long = await rp.evaluate(() => document.querySelector("#rcList h3").innerText.length);
+  check("names are capped at 120 characters", long <= 125 && long >= 100, String(long));
+  await rp.click("#rcList [data-act=rename]"); await rp.waitForSelector("body > dialog:not(#settings) input"); await rp.fill("body > dialog:not(#settings) input", "<b>bold</b> & co"); await rp.keyboard.press("Enter"); await gone(rp);
+  check("markup in a name is shown as text", /<b>bold<\/b> & co/.test(await rowOf()) && !(await rp.$("#rcList h3 b")));
+  await rc.close();
+}
+
 check("no console or page errors", errors.length === 0, errors.join(" | "));
 await browser.close(); server.close(); done();

@@ -127,15 +127,37 @@ export function ledger(file, market = {}) {
   return rows.sort((x, y) => (x.d === y.d ? (x.t < y.t ? -1 : 1) : x.d < y.d ? 1 : -1));
 }
 
-export function filterLedger(rows, { kind = "forward", query = "", since = "" } = {}) {
-  const q = String(query).trim().toLowerCase();
-  return rows.filter((r) => (kind === "all" || r.kind === kind) && (!since || r.d >= since) && (!q || r.t.toLowerCase().startsWith(q) || (r.n || "").toLowerCase().includes(q)));
+// Search that forgives: BRK.B finds BRK-B, a symbol matches by start or anywhere inside, and company names match by any word or fragment.
+export const normQuery = (q) => String(q ?? "").trim().toLowerCase().replace(/\./g, "-").replace(/\s+/g, " ");
+export function searchMatch(query, ticker, name = "") {
+  const q = normQuery(query); if (!q) return true;
+  const t = String(ticker).toLowerCase(), n = String(name).toLowerCase().replace(/\./g, "-");
+  return t.startsWith(q) || (q.length >= 2 && t.includes(q)) || n.includes(q) || n.split(/[^a-z0-9\-]+/).some((w) => w && w.startsWith(q));
 }
 
-export function upcomingView(file, today, { kind = "forward" } = {}) {
+export function filterLedger(rows, { kind = "forward", query = "", since = "" } = {}) {
+  return rows.filter((r) => (kind === "all" || r.kind === kind) && (!since || r.d >= since) && searchMatch(query, r.t, r.n));
+}
+
+export function upcomingView(file, today, { kind = "forward", query = "" } = {}) {
   return file.upcoming
-    .filter((u) => u.status !== "cancelled" && u.exDate >= today && (kind === "all" || kindOf(u.a, u.b) === kind))
+    .filter((u) => u.status !== "cancelled" && u.exDate >= today && (kind === "all" || kindOf(u.a, u.b) === kind) && searchMatch(query, u.t, u.n))
     .map((u) => ({ ...u, kind: kindOf(u.a, u.b), days: daysBetween(today, u.exDate) }));
+}
+
+// What a search finds across BOTH kinds, so the page can say "nothing forward, but 2 reverse" instead of a bare "no match".
+export function searchSummary(file, market, query, today) {
+  const rows = ledger(file, market).filter((r) => searchMatch(query, r.t, r.n));
+  const up = file.upcoming.filter((u) => u.status !== "cancelled" && u.exDate >= today && searchMatch(query, u.t, u.n));
+  const c = (a, k) => a.filter((x) => (x.kind ?? kindOf(x.a, x.b)) === k).length;
+  return { history: { forward: c(rows, "forward"), reverse: c(rows, "reverse") }, announced: { forward: c(up, "forward"), reverse: c(up, "reverse") } };
+}
+
+// For a query that found nothing: the symbols and names in the price data that look close, so there is always a next step.
+export function suggestTickers(market, query, n = 6) {
+  const q = normQuery(query); if (q.length < 1) return [];
+  const score = (t, e) => { const tl = t.toLowerCase(), nl = String(e.n || "").toLowerCase(); return tl === q ? 0 : tl.startsWith(q) ? 1 : nl.split(/[^a-z0-9\-]+/).some((w) => w.startsWith(q)) ? 2 : tl.includes(q) ? 3 : nl.includes(q) ? 4 : 9; };
+  return Object.entries(market).map(([t, e]) => [score(t, e), t, e]).filter(([sc]) => sc < 9).sort((a, b) => a[0] - b[0] || a[1].localeCompare(b[1])).slice(0, n).map(([, t, e]) => ({ t, n: e.n || "" }));
 }
 
 export function yearGroups(rows) {
