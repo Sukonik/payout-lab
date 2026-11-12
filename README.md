@@ -11,20 +11,22 @@
 | **V1** | Preserved baseline | https://sukonik.github.io/payout-lab/v1/ | Commit [`475287d`](https://github.com/Sukonik/payout-lab/commit/475287db7b2646dee2968c10c91301747dd02489) (verified deployed by Pages run [38339910088](https://github.com/Sukonik/payout-lab/actions/runs/38339910088)) |
 | **V2 · Portable Workspace** | Released 2026-10-13 · superseded | https://sukonik.github.io/payout-lab/v2/ | Commit [`8f106b3`](https://github.com/Sukonik/payout-lab/commit/8f106b37ea01c5a1e29a04dbb6414e9dfaf71a9a) (deployed by Pages run [38449323089](https://github.com/Sukonik/payout-lab/actions/runs/38449323089)). Merged PRs [#21](https://github.com/Sukonik/payout-lab/pull/21) packets, [#22](https://github.com/Sukonik/payout-lab/pull/22) five tabs, [#23](https://github.com/Sukonik/payout-lab/pull/23) data provenance, [#24](https://github.com/Sukonik/payout-lab/pull/24) CSV and Continue, [#25](https://github.com/Sukonik/payout-lab/pull/25) release |
 | **V3 · Access & Receipts** | Released 2026-10-13 · superseded | https://sukonik.github.io/payout-lab/v3/ | Commit [`e094a6d`](https://github.com/Sukonik/payout-lab/commit/e094a6dced32c6950c4e635eded3accbcc589157) (app code deployed by Pages run [38456071536](https://github.com/Sukonik/payout-lab/actions/runs/38456071536)). Merged PRs [#27](https://github.com/Sukonik/payout-lab/pull/27) saved reports and comparison, [#28](https://github.com/Sukonik/payout-lab/pull/28) bookmarks and snapshot links, [#29](https://github.com/Sukonik/payout-lab/pull/29) QR cards. Notes: [`docs/release-v3.md`](docs/release-v3.md) |
-| **V4 · Splits** | **Released** 2026-10-14 · current | https://sukonik.github.io/payout-lab/ · preserved at https://sukonik.github.io/payout-lab/v4/ | Commit [`ca5c417`](https://github.com/Sukonik/payout-lab/commit/ca5c417ce6875636d1b503d468ebc74c17b5b0ee) (deployed by Pages run [38645364791](https://github.com/Sukonik/payout-lab/actions/runs/38645364791)). Merged PRs [#33](https://github.com/Sukonik/payout-lab/pull/33) split data and refresh, [#34](https://github.com/Sukonik/payout-lab/pull/34) Splits tab. Notes: [`docs/release-v4.md`](docs/release-v4.md) |
+| **V4 · Splits** | Released 2026-10-14 · superseded | https://sukonik.github.io/payout-lab/ · preserved at https://sukonik.github.io/payout-lab/v4/ | Commit [`ca5c417`](https://github.com/Sukonik/payout-lab/commit/ca5c417ce6875636d1b503d468ebc74c17b5b0ee) (deployed by Pages run [38645364791](https://github.com/Sukonik/payout-lab/actions/runs/38645364791)). Merged PRs [#33](https://github.com/Sukonik/payout-lab/pull/33) split data and refresh, [#34](https://github.com/Sukonik/payout-lab/pull/34) Splits tab. Notes: [`docs/release-v4.md`](docs/release-v4.md) |
+| **V4.1 · Fresh data & live lookup** | **Released** 2026-11-12 · current | https://sukonik.github.io/payout-lab/ | Commit [`182d862`](https://github.com/Sukonik/payout-lab/commit/182d862d91c736d6ca7d27b23952276e4ce16bc7) (deployed by Pages run [43259012524](https://github.com/Sukonik/payout-lab/actions/runs/43259012524)). Merged PRs [#37](https://github.com/Sukonik/payout-lab/pull/37) UX sweep, [#38](https://github.com/Sukonik/payout-lab/pull/38) data pipeline, [#39](https://github.com/Sukonik/payout-lab/pull/39) live lookup and source labels, [#40](https://github.com/Sukonik/payout-lab/pull/40) refresh workflows. Notes: [`docs/release-v4-1.md`](docs/release-v4-1.md). No separate preserved copy: this is the main address |
 
 - The main address always shows the latest release. A **preserved build** is the exact web files from its release commit, deployed under its own path (`/v1/`), so old links keep working even after the main site moves on. Preserved builds use the price file as it was at release and do not update.
 - Releases are recorded by **commit**, which is permanent. Git tags have not been created yet (tag pushes were not possible from the automation that built V2). To add one: `git tag -a v2.0.0 <release commit> && git push origin v2.0.0`.
-- Release notes and verification results: [`docs/release-v2.md`](docs/release-v2.md), [`docs/release-v3.md`](docs/release-v3.md), [`docs/release-v4.md`](docs/release-v4.md).
+- Release notes and verification results: [`docs/release-v2.md`](docs/release-v2.md), [`docs/release-v3.md`](docs/release-v3.md), [`docs/release-v4.md`](docs/release-v4.md), [`docs/release-v4-1.md`](docs/release-v4-1.md).
 
 ## What it does
 
 - **Overview**: yearly and monthly income, yield, a rack of test tubes showing income by month (tap a tube to see who pays that month), data freshness and a concentration summary.
-- **Portfolio**: add holdings, edit shares and values, import a CSV, check for newer market data and choose what to apply.
+- **Portfolio**: add holdings, edit shares and values, import a CSV, and refresh: **Refresh now** asks the quote provider live for the tickers you hold, **Check for updates** re-reads the daily file, and either way you review and choose what to apply. Every holding names its source and whether it is the **main data source** (Yahoo Finance) or a **secondary data source** (Tiingo).
 - **Lab**: dividend cut test, concentration check, goal timeline, add-money test, taxable vs IRA.
 - **Receipts**: saved **reports** (frozen, dated copies) you can compare with an explanation of what changed (your holdings, market data or assumptions), plus your packet, what is saved on this device, links and **QR cards**.
 - **Splits**: a ledger of stock splits by day, month and year (forward splits first, reverse on request), announced splits with their source, a Google-vs-Lucid style compare, a what-if for your share count, and which of your holdings have split. [Details](docs/splits.md)
-- **Explore**: search any of about 590 tickers (the S&P 500, leading ETFs and two foreign ADRs) to see what one share pays, how often, and the last payments.
+- **Explore**: search any of 1,500+ tickers (the S&P 500, leading ETFs, ADRs and more; coverage below) to see what one share pays, how often, and the last payments. A ticker that is not in the daily file gets a **Look up live** button. [Details](docs/live-lookup.md)
+- **Light and dark**: a moon/sun button in the header switches in one click and remembers your choice; Settings has Auto, Light and Dark.
 
 ## Your portfolio is a file
 
@@ -47,7 +49,7 @@ Prices, dividends and split history come from `data.json` and `splits.json`, ref
 **Theme: Green Ion.** The look comes from Green Ion, a small dependency-free design system (`css/green-ion.css`, vendored from the SunAgentic `green-ion/` folder) with a Payout Lab mapping in `css/green-ion-theme.css`. It keeps every class name and all behavior, adds an ion-green palette with WCAG AA contrast in light and dark, press and hover feedback, and a phone tab bar. Colors in the app are CSS variables, so changing the theme means editing one file.
 
 <!-- coverage:start -->
-**Coverage on 2026-11-12:** 800 stocks and 621 ETFs have live data (1421 tickers). 162 more are in `tickers-seed.json` waiting for their first data fetch; with them the list reaches 884 stocks and 699 ETFs. Target: at least 500 stocks and 400 ETFs.
+**Coverage on 2026-11-12:** 860 stocks and 673 ETFs have live data (1533 tickers). 50 more are in `tickers-seed.json` waiting for their first data fetch; with them the list reaches 884 stocks and 699 ETFs. Target: at least 500 stocks and 400 ETFs.
 <!-- coverage:end -->
 
 **Coverage target: at least 500 stocks and 400 ETFs.** `tickers-seed.json` lists the tickers we want covered (broad-market, size and style, dividend, international, sector, thematic, bond, commodity, crypto and income ETFs, plus top tech and the stocks the owner watches). Each refresh spends about two thirds of its 45 tickers on seed tickers that are not in `data.json` yet and the rest on the stalest existing ones. A seed ticker is added only when a data provider returns a real price for it, so a delisted or mistyped symbol is skipped and nothing is ever published with made-up numbers. At about 90 new tickers a day the backlog fills in over about a week. Each refresh also redeploys the site, and free Actions artifact storage is limited, so the schedule stays modest. The run log prints a coverage line, and `tests/coverage.test.mjs` fails if data plus seed ever drops below the target. New tickers also get split history from `scripts/update-splits.mjs`, which works from the same list.
@@ -102,7 +104,7 @@ Deploy is automatic: pushing to `main` runs [`pages.yml`](.github/workflows/page
 
 Link format, sizes and safety: [`docs/links.md`](docs/links.md). QR cards: [`docs/qr.md`](docs/qr.md).
 
-Browser checks in `e2e/`: `packets` (save/open/migration/storage), `workspace` (routing, layout, accessibility), `refresh` (data review), `import` (CSV), `return` (start screen), `receipts` (reports and comparison), `links` (bookmarks and snapshot links), `qr` (cards decoded back to their link), `regression-v1` (calculators match V1), `release` (the release standard on the built site), plus screenshot helpers.
+Browser checks in `e2e/`: `ux` (header, theme toggle, no clipped fields), `live` (Refresh now and Look up live with a mocked provider), `packets` (save/open/migration/storage), `workspace` (routing, layout, accessibility), `refresh` (data review), `import` (CSV), `return` (start screen), `receipts` (reports and comparison), `links` (bookmarks and snapshot links), `qr` (cards decoded back to their link), `regression-v1` (calculators match V1), `release` (the release standard on the built site), plus screenshot helpers.
 
 ## Project structure
 
@@ -110,11 +112,12 @@ Browser checks in `e2e/`: `packets` (save/open/migration/storage), `workspace` (
 index.html                          # app shell: start screen, five views, settings sheet
 css/app.css                         # design system (light and dark), phone-first layout
 js/app.js                           # controller: working packet, local save, open/save packets
-js/core/                            # pure, unit-tested logic: calc, packet schema, store, route, market, refresh, csv, receipts, links, qr
+js/core/                            # pure, unit-tested logic: calc, packet schema, store, route, market, refresh, csv, receipts, links, qr, splits, quotes, live
 js/vendor/                          # vendored Nayuki QR generator (MIT, see THIRD_PARTY_NOTICES.md)
 js/ui/                              # rendering: views, tube rack, panels, explore, dialogs, shell, gate, data review, CSV import
 data.json                           # public prices and dividends, refreshed on a schedule
 releases.json                       # preserved builds: version, path and exact commit
+worker/                             # optional free Cloudflare Worker proxy for live lookups
 docs/                               # packet format, release notes, screenshots
 tests/                              # unit tests (npm test)
 e2e/                                # browser checks (Playwright)
