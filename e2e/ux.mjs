@@ -38,9 +38,10 @@ for (const scheme of ["light", "dark"]) {
 console.log("2. header buttons are centred and level");
 for (const w of [390, 1280]) {
   const c = await browser.newContext({ viewport: { width: w, height: 800 } }); const p = await open(c);
-  const ys = await Promise.all(["#saveBtn", "#themeBtn", "#settingsBtn", "#tagBtn"].map((s) => midY(p, s)));
+  const vis = []; for (const sel of ["#saveBtn", "#lookBtn", "#themeBtn", "#settingsBtn", "#tagBtn"]) if (await p.isVisible(sel)) vis.push(sel);
+  const ys = await Promise.all(vis.map((s) => midY(p, s)));
   check(`${w}px: save, theme, settings and the portfolio tag share one centre line`, Math.max(...ys) - Math.min(...ys) <= 1.5, ys.join(","));
-  const ico = await p.$$eval("#themeBtn, #settingsBtn", (b) => b.map((x) => { const r = x.getBoundingClientRect(), i = x.querySelector("svg").getBoundingClientRect(); return [Math.abs(r.left + r.width / 2 - (i.left + i.width / 2)), Math.abs(r.top + r.height / 2 - (i.top + i.height / 2))]; }).flat());
+  const ico = await p.$$eval("#lookBtn, #themeBtn, #settingsBtn", (b) => b.filter((x) => x.offsetParent).map((x) => { const r = x.getBoundingClientRect(), i = x.querySelector("svg").getBoundingClientRect(); return [Math.abs(r.left + r.width / 2 - (i.left + i.width / 2)), Math.abs(r.top + r.height / 2 - (i.top + i.height / 2))]; }).flat());
   check(`${w}px: icons sit in the middle of their buttons`, ico.every((d) => d <= 1), ico.join(","));
   if (w === 390) check("the portfolio tag is not cut off", await p.$eval(".tag-status", (e) => e.scrollWidth <= e.clientWidth + 1), await p.$eval(".tag-status", (e) => `${e.scrollWidth}>${e.clientWidth}`));
   await c.close();

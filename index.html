@@ -7,7 +7,11 @@
 <meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b161d" media="(prefers-color-scheme: dark)">
 <title>Payout Lab</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" id="favSvg" href="assets/logo/forest-gold/payout-lab-atom-forest-gold.svg" type="image/svg+xml">
+<link rel="icon" id="fav32" type="image/png" sizes="32x32" href="assets/logo/forest-gold/favicon-32.png">
+<link rel="icon" id="fav16" type="image/png" sizes="16x16" href="assets/logo/forest-gold/favicon-16.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" id="appleIcon" href="assets/logo/forest-gold/apple-touch-icon.png">
 <link rel="stylesheet" href="css/app.css">
 <link rel="stylesheet" href="css/green-ion.css">
 <link rel="stylesheet" href="css/green-ion-theme.css">
@@ -28,7 +32,7 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
 <header class="top" id="top">
   <div class="top-in">
     <a class="brand" href="#/overview" aria-label="Payout Lab, go to overview">
-      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M13 5h6v3h-1v6.5l5.2 9.6a3 3 0 0 1-2.6 4.4H11.4a3 3 0 0 1-2.6-4.4L14 14.5V8h-1z" fill="#fff" fill-opacity=".94"/><path d="M12 22h8l2.7 4.9c.2.4-.1.8-.5.8H9.8c-.4 0-.7-.4-.5-.8z" fill="var(--logo-liq)"/></svg>
+      <img class="logo" id="logoImg" src="assets/logo/ion-gold/payout-lab-atom-ion-gold.svg" width="34" height="34" alt="">
       <span class="brand-name">Payout Lab</span>
     </a>
     <button class="tag" id="tagBtn" aria-haspopup="dialog" aria-label="Portfolio and storage details">
@@ -38,6 +42,7 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
     <nav class="tabs" id="tabs" aria-label="Main"></nav>
     <div class="top-actions">
       <button class="save" id="saveBtn" aria-label="Save packet"><span class="save-ico" id="saveIco"></span><span class="save-txt">Save packet</span><i class="save-dot" id="saveDot" hidden></i></button>
+      <button class="iconbtn" id="lookBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="lookPop" aria-label="Theme and app icon" title="Theme and app icon"><span id="lookIco"></span></button>
       <button class="iconbtn" id="themeBtn" aria-label="Switch to dark mode" title="Light or dark"><span id="themeIco"></span></button>
       <button class="iconbtn" id="settingsBtn" aria-label="Settings" aria-haspopup="dialog"><span id="gearIco"></span></button>
     </div>
@@ -358,6 +363,20 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
 </footer>
 
 <nav class="bottomnav" id="bottomnav" aria-label="Main"></nav>
+
+<div class="look-scrim" id="lookScrim" hidden></div>
+<div class="look-pop" id="lookPop" role="dialog" aria-label="Theme and app icon" hidden>
+  <div class="look-h"><b>Theme</b><button class="iconbtn sm" id="lookClose" aria-label="Close theme menu"><span aria-hidden="true">✕</span></button></div>
+  <div class="seg" role="radiogroup" aria-label="Light or dark">
+    <label><input type="radio" name="thememode" value="auto"><span>Auto</span></label>
+    <label><input type="radio" name="thememode" value="light"><span>Light</span></label>
+    <label><input type="radio" name="thememode" value="dark"><span>Dark</span></label>
+  </div>
+  <div class="look-sub">Color and app icon <em>light and dark</em></div>
+  <div class="look-grid" id="lookGrid" role="group" aria-label="Color theme and app icon"></div>
+  <p class="look-now" id="lookNow" aria-live="polite"></p>
+  <button class="btn ghost sm" id="lookReset">Use the default look</button>
+</div>
 
 <dialog id="settings" class="sheet" aria-labelledby="h-settings">
   <div class="sheet-h"><h2 id="h-settings">Settings</h2><button class="iconbtn" data-close aria-label="Close settings">✕</button></div>

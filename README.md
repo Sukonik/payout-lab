@@ -1,4 +1,6 @@
-# 🧪 Payout Lab
+<p align="center"><img src="assets/logo/forest-gold/payout-lab-atom-forest-gold.svg" alt="Payout Lab atom logo" width="96"></p>
+
+# Payout Lab
 
 **Stress-test the dividend portfolio you already own.** Free, no signup, no broker linking. Your portfolio is a small file that you own.
 
@@ -26,7 +28,7 @@
 - **Receipts**: saved **reports** (frozen, dated copies) you can compare with an explanation of what changed (your holdings, market data or assumptions), plus your packet, what is saved on this device, links and **QR cards**.
 - **Splits**: a ledger of stock splits by day, month and year (forward splits first, reverse on request), announced splits with their source, a Google-vs-Lucid style compare, a what-if for your share count, and which of your holdings have split. [Details](docs/splits.md)
 - **Explore**: search any of 1,500+ tickers (the S&P 500, leading ETFs, ADRs and more; coverage below) to see what one share pays, how often, and the last payments. A ticker that is not in the daily file gets a **Look up live** button. [Details](docs/live-lookup.md)
-- **Light and dark**: a moon/sun button in the header switches in one click and remembers your choice; Settings has Auto, Light and Dark.
+- **Light, dark and six looks**: the Theme button opens Auto / Light / Dark and six looks (Forest + Gold, Ion + Gold, Mint Ion, Black, White, Sky + Gold). Each look is a colour theme **and** an app icon (browser tab, iPhone home screen, header mark), in glass tiles, saved on your device. A moon/sun button gives one-click light/dark. [Details](docs/theme-and-icons.md)
 
 ## Your portfolio is a file
 
@@ -104,7 +106,7 @@ Deploy is automatic: pushing to `main` runs [`pages.yml`](.github/workflows/page
 
 Link format, sizes and safety: [`docs/links.md`](docs/links.md). QR cards: [`docs/qr.md`](docs/qr.md).
 
-Browser checks in `e2e/`: `ux` (header, theme toggle, no clipped fields), `live` (Refresh now and Look up live with a mocked provider), `packets` (save/open/migration/storage), `workspace` (routing, layout, accessibility), `refresh` (data review), `import` (CSV), `return` (start screen), `receipts` (reports and comparison), `links` (bookmarks and snapshot links), `qr` (cards decoded back to their link), `regression-v1` (calculators match V1), `release` (the release standard on the built site), plus screenshot helpers.
+Browser checks in `e2e/`: `ux` (header, theme toggle, no clipped fields), `brand` (the six looks, icons, light and dark), `live` (Refresh now and Look up live with a mocked provider), `packets` (save/open/migration/storage), `workspace` (routing, layout, accessibility), `refresh` (data review), `import` (CSV), `return` (start screen), `receipts` (reports and comparison), `links` (bookmarks and snapshot links), `qr` (cards decoded back to their link), `regression-v1` (calculators match V1), `release` (the release standard on the built site), plus screenshot helpers.
 
 ## Project structure
 
@@ -118,6 +120,7 @@ js/ui/                              # rendering: views, tube rack, panels, explo
 data.json                           # public prices and dividends, refreshed on a schedule
 releases.json                       # preserved builds: version, path and exact commit
 worker/                             # optional free Cloudflare Worker proxy for live lookups
+assets/logo/                        # Atom 2.0 logo in six looks: SVG, favicons, touch icons (scripts/build-icons.mjs)
 docs/                               # packet format, release notes, screenshots
 tests/                              # unit tests (npm test)
 e2e/                                # browser checks (Playwright)
