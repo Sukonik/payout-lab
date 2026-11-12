@@ -5,6 +5,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: data-refresh        # the two refresh jobs both write splits.json, so they take turns
+  cancel-in-progress: false
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -20,4 +23,8 @@ jobs:
           git config user.name "payout-lab-bot"
           git config user.email "actions@users.noreply.github.com"
           git add splits.json
-          git diff --cached --quiet || (git commit -m "Refresh split data" && git push)
+          git diff --cached --quiet && exit 0
+          git commit -m "Refresh split data"
+          # main moves while a long run is working (seed additions, the other refresh): rebase and retry instead of losing the run
+          for i in 1 2 3 4; do git pull --rebase origin main && git push && exit 0; sleep $((i * 5)); done
+          exit 1
