@@ -1,14 +1,14 @@
 # Data sources
 
-One rule keeps this readable: **every ticker's record comes from one source, and says which.** Values from two providers are never mixed inside one ticker. The source and the date it was observed show next to every holding ("Yahoo Finance · Nov 12").
+Two rules keep this readable. **Several sources may feed the app, but one is the main data source and the others are labelled secondary data sources**, by name, wherever a source is shown ("Yahoo Finance · main data source · Nov 12", "Tiingo · secondary data source · Oct 30"). And **each ticker's record comes from one source**: values from two providers are never mixed inside one ticker.
 
-| Data | Source | Key? | Used for | Status |
-|---|---|---|---|---|
-| Price, dividends, split history | **Yahoo Finance** public chart endpoint (`query1.finance.yahoo.com/v8/finance/chart/<ticker>`) | none | The scheduled refresh of `data.json` and `splits.json` (one request gives all three). The **primary** source for every ticker | Used. Unofficial: no published terms or limits; not licensed for commercial redistribution |
-| Same, as a fallback | **Tiingo** daily prices | `TIINGO_TOKEN` repository secret | Only when Yahoo returns nothing for a ticker and the token exists. The ticker is then labelled Tiingo | Optional. The free plan allows about 50 requests an hour and 1,000 a day, so it cannot be the bulk source |
-| Announced splits (not yet done) | **Nasdaq splits calendar** (unofficial) | none | `scripts/update-upcoming.mjs`; shown as "Announced · Nasdaq calendar" | Not verified live; see [`splits.md`](splits.md) |
-| Confirming an announcement | **SEC EDGAR 8-K** | none (User-Agent) | Not built yet | Proposed |
-| Live lookup in the browser | Yahoo chart endpoint, called by your browser | none | Refreshing your holdings or looking up any ticker on demand | See below |
+| Role | Data | Source | Key? | Used for | Status |
+|---|---|---|---|---|---|
+| **Main data source** | Price, dividends, split history | **Yahoo Finance** public chart endpoint (`query1.finance.yahoo.com/v8/finance/chart/<ticker>`) | none | The scheduled refresh of `data.json` and `splits.json` (one request gives all three). The **primary** source for every ticker | Used. Unofficial: no published terms or limits; not licensed for commercial redistribution |
+| Secondary data source | Same, as a fallback | **Tiingo** daily prices | `TIINGO_TOKEN` repository secret | Only when Yahoo returns nothing for a ticker and the token exists. The ticker is then labelled Tiingo | Optional. The free plan allows about 50 requests an hour and 1,000 a day, so it cannot be the bulk source |
+| Secondary data source | Announced splits (not yet done) | **Nasdaq splits calendar** (unofficial) | none | `scripts/update-upcoming.mjs`; shown as "Announced · Nasdaq calendar" | Not verified live; see [`splits.md`](splits.md) |
+| Secondary (planned) | Confirming an announcement | **SEC EDGAR 8-K** | none (User-Agent) | Not built yet | Proposed |
+| Main data source (live) | Live lookup in the browser | Yahoo chart endpoint, called by your browser | none | Refreshing your holdings or looking up any ticker on demand | See below |
 
 ## Why one primary source
 

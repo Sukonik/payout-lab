@@ -1,7 +1,7 @@
 // Renderers for the Overview, Portfolio and Receipts views. They read state and write DOM; they never change a result.
 import { $, esc, money, pct, tween, shortDate } from "./dom.js";
 import { MONTHS, SCHED_LABEL, inc, perPay } from "../core/calc.js";
-import { SRC_LABEL } from "../core/market.js";
+import { ROLE_TEXT, SRC_LABEL, sourceRole, sourceTag } from "../core/market.js";
 import { STALE_DAYS, ageDays } from "../core/refresh.js";
 import { renderRack, emptyRackHtml } from "./tubes.js";
 
@@ -42,7 +42,8 @@ export function provChip(h, now = Date.now()) {
   // Describe the provider-supplied values; name the ones that are yours.
   const mine = [["price", f.price], ["dividend", f.dividend], ["months", f.schedule]].filter(([, x]) => x.manual).map(([n]) => n);
   const base = [f.price, f.dividend, f.schedule].find((x) => !x.manual);
-  const label = SRC_LABEL[base.src] || base.src;
+  const role = sourceRole(base.src);
+  const label = (SRC_LABEL[base.src] || base.src) + (role ? ` · ${ROLE_TEXT[role]}` : "");
   let txt, cls = "";
   if (st === "estimate") { txt = base.src === "legacy" ? "Earlier version · no date" : "Estimate · not live"; cls = " warn"; }
   else if (st === "stale") { txt = `${label} · ${shortDate(base.asOf)} · stale`; cls = " warn"; }
@@ -54,7 +55,7 @@ export function provChip(h, now = Date.now()) {
 // One line per value: who produced it and when. Pay months are estimates while only ex-dividend dates are known.
 export function provDetail(h) {
   const f = h.fields;
-  const one = (name, x, extra = "") => `${name}: ${x.manual ? "yours" : SRC_LABEL[x.src] || x.src}${x.asOf ? ", observed " + shortDate(x.asOf) : x.manual ? "" : ", no date"}${extra}`;
+  const one = (name, x, extra = "") => `${name}: ${x.manual ? "yours" : sourceTag(x.src)}${x.asOf ? ", observed " + shortDate(x.asOf) : x.manual ? "" : ", no date"}${extra}`;
   return [
     one("Price", f.price),
     one(f.dividend.basis === "indicated" ? "Dividend (current rate)" : f.dividend.basis === "trailing" ? "Dividend (last 12 months)" : "Dividend", f.dividend),

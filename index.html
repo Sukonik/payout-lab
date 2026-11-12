@@ -133,7 +133,8 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
         <label><input type="radio" name="basis" value="indicated"><span>Current rate</span></label>
       </div>
       <p class="note muted" id="basisNote"></p>
-      <div class="row-actions"><button class="btn" id="checkBtn">Check for updates</button></div>
+      <div class="row-actions"><button class="btn primary" id="liveBtn">Refresh now</button><button class="btn" id="checkBtn">Check for updates</button></div>
+      <p class="note muted" id="liveNote"></p>
       <p class="note muted" id="reviewHint"></p>
     </section>
 
@@ -375,8 +376,16 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
     <button class="btn danger sm" id="forgetBtn">Delete this portfolio from this device</button>
   </section>
   <section class="set">
+    <h3>Live lookups</h3>
+    <label class="switch"><input type="checkbox" id="liveChk"><span class="track" aria-hidden="true"></span><span>Allow live lookups</span></label>
+    <p class="privacy">When you press <b>Refresh now</b> or <b>Look up live</b>, your browser asks Yahoo Finance for the tickers you chose, and nothing else. Turn this off and the site only ever reads its own daily price file.</p>
+    <label class="f">Your own lookup proxy (optional)<input id="proxyIn" type="url" inputmode="url" autocomplete="off" spellcheck="false" placeholder="Your proxy address (starts with https)"></label>
+    <div class="row-actions tight"><button class="btn sm" id="liveTest">Test live lookup</button></div>
+    <p class="privacy" id="liveTestNote" aria-live="polite"></p>
+  </section>
+  <section class="set">
     <h3>Privacy</h3>
-    <p class="privacy">Nothing you enter is uploaded. Calculations, packets and storage all happen in your browser. The only network requests are for this page and the public price file.</p>
+    <p class="privacy">Nothing you enter is uploaded. Calculations, packets and storage all happen in your browser. The only network requests are for this page and the public price file. If you press <b>Refresh now</b> or <b>Look up live</b>, the ticker symbols you asked about are sent to Yahoo Finance (or your own proxy, if you set one). Your holdings, shares and portfolio are never sent.</p>
   </section>
   <section class="set">
     <h3>About</h3>

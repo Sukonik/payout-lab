@@ -10,7 +10,9 @@ export function fromYahoo(chart) {
   if (!r || !(price > 0)) return null;
   const events = Object.values(r.events?.dividends ?? {}).map((e) => ({ t: e.date * 1000, a: e.amount })).filter((e) => e.a > 0 && Number.isFinite(e.t));
   const splits = r.events ? Object.values(r.events.splits ?? {}).map((e) => ({ d: new Date(e.date * 1000).toISOString().slice(0, 10), a: Number(e.numerator), b: Number(e.denominator), src: "Yahoo Finance" })).filter((s) => Number.isInteger(s.a) && Number.isInteger(s.b) && s.a > 0 && s.b > 0 && s.a !== s.b) : null;
-  return { price, events, splits };
+  const m = r.meta ?? {};
+  const meta = { name: String(m.longName || m.shortName || "").slice(0, 120), type: String(m.instrumentType || ""), currency: String(m.currency || "") };
+  return { price, events, splits, meta };
 }
 
 // The one request that gives price, dividends and splits together. Browsers and the refresh Action use the same URL.

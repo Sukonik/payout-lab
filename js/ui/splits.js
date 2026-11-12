@@ -1,7 +1,7 @@
 // The Splits tab: a ledger of split events, announced splits, compare, what-if and your own holdings.
 // Dates are shown as day, month and year blocks. Nothing here predicts a split.
 import { $, esc, money, pct } from "./dom.js";
-import { getMarket } from "../core/market.js";
+import { getMarket, sourceTag } from "../core/market.js";
 import { afterSplit, compareTickers, dateParts, filterLedger, getSplits, holdingsWithSplits, kindOf, ledger, priceAfter, ratioLabel, upcomingView, yearGroups } from "../core/splits.js";
 
 const PAGE = 60;
@@ -47,7 +47,7 @@ function eventCard(r) {
   return `<li class="sevent ${r.kind}" data-t="${esc(r.t)}">${dateBlock(r.d)}` +
     `<div class="sbody"><div class="shead"><b class="stk">${esc(r.t)}</b><span class="sname">${esc(r.n)}</span></div>` +
     `<div class="spills"><span class="ratio">${esc(ratioLabel(r))}</span>${kindPill(r.kind)}${verBadge(r)}</div>` +
-    `<div class="sfx">${fission(r)}<dl class="sdl"><div><dt>10 shares became</dt><dd>${num(afterSplit(10, r), 2)}</dd></div><div><dt>Price per share</dt><dd>${price}</dd></div>${move}</dl></div>` +
+    `<div class="sfx">${fission(r)}<dl class="sdl"><div><dt>10 shares became</dt><dd>${num(afterSplit(10, r), 2)}</dd></div><div><dt>Source</dt><dd>${esc(sourceTag(r.src))}</dd></div><div><dt>Price per share</dt><dd>${price}</dd></div>${move}</dl></div>` +
     (r.kind === "reverse" ? '<p class="note snote">Reverse split: fewer shares at a higher price. Companies often do this to keep a listing, so treat it as a warning sign worth reading about, not as good news.</p>' : "") +
     `<div class="sact"><button class="btn ghost sm" data-wi="${esc(r.t)}|${r.a}|${r.b}">What if…</button><button class="btn ghost sm" data-cmp="${esc(r.t)}">Compare</button></div></div></li>`;
 }
@@ -55,7 +55,7 @@ function eventCard(r) {
 function upcomingCard(u) {
   const when = u.days === 0 ? "today" : u.days === 1 ? "tomorrow" : `in ${u.days} days`;
   const status = { announced: '<span class="pill ok"><i></i>Announced</span>', confirmed: '<span class="pill ok"><i></i>Confirmed</span>', unverified: '<span class="pill warn"><i></i>Unverified: check before relying on it</span>' }[u.status];
-  const src = u.url ? `<a href="${esc(u.url)}" target="_blank" rel="noopener noreferrer">${esc(u.src)}</a>` : esc(u.src);
+  const src = u.url ? `<a href="${esc(u.url)}" target="_blank" rel="noopener noreferrer">${esc(sourceTag(u.src))}</a>` : esc(sourceTag(u.src));
   return `<li class="sevent upc ${u.kind}">${dateBlock(u.exDate)}<div class="sbody"><div class="shead"><b class="stk">${esc(u.t)}</b><span class="sname">${esc(u.n)}</span></div>` +
     `<div class="spills"><span class="ratio">${esc(ratioLabel(u))}</span>${kindPill(u.kind)}${status}<span class="pill"><i></i>${when}</span></div>` +
     `<div class="sfx">${fission(u)}<dl class="sdl"><div><dt>First day at new count</dt><dd>${esc(dateParts(u.exDate).day + " " + dateParts(u.exDate).month + " " + dateParts(u.exDate).year)}</dd></div>${u.announced ? `<div><dt>Announced</dt><dd>${esc(u.announced)}</dd></div>` : ""}<div><dt>Source</dt><dd>${src}</dd></div></dl></div></li>`;

@@ -42,7 +42,7 @@ The header always shows both states, **Device** and **Packet**, and **Save packe
 
 ## Data
 
-Prices, dividends and split history come from `data.json` and `splits.json`, refreshed three times a day by a scheduled GitHub Action ([`update-data.yml`](.github/workflows/update-data.yml)). **One primary source, no mixing:** Yahoo Finance's public chart endpoint (no key) answers for every ticker; Tiingo (key in a repository secret) is only a fallback when Yahoo gives nothing. Each run refreshes the 300 stalest tickers, so the whole list cycles in about two days, and each ticker shows which source it came from. [`docs/data-sources.md`](docs/data-sources.md) lists every source, what it is used for and its limits.
+Prices, dividends and split history come from `data.json` and `splits.json`, refreshed three times a day by a scheduled GitHub Action ([`update-data.yml`](.github/workflows/update-data.yml)). **One main data source, named secondary ones:** Yahoo Finance's public chart endpoint (no key) is the main data source and answers for every ticker; Tiingo (key in a repository secret) is a secondary data source used only when Yahoo gives nothing, and the Nasdaq calendar is a secondary source for announced splits. Each ticker's record comes from one source, and the app labels it "main data source" or "secondary data source" by name. Each run refreshes the 300 stalest tickers, so the whole list cycles in about two days, and each ticker shows which source it came from. [`docs/data-sources.md`](docs/data-sources.md) lists every source, what it is used for and its limits.
 
 **Theme: Green Ion.** The look comes from Green Ion, a small dependency-free design system (`css/green-ion.css`, vendored from the SunAgentic `green-ion/` folder) with a Payout Lab mapping in `css/green-ion-theme.css`. It keeps every class name and all behavior, adds an ion-green palette with WCAG AA contrast in light and dark, press and hover feedback, and a phone tab bar. Colors in the app are CSS variables, so changing the theme means editing one file.
 
@@ -67,7 +67,7 @@ Things to know:
 
 ## Privacy and cost
 
-- **Nothing you enter is uploaded.** Calculations, packets, CSV parsing and storage all run in the browser. The page makes no third-party requests (system fonts, no trackers, no analytics).
+- **Nothing you enter is uploaded.** Calculations, packets, CSV parsing and storage all run in the browser. The page makes no third-party requests on its own (system fonts, no trackers, no analytics). The one exception is opt-in: if you press **Refresh now** or **Look up live**, the ticker symbols you asked about go to the quote provider (or your own proxy); never your holdings or shares, and Settings can turn it off. [Details](docs/live-lookup.md).
 - **$0 to run.** GitHub Pages hosts the static files; a free GitHub Action refreshes public data. There is no database, no per-user backend and no paid service. A custom domain is optional. If the site moves to a new web address, the copies remembered in the browser do not move, so save a packet first.
 - **Browser support.** Current Chrome, Edge and Firefox, and Safari or iOS 16.4 and later (the app uses `<dialog>`, `:has()` and ES modules, with fallbacks for `color-mix`). The automated checks run in **Chromium only**, including phone-size emulation. It has **not yet been verified on a physical iPhone or in Safari or Firefox**.
 
