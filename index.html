@@ -239,7 +239,7 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
     <section class="card" id="rcCard" aria-labelledby="h-reports">
       <div class="card-h"><h2 id="h-reports">Saved reports</h2></div>
       <p class="lede">A report is a dated copy of your portfolio and what it produced. It never changes when prices update, so you can compare it with today or with another report later. Reports are stored inside your packet.</p>
-      <div class="addrow">
+      <div class="addrow one">
         <label class="f grow">Name (optional)<input id="rcLabel" maxlength="120" autocomplete="off" placeholder="e.g. After the October dividend"></label>
         <button class="btn primary" id="rcSaveReport">Save a report now</button>
       </div>
@@ -306,7 +306,7 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
       <div id="psCard"></div>
       <div class="tablewrap" style="margin-top:12px">
         <table class="ptable">
-          <thead><tr><th>Ticker</th><th class="num hide-s">Price</th><th class="num">Per payment</th><th class="hide-s">Pays</th><th class="num">Per year</th><th class="num">Yield</th><th></th></tr></thead>
+          <thead><tr><th>Ticker</th><th class="num hide-s">Price</th><th class="num">Per payment</th><th class="hide-s">Pays</th><th class="num hide-s">Per year</th><th class="num hide-s">Yield</th><th></th></tr></thead>
           <tbody id="psRows"></tbody>
         </table>
       </div>

@@ -8,6 +8,7 @@ const errors = [];
 const open = async (c, hash = "#/portfolio") => { const p = await c.newPage(); p.on("pageerror", (e) => errors.push(e.message)); await p.goto(url + hash); await p.waitForFunction(() => document.documentElement.dataset.ready); return p; };
 const go = async (p, v) => { await p.evaluate((h) => { location.hash = h; }, "#/" + v); await p.waitForSelector(`#view-${v}:not([hidden])`); };
 const sample = async (p) => { await p.click("#sampleBtn"); await p.waitForSelector("#rows .hrow"); };
+const gone = (p) => p.waitForSelector("body > dialog:not(#settings)", { state: "detached" });
 const midY = (p, sel) => p.$eval(sel, (e) => { const r = e.getBoundingClientRect(); return r.top + r.height / 2; });
 
 console.log("1. light and dark: a visible toggle that works, remembers, and matches the Settings choice");
@@ -82,6 +83,36 @@ console.log("4. segmented controls keep each label on one line");
   const hs = await p.$$eval('#settings .seg span', (s) => s.map((x) => Math.round(x.getBoundingClientRect().height)));
   check("Appearance options are all the same height (no wrapped label)", new Set(hs).size === 1, hs.join());
   check("the first option says Auto", /Auto/.test(await p.innerText("#settings .seg label")));
+  await c.close();
+}
+
+
+console.log("6. dialogs and menus: real buttons, room between parts");
+for (const w of [390, 1280]) {
+  const c = await browser.newContext({ viewport: { width: w, height: 900 }, isMobile: w < 700, hasTouch: w < 700 }); const p = await open(c); await sample(p);
+  await p.click("#clearBtn"); await p.waitForSelector("body > dialog[open]");
+  const b = await p.$$eval("body > dialog[open] .btns button", (bs) => bs.map((x) => { const r = x.getBoundingClientRect(), cs = getComputedStyle(x); return { t: x.innerText, h: r.height, border: cs.borderTopWidth, bg: cs.backgroundColor, cls: x.className, tx: Math.abs((() => { const g = document.createRange(); g.selectNodeContents(x); const q = g.getBoundingClientRect(); return q.top + q.height / 2 - (r.top + r.height / 2); })()) }; }));
+  check(`${w}px: confirm buttons are real buttons (44px, bordered, text centred)`, b.length === 2 && b.every((x) => x.h >= 44 && x.border !== "0px" && x.tx <= 2.5), JSON.stringify(b));
+  const danger = b.find((x) => /danger/.test(x.cls)), plain = b.find((x) => !/primary/.test(x.cls));
+  check(`${w}px: the destructive button is visibly different from Cancel`, danger && plain && danger.bg !== plain.bg, JSON.stringify(b.map((x) => x.bg)));
+  const gap = await p.$$eval("body > dialog[open] .btns button", (bs) => { const r = bs.map((x) => x.getBoundingClientRect()); return Math.min(Math.abs(r[1].left - r[0].right), Math.abs(r[1].top - r[0].bottom)); });
+  check(`${w}px: at least 8px between the two buttons`, gap >= 8, String(gap));
+  await p.keyboard.press("Escape"); await gone(p);
+  await p.click("#settingsBtn"); await p.waitForSelector("#settings[open]");
+  const sp = await p.evaluate(() => { const g = (s) => document.querySelector(s).getBoundingClientRect(); const live = [...document.querySelectorAll("#settings .set")].find((e) => e.querySelector("#proxyIn")); const note = live.querySelector(".privacy"), lab = live.querySelector("label.f"), inp = live.querySelector("#proxyIn"), btn = live.querySelector("#liveTest"); return { noteToLabel: lab.getBoundingClientRect().top - note.getBoundingClientRect().bottom, inputToBtn: btn.getBoundingClientRect().top - inp.getBoundingClientRect().bottom }; });
+  check(`${w}px: Settings has room between a note and the field below it (>=12px) and between the field and its button (>=10px)`, sp.noteToLabel >= 12 && sp.inputToBtn >= 10, JSON.stringify(sp));
+  await p.keyboard.press("Escape");
+  await go(p, "explore"); await p.fill("#psq", "SCHD");
+  const add = await p.$eval("#psRows [data-add]", (e) => { const t = e.closest(".tablewrap"); const r = e.getBoundingClientRect(), w = t.getBoundingClientRect(); return { inside: r.right <= w.right + 1 && r.left >= w.left - 1, scroll: t.scrollWidth > t.clientWidth + 1 }; });
+  check(`${w}px: the Add button in Explore is fully visible and the table does not scroll sideways`, add.inside && !add.scroll, JSON.stringify(add));
+  await c.close();
+}
+
+console.log("7. forms: a lone field fills its row");
+{
+  const c = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true }); const p = await open(c); await sample(p); await go(p, "receipts");
+  const r = await p.evaluate(() => { const i = document.querySelector("#rcLabel").getBoundingClientRect(), b = document.querySelector("#rcSaveReport").getBoundingClientRect(); return { i: i.width, b: b.width }; });
+  check("the report name field is as wide as the button under it on a phone", Math.abs(r.i - r.b) <= 2, JSON.stringify(r));
   await c.close();
 }
 
