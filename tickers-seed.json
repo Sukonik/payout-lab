@@ -53,6 +53,10 @@
    "n": "Affirm",
    "type": "EQUITY_STANDARD"
   },
+  "AG": {
+   "n": "First Majestic Silver",
+   "type": "ADR_VARIABLE"
+  },
   "AGG": {
    "n": "iShares Core US Aggregate Bond",
    "type": "ETF_PASS_THROUGH"
@@ -79,6 +83,10 @@
   },
   "ALX": {
    "n": "Alexander's",
+   "type": "EQUITY_STANDARD"
+  },
+  "AM": {
+   "n": "Antero Midstream",
    "type": "EQUITY_STANDARD"
   },
   "AMBA": {
@@ -180,6 +188,10 @@
   "ASHR": {
    "n": "Xtrackers Harvest CSI 300 China A-Shares",
    "type": "ETF_PASS_THROUGH"
+  },
+  "ASM": {
+   "n": "Avino Silver & Gold Mines",
+   "type": "ADR_VARIABLE"
   },
   "ASML": {
    "n": "ASML Holding",
@@ -499,6 +511,10 @@
   },
   "CELH": {
    "n": "Celsius Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "CENX": {
+   "n": "Century Aluminum",
    "type": "EQUITY_STANDARD"
   },
   "CHEF": {
@@ -849,6 +865,10 @@
    "n": "WisdomTree US Total Dividend",
    "type": "ETF_PASS_THROUGH"
   },
+  "DTM": {
+   "n": "DT Midstream",
+   "type": "EQUITY_STANDARD"
+  },
   "DUOL": {
    "n": "Duolingo",
    "type": "EQUITY_STANDARD"
@@ -929,8 +949,16 @@
    "n": "VanEck J.P. Morgan EM Local Currency Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "EMLP": {
+   "n": "First Trust North American Energy Infrastructure Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
   "EMXC": {
    "n": "iShares MSCI Emerging Markets ex China",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ENFR": {
+   "n": "Alerian Energy Infrastructure ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "ENPH": {
@@ -1060,6 +1088,10 @@
   "EXI": {
    "n": "iShares Global Industrials ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "EXK": {
+   "n": "Endeavour Silver",
+   "type": "ADR_VARIABLE"
   },
   "EXLS": {
    "n": "ExlService Holdings",
@@ -1293,6 +1325,10 @@
    "n": "Fastly",
    "type": "EQUITY_STANDARD"
   },
+  "FSM": {
+   "n": "Fortuna Mining",
+   "type": "ADR_VARIABLE"
+  },
   "FSTA": {
    "n": "Fidelity MSCI Consumer Staples",
    "type": "ETF_PASS_THROUGH"
@@ -1457,6 +1493,10 @@
    "n": "Grocery Outlet",
    "type": "EQUITY_STANDARD"
   },
+  "GOEX": {
+   "n": "Global X Gold Explorers ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "GOOY": {
    "n": "YieldMax GOOGL Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
@@ -1520,6 +1560,10 @@
   "HAUZ": {
    "n": "Xtrackers International Real Estate ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "HBM": {
+   "n": "Hudbay Minerals",
+   "type": "ADR_VARIABLE"
   },
   "HEDJ": {
    "n": "WisdomTree Europe Hedged Equity",
@@ -2161,8 +2205,16 @@
    "n": "Direxion Daily S&P Biotech Bull 3X Shares",
    "type": "ETF_PASS_THROUGH"
   },
+  "LAC": {
+   "n": "Lithium Americas",
+   "type": "EQUITY_STANDARD"
+  },
   "LAMR": {
    "n": "Lamar Advertising",
+   "type": "EQUITY_STANDARD"
+  },
+  "LBRT": {
+   "n": "Liberty Energy",
    "type": "EQUITY_STANDARD"
   },
   "LCID": {
@@ -2325,6 +2377,10 @@
    "n": "Global X MLP",
    "type": "ETF_PASS_THROUGH"
   },
+  "MLPX": {
+   "n": "Global X MLP & Energy Infrastructure ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "MN": {
    "n": "Corgi MANGOS ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2381,12 +2437,20 @@
    "n": "iShares National Muni Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "MUR": {
+   "n": "Murphy Oil",
+   "type": "EQUITY_STANDARD"
+  },
   "MXI": {
    "n": "iShares Global Materials ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "NBIS": {
    "n": "Nebius Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "NBR": {
+   "n": "Nabors Industries",
    "type": "EQUITY_STANDARD"
   },
   "NEAR": {
@@ -2552,6 +2616,10 @@
   "OUNZ": {
    "n": "VanEck Merk Gold Trust",
    "type": "ETF_PASS_THROUGH"
+  },
+  "OVV": {
+   "n": "Ovintiv",
+   "type": "EQUITY_STANDARD"
   },
   "PAAS": {
    "n": "Pan American Silver",
@@ -2729,6 +2797,14 @@
    "n": "Pure Storage",
    "type": "EQUITY_STANDARD"
   },
+  "PTEN": {
+   "n": "Patterson-UTI Energy",
+   "type": "EQUITY_STANDARD"
+  },
+  "PUMP": {
+   "n": "ProPetro Holding",
+   "type": "EQUITY_STANDARD"
+  },
   "PVH": {
    "n": "PVH Corp.",
    "type": "EQUITY_STANDARD"
@@ -2853,6 +2929,10 @@
    "n": "RCI Hospitality Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "RIG": {
+   "n": "Transocean",
+   "type": "ADR_VARIABLE"
+  },
   "RINF": {
    "n": "ProShares Inflation Expectations ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2915,6 +2995,10 @@
   },
   "RSP": {
    "n": "Invesco S&P 500 Equal Weight",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RSPG": {
+   "n": "Invesco S&P 500 Equal Weight Energy ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "RSPU": {
@@ -3139,6 +3223,10 @@
   },
   "SLV": {
    "n": "iShares Silver Trust",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SLVP": {
+   "n": "iShares MSCI Global Silver and Metals Miners ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "SLX": {
@@ -3409,6 +3497,10 @@
    "n": "FlexShares iBoxx 3-Year Target Duration TIPS ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "TDW": {
+   "n": "Tidewater",
+   "type": "EQUITY_STANDARD"
+  },
   "TEAM": {
    "n": "Atlassian",
    "type": "EQUITY_STANDARD"
@@ -3483,6 +3575,10 @@
   },
   "TOTL": {
    "n": "SPDR DoubleLine Total Return Tactical",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "TPYP": {
+   "n": "Tortoise North American Pipeline Fund",
    "type": "ETF_PASS_THROUGH"
   },
   "TQQQ": {
@@ -3976,6 +4072,10 @@
   "XPH": {
    "n": "SPDR S&P Pharmaceuticals",
    "type": "ETF_PASS_THROUGH"
+  },
+  "XPRO": {
+   "n": "Expro Group Holdings",
+   "type": "EQUITY_STANDARD"
   },
   "XRT": {
    "n": "SPDR S&P Retail",
