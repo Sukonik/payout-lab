@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { pickQueue, coverage } from "../scripts/update-data.mjs";
+import { pickQueue, coverage, providerOrder } from "../scripts/update-data.mjs";
 
 const read = (f) => JSON.parse(readFileSync(new URL(`../${f}`, import.meta.url), "utf8"));
 const seed = read("tickers-seed.json").tickers;
@@ -22,15 +22,22 @@ test("data plus seed covers at least 500 stocks and 400 ETFs", () => {
   assert.ok(c.etfs >= 400, `etfs ${c.etfs}`);
 });
 
-test("a run fetches missing seed tickers first, then the stalest existing ones, never more than the batch", () => {
+test("the stalest existing tickers lead a run, new seed tickers get a bounded share, never more than the batch", () => {
   const tickers = { OLD: { u: "2026-01-01T00:00:00Z" }, NEWER: { u: "2026-10-01T00:00:00Z" }, NEVER: {} };
-  const s = { AAA: { n: "A", type: "EQUITY_STANDARD" }, BBB: { n: "B", type: "ETF_PASS_THROUGH" }, OLD: { n: "O", type: "EQUITY_STANDARD" } };
-  const q = pickQueue(tickers, s, 4);
-  assert.equal(q.length, 4);
-  assert.deepEqual(q.slice(0, 2), ["AAA", "BBB"], "missing seed tickers lead");
-  assert.deepEqual(q.slice(2), ["NEVER", "OLD"], "then the stalest, a ticker never refreshed first");
-  assert.deepEqual(pickQueue(tickers, {}, 2), ["NEVER", "OLD"], "no seed: same as before");
+  const s = { AAA: { n: "A", type: "EQUITY_STANDARD" }, BBB: { n: "B", type: "ETF_PASS_THROUGH" }, CCC: { n: "C", type: "ETF_PASS_THROUGH" }, OLD: { n: "O", type: "EQUITY_STANDARD" } };
+  const q = pickQueue(tickers, s, 10);
+  assert.equal(q.length, 5, "3 existing + 2 new (20% of 10)");
+  assert.deepEqual(q.slice(0, 3), ["NEVER", "OLD", "NEWER"], "a ticker never refreshed first, then oldest");
+  assert.deepEqual(q.slice(3), ["AAA", "BBB"]);
+  assert.deepEqual(pickQueue(tickers, {}, 2), ["NEVER", "OLD"], "no seed: stalest only");
   assert.equal(pickQueue(tickers, s, 1).length, 1);
+  const many = Object.fromEntries(Array.from({ length: 500 }, (_, i) => [`S${i}`, { n: "x", type: "EQUITY_STANDARD" }]));
+  assert.equal(pickQueue({}, many, 300).length, 60, "new tickers are capped at 60 a run");
+});
+
+test("one primary source and an optional fallback, never a mix", () => {
+  assert.deepEqual(providerOrder(false).map(([n]) => n), ["Yahoo Finance"]);
+  assert.deepEqual(providerOrder(true).map(([n]) => n), ["Yahoo Finance", "Tiingo"]);
 });
 
 test("coverage counts ETFs and stocks separately", () => {

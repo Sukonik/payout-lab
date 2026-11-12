@@ -222,3 +222,21 @@ export function archiveDone(file, today, known) {
   file.upcoming = keep;
   return moved;
 }
+
+// ---------- feed-derived history ----------
+// The price feed is the authority for history: when it answers (derived is an array, even an empty one) its list replaces ours,
+// keeping any recorded prices for dates it still reports. A null answer means "not said": nothing is touched.
+export function applyFeedSplits(file, ticker, name, derived, today) {
+  if (!Array.isArray(derived)) return false;
+  const prev = file.tickers[ticker];
+  const clean = derived.map((s) => sanitizeSplit({ ...s, ver: 1 })).filter(Boolean).sort((x, y) => (x.d < y.d ? -1 : 1));
+  const byDate = new Map((prev?.s ?? []).map((s) => [s.d, s]));
+  const next = clean.map((s) => { const o = byDate.get(s.d); return o && o.pre && !s.pre ? { ...s, pre: o.pre, ...(o.post ? { post: o.post } : {}) } : s; });
+  const same = prev && JSON.stringify(prev.s.map((s) => [s.d, s.a, s.b])) === JSON.stringify(next.map((s) => [s.d, s.a, s.b]));
+  if (!prev && !next.length) { return false; }                       // never seen, nothing to record
+  file.tickers[ticker] = { n: prev?.n || name || "", s: next.slice(-SPLIT_LIMITS.maxPerTicker), u: today };
+  return !same;
+}
+
+// Which sources produced the history shown, for the legend.
+export const splitSources = (file) => [...new Set(Object.values(file.tickers).flatMap((v) => v.s.map((s) => s.src)))].sort();

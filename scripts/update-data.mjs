@@ -1,76 +1,29 @@
-// Refreshes data.json with real prices and dividends. No API key needed.
-// Source: Yahoo Finance public chart endpoint. Run: node scripts/update-data.mjs
+// Refreshes data.json (and split history in splits.json) from one primary source: Yahoo Finance's public chart endpoint, no key.
+// Tiingo (TIINGO_TOKEN) is used only as a fallback when Yahoo gives nothing for a ticker. Run: node scripts/update-data.mjs
 import { readFileSync, writeFileSync } from "node:fs";
 
 const FILE = new URL("../data.json", import.meta.url);
-const SCHEDULES = { 12: "M", 2: "S", 1: "A" };
+import { fromTiingo, fromYahoo, summarize, yahooChartUrl } from "../js/core/quotes.js";
+import { applyFeedSplits, sanitizeSplitsFile, splitsFromPrices } from "../js/core/splits.js";
+export { fromTiingo, fromYahoo, summarize };
 
-// Provider adapters: each returns { price, events: [{ t: ms, a: amount }] } or null.
-export function fromYahoo(chart) {
-  const r = chart?.chart?.result?.[0];
-  const price = r?.meta?.regularMarketPrice;
-  if (!r || !(price > 0)) return null;
-  const events = Object.values(r.events?.dividends ?? {}).map((e) => ({ t: e.date * 1000, a: e.amount }));
-  return { price, events };
-}
-
-// Tiingo daily prices: [{ date, close, divCash, ... }] in date order. divCash is the cash dividend on its ex-date.
-export function fromTiingo(rows) {
-  if (!Array.isArray(rows) || !rows.length) return null;
-  const price = rows[rows.length - 1].close;
-  if (!(price > 0)) return null;
-  // divCash is the amount as paid at the time. Divide by every LATER split so old payments are comparable to today's share count.
-  const events = [];
-  let laterSplits = 1;
-  for (let i = rows.length - 1; i >= 0; i--) {
-    if (rows[i].divCash > 0) events.push({ t: Date.parse(rows[i].date), a: rows[i].divCash / laterSplits });
-    if (rows[i].splitFactor > 0) laterSplits *= rows[i].splitFactor;
-  }
-  return { price, events };
-}
-
-// Pure function so it can be tested without network access.
-export function summarize({ price, events }, now = Date.now()) {
-  events = [...events].sort((a, b) => a.t - b.t);
-  const yearAgo = now - 365 * 864e5;
-  const ttm = events.filter((e) => e.t > yearAgo);
-  const out = { p: round(price, 2) };
-  if (!ttm.length) return { ...out, d: 0 };
-  const count = ttm.length;
-  const freq = count >= 10 ? 12 : count >= 3 ? 4 : count === 2 ? 2 : 1;
-  const last = ttm[ttm.length - 1];
-  const month = new Date(last.t).getUTCMonth() + 1;
-  out.d = round(ttm.reduce((s, e) => s + e.a, 0), 4);
-  out.per = round(last.a, 4);
-  out.s = freq === 4 ? `Q${((month - 1) % 3) + 1}` : SCHEDULES[freq];
-  out.last = new Date(last.t).toISOString().slice(0, 10);
-  out.hist = events.slice(-8).map((e) => ({ d: new Date(e.t).toISOString().slice(0, 10), a: round(e.a, 4) }));
-  // Growth: trailing-12-month dividends vs the same window 3 and 5 years ago.
-  const window = (yrs) => events
-    .filter((e) => e.t > now - (yrs + 1) * 365 * 864e5 && e.t <= now - yrs * 365 * 864e5)
-    .reduce((s, e) => s + e.a, 0);
-  for (const yrs of [3, 5]) {
-    const old = window(yrs);
-    if (old > 0 && events[0].t <= now - yrs * 365 * 864e5) out[`g${yrs}`] = round((out.d / old) ** (1 / yrs) - 1, 4);
-  }
-  return out;
-}
-
-const round = (v, d) => Math.round(v * 10 ** d) / 10 ** d;
+const SPLITS_FILE = new URL("../splits.json", import.meta.url);
 
 // Coverage seed: tickers we want in data.json (tickers-seed.json). A seed ticker is added only when a provider returns a real
 // price for it, so nothing is ever published with made-up numbers. Names in the seed are labels.
 const SEED_FILE = new URL("../tickers-seed.json", import.meta.url);
-const SEED_SHARE = 0.65; // share of each run spent on tickers not in data.json yet; the rest keeps the stalest existing ones fresh
+const SEED_SHARE = 0.2;  // at most this share of a run goes to tickers not in data.json yet; the rest keeps existing ones fresh
+const SEED_CAP = 60;     // and never more than this many new tickers in one run
 
-// Pure function: which tickers this run should fetch. Missing seed tickers first (up to SEED_SHARE of the batch), then stalest existing.
+// Pure function: which tickers this run should fetch. The stalest existing ones lead (a ticker never refreshed counts as oldest),
+// with a bounded share left for new seed tickers so adding coverage can never starve freshness.
 export function pickQueue(tickers, seed, batch) {
   const missing = Object.keys(seed).filter((t) => !tickers[t]).sort();
-  const take = Math.min(missing.length, Math.max(0, Math.round(batch * SEED_SHARE)));
+  const take = Math.min(missing.length, SEED_CAP, Math.max(0, Math.round(batch * SEED_SHARE)));
   const stale = Object.keys(tickers)
     .sort((a, b) => (tickers[a].u || "").localeCompare(tickers[b].u || ""))
     .slice(0, batch - take);
-  return [...missing.slice(0, take), ...stale];
+  return [...stale, ...missing.slice(0, take)];
 }
 
 // Counts used by the coverage report and test.
@@ -81,8 +34,11 @@ export function coverage(tickers, seed = {}) {
 }
 
 const TIINGO_TOKEN = process.env.TIINGO_TOKEN;
-// Tiingo's free plan allows ~50 symbols/hour, so each run refreshes only the stalest tickers.
-const BATCH = Number(process.env.BATCH) || 45;
+// Yahoo has no published per-hour cap for this endpoint, so a run refreshes a few hundred tickers, oldest first, politely spaced.
+const BATCH = Number(process.env.BATCH) || 300;
+const DELAY_MS = Number(process.env.DELAY_MS ?? 300);
+const UA = { "User-Agent": "Mozilla/5.0 (payout-lab data refresh)" };
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function getJson(url, headers = {}) {
   const res = await fetch(url, { headers });
@@ -90,81 +46,74 @@ async function getJson(url, headers = {}) {
   return res.json();
 }
 
-async function fetchTiingo(t) {
-  const start = new Date(Date.now() - 7 * 365 * 864e5).toISOString().slice(0, 10);
-  const rows = await getJson(
-    `https://api.tiingo.com/tiingo/daily/${encodeURIComponent(t)}/prices?startDate=${start}`,
-    { Authorization: `Token ${TIINGO_TOKEN}`, "Content-Type": "application/json" }
-  );
-  return fromTiingo(rows);
+async function fetchYahoo(t) {
+  for (let attempt = 0; ; attempt++) {
+    try { return fromYahoo(await getJson(yahooChartUrl(t), UA)); }
+    catch (e) {
+      if (e.status === 429 && attempt === 0) { await sleep(20000); continue; }   // one polite retry, then report it
+      throw e;
+    }
+  }
 }
 
-async function fetchYahoo(t) {
-  const chart = await getJson(
-    `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(t)}?range=7y&interval=1mo&events=div`,
-    { "User-Agent": "Mozilla/5.0 (payout-lab data refresh)" }
-  );
-  return fromYahoo(chart);
+async function fetchTiingo(t) {
+  const start = new Date(Date.now() - 15 * 365 * 864e5).toISOString().slice(0, 10);
+  const rows = await getJson(`https://api.tiingo.com/tiingo/daily/${encodeURIComponent(t)}/prices?startDate=${start}`, { Authorization: `Token ${TIINGO_TOKEN}`, "Content-Type": "application/json" });
+  return fromTiingo(rows, (r) => splitsFromPrices(r, "Tiingo"));
 }
+
+// One primary source, one fallback. Values from the two are never mixed inside one ticker's record.
+export const providerOrder = (hasToken) => [["Yahoo Finance", fetchYahoo], ...(hasToken ? [["Tiingo", fetchTiingo]] : [])];
 
 async function main() {
   const db = JSON.parse(readFileSync(FILE, "utf8"));
   let seed = {};
   try { seed = JSON.parse(readFileSync(SEED_FILE, "utf8")).tickers ?? {}; } catch { console.warn("No tickers-seed.json; refreshing existing tickers only"); }
-  const used = {};
-  let ok = 0, added = 0;
+  const rawSplits = JSON.parse(readFileSync(SPLITS_FILE, "utf8"));
+  const splits = sanitizeSplitsFile(rawSplits);
+  const used = {}, today = new Date().toISOString().slice(0, 10);
+  let ok = 0, added = 0, splitChanges = 0, failures = 0, consecutive = 0;
   const queue = pickQueue(db.tickers, seed, BATCH);
   console.log(`Refreshing ${queue.length} tickers (${queue.filter((t) => !db.tickers[t]).length} new from the seed list, rest stalest first); data.json has ${Object.keys(db.tickers).length}`);
-  let rateLimited = false;
   for (const t of queue) {
-    if (rateLimited) break;
-    const attempts = [...(TIINGO_TOKEN ? [["Tiingo", fetchTiingo]] : []), ["Yahoo Finance", fetchYahoo]];
-    for (const [name, fetcher] of attempts) {
+    if (consecutive >= 8) { console.warn("Eight failures in a row: the provider is probably limiting us. Stopping; the rest wait for the next run."); break; }
+    let done = false;
+    for (const [name, fetcher] of providerOrder(!!TIINGO_TOKEN)) {
       try {
         const raw = await fetcher(t);
-        if (!raw) throw new Error("no data");
+        if (!raw) throw new Error("no price");
         const sum = summarize(raw);
-        // A price with no dividends usually means this provider lacks dividend data for the ticker; try the next one.
-        if (!(sum.d > 0) && name !== attempts[attempts.length - 1][0]) throw new Error("no dividends reported");
         const isNew = !db.tickers[t];
         const old = db.tickers[t] ?? { n: seed[t]?.n ?? t, type: seed[t]?.type, p: sum.p, d: 0, q: true };
         if (!(sum.d > 0) && old.d > 0) {
-          // Nobody reports dividends for a ticker we believe pays one: refresh the price only and flag the rest as an estimate.
+          // The feed reports no dividends for a ticker we believed paid one: refresh the price only and flag the rest as an estimate.
           Object.assign(old, { p: sum.p, est: true, src: name, u: new Date().toISOString() });
-          console.warn(`${t}: no dividend data from any provider, kept old dividend as estimate`);
-          ok++;
-          break;
+          console.warn(`${t}: no dividend in the last 12 months from ${name}, kept the old dividend as an estimate`);
+        } else {
+          for (const k of ["per", "last", "hist", "g3", "g5", "est"]) delete old[k];
+          Object.assign(old, sum, { src: name, u: new Date().toISOString() });
         }
-        for (const k of ["per", "last", "hist", "g3", "g5", "est"]) delete old[k];
-        Object.assign(old, sum, { src: name, u: new Date().toISOString() });
         if (!old.s) old.s = "Q3";
         if (isNew) { db.tickers[t] = old; added++; }
-        used[name] = (used[name] || 0) + 1;
-        ok++;
+        if (applyFeedSplits(splits, t, old.n, raw.splits, today)) splitChanges++;
+        used[name] = (used[name] || 0) + 1; ok++; done = true; consecutive = 0;
         break;
-      } catch (e) {
-        console.warn(`${t}: ${name} failed (${e.message})`);
-        if (name === "Tiingo" && e.status === 429) {
-          // Out of quota: stop here so the rest stay stale for the next run instead of silently switching to the unlicensed fallback.
-          rateLimited = true;
-          console.warn("Tiingo rate limit hit. Stopping this run; remaining tickers will be refreshed next time.");
-          break;
-        }
-      }
+      } catch (e) { console.warn(`${t}: ${name} failed (${e.message})`); }
     }
-    await new Promise((r) => setTimeout(r, 400));
+    if (!done) { failures++; consecutive++; }
+    await sleep(DELAY_MS);
   }
-  if (ok === 0) {
-    console.warn("No ticker refreshed; leaving data.json untouched");
-    return;
-  }
+  if (ok === 0) { console.warn("No ticker refreshed; leaving the data files untouched"); process.exitCode = 1; return; }
   db.updated = new Date().toISOString();
   db.source = Object.keys(used).join(" + ");
-  console.log("Sources used:", used);
+  console.log("Sources used:", used, `failures: ${failures}, split histories changed: ${splitChanges}`);
   writeFileSync(FILE, JSON.stringify(db, null, 1) + "\n");
+  rawSplits.tickers = Object.fromEntries(Object.entries(splits.tickers).sort(([x], [y]) => (x < y ? -1 : 1)));
+  rawSplits.updated = new Date().toISOString();
+  writeFileSync(SPLITS_FILE, JSON.stringify(rawSplits, null, 1) + "\n");
   console.log(`Refreshed ${ok} tickers, ${added} added from the seed list; data.json now has ${Object.keys(db.tickers).length}`);
   const c = coverage(db.tickers, seed);
   console.log(`Coverage: ${c.stocks} stocks and ${c.etfs} ETFs (including seed tickers not fetched yet)`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) main();
+if (import.meta.url === `file://${process.argv[1]}`) await main();

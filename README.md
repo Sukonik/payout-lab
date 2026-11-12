@@ -42,7 +42,7 @@ The header always shows both states, **Device** and **Packet**, and **Save packe
 
 ## Data
 
-Prices and dividends come from `data.json`, refreshed every 8 hours by a scheduled GitHub Action ([`update-data.yml`](.github/workflows/update-data.yml)). It uses Tiingo (API key stored as a repository secret) and falls back to Yahoo Finance only for tickers Tiingo has no data for. Each run (every 8 hours) handles 45 tickers (new seed tickers first, then the stalest), so the whole list cycles in about a day once the seed has filled in. If Tiingo reports a rate limit the run stops and the rest wait for next time.
+Prices, dividends and split history come from `data.json` and `splits.json`, refreshed three times a day by a scheduled GitHub Action ([`update-data.yml`](.github/workflows/update-data.yml)). **One primary source, no mixing:** Yahoo Finance's public chart endpoint (no key) answers for every ticker; Tiingo (key in a repository secret) is only a fallback when Yahoo gives nothing. Each run refreshes the 300 stalest tickers, so the whole list cycles in about two days, and each ticker shows which source it came from. [`docs/data-sources.md`](docs/data-sources.md) lists every source, what it is used for and its limits.
 
 **Theme: Green Ion.** The look comes from Green Ion, a small dependency-free design system (`css/green-ion.css`, vendored from the SunAgentic `green-ion/` folder) with a Payout Lab mapping in `css/green-ion-theme.css`. It keeps every class name and all behavior, adds an ion-green palette with WCAG AA contrast in light and dark, press and hover feedback, and a phone tab bar. Colors in the app are CSS variables, so changing the theme means editing one file.
 
@@ -63,7 +63,7 @@ Things to know:
 - The data cannot separate special or one-off payments from regular ones, so the 12-month total can include them.
 - Tax type (`q`) is not in the feed; new tickers get a rough default (ordinary for REITs, bond funds and covered-call funds, qualified otherwise). Check it.
 - The S&P 500 list came from the open `datasets/s-and-p-500-companies` repo and drifts as the index changes. Add a ticker by adding an entry to `data.json`; it has no `u` date, so the next refresh picks it up first.
-- Check Tiingo's terms for displaying data on a public or paid site before charging. Yahoo's endpoint is unofficial and has no commercial terms, so it is only a fallback.
+- Yahoo's chart endpoint is unofficial and has no commercial terms, and Tiingo's free plan is limited too. Settle a licensed data source before charging for anything ([`docs/data-sources.md`](docs/data-sources.md)).
 
 ## Privacy and cost
 
