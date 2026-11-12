@@ -53,7 +53,7 @@ check("Both shows forward and reverse together", (await tickers(p)).includes("LC
 await p.fill("#spQ", "alpha");
 check("search by company name", (await tickers(p)).join() === "GOOGL");
 await p.fill("#spQ", "zzz");
-check("an empty search says so instead of showing nothing", /No splits match/.test(await p.innerText("#spLedger")));
+check("an empty search says so instead of showing nothing", /split history matches/.test(await p.innerText("#spLedger")));
 await p.fill("#spQ", ""); await kind(p, "forward");
 
 console.log("3. announced splits are shown with source, status and countdown");
@@ -112,6 +112,32 @@ const miss = await newCtx({}, null); const z = await open(miss);
 check("the tab still opens and says the data is unavailable", /Split data unavailable/.test(await z.innerText("#spStatus")) && /No forward splits recorded yet/.test(await z.innerText("#spLedger")));
 await go(z, "overview");
 check("the rest of the app is unaffected", /Add holdings|Income/i.test(await z.innerText("#view-overview")));
+
+console.log("8b. search finds things, and says what it did not find");
+{
+  const c = await newCtx(); const q = await open(c);
+  const find = () => q.innerText("#spFind");
+  await q.fill("#spQ", "lucid");
+  check("a reverse-split company searched in the Forward view explains itself and offers Both", /Nothing in forward splits matches/.test(await find()) && /1 reverse split matches/.test(await find()), await find());
+  await q.click("[data-spkind=all]"); await q.waitForSelector('#spLedger [data-t="LCID"]');
+  check("Show both reveals it and moves the switch", (await tickers(q)).join() === "LCID" && (await q.isChecked("input[name=spk][value=all]")));
+  await q.fill("#spQ", "newco");
+  check("announced splits respond to the search too", /NEWCO/.test(await q.innerText("#spUp")) && !/SHADY/.test(await q.innerText("#spUp")));
+  check("the summary counts history and announced", /matches 0 in history and 1 announced/.test(await find()), await find());
+  await q.fill("#spQ", "alpha");
+  check("company names match as words", (await tickers(q)).join() === "GOOGL");
+  await q.fill("#spQ", "oogl");
+  check("and symbols match inside", (await tickers(q)).join() === "GOOGL");
+  await q.fill("#spQ", "ko");
+  check("a covered ticker with no splits says so, with its source", /KO/.test(await find()) && /no splits on file/.test(await find()) && /data source/.test(await find()), await find());
+  await q.fill("#spQ", "sndk");
+  check("an uncovered symbol offers a live lookup", /Look up SNDK live/.test(await find()), await find());
+  await q.fill("#spQ", "zzzz");
+  check("no history and no announced match says so for both lists", /None of the announced splits match/.test(await q.innerText("#spUp")) && /split history matches/.test(await q.innerText("#spLedger")));
+  await q.fill("#spQ", "");
+  check("clearing the search clears the message", (await find()) === "");
+  await c.close();
+}
 
 console.log("9. privacy");
 const external = requests.filter((u) => !u.startsWith(url) && !u.startsWith("blob:") && !u.startsWith("data:"));

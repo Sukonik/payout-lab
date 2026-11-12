@@ -14,7 +14,7 @@ export function renderReports(packet, workbench) {
   } else {
     list.innerHTML = packet.snapshots.map((r) => `<li class="rcrow" data-id="${esc(r.id)}"><div><h3>${esc(titleOf(r))}${r.portfolioId !== packet.portfolioId ? '<span class="badge2" title="Saved from a different portfolio">other portfolio</span>' : ""}</h3><small>Saved ${esc(dateTime(r.capturedAt))} · ${esc(asOfText(r))}</small></div>` +
       `<div class="rcnums"><span>Income <b>${money(r.outputs.income)}</b>/yr</span><span>Value <b>${money(r.outputs.value)}</b></span><span>Yield <b>${pct(r.outputs.yield, 2)}</b></span><span>${r.holdings.length} holding${r.holdings.length === 1 ? "" : "s"}</span></div>` +
-      `<div class="rcact"><button class="btn sm" data-act="compare" data-id="${esc(r.id)}">Compare with today</button><button class="btn sm ghost" data-act="print" data-id="${esc(r.id)}">Print</button><button class="btn sm ghost" data-act="export" data-id="${esc(r.id)}">Export</button><button class="btn sm ghost" data-act="delete" data-id="${esc(r.id)}">Delete</button></div></li>`).join("");
+      `<div class="rcact"><button class="btn sm" data-act="compare" data-id="${esc(r.id)}">Compare with today</button><button class="btn sm ghost" data-act="rename" data-id="${esc(r.id)}">Rename</button><button class="btn sm ghost" data-act="print" data-id="${esc(r.id)}">Print</button><button class="btn sm ghost" data-act="export" data-id="${esc(r.id)}">Export</button><button class="btn sm ghost" data-act="delete" data-id="${esc(r.id)}">Delete</button></div></li>`).join("");
   }
   const total = packet.snapshots.length + workbench.length;
   $("cmpCard").hidden = total === 0;

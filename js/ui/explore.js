@@ -3,6 +3,7 @@ import { $, esc, money, pct } from "./dom.js";
 import { SCHED, SCHED_LABEL } from "../core/calc.js";
 import { dividendHint, getMarket, indicatedAnnual, sourceTag } from "../core/market.js";
 import { looksLikeTicker } from "../core/live.js";
+import { normQuery, searchMatch, suggestTickers } from "../core/splits.js";
 
 // The app tells this module whether live lookups are on, and what the last lookup for a ticker said.
 let liveAllowed = () => false, liveMessage = () => "";
@@ -32,8 +33,8 @@ export function fillTickers() {
 
 export function renderExplore() {
   const T = getMarket().tickers;
-  const q = $("psq").value.trim().toUpperCase(), qn = q.toLowerCase();
-  const all = Object.keys(T).sort().filter((k) => T[k].p > 0 && (!q || k.indexOf(q) === 0 || (T[k].n || "").toLowerCase().includes(qn)));
+  const raw = $("psq").value, q = normQuery(raw).toUpperCase();      // BRK.B and brk-b both find BRK-B
+  const all = Object.keys(T).sort().filter((k) => T[k].p > 0 && searchMatch(raw, k, T[k].n));
   const keys = all.slice(0, 40);
   const card = $("psCard");
   if (q && T[q] && T[q].p > 0) {
@@ -57,5 +58,5 @@ export function renderExplore() {
   $("psRows").innerHTML = keys.length
     ? keys.map((k) => { const e = T[k]; return `<tr><td><b>${esc(k)}</b>${e.est ? '<span class="badge">estimate</span>' : ""}<div class="sub" title="${esc(e.n)}">${esc(e.n)}</div></td><td class="num hide-s">${money(e.p, 2)}</td><td class="num"><b>${e.d > 0 ? money(per(e), 4) : "—"}</b></td><td class="hide-s">${e.d > 0 ? SCHED_LABEL[e.s] : "No dividend"}</td><td class="num hide-s">${money(e.d, 2)}</td><td class="num hide-s">${pct(e.p > 0 ? e.d / e.p : 0, 2)}</td><td><button class="btn ghost sm" data-add="${esc(k)}" aria-label="Add ${esc(k)} to portfolio">Add</button></td></tr>`; }).join("") +
       (all.length > keys.length ? `<tr><td colspan="7" class="empty">Showing ${keys.length} of ${all.length}. Type to narrow it down.</td></tr>` : "")
-    : '<tr><td colspan="7" class="empty">No match. You can still add any ticker below and enter its numbers yourself.</td></tr>';
+    : `<tr><td colspan="7" class="empty">No match for “${esc(raw.trim())}”.${(() => { const sug = suggestTickers(T, raw, 5); return sug.length ? ` Did you mean ${sug.map((x) => `<button type="button" class="btn ghost sm" data-psq="${esc(x.t)}">${esc(x.t)}</button>`).join(" ")}` : ""; })()} You can still add any ticker in Portfolio and enter its numbers yourself.</td></tr>`;
 }

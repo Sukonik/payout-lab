@@ -2,7 +2,7 @@
 // Dates are shown as day, month and year blocks. Nothing here predicts a split.
 import { $, esc, money, pct } from "./dom.js";
 import { getMarket, sourceTag } from "../core/market.js";
-import { afterSplit, compareTickers, dateParts, filterLedger, getSplits, holdingsWithSplits, kindOf, ledger, priceAfter, ratioLabel, upcomingView, yearGroups } from "../core/splits.js";
+import { afterSplit, compareTickers, dateParts, filterLedger, getSplits, holdingsWithSplits, kindOf, ledger, normQuery, priceAfter, ratioLabel, searchSummary, suggestTickers, upcomingView, yearGroups } from "../core/splits.js";
 
 const PAGE = 60;
 const ui = { kind: "forward", query: "", limit: PAGE, cmpA: "GOOGL", cmpB: "LCID", wi: { shares: 10, a: 20, b: 1 } };
@@ -62,9 +62,10 @@ function upcomingCard(u) {
 }
 
 function renderUpcoming(f) {
-  const list = upcomingView(f, today(), { kind: ui.kind });
+  const list = upcomingView(f, today(), { kind: ui.kind, query: ui.query });
   $("spUp").innerHTML = list.length
     ? `<ul class="sevents">${list.map(upcomingCard).join("")}</ul>`
+    : ui.query ? `<p class="note muted">None of the announced splits match “${esc(ui.query.trim())}”${ui.kind === "all" ? "" : ` in ${ui.kind} splits`}.</p>`
     : `<p class="note muted">No ${ui.kind === "all" ? "" : ui.kind + " "}splits on file that an issuer has announced and not yet carried out${f.upcomingAsOf ? `, as of ${esc(f.upcomingAsOf)}` : ""}. This list is kept by hand from issuer announcements and filings, never predicted. Missing one? Add it to <code>splits.json</code> with a source link.</p>`;
 }
 
@@ -77,7 +78,33 @@ function renderLedger(f, market) {
   $("spLedger").innerHTML = rows.length
     ? groups.map((g) => `<h3 class="syear"><span>${g.year}</span><i>${g.rows.length}</i></h3><ul class="sevents">${g.rows.map(eventCard).join("")}</ul>`).join("") +
       (left > 0 ? `<p class="note muted">Showing the newest ${shown.length} of ${rows.length}. Search a ticker to jump to one.</p><div class="row-actions"><button class="btn" type="button" data-spmore>Show ${Math.min(PAGE, left)} more</button></div>` : "")
-    : `<p class="note muted">${ui.query ? "No splits match that search." : `No ${ui.kind === "all" ? "" : ui.kind + " "}splits recorded yet.`}</p>`;
+    : `<p class="note muted">${ui.query ? `No ${ui.kind === "all" ? "" : ui.kind + " "}split history matches “${esc(ui.query.trim())}”.` : `No ${ui.kind === "all" ? "" : ui.kind + " "}splits recorded yet.`}</p>`;
+}
+
+// Under the search box: what the search found in BOTH kinds, and a next step whenever the list below is empty.
+function renderFind(f, market) {
+  const box = $("spFind"), q = ui.query.trim();
+  if (!q) { box.innerHTML = ""; return; }
+  const sm = searchSummary(f, market.tickers, q, today());
+  const inKind = (o) => (ui.kind === "all" ? o.forward + o.reverse : o[ui.kind]);
+  const here = inKind(sm.history) + inKind(sm.announced);
+  const other = ui.kind === "forward" ? "reverse" : "forward";
+  const otherN = ui.kind === "all" ? 0 : sm.history[other] + sm.announced[other];
+  const T = normQuery(q).toUpperCase(), e = market.tickers[T];
+  const btn = (attrs, label) => `<button type="button" class="btn ghost sm" ${attrs}>${label}</button>`;
+  if (here > 0) {
+    box.innerHTML = `“${esc(q)}” matches <b>${inKind(sm.history)}</b> in history and <b>${inKind(sm.announced)}</b> announced.` + (otherN ? ` ${otherN} ${other} also match. ${btn('data-spkind="all"', "Show both")}` : "");
+    return;
+  }
+  let msg = `Nothing in ${ui.kind === "all" ? "history or announcements" : ui.kind + " splits"} matches “${esc(q)}”.`;
+  if (otherN) msg += ` ${otherN === 1 ? "1 " + other + " split matches." : otherN + " " + other + " splits match."} ${btn('data-spkind="all"', "Show both")}`;
+  else if (e) msg += ` <b>${esc(T)}</b> (${esc(e.n || "")}) is in the price data${e.u ? ` (${esc(sourceTag(e.src))}, ${esc(e.u.slice(0, 10))})` : ""} and has <b>no splits on file</b> and none announced. That means none are recorded in our data, not a guarantee that it never split.`;
+  else {
+    const sug = suggestTickers(market.tickers, q);
+    msg += sug.length ? ` Did you mean ${sug.map((x) => btn(`data-spq="${esc(x.t)}"`, `${esc(x.t)}${x.n ? " · " + esc(x.n.slice(0, 24)) : ""}`)).join(" ")}` : "";
+    if (/^[a-z0-9\-]{1,6}$/i.test(T)) msg += ` ${btn(`data-spexplore="${esc(T)}"`, `Look up ${esc(T)} live`)}`;
+  }
+  box.innerHTML = msg;
 }
 
 function cmpCol(c) {
@@ -123,7 +150,7 @@ export function renderSplits() {
     $("spStatus").innerHTML = `<span class="pill"><i></i>${all} splits, ${Object.keys(f.tickers).length} tickers</span> <span class="pill ${ver === all ? "ok" : "warn"}"><i></i>${ver} cross-checked</span> <span class="pill"><i></i>updated ${esc((f.updated || "").slice(0, 10) || "unknown")}</span>`;
   }
   document.querySelectorAll('input[name="spk"]').forEach((r) => { r.checked = r.value === ui.kind; });
-  renderUpcoming(f); renderLedger(f, market); renderCompare(f, market); renderWhatIf(); renderMine(f, market);
+  renderUpcoming(f); renderLedger(f, market); renderFind(f, market); renderCompare(f, market); renderWhatIf(); renderMine(f, market);
 }
 
 export function initSplits({ holdings }) {
@@ -132,7 +159,7 @@ export function initSplits({ holdings }) {
   view.addEventListener("change", (e) => {
     if (e.target.name === "spk") { ui.kind = e.target.value; ui.limit = PAGE; renderSplits(); }
   });
-  $("spQ").addEventListener("input", (e) => { ui.query = e.target.value; ui.limit = PAGE; const f = getSplits(); renderLedger(f, getMarket()); });
+  $("spQ").addEventListener("input", (e) => { ui.query = e.target.value; ui.limit = PAGE; const f = getSplits(), m = getMarket(); renderUpcoming(f); renderLedger(f, m); renderFind(f, m); });
   $("spCmpA").addEventListener("input", (e) => { ui.cmpA = e.target.value; renderCompare(getSplits(), getMarket()); });
   $("spCmpB").addEventListener("input", (e) => { ui.cmpB = e.target.value; renderCompare(getSplits(), getMarket()); });
   const wi = () => { ui.wi = { shares: Number($("spWiShares").value), a: Number($("spWiA").value), b: Number($("spWiB").value) }; renderWhatIf(); };
@@ -140,6 +167,10 @@ export function initSplits({ holdings }) {
   view.addEventListener("click", (e) => {
     const w = e.target.closest("[data-wi]"), c = e.target.closest("[data-cmp]");
     if (e.target.closest("[data-spmore]")) { ui.limit += PAGE; renderLedger(getSplits(), getMarket()); return; }
+    const kb = e.target.closest("[data-spkind]"), qb = e.target.closest("[data-spq]"), xb = e.target.closest("[data-spexplore]");
+    if (kb) { ui.kind = kb.dataset.spkind; renderSplits(); return; }
+    if (qb) { ui.query = qb.dataset.spq; $("spQ").value = ui.query; ui.limit = PAGE; renderSplits(); return; }
+    if (xb) { const t = xb.dataset.spexplore; location.hash = "#/explore"; $("psq").value = t; $("psq").dispatchEvent(new Event("input")); return; }
     if (w) { const [, a, b] = w.dataset.wi.split("|"); $("spWiA").value = a; $("spWiB").value = b; wi(); $("spWi").scrollIntoView({ behavior: "smooth", block: "center" }); }
     if (c) { ui.cmpB = ui.cmpA; ui.cmpA = c.dataset.cmp; $("spCmpA").value = ui.cmpA; $("spCmpB").value = ui.cmpB; renderCompare(getSplits(), getMarket()); $("spCmp").scrollIntoView({ behavior: "smooth", block: "center" }); }
   });

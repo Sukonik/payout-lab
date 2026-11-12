@@ -563,3 +563,8 @@ dialog button.danger:not(.btn):hover{background:var(--coral);border-color:var(--
 @media (max-width:759px){ .ptable td:first-child{max-width:9.5rem} .ptable .sub{overflow:hidden;text-overflow:ellipsis;white-space:nowrap} .ptable td:last-child{padding-left:4px;padding-right:8px} }
 .addrow.one{grid-template-columns:minmax(0,1fr)}
 @media (min-width:760px){ .addrow.one{grid-template-columns:minmax(0,1fr) auto} }
+.spfind{margin:12px 0 0;line-height:2.2}.spfind:empty{display:none}.spfind .btn{margin:0 4px 0 0;vertical-align:middle}
+/* toast: a rounded card, not a pill (a pill turns long messages into an oval blob) */
+.toast{border-radius:16px;padding:12px 18px;line-height:1.4;text-align:center;box-shadow:var(--shadow)}
+/* report actions: the main one on its own row, the rest evenly spaced beneath */
+@media (max-width:560px){ .rcact{display:grid;grid-template-columns:repeat(4,1fr);gap:8px} .rcact [data-act=compare]{grid-column:1/-1} .rcact .btn{padding:0 6px} }

@@ -187,3 +187,30 @@ test("a done calendar split becomes unverified history for tracked tickers only,
   const g = mk(); g.tickers.ABC.s.push({ d: "2026-10-01", a: 10, b: 1, src: "Tiingo", ver: 1 });
   assert.equal(archiveDone(g, "2026-10-14", new Set(["ABC"])).length, 0, "already in history: not duplicated");
 });
+
+import { normQuery, searchMatch, searchSummary, suggestTickers } from "../js/core/splits.js";
+
+test("search forgives: dots, fragments, company words, but one letter only matches the start", () => {
+  assert.equal(normQuery("  BRK.B "), "brk-b");
+  assert.ok(searchMatch("brk.b", "BRK-B", "Berkshire Hathaway")); assert.ok(searchMatch("goo", "GOOGL", "Alphabet")); assert.ok(searchMatch("oogl", "GOOGL", "Alphabet"));
+  assert.ok(searchMatch("alpha", "GOOGL", "Alphabet Inc.")); assert.ok(searchMatch("hatha", "BRK-B", "Berkshire Hathaway")); assert.ok(searchMatch("inc", "X", "Foo Inc."));
+  assert.ok(searchMatch("", "ANY", "")); assert.ok(searchMatch("g", "GOOGL", "")); assert.ok(!searchMatch("o", "GOOGL", "Alphabet"), "a single letter is not a substring search");
+  assert.ok(!searchMatch("zzz", "GOOGL", "Alphabet"));
+  const rows = ledger(file, { GOOGL: { p: 1 } });
+  assert.deepEqual(filterLedger(rows, { kind: "all", query: "lucid" }).map((r) => r.t), ["LCID"]);
+  assert.deepEqual(filterLedger(rows, { kind: "forward", query: "lucid" }), [], "LCID is reverse: hidden in the forward view");
+});
+
+test("a search is summarised across both kinds, history and announced", () => {
+  const f = sanitizeSplitsFile({ tickers: { LCID: { n: "Lucid Group", s: [{ d: "2025-09-02", a: 1, b: 10 }] }, LUC: { n: "Luc Forward", s: [{ d: "2024-01-02", a: 2, b: 1 }] } }, upcoming: [{ t: "LUCKY", n: "Lucky Co", a: 4, b: 1, exDate: "2026-12-01", status: "announced" }, { t: "LUCR", a: 1, b: 5, exDate: "2026-12-02", status: "announced" }] });
+  const s = searchSummary(f, {}, "luc", "2026-11-12");
+  assert.deepEqual(s, { history: { forward: 1, reverse: 1 }, announced: { forward: 1, reverse: 1 } });
+  assert.deepEqual(searchSummary(f, {}, "nothing", "2026-11-12"), { history: { forward: 0, reverse: 0 }, announced: { forward: 0, reverse: 0 } });
+  assert.deepEqual(searchSummary(f, {}, "lucky", "2027-01-01").announced, { forward: 0, reverse: 0 }, "past announcements are not counted");
+});
+
+test("when nothing matches, close symbols and names are suggested best-first", () => {
+  const m = { SNDK: { n: "Sandisk" }, SNY: { n: "Sanofi" }, SAND: { n: "Sandstorm Gold" }, KO: { n: "Coca-Cola" }, SANM: { n: "Sanmina" } };
+  assert.deepEqual(suggestTickers(m, "san").map((x) => x.t), ["SAND", "SANM", "SNDK", "SNY"], "ticker prefixes first, then names that start with it");
+  assert.equal(suggestTickers(m, "sndk")[0].t, "SNDK"); assert.equal(suggestTickers(m, "coca")[0].t, "KO"); assert.deepEqual(suggestTickers(m, "qqq"), []); assert.equal(suggestTickers(m, "san", 2).length, 2);
+});

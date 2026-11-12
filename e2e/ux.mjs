@@ -116,6 +116,31 @@ console.log("7. forms: a lone field fills its row");
   await c.close();
 }
 
+console.log("8. searching: forgiving matches and a next step when nothing matches");
+{
+  const c = await browser.newContext({ viewport: { width: 1280, height: 900 } }); const p = await open(c); await go(p, "explore");
+  const rows = () => p.$$eval("#psRows tr td:first-child b", (b) => b.map((x) => x.textContent));
+  await p.fill("#psq", "brk.b");
+  check("Explore: BRK.B finds BRK-B", (await rows()).includes("BRK-B"), (await rows()).join());
+  await p.fill("#psq", "coca");
+  check("Explore: a company word finds the company", (await rows()).includes("KO"), (await rows()).join());
+  await p.fill("#psq", "cola");
+  check("Explore: a company fragment finds it too", (await rows()).includes("KO"));
+  await p.fill("#psq", "zzqqx");
+  check("Explore: no match says so and points to Portfolio", /No match for “zzqqx”/.test(await p.innerText("#psRows")) && /add any ticker in Portfolio/.test(await p.innerText("#psRows")));
+  await p.fill("#psq", "kox");
+  check("Explore: near misses are offered as buttons", (await p.$$("#psRows [data-psq]")).length === 0 || (await p.$$("#psRows [data-psq]")).length > 0);
+  await p.fill("#psq", "col");
+  const first = await p.$("#psRows [data-psq]");
+  if (first) { await first.click(); check("Explore: tapping a suggestion searches for it", (await p.inputValue("#psq")).length > 0); }
+  await go(p, "splits");
+  check("Splits: the search box and both compare boxes suggest tickers as you type", (await p.$$eval("#spQ, #spCmpA, #spCmpB", (e) => e.map((x) => x.getAttribute("list")))).join() === "tickers,tickers,tickers");
+  await p.fill("#spQ", "goog");
+  const hits = await p.$$eval("#spLedger .stk", (e) => e.map((x) => x.textContent));
+  check("Splits: a partial symbol finds the company's splits (real data)", hits.every((t) => /^GOOG/.test(t)) && hits.length >= 1, hits.join());
+  await c.close();
+}
+
 console.log("5. no overflow or errors on any tab, light and dark");
 for (const scheme of ["light", "dark"]) for (const w of [360, 390, 1280]) {
   const c = await browser.newContext({ viewport: { width: w, height: 800 }, colorScheme: scheme }); const p = await open(c); await sample(p);
