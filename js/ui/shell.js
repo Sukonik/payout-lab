@@ -45,8 +45,24 @@ export function currentTheme() {
   try { const t = localStorage.getItem(THEME_KEY); if (t === "light" || t === "dark") return t; } catch { /* ignore */ }
   return "auto";
 }
+// The page's real theme right now, whether chosen or following the device.
+export const effectiveTheme = () => {
+  const t = document.documentElement.getAttribute("data-theme");
+  if (t === "light" || t === "dark") return t;
+  return window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+};
+export function syncThemeButton() {
+  const b = $("themeBtn"); if (!b) return;
+  const dark = effectiveTheme() === "dark";
+  $("themeIco").innerHTML = icon(dark ? "sun" : "moon", 22);
+  b.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+  b.title = dark ? "Switch to light mode" : "Switch to dark mode";
+}
+export function toggleTheme() { applyTheme(effectiveTheme() === "dark" ? "light" : "dark"); }
 export function applyTheme(mode) {
   const root = document.documentElement;
   if (mode === "light" || mode === "dark") root.setAttribute("data-theme", mode); else root.removeAttribute("data-theme");
   try { if (mode === "auto") localStorage.removeItem(THEME_KEY); else localStorage.setItem(THEME_KEY, mode); } catch { /* ignore */ }
+  syncThemeButton();
+  document.querySelectorAll('input[name="theme"]').forEach((r) => { r.checked = r.value === mode; });
 }

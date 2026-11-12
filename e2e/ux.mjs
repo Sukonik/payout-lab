@@ -1,0 +1,96 @@
+import path from "node:path";
+import { launch, serve, check, done } from "./lib.mjs";
+
+const root = path.resolve(new URL("..", import.meta.url).pathname);
+const { server, url } = await serve(root);
+const browser = await launch();
+const errors = [];
+const open = async (c, hash = "#/portfolio") => { const p = await c.newPage(); p.on("pageerror", (e) => errors.push(e.message)); await p.goto(url + hash); await p.waitForFunction(() => document.documentElement.dataset.ready); return p; };
+const go = async (p, v) => { await p.evaluate((h) => { location.hash = h; }, "#/" + v); await p.waitForSelector(`#view-${v}:not([hidden])`); };
+const sample = async (p) => { await p.click("#sampleBtn"); await p.waitForSelector("#rows .hrow"); };
+const midY = (p, sel) => p.$eval(sel, (e) => { const r = e.getBoundingClientRect(); return r.top + r.height / 2; });
+
+console.log("1. light and dark: a visible toggle that works, remembers, and matches the Settings choice");
+for (const scheme of ["light", "dark"]) {
+  const c = await browser.newContext({ viewport: { width: 1280, height: 860 }, colorScheme: scheme }); const p = await open(c);
+  const lbl = await p.getAttribute("#themeBtn", "aria-label");
+  check(`${scheme} device: the button offers the opposite mode`, lbl === (scheme === "light" ? "Switch to dark mode" : "Switch to light mode"), lbl);
+  const bg1 = await p.evaluate(() => getComputedStyle(document.body).backgroundColor);
+  await p.click("#themeBtn");
+  const t = await p.evaluate(() => document.documentElement.getAttribute("data-theme"));
+  const bg2 = await p.evaluate(() => getComputedStyle(document.body).backgroundColor);
+  check(`${scheme}: one click flips the whole page`, t === (scheme === "light" ? "dark" : "light") && bg1 !== bg2, `${t} ${bg1} ${bg2}`);
+  check("the choice is remembered", (await p.evaluate(() => localStorage.getItem("payoutlab.theme"))) === t);
+  await p.reload(); await p.waitForFunction(() => document.documentElement.dataset.ready);
+  check("and survives a reload", (await p.evaluate(() => document.documentElement.getAttribute("data-theme"))) === t);
+  await p.click("#settingsBtn"); await p.waitForSelector("#settings[open]");
+  check("Settings shows the same choice", await p.isChecked(`input[name=theme][value=${t}]`, { force: true }).catch(() => p.$eval(`input[name=theme][value=${t}]`, (e) => e.checked)));
+  await p.check('input[name="theme"][value="auto"]', { force: true });
+  check("Auto returns to the device setting", (await p.evaluate(() => document.documentElement.getAttribute("data-theme"))) === null && (await p.getAttribute("#themeBtn", "aria-label")) === lbl);
+  await c.close();
+}
+{
+  const c = await browser.newContext({ viewport: { width: 1280, height: 860 } }); const p = await open(c);
+  check("the settings icon is no longer a sun", !(await p.$eval("#gearIco", (e) => e.innerHTML)).includes("M12 2.8v2.4"));
+  await c.close();
+}
+
+console.log("2. header buttons are centred and level");
+for (const w of [390, 1280]) {
+  const c = await browser.newContext({ viewport: { width: w, height: 800 } }); const p = await open(c);
+  const ys = await Promise.all(["#saveBtn", "#themeBtn", "#settingsBtn", "#tagBtn"].map((s) => midY(p, s)));
+  check(`${w}px: save, theme, settings and the portfolio tag share one centre line`, Math.max(...ys) - Math.min(...ys) <= 1.5, ys.join(","));
+  const ico = await p.$$eval("#themeBtn, #settingsBtn", (b) => b.map((x) => { const r = x.getBoundingClientRect(), i = x.querySelector("svg").getBoundingClientRect(); return [Math.abs(r.left + r.width / 2 - (i.left + i.width / 2)), Math.abs(r.top + r.height / 2 - (i.top + i.height / 2))]; }).flat());
+  check(`${w}px: icons sit in the middle of their buttons`, ico.every((d) => d <= 1), ico.join(","));
+  if (w === 390) check("the portfolio tag is not cut off", await p.$eval(".tag-status", (e) => e.scrollWidth <= e.clientWidth + 1), await p.$eval(".tag-status", (e) => `${e.scrollWidth}>${e.clientWidth}`));
+  await c.close();
+}
+{
+  const c = await browser.newContext({ viewport: { width: 360, height: 740 } }); const p = await open(c);
+  check("360px: the portfolio tag is still not cut off", await p.$eval(".tag-status", (e) => e.scrollWidth <= e.clientWidth + 1));
+  await c.close();
+}
+
+console.log("3. holdings: nothing is clipped, values line up, buttons look like buttons");
+for (const w of [390, 820, 1100, 1280]) {
+  const c = await browser.newContext({ viewport: { width: w, height: 900 } }); const p = await open(c); await sample(p);
+  const bad = await p.$$eval("#rows .hrow", (rows) => {
+    const out = [];
+    for (const r of rows) {
+      if (r.scrollWidth > r.clientWidth + 1) out.push("row overflows");
+      for (const e of r.querySelectorAll("input")) if (e.scrollWidth > e.clientWidth + 1) out.push("input clipped " + e.dataset.k);
+      for (const s of r.querySelectorAll("select")) { const o = s.options[s.selectedIndex].text; const c = document.createElement("canvas").getContext("2d"); c.font = getComputedStyle(s).font; const need = c.measureText(o).width + 30; if (need > s.clientWidth + 2) out.push(`select too narrow ${s.dataset.k} ${Math.round(need)}>${s.clientWidth}`); }
+      const rm = r.querySelector(".x").getBoundingClientRect(), rr = r.getBoundingClientRect(); if (rm.right > rr.right + 1) out.push("remove button outside the row");
+    }
+    return out;
+  });
+  check(`${w}px: no clipped fields, no overflow`, bad.length === 0, [...new Set(bad)].slice(0, 4).join("; "));
+  const al = await p.$$eval('#rows .hrow input[data-k="shares"]', (i) => i.map((x) => getComputedStyle(x).textAlign));
+  check(`${w}px: number fields are all right-aligned`, al.every((a) => a === "right"), al.join());
+  const x = await p.$eval(".x", (e) => { const r = e.getBoundingClientRect(), g = e.getBoundingClientRect(); return [r.width, r.height]; });
+  check(`${w}px: remove button is at least 36px`, x[0] >= 36 && x[1] >= 36, x.join("x"));
+  const ghost = await p.$eval("#sampleBtn", (e) => getComputedStyle(e).borderTopWidth + " " + getComputedStyle(e).borderTopColor);
+  check(`${w}px: Try sample reads as a button (has a border)`, !/^0px/.test(ghost) && !/rgba\(0, 0, 0, 0\)/.test(ghost), ghost);
+  await c.close();
+}
+
+console.log("4. segmented controls keep each label on one line");
+{
+  const c = await browser.newContext({ viewport: { width: 390, height: 800 } }); const p = await open(c);
+  await p.click("#settingsBtn"); await p.waitForSelector("#settings[open]");
+  const hs = await p.$$eval('#settings .seg span', (s) => s.map((x) => Math.round(x.getBoundingClientRect().height)));
+  check("Appearance options are all the same height (no wrapped label)", new Set(hs).size === 1, hs.join());
+  check("the first option says Auto", /Auto/.test(await p.innerText("#settings .seg label")));
+  await c.close();
+}
+
+console.log("5. no overflow or errors on any tab, light and dark");
+for (const scheme of ["light", "dark"]) for (const w of [360, 390, 1280]) {
+  const c = await browser.newContext({ viewport: { width: w, height: 800 }, colorScheme: scheme }); const p = await open(c); await sample(p);
+  const bad = [];
+  for (const v of ["overview", "portfolio", "lab", "receipts", "explore", "splits"]) { await go(p, v); if (await p.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1)) bad.push(v); }
+  check(`${scheme} ${w}px: no sideways scroll on any tab`, bad.length === 0, bad.join());
+  await c.close();
+}
+check("no page errors", errors.length === 0, errors.join("|"));
+await browser.close(); server.close(); done();
