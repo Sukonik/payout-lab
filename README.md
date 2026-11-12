@@ -67,7 +67,7 @@ Things to know:
 
 ## Privacy and cost
 
-- **Nothing you enter is uploaded.** Calculations, packets, CSV parsing and storage all run in the browser. The page makes no third-party requests (system fonts, no trackers, no analytics).
+- **Nothing you enter is uploaded.** Calculations, packets, CSV parsing and storage all run in the browser. The page makes no third-party requests on its own (system fonts, no trackers, no analytics). The one exception is opt-in: if you press **Refresh now** or **Look up live**, the ticker symbols you asked about go to the quote provider (or your own proxy); never your holdings or shares, and Settings can turn it off. [Details](docs/live-lookup.md).
 - **$0 to run.** GitHub Pages hosts the static files; a free GitHub Action refreshes public data. There is no database, no per-user backend and no paid service. A custom domain is optional. If the site moves to a new web address, the copies remembered in the browser do not move, so save a packet first.
 - **Browser support.** Current Chrome, Edge and Firefox, and Safari or iOS 16.4 and later (the app uses `<dialog>`, `:has()` and ES modules, with fallbacks for `color-mix`). The automated checks run in **Chromium only**, including phone-size emulation. It has **not yet been verified on a physical iPhone or in Safari or Firefox**.
 

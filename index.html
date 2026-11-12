@@ -379,7 +379,7 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
     <h3>Live lookups</h3>
     <label class="switch"><input type="checkbox" id="liveChk"><span class="track" aria-hidden="true"></span><span>Allow live lookups</span></label>
     <p class="privacy">When you press <b>Refresh now</b> or <b>Look up live</b>, your browser asks Yahoo Finance for the tickers you chose, and nothing else. Turn this off and the site only ever reads its own daily price file.</p>
-    <label class="f">Your own lookup proxy (optional)<input id="proxyIn" type="url" inputmode="url" autocomplete="off" spellcheck="false" placeholder="https://your-worker.example.workers.dev"></label>
+    <label class="f">Your own lookup proxy (optional)<input id="proxyIn" type="url" inputmode="url" autocomplete="off" spellcheck="false" placeholder="Your proxy address (starts with https)"></label>
     <div class="row-actions tight"><button class="btn sm" id="liveTest">Test live lookup</button></div>
     <p class="privacy" id="liveTestNote" aria-live="polite"></p>
   </section>
