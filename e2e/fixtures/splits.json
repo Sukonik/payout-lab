@@ -1,0 +1,185 @@
+{
+ "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
+ "updated": "2026-10-14T00:00:00.000Z",
+ "upcomingAsOf": "2026-10-14",
+ "tickers": {
+  "GOOGL": {
+   "n": "Alphabet Inc. (Class A)",
+   "s": [
+    {
+     "d": "2022-07-18",
+     "a": 20,
+     "b": 1,
+     "src": "public record, cross-checked",
+     "ver": 1
+    }
+   ],
+   "u": null
+  },
+  "NFLX": {
+   "n": "Netflix",
+   "s": [
+    {
+     "d": "2025-11-17",
+     "a": 10,
+     "b": 1,
+     "src": "public record, cross-checked",
+     "ver": 1
+    }
+   ],
+   "u": null
+  },
+  "ORLY": {
+   "n": "O'Reilly Automotive",
+   "s": [
+    {
+     "d": "2025-06-10",
+     "a": 15,
+     "b": 1,
+     "src": "public record, cross-checked",
+     "ver": 1
+    }
+   ],
+   "u": null
+  },
+  "LCID": {
+   "n": "Lucid Group",
+   "s": [
+    {
+     "d": "2025-09-02",
+     "a": 1,
+     "b": 10,
+     "src": "public record, cross-checked",
+     "ver": 1
+    }
+   ],
+   "u": null
+  },
+  "AAPL": {
+   "n": "Apple",
+   "s": [
+    {
+     "d": "2014-06-09",
+     "a": 7,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    },
+    {
+     "d": "2020-08-31",
+     "a": 4,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "NVDA": {
+   "n": "NVIDIA",
+   "s": [
+    {
+     "d": "2021-07-20",
+     "a": 4,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    },
+    {
+     "d": "2024-06-10",
+     "a": 10,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "TSLA": {
+   "n": "Tesla",
+   "s": [
+    {
+     "d": "2020-08-31",
+     "a": 5,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    },
+    {
+     "d": "2022-08-25",
+     "a": 3,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "AMZN": {
+   "n": "Amazon",
+   "s": [
+    {
+     "d": "2022-06-06",
+     "a": 20,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "AVGO": {
+   "n": "Broadcom",
+   "s": [
+    {
+     "d": "2024-07-15",
+     "a": 10,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "CMG": {
+   "n": "Chipotle",
+   "s": [
+    {
+     "d": "2024-06-26",
+     "a": 50,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "WMT": {
+   "n": "Walmart",
+   "s": [
+    {
+     "d": "2024-02-26",
+     "a": 3,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  },
+  "SMCI": {
+   "n": "Super Micro Computer",
+   "s": [
+    {
+     "d": "2024-10-01",
+     "a": 10,
+     "b": 1,
+     "src": "public record, not yet cross-checked",
+     "ver": 0
+    }
+   ],
+   "u": null
+  }
+ },
+ "upcoming": []
+}
