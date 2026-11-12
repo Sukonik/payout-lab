@@ -1,7 +1,7 @@
 // "Market data" card and the review-updates sheet. Nothing here changes a holding until the user applies a choice.
 import { $, esc, money, shortDate } from "./dom.js";
 import { SCHED_LABEL } from "../core/calc.js";
-import { SRC_LABEL } from "../core/market.js";
+import { sourceTag } from "../core/market.js";
 import { choose } from "./dialogs.js";
 
 export function renderDataCard({ packet, market, plan, liveOff = false }) {
@@ -11,7 +11,7 @@ export function renderDataCard({ packet, market, plan, liveOff = false }) {
   else if (!packet.holdings.length) { pill.className = "pill"; pill.innerHTML = "<i></i>No holdings"; }
   else if (n > 0) { pill.className = "pill warn"; pill.innerHTML = `<i></i>${n} update${n > 1 ? "s" : ""} available`; }
   else { pill.className = "pill ok"; pill.innerHTML = "<i></i>Up to date"; }
-  const when = market.loaded && market.updated ? `${shortDate(market.updated)}${market.source ? ", " + esc(market.source) : ""}` : "not available";
+  const when = market.loaded && market.updated ? `${shortDate(market.updated)}${market.source ? ", " + esc(market.source.split(" + ").map(sourceTag).join(" + ")) : ""}` : "not available";
   $("dataLede").innerHTML = `The daily price file was last updated ${when}. <b>Refresh now</b> asks the provider for your holdings right now; <b>Check for updates</b> only re-reads the daily file. Your portfolio keeps its <b>own copy</b> of each value and the date it was observed. Nothing changes until you review updates and apply them.`;
   $("liveBtn").hidden = liveOff;
   document.querySelectorAll('input[name="basis"]').forEach((r) => { r.checked = r.value === packet.settings.dividendBasis; });
@@ -30,7 +30,7 @@ export async function reviewUpdates(plan, market) {
   const label = (r) => `<h3>${esc(r.ticker)} <small class="muted">${esc(r.name || "")}</small>${r.obs?.stale ? ` <span class="pill warn"><i></i>Provider data ${r.obs.ageDays} days old</span>` : ""}</h3>`;
   const rows = real.map((r) => `<section class="rv-row">${label(r)}` +
     r.changes.filter((c) => c.kind !== "confirm").map((c) => {
-      const prov = `${esc(SRC_LABEL[r.obs?.provider] || "")} · ${esc(shortDate(r.obs?.asOf))}`;
+      const prov = `${esc(sourceTag(r.obs?.provider))} · ${esc(shortDate(r.obs?.asOf))}`;
       const what = c.kind === "protected"
         ? `<span class="muted">${esc(({ price: "Price", dividend: "Dividend", schedule: "Schedule" })[c.field])}: yours</span> <b>${esc(fmt(c.field, c.from))}</b> <span class="muted">· data says</span> <b>${esc(fmt(c.field, c.to))}</b> <span class="chipsrc manual">Replace yours</span>`
         : `<span class="muted">${esc(({ price: "Price", dividend: c.extra?.basis === "indicated" ? "Dividend (current rate)" : "Dividend (12 months)", schedule: "Pay months" })[c.field])}</span> ${esc(fmt(c.field, c.from))} → <b>${esc(fmt(c.field, c.to))}</b>`;

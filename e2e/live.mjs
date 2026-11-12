@@ -7,7 +7,7 @@ const browser = await launch();
 const errors = [], yahoo = [], other = [];
 const day = (n) => new Date(Date.now() - n * 864e5).toISOString();
 const entry = (o) => ({ n: "Name", p: 100, d: 4, s: "Q3", q: true, src: "Yahoo Finance", u: day(9), last: day(30).slice(0, 10), per: 1, ...o });
-const market = { updated: day(9), source: "Yahoo Finance", tickers: { AAA: entry({ n: "Alpha Corp" }), BBB: entry({ n: "Bravo Fund", p: 50, d: 2, per: 0.5 }) } };
+const market = { updated: day(9), source: "Yahoo Finance", tickers: { AAA: entry({ n: "Alpha Corp" }), BBB: entry({ n: "Bravo Fund", p: 50, d: 2, per: 0.5, src: "Tiingo" }) } };
 const sec = (n) => Math.floor((Date.now() - n * 864e5) / 1000);
 const chart = (price, { divs = [[200, 0.3], [110, 0.3], [20, 0.3]], name = "Live Co", cur = "USD", type = "EQUITY" } = {}) => ({ chart: { result: [{ meta: { regularMarketPrice: price, longName: name, currency: cur, instrumentType: type }, events: { dividends: Object.fromEntries(divs.map(([d, a], i) => [i, { date: sec(d), amount: a }])), splits: {} } }] } });
 const LIVE = { AAPL: chart(300, { name: "Apple" }), AAA: chart(120, { name: "Alpha Corp" }), BBB: chart(55, { name: "Bravo Fund", type: "ETF" }), SNDK: chart(1004.7, { divs: [], name: "Sandisk Corporation" }), JPY: chart(900, { cur: "JPY" }) };
@@ -40,6 +40,7 @@ await add(p, "AAA", 100); await add(p, "BBB", 40); await settle(p);
 await go(p, "explore"); await p.fill("#psq", "SNDK"); await go(p, "splits"); await go(p, "portfolio");
 check("loading, adding holdings and browsing sent nothing to the provider", yahoo.length === 0, String(yahoo.length));
 check("the stale rows say so", /stale/.test(await p.innerText("#rows")));
+check("each row names its source and whether it is main or secondary", /Yahoo Finance · main data source/.test(await p.innerText("#rows")) && /Tiingo · secondary data source/.test(await p.innerText("#rows")), await p.innerText("#rows"));
 
 console.log("2. Refresh now pulls the holdings you have, and only their tickers");
 await p.click("#liveBtn"); await p.waitForSelector("dialog[open] .rv-list");
@@ -50,6 +51,7 @@ check("the review sheet shows the new price for AAA and says where it came from"
 await p.click('dialog[open] [data-result="apply"]'); await gone(p);
 const a = await row(p, "AAA");
 check("applying updates the holding, labelled live and no longer stale", a.price === "120" && /Yahoo Finance \(live\)|Yahoo Finance/.test(a.chip) && !/stale/.test(a.chip), JSON.stringify(a));
+check("after a live refresh the second holding is on the main source too", !/secondary data source/.test(await p.innerText("#rows")) && /Yahoo Finance \(live\)? ?· ?main data source|Yahoo Finance · main data source|Yahoo Finance \(live\) · main data source/.test(await p.innerText("#rows")), await p.innerText("#rows"));
 check("the live note says what happened", /Live refresh .*2 of 2 refreshed/.test(await p.innerText("#liveNote")), await p.innerText("#liveNote"));
 
 console.log("3. when the browser blocks the provider, say so and change nothing");

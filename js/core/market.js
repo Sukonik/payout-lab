@@ -7,6 +7,20 @@ export const SRC_LABEL = {
   tiingo: "Tiingo", yahoo: "Yahoo Finance", seed: "Starter estimate", user: "You", csv: "CSV import", legacy: "Earlier version", data: "Payout Lab data",
 };
 
+// Several sources may feed the app, but exactly one is the main data source; the rest are named and labelled secondary.
+// Works for a provider key ("yahoo"), a data-file source ("Yahoo Finance", "Yahoo Finance (live)") or a calendar ("Nasdaq calendar").
+export const MAIN_SOURCE = "Yahoo Finance";
+export function sourceRole(src) {
+  const k = String(src ?? "").toLowerCase();
+  if (k.startsWith("yahoo")) return "main";
+  if (k.startsWith("tiingo") || k.startsWith("nasdaq") || k.startsWith("sec")) return "secondary";
+  return null;                                   // starter estimates, your own numbers, CSV imports are not data sources
+}
+export const sourceName = (src) => SRC_LABEL[src] || String(src ?? "");
+export const ROLE_TEXT = { main: "main data source", secondary: "secondary data source" };
+// "Yahoo Finance (main data source)"
+export function sourceTag(src) { const r = sourceRole(src); return r ? `${sourceName(src)} (${ROLE_TEXT[r]})` : sourceName(src); }
+
 // Used only if data.json cannot be loaded, so the sample portfolio still works offline. Marked as estimates.
 const FALLBACK = {
   SCHD: { n: "Schwab US Dividend Equity ETF", p: 27.5, d: 1.03, s: "Q3", q: true },

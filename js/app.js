@@ -4,7 +4,7 @@ import {
 } from "./core/packet.js";
 import { LEGACY_KEY, openStore } from "./core/store.js";
 import { inc, num, perPay, totals } from "./core/calc.js";
-import { getMarket, loadMarket, sanitizeEntry } from "./core/market.js";
+import { getMarket, loadMarket, sanitizeEntry, sourceTag } from "./core/market.js";
 import { applyRefreshPlan, buildRefreshPlan } from "./core/refresh.js";
 import { addHolding, editField, loadSample, removeHolding, toCalc } from "./core/portfolio.js";
 import { $, ago, clock, dateTime, esc, money, pct } from "./ui/dom.js";
@@ -620,7 +620,7 @@ async function fillSettings() {
     : `Kept in this browser (${state.store.kind === "indexeddb" ? "IndexedDB" : "local storage"}). Clearing site data removes it, so keep a packet as your backup. Browser sync for bookmarks or passwords does not sync this portfolio.${await persistNote()}`;
   $("forgetBtn").hidden = !(state.onDevice && state.store.persistent);
   const m = state.market;
-  $("aboutNote").textContent = `Payout Lab ${APP_VERSION}. Public prices ${m?.loaded && m.updated ? "updated " + m.updated.slice(0, 10) + (m.source ? " · " + m.source : "") : "are starter estimates (not live)"}. Open source (MPL-2.0).`;
+  $("aboutNote").textContent = `Payout Lab ${APP_VERSION}. Public prices ${m?.loaded && m.updated ? "updated " + m.updated.slice(0, 10) + (m.source ? " · " + m.source.split(" + ").map(sourceTag).join(" + ") : "") : "are starter estimates (not live)"}. Open source (MPL-2.0).`;
 }
 
 // ---------- wiring ----------

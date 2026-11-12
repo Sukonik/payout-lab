@@ -1,7 +1,7 @@
 // Per-share ticker research (the "what does it pay per share?" search).
 import { $, esc, money, pct } from "./dom.js";
 import { SCHED, SCHED_LABEL } from "../core/calc.js";
-import { dividendHint, getMarket, indicatedAnnual } from "../core/market.js";
+import { dividendHint, getMarket, indicatedAnnual, sourceTag } from "../core/market.js";
 import { looksLikeTicker } from "../core/live.js";
 
 // The app tells this module whether live lookups are on, and what the last lookup for a ticker said.
@@ -48,7 +48,7 @@ export function renderExplore() {
         (hint ? `<p class="note">${esc(hint)}</p>` : "") +
         histHtml(e) +
         `<p class="note">100 shares would pay about ${money(pp * 100, 2)} each time and ${money(e.d * 100, 2)} over the last 12 months.</p>` +
-        `<p class="note muted">Months come from ex-dividend dates; cash usually arrives a few weeks later and exact pay dates are not available yet. Special one-time payments are not separated from regular ones.</p>`
+        `<p class="note muted">Source: ${esc(sourceTag(e.src))}${e.u ? `, ${esc(e.u.slice(0, 10))}` : ""}. Months come from ex-dividend dates; cash usually arrives a few weeks later and exact pay dates are not available yet. Special one-time payments are not separated from regular ones.</p>`
       : `<div class="psbig"><div><span>${esc(q)}</span><b>No dividend</b></div></div><p class="note">No dividend was reported for this ticker in the last 12 months.</p>`;
   } else if (q && !(T[q] && T[q].p > 0) && looksLikeTicker(q) && liveAllowed()) {
     const msg = liveMessage(q);

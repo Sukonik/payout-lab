@@ -42,3 +42,17 @@ test("one staleness rule everywhere: the overview and the review sheet agree", (
     assert.equal(ageDays(asOf, now) > STALE_DAYS, stale);
   }
 });
+
+import { MAIN_SOURCE, sourceRole, sourceTag } from "../js/core/market.js";
+
+test("one source is the main data source; the others are named and labelled secondary", () => {
+  assert.equal(MAIN_SOURCE, "Yahoo Finance");
+  for (const s of ["yahoo", "Yahoo Finance", "Yahoo Finance (live)"]) assert.equal(sourceRole(s), "main", s);
+  for (const s of ["tiingo", "Tiingo", "Nasdaq calendar", "SEC EDGAR"]) assert.equal(sourceRole(s), "secondary", s);
+  for (const s of ["seed", "user", "csv", "legacy", "", null, undefined]) assert.equal(sourceRole(s), null, String(s));
+  assert.equal(sourceTag("yahoo"), "Yahoo Finance (main data source)");
+  assert.equal(sourceTag("Yahoo Finance (live)"), "Yahoo Finance (live) (main data source)");
+  assert.equal(sourceTag("tiingo"), "Tiingo (secondary data source)");
+  assert.equal(sourceTag("Nasdaq calendar"), "Nasdaq calendar (secondary data source)");
+  assert.equal(sourceTag("user"), "You", "your own numbers are not a data source");
+});
