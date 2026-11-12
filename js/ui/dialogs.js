@@ -21,7 +21,7 @@ function open(html, { onMount, className } = {}) {
 }
 
 export function confirmDialog({ title, body, ok = "OK", cancel = "Cancel", danger = false }) {
-  return open(`<h2>${esc(title)}</h2><p>${body}</p><div class="btns"><button data-result="cancel">${esc(cancel)}</button><button class="primary" data-result="ok"${danger ? ' style="background:var(--red);border-color:var(--red)"' : ""}>${esc(ok)}</button></div>`).then((r) => r === "ok");
+  return open(`<h2>${esc(title)}</h2><p>${body}</p><div class="btns"><button data-result="cancel">${esc(cancel)}</button><button class="${danger ? "primary danger" : "primary"}" data-result="ok">${esc(ok)}</button></div>`).then((r) => r === "ok");
 }
 
 export function askText({ title, label, value = "", ok = "Save", max = 80 }) {
