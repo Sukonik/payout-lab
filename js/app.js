@@ -4,15 +4,16 @@ import {
 } from "./core/packet.js";
 import { LEGACY_KEY, openStore } from "./core/store.js";
 import { inc, num, perPay, totals } from "./core/calc.js";
-import { getMarket, loadMarket } from "./core/market.js";
+import { getMarket, loadMarket, sanitizeEntry } from "./core/market.js";
 import { applyRefreshPlan, buildRefreshPlan } from "./core/refresh.js";
 import { addHolding, editField, loadSample, removeHolding, toCalc } from "./core/portfolio.js";
 import { $, ago, clock, dateTime, esc, money, pct } from "./ui/dom.js";
 import { askText, choose, confirmDialog, toast } from "./ui/dialogs.js";
 import { renderAdd, renderConc, renderCut, renderGoal, renderTax } from "./ui/panels.js";
-import { fillTickers, renderExplore } from "./ui/explore.js";
+import { fillTickers, renderExplore, setLiveHooks } from "./ui/explore.js";
+import { LIVE, normalizeProxy, pullLive } from "./core/live.js";
 import { initSplits, renderSplits } from "./ui/splits.js";
-import { loadSplits } from "./core/splits.js";
+import { applyFeedSplits, getSplits, loadSplits } from "./core/splits.js";
 import { renderDataCard, reviewUpdates } from "./ui/data.js";
 import { TEMPLATE_CSV, applyImportPlan, holdingsToCsv } from "./core/csv.js";
 import { openCsvImport } from "./ui/csvimport.js";
@@ -141,7 +142,7 @@ function currentPlan() { return buildRefreshPlan(state.packet, state.market.tick
 function renderAnalysis() {
   const hs = toCalc(state.packet), S = state.packet.settings, T = totals(hs);
   state.plan = currentPlan();
-  renderDataCard({ packet: state.packet, market: state.market, plan: state.plan });
+  renderDataCard({ packet: state.packet, market: state.market, plan: state.plan, liveOff: !liveAllowed() });
   $("tVal").textContent = money(T.value); $("tInc").textContent = money(T.income); $("tMo").textContent = money(T.income / 12); $("tYld").textContent = pct(T.yield, 2);
   hs.forEach((h, i) => { const c = $("inc" + i); if (c) c.textContent = money(inc(h)); const d = $("pp" + i); if (d) d.textContent = money(perPay(h), 4); });
   renderOverview({ packet: state.packet, hs, T, selectedMonth: state.selectedMonth, plan: state.plan });
@@ -407,6 +408,88 @@ async function startScreen(mode) {
   showGate({ mode, packet: state.packet, meta: state.meta, list: state.localList, persistent: state.store.persistent, on });
 }
 
+// ---------- live lookups: ask the provider, from this browser, for tickers you chose ----------
+const liveAllowed = () => state.app.liveLookups !== false;
+const liveProxy = () => normalizeProxy(state.app.liveProxy);
+const lastLive = new Map();            // ticker -> last failure message, so the Explore card can say why
+
+function applyLive(res) {
+  const M = getMarket(), S = getSplits(), today = nowIso().slice(0, 10);
+  for (const [t, r] of res.results) {
+    if (!r.ok) { lastLive.set(t, r.message); continue; }
+    lastLive.delete(t);
+    const e = sanitizeEntry(t, r.entry);
+    if (e) { M.tickers[t] = e; M.loaded = true; }
+    if (S.loaded && applyFeedSplits(S, t, r.name || e?.n, r.splits, today)) { /* history changed: the Splits tab re-renders below */ }
+  }
+}
+
+function liveSummary(res) {
+  const bits = [`${res.ok} of ${res.total} refreshed`];
+  const nf = res.failed.filter((r) => r.code === "not_found").length, other = res.failed.length - nf;
+  if (nf) bits.push(`${nf} not found`);
+  if (other) bits.push(`${other} failed`);
+  return bits.join(", ");
+}
+
+async function refreshLive() {
+  const btn = $("liveBtn");
+  if (!liveAllowed()) { toast("Live lookups are turned off in Settings."); return; }
+  const tickers = [...new Set(state.packet.holdings.map((h) => h.ticker))];
+  btn.disabled = true; const label = btn.textContent;
+  try {
+    btn.textContent = "Refreshing…";
+    await Promise.all([loadMarket(), loadSplits()]);
+    state.market = getMarket();
+    let note = "";
+    if (tickers.length) {
+      const res = await pullLive(tickers.slice(0, LIVE.maxTickers), { proxy: liveProxy(), prevOf: (t) => getMarket().tickers[t] ?? null, onProgress: (d, n) => { btn.textContent = `Refreshing ${d} of ${n}…`; } });
+      applyLive(res);
+      if (res.blocked) {
+        $("liveNote").textContent = "Live lookup isn't available in this browser right now: the provider blocks requests from web pages. You are seeing the daily price file instead. Settings → Live lookups explains how to add your own proxy. Press Check for updates to review the daily file.";
+        renderAnalysis(); return;
+      }
+      {
+        note = `Live refresh ${dateTime(nowIso())}: ${liveSummary(res)}.`;
+        const why = res.failed.slice(0, 3).map((r) => `${r.ticker}: ${r.message}`).join(" ");
+        if (why) note += " " + why;
+      }
+      if (tickers.length > LIVE.maxTickers) note += ` Only the first ${LIVE.maxTickers} holdings were refreshed live.`;
+    } else note = "Add holdings first. Refresh now looks up the tickers you hold.";
+    $("liveNote").textContent = note;
+    state.market = getMarket();
+    fillTickers(); renderExplore(); renderSplits();
+    renderAnalysis();
+    const plan = currentPlan();
+    if (!plan.rows.some((r) => r.changes.length || r.notes.length)) { toast(tickers.length ? "Everything is up to date." : "Nothing to refresh yet."); return; }
+    const picked = await reviewUpdates(plan, state.market);
+    if (picked && picked.length) {
+      const n = applyRefreshPlan(state.packet, plan, picked, state.market.tickers);
+      renderHoldings(); renderAnalysis(); mark();
+      toast(`${n} value${n === 1 ? "" : "s"} updated. Your own values were kept unless you chose to replace them.`);
+    }
+  } finally { btn.disabled = false; btn.textContent = label; }
+}
+
+async function lookupOne(ticker, btn) {
+  if (btn) { btn.disabled = true; btn.textContent = `Looking up ${ticker}…`; }
+  const res = await pullLive([ticker], { proxy: liveProxy(), prevOf: (t) => getMarket().tickers[t] ?? null });
+  applyLive(res);
+  if (res.blocked) lastLive.set(ticker, "Your browser blocked the lookup. Settings → Live lookups explains how to add your own proxy.");
+  state.market = getMarket(); fillTickers(); renderExplore();
+  if (res.ok) toast(`${ticker} found. Prices and dividends come from Yahoo Finance, just now.`);
+}
+
+async function testLive() {
+  const note = $("liveTestNote"); note.textContent = "Testing…";
+  const res = await pullLive(["AAPL"], { proxy: liveProxy() });
+  const r = res.results.get("AAPL");
+  note.textContent = r?.ok ? `Works: Apple came back at ${money(r.entry.p, 2)} just now.` : `Not working: ${r?.message ?? "no answer"}`;
+}
+
+async function setLive(on) { state.app.liveLookups = on; renderAnalysis(); renderExplore(); await state.store.setApp({ liveLookups: on }); }
+async function setProxy(v) { const p = normalizeProxy(v); state.app.liveProxy = p; await state.store.setApp({ liveProxy: p }); $("proxyIn").setCustomValidity(v.trim() && !p ? "Use an https address" : ""); }
+
 // ---------- market data: review before anything changes ----------
 async function checkForUpdates() {
   const btn = $("checkBtn");
@@ -530,6 +613,7 @@ async function fillSettings() {
   document.querySelectorAll('input[name="theme"]').forEach((r) => { r.checked = r.value === th; });
   $("remChk").checked = state.app.remember !== false;
   $("remChk").disabled = !state.store.persistent;
+  $("liveChk").checked = liveAllowed(); $("proxyIn").value = state.app.liveProxy || "";
   $("storageNote").textContent = !state.store.persistent
     ? "This browser isn't letting the site store data, so nothing can be remembered. Packets still work."
     : state.app.remember === false ? "Guest mode: nothing is kept in this browser. Save a packet to keep your work."
@@ -594,6 +678,12 @@ function wire() {
     renderAnalysis();
   });
   $("psq").addEventListener("input", renderExplore);
+  setLiveHooks({ allowed: liveAllowed, message: (t) => lastLive.get(t) || "" });
+  $("liveBtn").addEventListener("click", refreshLive);
+  $("psCard").addEventListener("click", (e) => { const b = e.target.closest("[data-live]"); if (b) lookupOne(b.getAttribute("data-live"), b); });
+  $("liveChk").addEventListener("change", (e) => setLive(e.target.checked));
+  $("proxyIn").addEventListener("change", (e) => setProxy(e.target.value));
+  $("liveTest").addEventListener("click", async () => { $("liveTestNote").textContent = "Testing…"; await setProxy($("proxyIn").value); testLive(); });
   initSplits({ holdings: () => state.packet.holdings });
   $("psRows").addEventListener("click", (e) => {
     const b = e.target.closest("[data-add]"); if (!b) return;

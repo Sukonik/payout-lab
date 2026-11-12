@@ -4,7 +4,7 @@ import { SCHED_LABEL } from "../core/calc.js";
 import { SRC_LABEL } from "../core/market.js";
 import { choose } from "./dialogs.js";
 
-export function renderDataCard({ packet, market, plan }) {
+export function renderDataCard({ packet, market, plan, liveOff = false }) {
   const n = plan.counts.update + plan.counts.protected;
   const pill = $("dataPill");
   if (!market.loaded) { pill.className = "pill warn"; pill.innerHTML = "<i></i>Offline data"; }
@@ -12,7 +12,8 @@ export function renderDataCard({ packet, market, plan }) {
   else if (n > 0) { pill.className = "pill warn"; pill.innerHTML = `<i></i>${n} update${n > 1 ? "s" : ""} available`; }
   else { pill.className = "pill ok"; pill.innerHTML = "<i></i>Up to date"; }
   const when = market.loaded && market.updated ? `${shortDate(market.updated)}${market.source ? ", " + esc(market.source) : ""}` : "not available";
-  $("dataLede").innerHTML = `Prices and dividends come from a public file refreshed on weekdays (latest ${when}). Your portfolio keeps its <b>own copy</b> of each value and the date it was observed. Nothing changes until you review updates and apply them.`;
+  $("dataLede").innerHTML = `The daily price file was last updated ${when}. <b>Refresh now</b> asks the provider for your holdings right now; <b>Check for updates</b> only re-reads the daily file. Your portfolio keeps its <b>own copy</b> of each value and the date it was observed. Nothing changes until you review updates and apply them.`;
+  $("liveBtn").hidden = liveOff;
   document.querySelectorAll('input[name="basis"]').forEach((r) => { r.checked = r.value === packet.settings.dividendBasis; });
   $("basisNote").textContent = packet.settings.dividendBasis === "indicated"
     ? "Current rate = the latest payment × how often it is paid. It reacts faster to a raise or cut and ignores one-off extras."
