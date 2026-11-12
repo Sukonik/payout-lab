@@ -1,6 +1,6 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-11-12T16:26:13.821Z",
+ "updated": "2026-11-12T17:05:35.146Z",
  "upcomingAsOf": "2026-11-12",
  "tickers": {
   "A": {
@@ -6389,11 +6389,55 @@
    "asOf": "2026-11-12"
   },
   {
+   "t": "HUBC",
+   "n": "Hub Cyber Security Ltd.",
+   "a": 1,
+   "b": 20,
+   "exDate": "2026-11-13",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-12"
+  },
+  {
+   "t": "PMCB",
+   "n": "PharmaCyte  Biotech, Inc.",
+   "a": 1,
+   "b": 19,
+   "exDate": "2026-11-13",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-12"
+  },
+  {
    "t": "EMBJ",
    "n": "Embraer S.A.",
    "a": 4,
    "b": 1,
    "exDate": "2026-11-16",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-12"
+  },
+  {
+   "t": "SENEA",
+   "n": "Seneca Foods Corp.",
+   "a": 5,
+   "b": 1,
+   "exDate": "2026-11-17",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-12"
+  },
+  {
+   "t": "SENEB",
+   "n": "Seneca Foods Corp.",
+   "a": 5,
+   "b": 1,
+   "exDate": "2026-11-17",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
@@ -6581,6 +6625,17 @@
    "a": 8,
    "b": 1,
    "exDate": "2026-11-20",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-12"
+  },
+  {
+   "t": "ITP",
+   "n": "IT Tech Packaging, Inc.",
+   "a": 1,
+   "b": 40,
+   "exDate": "2026-11-23",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
