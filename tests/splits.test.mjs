@@ -1,8 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { afterSplit, compareTickers, cumulativeFactorSince, dateParts, daysBetween, filterLedger, holdingsWithSplits, kindOf, ledger, moveSince, priceAfter, ratioFromFactor, ratioLabel, sanitizeSplit, sanitizeSplitsFile, sanitizeUpcoming, splitsFromPrices, upcomingView, yearGroups, loadSplits } from "../js/core/splits.js";
-import { mergeSplits } from "../scripts/update-splits.mjs";
+import { applyFeedSplits, splitSources, afterSplit, compareTickers, cumulativeFactorSince, dateParts, daysBetween, filterLedger, holdingsWithSplits, kindOf, ledger, moveSince, priceAfter, ratioFromFactor, ratioLabel, sanitizeSplit, sanitizeSplitsFile, sanitizeUpcoming, splitsFromPrices, upcomingView, yearGroups, loadSplits } from "../js/core/splits.js";
 
 const seed = JSON.parse(fs.readFileSync(new URL("../splits.json", import.meta.url), "utf8"));
 const file = sanitizeSplitsFile(seed);
@@ -117,11 +116,18 @@ test("comparing a forward-split stock with a reverse-split one", () => {
   const [x] = compareTickers(file, {}, "ZZZZ", "AAPL"); assert.equal(x.known, false); assert.equal(x.count, 0);
 });
 
-test("refresh keeps older seeded splits and replaces newer ones with the feed's", () => {
-  const existing = [{ d: "2005-03-01", a: 2, b: 1, src: "seed", ver: 0 }, { d: "2020-08-31", a: 4, b: 1, src: "seed", ver: 0 }];
-  const derived = [{ d: "2020-08-31", a: 4, b: 1, src: "Tiingo", ver: 1, post: 129 }];
-  const m = mergeSplits(existing, derived, "2010-01-01");
-  assert.deepEqual(m.map((s) => [s.d, s.src]), [["2005-03-01", "seed"], ["2020-08-31", "Tiingo"]]);
+test("the price feed's split list replaces ours, keeps recorded prices, and an unanswered feed changes nothing", () => {
+  const f = sanitizeSplitsFile({ tickers: { ABC: { n: "Abc", s: [{ d: "2005-03-01", a: 2, b: 1, src: "seed", ver: 0 }, { d: "2020-08-31", a: 4, b: 1, src: "seed", ver: 0, pre: 500, post: 125 }] } }, upcoming: [] });
+  assert.equal(applyFeedSplits(f, "ABC", "Abc", null, "2026-11-12"), false); assert.equal(f.tickers.ABC.s.length, 2, "null = not said: untouched");
+  const changed = applyFeedSplits(f, "ABC", "Abc", [{ d: "2020-08-31", a: 4, b: 1, src: "Yahoo Finance" }, { d: "2005-03-01", a: 2, b: 1, src: "Yahoo Finance" }], "2026-11-12");
+  assert.equal(changed, false, "same dates and ratios: not a change");
+  assert.deepEqual(f.tickers.ABC.s.map((s) => [s.d, s.src, s.ver]), [["2005-03-01", "Yahoo Finance", 1], ["2020-08-31", "Yahoo Finance", 1]]);
+  assert.equal(f.tickers.ABC.s[1].pre, 500, "recorded prices survive");
+  assert.equal(applyFeedSplits(f, "ABC", "Abc", [{ d: "2020-08-31", a: 4, b: 1 }, { d: "2025-01-02", a: 3, b: 1 }], "2026-11-12"), true);
+  assert.deepEqual(f.tickers.ABC.s.map((s) => s.d), ["2020-08-31", "2025-01-02"], "a split the feed no longer reports is dropped");
+  assert.equal(applyFeedSplits(f, "NEW", "New", [], "2026-11-12"), false); assert.ok(!f.tickers.NEW, "a ticker with no splits is not recorded");
+  assert.equal(applyFeedSplits(f, "NEW", "New", [{ d: "2024-05-01", a: 10, b: 1, src: "Yahoo Finance" }], "2026-11-12"), true); assert.equal(f.tickers.NEW.s[0].a, 10);
+  assert.ok(splitSources(f).includes("Yahoo Finance"));
 });
 
 test("loadSplits keeps working when the file is missing or broken", async () => {

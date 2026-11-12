@@ -6,7 +6,8 @@ const root = path.resolve(new URL("..", import.meta.url).pathname);
 const { server, url } = await serve(root);
 const browser = await launch();
 const errors = [], requests = [];
-const seed = JSON.parse(fs.readFileSync(path.join(root, "splits.json"), "utf8"));
+// A fixed fixture, not the live file: the refresh bots rewrite splits.json many times a day.
+const seed = JSON.parse(fs.readFileSync(path.join(root, "e2e", "fixtures", "splits.json"), "utf8"));
 const inDays = (n) => new Date(Date.now() + n * 864e5).toISOString().slice(0, 10);
 const withUpcoming = { ...seed, upcoming: [
   { t: "NEWCO", n: "Newco <b>Inc</b>", a: 10, b: 1, exDate: inDays(9), announced: inDays(-3), status: "announced", src: "8-K", url: "https://www.sec.gov/Archives/edgar/x.htm" },

@@ -1,17 +1,18 @@
 name: Refresh dividend data
 on:
   schedule:
-    - cron: "47 3,11,19 * * *"   # every 8 hours (23:47, 7:47 and 15:47 ET, just after the 7:30 AM and 10:30 PM seed additions); each run adds new seed tickers first and refreshes the stalest, 45 per run. Each data change redeploys the site and Actions artifact storage is limited, so keep this modest
+    - cron: "47 3,11,19 * * *"   # every 8 hours (23:47, 7:47 and 15:47 ET, just after the 7:30 AM and 10:30 PM seed additions); each run refreshes the 300 stalest tickers (Yahoo Finance, no key) plus a few new seed tickers. Each data change redeploys the site and Actions artifact storage is limited, so keep this modest
   workflow_dispatch:
     inputs:
       batch:
         description: "Tickers to refresh this run"
-        default: "45"
+        default: "300"
 permissions:
   contents: write
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -24,5 +25,5 @@ jobs:
         run: |
           git config user.name "payout-lab-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data.json
+          git add data.json splits.json
           git diff --cached --quiet || (git commit -m "Refresh dividend data" && git push)
