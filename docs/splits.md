@@ -31,7 +31,7 @@ upcoming = [ { t, n, a, b, exDate, announced?, payDate?, status, src, url?, asOf
 
 ### History refresh
 
-`scripts/update-splits.mjs` (workflow `update-splits.yml`) runs on weekdays, refreshing the 45 stalest tickers from Tiingo daily prices, where the split factor on a day gives the ratio. A rate limit stops the run and nothing falls back silently. Seeded entries older than 2010 are kept. It runs at a different hour from the dividend refresh so the free hourly limit is not shared. Tested on fixtures; the first scheduled run is the live test.
+Split history comes from the **same Yahoo chart request** that refreshes price and dividends (`events=div,splits`), so there is one source for history and it is refreshed as often as the prices. When the feed answers, its list replaces ours for that ticker (recorded prices are kept); when it says nothing, nothing changes. Tiingo can fill in only as the fallback described in [`data-sources.md`](data-sources.md).
 
 ### Announced splits
 
@@ -48,7 +48,8 @@ Calendars report splits after announcement. Nothing here can say who will announ
 
 | Source | Role | Cost / terms | Status |
 |---|---|---|---|
-| **Tiingo** daily prices (`splitFactor`) | Split history with prices before and after | Free tier, key in a repository secret; check terms before charging | Used. Not run live yet |
+| **Yahoo Finance** chart events (same call as prices) | Split history | Free, unofficial | Primary; used in the main refresh |
+| **Tiingo** daily prices (`splitFactor`) | Split history fallback | Free tier, key in a repository secret | Only when Yahoo gives nothing |
 | **Nasdaq splits calendar** (unofficial API) | Announced and recently executed splits | Free, undocumented; terms and cloud-IP blocking unknown | Used in the Action; format unverified live |
 | **SEC EDGAR 8-K filings** | The authoritative announcement; best way to confirm a calendar entry | Free, keyless, needs a descriptive User-Agent | **Not built.** Good next step: cross-check calendar entries and upgrade them to "Confirmed" |
 | Hand-kept entries | Anything the feeds miss, with a source link | n/a | Supported |
