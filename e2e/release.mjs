@@ -35,7 +35,10 @@ check("current data.json ships with the site", fs.existsSync(path.join(site, "da
 const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]));
 const urls = new Set();
 for (const f of walk(site).filter((f) => /\.(html|js|css|svg)$/.test(f))) for (const m of (f.includes(`${path.sep}vendor${path.sep}`) ? fs.readFileSync(f, "utf8").replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "") : fs.readFileSync(f, "utf8")).matchAll(/https?:\/\/[^\s"'`)<>]+/g)) urls.add(m[0]);
-const bad = [...urls].filter((u) => !/^http:\/\/www\.w3\.org\/2000\/svg$/.test(u));
+// The only addresses shipped code may contain: the SVG namespace, and the quote provider's chart address, which the browser contacts
+// only when a person presses Refresh now or Look up live (documented in Settings and the README).
+const allowed = (u) => /^http:\/\/www\.w3\.org\/2000\/svg$/.test(u) || u.startsWith("https://${host}/v8/finance/chart/");
+const bad = [...urls].filter((u) => !allowed(u));
 check("no third-party URLs anywhere in the shipped files (licence comments in vendored libraries excepted: they are not code)", bad.length === 0, bad.join(" "));
 
 // A preserved build must run from its own sub-path (relative imports, data file), not merely exist.
