@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Payout Lab Atom 2.0 logo">
+  <g fill="none" stroke="#07583F" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="256" cy="256" rx="184" ry="76"/>
+    <ellipse cx="256" cy="256" rx="184" ry="76" transform="rotate(60 256 256)"/>
+    <ellipse cx="256" cy="256" rx="184" ry="76" transform="rotate(120 256 256)"/>
+  </g>
+  <circle cx="256" cy="256" r="45" fill="#F5B82E"/>
+</svg>

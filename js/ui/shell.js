@@ -64,5 +64,6 @@ export function applyTheme(mode) {
   if (mode === "light" || mode === "dark") root.setAttribute("data-theme", mode); else root.removeAttribute("data-theme");
   try { if (mode === "auto") localStorage.removeItem(THEME_KEY); else localStorage.setItem(THEME_KEY, mode); } catch { /* ignore */ }
   syncThemeButton();
-  document.querySelectorAll('input[name="theme"]').forEach((r) => { r.checked = r.value === mode; });
+  document.querySelectorAll('input[name="theme"],input[name="thememode"]').forEach((r) => { r.checked = r.value === mode; });
+  document.dispatchEvent(new Event("payout-theme"));          // the look (colours, logo) depends on light or dark
 }

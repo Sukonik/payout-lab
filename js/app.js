@@ -26,6 +26,7 @@ import { comparisonReportHtml, receiptReportHtml } from "./core/report.js";
 import { compareHtml, optionList, renderReports, resolveReceipt, titleOf } from "./ui/receipts.js";
 import { refreshRowChip, renderHoldingRows, renderOverview, renderReceiptsState } from "./ui/views.js";
 import { applyTheme, buildNav, currentTheme, startRouter, syncThemeButton, toggleTheme } from "./ui/shell.js";
+import { initLook } from "./ui/look.js";
 
 const state = {
   store: null, packet: null, meta: {}, app: { remember: true },
@@ -738,6 +739,7 @@ function wire() {
   $("settings").addEventListener("click", (e) => { if (e.target === $("settings") || e.target.closest("[data-close]")) $("settings").close(); });
   document.querySelectorAll('input[name="theme"]').forEach((r) => r.addEventListener("change", () => { if (r.checked) applyTheme(r.value); }));
   $("themeBtn").addEventListener("click", toggleTheme);
+  initLook();
   window.matchMedia?.("(prefers-color-scheme: dark)").addEventListener?.("change", syncThemeButton);
   syncThemeButton();
   $("remChk").addEventListener("change", (e) => setRemember(e.target.checked));

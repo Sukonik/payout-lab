@@ -2,7 +2,7 @@ name: Deploy site
 on:
   push:
     branches: [main]
-    paths: [index.html, data.json, splits.json, favicon.svg, "css/**", "js/**", releases.json, scripts/build-site.mjs, ".github/workflows/pages.yml"]
+    paths: [index.html, data.json, splits.json, favicon.svg, favicon.ico, "assets/**", "css/**", "js/**", releases.json, scripts/build-site.mjs, ".github/workflows/pages.yml"]
   workflow_run:
     workflows: ["Refresh dividend data", "Refresh split data"]   # commits made with GITHUB_TOKEN don't trigger push events
     types: [completed]

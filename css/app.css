@@ -49,7 +49,7 @@ a{color:var(--accent-strong)}
 .top{position:sticky;top:0;z-index:30;background:var(--bg);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
 .top-in{max-width:1120px;margin:0 auto;padding:10px 16px;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"tag actions";gap:10px 14px;align-items:center}
 .brand{grid-area:brand;display:none;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--font-d);font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
-.logo{width:34px;height:34px;flex:none}
+.logo{width:34px;height:34px;flex:none;object-fit:contain}
 .brand-name{display:none}
 .tag{grid-area:tag;width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-width:0;text-align:left;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:6px 12px;color:var(--ink);font:inherit;cursor:pointer;box-shadow:var(--shadow)}
 .tag:hover{border-color:var(--line2)}
@@ -491,3 +491,37 @@ dialog .btns .btn.primary{order:3}
   .tag{padding:5px 8px}
   .tag-status{font-size:.64rem;gap:6px}
 }
+
+/* ---------- theme menu: light/dark and six looks on lab-glass tiles ---------- */
+.look-pop{position:fixed;z-index:60;width:min(340px,calc(100vw - 16px));max-height:calc(100vh - 90px);overflow:auto;background:var(--card);color:var(--ink);border:1px solid var(--line2);border-radius:18px;box-shadow:0 24px 60px -20px rgba(0,0,0,.45);padding:12px}
+.look-pop[hidden],.look-scrim[hidden]{display:none}
+.look-scrim{position:fixed;inset:0;z-index:59;background:rgba(5,15,10,.5)}
+.look-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.iconbtn.sm{width:36px;height:36px;border-radius:11px}
+.look-sub{margin:14px 2px 8px;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.look-sub em{font-style:normal;font-weight:600;letter-spacing:0;text-transform:none;margin-left:6px}
+.look-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.look-now{margin:10px 2px;font-size:.84rem;color:var(--muted)}
+/* each tile is a piece of lab glass with its own neon hue: a tinted body, a specular stripe like a test tube's gleam, and liquid at the bottom */
+.look-btn{--g1:#16c978;--g2:#ffd45a;position:relative;display:grid;justify-items:center;gap:6px;min-height:92px;padding:10px 6px 8px;border-radius:16px;cursor:pointer;color:var(--ink);font:inherit;font-weight:700;font-size:.78rem;line-height:1.15;text-align:center;overflow:hidden;
+  border:1px solid color-mix(in srgb,var(--g1) 55%,rgba(255,255,255,.35));
+  background:radial-gradient(120% 90% at 18% 0%,color-mix(in srgb,var(--g2) 36%,transparent),transparent 62%),linear-gradient(165deg,color-mix(in srgb,var(--g1) 30%,transparent),color-mix(in srgb,var(--g1) 7%,transparent) 58%,color-mix(in srgb,var(--g2) 24%,transparent)),var(--glass);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -14px 20px -14px var(--g1),0 10px 22px -14px var(--g1);transition:transform .12s,box-shadow .2s,border-color .2s}
+.look-btn::before{content:"";position:absolute;left:9px;top:8px;width:5px;height:46%;border-radius:4px;background:linear-gradient(180deg,rgba(255,255,255,.85),rgba(255,255,255,0));pointer-events:none}
+.look-btn::after{content:"";position:absolute;left:0;right:0;bottom:0;height:24%;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--g1) 42%,transparent));pointer-events:none}
+.look-btn:hover{transform:translateY(-1px);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -14px 20px -14px var(--g1),0 14px 26px -12px var(--g1)}
+.look-btn[aria-pressed="true"]{border-color:var(--g1);box-shadow:0 0 0 2px var(--card),0 0 0 4px var(--g1),0 0 22px -2px var(--g1)}
+.look-btn[aria-pressed="true"] .look-name::after{content:" ✓"}
+.look-glass{position:relative;z-index:1;display:grid;place-items:center;width:46px;height:46px;border-radius:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 4px 10px -6px rgba(0,0,0,.4)}
+/* the chip behind each mark is fixed, so a white mark always sits on dark glass and a black one on light glass, in either theme */
+.look-glass[data-chip="light"]{background:rgba(255,255,255,.86)}
+.look-glass[data-chip="dark"]{background:linear-gradient(160deg,rgba(6,38,28,.92),rgba(10,60,44,.85));box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 4px 10px -6px rgba(0,0,0,.5)}
+.look-name{position:relative;z-index:1}
+:root[data-theme="dark"] .look-btn::before{background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0))}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .look-btn::before{background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0))}}
+@media (max-width:760px){
+  .look-pop{left:0;right:0;top:auto!important;bottom:0;width:auto;max-height:82vh;border-radius:22px 22px 0 0;padding:14px 14px calc(16px + env(safe-area-inset-bottom,0px))}
+  .look-grid{gap:10px}
+}
+@media (max-width:480px){ #themeBtn{display:none} }
+@media (prefers-reduced-motion: reduce){.look-btn{transition:none}.look-btn:hover{transform:none}}
