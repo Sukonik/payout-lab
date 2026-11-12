@@ -14,7 +14,8 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "payout-i-"));
 
 const newCtx = async (opts = {}) => { const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 }, ...opts }); await ctx.route("**/data.json", (r) => r.fulfill({ json: market })); return ctx; };
 const open = async (ctx) => { const p = await ctx.newPage(); p.on("pageerror", (e) => errors.push(e.message)); p.on("console", (m) => { if (m.type() === "error") errors.push(m.text()); }); p.on("request", (r) => requests.push(r.url())); await p.goto(url + "#/portfolio"); await p.waitForFunction(() => document.documentElement.dataset.ready); return p; };
-const rowsOf = (p) => p.$$eval("#rows .hrow", (rs) => rs.map((r) => ({ t: r.querySelector(".tk").textContent, sh: r.querySelector('[data-k="shares"]').value, price: r.querySelector('[data-k="price"]').value })));
+const rowsOf = async (p) => { await p.waitForFunction(() => /Device\s+saved|Device\s+off/.test(document.querySelector("#status").innerText)); await p.waitForTimeout(80); return rowsNow(p); };
+const rowsNow = (p) => p.$$eval("#rows .hrow", (rs) => rs.map((r) => ({ t: r.querySelector(".tk").textContent, sh: r.querySelector('[data-k="shares"]').value, price: r.querySelector('[data-k="price"]').value })));
 const gone = (p) => p.waitForSelector("body > dialog:not(#settings)", { state: "detached" });
 const feed = async (p, name, content) => { await p.setInputFiles("#csvIn", { name, mimeType: "text/csv", buffer: Buffer.from(content, "utf8") }); await p.waitForSelector("dialog[open] #ciBody table"); };
 const dialog = (p) => p.innerText("dialog[open]");

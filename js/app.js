@@ -24,7 +24,7 @@ import { addReceipt, buildReceipt, compareReceipts, parseReceiptText, serializeR
 import { comparisonReportHtml, receiptReportHtml } from "./core/report.js";
 import { compareHtml, optionList, renderReports, resolveReceipt, titleOf } from "./ui/receipts.js";
 import { refreshRowChip, renderHoldingRows, renderOverview, renderReceiptsState } from "./ui/views.js";
-import { applyTheme, buildNav, currentTheme, startRouter } from "./ui/shell.js";
+import { applyTheme, buildNav, currentTheme, startRouter, syncThemeButton, toggleTheme } from "./ui/shell.js";
 
 const state = {
   store: null, packet: null, meta: {}, app: { remember: true },
@@ -647,6 +647,9 @@ function wire() {
   $("settingsBtn").addEventListener("click", async () => { await fillSettings(); $("settings").showModal(); });
   $("settings").addEventListener("click", (e) => { if (e.target === $("settings") || e.target.closest("[data-close]")) $("settings").close(); });
   document.querySelectorAll('input[name="theme"]').forEach((r) => r.addEventListener("change", () => { if (r.checked) applyTheme(r.value); }));
+  $("themeBtn").addEventListener("click", toggleTheme);
+  window.matchMedia?.("(prefers-color-scheme: dark)").addEventListener?.("change", syncThemeButton);
+  syncThemeButton();
   $("remChk").addEventListener("change", (e) => setRemember(e.target.checked));
   $("forgetBtn").addEventListener("click", forgetCurrent);
   // Save as soon as the page is hidden (tab switch, app switch on a phone, close). visibilitychange is the reliable one on mobile.

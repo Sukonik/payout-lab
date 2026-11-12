@@ -38,6 +38,7 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
     <nav class="tabs" id="tabs" aria-label="Main"></nav>
     <div class="top-actions">
       <button class="save" id="saveBtn" aria-label="Save packet"><span class="save-ico" id="saveIco"></span><span class="save-txt">Save packet</span><i class="save-dot" id="saveDot" hidden></i></button>
+      <button class="iconbtn" id="themeBtn" aria-label="Switch to dark mode" title="Light or dark"><span id="themeIco"></span></button>
       <button class="iconbtn" id="settingsBtn" aria-label="Settings" aria-haspopup="dialog"><span id="gearIco"></span></button>
     </div>
   </div>
@@ -362,7 +363,7 @@ try { var t = localStorage.getItem("payoutlab.theme"); if (t === "light" || t ==
   <section class="set">
     <h3>Appearance</h3>
     <div class="seg" role="radiogroup" aria-label="Appearance">
-      <label><input type="radio" name="theme" value="auto"><span>Match device</span></label>
+      <label><input type="radio" name="theme" value="auto"><span>Auto</span></label>
       <label><input type="radio" name="theme" value="light"><span>Light</span></label>
       <label><input type="radio" name="theme" value="dark"><span>Dark</span></label>
     </div>

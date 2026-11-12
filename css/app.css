@@ -93,12 +93,12 @@ main{max-width:1120px;margin:0 auto;padding:18px 16px 8px;outline:none}
 .btn:hover{border-color:var(--ink)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .btn.primary:hover{filter:brightness(1.07)}
-.btn.ghost{background:transparent;border-color:transparent;color:var(--accent-strong)}
-.btn.ghost:hover{background:var(--accent-soft);border-color:transparent}
+.btn.ghost{background:transparent;border-color:var(--line2);color:var(--accent-strong)}
+.btn.ghost:hover{background:var(--accent-soft);border-color:var(--accent)}
 .btn.danger{color:var(--coral);border-color:var(--coral)}
 .btn.sm{min-height:36px;padding:0 12px;font-size:.88rem}
-.row-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-.row-actions.tight{margin:0;gap:4px}
+.row-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;align-items:center}
+.row-actions.tight{margin:0;gap:8px}
 label.f{display:flex;flex-direction:column;gap:5px;font-size:.82rem;color:var(--muted);font-weight:600}
 input,select{font:inherit;font-size:16px;color:var(--ink);background:var(--glass);border:1px solid var(--line2);border-radius:10px;padding:9px 11px;min-height:44px;min-width:0;width:100%}
 input::placeholder{color:var(--muted);opacity:.75}
@@ -184,15 +184,19 @@ svg.path{width:100%;height:auto;display:block;margin-top:12px}
 /* ---------- holdings ---------- */
 .hlist{margin-top:6px}
 .hhead{display:none}
-.hrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-areas:"id id rm" "sh pr dv" "pp sc tx" "in in in";gap:10px;padding:14px;margin-top:10px;border:1px solid var(--line);border-radius:14px;background:var(--glass)}
+.hrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-areas:"id id rm" "sh pr dv" "sc sc pp" "tx tx in";gap:10px 8px;align-items:end;padding:14px;margin-top:10px;border:1px solid var(--line);border-radius:14px;background:var(--glass)}
 .hrow .c-id{grid-area:id;min-width:0}.hrow .c-rm{grid-area:rm;justify-self:end}.hrow .c-sh{grid-area:sh}.hrow .c-pr{grid-area:pr}.hrow .c-dv{grid-area:dv}.hrow .c-pp{grid-area:pp}.hrow .c-sc{grid-area:sc}.hrow .c-tx{grid-area:tx}.hrow .c-in{grid-area:in}
 .hrow .lab{display:block;font-size:.72rem;color:var(--muted);font-weight:600;margin-bottom:3px}
 .hrow .tk{font-size:1.1rem;font-weight:800;font-family:var(--font-d)}
 .hrow .nm{font-size:.82rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .hrow .val{font-weight:700}
-.hrow .c-in{display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed var(--line2);padding-top:10px}
-.hrow .c-in .val{font-size:1.2rem;font-family:var(--font-d)}
-.x{width:44px;height:44px;border-radius:12px;border:1px solid transparent;background:transparent;color:var(--muted);font-size:1.3rem;line-height:1;cursor:pointer}
+.hrow .c-in{display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;text-align:right}
+.hrow .c-pp{text-align:right}.hrow .c-pp .val,.hrow .c-in .val{display:block;line-height:44px}
+.hrow input,.hrow select{padding-left:8px;padding-right:8px;min-width:0}
+.hrow input{text-align:right}.hrow select{padding-right:4px;text-overflow:ellipsis}
+.hrow .c-in .val{font-size:1.15rem;font-family:var(--font-d)}
+.hrow .c-rm{align-self:start}
+.x{width:40px;height:40px;display:inline-grid;place-items:center;padding:0;border-radius:12px;border:1px solid transparent;background:transparent;color:var(--muted);font-size:1.4rem;line-height:1;cursor:pointer}
 .x:hover{color:var(--coral);border-color:var(--coral)}
 .empty{padding:26px 12px;text-align:center;color:var(--muted)}
 .chipsrc{display:inline-flex;align-items:center;gap:5px;margin-top:3px;font-size:.72rem;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--ink);border:1px solid transparent;max-width:100%}
@@ -446,14 +450,17 @@ dialog .btns .btn.primary{order:3}
   .tabs a[aria-current="page"]{color:var(--accent-strong);background:var(--accent-soft)}
   .bottomnav{display:none}
   .toast{bottom:28px}
-  .hhead,.hrow{grid-template-columns:minmax(150px,1.6fr) 88px 96px 104px 92px 148px 124px 100px 36px}
-  .hhead{display:grid;gap:10px;padding:8px 14px;font-size:.76rem;color:var(--muted);font-weight:700}
+  .hhead,.hrow{grid-template-columns:minmax(140px,1.5fr) 84px 92px 98px 88px 168px 112px 92px 36px}
+  .hhead{display:grid;gap:8px;padding:8px 14px;font-size:.76rem;color:var(--muted);font-weight:700}
   .hhead .r{text-align:right}
-  .hrow{grid-template-areas:none;gap:10px;align-items:center;padding:10px 14px;margin-top:6px;background:transparent;border:0;border-top:1px solid var(--line);border-radius:0}
+  .hrow{grid-template-areas:none;gap:8px;align-items:center;padding:10px 14px;margin-top:6px;background:transparent;border:0;border-top:1px solid var(--line);border-radius:0}
   .hrow>*{grid-area:auto!important}
+  .hrow{align-items:center}
   .hrow .lab{display:none}
   .hrow .c-in{display:block;text-align:right;border:0;padding:0}
   .hrow .c-pp{text-align:right}
+  .hrow .c-pp .val,.hrow .c-in .val{line-height:1.2}
+  .hrow .c-rm{align-self:center}
   .hrow .c-in .val{font-size:1rem}
   .two{grid-template-columns:1.2fr 1fr}
   .sheet-bottom{margin:auto;border-radius:20px}
@@ -464,3 +471,23 @@ dialog .btns .btn.primary{order:3}
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
 @media print{ .top,.bottomnav,.toast{display:none!important} body{background:#fff} }
+
+/* ---------- sweep: header actions, theme button, segmented labels ---------- */
+.top-actions{display:flex;align-items:center;gap:8px}
+.top-actions .iconbtn,.top-actions .save{align-self:center}
+.seg span{white-space:nowrap;display:flex;align-items:center;justify-content:center;min-height:40px}
+@media (max-width:480px){
+  .top-actions{gap:6px}
+  .top-actions .iconbtn,.top-actions .save{width:40px;height:40px;min-width:40px}
+  .tag{padding:6px 10px}
+  .tag-status{font-size:.68rem;gap:8px;white-space:nowrap}
+  .top-actions{gap:5px}
+}
+.iconbtn>span{display:grid;place-items:center;line-height:0}
+.iconbtn svg,.save svg{display:block}
+@media (max-width:380px){
+  .top-actions .iconbtn,.top-actions .save{width:38px;height:38px;min-width:38px}
+  .top-actions{gap:4px}
+  .tag{padding:5px 8px}
+  .tag-status{font-size:.64rem;gap:6px}
+}
