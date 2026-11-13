@@ -9,6 +9,10 @@
    "n": "Goldman Sachs Physical Gold",
    "type": "ETF_PASS_THROUGH"
   },
+  "AAOI": {
+   "n": "Applied Optoelectronics",
+   "type": "EQUITY_STANDARD"
+  },
   "AAP": {
    "n": "Advance Auto Parts",
    "type": "EQUITY_STANDARD"
@@ -19,6 +23,10 @@
   },
   "ACI": {
    "n": "Albertsons",
+   "type": "EQUITY_STANDARD"
+  },
+  "ACLS": {
+   "n": "Axcelis Technologies",
    "type": "EQUITY_STANDARD"
   },
   "ACM": {
@@ -39,6 +47,14 @@
   },
   "ADC": {
    "n": "Agree Realty",
+   "type": "EQUITY_STANDARD"
+  },
+  "ADTN": {
+   "n": "ADTRAN Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "AEIS": {
+   "n": "Advanced Energy Industries",
    "type": "EQUITY_STANDARD"
   },
   "AEM": {
@@ -205,6 +221,10 @@
    "n": "AST SpaceMobile",
    "type": "EQUITY_STANDARD"
   },
+  "ATEN": {
+   "n": "A10 Networks",
+   "type": "EQUITY_STANDARD"
+  },
   "ATI": {
    "n": "ATI Inc.",
    "type": "EQUITY_STANDARD"
@@ -299,6 +319,10 @@
   },
   "BBWI": {
    "n": "Bath & Body Works",
+   "type": "EQUITY_STANDARD"
+  },
+  "BDC": {
+   "n": "Belden",
    "type": "EQUITY_STANDARD"
   },
   "BETZ": {
@@ -533,6 +557,10 @@
    "n": "Century Aluminum",
    "type": "EQUITY_STANDARD"
   },
+  "CHAT": {
+   "n": "Roundhill Generative AI & Technology ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "CHEF": {
    "n": "Chefs' Warehouse",
    "type": "EQUITY_STANDARD"
@@ -599,6 +627,10 @@
   },
   "COHR": {
    "n": "Coherent",
+   "type": "EQUITY_STANDARD"
+  },
+  "COHU": {
+   "n": "Cohu",
    "type": "EQUITY_STANDARD"
   },
   "COKE": {
@@ -804,6 +836,10 @@
   "DFUV": {
    "n": "Dimensional US Marketwide Value",
    "type": "ETF_PASS_THROUGH"
+  },
+  "DGII": {
+   "n": "Digi International",
+   "type": "EQUITY_STANDARD"
   },
   "DGS": {
    "n": "WisdomTree Emerging Markets SmallCap Dividend Fund",
@@ -1037,6 +1073,10 @@
    "n": "Etsy",
    "type": "EQUITY_STANDARD"
   },
+  "EUAD": {
+   "n": "Select STOXX Europe Aerospace & Defense ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "EWA": {
    "n": "iShares MSCI Australia",
    "type": "ETF_PASS_THROUGH"
@@ -1195,6 +1235,10 @@
   },
   "FINX": {
    "n": "Global X FinTech",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FITE": {
+   "n": "SPDR S&P Kensho Future Security ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "FIVE": {
@@ -1493,6 +1537,10 @@
    "n": "iShares US & Intl High Yield Corp Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "GII": {
+   "n": "SPDR S&P Global Infrastructure ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "GLD": {
    "n": "SPDR Gold Shares",
    "type": "ETF_PASS_THROUGH"
@@ -1589,6 +1637,10 @@
    "n": "Amplify Cybersecurity",
    "type": "ETF_PASS_THROUGH"
   },
+  "HAIL": {
+   "n": "SPDR S&P Kensho Smart Mobility ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "HAUZ": {
    "n": "Xtrackers International Real Estate ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1665,6 +1717,10 @@
    "n": "iShares High Yield Bond Factor ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "HYDR": {
+   "n": "Global X Hydrogen ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "HYG": {
    "n": "iShares iBoxx High Yield Corporate Bond",
    "type": "ETF_PASS_THROUGH"
@@ -1736,6 +1792,10 @@
   "ICF": {
    "n": "iShares Cohen and Steers REIT",
    "type": "ETF_PASS_THROUGH"
+  },
+  "ICHR": {
+   "n": "Ichor Holdings",
+   "type": "EQUITY_STANDARD"
   },
   "ICLN": {
    "n": "iShares Global Clean Energy",
@@ -2201,6 +2261,10 @@
    "n": "SPDR S&P Insurance",
    "type": "ETF_PASS_THROUGH"
   },
+  "KLIC": {
+   "n": "Kulicke and Soffa Industries",
+   "type": "EQUITY_STANDARD"
+  },
   "KMT": {
    "n": "Kennametal",
    "type": "EQUITY_STANDARD"
@@ -2497,6 +2561,10 @@
    "n": "iShares Global Materials ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "MXL": {
+   "n": "MaxLinear",
+   "type": "EQUITY_STANDARD"
+  },
   "NBIS": {
    "n": "Nebius Group",
    "type": "EQUITY_STANDARD"
@@ -2507,6 +2575,10 @@
   },
   "NEAR": {
    "n": "iShares Short Maturity Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "NERD": {
+   "n": "Roundhill Video Games ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "NET": {
@@ -2785,6 +2857,10 @@
    "n": "POSCO Holdings",
    "type": "ADR_VARIABLE"
   },
+  "PLAB": {
+   "n": "Photronics",
+   "type": "EQUITY_STANDARD"
+  },
   "PLAY": {
    "n": "Dave & Buster's",
    "type": "EQUITY_STANDARD"
@@ -2811,6 +2887,10 @@
   },
   "POST": {
    "n": "Post Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "POWI": {
+   "n": "Power Integrations",
    "type": "EQUITY_STANDARD"
   },
   "PPA": {
@@ -3033,6 +3113,10 @@
    "n": "ROBO Global Robotics and Automation",
    "type": "ETF_PASS_THROUGH"
   },
+  "ROKT": {
+   "n": "SPDR S&P Kensho Final Frontiers ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "ROKU": {
    "n": "Roku",
    "type": "EQUITY_STANDARD"
@@ -3229,6 +3313,10 @@
    "n": "Shake Shack",
    "type": "EQUITY_STANDARD"
   },
+  "SHLD": {
+   "n": "Global X Defense Tech ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "SHM": {
    "n": "SPDR Nuveen Bloomberg Short Term Municipal Bond",
    "type": "ETF_PASS_THROUGH"
@@ -3265,6 +3353,10 @@
    "n": "SiteOne Landscape Supply",
    "type": "EQUITY_STANDARD"
   },
+  "SITM": {
+   "n": "SiTime",
+   "type": "EQUITY_STANDARD"
+  },
   "SIVR": {
    "n": "abrdn Physical Silver Shares",
    "type": "ETF_PASS_THROUGH"
@@ -3284,6 +3376,10 @@
   "SKYY": {
    "n": "First Trust Cloud Computing",
    "type": "ETF_PASS_THROUGH"
+  },
+  "SLAB": {
+   "n": "Silicon Laboratories",
+   "type": "EQUITY_STANDARD"
   },
   "SLV": {
    "n": "iShares Silver Trust",
@@ -3703,6 +3799,10 @@
   },
   "UAA": {
    "n": "Under Armour",
+   "type": "EQUITY_STANDARD"
+  },
+  "UCTT": {
+   "n": "Ultra Clean Holdings",
    "type": "EQUITY_STANDARD"
   },
   "UE": {
