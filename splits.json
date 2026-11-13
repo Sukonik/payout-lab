@@ -1,6 +1,6 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-11-13T11:39:47.399Z",
+ "updated": "2026-11-13T18:50:27.471Z",
  "upcomingAsOf": "2026-11-13",
  "tickers": {
   "A": {
@@ -50,6 +50,26 @@
      "d": "2016-11-01",
      "a": 1000,
      "b": 801,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "AAP": {
+   "n": "Advance Auto Parts",
+   "s": [
+    {
+     "d": "2004-01-05",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-09-26",
+     "a": 3,
+     "b": 2,
      "src": "Yahoo Finance",
      "ver": 1
     }
@@ -175,6 +195,19 @@
     }
    ],
    "u": "2026-11-12"
+  },
+  "ACLS": {
+   "n": "Axcelis Technologies",
+   "s": [
+    {
+     "d": "2016-07-01",
+     "a": 1,
+     "b": 4,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "ACN": {
    "n": "Accenture",
@@ -553,6 +586,26 @@
     }
    ],
    "u": "2026-11-12"
+  },
+  "ADTN": {
+   "n": "ADTRAN Holdings",
+   "s": [
+    {
+     "d": "1995-05-15",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2003-12-16",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "AEE": {
    "n": "Ameren",
@@ -1831,6 +1884,33 @@
    ],
    "u": "2026-11-12"
   },
+  "BBWI": {
+   "n": "Bath & Body Works",
+   "s": [
+    {
+     "d": "1986-06-24",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1990-06-20",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-05-31",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "BBY": {
    "n": "Best Buy",
    "s": [
@@ -1886,6 +1966,40 @@
     {
      "d": "2005-08-04",
      "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "BDC": {
+   "n": "Belden",
+   "s": [
+    {
+     "d": "1996-01-02",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1998-01-12",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-08-22",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2004-07-16",
+     "a": 1,
      "b": 2,
      "src": "Yahoo Finance",
      "ver": 1
@@ -2083,6 +2197,54 @@
    "s": [],
    "u": "2026-11-13"
   },
+  "BHP": {
+   "n": "BHP Group",
+   "s": [
+    {
+     "d": "1984-04-19",
+     "a": 6,
+     "b": 5,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1985-04-19",
+     "a": 9,
+     "b": 8,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1986-01-31",
+     "a": 6,
+     "b": 5,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1987-04-24",
+     "a": 6,
+     "b": 5,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1987-05-28",
+     "a": 1,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1996-06-25",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "BIDU": {
    "n": "Baidu",
    "s": [
@@ -2141,6 +2303,40 @@
     }
    ],
    "u": "2026-11-12"
+  },
+  "BKE": {
+   "n": "Buckle",
+   "s": [
+    {
+     "d": "1997-04-25",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1998-06-09",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-01-16",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2008-10-31",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "BKNG": {
    "n": "Booking Holdings",
@@ -2358,6 +2554,19 @@
     },
     {
      "d": "2003-11-06",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "BWX": {
+   "n": "SPDR Bloomberg International Treasury Bond ETF",
+   "s": [
+    {
+     "d": "2016-09-29",
      "a": 2,
      "b": 1,
      "src": "Yahoo Finance",
@@ -2591,6 +2800,47 @@
    ],
    "u": "2026-11-13"
   },
+  "CAKE": {
+   "n": "Cheesecake Factory",
+   "s": [
+    {
+     "d": "1994-03-16",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1998-04-02",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-06-09",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2001-06-19",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2004-12-09",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "CARR": {
    "n": "Carrier Global",
    "s": [],
@@ -2695,9 +2945,84 @@
    ],
    "u": "2026-11-13"
   },
+  "CBRL": {
+   "n": "Cracker Barrel",
+   "s": [
+    {
+     "d": "1983-07-01",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1987-03-27",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1989-02-14",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1990-04-03",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1991-03-25",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1992-03-23",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1993-03-22",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "CCI": {
    "n": "Crown Castle",
    "s": [],
+   "u": "2026-11-13"
+  },
+  "CCJ": {
+   "n": "Cameco",
+   "s": [
+    {
+     "d": "2005-01-07",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-02-23",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
    "u": "2026-11-13"
   },
   "CCL": {
@@ -3440,6 +3765,26 @@
    ],
    "u": "2026-11-13"
   },
+  "CNX": {
+   "n": "CNX Resources",
+   "s": [
+    {
+     "d": "2006-06-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2017-11-29",
+     "a": 6,
+     "b": 5,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "COF": {
    "n": "Capital One",
    "s": [
@@ -3485,6 +3830,33 @@
      "ver": 1,
      "pre": 48.76,
      "post": 24.78
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "COHU": {
+   "n": "Cohu",
+   "s": [
+    {
+     "d": "1993-06-28",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-06-08",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-09-27",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
     }
    ],
    "u": "2026-11-13"
@@ -3808,6 +4180,33 @@
     }
    ],
    "u": "2026-11-12"
+  },
+  "CRS": {
+   "n": "Carpenter Technology",
+   "s": [
+    {
+     "d": "1977-09-22",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-09-18",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-11-16",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "CRWD": {
    "n": "CrowdStrike",
@@ -4293,6 +4692,26 @@
    "s": [],
    "u": "2026-11-13"
   },
+  "DGII": {
+   "n": "Digi International",
+   "s": [
+    {
+     "d": "1991-03-04",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1992-04-01",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "DGRO": {
    "n": "iShares Core Dividend Growth ETF",
    "s": [],
@@ -4418,6 +4837,53 @@
      "ver": 1,
      "pre": 78.67,
      "post": 39.66
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "DIN": {
+   "n": "Dine Brands Global",
+   "s": [
+    {
+     "d": "1999-05-28",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "DIOD": {
+   "n": "Diodes Inc.",
+   "s": [
+    {
+     "d": "2000-07-17",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2003-11-26",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-12-01",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-07-31",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
     }
    ],
    "u": "2026-11-13"
@@ -4774,6 +5240,61 @@
     }
    ],
    "u": "2026-11-12"
+  },
+  "EAT": {
+   "n": "Brinker International",
+   "s": [
+    {
+     "d": "1989-06-19",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1991-03-15",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1991-11-27",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1993-05-14",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1994-03-31",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2001-01-17",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-12-01",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "EBAY": {
    "n": "eBay Inc.",
@@ -5546,6 +6067,19 @@
    "s": [],
    "u": "2026-11-13"
   },
+  "EXTR": {
+   "n": "Extreme Networks",
+   "s": [
+    {
+     "d": "2000-08-25",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "EZA": {
    "n": "iShares MSCI South Africa",
    "s": [
@@ -6064,6 +6598,33 @@
     },
     {
      "d": "2000-10-17",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "FMC": {
+   "n": "FMC Corporation",
+   "s": [
+    {
+     "d": "1986-05-29",
+     "a": 5,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-09-14",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2012-05-25",
      "a": 2,
      "b": 1,
      "src": "Yahoo Finance",
@@ -7324,6 +7885,19 @@
    ],
    "u": "2026-11-13"
   },
+  "HR": {
+   "n": "Healthcare Realty Trust",
+   "s": [
+    {
+     "d": "2014-12-16",
+     "a": 1,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "HRB": {
    "n": "H&R Block",
    "s": [
@@ -7573,6 +8147,19 @@
    "s": [],
    "u": "2026-11-13"
   },
+  "HXL": {
+   "n": "Hexcel",
+   "s": [
+    {
+     "d": "1988-05-23",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "HYD": {
    "n": "VanEck High Yield Muni",
    "s": [
@@ -7585,6 +8172,19 @@
     }
    ],
    "u": "2026-11-12"
+  },
+  "HYDR": {
+   "n": "Global X Hydrogen ETF",
+   "s": [
+    {
+     "d": "2024-06-17",
+     "a": 1,
+     "b": 5,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "HYLB": {
    "n": "Xtrackers USD High Yield Corporate Bond ETF",
@@ -7752,6 +8352,19 @@
    ],
    "u": "2026-11-12"
   },
+  "IDA": {
+   "n": "IDACORP",
+   "s": [
+    {
+     "d": "1985-06-07",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "IDU": {
    "n": "iShares U.S. Utilities ETF",
    "s": [
@@ -7868,6 +8481,26 @@
    ],
    "u": "2026-11-13"
   },
+  "IGE": {
+   "n": "iShares North American Natural Resources ETF",
+   "s": [
+    {
+     "d": "2005-06-09",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2008-07-24",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "IGIB": {
    "n": "iShares 5-10 Year Investment Grade Corporate Bond",
    "s": [
@@ -7900,6 +8533,19 @@
     {
      "d": "2017-08-31",
      "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "IGPT": {
+   "n": "Invesco AI and Next Gen Software ETF",
+   "s": [
+    {
+     "d": "2023-07-17",
+     "a": 3,
      "b": 1,
      "src": "Yahoo Finance",
      "ver": 1
@@ -8223,7 +8869,7 @@
   "INVH": {
    "n": "Invitation Homes",
    "s": [],
-   "u": "2026-10-27"
+   "u": "2026-11-13"
   },
   "IP": {
    "n": "International Paper",
@@ -8264,8 +8910,37 @@
   },
   "IRM": {
    "n": "Iron Mountain",
-   "s": [],
-   "u": "2026-10-27"
+   "s": [
+    {
+     "d": "1998-08-03",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2002-01-02",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2004-07-01",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-01-03",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "ISCG": {
    "n": "iShares Morningstar Small-Cap Growth ETF",
@@ -8273,6 +8948,19 @@
     {
      "d": "2021-04-19",
      "a": 6,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "ISCV": {
+   "n": "iShares Morningstar Small-Cap Value ETF",
+   "s": [
+    {
+     "d": "2021-04-19",
+     "a": 3,
      "b": 1,
      "src": "Yahoo Finance",
      "ver": 1
@@ -8370,6 +9058,26 @@
     }
    ],
    "u": "2026-11-12"
+  },
+  "ITM": {
+   "n": "VanEck Intermediate Muni ETF",
+   "s": [
+    {
+     "d": "2008-10-24",
+     "a": 5,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2018-10-26",
+     "a": 1,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "ITOT": {
    "n": "iShares Core S&P Total US Stock Market",
@@ -8530,8 +9238,23 @@
   },
   "IVZ": {
    "n": "Invesco",
-   "s": [],
-   "u": "2026-10-27"
+   "s": [
+    {
+     "d": "1998-04-27",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-11-08",
+     "a": 25,
+     "b": 10,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "IWF": {
    "n": "iShares Russell 1000 Growth",
@@ -8789,23 +9512,173 @@
   },
   "J": {
    "n": "Jacobs Solutions",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1981-03-17",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1990-04-03",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1991-05-29",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2002-04-02",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-03-16",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2025-05-16",
+     "a": 101,
+     "b": 100,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "JACK": {
+   "n": "Jack in the Box",
+   "s": [
+    {
+     "d": "2007-10-16",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "JBHT": {
    "n": "J.B. Hunt",
-   "s": [],
-   "u": "2026-10-27"
+   "s": [
+    {
+     "d": "1986-07-08",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1992-03-16",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2003-09-02",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-05-24",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "JBL": {
    "n": "Jabil",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1997-07-23",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-02-18",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-03-31",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "JCI": {
    "n": "Johnson Controls",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1987-09-28",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-11-15",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-10-23",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-10-22",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-07-02",
+     "a": 1,
+     "b": 4,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2016-09-06",
+     "a": 955,
+     "b": 1000,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "JEPI": {
    "n": "JPMorgan Equity Premium Income ETF",
@@ -8839,8 +9712,51 @@
   },
   "JKHY": {
    "n": "Jack Henry & Associates",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1992-03-04",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1993-03-09",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1994-03-11",
+     "a": 4,
+     "b": 3,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-03-14",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-03-03",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2001-03-05",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "JNJ": {
    "n": "Johnson & Johnson",
@@ -8905,18 +9821,68 @@
   },
   "JPM": {
    "n": "JPMorgan Chase",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1984-04-16",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1998-06-15",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-06-12",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "KBH": {
+   "n": "KB Home",
+   "s": [
+    {
+     "d": "2005-04-29",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "KDP": {
    "n": "Keurig Dr Pepper",
    "s": [],
-   "u": "2026-10-28"
+   "u": "2026-11-13"
   },
   "KEY": {
    "n": "KeyCorp",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1992-04-15",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1998-03-09",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "KEYS": {
    "n": "Keysight Technologies",
@@ -8939,7 +9905,7 @@
   "KHC": {
    "n": "Kraft Heinz",
    "s": [],
-   "u": "2026-10-28"
+   "u": "2026-11-13"
   },
   "KIE": {
    "n": "SPDR S&P Insurance",
@@ -8956,38 +9922,185 @@
   },
   "KIM": {
    "n": "Kimco Realty",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1995-12-22",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2001-12-24",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-08-24",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "KKR": {
    "n": "KKR & Co.",
    "s": [],
-   "u": "2026-10-28"
+   "u": "2026-11-13"
   },
   "KLAC": {
    "n": "KLA Corporation",
    "s": [
     {
+     "d": "1983-01-10",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1983-12-09",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1984-12-17",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-10-02",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-01-19",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2026-06-12",
      "a": 10,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 2411.64,
      "post": 254.54
     }
    ],
-   "u": "2026-10-28"
+   "u": "2026-11-13"
+  },
+  "KLIC": {
+   "n": "Kulicke and Soffa Industries",
+   "s": [
+    {
+     "d": "1980-10-20",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1983-05-23",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-07-31",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-08-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "KMB": {
    "n": "Kimberly-Clark",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1984-05-25",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1987-05-26",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1992-01-03",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-04-03",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "KMI": {
    "n": "Kinder Morgan",
    "s": [],
-   "u": "2026-10-28"
+   "u": "2026-11-13"
+  },
+  "KMT": {
+   "n": "Kennametal",
+   "s": [
+    {
+     "d": "1980-03-11",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1994-08-23",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-12-19",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "KMX": {
    "n": "CarMax",
@@ -9063,16 +10176,44 @@
    "n": "Kroger",
    "s": [
     {
+     "d": "1979-05-29",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1986-10-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-04-23",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-06-29",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2015-07-14",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 76.95,
      "post": 38.2
     }
    ],
-   "u": "2026-10-28"
+   "u": "2026-11-13"
   },
   "KSS": {
    "n": "Kohls",
@@ -9104,7 +10245,7 @@
   "KVUE": {
    "n": "Kenvue",
    "s": [],
-   "u": "2026-10-28"
+   "u": "2026-11-13"
   },
   "KXI": {
    "n": "iShares Global Consumer Staples ETF",
@@ -9121,8 +10262,44 @@
   },
   "L": {
    "n": "Loews Corporation",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1984-04-17",
+     "a": 5,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1985-03-04",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-12-04",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2001-03-21",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-05-09",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "LABU": {
    "n": "Direxion Daily S&P Biotech Bull 3X Shares",
@@ -9175,40 +10352,134 @@
    "s": [
     {
      "d": "2013-09-30",
-     "a": 1,
-     "b": 4,
-     "src": "Tiingo",
+     "a": 405,
+     "b": 1000,
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 16.03,
      "post": 45.52
     }
    ],
-   "u": "2026-10-28"
+   "u": "2026-11-13"
   },
   "LEN": {
    "n": "Lennar",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1980-10-31",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1992-02-26",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1994-04-21",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2004-01-21",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "LEU": {
+   "n": "Centrus Energy",
+   "s": [
+    {
+     "d": "2013-07-02",
+     "a": 1,
+     "b": 25,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2014-09-30",
+     "a": 91,
+     "b": 1000,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "LH": {
    "n": "Labcorp",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "2000-05-04",
+     "a": 1,
+     "b": 10,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2001-06-12",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2002-05-13",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "LHX": {
    "n": "L3Harris",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1997-09-29",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-03-31",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "LII": {
    "n": "Lennox International",
    "s": [],
-   "u": "2026-10-28"
+   "u": "2026-11-13"
   },
   "LIN": {
    "n": "Linde plc",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "2003-12-16",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "LIT": {
    "n": "Global X Lithium and Battery Tech",
@@ -9257,13 +10528,64 @@
   },
   "LLY": {
    "n": "Lilly (Eli)",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1986-01-30",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1989-05-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-12-21",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-10-16",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "LMT": {
    "n": "Lockheed Martin",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1983-09-09",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-03-16",
+     "a": 163,
+     "b": 100,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-01-04",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "LNT": {
    "n": "Alliant Energy",
@@ -9316,23 +10638,73 @@
   },
   "LOW": {
    "n": "Lowe's",
-   "s": [],
-   "u": "2026-10-28"
+   "s": [
+    {
+     "d": "1992-06-29",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1994-04-04",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1998-06-29",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2001-07-02",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-07-03",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "LRCX": {
    "n": "Lam Research",
    "s": [
     {
+     "d": "1993-09-16",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-03-17",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2024-10-03",
      "a": 10,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 814.09,
      "post": 81.11
     }
    ],
-   "u": "2026-10-28"
+   "u": "2026-11-13"
   },
   "LSCC": {
    "n": "Lattice Semiconductor",
@@ -9368,13 +10740,13 @@
      "d": "2011-07-12",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 117.78,
      "post": 59.92
     }
    ],
-   "u": "2026-10-28"
+   "u": "2026-11-13"
   },
   "LUV": {
    "n": "Southwest Airlines",
@@ -9384,12 +10756,12 @@
   "LVS": {
    "n": "Las Vegas Sands",
    "s": [],
-   "u": "2026-10-28"
+   "u": "2026-11-13"
   },
   "LYB": {
    "n": "LyondellBasell",
    "s": [],
-   "u": "2026-10-29"
+   "u": "2026-11-13"
   },
   "LYG": {
    "n": "Lloyds Banking Group (ADR)",
@@ -9441,18 +10813,18 @@
      "d": "2014-01-22",
      "a": 10,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 818.48,
      "post": 83.3
     }
    ],
-   "u": "2026-10-29"
+   "u": "2026-11-13"
   },
   "MAA": {
    "n": "Mid-America Apartment Communities",
    "s": [],
-   "u": "2026-10-29"
+   "u": "2026-11-13"
   },
   "MAIN": {
    "n": "Main Street Capital",
@@ -9474,8 +10846,16 @@
   },
   "MAR": {
    "n": "Marriott International",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "2006-06-12",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MARA": {
    "n": "MARA Holdings",
@@ -9513,53 +10893,247 @@
   },
   "MAS": {
    "n": "Masco",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "1982-12-30",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1986-05-20",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1998-07-13",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MCD": {
    "n": "McDonald's",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "1972-06-06",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1982-10-07",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1984-09-25",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1986-06-26",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1987-06-23",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1989-06-19",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1994-06-27",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-03-08",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MCHP": {
    "n": "Microchip Technology",
    "s": [
     {
+     "d": "1993-09-14",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1994-04-05",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1994-11-09",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-01-07",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-02-08",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-09-27",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2002-05-09",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2021-10-13",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 140.99,
      "post": 70.25
     }
    ],
-   "u": "2026-10-29"
+   "u": "2026-11-13"
   },
   "MCK": {
    "n": "McKesson Corporation",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "1998-01-05",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MCO": {
    "n": "Moody's Corporation",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "2005-05-19",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MDLZ": {
    "n": "Mondelez International",
    "s": [],
-   "u": "2026-10-29"
+   "u": "2026-11-13"
   },
   "MDT": {
    "n": "Medtronic",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "1980-08-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1989-08-31",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1991-08-30",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1994-09-30",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-09-29",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-09-15",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-09-27",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MET": {
    "n": "MetLife",
    "s": [],
-   "u": "2026-10-29"
+   "u": "2026-11-13"
   },
   "META": {
    "n": "Meta Platforms",
@@ -9581,28 +11155,132 @@
   },
   "MGM": {
    "n": "MGM Resorts",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "2000-02-28",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-05-19",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "MHO": {
+   "n": "M/I Homes",
+   "s": [
+    {
+     "d": "2002-06-20",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MKC": {
    "n": "McCormick & Company",
    "s": [
     {
+     "d": "1977-03-22",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1988-04-28",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1990-01-22",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1992-01-21",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2002-04-09",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2020-12-01",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 186.98,
      "post": 93.64
     }
    ],
-   "u": "2026-10-29"
+   "u": "2026-11-13"
+  },
+  "MLI": {
+   "n": "Mueller Industries",
+   "s": [
+    {
+     "d": "1995-10-02",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1998-05-28",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2014-03-31",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2023-10-23",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2026-07-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MLM": {
    "n": "Martin Marietta Materials",
    "s": [],
-   "u": "2026-10-29"
+   "u": "2026-11-13"
   },
   "MLPA": {
    "n": "Global X MLP",
@@ -9668,10 +11346,31 @@
    "n": "Monster Beverage",
    "s": [
     {
+     "d": "1988-02-29",
+     "a": 1,
+     "b": 50,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-08-09",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-07-10",
+     "a": 4,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2012-02-16",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 106.51,
      "post": 52.99
@@ -9680,7 +11379,7 @@
      "d": "2016-11-10",
      "a": 3,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 132.59,
      "post": 42.33
@@ -9689,7 +11388,7 @@
      "d": "2023-03-28",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 104.67,
      "post": 51.6
@@ -9698,13 +11397,13 @@
      "d": "2026-08-11",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 91.43,
      "post": 45.53
     }
    ],
-   "u": "2026-10-29"
+   "u": "2026-11-13"
   },
   "MO": {
    "n": "Altria",
@@ -9756,8 +11455,16 @@
   },
   "MOS": {
    "n": "Mosaic Company (The)",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "1995-12-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MPC": {
    "n": "Marathon Petroleum",
@@ -9766,23 +11473,59 @@
      "d": "2015-06-11",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 101.79,
      "post": 52.03
     }
    ],
-   "u": "2026-10-29"
+   "u": "2026-11-13"
   },
   "MPWR": {
    "n": "Monolithic Power Systems",
    "s": [],
-   "u": "2026-10-29"
+   "u": "2026-11-13"
   },
   "MRK": {
    "n": "Merck & Co.",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "1972-06-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1986-05-27",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1988-05-26",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1992-05-26",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-02-17",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MRNA": {
    "n": "Moderna",
@@ -9791,23 +11534,82 @@
   },
   "MRSH": {
    "n": "Marsh McLennan",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "1986-05-15",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-06-30",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1998-06-29",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2002-07-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MRVL": {
    "n": "Marvell Technology",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "2004-06-29",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-07-25",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MS": {
    "n": "Morgan Stanley",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "1997-01-15",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-01-27",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MSCI": {
    "n": "MSCI",
    "s": [],
-   "u": "2026-10-29"
+   "u": "2026-11-13"
   },
   "MSFT": {
    "n": "Microsoft",
@@ -9882,16 +11684,56 @@
    "n": "Motorola Solutions",
    "s": [
     {
-     "d": "2011-01-04",
-     "a": 1,
-     "b": 7,
-     "src": "Tiingo",
-     "ver": 1,
-     "pre": 9.11,
-     "post": 39.77
+     "d": "1970-05-26",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1973-06-04",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1984-06-04",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1993-01-19",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1994-04-19",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-06-02",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2004-12-03",
+     "a": 1000,
+     "b": 895,
+     "src": "Yahoo Finance",
+     "ver": 1
     }
    ],
-   "u": "2026-10-29"
+   "u": "2026-11-13"
   },
   "MSTR": {
    "n": "Strategy",
@@ -9933,15 +11775,104 @@
    ],
    "u": "2026-11-13"
   },
+  "MT": {
+   "n": "ArcelorMittal",
+   "s": [
+    {
+     "d": "2017-05-22",
+     "a": 1,
+     "b": 3,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "MTB": {
    "n": "M&T Bank",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "1987-09-25",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-10-06",
+     "a": 10,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "MTCH": {
+   "n": "Match Group",
+   "s": [
+    {
+     "d": "1998-03-27",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-02-25",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-08-09",
+     "a": 18,
+     "b": 20,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MTD": {
    "n": "Mettler Toledo",
    "s": [],
    "u": "2026-10-29"
+  },
+  "MTH": {
+   "n": "Meritage Homes",
+   "s": [
+    {
+     "d": "1997-01-02",
+     "a": 1,
+     "b": 3,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2002-04-29",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-01-10",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2025-01-03",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MTUM": {
    "n": "iShares MSCI USA Momentum Factor ETF",
@@ -9958,8 +11889,30 @@
   },
   "MU": {
    "n": "Micron Technology",
-   "s": [],
-   "u": "2026-10-29"
+   "s": [
+    {
+     "d": "1994-04-19",
+     "a": 5,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-05-23",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-05-02",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "MUR": {
    "n": "Murphy Oil",
@@ -10020,57 +11973,128 @@
      "d": "2022-08-29",
      "a": 3,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 182.07,
      "post": 59.7
     }
    ],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "NDSN": {
    "n": "Nordson Corporation",
    "s": [
     {
+     "d": "1984-01-04",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1987-05-01",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1991-09-25",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-09-13",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2011-04-13",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 111.11,
      "post": 55.4
     }
    ],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "NEE": {
    "n": "NextEra Energy",
    "s": [
     {
+     "d": "1985-01-31",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-03-16",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2020-10-27",
      "a": 4,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 302.65,
      "post": 75.78
     }
    ],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "NEM": {
    "n": "Newmont",
-   "s": [],
-   "u": "2026-10-30"
+   "s": [
+    {
+     "d": "1987-06-11",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1987-10-09",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1994-04-22",
+     "a": 5,
+     "b": 4,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "NFLX": {
    "n": "Netflix",
    "s": [
     {
+     "d": "2004-02-12",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2015-07-15",
      "a": 7,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 702.6,
      "post": 98.13
@@ -10079,27 +12103,63 @@
      "d": "2025-11-17",
      "a": 10,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 1112.17,
      "post": 110.29
     }
    ],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "NI": {
    "n": "NiSource",
-   "s": [],
-   "u": "2026-10-30"
+   "s": [
+    {
+     "d": "1998-02-23",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "NKE": {
    "n": "Nike, Inc.",
    "s": [
     {
+     "d": "1990-10-08",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-10-31",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1996-10-24",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-04-03",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2012-12-26",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 105.6,
      "post": 51.33
@@ -10108,13 +12168,13 @@
      "d": "2015-12-24",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 128.71,
      "post": 63.18
     }
    ],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "NLR": {
    "n": "VanEck Uranium and Nuclear",
@@ -10144,8 +12204,23 @@
   },
   "NOC": {
    "n": "Northrop Grumman",
-   "s": [],
-   "u": "2026-10-30"
+   "s": [
+    {
+     "d": "1984-09-11",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2004-06-22",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "NOG": {
    "n": "Northern Oil and Gas",
@@ -10177,18 +12252,70 @@
   },
   "NRG": {
    "n": "NRG Energy",
-   "s": [],
-   "u": "2026-10-30"
+   "s": [
+    {
+     "d": "2007-06-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "NSC": {
    "n": "Norfolk Southern",
-   "s": [],
-   "u": "2026-10-30"
+   "s": [
+    {
+     "d": "1987-04-07",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-10-10",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "NTAP": {
    "n": "NetApp",
-   "s": [],
-   "u": "2026-10-30"
+   "s": [
+    {
+     "d": "1997-12-19",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1998-12-22",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-12-21",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-03-23",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "NTDOY": {
    "n": "Nintendo (ADR)",
@@ -10207,22 +12334,129 @@
   },
   "NTRS": {
    "n": "Northern Trust",
-   "s": [],
-   "u": "2026-10-30"
+   "s": [
+    {
+     "d": "1986-05-01",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1990-05-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1992-12-10",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1996-12-10",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-12-10",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "NUE": {
    "n": "Nucor",
-   "s": [],
-   "u": "2026-10-30"
+   "s": [
+    {
+     "d": "1983-09-21",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1986-06-18",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1992-06-22",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1993-09-20",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2004-10-18",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-06-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "NVDA": {
    "n": "NVIDIA",
    "s": [
     {
+     "d": "2000-06-27",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2001-09-12",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-04-07",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-09-11",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2021-07-20",
      "a": 4,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 751.19,
      "post": 186.12
@@ -10231,13 +12465,13 @@
      "d": "2024-06-10",
      "a": 10,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 1208.88,
      "post": 121.79
     }
    ],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "NVO": {
    "n": "Novo Nordisk",
@@ -10283,22 +12517,22 @@
   "NVR": {
    "n": "NVR, Inc.",
    "s": [],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "NWS": {
    "n": "News Corp (Class B)",
    "s": [],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "NWSA": {
    "n": "News Corp (Class A)",
    "s": [],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "NXPI": {
    "n": "NXP Semiconductors",
    "s": [],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "NYF": {
    "n": "iShares New York Muni Bond",
@@ -10370,10 +12604,31 @@
    "n": "Old Dominion",
    "s": [
     {
+     "d": "2003-06-17",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2004-05-21",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-12-01",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2010-08-24",
      "a": 3,
      "b": 2,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 36.81,
      "post": 23.76
@@ -10382,7 +12637,7 @@
      "d": "2012-09-10",
      "a": 3,
      "b": 2,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 45.79,
      "post": 30.85
@@ -10391,7 +12646,7 @@
      "d": "2020-03-25",
      "a": 3,
      "b": 2,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 187.87,
      "post": 135.53
@@ -10400,13 +12655,33 @@
      "d": "2024-03-28",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 427.95,
      "post": 219.31
     }
    ],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
+  },
+  "OGE": {
+   "n": "OGE Energy",
+   "s": [
+    {
+     "d": "1998-06-16",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2013-07-02",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "OIH": {
    "n": "VanEck Oil Services",
@@ -10432,21 +12707,64 @@
    "n": "Oneok",
    "s": [
     {
+     "d": "1990-03-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2001-06-12",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2012-06-04",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 79.8,
      "post": 39.49
     }
    ],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "OMC": {
    "n": "Omnicom Group",
-   "s": [],
-   "u": "2026-10-30"
+   "s": [
+    {
+     "d": "1981-01-16",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-12-28",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-12-30",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-06-26",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "ON": {
    "n": "ON Semiconductor",
@@ -10502,28 +12820,120 @@
   },
   "ORCL": {
    "n": "Oracle Corporation",
-   "s": [],
-   "u": "2026-10-30"
+   "s": [
+    {
+     "d": "1987-03-25",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1987-12-21",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1989-07-03",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1993-11-09",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-02-23",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1996-04-17",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-08-18",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-03-01",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-01-19",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-10-13",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "ORLY": {
    "n": "O'Reilly Automotive",
    "s": [
     {
+     "d": "1997-09-02",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-12-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-06-16",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2025-06-10",
      "a": 15,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 1348.1,
      "post": 91.71
     }
    ],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "OTIS": {
    "n": "Otis Worldwide",
    "s": [],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "OVV": {
    "n": "Ovintiv",
@@ -10547,8 +12957,16 @@
   },
   "OXY": {
    "n": "Occidental Petroleum",
-   "s": [],
-   "u": "2026-10-30"
+   "s": [
+    {
+     "d": "2006-08-16",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "P": {
    "n": "Everpure",
@@ -10575,7 +12993,7 @@
      "d": "2022-09-14",
      "a": 3,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 548.88,
      "post": 182.06
@@ -10584,18 +13002,89 @@
      "d": "2024-12-16",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 393.12,
      "post": 202.5
     }
    ],
-   "u": "2026-11-02"
+   "u": "2026-11-13"
   },
   "PAYX": {
    "n": "Paychex",
-   "s": [],
-   "u": "2026-11-02"
+   "s": [
+    {
+     "d": "1986-06-13",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1987-11-16",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1992-05-21",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1993-08-27",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-05-26",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1996-05-24",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-05-30",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1998-05-26",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-05-24",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-05-23",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "PBW": {
    "n": "Invesco WilderHill Clean Energy",
@@ -10614,21 +13103,85 @@
    "n": "Paccar",
    "s": [
     {
+     "d": "1982-01-11",
+     "a": 11,
+     "b": 10,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1983-12-28",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1988-08-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-05-22",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2002-05-29",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2004-02-06",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-08-11",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-10-10",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2023-02-08",
      "a": 3,
      "b": 2,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 110.29,
      "post": 71.95
     }
    ],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
   },
   "PCG": {
    "n": "PG&E Corporation",
-   "s": [],
-   "u": "2026-11-02"
+   "s": [
+    {
+     "d": "1983-07-18",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "PEG": {
    "n": "Public Service Enterprise Group",
@@ -10783,8 +13336,37 @@
   },
   "PH": {
    "n": "Parker Hannifin",
-   "s": [],
-   "u": "2026-11-02"
+   "s": [
+    {
+     "d": "1986-06-09",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1995-06-02",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-09-08",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-10-02",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "PHM": {
    "n": "PulteGroup",
@@ -10807,7 +13389,27 @@
   "PKG": {
    "n": "Packaging Corporation of America",
    "s": [],
-   "u": "2026-10-30"
+   "u": "2026-11-13"
+  },
+  "PLAB": {
+   "n": "Photronics",
+   "s": [
+    {
+     "d": "1995-03-21",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-12-02",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "PLD": {
    "n": "Prologis",
@@ -10819,25 +13421,96 @@
    "s": [],
    "u": "2026-10-30"
   },
+  "PLXS": {
+   "n": "Plexus",
+   "s": [
+    {
+     "d": "1992-03-23",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-08-26",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-09-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "PM": {
    "n": "Philip Morris International",
    "s": [],
-   "u": "2026-11-02"
+   "u": "2026-11-13"
   },
   "PNC": {
    "n": "PNC Financial Services",
-   "s": [],
-   "u": "2026-11-02"
+   "s": [
+    {
+     "d": "1982-05-21",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1985-07-02",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1992-11-16",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "PNR": {
    "n": "Pentair",
-   "s": [],
-   "u": "2026-11-02"
+   "s": [
+    {
+     "d": "1993-06-14",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1996-02-20",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2004-06-09",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "PNW": {
    "n": "Pinnacle West Capital",
    "s": [],
-   "u": "2026-11-02"
+   "u": "2026-11-13"
   },
   "PODD": {
    "n": "Insulet Corporation",
@@ -10892,25 +13565,81 @@
    ],
    "u": "2026-11-13"
   },
+  "POWI": {
+   "n": "Power Integrations",
+   "s": [
+    {
+     "d": "1999-11-23",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2020-08-19",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "PPG": {
    "n": "PPG Industries",
    "s": [
     {
+     "d": "1983-09-13",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1987-03-13",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1994-06-13",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
      "d": "2015-06-15",
      "a": 2,
      "b": 1,
-     "src": "Tiingo",
+     "src": "Yahoo Finance",
      "ver": 1,
      "pre": 233.25,
      "post": 115.43
     }
    ],
-   "u": "2026-11-02"
+   "u": "2026-11-13"
   },
   "PPL": {
    "n": "PPL Corporation",
-   "s": [],
-   "u": "2026-11-02"
+   "s": [
+    {
+     "d": "1992-05-12",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-08-25",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "PPLT": {
    "n": "abrdn Physical Platinum Shares",
@@ -10971,7 +13700,7 @@
   "PSX": {
    "n": "Phillips 66",
    "s": [],
-   "u": "2026-11-02"
+   "u": "2026-11-13"
   },
   "PTC": {
    "n": "PTC Inc.",
@@ -11005,15 +13734,89 @@
    ],
    "u": "2026-11-12"
   },
+  "PVH": {
+   "n": "PVH Corp.",
+   "s": [
+    {
+     "d": "1984-01-04",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1987-06-17",
+     "a": 5,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1991-10-10",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "PWR": {
    "n": "Quanta Services",
    "s": [],
    "u": "2026-11-02"
   },
+  "PXJ": {
+   "n": "Invesco Oil & Gas Services ETF",
+   "s": [
+    {
+     "d": "2023-07-17",
+     "a": 1,
+     "b": 5,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "PYPL": {
    "n": "PayPal",
    "s": [],
-   "u": "2026-11-02"
+   "u": "2026-11-13"
+  },
+  "PZZA": {
+   "n": "Papa John's",
+   "s": [
+    {
+     "d": "1996-03-26",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1996-11-25",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-01-17",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2013-12-30",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "Q": {
    "n": "Qnity Electronics",
@@ -11255,6 +14058,19 @@
    "s": [],
    "u": "2026-11-02"
   },
+  "RMBS": {
+   "n": "Rambus",
+   "s": [
+    {
+     "d": "2000-06-15",
+     "a": 4,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "RMD": {
    "n": "ResMed|",
    "s": [
@@ -11485,6 +14301,47 @@
     }
    ],
    "u": "2026-11-12"
+  },
+  "SANM": {
+   "n": "Sanmina",
+   "s": [
+    {
+     "d": "1996-03-12",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1998-06-11",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-03-23",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2001-01-09",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2009-08-17",
+     "a": 1,
+     "b": 6,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "SAP": {
    "n": "SAP",
@@ -11925,6 +14782,19 @@
    ],
    "u": "2026-11-13"
   },
+  "SCMB": {
+   "n": "Schwab Municipal Bond ETF",
+   "s": [
+    {
+     "d": "2024-10-11",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "SDIV": {
    "n": "Global X SuperDividend",
    "s": [
@@ -12091,6 +14961,19 @@
     {
      "d": "2005-04-01",
      "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "SMB": {
+   "n": "VanEck Short Muni ETF",
+   "s": [
+    {
+     "d": "2008-10-24",
+     "a": 3,
      "b": 1,
      "src": "Yahoo Finance",
      "ver": 1
@@ -13228,6 +16111,26 @@
    "s": [],
    "u": "2026-11-12"
   },
+  "TKR": {
+   "n": "Timken",
+   "s": [
+    {
+     "d": "1988-09-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-06-02",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "TM": {
    "n": "Toyota Motor",
    "s": [
@@ -13380,6 +16283,40 @@
    ],
    "u": "2026-11-13"
   },
+  "TOL": {
+   "n": "Toll Brothers",
+   "s": [
+    {
+     "d": "1987-02-27",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1987-04-21",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2002-04-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-07-11",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "TPL": {
    "n": "Texas Pacific Land Corporation",
    "s": [
@@ -13492,6 +16429,33 @@
     },
     {
      "d": "2025-11-20",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "TREX": {
+   "n": "Trex Company",
+   "s": [
+    {
+     "d": "2014-05-08",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2018-06-19",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2020-09-15",
      "a": 2,
      "b": 1,
      "src": "Yahoo Finance",
@@ -13650,6 +16614,75 @@
    ],
    "u": "2026-11-13"
   },
+  "TSM": {
+   "n": "Taiwan Semiconductor Manufacturing",
+   "s": [
+    {
+     "d": "1998-08-26",
+     "a": 145,
+     "b": 100,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-08-16",
+     "a": 123,
+     "b": 100,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-05-15",
+     "a": 128,
+     "b": 100,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2001-06-26",
+     "a": 140,
+     "b": 100,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2002-06-19",
+     "a": 11,
+     "b": 10,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2003-07-07",
+     "a": 108,
+     "b": 100,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2004-06-14",
+     "a": 114,
+     "b": 100,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-06-13",
+     "a": 105,
+     "b": 100,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-06-20",
+     "a": 103,
+     "b": 100,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "TSN": {
    "n": "Tyson Foods",
    "s": [
@@ -13710,6 +16743,19 @@
     }
    ],
    "u": "2026-11-12"
+  },
+  "TTD": {
+   "n": "Trade Desk",
+   "s": [
+    {
+     "d": "2021-06-17",
+     "a": 10,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "TTEK": {
    "n": "Tetra Tech",
@@ -13848,6 +16894,19 @@
    ],
    "u": "2026-11-12"
   },
+  "TXRH": {
+   "n": "Texas Roadhouse",
+   "s": [
+    {
+     "d": "2005-09-26",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "TXT": {
    "n": "Textron",
    "s": [
@@ -13894,6 +16953,33 @@
     }
    ],
    "u": "2026-11-12"
+  },
+  "UAA": {
+   "n": "Under Armour",
+   "s": [
+    {
+     "d": "2012-07-10",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2014-04-15",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2016-04-08",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "UAL": {
    "n": "United Airlines Holdings",
@@ -13964,6 +17050,19 @@
    "s": [],
    "u": "2026-11-12"
   },
+  "ULTY": {
+   "n": "YieldMax Ultra Option Income Strategy",
+   "s": [
+    {
+     "d": "2025-12-01",
+     "a": 1,
+     "b": 10,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "UNFI": {
    "n": "United Natural Foods",
    "s": [
@@ -13971,6 +17070,40 @@
      "d": "2004-04-20",
      "a": 2,
      "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "UNG": {
+   "n": "United States Natural Gas Fund",
+   "s": [
+    {
+     "d": "2011-03-09",
+     "a": 1,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2012-02-22",
+     "a": 1,
+     "b": 4,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2018-01-05",
+     "a": 1,
+     "b": 4,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2024-01-24",
+     "a": 1,
+     "b": 4,
      "src": "Yahoo Finance",
      "ver": 1
     }
@@ -14054,15 +17187,123 @@
    ],
    "u": "2026-11-12"
   },
+  "UPRO": {
+   "n": "ProShares UltraPro S&P500",
+   "s": [
+    {
+     "d": "2011-02-25",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2013-06-10",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2015-05-20",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2018-05-24",
+     "a": 3,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2022-01-13",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "UPS": {
    "n": "United Parcel Service",
    "s": [],
    "u": "2026-11-12"
   },
+  "URA": {
+   "n": "Global X Uranium",
+   "s": [
+    {
+     "d": "2013-05-16",
+     "a": 1,
+     "b": 3,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2015-11-18",
+     "a": 1,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "URBN": {
+   "n": "Urban Outfitters",
+   "s": [
+    {
+     "d": "1996-06-03",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2003-09-22",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2004-07-12",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2005-09-26",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "URI": {
    "n": "United Rentals",
    "s": [],
    "u": "2026-11-12"
+  },
+  "URNM": {
+   "n": "Sprott Uranium Miners",
+   "s": [
+    {
+     "d": "2022-12-21",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "USB": {
    "n": "U.S. Bancorp",
@@ -14104,6 +17345,45 @@
     }
    ],
    "u": "2026-11-12"
+  },
+  "USFR": {
+   "n": "WisdomTree Floating Rate Treasury",
+   "s": [
+    {
+     "d": "2022-03-24",
+     "a": 1,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "USHY": {
+   "n": "iShares Broad USD High Yield Corporate Bond",
+   "s": [
+    {
+     "d": "2019-04-22",
+     "a": 6,
+     "b": 5,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
+  "USO": {
+   "n": "United States Oil Fund",
+   "s": [
+    {
+     "d": "2020-04-29",
+     "a": 1,
+     "b": 8,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "UUUU": {
    "n": "Energy Fuels",
@@ -14183,6 +17463,54 @@
    ],
    "u": "2026-11-12"
   },
+  "VIAV": {
+   "n": "Viavi Solutions",
+   "s": [
+    {
+     "d": "1996-06-04",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-11-13",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-07-27",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1999-12-30",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2000-03-13",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-10-17",
+     "a": 1,
+     "b": 8,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
+  },
   "VICI": {
    "n": "Vici Properties",
    "s": [],
@@ -14231,6 +17559,54 @@
     }
    ],
    "u": "2026-11-12"
+  },
+  "VIXY": {
+   "n": "ProShares VIX Short-Term Futures",
+   "s": [
+    {
+     "d": "2013-06-10",
+     "a": 1,
+     "b": 5,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2016-07-25",
+     "a": 1,
+     "b": 5,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2017-07-17",
+     "a": 1,
+     "b": 4,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2021-05-26",
+     "a": 1,
+     "b": 4,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2023-06-23",
+     "a": 1,
+     "b": 5,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2024-11-07",
+     "a": 1,
+     "b": 4,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-13"
   },
   "VLO": {
    "n": "Valero Energy",
