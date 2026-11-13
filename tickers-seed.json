@@ -149,6 +149,10 @@
    "n": "Global X MSCI Argentina",
    "type": "ETF_PASS_THROUGH"
   },
+  "ARHS": {
+   "n": "Arhaus",
+   "type": "EQUITY_STANDARD"
+  },
   "ARKB": {
    "n": "ARK 21Shares Bitcoin",
    "type": "ETF_PASS_THROUGH"
@@ -229,6 +233,10 @@
    "n": "Avantis US Large Cap Value",
    "type": "ETF_PASS_THROUGH"
   },
+  "AVO": {
+   "n": "Mission Produce",
+   "type": "EQUITY_STANDARD"
+  },
   "AVT": {
    "n": "Avnet",
    "type": "EQUITY_STANDARD"
@@ -261,6 +269,10 @@
    "n": "GraniteShares Gold Trust",
    "type": "ETF_PASS_THROUGH"
   },
+  "BARK": {
+   "n": "BARK",
+   "type": "EQUITY_STANDARD"
+  },
   "BATT": {
    "n": "Amplify Lithium & Battery Technology ETF",
    "type": "ETF_PASS_THROUGH"
@@ -292,6 +304,10 @@
   "BETZ": {
    "n": "Roundhill Sports Betting & iGaming ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "BGS": {
+   "n": "B&G Foods",
+   "type": "EQUITY_STANDARD"
   },
   "BHP": {
    "n": "BHP Group",
@@ -953,6 +969,10 @@
    "n": "First Trust North American Energy Infrastructure Fund",
    "type": "ETF_PASS_THROUGH"
   },
+  "EMTY": {
+   "n": "ProShares Decline of the Retail Store ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "EMXC": {
    "n": "iShares MSCI Emerging Markets ex China",
    "type": "ETF_PASS_THROUGH"
@@ -1189,6 +1209,10 @@
    "n": "First Trust TCW Opportunistic Fixed Income",
    "type": "ETF_PASS_THROUGH"
   },
+  "FIZZ": {
+   "n": "National Beverage",
+   "type": "EQUITY_STANDARD"
+  },
   "FLAU": {
    "n": "Franklin FTSE Australia ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1257,6 +1281,10 @@
    "n": "Fidelity MSCI Financials",
    "type": "ETF_PASS_THROUGH"
   },
+  "FND": {
+   "n": "Floor & Decor Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "FNDA": {
    "n": "Schwab Fundamental US Small Company Index",
    "type": "ETF_PASS_THROUGH"
@@ -1315,6 +1343,10 @@
   },
   "FROG": {
    "n": "JFrog",
+   "type": "EQUITY_STANDARD"
+  },
+  "FRPT": {
+   "n": "Freshpet",
    "type": "EQUITY_STANDARD"
   },
   "FSLR": {
@@ -1601,6 +1633,10 @@
    "n": "VanEck Bitcoin",
    "type": "ETF_PASS_THROUGH"
   },
+  "HOMZ": {
+   "n": "Hoya Capital Housing ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "HPQ": {
    "n": "HP",
    "type": "EQUITY_STANDARD"
@@ -1865,6 +1901,10 @@
    "n": "iShares MSCI India",
    "type": "ETF_PASS_THROUGH"
   },
+  "INDS": {
+   "n": "Pacer Industrial Real Estate ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "INDY": {
    "n": "iShares India 50",
    "type": "ETF_PASS_THROUGH"
@@ -2065,6 +2105,10 @@
    "n": "iShares US Real Estate",
    "type": "ETF_PASS_THROUGH"
   },
+  "IYRI": {
+   "n": "NEOS Real Estate High Income ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "IYT": {
    "n": "iShares Transportation Average",
    "type": "ETF_PASS_THROUGH"
@@ -2249,6 +2293,10 @@
    "n": "Logitech International",
    "type": "EQUITY_STANDARD"
   },
+  "LOVE": {
+   "n": "Lovesac",
+   "type": "EQUITY_STANDARD"
+  },
   "LPL": {
    "n": "LG Display",
    "type": "EQUITY_STANDARD"
@@ -2287,6 +2335,10 @@
   },
   "LYFT": {
    "n": "Lyft",
+   "type": "EQUITY_STANDARD"
+  },
+  "LZB": {
+   "n": "La-Z-Boy",
    "type": "EQUITY_STANDARD"
   },
   "M": {
@@ -2589,6 +2641,10 @@
    "n": "Fidelity Nasdaq Composite Index",
    "type": "ETF_PASS_THROUGH"
   },
+  "ONLN": {
+   "n": "ProShares Online Retail ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "ONON": {
    "n": "On Holding",
    "type": "EQUITY_STANDARD"
@@ -2721,6 +2777,10 @@
    "n": "Park Hotels & Resorts",
    "type": "EQUITY_STANDARD"
   },
+  "PKB": {
+   "n": "Invesco Building & Construction ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "PKX": {
    "n": "POSCO Holdings",
    "type": "ADR_VARIABLE"
@@ -2799,6 +2859,10 @@
   },
   "PTEN": {
    "n": "Patterson-UTI Energy",
+   "type": "EQUITY_STANDARD"
+  },
+  "PTLO": {
+   "n": "Portillo's",
    "type": "EQUITY_STANDARD"
   },
   "PUMP": {
@@ -3661,6 +3725,10 @@
    "n": "YieldMax Ultra Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
   },
+  "UNFI": {
+   "n": "United Natural Foods",
+   "type": "EQUITY_STANDARD"
+  },
   "UNG": {
    "n": "United States Natural Gas Fund",
    "type": "ETF_PASS_THROUGH"
@@ -3824,6 +3892,10 @@
   "VIS": {
    "n": "Vanguard Industrials",
    "type": "ETF_PASS_THROUGH"
+  },
+  "VITL": {
+   "n": "Vital Farms",
+   "type": "EQUITY_STANDARD"
   },
   "VIXY": {
    "n": "ProShares VIX Short-Term Futures",
@@ -4004,6 +4076,10 @@
   "WOOD": {
    "n": "iShares Global Timber & Forestry ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "WOOF": {
+   "n": "Petco Health and Wellness",
+   "type": "EQUITY_STANDARD"
   },
   "WOR": {
    "n": "Worthington Enterprises",
