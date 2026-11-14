@@ -285,6 +285,10 @@
    "n": "Booz Allen Hamilton",
    "type": "EQUITY_STANDARD"
   },
+  "BALY": {
+   "n": "Bally's",
+   "type": "EQUITY_STANDARD"
+  },
   "BAR": {
    "n": "GraniteShares Gold Trust",
    "type": "ETF_PASS_THROUGH"
@@ -565,6 +569,10 @@
    "n": "Roundhill Generative AI & Technology ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "CHDN": {
+   "n": "Churchill Downs",
+   "type": "EQUITY_STANDARD"
+  },
   "CHEF": {
    "n": "Chefs' Warehouse",
    "type": "EQUITY_STANDARD"
@@ -572,6 +580,10 @@
   "CHH": {
    "n": "Choice Hotels International",
    "type": "EQUITY_STANDARD"
+  },
+  "CHIQ": {
+   "n": "Global X MSCI China Consumer Discretionary ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "CHKP": {
    "n": "Check Point Software Technologies",
@@ -624,6 +636,10 @@
   "CMF": {
    "n": "iShares California Muni Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "CNK": {
+   "n": "Cinemark Holdings",
+   "type": "EQUITY_STANDARD"
   },
   "CNX": {
    "n": "CNX Resources",
@@ -957,6 +973,10 @@
    "n": "SPDR Bloomberg Emerging Markets Local Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "ECNS": {
+   "n": "iShares MSCI China Small-Cap ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "EDV": {
    "n": "Vanguard Extended Duration Treasury",
    "type": "ETF_PASS_THROUGH"
@@ -1017,6 +1037,10 @@
    "n": "First Trust North American Energy Infrastructure Fund",
    "type": "ETF_PASS_THROUGH"
   },
+  "EMQQ": {
+   "n": "EMQQ Emerging Markets Internet & Ecommerce ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "EMTY": {
    "n": "ProShares Decline of the Retail Store ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1040,6 +1064,10 @@
   "EPAM": {
    "n": "EPAM Systems",
    "type": "EQUITY_STANDARD"
+  },
+  "EPHE": {
+   "n": "iShares MSCI Philippines ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "EPI": {
    "n": "WisdomTree India Earnings",
@@ -1121,12 +1149,20 @@
    "n": "iShares MSCI Japan",
    "type": "ETF_PASS_THROUGH"
   },
+  "EWK": {
+   "n": "iShares MSCI Belgium ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "EWL": {
    "n": "iShares MSCI Switzerland",
    "type": "ETF_PASS_THROUGH"
   },
   "EWN": {
    "n": "iShares MSCI Netherlands",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWO": {
+   "n": "iShares MSCI Austria ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "EWP": {
@@ -1329,6 +1365,10 @@
    "n": "Franklin FTSE Taiwan ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "FLUT": {
+   "n": "Flutter Entertainment",
+   "type": "EQUITY_STANDARD"
+  },
   "FMAT": {
    "n": "Fidelity MSCI Materials",
    "type": "ETF_PASS_THROUGH"
@@ -1463,6 +1503,10 @@
   },
   "FTXL": {
    "n": "First Trust Nasdaq Semiconductor ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FTXR": {
+   "n": "First Trust Nasdaq Transportation ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "FUN": {
@@ -1989,6 +2033,10 @@
    "n": "iShares Core 10+ Year USD Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "IMAX": {
+   "n": "IMAX",
+   "type": "EQUITY_STANDARD"
+  },
   "IMTM": {
    "n": "iShares MSCI Intl Momentum Factor ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2273,6 +2321,10 @@
    "n": "KraneShares Electric Vehicles and Future Mobility Index ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "KBA": {
+   "n": "KraneShares Bosera MSCI China A 50 Connect Index ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "KBE": {
    "n": "SPDR S&P Bank",
    "type": "ETF_PASS_THROUGH"
@@ -2397,6 +2449,10 @@
    "n": "Li Auto",
    "type": "EQUITY_STANDARD"
   },
+  "LIND": {
+   "n": "Lindblad Expeditions Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "LIT": {
    "n": "Global X Lithium and Battery Tech",
    "type": "ETF_PASS_THROUGH"
@@ -2476,6 +2532,10 @@
   "MANH": {
    "n": "Manhattan Associates",
    "type": "EQUITY_STANDARD"
+  },
+  "MANU": {
+   "n": "Manchester United",
+   "type": "ADR_VARIABLE"
   },
   "MARA": {
    "n": "MARA Holdings",
@@ -2557,6 +2617,10 @@
    "n": "Global X MLP & Energy Infrastructure ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "MMYT": {
+   "n": "MakeMyTrip",
+   "type": "ADR_VARIABLE"
+  },
   "MN": {
    "n": "Corgi MANGOS ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2575,6 +2639,10 @@
   },
   "MP": {
    "n": "MP Materials",
+   "type": "EQUITY_STANDARD"
+  },
+  "MSGE": {
+   "n": "Madison Square Garden Entertainment",
    "type": "EQUITY_STANDARD"
   },
   "MSTR": {
@@ -2599,6 +2667,10 @@
   },
   "MTH": {
    "n": "Meritage Homes",
+   "type": "EQUITY_STANDARD"
+  },
+  "MTN": {
+   "n": "Vail Resorts",
    "type": "EQUITY_STANDARD"
   },
   "MTSI": {
@@ -2723,6 +2795,10 @@
   },
   "NXRT": {
    "n": "NexPoint Residential Trust",
+   "type": "EQUITY_STANDARD"
+  },
+  "NXST": {
+   "n": "Nexstar Media Group",
    "type": "EQUITY_STANDARD"
   },
   "NXTG": {
@@ -2909,6 +2985,10 @@
    "n": "VanEck Preferred Securities ex Financials ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "PGJ": {
+   "n": "Invesco Golden Dragon China ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "PGX": {
    "n": "Invesco Preferred",
    "type": "ETF_PASS_THROUGH"
@@ -3023,6 +3103,10 @@
   },
   "PTLO": {
    "n": "Portillo's",
+   "type": "EQUITY_STANDARD"
+  },
+  "PTON": {
+   "n": "Peloton Interactive",
    "type": "EQUITY_STANDARD"
   },
   "PUMP": {
@@ -3217,6 +3301,10 @@
    "n": "Range Resources",
    "type": "EQUITY_STANDARD"
   },
+  "RRR": {
+   "n": "Red Rock Resorts",
+   "type": "EQUITY_STANDARD"
+  },
   "RS": {
    "n": "Reliance Steel & Aluminum",
    "type": "EQUITY_STANDARD"
@@ -3276,6 +3364,10 @@
   "SAP": {
    "n": "SAP",
    "type": "EQUITY_STANDARD"
+  },
+  "SBLK": {
+   "n": "Star Bulk Carriers",
+   "type": "ADR_VARIABLE"
   },
   "SBRA": {
    "n": "Sabra Health Care REIT",
@@ -3381,6 +3473,10 @@
    "n": "Sprott Gold Miners",
    "type": "ETF_PASS_THROUGH"
   },
+  "SGHC": {
+   "n": "Super Group",
+   "type": "ADR_VARIABLE"
+  },
   "SGOL": {
    "n": "abrdn Physical Gold Shares",
    "type": "ETF_PASS_THROUGH"
@@ -3432,6 +3528,10 @@
   "SILJ": {
    "n": "Amplify Junior Silver Miners",
    "type": "ETF_PASS_THROUGH"
+  },
+  "SIRI": {
+   "n": "Sirius XM Holdings",
+   "type": "EQUITY_STANDARD"
   },
   "SITE": {
    "n": "SiteOne Landscape Supply",
@@ -3503,6 +3603,10 @@
   },
   "SMH": {
    "n": "VanEck Semiconductor",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SMIN": {
+   "n": "iShares MSCI India Small-Cap ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "SMOG": {
@@ -4081,6 +4185,10 @@
    "n": "Vanguard International Dividend Appreciation",
    "type": "ETF_PASS_THROUGH"
   },
+  "VIK": {
+   "n": "Viking Holdings",
+   "type": "ADR_VARIABLE"
+  },
   "VIOG": {
    "n": "Vanguard S&P Small-Cap 600 Growth ETF",
    "type": "ETF_PASS_THROUGH"
@@ -4385,6 +4493,10 @@
    "n": "SPDR S&P Telecom",
    "type": "ETF_PASS_THROUGH"
   },
+  "XTN": {
+   "n": "SPDR S&P Transportation ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "YELP": {
    "n": "Yelp",
    "type": "EQUITY_STANDARD"
@@ -4416,6 +4528,10 @@
   "ZG": {
    "n": "Zillow Group (Class A)",
    "type": "EQUITY_STANDARD"
+  },
+  "ZIM": {
+   "n": "ZIM Integrated Shipping Services",
+   "type": "ADR_VARIABLE"
   },
   "ZM": {
    "n": "Zoom Communications",
