@@ -1,6 +1,6 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-11-14T00:31:26.892Z",
+ "updated": "2026-11-14T11:01:05.677Z",
  "upcomingAsOf": "2026-11-13",
  "tickers": {
   "A": {
@@ -119,12 +119,12 @@
      "post": 129.04
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "ABBV": {
    "n": "AbbVie",
    "s": [],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "ABNB": {
    "n": "Airbnb",
@@ -2329,7 +2329,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "BKCH": {
    "n": "Global X Blockchain",
@@ -2455,7 +2455,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "BNY": {
    "n": "BNY Mellon",
@@ -2728,7 +2728,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "CAG": {
    "n": "Conagra Brands",
@@ -3180,7 +3180,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "CF": {
    "n": "CF Industries",
@@ -3299,7 +3299,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "CHRW": {
    "n": "C.H. Robinson",
@@ -3509,7 +3509,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "CLSK": {
    "n": "CleanSpark",
@@ -3522,7 +3522,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "CLX": {
    "n": "Clorox",
@@ -3724,7 +3724,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "CMG": {
    "n": "Chipotle",
@@ -3990,7 +3990,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "COO": {
    "n": "Cooper Companies (The)",
@@ -4052,7 +4052,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "COR": {
    "n": "Cencora",
@@ -4252,7 +4252,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "CRS": {
    "n": "Carpenter Technology",
@@ -4604,7 +4604,34 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
+  },
+  "CXW": {
+   "n": "CoreCivic",
+   "s": [
+    {
+     "d": "2001-05-18",
+     "a": 1,
+     "b": 10,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-09-14",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-07-09",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-14"
   },
   "D": {
    "n": "Dominion Energy",
@@ -4771,7 +4798,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "DG": {
    "n": "Dollar General",
@@ -4801,7 +4828,7 @@
   "DGRO": {
    "n": "iShares Core Dividend Growth ETF",
    "s": [],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "DGX": {
    "n": "Quest Diagnostics",
@@ -5068,7 +5095,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "DLR": {
    "n": "Digital Realty",
@@ -5171,7 +5198,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "DOV": {
    "n": "Dover Corporation",
@@ -5241,7 +5268,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "DTE": {
    "n": "DTE Energy",
@@ -5353,7 +5380,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "EAT": {
    "n": "Brinker International",
@@ -5521,7 +5548,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "EFA": {
    "n": "iShares MSCI EAFE",
@@ -5534,7 +5561,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "EFG": {
    "n": "iShares MSCI EAFE Growth ETF",
@@ -5620,6 +5647,19 @@
     }
    ],
    "u": "2026-11-13"
+  },
+  "EGP": {
+   "n": "EastGroup Properties",
+   "s": [
+    {
+     "d": "1997-04-08",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-14"
   },
   "EIX": {
    "n": "Edison International",
@@ -5734,7 +5774,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "EMR": {
    "n": "Emerson Electric",
@@ -5900,7 +5940,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "ETHE": {
    "n": "Grayscale Ethereum Trust",
@@ -5913,7 +5953,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "ETN": {
    "n": "Eaton Corporation",
@@ -6030,7 +6070,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "EWJ": {
    "n": "iShares MSCI Japan",
@@ -6043,7 +6083,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "EWS": {
    "n": "iShares MSCI Singapore",
@@ -6056,7 +6096,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "EWT": {
    "n": "iShares MSCI Taiwan",
@@ -6069,7 +6109,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "EWU": {
    "n": "iShares MSCI United Kingdom",
@@ -6082,7 +6122,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "EXC": {
    "n": "Exelon",
@@ -6113,7 +6153,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "EXPD": {
    "n": "Expeditors International",
@@ -6205,7 +6245,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "EZU": {
    "n": "iShares MSCI Eurozone",
@@ -6218,7 +6258,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "F": {
    "n": "Ford Motor Company",
@@ -6345,7 +6385,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "FCX": {
    "n": "Freeport-McMoRan",
@@ -6841,7 +6881,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "FNDX": {
    "n": "Schwab Fundamental US Large Company Index",
@@ -6854,7 +6894,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "FOX": {
    "n": "Fox Corporation (Class B)",
@@ -6926,7 +6966,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "FTV": {
    "n": "Fortive",
@@ -6957,7 +6997,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "GBTC": {
    "n": "Grayscale Bitcoin Trust",
@@ -6970,7 +7010,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "GD": {
    "n": "General Dynamics",
@@ -7022,7 +7062,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "GE": {
    "n": "GE Aerospace",
@@ -7126,6 +7166,40 @@
     }
    ],
    "u": "2026-11-13"
+  },
+  "GEO": {
+   "n": "GEO Group",
+   "s": [
+    {
+     "d": "1996-06-04",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2006-10-02",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2007-06-01",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2017-04-25",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-14"
   },
   "GEV": {
    "n": "GE Vernova",
@@ -7273,7 +7347,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "GLW": {
    "n": "Corning Inc.",
@@ -7314,6 +7388,19 @@
    "s": [],
    "u": "2026-11-13"
   },
+  "GNL": {
+   "n": "Global Net Lease",
+   "s": [
+    {
+     "d": "2017-03-01",
+     "a": 1,
+     "b": 3,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-14"
+  },
   "GNRC": {
    "n": "Generac",
    "s": [],
@@ -7337,7 +7424,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "GOOG": {
    "n": "Alphabet Inc. (Class C)",
@@ -7367,7 +7454,7 @@
      "post": 109.03
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "GPC": {
    "n": "Genuine Parts Company",
@@ -7755,7 +7842,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "HDV": {
    "n": "iShares Core High Dividend ETF",
@@ -9961,12 +10048,12 @@
   "JEPI": {
    "n": "JPMorgan Equity Premium Income ETF",
    "s": [],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "JEPQ": {
    "n": "JPMorgan Nasdaq Equity Premium Income ETF",
    "s": [],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "JJSF": {
    "n": "J&J Snack Foods",
@@ -10082,7 +10169,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "JNK": {
    "n": "SPDR Bloomberg High Yield Bond ETF",
@@ -10095,7 +10182,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "JPM": {
    "n": "JPMorgan Chase",
@@ -10391,7 +10478,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "KO": {
    "n": "Coca-Cola",
@@ -10448,7 +10535,7 @@
      "post": 39.3
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "KR": {
    "n": "Kroger",
@@ -10492,6 +10579,19 @@
     }
    ],
    "u": "2026-11-13"
+  },
+  "KRG": {
+   "n": "Kite Realty Group Trust",
+   "s": [
+    {
+     "d": "2014-08-12",
+     "a": 1,
+     "b": 4,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-14"
   },
   "KROP": {
    "n": "Global X AgTech & Food Innovation ETF",
@@ -11024,6 +11124,19 @@
    ],
    "u": "2026-11-13"
   },
+  "LTC": {
+   "n": "LTC Properties",
+   "s": [
+    {
+     "d": "1998-10-01",
+     "a": 11,
+     "b": 10,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-14"
+  },
   "LULU": {
    "n": "Lululemon Athletica",
    "s": [
@@ -11128,7 +11241,7 @@
   "LYG": {
    "n": "Lloyds Banking Group (ADR)",
    "s": [],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "LYV": {
    "n": "Live Nation Entertainment",
@@ -11191,7 +11304,7 @@
   "MAIN": {
    "n": "Main Street Capital",
    "s": [],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "MANH": {
    "n": "Manhattan Associates",
@@ -11204,7 +11317,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "MAR": {
    "n": "Marriott International",
@@ -11554,7 +11667,7 @@
   "META": {
    "n": "Meta Platforms",
    "s": [],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "MGK": {
    "n": "Vanguard Mega Cap Growth",
@@ -11722,7 +11835,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "MMM": {
    "n": "3M",
@@ -11867,7 +11980,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "MOS": {
    "n": "Mosaic Company (The)",
@@ -12094,7 +12207,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "MSI": {
    "n": "Motorola Solutions",
@@ -12355,7 +12468,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "NBR": {
    "n": "Nabors Industries",
@@ -12375,7 +12488,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "NCLH": {
    "n": "Norwegian Cruise Line Holdings",
@@ -13021,7 +13134,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "OARK": {
    "n": "YieldMax Innovation Option Income Strategy",
@@ -13371,6 +13484,19 @@
    "s": [],
    "u": "2026-11-13"
   },
+  "OUT": {
+   "n": "Outfront Media",
+   "s": [
+    {
+     "d": "2025-01-17",
+     "a": 976,
+     "b": 1000,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-14"
+  },
   "OVV": {
    "n": "Ovintiv",
    "s": [
@@ -13389,7 +13515,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "OXY": {
    "n": "Occidental Petroleum",
@@ -13725,7 +13851,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "PFE": {
    "n": "Pfizer",
@@ -13766,7 +13892,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "PFG": {
    "n": "Principal Financial Group",
@@ -13812,7 +13938,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "PGR": {
    "n": "Progressive Corporation",
@@ -14385,7 +14511,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "PVH": {
    "n": "PVH Corp.",
@@ -14724,7 +14850,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "RIG": {
    "n": "Transocean",
@@ -14737,7 +14863,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "RING": {
    "n": "iShares MSCI Global Gold Miners",
@@ -14763,7 +14889,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "RJF": {
    "n": "Raymond James Financial",
@@ -15056,7 +15182,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "RRC": {
    "n": "Range Resources",
@@ -15076,7 +15202,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "RS": {
    "n": "Reliance Steel & Aluminum",
@@ -15142,7 +15268,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "RTH": {
    "n": "VanEck Retail ETF",
@@ -15155,7 +15281,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "RTX": {
    "n": "RTX Corporation",
@@ -15249,7 +15375,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "SANM": {
    "n": "Sanmina",
@@ -15310,6 +15436,19 @@
    "s": [],
    "u": "2026-11-14"
   },
+  "SBRA": {
+   "n": "Sabra Health Care REIT",
+   "s": [
+    {
+     "d": "2010-11-16",
+     "a": 1,
+     "b": 3,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-14"
+  },
   "SBSW": {
    "n": "Sibanye Stillwater",
    "s": [
@@ -15321,7 +15460,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "SBUX": {
    "n": "Starbucks",
@@ -15456,7 +15595,7 @@
      "post": 22.4
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "SCHD": {
    "n": "Schwab US Dividend Equity ETF",
@@ -15471,7 +15610,7 @@
      "post": 28.54
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "SCHF": {
    "n": "Schwab International Equity ETF",
@@ -15582,7 +15721,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "SCHP": {
    "n": "Schwab US TIPS ETF",
@@ -15595,7 +15734,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "SCHR": {
    "n": "Schwab Intermediate-Term US Treasury",
@@ -15912,6 +16051,26 @@
    "s": [],
    "u": "2026-11-14"
   },
+  "SKT": {
+   "n": "Tanger",
+   "s": [
+    {
+     "d": "2004-12-29",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2011-01-25",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-14"
+  },
   "SKX": {
    "n": "Skechers",
    "s": [
@@ -15941,6 +16100,26 @@
      "d": "2006-04-10",
      "a": 2,
      "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-14"
+  },
+  "SLG": {
+   "n": "SL Green Realty",
+   "s": [
+    {
+     "d": "2021-01-21",
+     "a": 971,
+     "b": 1000,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "2022-01-24",
+     "a": 97,
+     "b": 100,
      "src": "Yahoo Finance",
      "ver": 1
     }
@@ -16534,7 +16713,7 @@
   "SPYD": {
    "n": "SPDR Portfolio S&P 500 High Dividend ETF",
    "s": [],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "SPYG": {
    "n": "SPDR Portfolio S&P 500 Growth ETF",
@@ -16569,7 +16748,7 @@
      "post": 29.48
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "SPYX": {
    "n": "SPDR S&P 500 Fossil Fuel Reserves Free",
@@ -16757,7 +16936,7 @@
   "STAG": {
    "n": "STAG Industrial",
    "s": [],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "STE": {
    "n": "Steris",
@@ -16898,6 +17077,19 @@
     }
    ],
    "u": "2026-11-13"
+  },
+  "SVC": {
+   "n": "Service Properties Trust",
+   "s": [
+    {
+     "d": "2026-07-07",
+     "a": 1,
+     "b": 5,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-14"
   },
   "SW": {
    "n": "Smurfit Westrock",
@@ -17098,7 +17290,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "TAN": {
    "n": "Invesco Solar",
@@ -18505,6 +18697,19 @@
    ],
    "u": "2026-11-14"
   },
+  "UNIT": {
+   "n": "Uniti Group",
+   "s": [
+    {
+     "d": "2025-08-04",
+     "a": 602,
+     "b": 1000,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-14"
+  },
   "UNP": {
    "n": "Union Pacific Corporation",
    "s": [
@@ -18815,7 +19020,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "VIAV": {
    "n": "Viavi Solutions",
@@ -18873,7 +19078,7 @@
   "VIG": {
    "n": "Vanguard Dividend Appreciation ETF",
    "s": [],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "VIOG": {
    "n": "Vanguard S&P Small-Cap 600 Growth ETF",
@@ -19027,6 +19232,40 @@
    ],
    "u": "2026-11-14"
   },
+  "VNO": {
+   "n": "Vornado Realty Trust",
+   "s": [
+    {
+     "d": "1991-06-03",
+     "a": 5,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1993-03-26",
+     "a": 3,
+     "b": 2,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1997-10-21",
+     "a": 2,
+     "b": 1,
+     "src": "Yahoo Finance",
+     "ver": 1
+    },
+    {
+     "d": "1998-10-19",
+     "a": 1000,
+     "b": 987,
+     "src": "Yahoo Finance",
+     "ver": 1
+    }
+   ],
+   "u": "2026-11-14"
+  },
   "VO": {
    "n": "Vanguard Mid-Cap ETF",
    "s": [
@@ -19038,7 +19277,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "VONG": {
    "n": "Vanguard Russell 1000 Growth",
@@ -19400,7 +19639,7 @@
   "VYM": {
    "n": "Vanguard High Dividend Yield ETF",
    "s": [],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "VZ": {
    "n": "Verizon",
@@ -19427,7 +19666,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "WAB": {
    "n": "Wabtec",
@@ -20103,7 +20342,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "XLE": {
    "n": "Energy Select Sector SPDR Fund",
@@ -20116,7 +20355,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "XLG": {
    "n": "Invesco S&P 500 Top 50",
@@ -20142,7 +20381,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "XLU": {
    "n": "Utilities Select Sector SPDR Fund",
@@ -20155,7 +20394,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "XLY": {
    "n": "Consumer Discretionary Select Sector SPDR Fund",
@@ -20168,7 +20407,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "XNTK": {
    "n": "SPDR NYSE Technology",
@@ -20215,7 +20454,7 @@
      "ver": 1
     }
    ],
-   "u": "2026-11-12"
+   "u": "2026-11-14"
   },
   "XOP": {
    "n": "SPDR S&P Oil and Gas Exploration and Production",
