@@ -549,6 +549,10 @@
    "n": "Coeur Mining",
    "type": "EQUITY_STANDARD"
   },
+  "CDP": {
+   "n": "COPT Defense Properties",
+   "type": "EQUITY_STANDARD"
+  },
   "CELH": {
    "n": "Celsius Holdings",
    "type": "EQUITY_STANDARD"
@@ -732,6 +736,10 @@
   "CWB": {
    "n": "SPDR Bloomberg Convertible Securities",
    "type": "ETF_PASS_THROUGH"
+  },
+  "CXW": {
+   "n": "CoreCivic",
+   "type": "EQUITY_STANDARD"
   },
   "CZR": {
    "n": "Caesars Entertainment",
@@ -981,6 +989,10 @@
    "n": "Eldorado Gold",
    "type": "EQUITY_STANDARD"
   },
+  "EGP": {
+   "n": "EastGroup Properties",
+   "type": "EQUITY_STANDARD"
+  },
   "EIDO": {
    "n": "iShares MSCI Indonesia",
    "type": "ETF_PASS_THROUGH"
@@ -1036,6 +1048,10 @@
   "EPOL": {
    "n": "iShares MSCI Poland",
    "type": "ETF_PASS_THROUGH"
+  },
+  "EPR": {
+   "n": "EPR Properties",
+   "type": "EQUITY_STANDARD"
   },
   "EPRT": {
    "n": "Essential Properties Realty Trust",
@@ -1200,6 +1216,10 @@
   "FCOM": {
    "n": "Fidelity MSCI Communication Services",
    "type": "ETF_PASS_THROUGH"
+  },
+  "FCPT": {
+   "n": "Four Corners Property Trust",
+   "type": "EQUITY_STANDARD"
   },
   "FDIS": {
    "n": "Fidelity MSCI Consumer Discretionary",
@@ -1529,6 +1549,10 @@
    "n": "VanEck Junior Gold Miners",
    "type": "ETF_PASS_THROUGH"
   },
+  "GEO": {
+   "n": "GEO Group",
+   "type": "EQUITY_STANDARD"
+  },
   "GFI": {
    "n": "Gold Fields",
    "type": "ADR_VARIABLE"
@@ -1563,6 +1587,10 @@
   },
   "GLW": {
    "n": "Corning",
+   "type": "EQUITY_STANDARD"
+  },
+  "GNL": {
+   "n": "Global Net Lease",
    "type": "EQUITY_STANDARD"
   },
   "GNMA": {
@@ -1667,6 +1695,10 @@
   },
   "HIMS": {
    "n": "Hims and Hers Health",
+   "type": "EQUITY_STANDARD"
+  },
+  "HIW": {
+   "n": "Highwoods Properties",
    "type": "EQUITY_STANDARD"
   },
   "HL": {
@@ -1857,6 +1889,10 @@
    "n": "iShares U.S. Oil Equipment & Services ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "IFGL": {
+   "n": "iShares International Developed Real Estate ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "IFRA": {
    "n": "iShares US Infrastructure",
    "type": "ETF_PASS_THROUGH"
@@ -1973,6 +2009,10 @@
    "n": "Ingredion",
    "type": "EQUITY_STANDARD"
   },
+  "INN": {
+   "n": "Summit Hotel Properties",
+   "type": "EQUITY_STANDARD"
+  },
   "IONQ": {
    "n": "IonQ",
    "type": "EQUITY_STANDARD"
@@ -1991,6 +2031,10 @@
   },
   "IREN": {
    "n": "IREN",
+   "type": "EQUITY_STANDARD"
+  },
+  "IRT": {
+   "n": "Independence Realty Trust",
    "type": "EQUITY_STANDARD"
   },
   "ISCF": {
@@ -2285,9 +2329,17 @@
    "n": "KraneShares Global Carbon Strategy ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "KRC": {
+   "n": "Kilroy Realty",
+   "type": "EQUITY_STANDARD"
+  },
   "KRE": {
    "n": "SPDR S&P Regional Banking",
    "type": "ETF_PASS_THROUGH"
+  },
+  "KRG": {
+   "n": "Kite Realty Group Trust",
+   "type": "EQUITY_STANDARD"
   },
   "KROP": {
    "n": "Global X AgTech & Food Innovation ETF",
@@ -2377,6 +2429,10 @@
    "n": "Lattice Semiconductor",
    "type": "EQUITY_STANDARD"
   },
+  "LTC": {
+   "n": "LTC Properties",
+   "type": "EQUITY_STANDARD"
+  },
   "LTH": {
    "n": "Life Time Group Holdings",
    "type": "EQUITY_STANDARD"
@@ -2407,6 +2463,10 @@
   },
   "M": {
    "n": "Macys",
+   "type": "EQUITY_STANDARD"
+  },
+  "MAC": {
+   "n": "Macerich",
    "type": "EQUITY_STANDARD"
   },
   "MAGS": {
@@ -2641,6 +2701,10 @@
    "n": "Nu Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "NURE": {
+   "n": "Nuveen Short-Term REIT ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "NVDY": {
    "n": "YieldMax NVDA Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
@@ -2655,6 +2719,10 @@
   },
   "NXE": {
    "n": "NexGen Energy",
+   "type": "EQUITY_STANDARD"
+  },
+  "NXRT": {
+   "n": "NexPoint Residential Trust",
    "type": "EQUITY_STANDARD"
   },
   "NXTG": {
@@ -2745,6 +2813,10 @@
    "n": "VanEck Merk Gold Trust",
    "type": "ETF_PASS_THROUGH"
   },
+  "OUT": {
+   "n": "Outfront Media",
+   "type": "EQUITY_STANDARD"
+  },
   "OVV": {
    "n": "Ovintiv",
    "type": "EQUITY_STANDARD"
@@ -2799,6 +2871,10 @@
   },
   "PEB": {
    "n": "Pebblebrook Hotel Trust",
+   "type": "EQUITY_STANDARD"
+  },
+  "PECO": {
+   "n": "Phillips Edison & Company",
    "type": "EQUITY_STANDARD"
   },
   "PEGA": {
@@ -2903,6 +2979,10 @@
   },
   "PPLT": {
    "n": "abrdn Physical Platinum Shares",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PPTY": {
+   "n": "Vest US Diversified Real Estate ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "PR": {
@@ -3197,6 +3277,10 @@
    "n": "SAP",
    "type": "EQUITY_STANDARD"
   },
+  "SBRA": {
+   "n": "Sabra Health Care REIT",
+   "type": "EQUITY_STANDARD"
+  },
   "SBSW": {
    "n": "Sibanye Stillwater",
    "type": "ADR_VARIABLE"
@@ -3369,6 +3453,10 @@
    "n": "SPDR Bloomberg Short Term High Yield Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "SKT": {
+   "n": "Tanger",
+   "type": "EQUITY_STANDARD"
+  },
   "SKX": {
    "n": "Skechers",
    "type": "EQUITY_STANDARD"
@@ -3379,6 +3467,10 @@
   },
   "SLAB": {
    "n": "Silicon Laboratories",
+   "type": "EQUITY_STANDARD"
+  },
+  "SLG": {
+   "n": "SL Green Realty",
    "type": "EQUITY_STANDARD"
   },
   "SLV": {
@@ -3633,6 +3725,10 @@
    "n": "iShares MSCI USA ESG Select",
    "type": "ETF_PASS_THROUGH"
   },
+  "SVC": {
+   "n": "Service Properties Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "SVOL": {
    "n": "Simplify Volatility Premium",
    "type": "ETF_PASS_THROUGH"
@@ -3825,6 +3921,10 @@
    "n": "YieldMax Ultra Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
   },
+  "UMH": {
+   "n": "UMH Properties",
+   "type": "EQUITY_STANDARD"
+  },
   "UNFI": {
    "n": "United Natural Foods",
    "type": "EQUITY_STANDARD"
@@ -3832,6 +3932,10 @@
   "UNG": {
    "n": "United States Natural Gas Fund",
    "type": "ETF_PASS_THROUGH"
+  },
+  "UNIT": {
+   "n": "Uniti Group",
+   "type": "EQUITY_STANDARD"
   },
   "UPRO": {
    "n": "ProShares UltraPro S&P500",
@@ -4013,6 +4117,10 @@
    "n": "VanEck Vietnam",
    "type": "ETF_PASS_THROUGH"
   },
+  "VNO": {
+   "n": "Vornado Realty Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "VNQ": {
    "n": "Vanguard Real Estate",
    "type": "ETF_PASS_THROUGH"
@@ -4183,6 +4291,10 @@
   },
   "WOR": {
    "n": "Worthington Enterprises",
+   "type": "EQUITY_STANDARD"
+  },
+  "WPC": {
+   "n": "W. P. Carey",
    "type": "EQUITY_STANDARD"
   },
   "WPM": {
