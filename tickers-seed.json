@@ -25,6 +25,10 @@
    "n": "iShares MSCI All Country Asia ex Japan ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "ABG": {
+   "n": "Asbury Automotive Group",
+   "type": "EQUITY_STANDARD"
+  },
   "ACI": {
    "n": "Albertsons",
    "type": "EQUITY_STANDARD"
@@ -96,6 +100,10 @@
   "AIQ": {
    "n": "Global X Artificial Intelligence and Technology",
    "type": "ETF_PASS_THROUGH"
+  },
+  "AIT": {
+   "n": "Applied Industrial Technologies",
+   "type": "EQUITY_STANDARD"
   },
   "AKR": {
    "n": "Acadia Realty Trust",
@@ -171,6 +179,10 @@
   },
   "AR": {
    "n": "Antero Resources",
+   "type": "EQUITY_STANDARD"
+  },
+  "ARCB": {
+   "n": "ArcBest",
    "type": "EQUITY_STANDARD"
   },
   "ARGT": {
@@ -499,6 +511,10 @@
   },
   "BURL": {
    "n": "Burlington Stores",
+   "type": "EQUITY_STANDARD"
+  },
+  "BWA": {
+   "n": "BorgWarner",
    "type": "EQUITY_STANDARD"
   },
   "BWX": {
@@ -1545,8 +1561,20 @@
    "n": "First Trust Enhanced Short Maturity ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "FTXG": {
+   "n": "First Trust Nasdaq Food & Beverage ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FTXH": {
+   "n": "First Trust Nasdaq Pharmaceuticals ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FTXL": {
    "n": "First Trust Nasdaq Semiconductor ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FTXN": {
+   "n": "First Trust Nasdaq Oil & Gas ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "FTXR": {
@@ -1693,6 +1721,10 @@
    "n": "iShares GNMA Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "GNR": {
+   "n": "SPDR S&P Global Natural Resources ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "GO": {
    "n": "Grocery Outlet",
    "type": "EQUITY_STANDARD"
@@ -1752,6 +1784,10 @@
   "GXC": {
    "n": "SPDR S&P China",
    "type": "ETF_PASS_THROUGH"
+  },
+  "GXO": {
+   "n": "GXO Logistics",
+   "type": "EQUITY_STANDARD"
   },
   "H": {
    "n": "Hyatt Hotels",
@@ -1827,6 +1863,10 @@
   },
   "HRB": {
    "n": "H&R Block",
+   "type": "EQUITY_STANDARD"
+  },
+  "HUBG": {
+   "n": "Hub Group",
    "type": "EQUITY_STANDARD"
   },
   "HUBS": {
@@ -2429,6 +2469,10 @@
    "n": "CarMax",
    "type": "EQUITY_STANDARD"
   },
+  "KNX": {
+   "n": "Knight-Swift Transportation Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "KOMP": {
    "n": "SPDR S&P Kensho New Economies Composite ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2479,6 +2523,10 @@
   },
   "LAC": {
    "n": "Lithium Americas",
+   "type": "EQUITY_STANDARD"
+  },
+  "LAD": {
+   "n": "Lithia Motors",
    "type": "EQUITY_STANDARD"
   },
   "LAMR": {
@@ -2547,6 +2595,10 @@
   },
   "LSCC": {
    "n": "Lattice Semiconductor",
+   "type": "EQUITY_STANDARD"
+  },
+  "LSTR": {
+   "n": "Landstar System",
    "type": "EQUITY_STANDARD"
   },
   "LTC": {
@@ -2765,6 +2817,10 @@
    "n": "MaxLinear",
    "type": "EQUITY_STANDARD"
   },
+  "MYRG": {
+   "n": "MYR Group",
+   "type": "EQUITY_STANDARD"
+  },
   "NBIS": {
    "n": "Nebius Group",
    "type": "EQUITY_STANDARD"
@@ -2973,6 +3029,10 @@
    "n": "Pan American Silver",
    "type": "EQUITY_STANDARD"
   },
+  "PAG": {
+   "n": "Penske Automotive Group",
+   "type": "EQUITY_STANDARD"
+  },
   "PALL": {
    "n": "abrdn Physical Palladium Shares",
    "type": "ETF_PASS_THROUGH"
@@ -3157,8 +3217,24 @@
    "n": "ARK 3D Printing",
    "type": "ETF_PASS_THROUGH"
   },
+  "PSCD": {
+   "n": "Invesco S&P SmallCap Consumer Discretionary ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "PSCE": {
    "n": "Invesco S&P SmallCap Energy ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PSCF": {
+   "n": "Invesco S&P SmallCap Financials ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PSCI": {
+   "n": "Invesco S&P SmallCap Industrials ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PSCM": {
+   "n": "Invesco S&P SmallCap Materials ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "PSI": {
@@ -3260,6 +3336,10 @@
   "QUAL": {
    "n": "iShares MSCI USA Quality Factor",
    "type": "ETF_PASS_THROUGH"
+  },
+  "R": {
+   "n": "Ryder System",
+   "type": "EQUITY_STANDARD"
   },
   "RBLX": {
    "n": "Roblox",
@@ -3435,6 +3515,10 @@
   },
   "S": {
    "n": "SentinelOne",
+   "type": "EQUITY_STANDARD"
+  },
+  "SAIA": {
+   "n": "Saia",
    "type": "EQUITY_STANDARD"
   },
   "SAM": {
@@ -4125,6 +4209,10 @@
    "n": "United States Gasoline Fund",
    "type": "ETF_PASS_THROUGH"
   },
+  "UHAL": {
+   "n": "U-Haul Holding",
+   "type": "EQUITY_STANDARD"
+  },
   "ULTY": {
    "n": "YieldMax Ultra Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
@@ -4469,6 +4557,10 @@
    "n": "Wendy's",
    "type": "EQUITY_STANDARD"
   },
+  "WERN": {
+   "n": "Werner Enterprises",
+   "type": "EQUITY_STANDARD"
+  },
   "WEX": {
    "n": "WEX Inc.",
    "type": "EQUITY_STANDARD"
@@ -4519,6 +4611,10 @@
   },
   "WPM": {
    "n": "Wheaton Precious Metals",
+   "type": "EQUITY_STANDARD"
+  },
+  "WSC": {
+   "n": "WillScot Holdings",
    "type": "EQUITY_STANDARD"
   },
   "XAR": {
@@ -4580,6 +4676,10 @@
   "XPH": {
    "n": "SPDR S&P Pharmaceuticals",
    "type": "ETF_PASS_THROUGH"
+  },
+  "XPO": {
+   "n": "XPO",
+   "type": "EQUITY_STANDARD"
   },
   "XPRO": {
    "n": "Expro Group Holdings",
