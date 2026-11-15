@@ -13,6 +13,10 @@
    "n": "Applied Optoelectronics",
    "type": "EQUITY_STANDARD"
   },
+  "AAON": {
+   "n": "AAON",
+   "type": "EQUITY_STANDARD"
+  },
   "AAP": {
    "n": "Advance Auto Parts",
    "type": "EQUITY_STANDARD"
@@ -65,6 +69,10 @@
    "n": "American Eagle Outfitters",
    "type": "EQUITY_STANDARD"
   },
+  "AER": {
+   "n": "AerCap Holdings",
+   "type": "ADR_VARIABLE"
+  },
   "AFRM": {
    "n": "Affirm",
    "type": "EQUITY_STANDARD"
@@ -72,6 +80,10 @@
   "AG": {
    "n": "First Majestic Silver",
    "type": "ADR_VARIABLE"
+  },
+  "AGCO": {
+   "n": "AGCO",
+   "type": "EQUITY_STANDARD"
   },
   "AGG": {
    "n": "iShares Core US Aggregate Bond",
@@ -417,6 +429,10 @@
    "n": "United States Brent Oil Fund",
    "type": "ETF_PASS_THROUGH"
   },
+  "BOAT": {
+   "n": "SonicShares Global Shipping ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "BOND": {
    "n": "PIMCO Active Bond",
    "type": "ETF_PASS_THROUGH"
@@ -564,6 +580,10 @@
   "CENX": {
    "n": "Century Aluminum",
    "type": "EQUITY_STANDARD"
+  },
+  "CGW": {
+   "n": "Invesco S&P Global Water Index ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "CHAT": {
    "n": "Roundhill Generative AI & Technology ETF",
@@ -737,6 +757,10 @@
    "n": "CoreWeave",
    "type": "EQUITY_STANDARD"
   },
+  "CSL": {
+   "n": "Carlisle Companies",
+   "type": "EQUITY_STANDARD"
+  },
   "CTRE": {
    "n": "CareTrust REIT",
    "type": "EQUITY_STANDARD"
@@ -787,6 +811,10 @@
   },
   "DBO": {
    "n": "Invesco DB Oil",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DBP": {
+   "n": "Invesco DB Precious Metals Fund",
    "type": "ETF_PASS_THROUGH"
   },
   "DBX": {
@@ -956,6 +984,10 @@
   "DXJ": {
    "n": "WisdomTree Japan Hedged Equity",
    "type": "ETF_PASS_THROUGH"
+  },
+  "DY": {
+   "n": "Dycom Industries",
+   "type": "EQUITY_STANDARD"
   },
   "EA": {
    "n": "Electronic Arts",
@@ -1305,6 +1337,10 @@
    "n": "Five9",
    "type": "EQUITY_STANDARD"
   },
+  "FIW": {
+   "n": "First Trust Water ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FIXD": {
    "n": "First Trust TCW Opportunistic Fixed Income",
    "type": "ETF_PASS_THROUGH"
@@ -1376,6 +1412,10 @@
   "FMC": {
    "n": "FMC Corporation",
    "type": "EQUITY_STANDARD"
+  },
+  "FMF": {
+   "n": "First Trust Managed Futures Strategy Fund",
+   "type": "ETF_PASS_THROUGH"
   },
   "FN": {
    "n": "Fabrinet",
@@ -1472,6 +1512,10 @@
   "FTA": {
    "n": "First Trust Large Cap Value AlphaDEX Fund",
    "type": "ETF_PASS_THROUGH"
+  },
+  "FTAI": {
+   "n": "FTAI Aviation",
+   "type": "EQUITY_STANDARD"
   },
   "FTC": {
    "n": "First Trust Large Cap Growth AlphaDEX Fund",
@@ -1577,6 +1621,10 @@
    "n": "Amplify Video Game Tech ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "GATX": {
+   "n": "GATX",
+   "type": "EQUITY_STANDARD"
+  },
   "GBIL": {
    "n": "Goldman Sachs Access Treasury 0-1 Year",
    "type": "ETF_PASS_THROUGH"
@@ -1584,6 +1632,10 @@
   "GBTC": {
    "n": "Grayscale Bitcoin Trust",
    "type": "ETF_PASS_THROUGH"
+  },
+  "GBX": {
+   "n": "Greenbrier Companies",
+   "type": "EQUITY_STANDARD"
   },
   "GDX": {
    "n": "VanEck Gold Miners",
@@ -1917,6 +1969,10 @@
    "n": "iShares U.S. Oil & Gas Exploration & Production ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "IESC": {
+   "n": "IES Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "IEUR": {
    "n": "iShares Core MSCI Europe ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2076,6 +2132,10 @@
   "IQLT": {
    "n": "iShares MSCI Intl Quality Factor ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "IRDM": {
+   "n": "Iridium Communications",
+   "type": "EQUITY_STANDARD"
   },
   "IREN": {
    "n": "IREN",
@@ -2477,6 +2537,10 @@
    "n": "LPL Financial",
    "type": "EQUITY_STANDARD"
   },
+  "LPX": {
+   "n": "Louisiana-Pacific",
+   "type": "EQUITY_STANDARD"
+  },
   "LQD": {
    "n": "iShares iBoxx Investment Grade Corporate Bond",
    "type": "ETF_PASS_THROUGH"
@@ -2680,6 +2744,10 @@
   "MTUM": {
    "n": "iShares MSCI USA Momentum Factor",
    "type": "ETF_PASS_THROUGH"
+  },
+  "MTZ": {
+   "n": "MasTec",
+   "type": "EQUITY_STANDARD"
   },
   "MUB": {
    "n": "iShares National Muni Bond",
@@ -2885,6 +2953,10 @@
    "n": "OSI Systems",
    "type": "EQUITY_STANDARD"
   },
+  "OSK": {
+   "n": "Oshkosh",
+   "type": "EQUITY_STANDARD"
+  },
   "OUNZ": {
    "n": "VanEck Merk Gold Trust",
    "type": "ETF_PASS_THROUGH"
@@ -2993,6 +3065,10 @@
    "n": "Invesco Preferred",
    "type": "ETF_PASS_THROUGH"
   },
+  "PHO": {
+   "n": "Invesco Water Resources ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "PICK": {
    "n": "iShares MSCI Global Metals and Mining Producers",
    "type": "ETF_PASS_THROUGH"
@@ -3000,6 +3076,10 @@
   "PINS": {
    "n": "Pinterest",
    "type": "EQUITY_STANDARD"
+  },
+  "PIO": {
+   "n": "Invesco Global Water ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "PK": {
    "n": "Park Hotels & Resorts",
@@ -3317,6 +3397,10 @@
    "n": "Invesco S&P 500 Equal Weight Energy ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "RSPN": {
+   "n": "Invesco S&P 500 Equal Weight Industrials ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "RSPU": {
    "n": "Invesco S&P 500 Equal Weight Utilities ETF",
    "type": "ETF_PASS_THROUGH"
@@ -3363,6 +3447,10 @@
   },
   "SAP": {
    "n": "SAP",
+   "type": "EQUITY_STANDARD"
+  },
+  "SATS": {
+   "n": "EchoStar",
    "type": "EQUITY_STANDARD"
   },
   "SBLK": {
@@ -3801,6 +3889,10 @@
    "n": "Pacer Benchmark Data and Infrastructure Real Estate",
    "type": "ETF_PASS_THROUGH"
   },
+  "SSD": {
+   "n": "Simpson Manufacturing",
+   "type": "EQUITY_STANDARD"
+  },
   "SSNC": {
    "n": "SS&C Technologies",
    "type": "EQUITY_STANDARD"
@@ -3933,6 +4025,10 @@
    "n": "Toll Brothers",
    "type": "EQUITY_STANDARD"
   },
+  "TOLZ": {
+   "n": "ProShares DJ Brookfield Global Infrastructure ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "TOTL": {
    "n": "SPDR DoubleLine Total Return Tactical",
    "type": "ETF_PASS_THROUGH"
@@ -3951,6 +4047,10 @@
   },
   "TRIP": {
    "n": "Tripadvisor",
+   "type": "EQUITY_STANDARD"
+  },
+  "TRN": {
+   "n": "Trinity Industries",
    "type": "EQUITY_STANDARD"
   },
   "TRNO": {
@@ -4016,6 +4116,10 @@
   "UFO": {
    "n": "Procure Space",
    "type": "ETF_PASS_THROUGH"
+  },
+  "UFPI": {
+   "n": "UFP Industries",
+   "type": "EQUITY_STANDARD"
   },
   "UGA": {
    "n": "United States Gasoline Fund",
@@ -4285,6 +4389,10 @@
    "n": "Vertiv",
    "type": "EQUITY_STANDARD"
   },
+  "VSAT": {
+   "n": "Viasat",
+   "type": "EQUITY_STANDARD"
+  },
   "VSH": {
    "n": "Vishay Intertechnology",
    "type": "EQUITY_STANDARD"
@@ -4387,6 +4495,10 @@
   },
   "WMG": {
    "n": "Warner Music Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "WMS": {
+   "n": "Advanced Drainage Systems",
    "type": "EQUITY_STANDARD"
   },
   "WOOD": {
