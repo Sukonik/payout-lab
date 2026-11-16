@@ -117,6 +117,10 @@
    "n": "Allegro MicroSystems",
    "type": "EQUITY_STANDARD"
   },
+  "ALKS": {
+   "n": "Alkermes",
+   "type": "EQUITY_STANDARD"
+  },
   "ALX": {
    "n": "Alexander's",
    "type": "EQUITY_STANDARD"
@@ -345,6 +349,10 @@
    "n": "JPMorgan BetaBuilders Europe",
    "type": "ETF_PASS_THROUGH"
   },
+  "BBH": {
+   "n": "VanEck Biotech ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "BBIN": {
    "n": "JPMorgan BetaBuilders International Equity",
    "type": "ETF_PASS_THROUGH"
@@ -444,6 +452,10 @@
   "BLV": {
    "n": "Vanguard Long-Term Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "BMRN": {
+   "n": "BioMarin Pharmaceutical",
+   "type": "EQUITY_STANDARD"
   },
   "BND": {
    "n": "Vanguard Total Bond Market",
@@ -1089,6 +1101,10 @@
    "n": "EastGroup Properties",
    "type": "EQUITY_STANDARD"
   },
+  "EHC": {
+   "n": "Encompass Health",
+   "type": "EQUITY_STANDARD"
+  },
   "EIDO": {
    "n": "iShares MSCI Indonesia",
    "type": "ETF_PASS_THROUGH"
@@ -1131,6 +1147,10 @@
   },
   "ENPH": {
    "n": "Enphase Energy",
+   "type": "EQUITY_STANDARD"
+  },
+  "ENSG": {
+   "n": "Ensign Group",
    "type": "EQUITY_STANDARD"
   },
   "ENTG": {
@@ -1273,6 +1293,10 @@
    "n": "iShares MSCI Brazil",
    "type": "ETF_PASS_THROUGH"
   },
+  "EXEL": {
+   "n": "Exelixis",
+   "type": "EQUITY_STANDARD"
+  },
   "EXI": {
    "n": "iShares Global Industrials ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1311,6 +1335,10 @@
   },
   "FBND": {
    "n": "Fidelity Total Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FBT": {
+   "n": "First Trust NYSE Arca Biotechnology Index Fund",
    "type": "ETF_PASS_THROUGH"
   },
   "FBTC": {
@@ -1745,12 +1773,20 @@
    "n": "Corning",
    "type": "EQUITY_STANDARD"
   },
+  "GMED": {
+   "n": "Globus Medical",
+   "type": "EQUITY_STANDARD"
+  },
   "GNL": {
    "n": "Global Net Lease",
    "type": "EQUITY_STANDARD"
   },
   "GNMA": {
    "n": "iShares GNMA Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GNOM": {
+   "n": "Global X Genomics & Biotechnology ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "GNR": {
@@ -1833,6 +1869,10 @@
    "n": "SPDR S&P Kensho Smart Mobility ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "HALO": {
+   "n": "Halozyme Therapeutics",
+   "type": "EQUITY_STANDARD"
+  },
   "HAUZ": {
    "n": "Xtrackers International Real Estate ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1848,6 +1888,10 @@
   "HEI": {
    "n": "HEICO",
    "type": "EQUITY_STANDARD"
+  },
+  "HELX": {
+   "n": "Franklin Genomic Advancements ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "HERO": {
    "n": "Global X Video Games & Esports ETF",
@@ -2005,6 +2049,10 @@
    "n": "iShares Ultra Short-Term Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "ICUI": {
+   "n": "ICU Medical",
+   "type": "EQUITY_STANDARD"
+  },
   "ICVT": {
    "n": "iShares Convertible Bond",
    "type": "ETF_PASS_THROUGH"
@@ -2015,6 +2063,10 @@
   },
   "IDEV": {
    "n": "iShares Core MSCI International Developed Markets ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IDNA": {
+   "n": "iShares Genomics Immunology and Healthcare ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "IDRV": {
@@ -2411,6 +2463,10 @@
   },
   "JACK": {
    "n": "Jack in the Box",
+   "type": "EQUITY_STANDARD"
+  },
+  "JAZZ": {
+   "n": "Jazz Pharmaceuticals",
    "type": "EQUITY_STANDARD"
   },
   "JBND": {
@@ -2881,6 +2937,10 @@
    "n": "Nebius Group",
    "type": "EQUITY_STANDARD"
   },
+  "NBIX": {
+   "n": "Neurocrine Biosciences",
+   "type": "EQUITY_STANDARD"
+  },
   "NBR": {
    "n": "Nabors Industries",
    "type": "EQUITY_STANDARD"
@@ -2969,6 +3029,10 @@
    "n": "Novo Nordisk",
    "type": "EQUITY_STANDARD"
   },
+  "NVST": {
+   "n": "Envista Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "NWE": {
    "n": "NorthWestern Energy Group",
    "type": "EQUITY_STANDARD"
@@ -3043,6 +3107,10 @@
   },
   "OLLI": {
    "n": "Ollie's Bargain Outlet",
+   "type": "EQUITY_STANDARD"
+  },
+  "OMCL": {
+   "n": "Omnicell",
    "type": "EQUITY_STANDARD"
   },
   "ONEQ": {
@@ -3128,6 +3196,10 @@
   "PAYO": {
    "n": "Payoneer",
    "type": "EQUITY_STANDARD"
+  },
+  "PBE": {
+   "n": "Invesco Biotechnology & Genome ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "PBJ": {
    "n": "Invesco Food & Beverage ETF",
@@ -3225,6 +3297,10 @@
    "n": "Invesco Global Water ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "PJP": {
+   "n": "Invesco Pharmaceuticals ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "PK": {
    "n": "Park Hotels & Resorts",
    "type": "EQUITY_STANDARD"
@@ -3280,6 +3356,10 @@
   "PPC": {
    "n": "Pilgrim's Pride",
    "type": "EQUITY_STANDARD"
+  },
+  "PPH": {
+   "n": "VanEck Pharmaceutical ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "PPLT": {
    "n": "abrdn Physical Platinum Shares",
@@ -3340,6 +3420,10 @@
   "PTEN": {
    "n": "Patterson-UTI Energy",
    "type": "EQUITY_STANDARD"
+  },
+  "PTH": {
+   "n": "Invesco Healthcare Select Tilt ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "PTLO": {
    "n": "Portillo's",
@@ -3624,6 +3708,10 @@
   "SATS": {
    "n": "EchoStar",
    "type": "EQUITY_STANDARD"
+  },
+  "SBIO": {
+   "n": "ALPS Medical Breakthroughs ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "SBLK": {
    "n": "Star Bulk Carriers",
@@ -4057,6 +4145,10 @@
    "n": "SPDR Blackstone Senior Loan",
    "type": "ETF_PASS_THROUGH"
   },
+  "SRPT": {
+   "n": "Sarepta Therapeutics",
+   "type": "EQUITY_STANDARD"
+  },
   "SRVR": {
    "n": "Pacer Benchmark Data and Infrastructure Real Estate",
    "type": "ETF_PASS_THROUGH"
@@ -4156,6 +4248,10 @@
   "TFLO": {
    "n": "iShares Treasury Floating Rate Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "THC": {
+   "n": "Tenet Healthcare",
+   "type": "EQUITY_STANDARD"
   },
   "THD": {
    "n": "iShares MSCI Thailand",
@@ -4384,6 +4480,10 @@
   "UTES": {
    "n": "Virtus Reaves Utilities ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "UTHR": {
+   "n": "United Therapeutics",
+   "type": "EQUITY_STANDARD"
   },
   "UTZ": {
    "n": "Utz Brands",
@@ -4783,6 +4883,10 @@
   },
   "XPRO": {
    "n": "Expro Group Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "XRAY": {
+   "n": "Dentsply Sirona",
    "type": "EQUITY_STANDARD"
   },
   "XRT": {
