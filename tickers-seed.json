@@ -257,6 +257,10 @@
    "n": "AngloGold Ashanti",
    "type": "ADR_VARIABLE"
   },
+  "AVA": {
+   "n": "Avista",
+   "type": "EQUITY_STANDARD"
+  },
   "AVDE": {
    "n": "Avantis International Equity",
    "type": "ETF_PASS_THROUGH"
@@ -297,6 +301,10 @@
    "n": "ETFMG Travel Tech ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "AWR": {
+   "n": "American States Water",
+   "type": "EQUITY_STANDARD"
+  },
   "AYI": {
    "n": "Acuity Inc.",
    "type": "EQUITY_STANDARD"
@@ -312,6 +320,10 @@
   "BALY": {
    "n": "Bally's",
    "type": "EQUITY_STANDARD"
+  },
+  "BAP": {
+   "n": "Credicorp",
+   "type": "ADR_VARIABLE"
   },
   "BAR": {
    "n": "GraniteShares Gold Trust",
@@ -340,6 +352,10 @@
   "BBJP": {
    "n": "JPMorgan BetaBuilders Japan",
    "type": "ETF_PASS_THROUGH"
+  },
+  "BBSI": {
+   "n": "Barrett Business Services",
+   "type": "EQUITY_STANDARD"
   },
   "BBUS": {
    "n": "JPMorgan BetaBuilders US Equity",
@@ -403,6 +419,10 @@
   },
   "BKE": {
    "n": "Buckle",
+   "type": "EQUITY_STANDARD"
+  },
+  "BKH": {
+   "n": "Black Hills",
    "type": "EQUITY_STANDARD"
   },
   "BKLN": {
@@ -741,6 +761,10 @@
    "n": "United States Copper Index",
    "type": "ETF_PASS_THROUGH"
   },
+  "CPK": {
+   "n": "Chesapeake Utilities",
+   "type": "EQUITY_STANDARD"
+  },
   "CPNG": {
    "n": "Coupang",
    "type": "EQUITY_STANDARD"
@@ -792,6 +816,10 @@
   "CWB": {
    "n": "SPDR Bloomberg Convertible Securities",
    "type": "ETF_PASS_THROUGH"
+  },
+  "CWT": {
+   "n": "California Water Service Group",
+   "type": "EQUITY_STANDARD"
   },
   "CXW": {
    "n": "CoreCivic",
@@ -1432,6 +1460,10 @@
   "FMF": {
    "n": "First Trust Managed Futures Strategy Fund",
    "type": "ETF_PASS_THROUGH"
+  },
+  "FMX": {
+   "n": "Fomento Economico Mexicano",
+   "type": "ADR_VARIABLE"
   },
   "FN": {
    "n": "Fabrinet",
@@ -2217,6 +2249,10 @@
    "n": "iShares Core S&P Total US Stock Market",
    "type": "ETF_PASS_THROUGH"
   },
+  "ITUB": {
+   "n": "Itau Unibanco Holding",
+   "type": "ADR_VARIABLE"
+  },
   "IUSB": {
    "n": "iShares Core Total USD Bond Market",
    "type": "ETF_PASS_THROUGH"
@@ -2449,6 +2485,14 @@
    "n": "SPDR S&P Capital Markets",
    "type": "ETF_PASS_THROUGH"
   },
+  "KELYA": {
+   "n": "Kelly Services",
+   "type": "EQUITY_STANDARD"
+  },
+  "KFRC": {
+   "n": "Kforce",
+   "type": "EQUITY_STANDARD"
+  },
   "KGC": {
    "n": "Kinross Gold",
    "type": "EQUITY_STANDARD"
@@ -2472,6 +2516,10 @@
   "KNX": {
    "n": "Knight-Swift Transportation Holdings",
    "type": "EQUITY_STANDARD"
+  },
+  "KOF": {
+   "n": "Coca-Cola FEMSA",
+   "type": "ADR_VARIABLE"
   },
   "KOMP": {
    "n": "SPDR S&P Kensho New Economies Composite ETF",
@@ -2645,6 +2693,10 @@
    "n": "Roundhill Magnificent Seven",
    "type": "ETF_PASS_THROUGH"
   },
+  "MAN": {
+   "n": "ManpowerGroup",
+   "type": "EQUITY_STANDARD"
+  },
   "MANH": {
    "n": "Manhattan Associates",
    "type": "EQUITY_STANDARD"
@@ -2688,6 +2740,10 @@
   "MGC": {
    "n": "Vanguard Mega Cap",
    "type": "ETF_PASS_THROUGH"
+  },
+  "MGEE": {
+   "n": "MGE Energy",
+   "type": "EQUITY_STANDARD"
   },
   "MGK": {
    "n": "Vanguard Mega Cap Growth",
@@ -2841,6 +2897,10 @@
    "n": "Cloudflare",
    "type": "EQUITY_STANDARD"
   },
+  "NFG": {
+   "n": "National Fuel Gas",
+   "type": "EQUITY_STANDARD"
+  },
   "NFLY": {
    "n": "YieldMax NFLX Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
@@ -2913,6 +2973,10 @@
    "n": "NorthWestern Energy Group",
    "type": "EQUITY_STANDARD"
   },
+  "NWN": {
+   "n": "Northwest Natural Holding",
+   "type": "EQUITY_STANDARD"
+  },
   "NXE": {
    "n": "NexGen Energy",
    "type": "EQUITY_STANDARD"
@@ -2955,6 +3019,10 @@
   },
   "OGE": {
    "n": "OGE Energy",
+   "type": "EQUITY_STANDARD"
+  },
+  "OGS": {
+   "n": "ONE Gas",
    "type": "EQUITY_STANDARD"
   },
   "OHI": {
@@ -3013,6 +3081,10 @@
    "n": "Oshkosh",
    "type": "EQUITY_STANDARD"
   },
+  "OTTR": {
+   "n": "Otter Tail",
+   "type": "EQUITY_STANDARD"
+  },
   "OUNZ": {
    "n": "VanEck Merk Gold Trust",
    "type": "ETF_PASS_THROUGH"
@@ -3032,6 +3104,10 @@
   "PAG": {
    "n": "Penske Automotive Group",
    "type": "EQUITY_STANDARD"
+  },
+  "PAGS": {
+   "n": "PagSeguro Digital",
+   "type": "ADR_VARIABLE"
   },
   "PALL": {
    "n": "abrdn Physical Palladium Shares",
@@ -3057,12 +3133,20 @@
    "n": "Invesco Food & Beverage ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "PBR": {
+   "n": "Petroleo Brasileiro Petrobras",
+   "type": "ADR_VARIABLE"
+  },
   "PBW": {
    "n": "Invesco WilderHill Clean Energy",
    "type": "ETF_PASS_THROUGH"
   },
   "PCOR": {
    "n": "Procore Technologies",
+   "type": "EQUITY_STANDARD"
+  },
+  "PCTY": {
+   "n": "Paylocity Holding",
    "type": "EQUITY_STANDARD"
   },
   "PCY": {
@@ -3387,6 +3471,10 @@
   },
   "RH": {
    "n": "RH",
+   "type": "EQUITY_STANDARD"
+  },
+  "RHI": {
+   "n": "Robert Half",
    "type": "EQUITY_STANDARD"
   },
   "RHP": {
@@ -4013,6 +4101,10 @@
    "n": "Simplify Volatility Premium",
    "type": "ETF_PASS_THROUGH"
   },
+  "SWX": {
+   "n": "Southwest Gas Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "TAN": {
    "n": "Invesco Solar",
    "type": "ETF_PASS_THROUGH"
@@ -4100,6 +4192,10 @@
   "TNA": {
    "n": "Direxion Daily Small Cap Bull 3X Shares",
    "type": "ETF_PASS_THROUGH"
+  },
+  "TNET": {
+   "n": "TriNet Group",
+   "type": "EQUITY_STANDARD"
   },
   "TNL": {
    "n": "Travel + Leisure Co.",
@@ -4208,6 +4304,10 @@
   "UGA": {
    "n": "United States Gasoline Fund",
    "type": "ETF_PASS_THROUGH"
+  },
+  "UGI": {
+   "n": "UGI",
+   "type": "EQUITY_STANDARD"
   },
   "UHAL": {
    "n": "U-Haul Holding",
