@@ -89,6 +89,10 @@
    "n": "AerCap Holdings",
    "type": "ADR_VARIABLE"
   },
+  "AFG": {
+   "n": "American Financial Group",
+   "type": "EQUITY_STANDARD"
+  },
   "AFRM": {
    "n": "Affirm",
    "type": "EQUITY_STANDARD"
@@ -135,6 +139,10 @@
   },
   "ALKS": {
    "n": "Alkermes",
+   "type": "EQUITY_STANDARD"
+  },
+  "ALLY": {
+   "n": "Ally Financial",
    "type": "EQUITY_STANDARD"
   },
   "ALX": {
@@ -325,6 +333,10 @@
    "n": "American States Water",
    "type": "EQUITY_STANDARD"
   },
+  "AXS": {
+   "n": "Axis Capital Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "AYI": {
    "n": "Acuity Inc.",
    "type": "EQUITY_STANDARD"
@@ -493,6 +505,10 @@
    "n": "SonicShares Global Shipping ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "BOKF": {
+   "n": "BOK Financial",
+   "type": "EQUITY_STANDARD"
+  },
   "BOND": {
    "n": "PIMCO Active Bond",
    "type": "ETF_PASS_THROUGH"
@@ -503,6 +519,10 @@
   },
   "BOX": {
    "n": "Box Inc.",
+   "type": "EQUITY_STANDARD"
+  },
+  "BPOP": {
+   "n": "Popular",
    "type": "EQUITY_STANDARD"
   },
   "BRBR": {
@@ -625,6 +645,10 @@
    "n": "Cracker Barrel",
    "type": "EQUITY_STANDARD"
   },
+  "CBSH": {
+   "n": "Commerce Bancshares",
+   "type": "EQUITY_STANDARD"
+  },
   "CCJ": {
    "n": "Cameco",
    "type": "EQUITY_STANDARD"
@@ -647,6 +671,10 @@
   },
   "CENX": {
    "n": "Century Aluminum",
+   "type": "EQUITY_STANDARD"
+  },
+  "CFR": {
+   "n": "Cullen/Frost Bankers",
    "type": "EQUITY_STANDARD"
   },
   "CGW": {
@@ -743,6 +771,10 @@
   },
   "COKE": {
    "n": "Coca-Cola Consolidated",
+   "type": "EQUITY_STANDARD"
+  },
+  "COLB": {
+   "n": "Columbia Banking System",
    "type": "EQUITY_STANDARD"
   },
   "COLD": {
@@ -1237,6 +1269,10 @@
    "n": "iShares ESG Aware MSCI USA",
    "type": "ETF_PASS_THROUGH"
   },
+  "ESNT": {
+   "n": "Essent Group",
+   "type": "EQUITY_STANDARD"
+  },
   "ESPO": {
    "n": "VanEck Video Gaming and eSports ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1260,6 +1296,10 @@
   "EWA": {
    "n": "iShares MSCI Australia",
    "type": "ETF_PASS_THROUGH"
+  },
+  "EWBC": {
+   "n": "East West Bancorp",
+   "type": "EQUITY_STANDARD"
   },
   "EWC": {
    "n": "iShares MSCI Canada",
@@ -1535,6 +1575,10 @@
   },
   "FN": {
    "n": "Fabrinet",
+   "type": "EQUITY_STANDARD"
+  },
+  "FNB": {
+   "n": "F.N.B. Corporation",
    "type": "EQUITY_STANDARD"
   },
   "FNCL": {
@@ -3185,6 +3229,10 @@
    "n": "Omnicell",
    "type": "EQUITY_STANDARD"
   },
+  "ONB": {
+   "n": "Old National Bancorp",
+   "type": "EQUITY_STANDARD"
+  },
   "ONEQ": {
    "n": "Fidelity Nasdaq Composite Index",
    "type": "ETF_PASS_THROUGH"
@@ -3235,6 +3283,10 @@
   },
   "OVV": {
    "n": "Ovintiv",
+   "type": "EQUITY_STANDARD"
+  },
+  "OZK": {
+   "n": "Bank OZK",
    "type": "EQUITY_STANDARD"
   },
   "PAAS": {
@@ -3343,6 +3395,10 @@
   },
   "PFGC": {
    "n": "Performance Food Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "PFSI": {
+   "n": "PennyMac Financial Services",
    "type": "EQUITY_STANDARD"
   },
   "PFXF": {
@@ -3597,6 +3653,10 @@
    "n": "Roblox",
    "type": "EQUITY_STANDARD"
   },
+  "RDN": {
+   "n": "Radian Group",
+   "type": "EQUITY_STANDARD"
+  },
   "RDNT": {
    "n": "RadNet",
    "type": "EQUITY_STANDARD"
@@ -3685,12 +3745,20 @@
    "n": "Rocket Lab",
    "type": "EQUITY_STANDARD"
   },
+  "RLI": {
+   "n": "RLI Corp",
+   "type": "EQUITY_STANDARD"
+  },
   "RLJ": {
    "n": "RLJ Lodging Trust",
    "type": "EQUITY_STANDARD"
   },
   "RMBS": {
    "n": "Rambus",
+   "type": "EQUITY_STANDARD"
+  },
+  "RNR": {
+   "n": "RenaissanceRe Holdings",
    "type": "EQUITY_STANDARD"
   },
   "ROBO": {
@@ -3957,6 +4025,10 @@
    "n": "iShares 0-5 Year High Yield Corporate Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "SIGI": {
+   "n": "Selective Insurance Group",
+   "type": "EQUITY_STANDARD"
+  },
   "SIL": {
    "n": "Global X Silver Miners",
    "type": "ETF_PASS_THROUGH"
@@ -4011,6 +4083,10 @@
   },
   "SLG": {
    "n": "SL Green Realty",
+   "type": "EQUITY_STANDARD"
+  },
+  "SLM": {
+   "n": "SLM Corporation",
    "type": "EQUITY_STANDARD"
   },
   "SLV": {
@@ -4353,6 +4429,10 @@
    "n": "iShares MSCI Thailand",
    "type": "ETF_PASS_THROUGH"
   },
+  "THG": {
+   "n": "Hanover Insurance Group",
+   "type": "EQUITY_STANDARD"
+  },
   "TIP": {
    "n": "iShares TIPS Bond",
    "type": "ETF_PASS_THROUGH"
@@ -4475,6 +4555,10 @@
   },
   "UAA": {
    "n": "Under Armour",
+   "type": "EQUITY_STANDARD"
+  },
+  "UBSI": {
+   "n": "United Bankshares",
    "type": "EQUITY_STANDARD"
   },
   "UCTT": {
@@ -4713,6 +4797,10 @@
    "n": "iShares MSCI USA Value Factor",
    "type": "ETF_PASS_THROUGH"
   },
+  "VLY": {
+   "n": "Valley National Bancorp",
+   "type": "EQUITY_STANDARD"
+  },
   "VMBS": {
    "n": "Vanguard Mortgage-Backed Securities",
    "type": "ETF_PASS_THROUGH"
@@ -4833,6 +4921,10 @@
    "n": "Wayfair",
    "type": "EQUITY_STANDARD"
   },
+  "WAL": {
+   "n": "Western Alliance Bancorporation",
+   "type": "EQUITY_STANDARD"
+  },
   "WCLD": {
    "n": "WisdomTree Cloud Computing",
    "type": "ETF_PASS_THROUGH"
@@ -4919,6 +5011,10 @@
   },
   "WSC": {
    "n": "WillScot Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "WTFC": {
+   "n": "Wintrust Financial",
    "type": "EQUITY_STANDARD"
   },
   "XAR": {
@@ -5052,6 +5148,10 @@
   "ZIM": {
    "n": "ZIM Integrated Shipping Services",
    "type": "ADR_VARIABLE"
+  },
+  "ZION": {
+   "n": "Zions Bancorporation",
+   "type": "EQUITY_STANDARD"
   },
   "ZM": {
    "n": "Zoom Communications",
