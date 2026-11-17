@@ -9,6 +9,10 @@
    "n": "Goldman Sachs Physical Gold",
    "type": "ETF_PASS_THROUGH"
   },
+  "AAL": {
+   "n": "American Airlines Group",
+   "type": "EQUITY_STANDARD"
+  },
   "AAOI": {
    "n": "Applied Optoelectronics",
    "type": "EQUITY_STANDARD"
@@ -27,6 +31,14 @@
   },
   "ABG": {
    "n": "Asbury Automotive Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "ACAD": {
+   "n": "ACADIA Pharmaceuticals",
+   "type": "EQUITY_STANDARD"
+  },
+  "ACHC": {
+   "n": "Acadia Healthcare",
    "type": "EQUITY_STANDARD"
   },
   "ACI": {
@@ -115,6 +127,10 @@
   },
   "ALGM": {
    "n": "Allegro MicroSystems",
+   "type": "EQUITY_STANDARD"
+  },
+  "ALK": {
+   "n": "Alaska Air Group",
    "type": "EQUITY_STANDARD"
   },
   "ALKS": {
@@ -589,6 +605,10 @@
    "n": "Camtek",
    "type": "EQUITY_STANDARD"
   },
+  "CAR": {
+   "n": "Avis Budget Group",
+   "type": "EQUITY_STANDARD"
+  },
   "CARG": {
    "n": "CarGurus",
    "type": "EQUITY_STANDARD"
@@ -749,6 +769,10 @@
    "n": "Teucrium Corn",
    "type": "ETF_PASS_THROUGH"
   },
+  "CORT": {
+   "n": "Corcept Therapeutics",
+   "type": "EQUITY_STANDARD"
+  },
   "CORZ": {
    "n": "Core Scientific",
    "type": "EQUITY_STANDARD"
@@ -824,6 +848,10 @@
   "CUT": {
    "n": "Invesco MSCI Global Timber ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "CVI": {
+   "n": "CVR Energy",
+   "type": "EQUITY_STANDARD"
   },
   "CWB": {
    "n": "SPDR Bloomberg Convertible Securities",
@@ -957,12 +985,20 @@
    "n": "WisdomTree US High Dividend",
    "type": "ETF_PASS_THROUGH"
   },
+  "DHT": {
+   "n": "DHT Holdings",
+   "type": "ADR_VARIABLE"
+  },
   "DIA": {
    "n": "SPDR Dow Jones Industrial Average",
    "type": "ETF_PASS_THROUGH"
   },
   "DIN": {
    "n": "Dine Brands Global",
+   "type": "EQUITY_STANDARD"
+  },
+  "DINO": {
+   "n": "HF Sinclair",
    "type": "EQUITY_STANDARD"
   },
   "DIOD": {
@@ -976,6 +1012,10 @@
   "DIVB": {
    "n": "iShares Core Dividend",
    "type": "ETF_PASS_THROUGH"
+  },
+  "DK": {
+   "n": "Delek US Holdings",
+   "type": "EQUITY_STANDARD"
   },
   "DKNG": {
    "n": "DraftKings",
@@ -1560,6 +1600,10 @@
   "FRI": {
    "n": "First Trust S&P REIT Index Fund",
    "type": "ETF_PASS_THROUGH"
+  },
+  "FRO": {
+   "n": "Frontline",
+   "type": "ADR_VARIABLE"
   },
   "FROG": {
    "n": "JFrog",
@@ -2241,6 +2285,10 @@
    "n": "Summit Hotel Properties",
    "type": "EQUITY_STANDARD"
   },
+  "INSW": {
+   "n": "International Seaways",
+   "type": "EQUITY_STANDARD"
+  },
   "IONQ": {
    "n": "IonQ",
    "type": "EQUITY_STANDARD"
@@ -2469,6 +2517,10 @@
    "n": "Jazz Pharmaceuticals",
    "type": "EQUITY_STANDARD"
   },
+  "JBLU": {
+   "n": "JetBlue Airways",
+   "type": "EQUITY_STANDARD"
+  },
   "JBND": {
    "n": "JPMorgan Active Bond",
    "type": "ETF_PASS_THROUGH"
@@ -2545,6 +2597,10 @@
    "n": "Kelly Services",
    "type": "EQUITY_STANDARD"
   },
+  "KEX": {
+   "n": "Kirby",
+   "type": "EQUITY_STANDARD"
+  },
   "KFRC": {
    "n": "Kforce",
    "type": "EQUITY_STANDARD"
@@ -2567,6 +2623,10 @@
   },
   "KMX": {
    "n": "CarMax",
+   "type": "EQUITY_STANDARD"
+  },
+  "KNTK": {
+   "n": "Kinetik Holdings",
    "type": "EQUITY_STANDARD"
   },
   "KNX": {
@@ -2673,6 +2733,10 @@
    "n": "LKQ Corporation",
    "type": "EQUITY_STANDARD"
   },
+  "LNG": {
+   "n": "Cheniere Energy",
+   "type": "EQUITY_STANDARD"
+  },
   "LOGI": {
    "n": "Logitech International",
    "type": "EQUITY_STANDARD"
@@ -2767,6 +2831,10 @@
   },
   "MAT": {
    "n": "Mattel",
+   "type": "EQUITY_STANDARD"
+  },
+  "MATX": {
+   "n": "Matson",
    "type": "EQUITY_STANDARD"
   },
   "MBB": {
@@ -3085,6 +3153,10 @@
    "n": "OGE Energy",
    "type": "EQUITY_STANDARD"
   },
+  "OGN": {
+   "n": "Organon",
+   "type": "EQUITY_STANDARD"
+  },
   "OGS": {
    "n": "ONE Gas",
    "type": "EQUITY_STANDARD"
@@ -3200,6 +3272,10 @@
   "PBE": {
    "n": "Invesco Biotechnology & Genome ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "PBF": {
+   "n": "PBF Energy",
+   "type": "EQUITY_STANDARD"
   },
   "PBJ": {
    "n": "Invesco Food & Beverage ETF",
@@ -3373,6 +3449,10 @@
    "n": "Permian Resources",
    "type": "EQUITY_STANDARD"
   },
+  "PRGO": {
+   "n": "Perrigo",
+   "type": "EQUITY_STANDARD"
+  },
   "PRIM": {
    "n": "Primoris Services",
    "type": "EQUITY_STANDARD"
@@ -3415,6 +3495,10 @@
   },
   "PSTG": {
    "n": "Pure Storage",
+   "type": "EQUITY_STANDARD"
+  },
+  "PTCT": {
+   "n": "PTC Therapeutics",
    "type": "EQUITY_STANDARD"
   },
   "PTEN": {
@@ -3511,6 +3595,10 @@
   },
   "RBLX": {
    "n": "Roblox",
+   "type": "EQUITY_STANDARD"
+  },
+  "RDNT": {
+   "n": "RadNet",
    "type": "EQUITY_STANDARD"
   },
   "RDTE": {
@@ -3909,6 +3997,10 @@
    "n": "Skechers",
    "type": "EQUITY_STANDARD"
   },
+  "SKYW": {
+   "n": "SkyWest",
+   "type": "EQUITY_STANDARD"
+  },
   "SKYY": {
    "n": "First Trust Cloud Computing",
    "type": "ETF_PASS_THROUGH"
@@ -4169,6 +4261,10 @@
    "n": "iShares 0-5 Year TIPS Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "STNG": {
+   "n": "Scorpio Tankers",
+   "type": "ADR_VARIABLE"
+  },
   "STRL": {
    "n": "Sterling Infrastructure",
    "type": "EQUITY_STANDARD"
@@ -4292,6 +4388,10 @@
   "TNET": {
    "n": "TriNet Group",
    "type": "EQUITY_STANDARD"
+  },
+  "TNK": {
+   "n": "Teekay Tankers",
+   "type": "ADR_VARIABLE"
   },
   "TNL": {
    "n": "Travel + Leisure Co.",
@@ -4468,6 +4568,10 @@
   "USO": {
    "n": "United States Oil Fund",
    "type": "ETF_PASS_THROUGH"
+  },
+  "USPH": {
+   "n": "U.S. Physical Therapy",
+   "type": "EQUITY_STANDARD"
   },
   "USRT": {
    "n": "iShares Core US REIT",
