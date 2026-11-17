@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-17T02:40:10.820Z",
- "source": "Yahoo Finance + Tiingo",
+ "updated": "2026-11-17T12:33:08.297Z",
+ "source": "Yahoo Finance",
  "tickers": {
   "SCHD": {
    "n": "Schwab US Dividend Equity ETF",
@@ -4490,11 +4490,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 29.23,
+   "p": 29.03,
    "d": 0.6,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:39.308Z",
+   "u": "2026-11-17T12:31:22.901Z",
    "per": 0.15,
    "last": "2026-11-06",
    "hist": [
@@ -4537,11 +4537,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 54.2,
+   "p": 51.67,
    "d": 0.96,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:39.679Z",
+   "u": "2026-11-17T12:31:23.270Z",
    "per": 0.24,
    "last": "2026-10-29",
    "hist": [
@@ -4586,10 +4586,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 72.37,
+   "p": 70.74,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:40.040Z",
+   "u": "2026-11-17T12:31:23.661Z",
    "s": "Q3"
   },
   "CASY": {
@@ -4597,11 +4597,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 712.08,
+   "p": 705.72,
    "d": 2.44,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:40.419Z",
+   "u": "2026-11-17T12:31:24.058Z",
    "per": 0.65,
    "last": "2026-10-30",
    "hist": [
@@ -4646,11 +4646,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 600.2,
+   "p": 570.49,
    "d": 1.63,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:40.810Z",
+   "u": "2026-11-17T12:31:24.446Z",
    "per": 1.63,
    "last": "2026-10-26",
    "hist": [
@@ -4693,11 +4693,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 375.42,
+   "p": 377.5,
    "d": 2.3,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:41.178Z",
+   "u": "2026-11-17T12:31:24.807Z",
    "per": 0.86,
    "last": "2026-08-31",
    "hist": [
@@ -4742,10 +4742,10 @@
    "q": false,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 133.12,
+   "p": 133.17,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:41.538Z",
+   "u": "2026-11-17T12:31:25.182Z",
    "s": "Q3"
   },
   "CDW": {
@@ -4753,11 +4753,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 171.65,
+   "p": 165.82,
    "d": 2.52,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:41.902Z",
+   "u": "2026-11-17T12:31:25.541Z",
    "per": 0.63,
    "last": "2026-08-25",
    "hist": [
@@ -4802,11 +4802,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 359.03,
+   "p": 356.94,
    "d": 2.46,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:42.309Z",
+   "u": "2026-11-17T12:31:25.922Z",
    "per": 0.66,
    "last": "2026-11-13",
    "hist": [
@@ -4851,10 +4851,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 71.27,
+   "p": 74.77,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:42.667Z",
+   "u": "2026-11-17T12:31:26.302Z",
    "s": "Q3"
   },
   "CNP": {
@@ -4862,11 +4862,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 41.19,
+   "p": 40.68,
    "d": 0.24,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:43.059Z",
+   "u": "2026-11-17T12:31:26.702Z",
    "per": 0.24,
    "last": "2026-08-20",
    "hist": [
@@ -4909,18 +4909,14 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 125.09,
-   "d": 1.6,
+   "p": 119.85,
+   "d": 2.2,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:43.500Z",
+   "u": "2026-11-17T12:31:27.077Z",
    "per": 0.6,
-   "last": "2026-08-14",
+   "last": "2026-11-16",
    "hist": [
-    {
-     "d": "2024-11-15",
-     "a": 0.5
-    },
     {
      "d": "2025-02-14",
      "a": 0.5
@@ -4948,20 +4944,24 @@
     {
      "d": "2026-08-14",
      "a": 0.6
+    },
+    {
+     "d": "2026-11-16",
+     "a": 0.6
     }
    ],
-   "g3": 0,
-   "g5": 0.0592
+   "g3": 0.112,
+   "g5": 0.1289
   },
   "CRL": {
    "n": "Charles River Laboratories",
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 337.97,
+   "p": 335.52,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:43.855Z",
+   "u": "2026-11-17T12:31:27.427Z",
    "s": "Q3"
   },
   "SCHW": {
@@ -4969,11 +4969,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 92.98,
+   "p": 92.94,
    "d": 1.28,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:44.234Z",
+   "u": "2026-11-17T12:31:27.804Z",
    "per": 0.32,
    "last": "2026-11-13",
    "hist": [
@@ -5018,10 +5018,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 138.39,
+   "p": 138.95,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:44.591Z",
+   "u": "2026-11-17T12:31:28.154Z",
    "s": "Q3"
   },
   "CMG": {
@@ -5029,10 +5029,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 35.28,
+   "p": 35.94,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:44.951Z",
+   "u": "2026-11-17T12:31:28.517Z",
    "s": "Q3"
   },
   "CB": {
@@ -5040,11 +5040,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 375.74,
+   "p": 381.28,
    "d": 3.01,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:54.871Z",
+   "u": "2026-11-17T12:31:38.430Z",
    "per": 1.02,
    "last": "2026-09-11",
    "hist": [
@@ -5089,11 +5089,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 113,
+   "p": 114.74,
    "d": 1.232,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:55.248Z",
+   "u": "2026-11-17T12:31:38.801Z",
    "per": 0.308,
    "last": "2026-11-13",
    "hist": [
@@ -5138,10 +5138,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 280.54,
+   "p": 257.56,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:55.606Z",
+   "u": "2026-11-17T12:31:39.179Z",
    "s": "Q3"
   },
   "CI": {
@@ -5149,11 +5149,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 297,
+   "p": 300.16,
    "d": 6.19,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:55.993Z",
+   "u": "2026-11-17T12:31:39.560Z",
    "per": 1.56,
    "last": "2026-09-08",
    "hist": [
@@ -5198,11 +5198,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 189.65,
+   "p": 191.33,
    "d": 2.75,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:56.382Z",
+   "u": "2026-11-17T12:31:39.943Z",
    "per": 0.94,
    "last": "2026-09-23",
    "hist": [
@@ -5247,11 +5247,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 226.24,
+   "p": 224.16,
    "d": 1.94,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:56.764Z",
+   "u": "2026-11-17T12:31:40.312Z",
    "per": 0.52,
    "last": "2026-11-13",
    "hist": [
@@ -5296,11 +5296,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 95.64,
+   "p": 94.52,
    "d": 1.67,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:57.141Z",
+   "u": "2026-11-17T12:31:40.700Z",
    "per": 0.42,
    "last": "2026-10-02",
    "hist": [
@@ -5345,11 +5345,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 124.01,
+   "p": 121.32,
    "d": 2.54,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:57.527Z",
+   "u": "2026-11-17T12:31:41.075Z",
    "per": 0.67,
    "last": "2026-11-02",
    "hist": [
@@ -5394,11 +5394,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 65.26,
+   "p": 64.44,
    "d": 1.9,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:57.898Z",
+   "u": "2026-11-17T12:31:41.433Z",
    "per": 0.52,
    "last": "2026-10-30",
    "hist": [
@@ -5443,11 +5443,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 109.46,
+   "p": 110.17,
    "d": 1.25,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:58.286Z",
+   "u": "2026-11-17T12:31:41.815Z",
    "per": 1.25,
    "last": "2026-10-28",
    "hist": [
@@ -5492,11 +5492,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 317.97,
+   "p": 319.37,
    "d": 11.3,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:58.678Z",
+   "u": "2026-11-17T12:31:42.187Z",
    "per": 1.3,
    "last": "2026-09-09",
    "hist": [
@@ -5541,11 +5541,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 70.38,
+   "p": 70.79,
    "d": 2.28,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:59.061Z",
+   "u": "2026-11-17T12:31:42.571Z",
    "per": 0.57,
    "last": "2026-11-06",
    "hist": [
@@ -5590,11 +5590,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 63.01,
+   "p": 62.29,
    "d": 1.63,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:59.438Z",
+   "u": "2026-11-17T12:31:42.944Z",
    "per": 0.33,
    "last": "2026-11-13",
    "hist": [
@@ -5631,7 +5631,7 @@
      "a": 0.33
     }
    ],
-   "g3": 0.1266,
+   "g3": 0.2328,
    "g5": 0.1164
   },
   "COHR": {
@@ -5639,10 +5639,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 218.15,
+   "p": 203.43,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:59.793Z",
+   "u": "2026-11-17T12:31:43.302Z",
    "s": "Q3"
   },
   "COIN": {
@@ -5650,10 +5650,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 127.65,
+   "p": 119.84,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:00.151Z",
+   "u": "2026-11-17T12:31:43.654Z",
    "s": "Q3"
   },
   "CL": {
@@ -5661,11 +5661,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 99.67,
+   "p": 100.99,
    "d": 0.53,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:00.540Z",
+   "u": "2026-11-17T12:31:44.043Z",
    "per": 0.53,
    "last": "2026-10-20",
    "hist": [
@@ -5708,11 +5708,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 25.16,
+   "p": 25.6,
    "d": 1.32,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:10.547Z",
+   "u": "2026-11-17T12:31:53.904Z",
    "per": 0.33,
    "last": "2026-10-07",
    "hist": [
@@ -5757,11 +5757,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 1112.5,
+   "p": 1057.68,
    "d": 3.4,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:10.939Z",
+   "u": "2026-11-17T12:31:54.282Z",
    "per": 1,
    "last": "2026-11-12",
    "hist": [
@@ -5798,7 +5798,7 @@
      "a": 1
     }
    ],
-   "g3": 0.5037,
+   "g3": 0.5874,
    "g5": 0.4793
   },
   "COP": {
@@ -5806,13 +5806,13 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 142.28,
-   "d": 0.84,
+   "p": 140.52,
+   "d": 0.93,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:11.319Z",
-   "per": 0.84,
-   "last": "2026-08-17",
+   "u": "2026-11-17T12:31:54.658Z",
+   "per": 0.93,
+   "last": "2026-11-16",
    "hist": [
     {
      "d": "2022-03-30",
@@ -5843,23 +5843,23 @@
      "a": 0.7
     },
     {
-     "d": "2026-08-17",
-     "a": 0.84
+     "d": "2026-11-16",
+     "a": 0.93
     }
    ],
-   "g3": 0.0627,
-   "g5": -0.1365
+   "g3": 0.0993,
+   "g5": -0.1188
   },
   "ED": {
    "n": "Consolidated Edison",
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 121,
+   "p": 121.88,
    "d": 0.888,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:11.715Z",
+   "u": "2026-11-17T12:31:55.050Z",
    "per": 0.888,
    "last": "2026-08-19",
    "hist": [
@@ -5902,11 +5902,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 145.61,
+   "p": 146.63,
    "d": 4.11,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:12.110Z",
+   "u": "2026-11-17T12:31:55.419Z",
    "per": 1.03,
    "last": "2026-10-30",
    "hist": [
@@ -5951,18 +5951,14 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 280.2,
-   "d": 1.669,
+   "p": 277.82,
+   "d": 2.096,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:12.475Z",
+   "u": "2026-11-17T12:31:55.775Z",
    "per": 0.427,
-   "last": "2026-08-18",
+   "last": "2026-11-16",
    "hist": [
-    {
-     "d": "2024-11-15",
-     "a": 0.353
-    },
     {
      "d": "2025-03-07",
      "a": 0.388
@@ -5990,19 +5986,23 @@
     {
      "d": "2026-08-18",
      "a": 0.427
+    },
+    {
+     "d": "2026-11-16",
+     "a": 0.427
     }
    ],
-   "g3": 0.2542
+   "g3": 0.2294
   },
   "COO": {
    "n": "Cooper Companies (The)",
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 62.65,
+   "p": 61.88,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:12.863Z",
+   "u": "2026-11-17T12:31:56.144Z",
    "s": "Q3"
   },
   "CPRT": {
@@ -6010,10 +6010,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 31.83,
+   "p": 32.08,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:13.219Z",
+   "u": "2026-11-17T12:31:56.495Z",
    "s": "Q3"
   },
   "GLW": {
@@ -6021,11 +6021,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 114.08,
+   "p": 106.17,
    "d": 1.12,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:13.603Z",
+   "u": "2026-11-17T12:31:56.877Z",
    "per": 0.28,
    "last": "2026-11-13",
    "hist": [
@@ -6062,7 +6062,7 @@
      "a": 0.28
     }
    ],
-   "g3": 0.003,
+   "g3": 0,
    "g5": 0.0313
   },
   "CPAY": {
@@ -6070,10 +6070,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 462.22,
+   "p": 461.73,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:13.956Z",
+   "u": "2026-11-17T12:31:57.226Z",
    "s": "Q3"
   },
   "CTVA": {
@@ -6081,11 +6081,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 9.43,
+   "p": 9.04,
    "d": 0.108,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:14.340Z",
+   "u": "2026-11-17T12:31:57.593Z",
    "per": 0.027,
    "last": "2026-09-01",
    "hist": [
@@ -6130,10 +6130,10 @@
    "q": false,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 30.96,
+   "p": 31.24,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:14.695Z",
+   "u": "2026-11-17T12:31:57.959Z",
    "s": "Q3"
   },
   "COST": {
@@ -6141,11 +6141,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 1106.21,
+   "p": 1113.74,
    "d": 1.47,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:15.070Z",
+   "u": "2026-11-17T12:31:58.351Z",
    "per": 1.47,
    "last": "2026-10-30",
    "hist": [
@@ -6190,11 +6190,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 93.16,
+   "p": 92.37,
    "d": 1.56,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:15.451Z",
+   "u": "2026-11-17T12:31:58.733Z",
    "per": 0.39,
    "last": "2026-11-13",
    "hist": [
@@ -6239,10 +6239,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 226.61,
+   "p": 223.21,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:15.809Z",
+   "u": "2026-11-17T12:31:59.086Z",
    "s": "Q3"
   },
   "CCI": {
@@ -6250,11 +6250,11 @@
    "q": false,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 90.83,
+   "p": 89.36,
    "d": 4.252,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:16.186Z",
+   "u": "2026-11-17T12:31:59.444Z",
    "per": 1.063,
    "last": "2026-09-15",
    "hist": [
@@ -6299,11 +6299,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 52.05,
+   "p": 52.03,
    "d": 0.14,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:26.168Z",
+   "u": "2026-11-17T12:32:09.287Z",
    "per": 0.14,
    "last": "2026-08-31",
    "hist": [
@@ -6348,11 +6348,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 452.18,
+   "p": 432.72,
    "d": 8.2,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:26.556Z",
+   "u": "2026-11-17T12:32:09.669Z",
    "per": 2.2,
    "last": "2026-08-21",
    "hist": [
@@ -6389,7 +6389,7 @@
      "a": 2.2
     }
    ],
-   "g3": 0.0867,
+   "g3": 0.1938,
    "g5": 0.0832
   },
   "CVS": {
@@ -6397,11 +6397,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 89.35,
+   "p": 88.59,
    "d": 2.66,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:26.938Z",
+   "u": "2026-11-17T12:32:10.083Z",
    "per": 0.665,
    "last": "2026-10-22",
    "hist": [
@@ -6446,11 +6446,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 233.02,
+   "p": 229.91,
    "d": 1.52,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:27.336Z",
+   "u": "2026-11-17T12:32:10.453Z",
    "per": 0.4,
    "last": "2026-09-30",
    "hist": [
@@ -6495,11 +6495,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 228.74,
+   "p": 230.93,
    "d": 6.24,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:27.714Z",
+   "u": "2026-11-17T12:32:10.887Z",
    "per": 1.62,
    "last": "2026-10-09",
    "hist": [
@@ -6544,10 +6544,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 184.16,
+   "p": 172.86,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:28.122Z",
+   "u": "2026-11-17T12:32:11.247Z",
    "s": "Q3"
   },
   "DVA": {
@@ -6555,10 +6555,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 174.56,
+   "p": 174.22,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:28.478Z",
+   "u": "2026-11-17T12:32:11.595Z",
    "s": "Q3"
   },
   "DECK": {
@@ -6566,10 +6566,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 86.82,
+   "p": 83.46,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:28.856Z",
+   "u": "2026-11-17T12:32:11.949Z",
    "s": "Q3"
   },
   "DE": {
@@ -6577,11 +6577,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 673.54,
+   "p": 653.99,
    "d": 1.62,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:29.245Z",
+   "u": "2026-11-17T12:32:12.337Z",
    "per": 1.62,
    "last": "2026-09-30",
    "hist": [
@@ -6624,11 +6624,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 344.53,
+   "p": 320.55,
    "d": 2.415,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:29.655Z",
+   "u": "2026-11-17T12:32:12.694Z",
    "per": 0.63,
    "last": "2026-10-20",
    "hist": [
@@ -6672,11 +6672,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 86.25,
+   "p": 86.6,
    "d": 0.806,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:30.018Z",
+   "u": "2026-11-17T12:32:13.057Z",
    "per": 0.215,
    "last": "2026-10-15",
    "hist": [
@@ -6720,11 +6720,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 46.58,
+   "p": 44.27,
    "d": 0.8,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:30.394Z",
+   "u": "2026-11-17T12:32:13.424Z",
    "per": 0.32,
    "last": "2026-09-15",
    "hist": [
@@ -6769,10 +6769,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 83.33,
+   "p": 81.61,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:30.751Z",
+   "u": "2026-11-17T12:32:13.780Z",
    "s": "Q3"
   },
   "FANG": {
@@ -6780,11 +6780,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 184.93,
+   "p": 177.41,
    "d": 4.43,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:31.112Z",
+   "u": "2026-11-17T12:32:14.132Z",
    "per": 1.18,
    "last": "2026-11-12",
    "hist": [
@@ -6821,7 +6821,7 @@
      "a": 1.18
     }
    ],
-   "g3": -0.2439,
+   "g3": -0.1785,
    "g5": 0.2041
   },
   "DLR": {
@@ -6829,11 +6829,11 @@
    "q": false,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 179.99,
+   "p": 178.77,
    "d": 4.88,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:31.481Z",
+   "u": "2026-11-17T12:32:14.496Z",
    "per": 1.22,
    "last": "2026-09-15",
    "hist": [
@@ -6878,11 +6878,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 134.14,
+   "p": 136.18,
    "d": 2.36,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:31.892Z",
+   "u": "2026-11-17T12:32:14.852Z",
    "per": 0.59,
    "last": "2026-10-06",
    "hist": [
@@ -6927,10 +6927,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 138.08,
+   "p": 138.7,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:57.585Z",
+   "u": "2026-11-17T12:32:40.772Z",
    "s": "Q3"
   },
   "D": {
@@ -6938,11 +6938,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 67.66,
+   "p": 67.8,
    "d": 2.672,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:57.983Z",
+   "u": "2026-11-17T12:32:41.146Z",
    "per": 0.668,
    "last": "2026-09-04",
    "hist": [
@@ -6987,11 +6987,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 341.72,
+   "p": 346.41,
    "d": 7.71,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:58.348Z",
+   "u": "2026-11-17T12:32:41.508Z",
    "per": 1.99,
    "last": "2026-09-15",
    "hist": [
@@ -7036,10 +7036,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 171.51,
+   "p": 169.78,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:58.705Z",
+   "u": "2026-11-17T12:32:43.180Z",
    "s": "Q3"
   },
   "DOV": {
@@ -7047,11 +7047,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 209.95,
+   "p": 206.12,
    "d": 0.525,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:59.138Z",
+   "u": "2026-11-17T12:32:43.567Z",
    "per": 0.525,
    "last": "2026-08-31",
    "hist": [
@@ -7096,11 +7096,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 33.04,
+   "p": 31.96,
    "d": 1.4,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:59.504Z",
+   "u": "2026-11-17T12:32:43.925Z",
    "per": 0.35,
    "last": "2026-08-31",
    "hist": [
@@ -7145,11 +7145,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 145.55,
+   "p": 144.75,
    "d": 1.85,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:59.882Z",
+   "u": "2026-11-17T12:32:44.308Z",
    "per": 0.5,
    "last": "2026-11-12",
    "hist": [
@@ -7194,11 +7194,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 139.72,
+   "p": 139.91,
    "d": 1.165,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:00.275Z",
+   "u": "2026-11-17T12:32:44.693Z",
    "per": 1.165,
    "last": "2026-09-21",
    "hist": [
@@ -7241,11 +7241,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 129.16,
+   "p": 130.59,
    "d": 1.085,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:00.655Z",
+   "u": "2026-11-17T12:32:45.073Z",
    "per": 1.085,
    "last": "2026-11-13",
    "hist": [
@@ -7282,7 +7282,7 @@
      "a": 1.085
     }
    ],
-   "g3": -0.3548,
+   "g3": -0.3559,
    "g5": -0.2258
   },
   "DD": {
@@ -7290,11 +7290,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 153.78,
+   "p": 149.99,
    "d": 2.4,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:01.047Z",
+   "u": "2026-11-17T12:32:45.502Z",
    "per": 0.6,
    "last": "2026-08-31",
    "hist": [
@@ -7339,11 +7339,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 352.97,
+   "p": 336.88,
    "d": 1.1,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:01.434Z",
+   "u": "2026-11-17T12:32:45.899Z",
    "per": 1.1,
    "last": "2026-11-10",
    "hist": [
@@ -7386,11 +7386,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 120.92,
+   "p": 120.89,
    "d": 1.22,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:01.798Z",
+   "u": "2026-11-17T12:32:46.290Z",
    "per": 0.31,
    "last": "2026-08-28",
    "hist": [
@@ -7435,10 +7435,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 100,
+   "p": 99.47,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:02.156Z",
+   "u": "2026-11-17T12:32:46.639Z",
    "s": "Q3"
   },
   "ECL": {
@@ -7446,11 +7446,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 309.27,
+   "p": 308.41,
    "d": 2.92,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:02.540Z",
+   "u": "2026-11-17T12:32:47.014Z",
    "per": 0.73,
    "last": "2026-09-15",
    "hist": [
@@ -7495,11 +7495,11 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 60.18,
+   "p": 61.97,
    "d": 0.878,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:02.933Z",
+   "u": "2026-11-17T12:32:47.394Z",
    "per": 0.878,
    "last": "2026-10-07",
    "hist": [
@@ -7542,10 +7542,10 @@
    "q": true,
    "type": "EQUITY_STANDARD",
    "sp500": true,
-   "p": 107.15,
+   "p": 107.11,
    "d": 0,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:03.288Z",
+   "u": "2026-11-17T12:32:47.743Z",
    "s": "Q3"
   },
   "ELV": {
@@ -37081,12 +37081,12 @@
   "NYT": {
    "n": "New York Times",
    "type": "EQUITY_STANDARD",
-   "p": 72.81,
+   "p": 73.5,
    "d": 0.87,
    "q": true,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:37.795Z",
+   "u": "2026-11-17T12:31:21.372Z",
    "per": 0.23,
    "last": "2026-10-07",
    "hist": [
@@ -37129,22 +37129,22 @@
   "OAIW": {
    "n": "OpenAI Lab Ecosystem ETF",
    "type": "ETF_PASS_THROUGH",
-   "p": 19.65,
+   "p": 18.91,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:38.189Z",
+   "u": "2026-11-17T12:31:21.763Z",
    "s": "Q3"
   },
   "OARK": {
    "n": "YieldMax Innovation Option Income Strategy",
    "type": "ETF_PASS_THROUGH",
-   "p": 24.81,
+   "p": 23.81,
    "d": 13.537,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:38.549Z",
+   "u": "2026-11-17T12:31:22.120Z",
    "per": 0.166,
    "last": "2026-11-12",
    "hist": [
@@ -37186,12 +37186,12 @@
   "OEF": {
    "n": "iShares S&P 100",
    "type": "ETF_PASS_THROUGH",
-   "p": 371.61,
+   "p": 364.42,
    "d": 3.263,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:38.927Z",
+   "u": "2026-11-17T12:31:22.499Z",
    "per": 0.763,
    "last": "2026-09-15",
    "hist": [
@@ -37234,12 +37234,12 @@
   "OIH": {
    "n": "VanEck Oil Services",
    "type": "ETF_PASS_THROUGH",
-   "p": 375.55,
+   "p": 361.14,
    "d": 4.869,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:45.348Z",
+   "u": "2026-11-17T12:31:28.889Z",
    "per": 4.869,
    "last": "2025-12-22",
    "hist": [
@@ -37280,32 +37280,32 @@
   "OKLO": {
    "n": "Oklo",
    "type": "EQUITY_STANDARD",
-   "p": 23.92,
+   "p": 23.03,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:45.711Z",
+   "u": "2026-11-17T12:31:29.239Z",
    "s": "Q3"
   },
   "OKTA": {
    "n": "Okta",
    "type": "EQUITY_STANDARD",
-   "p": 182.87,
+   "p": 178.22,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:46.066Z",
+   "u": "2026-11-17T12:31:29.593Z",
    "s": "Q3"
   },
   "ONEQ": {
    "n": "Fidelity Nasdaq Composite Index",
    "type": "ETF_PASS_THROUGH",
-   "p": 99.11,
+   "p": 96.65,
    "d": 0.513,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:46.439Z",
+   "u": "2026-11-17T12:31:29.961Z",
    "per": 0.112,
    "last": "2026-09-18",
    "hist": [
@@ -37348,32 +37348,32 @@
   "ONON": {
    "n": "On Holding",
    "type": "EQUITY_STANDARD",
-   "p": 33.63,
+   "p": 32.76,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:46.796Z",
+   "u": "2026-11-17T12:31:30.313Z",
    "s": "Q3"
   },
   "ONTO": {
    "n": "Onto Innovation",
    "type": "EQUITY_STANDARD",
-   "p": 203.62,
+   "p": 196.77,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:47.154Z",
+   "u": "2026-11-17T12:31:30.666Z",
    "s": "Q3"
   },
   "OPRA": {
    "n": "Opera",
    "type": "EQUITY_STANDARD",
-   "p": 15.8,
+   "p": 15.4,
    "d": 0.8,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:47.539Z",
+   "u": "2026-11-17T12:31:31.033Z",
    "per": 0.4,
    "last": "2026-07-07",
    "hist": [
@@ -37415,42 +37415,42 @@
   "ORBT": {
    "n": "Tema Space and Satellite",
    "type": "ETF_PASS_THROUGH",
-   "p": 2.53,
+   "p": 2.51,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:47.899Z",
+   "u": "2026-11-17T12:31:31.390Z",
    "s": "Q3"
   },
   "PALL": {
    "n": "abrdn Physical Palladium Shares",
    "type": "ETF_PASS_THROUGH",
-   "p": 18.13,
+   "p": 17.51,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:48.258Z",
+   "u": "2026-11-17T12:31:31.749Z",
    "s": "Q3"
   },
   "PATH": {
    "n": "UiPath",
    "type": "EQUITY_STANDARD",
-   "p": 13.27,
+   "p": 13.14,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:48.616Z",
+   "u": "2026-11-17T12:31:32.101Z",
    "s": "Q3"
   },
   "PAVE": {
    "n": "Global X US Infrastructure Development",
    "type": "ETF_PASS_THROUGH",
-   "p": 53.13,
+   "p": 52.12,
    "d": 0.431,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:48.985Z",
+   "u": "2026-11-17T12:31:32.482Z",
    "per": 0.103,
    "last": "2026-06-29",
    "hist": [
@@ -37493,12 +37493,12 @@
   "PBW": {
    "n": "Invesco WilderHill Clean Energy",
    "type": "ETF_PASS_THROUGH",
-   "p": 25.02,
+   "p": 23.83,
    "d": 0.668,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:49.355Z",
+   "u": "2026-11-17T12:31:32.846Z",
    "per": 0.275,
    "last": "2026-09-21",
    "hist": [
@@ -37541,12 +37541,12 @@
   "PCY": {
    "n": "Invesco Emerging Markets Sovereign Debt",
    "type": "ETF_PASS_THROUGH",
-   "p": 20.19,
+   "p": 20.05,
    "d": 1.268,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:49.725Z",
+   "u": "2026-11-17T12:31:33.209Z",
    "per": 0.11,
    "last": "2026-10-19",
    "hist": [
@@ -37589,12 +37589,12 @@
   "PDBC": {
    "n": "Invesco Optimum Yield Diversified Commodity Strategy No K-1",
    "type": "ETF_PASS_THROUGH",
-   "p": 18.34,
+   "p": 18.02,
    "d": 0.509,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:50.084Z",
+   "u": "2026-11-17T12:31:33.561Z",
    "per": 0.509,
    "last": "2025-12-22",
    "hist": [
@@ -37637,22 +37637,22 @@
   "PDD": {
    "n": "PDD Holdings",
    "type": "EQUITY_STANDARD",
-   "p": 78.97,
+   "p": 78.11,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:50.445Z",
+   "u": "2026-11-17T12:31:33.920Z",
    "s": "Q3"
   },
   "PEY": {
    "n": "Invesco High Yield Equity Dividend Achievers",
    "type": "ETF_PASS_THROUGH",
-   "p": 24.87,
+   "p": 24.79,
    "d": 1.05,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:50.819Z",
+   "u": "2026-11-17T12:31:34.299Z",
    "per": 0.099,
    "last": "2026-10-19",
    "hist": [
@@ -37695,12 +37695,12 @@
   "PFF": {
    "n": "iShares Preferred and Income Securities",
    "type": "ETF_PASS_THROUGH",
-   "p": 27.88,
+   "p": 27.63,
    "d": 1.636,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:51.188Z",
+   "u": "2026-11-17T12:31:34.676Z",
    "per": 0.176,
    "last": "2026-11-02",
    "hist": [
@@ -37743,12 +37743,12 @@
   "PFFD": {
    "n": "Global X US Preferred",
    "type": "ETF_PASS_THROUGH",
-   "p": 16.59,
+   "p": 16.46,
    "d": 1.2,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:51.557Z",
+   "u": "2026-11-17T12:31:35.046Z",
    "per": 0.1,
    "last": "2026-11-02",
    "hist": [
@@ -37791,12 +37791,12 @@
   "PGX": {
    "n": "Invesco Preferred",
    "type": "ETF_PASS_THROUGH",
-   "p": 9.67,
+   "p": 9.66,
    "d": 0.684,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:51.922Z",
+   "u": "2026-11-17T12:31:35.420Z",
    "per": 0.061,
    "last": "2026-10-19",
    "hist": [
@@ -37839,12 +37839,12 @@
   "PICK": {
    "n": "iShares MSCI Global Metals and Mining Producers",
    "type": "ETF_PASS_THROUGH",
-   "p": 53.9,
+   "p": 51.61,
    "d": 1.318,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:52.288Z",
+   "u": "2026-11-17T12:31:35.785Z",
    "per": 0.542,
    "last": "2026-06-15",
    "hist": [
@@ -37887,22 +37887,22 @@
   "PINS": {
    "n": "Pinterest",
    "type": "EQUITY_STANDARD",
-   "p": 19.15,
+   "p": 18.42,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:52.649Z",
+   "u": "2026-11-17T12:31:36.212Z",
    "s": "Q3"
   },
   "PPA": {
    "n": "Invesco Aerospace and Defense",
    "type": "ETF_PASS_THROUGH",
-   "p": 158.72,
+   "p": 154.7,
    "d": 0.661,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:53.020Z",
+   "u": "2026-11-17T12:31:36.576Z",
    "per": 0.479,
    "last": "2026-09-21",
    "hist": [
@@ -37945,22 +37945,22 @@
   "PPLT": {
    "n": "abrdn Physical Platinum Shares",
    "type": "ETF_PASS_THROUGH",
-   "p": 13.5,
+   "p": 13.05,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:53.377Z",
+   "u": "2026-11-17T12:31:36.964Z",
    "s": "Q3"
   },
   "PRNT": {
    "n": "ARK 3D Printing",
    "type": "ETF_PASS_THROUGH",
-   "p": 23.05,
+   "p": 22.43,
    "d": 0.175,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:53.738Z",
+   "u": "2026-11-17T12:31:37.314Z",
    "per": 0.175,
    "last": "2025-12-26",
    "hist": [
@@ -37997,12 +37997,12 @@
   "PSI": {
    "n": "Invesco Semiconductors",
    "type": "ETF_PASS_THROUGH",
-   "p": 114.2,
+   "p": 107.65,
    "d": 0.024,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:54.104Z",
+   "u": "2026-11-17T12:31:37.675Z",
    "per": 0.016,
    "last": "2026-06-22",
    "hist": [
@@ -38045,12 +38045,12 @@
   "PSQ": {
    "n": "ProShares Short QQQ",
    "type": "ETF_PASS_THROUGH",
-   "p": 26.96,
+   "p": 27.68,
    "d": 1.04,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:25:54.475Z",
+   "u": "2026-11-17T12:31:38.042Z",
    "per": 0.257,
    "last": "2026-09-23",
    "hist": [
@@ -38092,22 +38092,22 @@
   "QBTS": {
    "n": "D-Wave Quantum",
    "type": "EQUITY_STANDARD",
-   "p": 9.56,
+   "p": 8.67,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:00.899Z",
+   "u": "2026-11-17T12:31:44.400Z",
    "s": "Q3"
   },
   "QCLN": {
    "n": "First Trust NASDAQ Clean Edge Green Energy",
    "type": "ETF_PASS_THROUGH",
-   "p": 43.77,
+   "p": 41.94,
    "d": 0.051,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:01.264Z",
+   "u": "2026-11-17T12:31:44.766Z",
    "per": 0.007,
    "last": "2026-03-26",
    "hist": [
@@ -38150,12 +38150,12 @@
   "QDTE": {
    "n": "Roundhill Innovation-100 0DTE Covered Call Strategy",
    "type": "ETF_PASS_THROUGH",
-   "p": 26.52,
+   "p": 25.83,
    "d": 12.183,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:01.624Z",
+   "u": "2026-11-17T12:31:45.124Z",
    "per": 0.125,
    "last": "2026-11-12",
    "hist": [
@@ -38196,12 +38196,12 @@
   "QLD": {
    "n": "ProShares Ultra QQQ",
    "type": "ETF_PASS_THROUGH",
-   "p": 79.3,
+   "p": 75.08,
    "d": 0.124,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:02.068Z",
+   "u": "2026-11-17T12:31:45.488Z",
    "per": 0.027,
    "last": "2026-09-23",
    "hist": [
@@ -38243,12 +38243,12 @@
   "QQQE": {
    "n": "Direxion NASDAQ-100 Equal Weighted Index Shares",
    "type": "ETF_PASS_THROUGH",
-   "p": 115.84,
+   "p": 113.42,
    "d": 0.702,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:02.433Z",
+   "u": "2026-11-17T12:31:45.847Z",
    "per": 0.169,
    "last": "2026-09-22",
    "hist": [
@@ -38291,12 +38291,12 @@
   "QQQJ": {
    "n": "Invesco Nasdaq Next Gen 100",
    "type": "ETF_PASS_THROUGH",
-   "p": 43.19,
+   "p": 42.27,
    "d": 0.328,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:02.793Z",
+   "u": "2026-11-17T12:31:46.223Z",
    "per": 0.198,
    "last": "2026-09-21",
    "hist": [
@@ -38339,12 +38339,12 @@
   "QQQM": {
    "n": "Invesco Nasdaq 100",
    "type": "ETF_PASS_THROUGH",
-   "p": 279.97,
+   "p": 272.49,
    "d": 1.316,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:03.177Z",
+   "u": "2026-11-17T12:31:46.584Z",
    "per": 0.313,
    "last": "2026-09-21",
    "hist": [
@@ -38391,18 +38391,18 @@
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:03.528Z",
+   "u": "2026-11-17T12:31:46.960Z",
    "s": "Q3"
   },
   "QTUM": {
    "n": "Defiance Quantum",
    "type": "ETF_PASS_THROUGH",
-   "p": 130.1,
+   "p": 124.47,
    "d": 1.404,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:03.895Z",
+   "u": "2026-11-17T12:31:47.331Z",
    "per": 0.465,
    "last": "2026-09-23",
    "hist": [
@@ -38445,12 +38445,12 @@
   "QUAL": {
    "n": "iShares MSCI USA Quality Factor",
    "type": "ETF_PASS_THROUGH",
-   "p": 56.02,
+   "p": 55.16,
    "d": 0.4725,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:04.259Z",
+   "u": "2026-11-17T12:31:47.710Z",
    "per": 0.1183,
    "last": "2026-09-15",
    "hist": [
@@ -38493,22 +38493,22 @@
   "RBLX": {
    "n": "Roblox",
    "type": "EQUITY_STANDARD",
-   "p": 49.91,
+   "p": 46.12,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:04.620Z",
+   "u": "2026-11-17T12:31:48.058Z",
    "s": "Q3"
   },
   "RDTE": {
    "n": "Roundhill Russell 2000 0DTE Covered Call Strategy",
    "type": "ETF_PASS_THROUGH",
-   "p": 25.26,
+   "p": 24.85,
    "d": 10.646,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:04.985Z",
+   "u": "2026-11-17T12:31:48.410Z",
    "per": 0.163,
    "last": "2026-11-12",
    "hist": [
@@ -38549,12 +38549,12 @@
   "RDVY": {
    "n": "First Trust Rising Dividend Achievers",
    "type": "ETF_PASS_THROUGH",
-   "p": 79.69,
+   "p": 78.64,
    "d": 0.68,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:05.349Z",
+   "u": "2026-11-17T12:31:48.764Z",
    "per": 0.152,
    "last": "2026-09-24",
    "hist": [
@@ -38597,12 +38597,12 @@
   "REGL": {
    "n": "ProShares S&P MidCap 400 Dividend Aristocrats",
    "type": "ETF_PASS_THROUGH",
-   "p": 93.74,
+   "p": 93.33,
    "d": 1.989,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:05.710Z",
+   "u": "2026-11-17T12:31:49.135Z",
    "per": 0.397,
    "last": "2026-09-23",
    "hist": [
@@ -38645,12 +38645,12 @@
   "REM": {
    "n": "iShares Mortgage Real Estate",
    "type": "ETF_PASS_THROUGH",
-   "p": 16.25,
+   "p": 16.12,
    "d": 1.981,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:06.079Z",
+   "u": "2026-11-17T12:31:49.498Z",
    "per": 0.506,
    "last": "2026-09-15",
    "hist": [
@@ -38693,12 +38693,12 @@
   "REMX": {
    "n": "VanEck Rare Earth and Strategic Metals",
    "type": "ETF_PASS_THROUGH",
-   "p": 50.02,
+   "p": 47.06,
    "d": 1.301,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:06.443Z",
+   "u": "2026-11-17T12:31:49.859Z",
    "per": 1.301,
    "last": "2025-12-22",
    "hist": [
@@ -38741,12 +38741,12 @@
   "REZ": {
    "n": "iShares Residential and Multisector Real Estate",
    "type": "ETF_PASS_THROUGH",
-   "p": 94.18,
+   "p": 94.27,
    "d": 1.949,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:06.815Z",
+   "u": "2026-11-17T12:31:50.229Z",
    "per": 0.535,
    "last": "2026-09-15",
    "hist": [
@@ -38789,22 +38789,22 @@
   "RGTI": {
    "n": "Rigetti Computing",
    "type": "EQUITY_STANDARD",
-   "p": 9.62,
+   "p": 9.06,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:07.175Z",
+   "u": "2026-11-17T12:31:50.582Z",
    "s": "Q3"
   },
   "RING": {
    "n": "iShares MSCI Global Gold Miners",
    "type": "ETF_PASS_THROUGH",
-   "p": 71.08,
+   "p": 68.85,
    "d": 0.903,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:07.539Z",
+   "u": "2026-11-17T12:31:50.954Z",
    "per": 0.526,
    "last": "2026-06-15",
    "hist": [
@@ -38847,42 +38847,42 @@
   "RIOT": {
    "n": "Riot Platforms",
    "type": "EQUITY_STANDARD",
-   "p": 17.52,
+   "p": 17.06,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:07.949Z",
+   "u": "2026-11-17T12:31:51.307Z",
    "s": "Q3"
   },
   "RIVN": {
    "n": "Rivian",
    "type": "EQUITY_STANDARD",
-   "p": 12.18,
+   "p": 12.1,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:08.310Z",
+   "u": "2026-11-17T12:31:51.665Z",
    "s": "Q3"
   },
   "RKLB": {
    "n": "Rocket Lab",
    "type": "EQUITY_STANDARD",
-   "p": 61.53,
+   "p": 57.37,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:08.676Z",
+   "u": "2026-11-17T12:31:52.058Z",
    "s": "Q3"
   },
   "ROBO": {
    "n": "ROBO Global Robotics and Automation",
    "type": "ETF_PASS_THROUGH",
-   "p": 72.11,
+   "p": 69.3,
    "d": 0.292,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:09.039Z",
+   "u": "2026-11-17T12:31:52.412Z",
    "per": 0.292,
    "last": "2025-12-30",
    "hist": [
@@ -38928,18 +38928,18 @@
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:09.396Z",
+   "u": "2026-11-17T12:31:52.769Z",
    "s": "Q3"
   },
   "RSP": {
    "n": "Invesco S&P 500 Equal Weight",
    "type": "ETF_PASS_THROUGH",
-   "p": 221.16,
+   "p": 218.93,
    "d": 3.181,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:09.771Z",
+   "u": "2026-11-17T12:31:53.150Z",
    "per": 0.795,
    "last": "2026-09-21",
    "hist": [
@@ -38982,12 +38982,12 @@
   "RWR": {
    "n": "SPDR Dow Jones REIT",
    "type": "ETF_PASS_THROUGH",
-   "p": 111.59,
+   "p": 111.47,
    "d": 3.768,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:10.165Z",
+   "u": "2026-11-17T12:31:53.516Z",
    "per": 0.981,
    "last": "2026-09-21",
    "hist": [
@@ -39030,12 +39030,12 @@
   "RWX": {
    "n": "SPDR Dow Jones International Real Estate",
    "type": "ETF_PASS_THROUGH",
-   "p": 26.07,
+   "p": 26.15,
    "d": 1.081,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:16.561Z",
+   "u": "2026-11-17T12:31:59.807Z",
    "per": 0.294,
    "last": "2026-09-21",
    "hist": [
@@ -39078,12 +39078,12 @@
   "SAP": {
    "n": "SAP",
    "type": "EQUITY_STANDARD",
-   "p": 234.9,
+   "p": 233.83,
    "d": 2.929,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:16.960Z",
+   "u": "2026-11-17T12:32:00.186Z",
    "per": 2.929,
    "last": "2026-05-05",
    "hist": [
@@ -39126,12 +39126,12 @@
   "SCHA": {
    "n": "Schwab US Small-Cap",
    "type": "ETF_PASS_THROUGH",
-   "p": 32.95,
+   "p": 32.44,
    "d": 0.369,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:17.327Z",
+   "u": "2026-11-17T12:32:00.547Z",
    "per": 0.101,
    "last": "2026-09-23",
    "hist": [
@@ -39174,12 +39174,12 @@
   "SCHC": {
    "n": "Schwab International Small-Cap Equity",
    "type": "ETF_PASS_THROUGH",
-   "p": 47.89,
+   "p": 47,
    "d": 1.682,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:17.697Z",
+   "u": "2026-11-17T12:32:00.908Z",
    "per": 0.108,
    "last": "2026-06-24",
    "hist": [
@@ -39222,12 +39222,12 @@
   "SCHE": {
    "n": "Schwab Emerging Markets Equity",
    "type": "ETF_PASS_THROUGH",
-   "p": 34.65,
+   "p": 33.72,
    "d": 0.952,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:18.068Z",
+   "u": "2026-11-17T12:32:01.265Z",
    "per": 0.044,
    "last": "2026-06-24",
    "hist": [
@@ -39270,12 +39270,12 @@
   "SCHH": {
    "n": "Schwab US REIT",
    "type": "ETF_PASS_THROUGH",
-   "p": 23.69,
+   "p": 23.65,
    "d": 0.678,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:18.437Z",
+   "u": "2026-11-17T12:32:01.629Z",
    "per": 0.173,
    "last": "2026-09-23",
    "hist": [
@@ -39318,12 +39318,12 @@
   "SCHI": {
    "n": "Schwab 5-10 Year Corporate Bond",
    "type": "ETF_PASS_THROUGH",
-   "p": 21.53,
+   "p": 21.54,
    "d": 1.139,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:18.801Z",
+   "u": "2026-11-17T12:32:02.004Z",
    "per": 0.099,
    "last": "2026-11-02",
    "hist": [
@@ -39366,12 +39366,12 @@
   "SCHJ": {
    "n": "Schwab 1-5 Year Corporate Bond",
    "type": "ETF_PASS_THROUGH",
-   "p": 24.11,
+   "p": 24.13,
    "d": 1.115,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:19.167Z",
+   "u": "2026-11-17T12:32:02.362Z",
    "per": 0.101,
    "last": "2026-11-02",
    "hist": [
@@ -39414,12 +39414,12 @@
   "SCHK": {
    "n": "Schwab 1000 Index",
    "type": "ETF_PASS_THROUGH",
-   "p": 36.24,
+   "p": 35.56,
    "d": 0.383,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:19.535Z",
+   "u": "2026-11-17T12:32:02.736Z",
    "per": 0.102,
    "last": "2026-09-23",
    "hist": [
@@ -39462,12 +39462,12 @@
   "SCHM": {
    "n": "Schwab US Mid-Cap",
    "type": "ETF_PASS_THROUGH",
-   "p": 35.15,
+   "p": 34.67,
    "d": 0.445,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:19.904Z",
+   "u": "2026-11-17T12:32:03.103Z",
    "per": 0.129,
    "last": "2026-09-23",
    "hist": [
@@ -39510,12 +39510,12 @@
   "SCHQ": {
    "n": "Schwab Long-Term US Treasury",
    "type": "ETF_PASS_THROUGH",
-   "p": 28.95,
+   "p": 28.97,
    "d": 1.473,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:20.270Z",
+   "u": "2026-11-17T12:32:03.473Z",
    "per": 0.144,
    "last": "2026-11-02",
    "hist": [
@@ -39558,12 +39558,12 @@
   "SCHR": {
    "n": "Schwab Intermediate-Term US Treasury",
    "type": "ETF_PASS_THROUGH",
-   "p": 23.8,
+   "p": 23.85,
    "d": 0.974,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:20.636Z",
+   "u": "2026-11-17T12:32:03.836Z",
    "per": 0.088,
    "last": "2026-11-02",
    "hist": [
@@ -39606,12 +39606,12 @@
   "SCHZ": {
    "n": "Schwab US Aggregate Bond",
    "type": "ETF_PASS_THROUGH",
-   "p": 22.22,
+   "p": 22.23,
    "d": 0.965,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:21.003Z",
+   "u": "2026-11-17T12:32:04.197Z",
    "per": 0.086,
    "last": "2026-11-02",
    "hist": [
@@ -39654,12 +39654,12 @@
   "SCZ": {
    "n": "iShares MSCI EAFE Small-Cap",
    "type": "ETF_PASS_THROUGH",
-   "p": 82.89,
+   "p": 81.6,
    "d": 2.667,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:21.369Z",
+   "u": "2026-11-17T12:32:04.559Z",
    "per": 1.17,
    "last": "2026-06-15",
    "hist": [
@@ -39702,12 +39702,12 @@
   "SDIV": {
    "n": "Global X SuperDividend",
    "type": "ETF_PASS_THROUGH",
-   "p": 21.82,
+   "p": 21.44,
    "d": 2.23,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:21.741Z",
+   "u": "2026-11-17T12:32:04.921Z",
    "per": 0.193,
    "last": "2026-11-04",
    "hist": [
@@ -39750,32 +39750,32 @@
   "SE": {
    "n": "Sea Limited",
    "type": "EQUITY_STANDARD",
-   "p": 75.36,
+   "p": 71.63,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:22.103Z",
+   "u": "2026-11-17T12:32:05.272Z",
    "s": "Q3"
   },
   "SG": {
    "n": "Sweetgreen",
    "type": "EQUITY_STANDARD",
-   "p": 12.26,
+   "p": 12.11,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:22.461Z",
+   "u": "2026-11-17T12:32:05.623Z",
    "s": "Q3"
   },
   "SGDM": {
    "n": "Sprott Gold Miners",
    "type": "ETF_PASS_THROUGH",
-   "p": 68.67,
+   "p": 66.46,
    "d": 0.727,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:22.857Z",
+   "u": "2026-11-17T12:32:05.981Z",
    "per": 0.727,
    "last": "2025-12-18",
    "hist": [
@@ -39818,22 +39818,22 @@
   "SGOL": {
    "n": "abrdn Physical Gold Shares",
    "type": "ETF_PASS_THROUGH",
-   "p": 36.91,
+   "p": 36.65,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:23.211Z",
+   "u": "2026-11-17T12:32:06.332Z",
    "s": "Q3"
   },
   "SH": {
    "n": "ProShares Short S&P500",
    "type": "ETF_PASS_THROUGH",
-   "p": 32.92,
+   "p": 33.55,
    "d": 1.272,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:23.578Z",
+   "u": "2026-11-17T12:32:06.693Z",
    "per": 0.296,
    "last": "2026-09-23",
    "hist": [
@@ -39875,22 +39875,22 @@
   "SHAK": {
    "n": "Shake Shack",
    "type": "EQUITY_STANDARD",
-   "p": 74.98,
+   "p": 73.15,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:23.935Z",
+   "u": "2026-11-17T12:32:07.051Z",
    "s": "Q3"
   },
   "SHM": {
    "n": "SPDR Nuveen Bloomberg Short Term Municipal Bond",
    "type": "ETF_PASS_THROUGH",
-   "p": 47.39,
+   "p": 47.36,
    "d": 1.284,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:24.311Z",
+   "u": "2026-11-17T12:32:07.414Z",
    "per": 0.108,
    "last": "2026-11-02",
    "hist": [
@@ -39933,22 +39933,22 @@
   "SHOP": {
    "n": "Shopify",
    "type": "EQUITY_STANDARD",
-   "p": 147.09,
+   "p": 147.81,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:24.667Z",
+   "u": "2026-11-17T12:32:07.810Z",
    "s": "Q3"
   },
   "SHV": {
    "n": "iShares Short Treasury Bond",
    "type": "ETF_PASS_THROUGH",
-   "p": 110.18,
+   "p": 110.19,
    "d": 4.02,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:25.054Z",
+   "u": "2026-11-17T12:32:08.190Z",
    "per": 0.386,
    "last": "2026-11-02",
    "hist": [
@@ -39991,12 +39991,12 @@
   "SHYG": {
    "n": "iShares 0-5 Year High Yield Corporate Bond",
    "type": "ETF_PASS_THROUGH",
-   "p": 40.98,
+   "p": 40.88,
    "d": 2.942,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:25.423Z",
+   "u": "2026-11-17T12:32:08.553Z",
    "per": 0.238,
    "last": "2026-11-02",
    "hist": [
@@ -40039,12 +40039,12 @@
   "SIL": {
    "n": "Global X Silver Miners",
    "type": "ETF_PASS_THROUGH",
-   "p": 73.76,
+   "p": 70.48,
    "d": 1.016,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:25.787Z",
+   "u": "2026-11-17T12:32:08.908Z",
    "per": 0.108,
    "last": "2026-06-29",
    "hist": [
@@ -40087,12 +40087,12 @@
   "SILJ": {
    "n": "Amplify Junior Silver Miners",
    "type": "ETF_PASS_THROUGH",
-   "p": 22.9,
+   "p": 21.79,
    "d": 0.554,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:32.261Z",
+   "u": "2026-11-17T12:32:15.211Z",
    "per": 0.554,
    "last": "2025-12-29",
    "hist": [
@@ -40135,22 +40135,22 @@
   "SIVR": {
    "n": "abrdn Physical Silver Shares",
    "type": "ETF_PASS_THROUGH",
-   "p": 46.4,
+   "p": 44.58,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:32.618Z",
+   "u": "2026-11-17T12:32:15.562Z",
    "s": "Q3"
   },
   "SJNK": {
    "n": "SPDR Bloomberg Short Term High Yield Bond",
    "type": "ETF_PASS_THROUGH",
-   "p": 24.01,
+   "p": 23.97,
    "d": 1.736,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:32.986Z",
+   "u": "2026-11-17T12:32:15.926Z",
    "per": 0.146,
    "last": "2026-11-02",
    "hist": [
@@ -40193,32 +40193,32 @@
   "SKYY": {
    "n": "First Trust Cloud Computing",
    "type": "ETF_PASS_THROUGH",
-   "p": 152.51,
+   "p": 149.3,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:33.347Z",
+   "u": "2026-11-17T12:32:16.283Z",
    "s": "Q3"
   },
   "SLV": {
    "n": "iShares Silver Trust",
    "type": "ETF_PASS_THROUGH",
-   "p": 44.13,
+   "p": 42.39,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:33.703Z",
+   "u": "2026-11-17T12:32:16.636Z",
    "s": "Q3"
   },
   "SMH": {
    "n": "VanEck Semiconductor",
    "type": "ETF_PASS_THROUGH",
-   "p": 486.75,
+   "p": 461.9,
    "d": 1.105,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:34.072Z",
+   "u": "2026-11-17T12:32:17.006Z",
    "per": 1.105,
    "last": "2025-12-22",
    "hist": [
@@ -40261,42 +40261,42 @@
   "SMR": {
    "n": "NuScale Power",
    "type": "EQUITY_STANDARD",
-   "p": 4.66,
+   "p": 4.27,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:34.430Z",
+   "u": "2026-11-17T12:32:17.358Z",
    "s": "Q3"
   },
   "SNAP": {
    "n": "Snap",
    "type": "EQUITY_STANDARD",
-   "p": 5.26,
+   "p": 5.09,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:34.783Z",
+   "u": "2026-11-17T12:32:17.705Z",
    "s": "Q3"
   },
   "SNOW": {
    "n": "Snowflake",
    "type": "EQUITY_STANDARD",
-   "p": 291,
+   "p": 280.54,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:35.146Z",
+   "u": "2026-11-17T12:32:18.056Z",
    "s": "Q3"
   },
   "SNSR": {
    "n": "Global X Internet of Things",
    "type": "ETF_PASS_THROUGH",
-   "p": 46.28,
+   "p": 44.92,
    "d": 0.23,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:35.508Z",
+   "u": "2026-11-17T12:32:18.429Z",
    "per": 0.08,
    "last": "2026-06-29",
    "hist": [
@@ -40339,12 +40339,12 @@
   "SOCL": {
    "n": "Global X Social Media",
    "type": "ETF_PASS_THROUGH",
-   "p": 40.72,
+   "p": 40.14,
    "d": 0.216,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:35.871Z",
+   "u": "2026-11-17T12:32:18.793Z",
    "per": 0.088,
    "last": "2026-06-29",
    "hist": [
@@ -40386,42 +40386,42 @@
   "SOFI": {
    "n": "SoFi Technologies",
    "type": "EQUITY_STANDARD",
-   "p": 15.42,
+   "p": 14.85,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:36.227Z",
+   "u": "2026-11-17T12:32:19.143Z",
    "s": "Q3"
   },
   "SONY": {
    "n": "Sony Group",
    "type": "EQUITY_STANDARD",
-   "p": 27.07,
+   "p": 27.04,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:53.564Z",
+   "u": "2026-11-17T12:32:36.816Z",
    "s": "Q3"
   },
   "SOUN": {
    "n": "SoundHound AI",
    "type": "EQUITY_STANDARD",
-   "p": 3.49,
+   "p": 3.23,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:53.922Z",
+   "u": "2026-11-17T12:32:37.170Z",
    "s": "Q3"
   },
   "SOXL": {
    "n": "Direxion Daily Semiconductor Bull 3X Shares",
    "type": "ETF_PASS_THROUGH",
-   "p": 58.32,
+   "p": 48.76,
    "d": 0.093,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:54.287Z",
+   "u": "2026-11-17T12:32:37.534Z",
    "per": 0.093,
    "last": "2026-09-22",
    "hist": [
@@ -40464,12 +40464,12 @@
   "SOXQ": {
    "n": "Invesco PHLX Semiconductor",
    "type": "ETF_PASS_THROUGH",
-   "p": 79.85,
+   "p": 75.68,
    "d": 0.294,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:54.650Z",
+   "u": "2026-11-17T12:32:37.898Z",
    "per": 0.084,
    "last": "2026-09-21",
    "hist": [
@@ -40512,12 +40512,12 @@
   "SOXS": {
    "n": "Direxion Daily Semiconductor Bear 3X Shares",
    "type": "ETF_PASS_THROUGH",
-   "p": 50.78,
+   "p": 59.18,
    "d": 11.886,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:55.015Z",
+   "u": "2026-11-17T12:32:38.261Z",
    "per": 0.436,
    "last": "2026-09-22",
    "hist": [
@@ -40559,12 +40559,12 @@
   "SOXX": {
    "n": "iShares Semiconductor",
    "type": "ETF_PASS_THROUGH",
-   "p": 149.3,
+   "p": 141.22,
    "d": 0.4173,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:55.384Z",
+   "u": "2026-11-17T12:32:38.630Z",
    "per": 0.1083,
    "last": "2026-09-15",
    "hist": [
@@ -40607,22 +40607,22 @@
   "SOYB": {
    "n": "Teucrium Soybean",
    "type": "ETF_PASS_THROUGH",
-   "p": 25.97,
+   "p": 25.77,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:55.741Z",
+   "u": "2026-11-17T12:32:38.980Z",
    "s": "Q3"
   },
   "SPAB": {
    "n": "SPDR Portfolio Aggregate Bond",
    "type": "ETF_PASS_THROUGH",
-   "p": 24.5,
+   "p": 24.52,
    "d": 1.05,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:56.112Z",
+   "u": "2026-11-17T12:32:39.346Z",
    "per": 0.093,
    "last": "2026-11-02",
    "hist": [
@@ -40665,22 +40665,22 @@
   "SPCX": {
    "n": "SpaceX",
    "type": "EQUITY_STANDARD",
-   "p": 139.11,
+   "p": 137.36,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:56.465Z",
+   "u": "2026-11-17T12:32:39.692Z",
    "s": "Q3"
   },
   "SPDW": {
    "n": "SPDR Portfolio Developed World ex-US",
    "type": "ETF_PASS_THROUGH",
-   "p": 49.37,
+   "p": 48.49,
    "d": 1.516,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:56.831Z",
+   "u": "2026-11-17T12:32:40.059Z",
    "per": 0.722,
    "last": "2026-06-22",
    "hist": [
@@ -40723,12 +40723,12 @@
   "SPEM": {
    "n": "SPDR Portfolio Emerging Markets",
    "type": "ETF_PASS_THROUGH",
-   "p": 49.11,
+   "p": 47.78,
    "d": 1.3,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:57.203Z",
+   "u": "2026-11-17T12:32:40.422Z",
    "per": 0.528,
    "last": "2026-06-22",
    "hist": [
@@ -40771,12 +40771,12 @@
   "AA": {
    "n": "Alcoa",
    "type": "EQUITY_STANDARD",
-   "p": 39.74,
+   "p": 38.66,
    "d": 0.1,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:03.688Z",
+   "u": "2026-11-17T12:32:48.131Z",
    "per": 0.1,
    "last": "2026-10-27",
    "hist": [
@@ -40817,12 +40817,12 @@
   "AEM": {
    "n": "Agnico Eagle Mines",
    "type": "EQUITY_STANDARD",
-   "p": 178.45,
+   "p": 170.81,
    "d": 1.75,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:04.067Z",
+   "u": "2026-11-17T12:32:48.539Z",
    "per": 0.45,
    "last": "2026-09-01",
    "hist": [
@@ -40865,22 +40865,22 @@
   "BJ": {
    "n": "BJ's Wholesale Club",
    "type": "EQUITY_STANDARD",
-   "p": 110.34,
+   "p": 111.88,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:04.427Z",
+   "u": "2026-11-17T12:32:48.891Z",
    "s": "Q3"
   },
   "CAG": {
    "n": "Conagra Brands",
    "type": "EQUITY_STANDARD",
-   "p": 14.73,
+   "p": 15.16,
    "d": 1.05,
    "q": true,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:04.808Z",
+   "u": "2026-11-17T12:32:49.266Z",
    "per": 0.175,
    "last": "2026-11-05",
    "hist": [
@@ -40923,12 +40923,12 @@
   "CDE": {
    "n": "Coeur Mining",
    "type": "EQUITY_STANDARD",
-   "p": 13.98,
+   "p": 13.12,
    "d": 0.02,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:05.183Z",
+   "u": "2026-11-17T12:32:49.644Z",
    "per": 0.02,
    "last": "2026-05-22",
    "hist": [
@@ -40969,12 +40969,12 @@
   "CUBE": {
    "n": "CubeSmart",
    "type": "EQUITY_STANDARD",
-   "p": 44.91,
+   "p": 44.85,
    "d": 2.12,
    "q": true,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:05.552Z",
+   "u": "2026-11-17T12:32:50.020Z",
    "per": 0.53,
    "last": "2026-10-01",
    "hist": [
@@ -41017,12 +41017,12 @@
   "DKS": {
    "n": "Dick's Sporting Goods",
    "type": "EQUITY_STANDARD",
-   "p": 149.7,
+   "p": 147.01,
    "d": 4.963,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:05.920Z",
+   "u": "2026-11-17T12:32:50.388Z",
    "per": 1.25,
    "last": "2026-09-11",
    "hist": [
@@ -41065,31 +41065,31 @@
   "DOCN": {
    "n": "DigitalOcean",
    "type": "EQUITY_STANDARD",
-   "p": 86.32,
+   "p": 78.88,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:06.275Z",
+   "u": "2026-11-17T12:32:50.749Z",
    "s": "Q3"
   },
   "FIVE": {
    "n": "Five Below",
    "type": "EQUITY_STANDARD",
-   "p": 246.68,
+   "p": 241.56,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:06.629Z",
+   "u": "2026-11-17T12:32:51.115Z",
    "s": "Q3"
   },
   "FSLY": {
    "n": "Fastly",
    "type": "EQUITY_STANDARD",
-   "p": 16.62,
+   "p": 15.86,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:06.987Z",
+   "u": "2026-11-17T12:32:51.466Z",
    "s": "Q3"
   },
   "GLPI": {
@@ -41100,7 +41100,7 @@
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:07.348Z",
+   "u": "2026-11-17T12:32:51.857Z",
    "per": 0.82,
    "last": "2026-09-11",
    "hist": [
@@ -41143,12 +41143,12 @@
   "H": {
    "n": "Hyatt Hotels",
    "type": "EQUITY_STANDARD",
-   "p": 187.7,
+   "p": 190.58,
    "d": 0.6,
    "q": true,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:07.714Z",
+   "u": "2026-11-17T12:32:52.211Z",
    "per": 0.15,
    "last": "2026-08-27",
    "hist": [
@@ -41190,12 +41190,12 @@
   "HEI": {
    "n": "HEICO",
    "type": "EQUITY_STANDARD",
-   "p": 340.18,
+   "p": 337.27,
    "d": 0.25,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:08.097Z",
+   "u": "2026-11-17T12:32:52.590Z",
    "per": 0.13,
    "last": "2026-07-01",
    "hist": [
@@ -41238,12 +41238,12 @@
   "HL": {
    "n": "Hecla Mining",
    "type": "EQUITY_STANDARD",
-   "p": 13.1,
+   "p": 12.22,
    "d": 0.016,
    "q": true,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:08.496Z",
+   "u": "2026-11-17T12:32:52.966Z",
    "per": 0.004,
    "last": "2026-08-26",
    "hist": [
@@ -41281,27 +41281,27 @@
     }
    ],
    "g3": -0.1702,
-   "g5": -0.1674
+   "g5": -0.1239
   },
   "HUBS": {
    "n": "HubSpot",
    "type": "EQUITY_STANDARD",
-   "p": 217.25,
+   "p": 231.98,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:08.849Z",
+   "u": "2026-11-17T12:32:53.321Z",
    "s": "Q3"
   },
   "KGC": {
    "n": "Kinross Gold",
    "type": "EQUITY_STANDARD",
-   "p": 20.76,
+   "p": 19.94,
    "d": 0.12,
    "q": true,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:09.213Z",
+   "u": "2026-11-17T12:32:53.683Z",
    "per": 0.04,
    "last": "2026-08-20",
    "hist": [
@@ -41344,12 +41344,12 @@
   "LAMR": {
    "n": "Lamar Advertising",
    "type": "EQUITY_STANDARD",
-   "p": 161.76,
+   "p": 161.89,
    "d": 6.65,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:09.590Z",
+   "u": "2026-11-17T12:32:54.047Z",
    "per": 1.65,
    "last": "2026-09-21",
    "hist": [
@@ -41392,12 +41392,12 @@
   "LOGI": {
    "n": "Logitech International",
    "type": "EQUITY_STANDARD",
-   "p": 102.33,
+   "p": 99.03,
    "d": 1.654,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:09.955Z",
+   "u": "2026-11-17T12:32:54.410Z",
    "per": 1.654,
    "last": "2026-09-21",
    "hist": [
@@ -41440,29 +41440,25 @@
   "OLLI": {
    "n": "Ollie's Bargain Outlet",
    "type": "EQUITY_STANDARD",
-   "p": 94.76,
+   "p": 97.32,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:10.310Z",
+   "u": "2026-11-17T12:32:54.758Z",
    "s": "Q3"
   },
   "PAAS": {
    "n": "Pan American Silver",
    "type": "EQUITY_STANDARD",
-   "p": 37.5,
-   "d": 0.544,
+   "p": 35.58,
+   "d": 0.729,
    "q": true,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:10.676Z",
-   "per": 0.184,
-   "last": "2026-08-24",
+   "u": "2026-11-17T12:32:55.130Z",
+   "per": 0.185,
+   "last": "2026-11-16",
    "hist": [
-    {
-     "d": "2024-05-17",
-     "a": 0.1
-    },
     {
      "d": "2024-08-19",
      "a": 0.1
@@ -41490,20 +41486,24 @@
     {
      "d": "2026-08-24",
      "a": 0.184
+    },
+    {
+     "d": "2026-11-16",
+     "a": 0.185
     }
    ],
-   "g3": 0.1079,
-   "g5": 0.1778
+   "g3": 0.1339,
+   "g5": 0.2488
   },
   "PBJ": {
    "n": "Invesco Food & Beverage ETF",
    "type": "ETF_PASS_THROUGH",
-   "p": 48.2,
+   "p": 47.97,
    "d": 0.586,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:11.052Z",
+   "u": "2026-11-17T12:32:55.490Z",
    "per": 0.176,
    "last": "2026-09-21",
    "hist": [
@@ -41546,12 +41546,12 @@
   "PEJ": {
    "n": "Invesco Leisure and Entertainment ETF",
    "type": "ETF_PASS_THROUGH",
-   "p": 67.24,
+   "p": 67.3,
    "d": 0.336,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:11.421Z",
+   "u": "2026-11-17T12:32:55.845Z",
    "per": 0.056,
    "last": "2026-09-21",
    "hist": [
@@ -41594,12 +41594,12 @@
   "REXR": {
    "n": "Rexford Industrial Realty",
    "type": "EQUITY_STANDARD",
-   "p": 37.55,
+   "p": 37.43,
    "d": 1.735,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:11.786Z",
+   "u": "2026-11-17T12:32:56.208Z",
    "per": 0.435,
    "last": "2026-09-30",
    "hist": [
@@ -41642,22 +41642,22 @@
   "RH": {
    "n": "RH",
    "type": "EQUITY_STANDARD",
-   "p": 129.39,
+   "p": 126.16,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:12.139Z",
+   "u": "2026-11-17T12:32:56.564Z",
    "s": "Q3"
   },
   "SCCO": {
    "n": "Southern Copper",
    "type": "EQUITY_STANDARD",
-   "p": 164.08,
+   "p": 153.87,
    "d": 3.0057,
    "q": true,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:27:12.539Z",
+   "u": "2026-11-17T12:32:56.941Z",
    "per": 1.0762,
    "last": "2026-08-11",
    "hist": [
@@ -60493,12 +60493,12 @@
   "WDFC": {
    "n": "WD-40",
    "type": "EQUITY_STANDARD",
-   "p": 223.4,
+   "p": 226.01,
    "d": 4.08,
    "q": true,
    "s": "Q1",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:36.607Z",
+   "u": "2026-11-17T12:32:19.516Z",
    "per": 1.02,
    "last": "2026-10-19",
    "hist": [
@@ -60541,22 +60541,22 @@
   "WEAT": {
    "n": "Teucrium Wheat",
    "type": "ETF_PASS_THROUGH",
-   "p": 21.86,
+   "p": 21.62,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:36.962Z",
+   "u": "2026-11-17T12:32:19.864Z",
    "s": "Q3"
   },
   "WEBL": {
    "n": "Direxion Daily Dow Jones Internet Bull 3X Shares",
    "type": "ETF_PASS_THROUGH",
-   "p": 22.1,
+   "p": 20.29,
    "d": 0.046,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:37.345Z",
+   "u": "2026-11-17T12:32:20.248Z",
    "per": 0.004,
    "last": "2026-09-22",
    "hist": [
@@ -60593,12 +60593,12 @@
   "WEBS": {
    "n": "Direxion Daily Dow Jones Internet Bear 3X Shares",
    "type": "ETF_PASS_THROUGH",
-   "p": 16.88,
+   "p": 18.31,
    "d": 0.582,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:37.708Z",
+   "u": "2026-11-17T12:32:20.618Z",
    "per": 0.188,
    "last": "2026-09-22",
    "hist": [
@@ -60640,12 +60640,12 @@
   "WEN": {
    "n": "Wendy's",
    "type": "EQUITY_STANDARD",
-   "p": 8.28,
+   "p": 8.47,
    "d": 0.49,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:38.086Z",
+   "u": "2026-11-17T12:32:20.988Z",
    "per": 0.07,
    "last": "2026-09-01",
    "hist": [
@@ -60688,22 +60688,22 @@
   "WEX": {
    "n": "WEX Inc.",
    "type": "EQUITY_STANDARD",
-   "p": 181.53,
+   "p": 184.83,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:38.439Z",
+   "u": "2026-11-17T12:32:21.340Z",
    "s": "Q3"
   },
   "WFRD": {
    "n": "Weatherford International",
    "type": "EQUITY_STANDARD",
-   "p": 86.45,
+   "p": 84.64,
    "d": 1.1,
    "q": true,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:38.796Z",
+   "u": "2026-11-17T12:32:21.705Z",
    "per": 0.275,
    "last": "2026-11-06",
    "hist": [
@@ -60744,12 +60744,12 @@
   "WH": {
    "n": "Wyndham Hotels & Resorts",
    "type": "EQUITY_STANDARD",
-   "p": 79.32,
+   "p": 80.36,
    "d": 1.7,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:39.187Z",
+   "u": "2026-11-17T12:32:22.074Z",
    "per": 0.43,
    "last": "2026-09-15",
    "hist": [
@@ -60792,12 +60792,12 @@
   "WING": {
    "n": "Wingstop",
    "type": "EQUITY_STANDARD",
-   "p": 158.86,
+   "p": 151.73,
    "d": 1.56,
    "q": true,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:39.553Z",
+   "u": "2026-11-17T12:32:22.429Z",
    "per": 0.33,
    "last": "2026-11-13",
    "hist": [
@@ -60834,18 +60834,18 @@
      "a": 0.33
     }
    ],
-   "g3": 0.3751,
+   "g3": 0.2391,
    "g5": -0.2253
   },
   "WIP": {
    "n": "SPDR FTSE International Government Inflation-Protected Bond ETF",
    "type": "ETF_PASS_THROUGH",
-   "p": 36.99,
+   "p": 36.82,
    "d": 2.468,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:39.923Z",
+   "u": "2026-11-17T12:32:22.791Z",
    "per": 0.222,
    "last": "2026-11-02",
    "hist": [
@@ -60888,22 +60888,22 @@
   "WIX": {
    "n": "Wix.com",
    "type": "EQUITY_STANDARD",
-   "p": 67.17,
+   "p": 66.45,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:40.276Z",
+   "u": "2026-11-17T12:32:23.144Z",
    "s": "Q3"
   },
   "WMG": {
    "n": "Warner Music Group",
    "type": "EQUITY_STANDARD",
-   "p": 32.3,
+   "p": 32.45,
    "d": 0.77,
    "q": true,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:40.673Z",
+   "u": "2026-11-17T12:32:23.507Z",
    "per": 0.2,
    "last": "2026-08-20",
    "hist": [
@@ -60946,12 +60946,12 @@
   "WOOD": {
    "n": "iShares Global Timber & Forestry ETF",
    "type": "ETF_PASS_THROUGH",
-   "p": 65.85,
+   "p": 65.21,
    "d": 1.684,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:41.040Z",
+   "u": "2026-11-17T12:32:23.893Z",
    "per": 0.629,
    "last": "2026-06-15",
    "hist": [
@@ -60994,12 +60994,12 @@
   "WOR": {
    "n": "Worthington Enterprises",
    "type": "EQUITY_STANDARD",
-   "p": 59.47,
+   "p": 58.63,
    "d": 0.77,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:41.440Z",
+   "u": "2026-11-17T12:32:24.769Z",
    "per": 0.2,
    "last": "2026-09-15",
    "hist": [
@@ -61042,12 +61042,12 @@
   "WPM": {
    "n": "Wheaton Precious Metals",
    "type": "EQUITY_STANDARD",
-   "p": 131.45,
+   "p": 126.68,
    "d": 0.585,
    "q": true,
    "s": "Q2",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:41.806Z",
+   "u": "2026-11-17T12:32:25.131Z",
    "per": 0.195,
    "last": "2026-08-20",
    "hist": [
@@ -61090,12 +61090,12 @@
   "XAR": {
    "n": "SPDR S&P Aerospace and Defense",
    "type": "ETF_PASS_THROUGH",
-   "p": 230.69,
+   "p": 222.52,
    "d": 0.419,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:42.219Z",
+   "u": "2026-11-17T12:32:25.491Z",
    "per": 0.129,
    "last": "2026-09-21",
    "hist": [
@@ -61138,12 +61138,12 @@
   "XBI": {
    "n": "SPDR S&P Biotech",
    "type": "ETF_PASS_THROUGH",
-   "p": 150.55,
+   "p": 145.88,
    "d": 0.545,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:42.588Z",
+   "u": "2026-11-17T12:32:25.854Z",
    "per": 0.138,
    "last": "2026-06-22",
    "hist": [
@@ -61186,12 +61186,12 @@
   "XDTE": {
    "n": "Roundhill S&P 500 0DTE Covered Call Strategy",
    "type": "ETF_PASS_THROUGH",
-   "p": 37.19,
+   "p": 36.57,
    "d": 11.016,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:42.946Z",
+   "u": "2026-11-17T12:32:26.212Z",
    "per": 0.128,
    "last": "2026-11-12",
    "hist": [
@@ -61232,12 +61232,12 @@
   "XES": {
    "n": "SPDR S&P Oil and Gas Equipment and Services",
    "type": "ETF_PASS_THROUGH",
-   "p": 102.48,
+   "p": 98.23,
    "d": 1.2,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:43.317Z",
+   "u": "2026-11-17T12:32:26.594Z",
    "per": 0.258,
    "last": "2026-09-21",
    "hist": [
@@ -61280,12 +61280,12 @@
   "XHB": {
    "n": "SPDR S&P Homebuilders",
    "type": "ETF_PASS_THROUGH",
-   "p": 102.07,
+   "p": 101.01,
    "d": 1.17,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:43.684Z",
+   "u": "2026-11-17T12:32:26.959Z",
    "per": 0.536,
    "last": "2026-09-21",
    "hist": [
@@ -61328,12 +61328,12 @@
   "XHE": {
    "n": "SPDR S&P Health Care Equipment",
    "type": "ETF_PASS_THROUGH",
-   "p": 94.87,
+   "p": 93.57,
    "d": 0.022,
    "q": true,
    "s": "A",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:44.052Z",
+   "u": "2026-11-17T12:32:27.321Z",
    "per": 0.022,
    "last": "2025-12-22",
    "hist": [
@@ -61375,12 +61375,12 @@
   "XHR": {
    "n": "Xenia Hotels & Resorts",
    "type": "EQUITY_STANDARD",
-   "p": 21.83,
+   "p": 22.15,
    "d": 0.56,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:44.414Z",
+   "u": "2026-11-17T12:32:27.676Z",
    "per": 0.14,
    "last": "2026-09-30",
    "hist": [
@@ -61422,12 +61422,12 @@
   "XHS": {
    "n": "SPDR S&P Health Care Services",
    "type": "ETF_PASS_THROUGH",
-   "p": 145.43,
+   "p": 146.58,
    "d": 0.213,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:44.776Z",
+   "u": "2026-11-17T12:32:28.050Z",
    "per": 0.011,
    "last": "2026-09-21",
    "hist": [
@@ -61470,22 +61470,22 @@
   "XITK": {
    "n": "SPDR FactSet Innovative Technology",
    "type": "ETF_PASS_THROUGH",
-   "p": 183.49,
+   "p": 178.81,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:45.139Z",
+   "u": "2026-11-17T12:32:28.405Z",
    "s": "Q3"
   },
   "XLG": {
    "n": "Invesco S&P 500 Top 50",
    "type": "ETF_PASS_THROUGH",
-   "p": 61.1,
+   "p": 59.67,
    "d": 0.397,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:45.507Z",
+   "u": "2026-11-17T12:32:28.778Z",
    "per": 0.089,
    "last": "2026-09-21",
    "hist": [
@@ -61528,12 +61528,12 @@
   "XME": {
    "n": "SPDR S&P Metals and Mining",
    "type": "ETF_PASS_THROUGH",
-   "p": 93.74,
+   "p": 89.91,
    "d": 0.345,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:45.874Z",
+   "u": "2026-11-17T12:32:29.140Z",
    "per": 0.073,
    "last": "2026-09-21",
    "hist": [
@@ -61576,12 +61576,12 @@
   "XNTK": {
    "n": "SPDR NYSE Technology",
    "type": "ETF_PASS_THROUGH",
-   "p": 324.18,
+   "p": 311.95,
    "d": 0.525,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:46.243Z",
+   "u": "2026-11-17T12:32:29.523Z",
    "per": 0.076,
    "last": "2026-09-21",
    "hist": [
@@ -61624,12 +61624,12 @@
   "XOP": {
    "n": "SPDR S&P Oil and Gas Exploration and Production",
    "type": "ETF_PASS_THROUGH",
-   "p": 184.8,
+   "p": 179.98,
    "d": 3.124,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:46.612Z",
+   "u": "2026-11-17T12:32:29.935Z",
    "per": 0.757,
    "last": "2026-09-21",
    "hist": [
@@ -61672,22 +61672,22 @@
   "XPEV": {
    "n": "XPeng",
    "type": "EQUITY_STANDARD",
-   "p": 9.37,
+   "p": 9.67,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:46.979Z",
+   "u": "2026-11-17T12:32:30.287Z",
    "s": "Q3"
   },
   "XPH": {
    "n": "SPDR S&P Pharmaceuticals",
    "type": "ETF_PASS_THROUGH",
-   "p": 66.83,
+   "p": 65.36,
    "d": 0.275,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:47.345Z",
+   "u": "2026-11-17T12:32:30.651Z",
    "per": 0.042,
    "last": "2026-09-21",
    "hist": [
@@ -61730,22 +61730,22 @@
   "XPRO": {
    "n": "Expro Group Holdings",
    "type": "EQUITY_STANDARD",
-   "p": 13.51,
+   "p": 12.75,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:47.705Z",
+   "u": "2026-11-17T12:32:31.034Z",
    "s": "Q3"
   },
   "XRT": {
    "n": "SPDR S&P Retail",
    "type": "ETF_PASS_THROUGH",
-   "p": 91.05,
+   "p": 89.59,
    "d": 0.744,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:48.074Z",
+   "u": "2026-11-17T12:32:31.399Z",
    "per": 0.173,
    "last": "2026-09-21",
    "hist": [
@@ -61788,12 +61788,12 @@
   "XSD": {
    "n": "SPDR S&P Semiconductor",
    "type": "ETF_PASS_THROUGH",
-   "p": 441.38,
+   "p": 418.63,
    "d": 0.803,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:48.445Z",
+   "u": "2026-11-17T12:32:31.762Z",
    "per": 0.184,
    "last": "2026-09-21",
    "hist": [
@@ -61836,22 +61836,22 @@
   "XSW": {
    "n": "SPDR S&P Software and Services",
    "type": "ETF_PASS_THROUGH",
-   "p": 205.97,
+   "p": 203.82,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:48.807Z",
+   "u": "2026-11-17T12:32:32.123Z",
    "s": "Q3"
   },
   "XT": {
    "n": "iShares Exponential Technologies ETF",
    "type": "ETF_PASS_THROUGH",
-   "p": 82.33,
+   "p": 80.46,
    "d": 5.69,
    "q": true,
    "s": "S",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:49.171Z",
+   "u": "2026-11-17T12:32:32.486Z",
    "per": 0.358,
    "last": "2026-06-15",
    "hist": [
@@ -61894,12 +61894,12 @@
   "XTL": {
    "n": "SPDR S&P Telecom",
    "type": "ETF_PASS_THROUGH",
-   "p": 183.57,
+   "p": 178.8,
    "d": 1.931,
    "q": true,
    "s": "Q3",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:49.537Z",
+   "u": "2026-11-17T12:32:32.846Z",
    "per": 0.304,
    "last": "2026-09-21",
    "hist": [
@@ -61942,42 +61942,42 @@
   "YELP": {
    "n": "Yelp",
    "type": "EQUITY_STANDARD",
-   "p": 20.34,
+   "p": 20.56,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:49.889Z",
+   "u": "2026-11-17T12:32:33.196Z",
    "s": "Q3"
   },
   "YETI": {
    "n": "YETI Holdings",
    "type": "EQUITY_STANDARD",
-   "p": 39.42,
+   "p": 38.53,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:50.248Z",
+   "u": "2026-11-17T12:32:33.553Z",
    "s": "Q3"
   },
   "YEXT": {
    "n": "Yext",
    "type": "EQUITY_STANDARD",
-   "p": 7.67,
+   "p": 7.71,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:50.605Z",
+   "u": "2026-11-17T12:32:33.905Z",
    "s": "Q3"
   },
   "YMAG": {
    "n": "YieldMax Magnificent 7 Fund of Option Income ETFs",
    "type": "ETF_PASS_THROUGH",
-   "p": 10.38,
+   "p": 10.17,
    "d": 4.943,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:50.964Z",
+   "u": "2026-11-17T12:32:34.260Z",
    "per": 0.073,
    "last": "2026-11-12",
    "hist": [
@@ -62018,12 +62018,12 @@
   "YMAX": {
    "n": "YieldMax Universe Fund of Option Income ETFs",
    "type": "ETF_PASS_THROUGH",
-   "p": 6.59,
+   "p": 6.34,
    "d": 4.055,
    "q": true,
    "s": "M",
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:51.323Z",
+   "u": "2026-11-17T12:32:34.611Z",
    "per": 0.027,
    "last": "2026-11-12",
    "hist": [
@@ -62064,51 +62064,51 @@
   "Z": {
    "n": "Zillow Group (Class C)",
    "type": "EQUITY_STANDARD",
-   "p": 29.8,
+   "p": 29.76,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:51.680Z",
+   "u": "2026-11-17T12:32:34.959Z",
    "s": "Q3"
   },
   "ZETA": {
    "n": "Zeta Global",
    "type": "EQUITY_STANDARD",
-   "p": 36.65,
+   "p": 35.85,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:52.041Z",
+   "u": "2026-11-17T12:32:35.317Z",
    "s": "Q3"
   },
   "ZG": {
    "n": "Zillow Group (Class A)",
    "type": "EQUITY_STANDARD",
-   "p": 30.11,
+   "p": 30.05,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:52.456Z",
+   "u": "2026-11-17T12:32:35.702Z",
    "s": "Q3"
   },
   "ZM": {
    "n": "Zoom Communications",
    "type": "EQUITY_STANDARD",
-   "p": 99.8,
+   "p": 96.18,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:52.815Z",
+   "u": "2026-11-17T12:32:36.059Z",
    "s": "Q3"
   },
   "ZS": {
    "n": "Zscaler",
    "type": "EQUITY_STANDARD",
-   "p": 192.47,
+   "p": 190.84,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T23:26:53.175Z",
+   "u": "2026-11-17T12:32:36.426Z",
    "s": "Q3"
   },
   "ARHS": {
@@ -65117,21 +65117,23 @@
   "MSGE": {
    "n": "Madison Square Garden Entertainment",
    "type": "EQUITY_STANDARD",
-   "p": 79.49,
+   "p": 79.91,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T17:21:58.117Z",
+   "u": "2026-11-17T12:31:16.627Z",
    "s": "Q3"
   },
   "MTN": {
    "n": "Vail Resorts",
    "type": "EQUITY_STANDARD",
-   "p": 152.61,
+   "p": 155.68,
    "d": 8.88,
    "q": true,
-   "per": 2.22,
    "s": "Q1",
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:31:17.001Z",
+   "per": 2.22,
    "last": "2026-10-08",
    "hist": [
     {
@@ -65168,18 +65170,18 @@
     }
    ],
    "g3": 0.0315,
-   "g5": 0.5878,
-   "src": "Yahoo Finance",
-   "u": "2026-11-14T17:21:58.512Z"
+   "g5": 0.5878
   },
   "NXST": {
    "n": "Nexstar Media Group",
    "type": "EQUITY_STANDARD",
-   "p": 207.94,
+   "p": 208.51,
    "d": 7.44,
    "q": true,
-   "per": 1.86,
    "s": "Q2",
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:31:17.368Z",
+   "per": 1.86,
    "last": "2026-11-13",
    "hist": [
     {
@@ -65216,18 +65218,18 @@
     }
    ],
    "g3": 0.1127,
-   "g5": 0.2159,
-   "src": "Yahoo Finance",
-   "u": "2026-11-14T17:21:58.902Z"
+   "g5": 0.2159
   },
   "PGJ": {
    "n": "Invesco Golden Dragon China ETF",
    "type": "ETF_PASS_THROUGH",
-   "p": 21.3,
+   "p": 21.09,
    "d": 0.431,
    "q": true,
-   "per": 0.148,
    "s": "Q3",
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:31:17.731Z",
+   "per": 0.148,
    "last": "2026-09-21",
    "hist": [
     {
@@ -65264,28 +65266,28 @@
     }
    ],
    "g3": 0.0844,
-   "g5": 0.3936,
-   "src": "Yahoo Finance",
-   "u": "2026-11-14T17:21:59.291Z"
+   "g5": 0.3936
   },
   "PTON": {
    "n": "Peloton Interactive",
    "type": "EQUITY_STANDARD",
-   "p": 5.7,
+   "p": 5.33,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T17:22:00.153Z",
+   "u": "2026-11-17T12:31:18.084Z",
    "s": "Q3"
   },
   "RRR": {
    "n": "Red Rock Resorts",
    "type": "EQUITY_STANDARD",
-   "p": 48.86,
+   "p": 48.28,
    "d": 2.04,
    "q": true,
-   "per": 0.26,
    "s": "Q3",
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:31:18.441Z",
+   "per": 0.26,
    "last": "2026-09-15",
    "hist": [
     {
@@ -65321,18 +65323,18 @@
      "a": 0.26
     }
    ],
-   "g3": 0.0066,
-   "src": "Yahoo Finance",
-   "u": "2026-11-14T17:22:00.538Z"
+   "g3": 0.0066
   },
   "SBLK": {
    "n": "Star Bulk Carriers",
    "type": "ADR_VARIABLE",
-   "p": 28.02,
+   "p": 27.4,
    "d": 1.88,
    "q": true,
-   "per": 0.9,
    "s": "Q2",
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:31:18.803Z",
+   "per": 0.9,
    "last": "2026-08-21",
    "hist": [
     {
@@ -65369,18 +65371,18 @@
     }
    ],
    "g3": -0.0966,
-   "g5": 0.1346,
-   "src": "Yahoo Finance",
-   "u": "2026-11-14T17:22:00.925Z"
+   "g5": 0.1346
   },
   "SGHC": {
    "n": "Super Group",
    "type": "ADR_VARIABLE",
-   "p": 11.64,
+   "p": 11.15,
    "d": 0.19,
    "q": true,
-   "per": 0.05,
    "s": "Q3",
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:31:19.191Z",
+   "per": 0.05,
    "last": "2026-09-22",
    "hist": [
     {
@@ -65415,18 +65417,18 @@
      "d": "2026-09-22",
      "a": 0.05
     }
-   ],
-   "src": "Yahoo Finance",
-   "u": "2026-11-14T17:22:01.307Z"
+   ]
   },
   "SIRI": {
    "n": "Sirius XM Holdings",
    "type": "EQUITY_STANDARD",
-   "p": 31.85,
+   "p": 31.98,
    "d": 1.08,
    "q": true,
-   "per": 0.27,
    "s": "Q2",
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:31:19.558Z",
+   "per": 0.27,
    "last": "2026-11-06",
    "hist": [
     {
@@ -65463,18 +65465,18 @@
     }
    ],
    "g3": 0.0294,
-   "g5": 0.1002,
-   "src": "Yahoo Finance",
-   "u": "2026-11-14T17:22:01.709Z"
+   "g5": 0.1002
   },
   "SMIN": {
    "n": "iShares MSCI India Small-Cap ETF",
    "type": "ETF_PASS_THROUGH",
-   "p": 71.13,
+   "p": 70.42,
    "d": 1.407,
    "q": true,
-   "per": 1.407,
    "s": "A",
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:31:19.920Z",
+   "per": 1.407,
    "last": "2025-12-16",
    "hist": [
     {
@@ -65511,28 +65513,28 @@
     }
    ],
    "g3": 2.105,
-   "g5": 0.9492,
-   "src": "Yahoo Finance",
-   "u": "2026-11-14T17:22:02.097Z"
+   "g5": 0.9492
   },
   "VIK": {
    "n": "Viking Holdings",
    "type": "ADR_VARIABLE",
-   "p": 89.87,
+   "p": 90.28,
    "d": 0,
    "q": true,
    "src": "Yahoo Finance",
-   "u": "2026-11-14T17:22:02.535Z",
+   "u": "2026-11-17T12:31:20.273Z",
    "s": "Q3"
   },
   "XTN": {
    "n": "SPDR S&P Transportation ETF",
    "type": "ETF_PASS_THROUGH",
-   "p": 102.42,
+   "p": 102.72,
    "d": 0.747,
    "q": true,
-   "per": 0.187,
    "s": "Q3",
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:31:20.631Z",
+   "per": 0.187,
    "last": "2026-09-21",
    "hist": [
     {
@@ -65569,18 +65571,18 @@
     }
    ],
    "g3": 0.0975,
-   "g5": -0.0655,
-   "src": "Yahoo Finance",
-   "u": "2026-11-14T17:22:02.919Z"
+   "g5": -0.0655
   },
   "ZIM": {
    "n": "ZIM Integrated Shipping Services",
    "type": "ADR_VARIABLE",
-   "p": 29.34,
+   "p": 29.11,
    "d": 0.88,
    "q": true,
-   "per": 0.88,
    "s": "A",
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:31:20.988Z",
+   "per": 0.88,
    "last": "2026-03-20",
    "hist": [
     {
@@ -65617,9 +65619,7 @@
     }
    ],
    "g3": -0.5451,
-   "g5": -0.1514,
-   "src": "Yahoo Finance",
-   "u": "2026-11-14T17:22:03.303Z"
+   "g5": -0.1514
   },
   "AAON": {
    "n": "AAON",
@@ -69539,6 +69539,832 @@
    "g5": -0.1755,
    "src": "Yahoo Finance",
    "u": "2026-11-17T02:40:10.520Z"
+  },
+  "AAL": {
+   "n": "American Airlines Group",
+   "type": "EQUITY_STANDARD",
+   "p": 13.24,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:32:57.308Z",
+   "s": "Q3"
+  },
+  "ACAD": {
+   "n": "ACADIA Pharmaceuticals",
+   "type": "EQUITY_STANDARD",
+   "p": 18.67,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:32:57.663Z",
+   "s": "Q3"
+  },
+  "ACHC": {
+   "n": "Acadia Healthcare",
+   "type": "EQUITY_STANDARD",
+   "p": 38.7,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:32:58.011Z",
+   "s": "Q3"
+  },
+  "ALK": {
+   "n": "Alaska Air Group",
+   "type": "EQUITY_STANDARD",
+   "p": 38.9,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:32:58.382Z",
+   "s": "Q3"
+  },
+  "CAR": {
+   "n": "Avis Budget Group",
+   "type": "EQUITY_STANDARD",
+   "p": 122.86,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:32:58.751Z",
+   "s": "Q3"
+  },
+  "CORT": {
+   "n": "Corcept Therapeutics",
+   "type": "EQUITY_STANDARD",
+   "p": 69.22,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:32:59.535Z",
+   "s": "Q3"
+  },
+  "CVI": {
+   "n": "CVR Energy",
+   "type": "EQUITY_STANDARD",
+   "p": 39.12,
+   "d": 0.3,
+   "q": true,
+   "per": 0.1,
+   "s": "Q2",
+   "last": "2026-11-16",
+   "hist": [
+    {
+     "d": "2023-08-11",
+     "a": 1.5
+    },
+    {
+     "d": "2023-11-10",
+     "a": 2
+    },
+    {
+     "d": "2024-03-01",
+     "a": 0.5
+    },
+    {
+     "d": "2024-05-10",
+     "a": 0.5
+    },
+    {
+     "d": "2024-08-12",
+     "a": 0.5
+    },
+    {
+     "d": "2026-05-11",
+     "a": 0.1
+    },
+    {
+     "d": "2026-08-10",
+     "a": 0.1
+    },
+    {
+     "d": "2026-11-16",
+     "a": 0.1
+    }
+   ],
+   "g3": -0.5945,
+   "g5": -0.3402,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:32:59.888Z"
+  },
+  "DHT": {
+   "n": "DHT Holdings",
+   "type": "ADR_VARIABLE",
+   "p": 21.49,
+   "d": 2.27,
+   "q": true,
+   "per": 1.22,
+   "s": "Q2",
+   "last": "2026-08-17",
+   "hist": [
+    {
+     "d": "2024-05-23",
+     "a": 0.29
+    },
+    {
+     "d": "2024-08-23",
+     "a": 0.27
+    },
+    {
+     "d": "2024-11-22",
+     "a": 0.22
+    },
+    {
+     "d": "2025-02-18",
+     "a": 0.17
+    },
+    {
+     "d": "2025-05-21",
+     "a": 0.15
+    },
+    {
+     "d": "2026-02-19",
+     "a": 0.41
+    },
+    {
+     "d": "2026-05-21",
+     "a": 0.64
+    },
+    {
+     "d": "2026-08-17",
+     "a": 1.22
+    }
+   ],
+   "g3": 0.3142,
+   "g5": 0.7718,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:00.251Z"
+  },
+  "DINO": {
+   "n": "HF Sinclair",
+   "type": "EQUITY_STANDARD",
+   "p": 99.05,
+   "d": 0.525,
+   "q": true,
+   "per": 0.525,
+   "s": "A",
+   "last": "2026-11-12",
+   "hist": [
+    {
+     "d": "2021-02-26",
+     "a": 0.35
+    },
+    {
+     "d": "2022-05-20",
+     "a": 0.4
+    },
+    {
+     "d": "2022-08-17",
+     "a": 0.4
+    },
+    {
+     "d": "2022-11-18",
+     "a": 0.4
+    },
+    {
+     "d": "2023-03-06",
+     "a": 0.45
+    },
+    {
+     "d": "2023-05-17",
+     "a": 0.45
+    },
+    {
+     "d": "2023-08-16",
+     "a": 0.45
+    },
+    {
+     "d": "2026-11-12",
+     "a": 0.525
+    }
+   ],
+   "g3": -0.3306,
+   "g5": -0.0559,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:00.634Z"
+  },
+  "DK": {
+   "n": "Delek US Holdings",
+   "type": "EQUITY_STANDARD",
+   "p": 67.82,
+   "d": 1.065,
+   "q": true,
+   "per": 0.3,
+   "s": "Q2",
+   "last": "2026-11-10",
+   "hist": [
+    {
+     "d": "2025-03-03",
+     "a": 0.255
+    },
+    {
+     "d": "2025-05-12",
+     "a": 0.255
+    },
+    {
+     "d": "2025-08-11",
+     "a": 0.255
+    },
+    {
+     "d": "2025-11-10",
+     "a": 0.255
+    },
+    {
+     "d": "2026-03-02",
+     "a": 0.255
+    },
+    {
+     "d": "2026-05-01",
+     "a": 0.255
+    },
+    {
+     "d": "2026-08-03",
+     "a": 0.255
+    },
+    {
+     "d": "2026-11-10",
+     "a": 0.3
+    }
+   ],
+   "g3": 0.0481,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:01.000Z"
+  },
+  "FRO": {
+   "n": "Frontline",
+   "type": "ADR_VARIABLE",
+   "p": 45.44,
+   "d": 5.99,
+   "q": true,
+   "per": 3.41,
+   "s": "Q3",
+   "last": "2026-09-18",
+   "hist": [
+    {
+     "d": "2024-06-14",
+     "a": 0.62
+    },
+    {
+     "d": "2024-09-13",
+     "a": 0.62
+    },
+    {
+     "d": "2024-12-11",
+     "a": 0.34
+    },
+    {
+     "d": "2025-03-14",
+     "a": 0.2
+    },
+    {
+     "d": "2025-06-12",
+     "a": 0.18
+    },
+    {
+     "d": "2026-03-12",
+     "a": 1.03
+    },
+    {
+     "d": "2026-06-12",
+     "a": 1.55
+    },
+    {
+     "d": "2026-09-18",
+     "a": 3.41
+    }
+   ],
+   "g3": 0.3259,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:01.370Z"
+  },
+  "INSW": {
+   "n": "International Seaways",
+   "type": "EQUITY_STANDARD",
+   "p": 102.12,
+   "d": 12.61,
+   "q": true,
+   "per": 5.05,
+   "s": "Q3",
+   "last": "2026-09-10",
+   "hist": [
+    {
+     "d": "2024-12-13",
+     "a": 1.2
+    },
+    {
+     "d": "2025-03-14",
+     "a": 0.7
+    },
+    {
+     "d": "2025-06-12",
+     "a": 0.6
+    },
+    {
+     "d": "2025-09-10",
+     "a": 0.77
+    },
+    {
+     "d": "2025-12-09",
+     "a": 0.86
+    },
+    {
+     "d": "2026-03-20",
+     "a": 2.15
+    },
+    {
+     "d": "2026-06-12",
+     "a": 4.55
+    },
+    {
+     "d": "2026-09-10",
+     "a": 5.05
+    }
+   ],
+   "g3": 0.2697,
+   "g5": 0.5611,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:02.101Z"
+  },
+  "JBLU": {
+   "n": "JetBlue Airways",
+   "type": "EQUITY_STANDARD",
+   "p": 3.72,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:02.459Z",
+   "s": "Q3"
+  },
+  "KEX": {
+   "n": "Kirby",
+   "type": "EQUITY_STANDARD",
+   "p": 127.86,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:03.195Z",
+   "s": "Q3"
+  },
+  "KNTK": {
+   "n": "Kinetik Holdings",
+   "type": "EQUITY_STANDARD",
+   "p": 54.97,
+   "d": 3.24,
+   "q": true,
+   "per": 0.81,
+   "s": "Q1",
+   "last": "2026-10-23",
+   "hist": [
+    {
+     "d": "2025-02-03",
+     "a": 0.78
+    },
+    {
+     "d": "2025-04-25",
+     "a": 0.78
+    },
+    {
+     "d": "2025-07-25",
+     "a": 0.78
+    },
+    {
+     "d": "2025-10-27",
+     "a": 0.78
+    },
+    {
+     "d": "2026-02-06",
+     "a": 0.81
+    },
+    {
+     "d": "2026-04-24",
+     "a": 0.81
+    },
+    {
+     "d": "2026-07-24",
+     "a": 0.81
+    },
+    {
+     "d": "2026-10-23",
+     "a": 0.81
+    }
+   ],
+   "g3": 0.026,
+   "g5": 0.0757,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:03.566Z"
+  },
+  "LNG": {
+   "n": "Cheniere Energy",
+   "type": "EQUITY_STANDARD",
+   "p": 305.2,
+   "d": 2.29,
+   "q": true,
+   "per": 0.625,
+   "s": "Q2",
+   "last": "2026-11-09",
+   "hist": [
+    {
+     "d": "2025-02-07",
+     "a": 0.5
+    },
+    {
+     "d": "2025-05-09",
+     "a": 0.5
+    },
+    {
+     "d": "2025-08-08",
+     "a": 0.5
+    },
+    {
+     "d": "2025-11-07",
+     "a": 0.555
+    },
+    {
+     "d": "2026-02-06",
+     "a": 0.555
+    },
+    {
+     "d": "2026-05-11",
+     "a": 0.555
+    },
+    {
+     "d": "2026-08-10",
+     "a": 0.555
+    },
+    {
+     "d": "2026-11-09",
+     "a": 0.625
+    }
+   ],
+   "g3": 0.1223,
+   "g5": 0.4732,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:03.938Z"
+  },
+  "MATX": {
+   "n": "Matson",
+   "type": "EQUITY_STANDARD",
+   "p": 209.95,
+   "d": 1.48,
+   "q": true,
+   "per": 0.38,
+   "s": "Q2",
+   "last": "2026-11-05",
+   "hist": [
+    {
+     "d": "2025-02-06",
+     "a": 0.34
+    },
+    {
+     "d": "2025-05-08",
+     "a": 0.34
+    },
+    {
+     "d": "2025-08-07",
+     "a": 0.36
+    },
+    {
+     "d": "2025-11-06",
+     "a": 0.36
+    },
+    {
+     "d": "2026-02-05",
+     "a": 0.36
+    },
+    {
+     "d": "2026-05-07",
+     "a": 0.36
+    },
+    {
+     "d": "2026-08-06",
+     "a": 0.38
+    },
+    {
+     "d": "2026-11-05",
+     "a": 0.38
+    }
+   ],
+   "g3": 0.0551,
+   "g5": 0.069,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:04.313Z"
+  },
+  "OGN": {
+   "n": "Organon",
+   "type": "EQUITY_STANDARD",
+   "p": 13.9,
+   "d": 0.1,
+   "q": true,
+   "per": 0.02,
+   "s": "Q2",
+   "last": "2026-11-09",
+   "hist": [
+    {
+     "d": "2025-02-24",
+     "a": 0.28
+    },
+    {
+     "d": "2025-05-12",
+     "a": 0.02
+    },
+    {
+     "d": "2025-08-15",
+     "a": 0.02
+    },
+    {
+     "d": "2025-11-20",
+     "a": 0.02
+    },
+    {
+     "d": "2026-02-23",
+     "a": 0.02
+    },
+    {
+     "d": "2026-05-11",
+     "a": 0.02
+    },
+    {
+     "d": "2026-08-14",
+     "a": 0.02
+    },
+    {
+     "d": "2026-11-09",
+     "a": 0.02
+    }
+   ],
+   "g3": -0.553,
+   "g5": -0.1861,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:04.667Z"
+  },
+  "PBF": {
+   "n": "PBF Energy",
+   "type": "EQUITY_STANDARD",
+   "p": 68.63,
+   "d": 1.15,
+   "q": true,
+   "per": 0.325,
+   "s": "Q2",
+   "last": "2026-11-12",
+   "hist": [
+    {
+     "d": "2025-02-27",
+     "a": 0.275
+    },
+    {
+     "d": "2025-05-15",
+     "a": 0.275
+    },
+    {
+     "d": "2025-08-14",
+     "a": 0.275
+    },
+    {
+     "d": "2025-11-14",
+     "a": 0.275
+    },
+    {
+     "d": "2026-02-25",
+     "a": 0.275
+    },
+    {
+     "d": "2026-05-14",
+     "a": 0.275
+    },
+    {
+     "d": "2026-08-14",
+     "a": 0.275
+    },
+    {
+     "d": "2026-11-12",
+     "a": 0.325
+    }
+   ],
+   "g3": 0.106,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:05.026Z"
+  },
+  "PRGO": {
+   "n": "Perrigo",
+   "type": "EQUITY_STANDARD",
+   "p": 16.18,
+   "d": 0.87,
+   "q": true,
+   "per": 0.29,
+   "s": "Q2",
+   "last": "2026-08-28",
+   "hist": [
+    {
+     "d": "2024-08-30",
+     "a": 0.276
+    },
+    {
+     "d": "2024-11-29",
+     "a": 0.276
+    },
+    {
+     "d": "2025-03-07",
+     "a": 0.29
+    },
+    {
+     "d": "2025-05-30",
+     "a": 0.29
+    },
+    {
+     "d": "2025-08-29",
+     "a": 0.29
+    },
+    {
+     "d": "2026-03-02",
+     "a": 0.29
+    },
+    {
+     "d": "2026-05-29",
+     "a": 0.29
+    },
+    {
+     "d": "2026-08-28",
+     "a": 0.29
+    }
+   ],
+   "g3": -0.0693,
+   "g5": -0.0164,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:05.391Z"
+  },
+  "PTCT": {
+   "n": "PTC Therapeutics",
+   "type": "EQUITY_STANDARD",
+   "p": 60.97,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:06.131Z",
+   "s": "Q3"
+  },
+  "RDNT": {
+   "n": "RadNet",
+   "type": "EQUITY_STANDARD",
+   "p": 76.89,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:06.510Z",
+   "s": "Q3"
+  },
+  "SKYW": {
+   "n": "SkyWest",
+   "type": "EQUITY_STANDARD",
+   "p": 82.9,
+   "d": 0,
+   "q": true,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:06.881Z",
+   "s": "Q3"
+  },
+  "STNG": {
+   "n": "Scorpio Tankers",
+   "type": "ADR_VARIABLE",
+   "p": 81.85,
+   "d": 2.1,
+   "q": true,
+   "per": 0.75,
+   "s": "Q2",
+   "last": "2026-11-13",
+   "hist": [
+    {
+     "d": "2024-11-22",
+     "a": 0.4
+    },
+    {
+     "d": "2025-03-07",
+     "a": 0.4
+    },
+    {
+     "d": "2025-05-30",
+     "a": 0.4
+    },
+    {
+     "d": "2025-08-13",
+     "a": 0.4
+    },
+    {
+     "d": "2026-03-06",
+     "a": 0.45
+    },
+    {
+     "d": "2026-05-29",
+     "a": 0.45
+    },
+    {
+     "d": "2026-08-17",
+     "a": 0.45
+    },
+    {
+     "d": "2026-11-13",
+     "a": 0.75
+    }
+   ],
+   "g3": 0.4422,
+   "g5": 0.3933,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:07.260Z"
+  },
+  "TNK": {
+   "n": "Teekay Tankers",
+   "type": "ADR_VARIABLE",
+   "p": 87.62,
+   "d": 1.75,
+   "q": true,
+   "per": 0.25,
+   "s": "Q2",
+   "last": "2026-08-10",
+   "hist": [
+    {
+     "d": "2024-08-12",
+     "a": 0.25
+    },
+    {
+     "d": "2024-11-12",
+     "a": 0.25
+    },
+    {
+     "d": "2025-03-03",
+     "a": 0.25
+    },
+    {
+     "d": "2025-05-19",
+     "a": 1.25
+    },
+    {
+     "d": "2025-08-11",
+     "a": 0.25
+    },
+    {
+     "d": "2026-03-02",
+     "a": 0.25
+    },
+    {
+     "d": "2026-05-26",
+     "a": 1.25
+    },
+    {
+     "d": "2026-08-10",
+     "a": 0.25
+    }
+   ],
+   "g3": 0,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:07.623Z"
+  },
+  "USPH": {
+   "n": "U.S. Physical Therapy",
+   "type": "EQUITY_STANDARD",
+   "p": 99.55,
+   "d": 2.29,
+   "q": true,
+   "per": 0.46,
+   "s": "Q2",
+   "last": "2026-11-16",
+   "hist": [
+    {
+     "d": "2025-03-14",
+     "a": 0.45
+    },
+    {
+     "d": "2025-05-23",
+     "a": 0.45
+    },
+    {
+     "d": "2025-08-22",
+     "a": 0.45
+    },
+    {
+     "d": "2025-11-17",
+     "a": 0.45
+    },
+    {
+     "d": "2026-03-13",
+     "a": 0.46
+    },
+    {
+     "d": "2026-05-22",
+     "a": 0.46
+    },
+    {
+     "d": "2026-08-21",
+     "a": 0.46
+    },
+    {
+     "d": "2026-11-16",
+     "a": 0.46
+    }
+   ],
+   "g3": 0.0244,
+   "g5": 0.0942,
+   "src": "Yahoo Finance",
+   "u": "2026-11-17T12:33:07.996Z"
   }
  }
 }
