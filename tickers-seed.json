@@ -221,6 +221,10 @@
    "n": "ArcBest",
    "type": "EQUITY_STANDARD"
   },
+  "ARCO": {
+   "n": "Arcos Dorados Holdings",
+   "type": "ADR_VARIABLE"
+  },
   "ARGT": {
    "n": "Global X MSCI Argentina",
    "type": "ETF_PASS_THROUGH"
@@ -261,6 +265,10 @@
    "n": "Arm Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "ARMK": {
+   "n": "Aramark",
+   "type": "EQUITY_STANDARD"
+  },
   "ARW": {
    "n": "Arrow Electronics",
    "type": "EQUITY_STANDARD"
@@ -279,6 +287,10 @@
   },
   "ASML": {
    "n": "ASML Holding",
+   "type": "EQUITY_STANDARD"
+  },
+  "ASO": {
+   "n": "Academy Sports and Outdoors",
    "type": "EQUITY_STANDARD"
   },
   "ASTS": {
@@ -641,6 +653,10 @@
    "n": "Cheesecake Factory",
    "type": "EQUITY_STANDARD"
   },
+  "CAL": {
+   "n": "Caleres",
+   "type": "EQUITY_STANDARD"
+  },
   "CALM": {
    "n": "Cal-Maine Foods",
    "type": "EQUITY_STANDARD"
@@ -695,6 +711,14 @@
   },
   "CELH": {
    "n": "Celsius Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "CENT": {
+   "n": "Central Garden & Pet",
+   "type": "EQUITY_STANDARD"
+  },
+  "CENTA": {
+   "n": "Central Garden & Pet Class A",
    "type": "EQUITY_STANDARD"
   },
   "CENX": {
@@ -789,6 +813,10 @@
    "n": "CNX Resources",
    "type": "EQUITY_STANDARD"
   },
+  "COCO": {
+   "n": "Vita Coco Company",
+   "type": "EQUITY_STANDARD"
+  },
   "COHR": {
    "n": "Coherent",
    "type": "EQUITY_STANDARD"
@@ -881,6 +909,10 @@
    "n": "Credo Technology",
    "type": "EQUITY_STANDARD"
   },
+  "CRI": {
+   "n": "Carter's",
+   "type": "EQUITY_STANDARD"
+  },
   "CROX": {
    "n": "Crocs",
    "type": "EQUITY_STANDARD"
@@ -957,6 +989,10 @@
    "n": "Invesco DB Energy Fund",
    "type": "ETF_PASS_THROUGH"
   },
+  "DBI": {
+   "n": "Designer Brands",
+   "type": "EQUITY_STANDARD"
+  },
   "DBO": {
    "n": "Invesco DB Oil",
    "type": "ETF_PASS_THROUGH"
@@ -967,6 +1003,10 @@
   },
   "DBX": {
    "n": "Dropbox",
+   "type": "EQUITY_STANDARD"
+  },
+  "DDS": {
+   "n": "Dillard's",
    "type": "EQUITY_STANDARD"
   },
   "DECK": {
@@ -1095,6 +1135,10 @@
   },
   "DNN": {
    "n": "Denison Mines",
+   "type": "EQUITY_STANDARD"
+  },
+  "DNUT": {
+   "n": "Krispy Kreme",
    "type": "EQUITY_STANDARD"
   },
   "DOCN": {
@@ -1431,6 +1475,10 @@
   },
   "EXTR": {
    "n": "Extreme Networks",
+   "type": "EQUITY_STANDARD"
+  },
+  "EYE": {
+   "n": "National Vision Holdings",
    "type": "EQUITY_STANDARD"
   },
   "EZA": {
@@ -1785,6 +1833,10 @@
    "n": "First Trust Value Line Dividend Index",
    "type": "ETF_PASS_THROUGH"
   },
+  "FWRG": {
+   "n": "First Watch Restaurant Group",
+   "type": "EQUITY_STANDARD"
+  },
   "FXD": {
    "n": "First Trust Consumer Discretionary AlphaDEX Fund",
    "type": "ETF_PASS_THROUGH"
@@ -1841,6 +1893,10 @@
    "n": "Amplify Video Game Tech ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "GAP": {
+   "n": "Gap",
+   "type": "EQUITY_STANDARD"
+  },
   "GATX": {
    "n": "GATX",
    "type": "EQUITY_STANDARD"
@@ -1855,6 +1911,10 @@
   },
   "GBX": {
    "n": "Greenbrier Companies",
+   "type": "EQUITY_STANDARD"
+  },
+  "GCO": {
+   "n": "Genesco",
    "type": "EQUITY_STANDARD"
   },
   "GDX": {
@@ -1880,6 +1940,10 @@
   "GII": {
    "n": "SPDR S&P Global Infrastructure ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "GIII": {
+   "n": "G-III Apparel Group",
+   "type": "EQUITY_STANDARD"
   },
   "GLD": {
    "n": "SPDR Gold Shares",
@@ -2633,6 +2697,10 @@
    "n": "JPMorgan Active Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "JBSS": {
+   "n": "John B. Sanfilippo & Son",
+   "type": "EQUITY_STANDARD"
+  },
   "JD": {
    "n": "JD.com",
    "type": "EQUITY_STANDARD"
@@ -3125,6 +3193,10 @@
    "n": "Nabors Industries",
    "type": "EQUITY_STANDARD"
   },
+  "NDLS": {
+   "n": "Noodles & Company",
+   "type": "EQUITY_STANDARD"
+  },
   "NEAR": {
    "n": "iShares Short Maturity Bond",
    "type": "ETF_PASS_THROUGH"
@@ -3215,6 +3287,10 @@
   },
   "NWE": {
    "n": "NorthWestern Energy Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "NWL": {
+   "n": "Newell Brands",
    "type": "EQUITY_STANDARD"
   },
   "NWN": {
@@ -3861,6 +3937,10 @@
    "n": "Range Resources",
    "type": "EQUITY_STANDARD"
   },
+  "RRGB": {
+   "n": "Red Robin Gourmet Burgers",
+   "type": "EQUITY_STANDARD"
+  },
   "RRR": {
    "n": "Red Rock Resorts",
    "type": "EQUITY_STANDARD"
@@ -4277,6 +4357,10 @@
    "n": "SPDR Portfolio Aggregate Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "SPB": {
+   "n": "Spectrum Brands Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "SPBO": {
    "n": "State Street SPDR Portfolio Corporate Bond ETF",
    "type": "ETF_PASS_THROUGH"
@@ -4581,6 +4665,10 @@
    "n": "ProShares UltraPro QQQ",
    "type": "ETF_PASS_THROUGH"
   },
+  "TR": {
+   "n": "Tootsie Roll Industries",
+   "type": "EQUITY_STANDARD"
+  },
   "TREX": {
    "n": "Trex Company",
    "type": "EQUITY_STANDARD"
@@ -4635,6 +4723,10 @@
   },
   "U": {
    "n": "Unity Software",
+   "type": "EQUITY_STANDARD"
+  },
+  "UA": {
+   "n": "Under Armour Class C",
    "type": "EQUITY_STANDARD"
   },
   "UAA": {
@@ -4824,6 +4916,10 @@
   "VEU": {
    "n": "Vanguard FTSE All-World ex-US ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "VFC": {
+   "n": "V.F. Corporation",
+   "type": "EQUITY_STANDARD"
   },
   "VFH": {
    "n": "Vanguard Financials",
@@ -5081,6 +5177,10 @@
    "n": "Advanced Drainage Systems",
    "type": "EQUITY_STANDARD"
   },
+  "WOLF": {
+   "n": "Wolfspeed",
+   "type": "EQUITY_STANDARD"
+  },
   "WOOD": {
    "n": "iShares Global Timber & Forestry ETF",
    "type": "ETF_PASS_THROUGH"
@@ -5232,6 +5332,10 @@
   "YMAX": {
    "n": "YieldMax Universe Fund of Option Income ETFs",
    "type": "ETF_PASS_THROUGH"
+  },
+  "YUMC": {
+   "n": "Yum China Holdings",
+   "type": "EQUITY_STANDARD"
   },
   "Z": {
    "n": "Zillow Group (Class C)",
