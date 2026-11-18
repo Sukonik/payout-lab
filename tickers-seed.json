@@ -113,6 +113,10 @@
    "n": "Alamos Gold",
    "type": "EQUITY_STANDARD"
   },
+  "AI": {
+   "n": "C3.ai",
+   "type": "EQUITY_STANDARD"
+  },
   "AIQ": {
    "n": "Global X Artificial Intelligence and Technology",
    "type": "ETF_PASS_THROUGH"
@@ -205,6 +209,10 @@
    "n": "AppFolio",
    "type": "EQUITY_STANDARD"
   },
+  "APPN": {
+   "n": "Appian",
+   "type": "EQUITY_STANDARD"
+  },
   "AR": {
    "n": "Antero Resources",
    "type": "EQUITY_STANDARD"
@@ -255,6 +263,10 @@
   },
   "ARW": {
    "n": "Arrow Electronics",
+   "type": "EQUITY_STANDARD"
+  },
+  "ASAN": {
+   "n": "Asana",
    "type": "EQUITY_STANDARD"
   },
   "ASHR": {
@@ -340,6 +352,10 @@
   "AYI": {
    "n": "Acuity Inc.",
    "type": "EQUITY_STANDARD"
+  },
+  "BAB": {
+   "n": "Invesco Taxable Municipal Bond ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "BABA": {
    "n": "Alibaba Group",
@@ -465,6 +481,10 @@
    "n": "Invesco Senior Loan",
    "type": "ETF_PASS_THROUGH"
   },
+  "BL": {
+   "n": "BlackLine",
+   "type": "EQUITY_STANDARD"
+  },
   "BLDR": {
    "n": "Builders FirstSource",
    "type": "EQUITY_STANDARD"
@@ -565,6 +585,10 @@
    "n": "B2Gold",
    "type": "EQUITY_STANDARD"
   },
+  "BUCK": {
+   "n": "Simplify Treasury Option Income ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "BUD": {
    "n": "Anheuser-Busch InBev",
    "type": "ADR_VARIABLE"
@@ -592,6 +616,10 @@
   "BWXT": {
    "n": "BWX Technologies",
    "type": "EQUITY_STANDARD"
+  },
+  "BWZ": {
+   "n": "SPDR Bloomberg Short Term International Treasury Bond ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "BYD": {
    "n": "Boyd Gaming",
@@ -885,6 +913,10 @@
    "n": "CVR Energy",
    "type": "EQUITY_STANDARD"
   },
+  "CVLT": {
+   "n": "Commvault Systems",
+   "type": "EQUITY_STANDARD"
+  },
   "CWB": {
    "n": "SPDR Bloomberg Convertible Securities",
    "type": "ETF_PASS_THROUGH"
@@ -1093,6 +1125,10 @@
    "n": "Global X Autonomous and Electric Vehicles",
    "type": "ETF_PASS_THROUGH"
   },
+  "DT": {
+   "n": "Dynatrace",
+   "type": "EQUITY_STANDARD"
+  },
   "DTD": {
    "n": "WisdomTree US Total Dividend",
    "type": "ETF_PASS_THROUGH"
@@ -1276,6 +1312,10 @@
   "ESPO": {
    "n": "VanEck Video Gaming and eSports ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "ESTC": {
+   "n": "Elastic",
+   "type": "EQUITY_STANDARD"
   },
   "ETHA": {
    "n": "iShares Ethereum Trust",
@@ -1657,6 +1697,10 @@
    "n": "Freshpet",
    "type": "EQUITY_STANDARD"
   },
+  "FRSH": {
+   "n": "Freshworks",
+   "type": "EQUITY_STANDARD"
+  },
   "FSLR": {
    "n": "First Solar",
    "type": "EQUITY_STANDARD"
@@ -1929,6 +1973,14 @@
    "n": "iShares S&P GSCI Commodity-Indexed Trust",
    "type": "ETF_PASS_THROUGH"
   },
+  "GSY": {
+   "n": "Invesco Ultra Short Duration ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "GTLB": {
+   "n": "GitLab",
+   "type": "EQUITY_STANDARD"
+  },
   "GUNR": {
    "n": "FlexShares Morningstar Global Upstream Natural Resources Index Fund",
    "type": "ETF_PASS_THROUGH"
@@ -2063,6 +2115,10 @@
   },
   "HYLB": {
    "n": "Xtrackers USD High Yield Corporate Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "HYMB": {
+   "n": "SPDR Nuveen ICE High Yield Municipal Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "HYS": {
@@ -2337,6 +2393,10 @@
    "n": "IonQ",
    "type": "EQUITY_STANDARD"
   },
+  "IOT": {
+   "n": "Samsara",
+   "type": "EQUITY_STANDARD"
+  },
   "IPAY": {
    "n": "Amplify Digital Payments ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2371,6 +2431,10 @@
   },
   "ISCV": {
    "n": "iShares Morningstar Small-Cap Value ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ISHG": {
+   "n": "iShares 1-3 Year International Treasury Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "ISTB": {
@@ -2668,6 +2732,10 @@
   "KMX": {
    "n": "CarMax",
    "type": "EQUITY_STANDARD"
+  },
+  "KNG": {
+   "n": "FT Vest Rising Dividend Achievers Target Income ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "KNTK": {
    "n": "Kinetik Holdings",
@@ -3589,6 +3657,10 @@
    "n": "Invesco Oil & Gas Services ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "PZA": {
+   "n": "Invesco National AMT-Free Municipal Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "PZZA": {
    "n": "Papa John's",
    "type": "EQUITY_STANDARD"
@@ -3953,6 +4025,10 @@
    "n": "Global X SuperDividend",
    "type": "ETF_PASS_THROUGH"
   },
+  "SDOG": {
+   "n": "ALPS Sector Dividend Dogs ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "SE": {
    "n": "Sea Limited",
    "type": "EQUITY_STANDARD"
@@ -4113,6 +4189,10 @@
    "n": "VanEck Short Muni ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "SMDV": {
+   "n": "ProShares Russell 2000 Dividend Growers ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "SMG": {
    "n": "Scotts Miracle-Gro",
    "type": "EQUITY_STANDARD"
@@ -4211,6 +4291,10 @@
   },
   "SPEM": {
    "n": "SPDR Portfolio Emerging Markets",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPFF": {
+   "n": "Global X SuperIncome Preferred ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "SPHB": {
@@ -4645,6 +4729,10 @@
    "n": "iShares Broad USD High Yield Corporate Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "USIG": {
+   "n": "iShares Broad USD Investment Grade Corporate Bond ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "USMV": {
    "n": "iShares MSCI USA Min Vol Factor",
    "type": "ETF_PASS_THROUGH"
@@ -4865,6 +4953,10 @@
    "n": "Varonis Systems",
    "type": "EQUITY_STANDARD"
   },
+  "VRP": {
+   "n": "Invesco Variable Rate Preferred ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "VRT": {
    "n": "Vertiv",
    "type": "EQUITY_STANDARD"
@@ -5061,6 +5153,10 @@
    "n": "SPDR S&P Metals and Mining",
    "type": "ETF_PASS_THROUGH"
   },
+  "XMLV": {
+   "n": "Invesco S&P MidCap Low Volatility ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "XNTK": {
    "n": "SPDR NYSE Technology",
    "type": "ETF_PASS_THROUGH"
@@ -5095,6 +5191,10 @@
   },
   "XSD": {
    "n": "SPDR S&P Semiconductor",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XSLV": {
+   "n": "Invesco S&P SmallCap Low Volatility ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "XSW": {
@@ -5156,6 +5256,10 @@
   "ZM": {
    "n": "Zoom Communications",
    "type": "EQUITY_STANDARD"
+  },
+  "ZROZ": {
+   "n": "PIMCO 25+ Year Zero Coupon US Treasury Index ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "ZS": {
    "n": "Zscaler",
