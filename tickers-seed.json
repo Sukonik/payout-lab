@@ -201,6 +201,10 @@
    "n": "Anthropic AI Lab Ecosystem ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "AOSL": {
+   "n": "Alpha and Omega Semiconductor",
+   "type": "EQUITY_STANDARD"
+  },
   "APLE": {
    "n": "Apple Hospitality REIT",
    "type": "EQUITY_STANDARD"
@@ -315,6 +319,10 @@
   },
   "ATI": {
    "n": "ATI Inc.",
+   "type": "EQUITY_STANDARD"
+  },
+  "ATOM": {
+   "n": "Atomera",
    "type": "EQUITY_STANDARD"
   },
   "AU": {
@@ -471,6 +479,10 @@
   },
   "BGS": {
    "n": "B&G Foods",
+   "type": "EQUITY_STANDARD"
+  },
+  "BHE": {
+   "n": "Benchmark Electronics",
    "type": "EQUITY_STANDARD"
   },
   "BHP": {
@@ -773,6 +785,10 @@
    "n": "Cullen/Frost Bankers",
    "type": "EQUITY_STANDARD"
   },
+  "CGNX": {
+   "n": "Cognex",
+   "type": "EQUITY_STANDARD"
+  },
   "CGW": {
    "n": "Invesco S&P Global Water Index ETF",
    "type": "ETF_PASS_THROUGH"
@@ -859,6 +875,10 @@
   },
   "CNX": {
    "n": "CNX Resources",
+   "type": "EQUITY_STANDARD"
+  },
+  "CNXN": {
+   "n": "PC Connection",
    "type": "EQUITY_STANDARD"
   },
   "COCO": {
@@ -969,6 +989,10 @@
    "n": "Carpenter Technology",
    "type": "EQUITY_STANDARD"
   },
+  "CRUS": {
+   "n": "Cirrus Logic",
+   "type": "EQUITY_STANDARD"
+  },
   "CRWV": {
    "n": "CoreWeave",
    "type": "EQUITY_STANDARD"
@@ -979,6 +1003,10 @@
   },
   "CTRE": {
    "n": "CareTrust REIT",
+   "type": "EQUITY_STANDARD"
+  },
+  "CTS": {
+   "n": "CTS Corporation",
    "type": "EQUITY_STANDARD"
   },
   "CUBE": {
@@ -1015,6 +1043,10 @@
   },
   "CZR": {
    "n": "Caesars Entertainment",
+   "type": "EQUITY_STANDARD"
+  },
+  "DAKT": {
+   "n": "Daktronics",
    "type": "EQUITY_STANDARD"
   },
   "DAPP": {
@@ -2593,6 +2625,10 @@
    "n": "iShares Core S&P Total US Stock Market",
    "type": "ETF_PASS_THROUGH"
   },
+  "ITRI": {
+   "n": "Itron",
+   "type": "EQUITY_STANDARD"
+  },
   "ITUB": {
    "n": "Itau Unibanco Holding",
    "type": "ADR_VARIABLE"
@@ -2873,6 +2909,10 @@
    "n": "CarMax",
    "type": "EQUITY_STANDARD"
   },
+  "KN": {
+   "n": "Knowles",
+   "type": "EQUITY_STANDARD"
+  },
   "KNG": {
    "n": "FT Vest Rising Dividend Achievers Target Income ETF",
    "type": "ETF_PASS_THROUGH"
@@ -3039,6 +3079,10 @@
   },
   "LULU": {
    "n": "Lululemon Athletica",
+   "type": "EQUITY_STANDARD"
+  },
+  "LUMN": {
+   "n": "Lumen Technologies",
    "type": "EQUITY_STANDARD"
   },
   "LUNR": {
@@ -3325,6 +3369,10 @@
    "n": "Northern Oil and Gas",
    "type": "EQUITY_STANDARD"
   },
+  "NOVT": {
+   "n": "Novanta",
+   "type": "EQUITY_STANDARD"
+  },
   "NRDS": {
    "n": "NerdWallet",
    "type": "EQUITY_STANDARD"
@@ -3336,6 +3384,10 @@
   "NTES": {
    "n": "NetEase",
    "type": "ADR_VARIABLE"
+  },
+  "NTGR": {
+   "n": "NETGEAR",
+   "type": "EQUITY_STANDARD"
   },
   "NTNX": {
    "n": "Nutanix",
@@ -3356,6 +3408,10 @@
   "NVDY": {
    "n": "YieldMax NVDA Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
+  },
+  "NVMI": {
+   "n": "Nova Ltd",
+   "type": "ADR_VARIABLE"
   },
   "NVO": {
    "n": "Novo Nordisk",
@@ -3443,6 +3499,10 @@
   },
   "OKTA": {
    "n": "Okta",
+   "type": "EQUITY_STANDARD"
+  },
+  "OLED": {
+   "n": "Universal Display",
    "type": "EQUITY_STANDARD"
   },
   "OLLI": {
@@ -3645,6 +3705,10 @@
    "n": "Invesco Water Resources ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "PI": {
+   "n": "Impinj",
+   "type": "EQUITY_STANDARD"
+  },
   "PICK": {
    "n": "iShares MSCI Global Metals and Mining Producers",
    "type": "ETF_PASS_THROUGH"
@@ -3800,6 +3864,10 @@
   "PTON": {
    "n": "Peloton Interactive",
    "type": "EQUITY_STANDARD"
+  },
+  "PULS": {
+   "n": "PGIM Ultra Short Bond ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "PUMP": {
    "n": "ProPetro Holding",
@@ -4001,6 +4069,10 @@
    "n": "ROBO Global Robotics and Automation",
    "type": "ETF_PASS_THROUGH"
   },
+  "ROG": {
+   "n": "Rogers Corporation",
+   "type": "EQUITY_STANDARD"
+  },
   "ROKT": {
    "n": "SPDR S&P Kensho Final Frontiers ETF",
    "type": "ETF_PASS_THROUGH"
@@ -4189,6 +4261,10 @@
    "n": "Schwab Municipal Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "SCSC": {
+   "n": "ScanSource",
+   "type": "EQUITY_STANDARD"
+  },
   "SCZ": {
    "n": "iShares MSCI EAFE Small-Cap",
    "type": "ETF_PASS_THROUGH"
@@ -4284,6 +4360,10 @@
   "SILJ": {
    "n": "Amplify Junior Silver Miners",
    "type": "ETF_PASS_THROUGH"
+  },
+  "SIMO": {
+   "n": "Silicon Motion Technology",
+   "type": "ADR_VARIABLE"
   },
   "SIRI": {
    "n": "Sirius XM Holdings",
@@ -4391,6 +4471,10 @@
   },
   "SMR": {
    "n": "NuScale Power",
+   "type": "EQUITY_STANDARD"
+  },
+  "SMTC": {
+   "n": "Semtech",
    "type": "EQUITY_STANDARD"
   },
   "SNAP": {
@@ -4641,6 +4725,10 @@
    "n": "Southwest Gas Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "SYNA": {
+   "n": "Synaptics",
+   "type": "EQUITY_STANDARD"
+  },
   "TAN": {
    "n": "Invesco Solar",
    "type": "ETF_PASS_THROUGH"
@@ -4803,6 +4891,10 @@
   },
   "TTEK": {
    "n": "Tetra Tech",
+   "type": "EQUITY_STANDARD"
+  },
+  "TTMI": {
+   "n": "TTM Technologies",
    "type": "EQUITY_STANDARD"
   },
   "TTWO": {
@@ -5049,6 +5141,10 @@
    "n": "Viavi Solutions",
    "type": "EQUITY_STANDARD"
   },
+  "VICR": {
+   "n": "Vicor",
+   "type": "EQUITY_STANDARD"
+  },
   "VIGI": {
    "n": "Vanguard International Dividend Appreciation",
    "type": "ETF_PASS_THROUGH"
@@ -5108,6 +5204,10 @@
   "VNQI": {
    "n": "Vanguard Global ex-US Real Estate",
    "type": "ETF_PASS_THROUGH"
+  },
+  "VNT": {
+   "n": "Vontier",
+   "type": "EQUITY_STANDARD"
   },
   "VOE": {
    "n": "Vanguard Mid-Cap Value",
@@ -5175,6 +5275,10 @@
   },
   "VT": {
    "n": "Vanguard Total World Stock",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VTC": {
+   "n": "Vanguard Total Corporate Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "VTEB": {
