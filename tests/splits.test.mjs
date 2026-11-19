@@ -4,12 +4,15 @@ import fs from "node:fs";
 import { applyFeedSplits, splitSources, afterSplit, compareTickers, cumulativeFactorSince, dateParts, daysBetween, filterLedger, holdingsWithSplits, kindOf, ledger, moveSince, priceAfter, ratioFromFactor, ratioLabel, sanitizeSplit, sanitizeSplitsFile, sanitizeUpcoming, splitsFromPrices, upcomingView, yearGroups, loadSplits } from "../js/core/splits.js";
 
 const seed = JSON.parse(fs.readFileSync(new URL("../splits.json", import.meta.url), "utf8"));
-const file = sanitizeSplitsFile(seed);
+// Most tests use a fixed fixture: the refresh bots rewrite the shipped splits.json many times a day, so counts in it change.
+const fixture = JSON.parse(fs.readFileSync(new URL("../e2e/fixtures/splits.json", import.meta.url), "utf8"));
+const file = sanitizeSplitsFile(fixture);
+const shipped = sanitizeSplitsFile(seed);
 
 test("the shipped splits.json passes its own validation, entry for entry", () => {
-  assert.ok(file);
+  assert.ok(shipped);
   const rawCount = Object.values(seed.tickers).reduce((n, v) => n + v.s.length, 0);
-  assert.equal(Object.values(file.tickers).reduce((n, v) => n + v.s.length, 0), rawCount, "nothing was dropped");
+  assert.equal(Object.values(shipped.tickers).reduce((n, v) => n + v.s.length, 0), rawCount, "nothing was dropped");
   assert.ok(file.tickers.GOOGL.s[0].a === 20 && file.tickers.LCID.s[0].b === 10);
 });
 

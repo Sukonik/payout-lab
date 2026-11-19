@@ -197,6 +197,10 @@
    "n": "VanEck Fallen Angel High Yield Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "ANT": {
+   "n": "Anthropic",
+   "type": "EQUITY_STANDARD"
+  },
   "ANTW": {
    "n": "Anthropic AI Lab Ecosystem ETF",
    "type": "ETF_PASS_THROUGH"
