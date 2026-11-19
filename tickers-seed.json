@@ -37,6 +37,10 @@
    "n": "ACADIA Pharmaceuticals",
    "type": "EQUITY_STANDARD"
   },
+  "ACES": {
+   "n": "ALPS Clean Energy ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "ACHC": {
    "n": "Acadia Healthcare",
    "type": "EQUITY_STANDARD"
@@ -173,6 +177,10 @@
    "n": "Alerian MLP",
    "type": "ETF_PASS_THROUGH"
   },
+  "AMR": {
+   "n": "Alpha Metallurgical Resources",
+   "type": "EQUITY_STANDARD"
+  },
   "AMZY": {
    "n": "YieldMax AMZN Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
@@ -200,6 +208,10 @@
   "APLY": {
    "n": "YieldMax AAPL Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
+  },
+  "APOG": {
+   "n": "Apogee Enterprises",
+   "type": "EQUITY_STANDARD"
   },
   "APP": {
    "n": "AppLovin",
@@ -333,6 +345,10 @@
    "n": "Avantis US Large Cap Value",
    "type": "ETF_PASS_THROUGH"
   },
+  "AVNT": {
+   "n": "Avient Corporation",
+   "type": "EQUITY_STANDARD"
+  },
   "AVO": {
    "n": "Mission Produce",
    "type": "EQUITY_STANDARD"
@@ -353,12 +369,20 @@
    "n": "ETFMG Travel Tech ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "AWI": {
+   "n": "Armstrong World Industries",
+   "type": "EQUITY_STANDARD"
+  },
   "AWR": {
    "n": "American States Water",
    "type": "EQUITY_STANDARD"
   },
   "AXS": {
    "n": "Axis Capital Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "AXTA": {
+   "n": "Axalta Coating Systems",
    "type": "EQUITY_STANDARD"
   },
   "AYI": {
@@ -429,6 +453,14 @@
    "n": "Bath & Body Works",
    "type": "EQUITY_STANDARD"
   },
+  "BCC": {
+   "n": "Boise Cascade",
+   "type": "EQUITY_STANDARD"
+  },
+  "BCPC": {
+   "n": "Balchem Corporation",
+   "type": "EQUITY_STANDARD"
+  },
   "BDC": {
    "n": "Belden",
    "type": "EQUITY_STANDARD"
@@ -463,6 +495,10 @@
   },
   "BITO": {
    "n": "ProShares Bitcoin Strategy",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BITQ": {
+   "n": "Bitwise Crypto Industry Innovators ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "BIV": {
@@ -597,6 +633,10 @@
    "n": "B2Gold",
    "type": "EQUITY_STANDARD"
   },
+  "BTU": {
+   "n": "Peabody Energy",
+   "type": "EQUITY_STANDARD"
+  },
   "BUCK": {
    "n": "Simplify Treasury Option Income ETF",
    "type": "ETF_PASS_THROUGH"
@@ -695,6 +735,10 @@
   },
   "CCJ": {
    "n": "Cameco",
+   "type": "EQUITY_STANDARD"
+  },
+  "CCS": {
+   "n": "Century Communities",
    "type": "EQUITY_STANDARD"
   },
   "CDC": {
@@ -808,6 +852,10 @@
   "CNK": {
    "n": "Cinemark Holdings",
    "type": "EQUITY_STANDARD"
+  },
+  "CNRG": {
+   "n": "SPDR S&P Kensho Clean Power ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "CNX": {
    "n": "CNX Resources",
@@ -940,6 +988,10 @@
   "CUT": {
    "n": "Invesco MSCI Global Timber ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "CVCO": {
+   "n": "Cavco Industries",
+   "type": "EQUITY_STANDARD"
   },
   "CVI": {
    "n": "CVR Energy",
@@ -1501,6 +1553,10 @@
    "n": "First Trust Global Wind Energy ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "FBIN": {
+   "n": "Fortune Brands Innovations",
+   "type": "EQUITY_STANDARD"
+  },
   "FBND": {
    "n": "Fidelity Total Bond",
    "type": "ETF_PASS_THROUGH"
@@ -1821,6 +1877,10 @@
    "n": "First Trust Nasdaq Transportation ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "FUL": {
+   "n": "H.B. Fuller",
+   "type": "EQUITY_STANDARD"
+  },
   "FUN": {
    "n": "Six Flags Entertainment",
    "type": "EQUITY_STANDARD"
@@ -2025,6 +2085,10 @@
    "n": "Grab Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "GRBK": {
+   "n": "Green Brick Partners",
+   "type": "EQUITY_STANDARD"
+  },
   "GREK": {
    "n": "Global X MSCI Greece",
    "type": "ETF_PASS_THROUGH"
@@ -2076,6 +2140,10 @@
   "HALO": {
    "n": "Halozyme Therapeutics",
    "type": "EQUITY_STANDARD"
+  },
+  "HAP": {
+   "n": "VanEck Natural Resources ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "HAUZ": {
    "n": "Xtrackers International Real Estate ETF",
@@ -2455,6 +2523,10 @@
   },
   "IONQ": {
    "n": "IonQ",
+   "type": "EQUITY_STANDARD"
+  },
+  "IOSP": {
+   "n": "Innospec",
    "type": "EQUITY_STANDARD"
   },
   "IOT": {
@@ -2857,6 +2929,10 @@
    "n": "KraneShares CSI China Internet",
    "type": "ETF_PASS_THROUGH"
   },
+  "KWR": {
+   "n": "Quaker Houghton",
+   "type": "EQUITY_STANDARD"
+  },
   "KXI": {
    "n": "iShares Global Consumer Staples ETF",
    "type": "ETF_PASS_THROUGH"
@@ -3209,6 +3285,10 @@
    "n": "Cloudflare",
    "type": "EQUITY_STANDARD"
   },
+  "NEU": {
+   "n": "NewMarket Corporation",
+   "type": "EQUITY_STANDARD"
+  },
   "NFG": {
    "n": "National Fuel Gas",
    "type": "EQUITY_STANDARD"
@@ -3367,6 +3447,10 @@
   },
   "OLLI": {
    "n": "Ollie's Bargain Outlet",
+   "type": "EQUITY_STANDARD"
+  },
+  "OLN": {
+   "n": "Olin Corporation",
    "type": "EQUITY_STANDARD"
   },
   "OMCL": {
@@ -3909,6 +3993,10 @@
    "n": "RenaissanceRe Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "RNRG": {
+   "n": "Global X Renewable Energy Producers ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "ROBO": {
    "n": "ROBO Global Robotics and Automation",
    "type": "ETF_PASS_THROUGH"
@@ -3928,6 +4016,10 @@
   "RPG": {
    "n": "Invesco S&P 500 Pure Growth ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "RPM": {
+   "n": "RPM International",
+   "type": "EQUITY_STANDARD"
   },
   "RPV": {
    "n": "Invesco S&P 500 Pure Value ETF",
@@ -4225,6 +4317,10 @@
    "n": "Skechers",
    "type": "EQUITY_STANDARD"
   },
+  "SKY": {
+   "n": "Champion Homes",
+   "type": "EQUITY_STANDARD"
+  },
   "SKYW": {
    "n": "SkyWest",
    "type": "EQUITY_STANDARD"
@@ -4449,6 +4545,10 @@
    "n": "SPDR Portfolio Short Term Treasury",
    "type": "ETF_PASS_THROUGH"
   },
+  "SPXC": {
+   "n": "SPX Technologies",
+   "type": "EQUITY_STANDARD"
+  },
   "SPXL": {
    "n": "Direxion Daily S&P 500 Bull 3X Shares",
    "type": "ETF_PASS_THROUGH"
@@ -4500,6 +4600,10 @@
   "SSO": {
    "n": "ProShares Ultra S&P500",
    "type": "ETF_PASS_THROUGH"
+  },
+  "SSRM": {
+   "n": "SSR Mining",
+   "type": "EQUITY_STANDARD"
   },
   "STIP": {
    "n": "iShares 0-5 Year TIPS Bond",
@@ -5113,6 +5217,10 @@
    "n": "Western Alliance Bancorporation",
    "type": "EQUITY_STANDARD"
   },
+  "WCBR": {
+   "n": "WisdomTree Cybersecurity Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
   "WCLD": {
    "n": "WisdomTree Cloud Computing",
    "type": "ETF_PASS_THROUGH"
@@ -5169,6 +5277,10 @@
    "n": "Wix.com",
    "type": "EQUITY_STANDARD"
   },
+  "WLK": {
+   "n": "Westlake Corporation",
+   "type": "EQUITY_STANDARD"
+  },
   "WMG": {
    "n": "Warner Music Group",
    "type": "EQUITY_STANDARD"
@@ -5207,6 +5319,10 @@
   },
   "WTFC": {
    "n": "Wintrust Financial",
+   "type": "EQUITY_STANDARD"
+  },
+  "WTS": {
+   "n": "Watts Water Technologies",
    "type": "EQUITY_STANDARD"
   },
   "XAR": {
@@ -5367,6 +5483,10 @@
   },
   "ZS": {
    "n": "Zscaler",
+   "type": "EQUITY_STANDARD"
+  },
+  "ZWS": {
+   "n": "Zurn Elkay Water Solutions",
    "type": "EQUITY_STANDARD"
   }
  }
