@@ -477,6 +477,10 @@
    "n": "Belden",
    "type": "EQUITY_STANDARD"
   },
+  "BDN": {
+   "n": "Brandywine Realty Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "BETZ": {
    "n": "Roundhill Sports Betting & iGaming ETF",
    "type": "ETF_PASS_THROUGH"
@@ -580,6 +584,10 @@
   "BNDX": {
    "n": "Vanguard Total International Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "BNL": {
+   "n": "Broadstone Net Lease",
+   "type": "EQUITY_STANDARD"
   },
   "BNO": {
    "n": "United States Brent Oil Fund",
@@ -1005,6 +1013,10 @@
    "n": "Carlisle Companies",
    "type": "EQUITY_STANDARD"
   },
+  "CTO": {
+   "n": "CTO Realty Growth",
+   "type": "EQUITY_STANDARD"
+  },
   "CTRE": {
    "n": "CareTrust REIT",
    "type": "EQUITY_STANDARD"
@@ -1020,6 +1032,10 @@
   "CUT": {
    "n": "Invesco MSCI Global Timber ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "CUZ": {
+   "n": "Cousins Properties",
+   "type": "EQUITY_STANDARD"
   },
   "CVCO": {
    "n": "Cavco Industries",
@@ -1097,8 +1113,16 @@
    "n": "Dillard's",
    "type": "EQUITY_STANDARD"
   },
+  "DEA": {
+   "n": "Easterly Government Properties",
+   "type": "EQUITY_STANDARD"
+  },
   "DECK": {
    "n": "Deckers Outdoor",
+   "type": "EQUITY_STANDARD"
+  },
+  "DEI": {
+   "n": "Douglas Emmett",
    "type": "EQUITY_STANDARD"
   },
   "DEO": {
@@ -1305,6 +1329,10 @@
    "n": "iShares MSCI China Small-Cap ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "EDEN": {
+   "n": "iShares MSCI Denmark ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "EDV": {
    "n": "Vanguard Extended Duration Treasury",
    "type": "ETF_PASS_THROUGH"
@@ -1329,6 +1357,10 @@
    "n": "iShares MSCI EAFE Growth ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "EFNL": {
+   "n": "iShares MSCI Finland ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "EFV": {
    "n": "iShares MSCI EAFE Value ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1347,6 +1379,10 @@
   },
   "EIDO": {
    "n": "iShares MSCI Indonesia",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EIRL": {
+   "n": "iShares MSCI Ireland ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "ELF": {
@@ -1503,6 +1539,10 @@
   },
   "EWL": {
    "n": "iShares MSCI Switzerland",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EWM": {
+   "n": "iShares MSCI Malaysia ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "EWN": {
@@ -1685,6 +1725,14 @@
    "n": "Franklin FTSE Australia ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "FLBR": {
+   "n": "Franklin FTSE Brazil ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLCA": {
+   "n": "Franklin FTSE Canada ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FLCH": {
    "n": "Franklin FTSE China",
    "type": "ETF_PASS_THROUGH"
@@ -1699,6 +1747,10 @@
   },
   "FLGR": {
    "n": "Franklin FTSE Germany ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLIN": {
+   "n": "Franklin FTSE India ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "FLJP": {
@@ -2145,6 +2197,10 @@
    "n": "GitLab",
    "type": "EQUITY_STANDARD"
   },
+  "GTY": {
+   "n": "Getty Realty",
+   "type": "EQUITY_STANDARD"
+  },
   "GUNR": {
    "n": "FlexShares Morningstar Global Upstream Natural Resources Index Fund",
    "type": "ETF_PASS_THROUGH"
@@ -2236,6 +2292,10 @@
   "HOMZ": {
    "n": "Hoya Capital Housing ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "HPP": {
+   "n": "Hudson Pacific Properties",
+   "type": "EQUITY_STANDARD"
   },
   "HPQ": {
    "n": "HP",
@@ -2492,6 +2552,10 @@
   "IHI": {
    "n": "iShares US Medical Devices",
    "type": "ETF_PASS_THROUGH"
+  },
+  "IIPR": {
+   "n": "Innovative Industrial Properties",
+   "type": "EQUITY_STANDARD"
   },
   "IJH": {
    "n": "iShares Core S&P Mid-Cap",
@@ -2799,6 +2863,10 @@
   },
   "JAZZ": {
    "n": "Jazz Pharmaceuticals",
+   "type": "EQUITY_STANDARD"
+  },
+  "JBGS": {
+   "n": "JBG SMITH Properties",
    "type": "EQUITY_STANDARD"
   },
   "JBLU": {
@@ -3373,6 +3441,10 @@
    "n": "Northern Oil and Gas",
    "type": "EQUITY_STANDARD"
   },
+  "NORW": {
+   "n": "Global X MSCI Norway ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "NOVT": {
    "n": "Novanta",
    "type": "EQUITY_STANDARD"
@@ -3399,6 +3471,10 @@
   },
   "NTR": {
    "n": "Nutrien",
+   "type": "EQUITY_STANDARD"
+  },
+  "NTST": {
+   "n": "NetSTREIT",
    "type": "EQUITY_STANDARD"
   },
   "NU": {
@@ -3651,6 +3727,10 @@
   },
   "PDD": {
    "n": "PDD Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "PDM": {
+   "n": "Piedmont Realty Trust",
    "type": "EQUITY_STANDARD"
   },
   "PEB": {
@@ -4163,6 +4243,10 @@
   },
   "S": {
    "n": "SentinelOne",
+   "type": "EQUITY_STANDARD"
+  },
+  "SAFE": {
+   "n": "Safehold",
    "type": "EQUITY_STANDARD"
   },
   "SAIA": {
