@@ -57,6 +57,10 @@
    "n": "AECOM",
    "type": "EQUITY_STANDARD"
   },
+  "ACMR": {
+   "n": "ACM Research",
+   "type": "EQUITY_STANDARD"
+  },
   "ACWI": {
    "n": "iShares MSCI ACWI",
    "type": "ETF_PASS_THROUGH"
@@ -75,6 +79,10 @@
   },
   "ADTN": {
    "n": "ADTRAN Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "AEHR": {
+   "n": "Aehr Test Systems",
    "type": "EQUITY_STANDARD"
   },
   "AEIS": {
@@ -180,6 +188,10 @@
   "AMLP": {
    "n": "Alerian MLP",
    "type": "ETF_PASS_THROUGH"
+  },
+  "AMPL": {
+   "n": "Amplitude",
+   "type": "EQUITY_STANDARD"
   },
   "AMR": {
    "n": "Alpha Metallurgical Resources",
@@ -373,6 +385,10 @@
    "n": "Mission Produce",
    "type": "EQUITY_STANDARD"
   },
+  "AVPT": {
+   "n": "AvePoint",
+   "type": "EQUITY_STANDARD"
+  },
   "AVT": {
    "n": "Avnet",
    "type": "EQUITY_STANDARD"
@@ -423,6 +439,10 @@
   },
   "BALY": {
    "n": "Bally's",
+   "type": "EQUITY_STANDARD"
+  },
+  "BAND": {
+   "n": "Bandwidth",
    "type": "EQUITY_STANDARD"
   },
   "BAP": {
@@ -643,6 +663,10 @@
   },
   "BRX": {
    "n": "Brixmor Property Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "BRZE": {
+   "n": "Braze",
    "type": "EQUITY_STANDARD"
   },
   "BSCQ": {
@@ -1083,6 +1107,10 @@
   },
   "CWT": {
    "n": "California Water Service Group",
+   "type": "EQUITY_STANDARD"
+  },
+  "CXM": {
+   "n": "Sprinklr",
    "type": "EQUITY_STANDARD"
   },
   "CXW": {
@@ -2665,6 +2693,10 @@
    "n": "Summit Hotel Properties",
    "type": "EQUITY_STANDARD"
   },
+  "INSG": {
+   "n": "Inseego",
+   "type": "EQUITY_STANDARD"
+  },
   "INSW": {
    "n": "International Seaways",
    "type": "EQUITY_STANDARD"
@@ -2903,6 +2935,10 @@
   },
   "IYZ": {
    "n": "iShares US Telecommunications",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IZRL": {
+   "n": "ARK Israel Innovative Technology ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "JACK": {
@@ -3181,6 +3217,10 @@
    "n": "iShares iBoxx Investment Grade Corporate Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "LRNZ": {
+   "n": "TrueShares Technology, AI & Deep Learning ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "LSCC": {
    "n": "Lattice Semiconductor",
    "type": "EQUITY_STANDARD"
@@ -3345,6 +3385,10 @@
    "n": "Corgi MANGOS ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "MNDY": {
+   "n": "monday.com",
+   "type": "ADR_VARIABLE"
+  },
   "MOAT": {
    "n": "VanEck Morningstar Wide Moat",
    "type": "ETF_PASS_THROUGH"
@@ -3476,6 +3520,10 @@
   "NHI": {
    "n": "National Health Investors",
    "type": "EQUITY_STANDARD"
+  },
+  "NICE": {
+   "n": "NICE Ltd",
+   "type": "ADR_VARIABLE"
   },
   "NIO": {
    "n": "NIO",
@@ -4205,6 +4253,10 @@
    "n": "Rambus",
    "type": "EQUITY_STANDARD"
   },
+  "RNG": {
+   "n": "RingCentral",
+   "type": "EQUITY_STANDARD"
+  },
   "RNR": {
    "n": "RenaissanceRe Holdings",
    "type": "EQUITY_STANDARD"
@@ -4805,6 +4857,10 @@
    "n": "SPDR Portfolio S&P 600 Small Cap",
    "type": "ETF_PASS_THROUGH"
   },
+  "SPT": {
+   "n": "Sprout Social",
+   "type": "EQUITY_STANDARD"
+  },
   "SPTI": {
    "n": "SPDR Portfolio Intermediate Term Treasury",
    "type": "ETF_PASS_THROUGH"
@@ -4992,6 +5048,10 @@
   "THG": {
    "n": "Hanover Insurance Group",
    "type": "EQUITY_STANDARD"
+  },
+  "THNQ": {
+   "n": "ROBO Global Artificial Intelligence ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "TIP": {
    "n": "iShares TIPS Bond",
@@ -5620,6 +5680,10 @@
   "WSC": {
    "n": "WillScot Holdings",
    "type": "EQUITY_STANDARD"
+  },
+  "WTAI": {
+   "n": "WisdomTree Artificial Intelligence and Innovation Fund",
+   "type": "ETF_PASS_THROUGH"
   },
   "WTFC": {
    "n": "Wintrust Financial",
