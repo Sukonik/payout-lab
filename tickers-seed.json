@@ -125,6 +125,10 @@
    "n": "Alamos Gold",
    "type": "EQUITY_STANDARD"
   },
+  "AGX": {
+   "n": "Argan",
+   "type": "EQUITY_STANDARD"
+  },
   "AI": {
    "n": "C3.ai",
    "type": "EQUITY_STANDARD"
@@ -143,6 +147,10 @@
   },
   "ALAB": {
    "n": "Astera Labs",
+   "type": "EQUITY_STANDARD"
+  },
+  "ALG": {
+   "n": "Alamo Group",
    "type": "EQUITY_STANDARD"
   },
   "ALGM": {
@@ -223,6 +231,10 @@
   },
   "AOSL": {
    "n": "Alpha and Omega Semiconductor",
+   "type": "EQUITY_STANDARD"
+  },
+  "APG": {
+   "n": "APi Group",
    "type": "EQUITY_STANDARD"
   },
   "APLE": {
@@ -357,6 +369,10 @@
    "n": "Avista",
    "type": "EQUITY_STANDARD"
   },
+  "AVAV": {
+   "n": "AeroVironment",
+   "type": "EQUITY_STANDARD"
+  },
   "AVDE": {
    "n": "Avantis International Equity",
    "type": "ETF_PASS_THROUGH"
@@ -423,6 +439,10 @@
   },
   "AYI": {
    "n": "Acuity Inc.",
+   "type": "EQUITY_STANDARD"
+  },
+  "AZZ": {
+   "n": "AZZ Inc.",
    "type": "EQUITY_STANDARD"
   },
   "BAB": {
@@ -1101,6 +1121,10 @@
    "n": "Commvault Systems",
    "type": "EQUITY_STANDARD"
   },
+  "CW": {
+   "n": "Curtiss-Wright",
+   "type": "EQUITY_STANDARD"
+  },
   "CWB": {
    "n": "SPDR Bloomberg Convertible Securities",
    "type": "ETF_PASS_THROUGH"
@@ -1337,6 +1361,10 @@
    "n": "Global X Autonomous and Electric Vehicles",
    "type": "ETF_PASS_THROUGH"
   },
+  "DRS": {
+   "n": "Leonardo DRS",
+   "type": "EQUITY_STANDARD"
+  },
   "DT": {
    "n": "Dynatrace",
    "type": "EQUITY_STANDARD"
@@ -1529,6 +1557,10 @@
    "n": "Invesco MSCI Sustainable Future ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "ESAB": {
+   "n": "ESAB Corporation",
+   "type": "EQUITY_STANDARD"
+  },
   "ESGU": {
    "n": "iShares ESG Aware MSCI USA",
    "type": "ETF_PASS_THROUGH"
@@ -1663,6 +1695,10 @@
   },
   "EXLS": {
    "n": "ExlService Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "EXPO": {
+   "n": "Exponent",
    "type": "EQUITY_STANDARD"
   },
   "EXTR": {
@@ -1841,6 +1877,10 @@
    "n": "iShares Floating Rate Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "FLR": {
+   "n": "Fluor",
+   "type": "EQUITY_STANDARD"
+  },
   "FLRN": {
    "n": "SPDR Bloomberg Investment Grade Floating Rate ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1979,6 +2019,10 @@
   },
   "FTA": {
    "n": "First Trust Large Cap Value AlphaDEX Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FTAG": {
+   "n": "First Trust Indxx Global Agriculture ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "FTAI": {
@@ -2145,6 +2189,10 @@
    "n": "GEO Group",
    "type": "EQUITY_STANDARD"
   },
+  "GFF": {
+   "n": "Griffon Corporation",
+   "type": "EQUITY_STANDARD"
+  },
   "GFI": {
    "n": "Gold Fields",
    "type": "ADR_VARIABLE"
@@ -2277,6 +2325,10 @@
    "n": "FlexShares Morningstar Global Upstream Natural Resources Index Fund",
    "type": "ETF_PASS_THROUGH"
   },
+  "GVA": {
+   "n": "Granite Construction",
+   "type": "EQUITY_STANDARD"
+  },
   "GVI": {
    "n": "iShares Intermediate Government/Credit Bond ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2379,6 +2431,10 @@
   },
   "HRB": {
    "n": "H&R Block",
+   "type": "EQUITY_STANDARD"
+  },
+  "HRI": {
+   "n": "Herc Holdings",
    "type": "EQUITY_STANDARD"
   },
   "HTHT": {
@@ -3001,6 +3057,10 @@
    "n": "iShares Global Utilities ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "KAI": {
+   "n": "Kadant",
+   "type": "EQUITY_STANDARD"
+  },
   "KALU": {
    "n": "Kaiser Aluminum",
    "type": "EQUITY_STANDARD"
@@ -3047,6 +3107,10 @@
   },
   "KFRC": {
    "n": "Kforce",
+   "type": "EQUITY_STANDARD"
+  },
+  "KFY": {
+   "n": "Korn Ferry",
    "type": "EQUITY_STANDARD"
   },
   "KGC": {
@@ -3123,6 +3187,10 @@
   },
   "KSS": {
    "n": "Kohls",
+   "type": "EQUITY_STANDARD"
+  },
+  "KTOS": {
+   "n": "Kratos Defense & Security Solutions",
    "type": "EQUITY_STANDARD"
   },
   "KWEB": {
@@ -3405,6 +3473,10 @@
    "n": "MP Materials",
    "type": "EQUITY_STANDARD"
   },
+  "MRCY": {
+   "n": "Mercury Systems",
+   "type": "EQUITY_STANDARD"
+  },
   "MSGE": {
    "n": "Madison Square Garden Entertainment",
    "type": "EQUITY_STANDARD"
@@ -3547,6 +3619,10 @@
   },
   "NOVT": {
    "n": "Novanta",
+   "type": "EQUITY_STANDARD"
+  },
+  "NPO": {
+   "n": "Enpro",
    "type": "EQUITY_STANDARD"
   },
   "NRDS": {
@@ -4145,6 +4221,10 @@
    "n": "Ryder System",
    "type": "EQUITY_STANDARD"
   },
+  "RBC": {
+   "n": "RBC Bearings",
+   "type": "EQUITY_STANDARD"
+  },
   "RBLX": {
    "n": "Roblox",
    "type": "EQUITY_STANDARD"
@@ -4520,6 +4600,10 @@
   "SE": {
    "n": "Sea Limited",
    "type": "EQUITY_STANDARD"
+  },
+  "SEA": {
+   "n": "U.S. Global Sea to Sky Cargo ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "SEDG": {
    "n": "SolarEdge Technologies",
@@ -4973,6 +5057,10 @@
    "n": "Southwest Gas Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "SXI": {
+   "n": "Standex International",
+   "type": "EQUITY_STANDARD"
+  },
   "SYNA": {
    "n": "Synaptics",
    "type": "EQUITY_STANDARD"
@@ -5213,6 +5301,10 @@
    "n": "UFP Industries",
    "type": "EQUITY_STANDARD"
   },
+  "UFPT": {
+   "n": "UFP Technologies",
+   "type": "EQUITY_STANDARD"
+  },
   "UGA": {
    "n": "United States Gasoline Fund",
    "type": "ETF_PASS_THROUGH"
@@ -5280,6 +5372,10 @@
   "USIG": {
    "n": "iShares Broad USD Investment Grade Corporate Bond ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "USLM": {
+   "n": "United States Lime & Minerals",
+   "type": "EQUITY_STANDARD"
   },
   "USMV": {
    "n": "iShares MSCI USA Min Vol Factor",
@@ -5449,6 +5545,10 @@
    "n": "Vanguard Mortgage-Backed Securities",
    "type": "ETF_PASS_THROUGH"
   },
+  "VMI": {
+   "n": "Valmont Industries",
+   "type": "EQUITY_STANDARD"
+  },
   "VNM": {
    "n": "VanEck Vietnam",
    "type": "ETF_PASS_THROUGH"
@@ -5525,6 +5625,10 @@
    "n": "Viasat",
    "type": "EQUITY_STANDARD"
   },
+  "VSEC": {
+   "n": "VSE Corporation",
+   "type": "EQUITY_STANDARD"
+  },
   "VSH": {
    "n": "Vishay Intertechnology",
    "type": "EQUITY_STANDARD"
@@ -5568,6 +5672,10 @@
   "VV": {
    "n": "Vanguard Large-Cap",
    "type": "ETF_PASS_THROUGH"
+  },
+  "VVX": {
+   "n": "V2X",
+   "type": "EQUITY_STANDARD"
   },
   "VWOB": {
    "n": "Vanguard Emerging Markets Government Bond",
@@ -5679,6 +5787,10 @@
   },
   "WSC": {
    "n": "WillScot Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "WSO": {
+   "n": "Watsco",
    "type": "EQUITY_STANDARD"
   },
   "WTAI": {
