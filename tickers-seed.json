@@ -61,6 +61,10 @@
    "n": "ACM Research",
    "type": "EQUITY_STANDARD"
   },
+  "ACV": {
+   "n": "ACV Auctions",
+   "type": "EQUITY_STANDARD"
+  },
   "ACWI": {
    "n": "iShares MSCI ACWI",
    "type": "ETF_PASS_THROUGH"
@@ -169,6 +173,10 @@
    "n": "Ally Financial",
    "type": "EQUITY_STANDARD"
   },
+  "ALV": {
+   "n": "Autoliv",
+   "type": "EQUITY_STANDARD"
+  },
   "ALX": {
    "n": "Alexander's",
    "type": "EQUITY_STANDARD"
@@ -209,12 +217,20 @@
    "n": "YieldMax AMZN Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
   },
+  "AN": {
+   "n": "AutoNation",
+   "type": "EQUITY_STANDARD"
+  },
   "ANET": {
    "n": "Arista Networks",
    "type": "EQUITY_STANDARD"
   },
   "ANF": {
    "n": "Abercrombie and Fitch",
+   "type": "EQUITY_STANDARD"
+  },
+  "ANGI": {
+   "n": "ANGI Homeservices",
    "type": "EQUITY_STANDARD"
   },
   "ANGL": {
@@ -621,6 +637,10 @@
    "n": "Vanguard Long-Term Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "BMBL": {
+   "n": "Bumble",
+   "type": "EQUITY_STANDARD"
+  },
   "BMRN": {
    "n": "BioMarin Pharmaceutical",
    "type": "EQUITY_STANDARD"
@@ -799,6 +819,10 @@
   },
   "CARG": {
    "n": "CarGurus",
+   "type": "EQUITY_STANDARD"
+  },
+  "CARS": {
+   "n": "Cars.com",
    "type": "EQUITY_STANDARD"
   },
   "CART": {
@@ -993,6 +1017,10 @@
    "n": "Direxion Auspice Broad Commodity Strategy ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "COMP": {
+   "n": "Compass",
+   "type": "EQUITY_STANDARD"
+  },
   "CONY": {
    "n": "YieldMax COIN Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
@@ -1068,6 +1096,10 @@
   "CRS": {
    "n": "Carpenter Technology",
    "type": "EQUITY_STANDARD"
+  },
+  "CRTO": {
+   "n": "Criteo",
+   "type": "ADR_VARIABLE"
   },
   "CRUS": {
    "n": "Cirrus Logic",
@@ -1147,6 +1179,10 @@
   },
   "DAKT": {
    "n": "Daktronics",
+   "type": "EQUITY_STANDARD"
+  },
+  "DAN": {
+   "n": "Dana Incorporated",
    "type": "EQUITY_STANDARD"
   },
   "DAPP": {
@@ -1345,6 +1381,10 @@
    "n": "WisdomTree US MidCap Dividend",
    "type": "ETF_PASS_THROUGH"
   },
+  "DORM": {
+   "n": "Dorman Products",
+   "type": "EQUITY_STANDARD"
+  },
   "DPZ": {
    "n": "Dominos Pizza",
    "type": "EQUITY_STANDARD"
@@ -1365,6 +1405,10 @@
    "n": "Leonardo DRS",
    "type": "EQUITY_STANDARD"
   },
+  "DSP": {
+   "n": "Viant Technology",
+   "type": "EQUITY_STANDARD"
+  },
   "DT": {
    "n": "Dynatrace",
    "type": "EQUITY_STANDARD"
@@ -1379,6 +1423,10 @@
   },
   "DUOL": {
    "n": "Duolingo",
+   "type": "EQUITY_STANDARD"
+  },
+  "DV": {
+   "n": "DoubleVerify Holdings",
    "type": "EQUITY_STANDARD"
   },
   "DVYE": {
@@ -2253,6 +2301,10 @@
    "n": "SPDR S&P Global Natural Resources ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "GNTX": {
+   "n": "Gentex",
+   "type": "EQUITY_STANDARD"
+  },
   "GO": {
    "n": "Grocery Outlet",
    "type": "EQUITY_STANDARD"
@@ -2272,6 +2324,10 @@
   "GOVT": {
    "n": "iShares US Treasury Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "GPI": {
+   "n": "Group 1 Automotive",
+   "type": "EQUITY_STANDARD"
   },
   "GPIQ": {
    "n": "Goldman Sachs Nasdaq-100 Core Premium Income",
@@ -2304,6 +2360,10 @@
   "GRID": {
    "n": "First Trust NASDAQ Clean Edge Smart Grid Infrastructure",
    "type": "ETF_PASS_THROUGH"
+  },
+  "GRND": {
+   "n": "Grindr",
+   "type": "EQUITY_STANDARD"
   },
   "GSG": {
    "n": "iShares S&P GSCI Commodity-Indexed Trust",
@@ -3141,6 +3201,10 @@
    "n": "FT Vest Rising Dividend Achievers Target Income ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "KNSL": {
+   "n": "Kinsale Capital Group",
+   "type": "EQUITY_STANDARD"
+  },
   "KNTK": {
    "n": "Kinetik Holdings",
    "type": "EQUITY_STANDARD"
@@ -3229,6 +3293,10 @@
    "n": "Lucid Group",
    "type": "EQUITY_STANDARD"
   },
+  "LEA": {
+   "n": "Lear Corporation",
+   "type": "EQUITY_STANDARD"
+  },
   "LEMB": {
    "n": "iShares J.P. Morgan EM Local Currency Bond ETF",
    "type": "ETF_PASS_THROUGH"
@@ -3255,6 +3323,10 @@
   },
   "LKQ": {
    "n": "LKQ Corporation",
+   "type": "EQUITY_STANDARD"
+  },
+  "LMND": {
+   "n": "Lemonade",
    "type": "EQUITY_STANDARD"
   },
   "LNG": {
@@ -3461,6 +3533,10 @@
    "n": "VanEck Morningstar Wide Moat",
    "type": "ETF_PASS_THROUGH"
   },
+  "MOD": {
+   "n": "Modine Manufacturing",
+   "type": "EQUITY_STANDARD"
+  },
   "MOO": {
    "n": "VanEck Agribusiness",
    "type": "ETF_PASS_THROUGH"
@@ -3604,6 +3680,10 @@
   "NLR": {
    "n": "VanEck Uranium and Nuclear",
    "type": "ETF_PASS_THROUGH"
+  },
+  "NMIH": {
+   "n": "NMI Holdings",
+   "type": "EQUITY_STANDARD"
   },
   "NNN": {
    "n": "NNN REIT",
@@ -3865,6 +3945,10 @@
    "n": "Payoneer",
    "type": "EQUITY_STANDARD"
   },
+  "PBD": {
+   "n": "Invesco Global Clean Energy ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "PBE": {
    "n": "Invesco Biotechnology & Genome ETF",
    "type": "ETF_PASS_THROUGH"
@@ -4125,6 +4209,10 @@
    "n": "Peloton Interactive",
    "type": "EQUITY_STANDARD"
   },
+  "PUBM": {
+   "n": "PubMatic",
+   "type": "EQUITY_STANDARD"
+  },
   "PULS": {
    "n": "PGIM Ultra Short Bond ETF",
    "type": "ETF_PASS_THROUGH"
@@ -4245,6 +4333,10 @@
    "n": "First Trust Rising Dividend Achievers",
    "type": "ETF_PASS_THROUGH"
   },
+  "REAL": {
+   "n": "The RealReal",
+   "type": "EQUITY_STANDARD"
+  },
   "REET": {
    "n": "iShares Global REIT ETF",
    "type": "ETF_PASS_THROUGH"
@@ -4359,6 +4451,10 @@
   },
   "ROKU": {
    "n": "Roku",
+   "type": "EQUITY_STANDARD"
+  },
+  "ROOT": {
+   "n": "Root, Inc.",
    "type": "EQUITY_STANDARD"
   },
   "RPD": {
@@ -4481,6 +4577,10 @@
    "n": "Safehold",
    "type": "EQUITY_STANDARD"
   },
+  "SAH": {
+   "n": "Sonic Automotive",
+   "type": "EQUITY_STANDARD"
+  },
   "SAIA": {
    "n": "Saia",
    "type": "EQUITY_STANDARD"
@@ -4499,6 +4599,10 @@
   },
   "SATS": {
    "n": "EchoStar",
+   "type": "EQUITY_STANDARD"
+  },
+  "SBGI": {
+   "n": "Sinclair",
    "type": "EQUITY_STANDARD"
   },
   "SBIO": {
@@ -4793,6 +4897,10 @@
    "n": "VanEck Low Carbon Energy ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "SMP": {
+   "n": "Standard Motor Products",
+   "type": "EQUITY_STANDARD"
+  },
   "SMPL": {
    "n": "Simply Good Foods",
    "type": "EQUITY_STANDARD"
@@ -5031,6 +5139,10 @@
   },
   "STRL": {
    "n": "Sterling Infrastructure",
+   "type": "EQUITY_STANDARD"
+  },
+  "STRT": {
+   "n": "Strattec Security",
    "type": "EQUITY_STANDARD"
   },
   "SUB": {
@@ -5435,6 +5547,10 @@
   },
   "VCIT": {
    "n": "Vanguard Intermediate-Term Corporate Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "VCLN": {
+   "n": "Virtus Duff & Phelps Clean Energy ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "VCLT": {
@@ -5935,6 +6051,10 @@
   },
   "Z": {
    "n": "Zillow Group (Class C)",
+   "type": "EQUITY_STANDARD"
+  },
+  "ZD": {
+   "n": "Ziff Davis",
    "type": "EQUITY_STANDARD"
   },
   "ZETA": {
