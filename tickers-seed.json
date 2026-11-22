@@ -81,8 +81,16 @@
    "n": "Agree Realty",
    "type": "EQUITY_STANDARD"
   },
+  "ADPT": {
+   "n": "Adaptive Biotechnologies",
+   "type": "EQUITY_STANDARD"
+  },
   "ADTN": {
    "n": "ADTRAN Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "ADUS": {
+   "n": "Addus HomeCare",
    "type": "EQUITY_STANDARD"
   },
   "AEHR": {
@@ -205,6 +213,10 @@
    "n": "Alerian MLP",
    "type": "ETF_PASS_THROUGH"
   },
+  "AMPH": {
+   "n": "Amphastar Pharmaceuticals",
+   "type": "EQUITY_STANDARD"
+  },
   "AMPL": {
    "n": "Amplitude",
    "type": "EQUITY_STANDARD"
@@ -236,6 +248,10 @@
   "ANGL": {
    "n": "VanEck Fallen Angel High Yield Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "ANIP": {
+   "n": "ANI Pharmaceuticals",
+   "type": "EQUITY_STANDARD"
   },
   "ANT": {
    "n": "Anthropic",
@@ -693,6 +709,10 @@
    "n": "BellRing Brands",
    "type": "EQUITY_STANDARD"
   },
+  "BRKR": {
+   "n": "Bruker",
+   "type": "EQUITY_STANDARD"
+  },
   "BROS": {
    "n": "Dutch Bros",
    "type": "EQUITY_STANDARD"
@@ -901,6 +921,10 @@
    "n": "Churchill Downs",
    "type": "EQUITY_STANDARD"
   },
+  "CHE": {
+   "n": "Chemed",
+   "type": "EQUITY_STANDARD"
+  },
   "CHEF": {
    "n": "Chefs' Warehouse",
    "type": "EQUITY_STANDARD"
@@ -1007,6 +1031,10 @@
   },
   "COLD": {
    "n": "Americold Realty Trust",
+   "type": "EQUITY_STANDARD"
+  },
+  "COLL": {
+   "n": "Collegium Pharmaceutical",
    "type": "EQUITY_STANDARD"
   },
   "COLM": {
@@ -2553,6 +2581,10 @@
    "n": "iShares US Broker-Dealers and Securities Exchanges",
    "type": "ETF_PASS_THROUGH"
   },
+  "IART": {
+   "n": "Integra LifeSciences",
+   "type": "EQUITY_STANDARD"
+  },
   "IAT": {
    "n": "iShares US Regional Banks",
    "type": "ETF_PASS_THROUGH"
@@ -2811,6 +2843,10 @@
   },
   "INSG": {
    "n": "Inseego",
+   "type": "EQUITY_STANDARD"
+  },
+  "INSP": {
+   "n": "Inspire Medical Systems",
    "type": "EQUITY_STANDARD"
   },
   "INSW": {
@@ -3309,6 +3345,10 @@
    "n": "Levi Strauss",
    "type": "EQUITY_STANDARD"
   },
+  "LGND": {
+   "n": "Ligand Pharmaceuticals",
+   "type": "EQUITY_STANDARD"
+  },
   "LI": {
    "n": "Li Auto",
    "type": "EQUITY_STANDARD"
@@ -3321,8 +3361,16 @@
    "n": "Global X Lithium and Battery Tech",
    "type": "ETF_PASS_THROUGH"
   },
+  "LIVN": {
+   "n": "LivaNova",
+   "type": "EQUITY_STANDARD"
+  },
   "LKQ": {
    "n": "LKQ Corporation",
+   "type": "EQUITY_STANDARD"
+  },
+  "LMAT": {
+   "n": "LeMaitre Vascular",
    "type": "EQUITY_STANDARD"
   },
   "LMND": {
@@ -3331,6 +3379,10 @@
   },
   "LNG": {
    "n": "Cheniere Energy",
+   "type": "EQUITY_STANDARD"
+  },
+  "LNTH": {
+   "n": "Lantheus Holdings",
    "type": "EQUITY_STANDARD"
   },
   "LOGI": {
@@ -3461,6 +3513,10 @@
    "n": "SPDR S&P MidCap 400",
    "type": "ETF_PASS_THROUGH"
   },
+  "MEDP": {
+   "n": "Medpace Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "MELI": {
    "n": "MercadoLibre",
    "type": "EQUITY_STANDARD"
@@ -3516,6 +3572,10 @@
   "MLPX": {
    "n": "Global X MLP & Energy Infrastructure ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "MMSI": {
+   "n": "Merit Medical Systems",
+   "type": "EQUITY_STANDARD"
   },
   "MMYT": {
    "n": "MakeMyTrip",
@@ -3637,6 +3697,10 @@
    "n": "iShares Short Maturity Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "NEOG": {
+   "n": "Neogen",
+   "type": "EQUITY_STANDARD"
+  },
   "NERD": {
    "n": "Roundhill Video Games ETF",
    "type": "ETF_PASS_THROUGH"
@@ -3727,6 +3791,10 @@
   },
   "NTR": {
    "n": "Nutrien",
+   "type": "EQUITY_STANDARD"
+  },
+  "NTRA": {
+   "n": "Natera",
    "type": "EQUITY_STANDARD"
   },
   "NTST": {
@@ -3873,6 +3941,10 @@
    "n": "Onto Innovation",
    "type": "EQUITY_STANDARD"
   },
+  "OPCH": {
+   "n": "Option Care Health",
+   "type": "EQUITY_STANDARD"
+  },
   "OPRA": {
    "n": "Opera",
    "type": "EQUITY_STANDARD"
@@ -3957,6 +4029,10 @@
    "n": "PBF Energy",
    "type": "EQUITY_STANDARD"
   },
+  "PBH": {
+   "n": "Prestige Consumer Healthcare",
+   "type": "EQUITY_STANDARD"
+  },
   "PBJ": {
    "n": "Invesco Food & Beverage ETF",
    "type": "ETF_PASS_THROUGH"
@@ -4008,6 +4084,10 @@
   "PEJ": {
    "n": "Invesco Leisure and Entertainment ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "PEN": {
+   "n": "Penumbra",
+   "type": "EQUITY_STANDARD"
   },
   "PENN": {
    "n": "PENN Entertainment",
@@ -4141,6 +4221,10 @@
    "n": "Permian Resources",
    "type": "EQUITY_STANDARD"
   },
+  "PRCT": {
+   "n": "PROCEPT BioRobotics",
+   "type": "EQUITY_STANDARD"
+  },
   "PRGO": {
    "n": "Perrigo",
    "type": "EQUITY_STANDARD"
@@ -4152,6 +4236,10 @@
   "PRNT": {
    "n": "ARK 3D Printing",
    "type": "ETF_PASS_THROUGH"
+  },
+  "PRVA": {
+   "n": "Privia Health Group",
+   "type": "EQUITY_STANDARD"
   },
   "PSCD": {
    "n": "Invesco S&P SmallCap Consumer Discretionary ETF",
@@ -4257,6 +4345,10 @@
    "n": "Qifu Technology",
    "type": "ADR_VARIABLE"
   },
+  "QGEN": {
+   "n": "Qiagen",
+   "type": "ADR_VARIABLE"
+  },
   "QLD": {
    "n": "ProShares Ultra QQQ",
    "type": "ETF_PASS_THROUGH"
@@ -4333,6 +4425,10 @@
    "n": "First Trust Rising Dividend Achievers",
    "type": "ETF_PASS_THROUGH"
   },
+  "RDY": {
+   "n": "Dr. Reddy's Laboratories",
+   "type": "ADR_VARIABLE"
+  },
   "REAL": {
    "n": "The RealReal",
    "type": "EQUITY_STANDARD"
@@ -4360,6 +4456,10 @@
   "REZ": {
    "n": "iShares Residential and Multisector Real Estate",
    "type": "ETF_PASS_THROUGH"
+  },
+  "RGEN": {
+   "n": "Repligen",
+   "type": "EQUITY_STANDARD"
   },
   "RGLD": {
    "n": "Royal Gold",
@@ -5229,6 +5329,10 @@
    "n": "Teradyne",
    "type": "EQUITY_STANDARD"
   },
+  "TEVA": {
+   "n": "Teva Pharmaceutical Industries",
+   "type": "ADR_VARIABLE"
+  },
   "TFI": {
    "n": "SPDR Nuveen Bloomberg Municipal Bond",
    "type": "ETF_PASS_THROUGH"
@@ -5236,6 +5340,10 @@
   "TFLO": {
    "n": "iShares Treasury Floating Rate Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "TFX": {
+   "n": "Teleflex",
+   "type": "EQUITY_STANDARD"
   },
   "THC": {
    "n": "Tenet Healthcare",
@@ -5277,6 +5385,10 @@
    "n": "Toyota Motor",
    "type": "EQUITY_STANDARD"
   },
+  "TMDX": {
+   "n": "TransMedics Group",
+   "type": "EQUITY_STANDARD"
+  },
   "TME": {
    "n": "Tencent Music Entertainment",
    "type": "ADR_VARIABLE"
@@ -5284,6 +5396,10 @@
   "TNA": {
    "n": "Direxion Daily Small Cap Bull 3X Shares",
    "type": "ETF_PASS_THROUGH"
+  },
+  "TNDM": {
+   "n": "Tandem Diabetes Care",
+   "type": "EQUITY_STANDARD"
   },
   "TNET": {
    "n": "TriNet Group",
@@ -5564,6 +5680,10 @@
   "VCSH": {
    "n": "Vanguard Short-Term Corporate Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "VCYT": {
+   "n": "Veracyte",
+   "type": "EQUITY_STANDARD"
   },
   "VDC": {
    "n": "Vanguard Consumer Staples",
