@@ -29,6 +29,10 @@
    "n": "iShares MSCI All Country Asia ex Japan ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "ABCB": {
+   "n": "Ameris Bancorp",
+   "type": "EQUITY_STANDARD"
+  },
   "ABG": {
    "n": "Asbury Automotive Group",
    "type": "EQUITY_STANDARD"
@@ -397,6 +401,10 @@
    "n": "AngloGold Ashanti",
    "type": "ADR_VARIABLE"
   },
+  "AUB": {
+   "n": "Atlantic Union Bankshares",
+   "type": "EQUITY_STANDARD"
+  },
   "AVA": {
    "n": "Avista",
    "type": "EQUITY_STANDARD"
@@ -461,6 +469,10 @@
    "n": "American States Water",
    "type": "EQUITY_STANDARD"
   },
+  "AX": {
+   "n": "Axos Financial",
+   "type": "EQUITY_STANDARD"
+  },
   "AXS": {
    "n": "Axis Capital Holdings",
    "type": "EQUITY_STANDARD"
@@ -495,6 +507,14 @@
   },
   "BAND": {
    "n": "Bandwidth",
+   "type": "EQUITY_STANDARD"
+  },
+  "BANF": {
+   "n": "BancFirst",
+   "type": "EQUITY_STANDARD"
+  },
+  "BANR": {
+   "n": "Banner Corporation",
    "type": "EQUITY_STANDARD"
   },
   "BAP": {
@@ -637,6 +657,10 @@
    "n": "Invesco Senior Loan",
    "type": "ETF_PASS_THROUGH"
   },
+  "BKU": {
+   "n": "BankUnited",
+   "type": "EQUITY_STANDARD"
+  },
   "BL": {
    "n": "BlackLine",
    "type": "EQUITY_STANDARD"
@@ -688,6 +712,10 @@
   "BOAT": {
    "n": "SonicShares Global Shipping ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "BOH": {
+   "n": "Bank of Hawaii",
+   "type": "EQUITY_STANDARD"
   },
   "BOKF": {
    "n": "BOK Financial",
@@ -789,6 +817,10 @@
    "n": "Burlington Stores",
    "type": "EQUITY_STANDARD"
   },
+  "BUSE": {
+   "n": "First Busey",
+   "type": "EQUITY_STANDARD"
+  },
   "BUZZ": {
    "n": "VanEck Social Sentiment ETF",
    "type": "ETF_PASS_THROUGH"
@@ -869,6 +901,14 @@
    "n": "First Trust NASDAQ Global Auto Index Fund",
    "type": "ETF_PASS_THROUGH"
   },
+  "CASH": {
+   "n": "Pathward Financial",
+   "type": "EQUITY_STANDARD"
+  },
+  "CATY": {
+   "n": "Cathay General Bancorp",
+   "type": "EQUITY_STANDARD"
+  },
   "CAVA": {
    "n": "Cava Group",
    "type": "EQUITY_STANDARD"
@@ -879,6 +919,10 @@
   },
   "CBSH": {
    "n": "Commerce Bancshares",
+   "type": "EQUITY_STANDARD"
+  },
+  "CBU": {
+   "n": "Community Financial System",
    "type": "EQUITY_STANDARD"
   },
   "CCJ": {
@@ -932,6 +976,10 @@
   "CHAT": {
    "n": "Roundhill Generative AI & Technology ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "CHCO": {
+   "n": "City Holding Company",
+   "type": "EQUITY_STANDARD"
   },
   "CHDN": {
    "n": "Churchill Downs",
@@ -1181,12 +1229,20 @@
    "n": "CubeSmart",
    "type": "EQUITY_STANDARD"
   },
+  "CUBI": {
+   "n": "Customers Bancorp",
+   "type": "EQUITY_STANDARD"
+  },
   "CUT": {
    "n": "Invesco MSCI Global Timber ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "CUZ": {
    "n": "Cousins Properties",
+   "type": "EQUITY_STANDARD"
+  },
+  "CVBF": {
+   "n": "CVB Financial",
    "type": "EQUITY_STANDARD"
   },
   "CVCO": {
@@ -1271,6 +1327,10 @@
   },
   "DBX": {
    "n": "Dropbox",
+   "type": "EQUITY_STANDARD"
+  },
+  "DCOM": {
+   "n": "Dime Community Bancshares",
    "type": "EQUITY_STANDARD"
   },
   "DDS": {
@@ -1497,6 +1557,10 @@
    "n": "Brinker International",
    "type": "EQUITY_STANDARD"
   },
+  "EBC": {
+   "n": "Eastern Bankshares",
+   "type": "EQUITY_STANDARD"
+  },
   "EBIZ": {
    "n": "Global X E-commerce",
    "type": "ETF_PASS_THROUGH"
@@ -1544,6 +1608,10 @@
   "EFNL": {
    "n": "iShares MSCI Finland ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "EFSC": {
+   "n": "Enterprise Financial Services",
+   "type": "EQUITY_STANDARD"
   },
   "EFV": {
    "n": "iShares MSCI EAFE Value ETF",
@@ -1621,6 +1689,10 @@
    "n": "Entegris",
    "type": "EQUITY_STANDARD"
   },
+  "ENVA": {
+   "n": "Enova International",
+   "type": "EQUITY_STANDARD"
+  },
   "EPAM": {
    "n": "EPAM Systems",
    "type": "EQUITY_STANDARD"
@@ -1695,6 +1767,10 @@
   },
   "EUAD": {
    "n": "Select STOXX Europe Aerospace & Defense ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "EUFN": {
+   "n": "iShares MSCI Europe Financials ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "EUSA": {
@@ -1837,6 +1913,14 @@
    "n": "Fortune Brands Innovations",
    "type": "EQUITY_STANDARD"
   },
+  "FBK": {
+   "n": "FB Financial",
+   "type": "EQUITY_STANDARD"
+  },
+  "FBNC": {
+   "n": "First Bancorp (North Carolina)",
+   "type": "EQUITY_STANDARD"
+  },
   "FBND": {
    "n": "Fidelity Total Bond",
    "type": "ETF_PASS_THROUGH"
@@ -1852,6 +1936,10 @@
   "FBY": {
    "n": "YieldMax META Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
+  },
+  "FCF": {
+   "n": "First Commonwealth Financial",
+   "type": "EQUITY_STANDARD"
   },
   "FCG": {
    "n": "First Trust Natural Gas",
@@ -1889,9 +1977,25 @@
    "n": "First Trust Large Cap Core AlphaDEX Fund",
    "type": "ETF_PASS_THROUGH"
   },
+  "FFBC": {
+   "n": "First Financial Bancorp",
+   "type": "EQUITY_STANDARD"
+  },
+  "FFIN": {
+   "n": "First Financial Bankshares",
+   "type": "EQUITY_STANDARD"
+  },
+  "FHB": {
+   "n": "First Hawaiian",
+   "type": "EQUITY_STANDARD"
+  },
   "FHLC": {
    "n": "Fidelity MSCI Health Care",
    "type": "ETF_PASS_THROUGH"
+  },
+  "FIBK": {
+   "n": "First Interstate BancSystem",
+   "type": "EQUITY_STANDARD"
   },
   "FIDU": {
    "n": "Fidelity MSCI Industrials",
@@ -2089,6 +2193,10 @@
    "n": "First Trust S&P REIT Index Fund",
    "type": "ETF_PASS_THROUGH"
   },
+  "FRME": {
+   "n": "First Merchants",
+   "type": "EQUITY_STANDARD"
+  },
   "FRO": {
    "n": "Frontline",
    "type": "ADR_VARIABLE"
@@ -2185,6 +2293,10 @@
    "n": "H.B. Fuller",
    "type": "EQUITY_STANDARD"
   },
+  "FULT": {
+   "n": "Fulton Financial",
+   "type": "EQUITY_STANDARD"
+  },
   "FUN": {
    "n": "Six Flags Entertainment",
    "type": "EQUITY_STANDARD"
@@ -2263,6 +2375,10 @@
   },
   "GATX": {
    "n": "GATX",
+   "type": "EQUITY_STANDARD"
+  },
+  "GBCI": {
+   "n": "Glacier Bancorp",
    "type": "EQUITY_STANDARD"
   },
   "GBIL": {
@@ -2536,6 +2652,10 @@
   "HODL": {
    "n": "VanEck Bitcoin",
    "type": "ETF_PASS_THROUGH"
+  },
+  "HOMB": {
+   "n": "Home BancShares",
+   "type": "EQUITY_STANDARD"
   },
   "HOMZ": {
    "n": "Hoya Capital Housing ETF",
