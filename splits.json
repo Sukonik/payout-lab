@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-11-23T00:31:41.737Z",
- "upcomingAsOf": "2026-11-20",
+ "updated": "2026-11-23T13:37:40.374Z",
+ "upcomingAsOf": "2026-11-23",
  "tickers": {
   "A": {
    "n": "Agilent Technologies",
@@ -26303,48 +26303,59 @@
  },
  "upcoming": [
   {
-   "t": "LICN",
-   "n": "Lichen International Limited",
+   "t": "AEI",
+   "n": "Alset Inc.",
    "a": 1,
-   "b": 100,
-   "exDate": "2026-11-20",
+   "b": 5,
+   "exDate": "2026-11-23",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
-   "t": "NIXX",
-   "n": "Nixxy, Inc.",
+   "t": "AUUD",
+   "n": "Auddia Inc.",
    "a": 1,
-   "b": 20,
-   "exDate": "2026-11-20",
+   "b": 14,
+   "exDate": "2026-11-23",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
-   "t": "NTCL",
-   "n": "NETCLASS TECHNOLOGY INC",
+   "t": "BRNX",
+   "n": "BrenX Ltd.",
    "a": 1,
-   "b": 10,
-   "exDate": "2026-11-20",
+   "b": 4,
+   "exDate": "2026-11-23",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
-   "t": "SNDK",
-   "n": "Sandisk Corporation",
-   "a": 8,
-   "b": 1,
-   "exDate": "2026-11-20",
+   "t": "CYAB",
+   "n": "Cyabra, Inc.",
+   "a": 1,
+   "b": 30,
+   "exDate": "2026-11-23",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
+  },
+  {
+   "t": "IMCC",
+   "n": "IM Cannabis Corp.",
+   "a": 1,
+   "b": 3,
+   "exDate": "2026-11-23",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-23"
   },
   {
    "t": "ITP",
@@ -26355,7 +26366,139 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
+  },
+  {
+   "t": "LSTA",
+   "n": "Lisata Therapeutics, Inc.",
+   "a": 1,
+   "b": 15,
+   "exDate": "2026-11-23",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-23"
+  },
+  {
+   "t": "PARA",
+   "n": "Parabolic Technologies, Inc.",
+   "a": 1,
+   "b": 100,
+   "exDate": "2026-11-23",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-23"
+  },
+  {
+   "t": "RIME",
+   "n": "Algorhythm Holdings, Inc.",
+   "a": 1,
+   "b": 10,
+   "exDate": "2026-11-23",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-23"
+  },
+  {
+   "t": "SMTK",
+   "n": "SmartKem, Inc.",
+   "a": 1,
+   "b": 5,
+   "exDate": "2026-11-23",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-23"
+  },
+  {
+   "t": "SRTM",
+   "n": "Stratum Holdings Corp.",
+   "a": 1,
+   "b": 9,
+   "exDate": "2026-11-23",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-23"
+  },
+  {
+   "t": "TOPP",
+   "n": "Toppoint Holdings Inc.",
+   "a": 1,
+   "b": 5,
+   "exDate": "2026-11-23",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-23"
+  },
+  {
+   "t": "CCTG",
+   "n": "CCSC Technology International Holdings Limited",
+   "a": 1,
+   "b": 20,
+   "exDate": "2026-11-24",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-23"
+  },
+  {
+   "t": "CODX",
+   "n": "Co-Diagnostics, Inc.",
+   "a": 1,
+   "b": 25,
+   "exDate": "2026-11-24",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-23"
+  },
+  {
+   "t": "GFAI",
+   "n": "Guardforce AI Co., Limited",
+   "a": 1,
+   "b": 40,
+   "exDate": "2026-11-24",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-23"
+  },
+  {
+   "t": "ISPC",
+   "n": "iSpecimen Inc.",
+   "a": 1,
+   "b": 6,
+   "exDate": "2026-11-24",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-23"
+  },
+  {
+   "t": "JAGX",
+   "n": "Jaguar Health, Inc.",
+   "a": 1,
+   "b": 25,
+   "exDate": "2026-11-24",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-23"
+  },
+  {
+   "t": "RBNE",
+   "n": "Robin Energy Ltd.",
+   "a": 1,
+   "b": 75,
+   "exDate": "2026-11-24",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-23"
   },
   {
    "t": "MYND",
@@ -26366,7 +26509,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
    "t": "SITM",
@@ -26377,7 +26520,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
    "t": "AAOG",
@@ -26388,7 +26531,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
    "t": "AEHG",
@@ -26399,7 +26542,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
    "t": "ASTG",
@@ -26410,7 +26553,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
    "t": "AXTL",
@@ -26421,7 +26564,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
    "t": "CBRG",
@@ -26432,7 +26575,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
    "t": "CIEG",
@@ -26443,7 +26586,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
    "t": "COHH",
@@ -26454,7 +26597,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
    "t": "FOMG",
@@ -26465,7 +26608,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
    "t": "FPSX",
@@ -26476,7 +26619,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   },
   {
    "t": "SNDG",
@@ -26487,7 +26630,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-20"
+   "asOf": "2026-11-23"
   }
  ]
 }
