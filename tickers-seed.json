@@ -593,6 +593,10 @@
    "n": "BILL Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "BIRK": {
+   "n": "Birkenstock Holding",
+   "type": "ADR_VARIABLE"
+  },
   "BITB": {
    "n": "Bitwise Bitcoin",
    "type": "ETF_PASS_THROUGH"
@@ -693,6 +697,10 @@
    "n": "PIMCO Active Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "BOOT": {
+   "n": "Boot Barn Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "BOTZ": {
    "n": "Global X Robotics and Artificial Intelligence",
    "type": "ETF_PASS_THROUGH"
@@ -753,6 +761,10 @@
    "n": "B2Gold",
    "type": "EQUITY_STANDARD"
   },
+  "BTI": {
+   "n": "British American Tobacco",
+   "type": "ADR_VARIABLE"
+  },
   "BTU": {
    "n": "Peabody Energy",
    "type": "EQUITY_STANDARD"
@@ -804,6 +816,10 @@
   "BYLD": {
    "n": "iShares Yield Optimized Bond ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "BYND": {
+   "n": "Beyond Meat",
+   "type": "EQUITY_STANDARD"
   },
   "CACI": {
    "n": "CACI International",
@@ -1095,6 +1111,10 @@
   },
   "CPNG": {
    "n": "Coupang",
+   "type": "EQUITY_STANDARD"
+  },
+  "CPRI": {
+   "n": "Capri Holdings",
    "type": "EQUITY_STANDARD"
   },
   "CQQQ": {
@@ -1589,6 +1609,10 @@
    "n": "Enphase Energy",
    "type": "EQUITY_STANDARD"
   },
+  "ENR": {
+   "n": "Energizer Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "ENSG": {
    "n": "Ensign Group",
    "type": "EQUITY_STANDARD"
@@ -1651,6 +1675,10 @@
   },
   "ESTC": {
    "n": "Elastic",
+   "type": "EQUITY_STANDARD"
+  },
+  "ETD": {
+   "n": "Ethan Allen Interiors",
    "type": "EQUITY_STANDARD"
   },
   "ETHA": {
@@ -2341,6 +2369,10 @@
    "n": "Global X Gold Explorers ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "GOOS": {
+   "n": "Canada Goose Holdings",
+   "type": "ADR_VARIABLE"
+  },
   "GOOY": {
    "n": "YieldMax GOOGL Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
@@ -2465,6 +2497,10 @@
    "n": "HEICO",
    "type": "EQUITY_STANDARD"
   },
+  "HELE": {
+   "n": "Helen of Troy",
+   "type": "EQUITY_STANDARD"
+  },
   "HELX": {
    "n": "Franklin Genomic Advancements ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2535,6 +2571,10 @@
   },
   "HUBS": {
    "n": "HubSpot",
+   "type": "EQUITY_STANDARD"
+  },
+  "HVT": {
+   "n": "Haverty Furniture Companies",
    "type": "EQUITY_STANDARD"
   },
   "HXL": {
@@ -2815,6 +2855,10 @@
   },
   "IMAX": {
    "n": "IMAX",
+   "type": "EQUITY_STANDARD"
+  },
+  "IMKTA": {
+   "n": "Ingles Markets",
    "type": "EQUITY_STANDARD"
   },
   "IMTM": {
@@ -3289,6 +3333,10 @@
    "n": "Kohls",
    "type": "EQUITY_STANDARD"
   },
+  "KTB": {
+   "n": "Kontoor Brands",
+   "type": "EQUITY_STANDARD"
+  },
   "KTOS": {
    "n": "Kratos Defense & Security Solutions",
    "type": "EQUITY_STANDARD"
@@ -3563,6 +3611,10 @@
   },
   "MLI": {
    "n": "Mueller Industries",
+   "type": "EQUITY_STANDARD"
+  },
+  "MLKN": {
+   "n": "MillerKnoll",
    "type": "EQUITY_STANDARD"
   },
   "MLPA": {
@@ -3965,6 +4017,10 @@
    "n": "Oshkosh",
    "type": "EQUITY_STANDARD"
   },
+  "OTLY": {
+   "n": "Oatly Group",
+   "type": "ADR_VARIABLE"
+  },
   "OTTR": {
    "n": "Otter Tail",
    "type": "EQUITY_STANDARD"
@@ -3979,6 +4035,10 @@
   },
   "OVV": {
    "n": "Ovintiv",
+   "type": "EQUITY_STANDARD"
+  },
+  "OXM": {
+   "n": "Oxford Industries",
    "type": "EQUITY_STANDARD"
   },
   "OZK": {
@@ -4269,6 +4329,10 @@
    "n": "SPDR ICE Preferred Securities ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "PSMT": {
+   "n": "PriceSmart",
+   "type": "EQUITY_STANDARD"
+  },
   "PSQ": {
    "n": "ProShares Short QQQ",
    "type": "ETF_PASS_THROUGH"
@@ -4300,6 +4364,10 @@
   "PUBM": {
    "n": "PubMatic",
    "type": "EQUITY_STANDARD"
+  },
+  "PUI": {
+   "n": "Invesco DWA Utilities Momentum ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "PULS": {
    "n": "PGIM Ultra Short Bond ETF",
@@ -4865,6 +4933,10 @@
    "n": "Sunstone Hotel Investors",
    "type": "EQUITY_STANDARD"
   },
+  "SHOO": {
+   "n": "Steven Madden",
+   "type": "EQUITY_STANDARD"
+  },
   "SHOP": {
    "n": "Shopify",
    "type": "EQUITY_STANDARD"
@@ -5425,6 +5497,10 @@
    "n": "SPDR DoubleLine Total Return Tactical",
    "type": "ETF_PASS_THROUGH"
   },
+  "TPB": {
+   "n": "Turning Point Brands",
+   "type": "EQUITY_STANDARD"
+  },
   "TPYP": {
    "n": "Tortoise North American Pipeline Fund",
    "type": "ETF_PASS_THROUGH"
@@ -5639,6 +5715,10 @@
   },
   "UUUU": {
    "n": "Energy Fuels",
+   "type": "EQUITY_STANDARD"
+  },
+  "UVV": {
+   "n": "Universal Corporation",
    "type": "EQUITY_STANDARD"
   },
   "VAC": {
@@ -5993,6 +6073,10 @@
    "n": "Warner Music Group",
    "type": "EQUITY_STANDARD"
   },
+  "WMK": {
+   "n": "Weis Markets",
+   "type": "EQUITY_STANDARD"
+  },
   "WMS": {
    "n": "Advanced Drainage Systems",
    "type": "EQUITY_STANDARD"
@@ -6039,6 +6123,10 @@
   },
   "WTS": {
    "n": "Watts Water Technologies",
+   "type": "EQUITY_STANDARD"
+  },
+  "WWW": {
+   "n": "Wolverine World Wide",
    "type": "EQUITY_STANDARD"
   },
   "XAR": {
@@ -6208,6 +6296,10 @@
   "ZTO": {
    "n": "ZTO Express (Cayman)",
    "type": "ADR_VARIABLE"
+  },
+  "ZUMZ": {
+   "n": "Zumiez",
+   "type": "EQUITY_STANDARD"
   },
   "ZWS": {
    "n": "Zurn Elkay Water Solutions",
