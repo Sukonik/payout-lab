@@ -185,6 +185,10 @@
    "n": "Ally Financial",
    "type": "EQUITY_STANDARD"
   },
+  "ALTO": {
+   "n": "Alto Ingredients",
+   "type": "EQUITY_STANDARD"
+  },
   "ALV": {
    "n": "Autoliv",
    "type": "EQUITY_STANDARD"
@@ -357,8 +361,16 @@
    "n": "Aramark",
    "type": "EQUITY_STANDARD"
   },
+  "AROC": {
+   "n": "Archrock",
+   "type": "EQUITY_STANDARD"
+  },
   "ARRY": {
    "n": "Array Technologies",
+   "type": "EQUITY_STANDARD"
+  },
+  "ARTNA": {
+   "n": "Artesian Resources",
    "type": "EQUITY_STANDARD"
   },
   "ARW": {
@@ -585,6 +597,10 @@
    "n": "Brandywine Realty Trust",
    "type": "EQUITY_STANDARD"
   },
+  "BEPC": {
+   "n": "Brookfield Renewable Corporation",
+   "type": "ADR_VARIABLE"
+  },
   "BETZ": {
    "n": "Roundhill Sports Betting & iGaming ETF",
    "type": "ETF_PASS_THROUGH"
@@ -796,6 +812,10 @@
   "BTCO": {
    "n": "Invesco Galaxy Bitcoin",
    "type": "ETF_PASS_THROUGH"
+  },
+  "BTE": {
+   "n": "Baytex Energy",
+   "type": "ADR_VARIABLE"
   },
   "BTG": {
    "n": "B2Gold",
@@ -1041,6 +1061,10 @@
    "n": "Civitas Resources",
    "type": "EQUITY_STANDARD"
   },
+  "CLB": {
+   "n": "Core Laboratories",
+   "type": "EQUITY_STANDARD"
+  },
   "CLF": {
    "n": "Cleveland-Cliffs",
    "type": "EQUITY_STANDARD"
@@ -1201,6 +1225,10 @@
    "n": "Credo Technology",
    "type": "EQUITY_STANDARD"
   },
+  "CRGY": {
+   "n": "Crescent Energy",
+   "type": "EQUITY_STANDARD"
+  },
   "CRI": {
    "n": "Carter's",
    "type": "EQUITY_STANDARD"
@@ -1284,6 +1312,10 @@
   "CWB": {
    "n": "SPDR Bloomberg Convertible Securities",
    "type": "ETF_PASS_THROUGH"
+  },
+  "CWEN": {
+   "n": "Clearway Energy",
+   "type": "EQUITY_STANDARD"
   },
   "CWT": {
    "n": "California Water Service Group",
@@ -2297,6 +2329,10 @@
    "n": "First Trust BuyWrite Income ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "FTI": {
+   "n": "TechnipFMC",
+   "type": "EQUITY_STANDARD"
+  },
   "FTRI": {
    "n": "First Trust Indxx Global Natural Resources Income ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2553,6 +2589,10 @@
    "n": "Gulfport Energy",
    "type": "EQUITY_STANDARD"
   },
+  "GPRE": {
+   "n": "Green Plains",
+   "type": "EQUITY_STANDARD"
+  },
   "GPS": {
    "n": "Gap",
    "type": "EQUITY_STANDARD"
@@ -2637,6 +2677,10 @@
    "n": "VanEck Natural Resources ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "HASI": {
+   "n": "HA Sustainable Infrastructure Capital",
+   "type": "EQUITY_STANDARD"
+  },
   "HAUZ": {
    "n": "Xtrackers International Real Estate ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2708,6 +2752,10 @@
   "HOMZ": {
    "n": "Hoya Capital Housing ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "HP": {
+   "n": "Helmerich & Payne",
+   "type": "EQUITY_STANDARD"
   },
   "HPP": {
    "n": "Hudson Pacific Properties",
@@ -3437,6 +3485,10 @@
    "n": "Kinross Gold",
    "type": "EQUITY_STANDARD"
   },
+  "KGS": {
+   "n": "Kodiak Gas Services",
+   "type": "EQUITY_STANDARD"
+  },
   "KIE": {
    "n": "SPDR S&P Insurance",
    "type": "ETF_PASS_THROUGH"
@@ -3861,6 +3913,10 @@
    "n": "Mercury Systems",
    "type": "EQUITY_STANDARD"
   },
+  "MSEX": {
+   "n": "Middlesex Water",
+   "type": "EQUITY_STANDARD"
+  },
   "MSGE": {
    "n": "Madison Square Garden Entertainment",
    "type": "EQUITY_STANDARD"
@@ -3941,6 +3997,10 @@
    "n": "Noodles & Company",
    "type": "EQUITY_STANDARD"
   },
+  "NE": {
+   "n": "Noble Corporation",
+   "type": "EQUITY_STANDARD"
+  },
   "NEAR": {
    "n": "iShares Short Maturity Bond",
    "type": "ETF_PASS_THROUGH"
@@ -3989,6 +4049,10 @@
    "n": "NIO",
    "type": "EQUITY_STANDARD"
   },
+  "NJR": {
+   "n": "New Jersey Resources",
+   "type": "EQUITY_STANDARD"
+  },
   "NLR": {
    "n": "VanEck Uranium and Nuclear",
    "type": "ETF_PASS_THROUGH"
@@ -4008,6 +4072,10 @@
   "NORW": {
    "n": "Global X MSCI Norway ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "NOV": {
+   "n": "NOV Inc.",
+   "type": "EQUITY_STANDARD"
   },
   "NOVT": {
    "n": "Novanta",
@@ -4145,6 +4213,14 @@
    "n": "VanEck Oil Services",
    "type": "ETF_PASS_THROUGH"
   },
+  "OII": {
+   "n": "Oceaneering International",
+   "type": "EQUITY_STANDARD"
+  },
+  "OIS": {
+   "n": "Oil States International",
+   "type": "EQUITY_STANDARD"
+  },
   "OKLO": {
    "n": "Oklo",
    "type": "EQUITY_STANDARD"
@@ -4199,6 +4275,10 @@
   },
   "OR": {
    "n": "OR Royalties",
+   "type": "EQUITY_STANDARD"
+  },
+  "ORA": {
+   "n": "Ormat Technologies",
    "type": "EQUITY_STANDARD"
   },
   "ORBT": {
@@ -4260,6 +4340,10 @@
   "PALL": {
    "n": "abrdn Physical Palladium Shares",
    "type": "ETF_PASS_THROUGH"
+  },
+  "PARR": {
+   "n": "Par Pacific Holdings",
+   "type": "EQUITY_STANDARD"
   },
   "PATH": {
    "n": "UiPath",
@@ -4728,6 +4812,14 @@
   "REMX": {
    "n": "VanEck Rare Earth and Strategic Metals",
    "type": "ETF_PASS_THROUGH"
+  },
+  "RES": {
+   "n": "RPC Inc.",
+   "type": "EQUITY_STANDARD"
+  },
+  "REX": {
+   "n": "REX American Resources",
+   "type": "EQUITY_STANDARD"
   },
   "REXR": {
    "n": "Rexford Industrial Realty",
@@ -5581,6 +5673,10 @@
    "n": "TAL Education Group",
    "type": "ADR_VARIABLE"
   },
+  "TALO": {
+   "n": "Talos Energy",
+   "type": "EQUITY_STANDARD"
+  },
   "TAN": {
    "n": "Invesco Solar",
    "type": "ETF_PASS_THROUGH"
@@ -5773,6 +5869,10 @@
    "n": "Tetra Tech",
    "type": "EQUITY_STANDARD"
   },
+  "TTI": {
+   "n": "TETRA Technologies",
+   "type": "EQUITY_STANDARD"
+  },
   "TTMI": {
    "n": "TTM Technologies",
    "type": "EQUITY_STANDARD"
@@ -5959,6 +6059,10 @@
   },
   "VAC": {
    "n": "Marriott Vacations Worldwide",
+   "type": "EQUITY_STANDARD"
+  },
+  "VAL": {
+   "n": "Valaris",
    "type": "EQUITY_STANDARD"
   },
   "VALE": {
@@ -6293,6 +6397,10 @@
    "n": "Wyndham Hotels & Resorts",
    "type": "EQUITY_STANDARD"
   },
+  "WHD": {
+   "n": "Cactus Inc.",
+   "type": "EQUITY_STANDARD"
+  },
   "WING": {
    "n": "Wingstop",
    "type": "EQUITY_STANDARD"
@@ -6359,6 +6467,14 @@
   },
   "WTFC": {
    "n": "Wintrust Financial",
+   "type": "EQUITY_STANDARD"
+  },
+  "WTI": {
+   "n": "W&T Offshore",
+   "type": "EQUITY_STANDARD"
+  },
+  "WTRG": {
+   "n": "Essential Utilities",
    "type": "EQUITY_STANDARD"
   },
   "WTS": {
@@ -6492,6 +6608,10 @@
   "YMAX": {
    "n": "YieldMax Universe Fund of Option Income ETFs",
    "type": "ETF_PASS_THROUGH"
+  },
+  "YORW": {
+   "n": "York Water",
+   "type": "EQUITY_STANDARD"
   },
   "YUMC": {
    "n": "Yum China Holdings",
