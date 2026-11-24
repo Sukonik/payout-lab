@@ -229,6 +229,10 @@
    "n": "Alpha Metallurgical Resources",
    "type": "EQUITY_STANDARD"
   },
+  "AMSF": {
+   "n": "AMERISAFE",
+   "type": "EQUITY_STANDARD"
+  },
   "AMZY": {
    "n": "YieldMax AMZN Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
@@ -593,6 +597,10 @@
    "n": "Benchmark Electronics",
    "type": "EQUITY_STANDARD"
   },
+  "BHF": {
+   "n": "Brighthouse Financial",
+   "type": "EQUITY_STANDARD"
+  },
   "BHP": {
    "n": "BHP Group",
    "type": "ADR_VARIABLE"
@@ -631,6 +639,10 @@
   },
   "BIV": {
    "n": "Vanguard Intermediate-Term Bond",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BIZD": {
+   "n": "VanEck BDC Income ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "BJ": {
@@ -1061,6 +1073,10 @@
    "n": "Cinemark Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "CNO": {
+   "n": "CNO Financial Group",
+   "type": "EQUITY_STANDARD"
+  },
   "CNRG": {
    "n": "SPDR S&P Kensho Clean Power ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1172,6 +1188,10 @@
   "CRAK": {
    "n": "VanEck Oil Refiners ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "CRBG": {
+   "n": "Corebridge Financial",
+   "type": "EQUITY_STANDARD"
   },
   "CRC": {
    "n": "California Resources",
@@ -1633,6 +1653,10 @@
    "n": "iShares MSCI Indonesia",
    "type": "ETF_PASS_THROUGH"
   },
+  "EIG": {
+   "n": "Employers Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "EIRL": {
    "n": "iShares MSCI Ireland ETF",
    "type": "ETF_PASS_THROUGH"
@@ -1901,6 +1925,10 @@
    "n": "iShares MSCI Eurozone",
    "type": "ETF_PASS_THROUGH"
   },
+  "FAF": {
+   "n": "First American Financial",
+   "type": "EQUITY_STANDARD"
+  },
   "FALN": {
    "n": "iShares Fallen Angels USD Bond",
    "type": "ETF_PASS_THROUGH"
@@ -1983,6 +2011,10 @@
   },
   "FFIN": {
    "n": "First Financial Bankshares",
+   "type": "EQUITY_STANDARD"
+  },
+  "FG": {
+   "n": "F&G Annuities & Life",
    "type": "EQUITY_STANDARD"
   },
   "FHB": {
@@ -2152,6 +2184,10 @@
   "FNDX": {
    "n": "Schwab Fundamental US Large Company Index",
    "type": "ETF_PASS_THROUGH"
+  },
+  "FNF": {
+   "n": "Fidelity National Financial",
+   "type": "EQUITY_STANDARD"
   },
   "FNGU": {
    "n": "MicroSectors FANG+ 3X Leveraged ETN",
@@ -2545,6 +2581,10 @@
    "n": "iShares S&P GSCI Commodity-Indexed Trust",
    "type": "ETF_PASS_THROUGH"
   },
+  "GSHD": {
+   "n": "Goosehead Insurance",
+   "type": "EQUITY_STANDARD"
+  },
   "GSY": {
    "n": "Invesco Ultra Short Duration ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2605,6 +2645,10 @@
    "n": "Hudbay Minerals",
    "type": "ADR_VARIABLE"
   },
+  "HCI": {
+   "n": "HCI Group",
+   "type": "EQUITY_STANDARD"
+  },
   "HEDJ": {
    "n": "WisdomTree Europe Hedged Equity",
    "type": "ETF_PASS_THROUGH"
@@ -2639,6 +2683,10 @@
   },
   "HL": {
    "n": "Hecla Mining",
+   "type": "EQUITY_STANDARD"
+  },
+  "HLI": {
+   "n": "Houlihan Lokey",
    "type": "EQUITY_STANDARD"
   },
   "HMC": {
@@ -2679,6 +2727,10 @@
   },
   "HRI": {
    "n": "Herc Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "HRTG": {
+   "n": "Heritage Insurance Holdings",
    "type": "EQUITY_STANDARD"
   },
   "HTHT": {
@@ -2739,6 +2791,10 @@
   },
   "IAI": {
    "n": "iShares US Broker-Dealers and Securities Exchanges",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IAK": {
+   "n": "iShares U.S. Insurance ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "IART": {
@@ -3349,6 +3405,10 @@
    "n": "Invesco KBW Bank",
    "type": "ETF_PASS_THROUGH"
   },
+  "KBWP": {
+   "n": "Invesco KBW Property & Casualty Insurance ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "KBWY": {
    "n": "Invesco KBW Premium Yield Equity REIT ETF",
    "type": "ETF_PASS_THROUGH"
@@ -3381,8 +3441,16 @@
    "n": "SPDR S&P Insurance",
    "type": "ETF_PASS_THROUGH"
   },
+  "KINS": {
+   "n": "Kingstone Companies",
+   "type": "EQUITY_STANDARD"
+  },
   "KLIC": {
    "n": "Kulicke and Soffa Industries",
+   "type": "EQUITY_STANDARD"
+  },
+  "KMPR": {
+   "n": "Kemper Corporation",
    "type": "EQUITY_STANDARD"
   },
   "KMT": {
@@ -3545,6 +3613,10 @@
    "n": "Lemonade",
    "type": "EQUITY_STANDARD"
   },
+  "LNC": {
+   "n": "Lincoln National",
+   "type": "EQUITY_STANDARD"
+  },
   "LNG": {
    "n": "Cheniere Energy",
    "type": "EQUITY_STANDARD"
@@ -3671,6 +3743,10 @@
   },
   "MCRI": {
    "n": "Monarch Casino & Resort",
+   "type": "EQUITY_STANDARD"
+  },
+  "MCY": {
+   "n": "Mercury General",
    "type": "EQUITY_STANDARD"
   },
   "MDB": {
@@ -4129,6 +4205,10 @@
    "n": "Tema Space and Satellite",
    "type": "ETF_PASS_THROUGH"
   },
+  "ORI": {
+   "n": "Old Republic International",
+   "type": "EQUITY_STANDARD"
+  },
   "OSIS": {
    "n": "OSI Systems",
    "type": "EQUITY_STANDARD"
@@ -4349,6 +4429,10 @@
    "n": "Dave & Buster's",
    "type": "EQUITY_STANDARD"
   },
+  "PLMR": {
+   "n": "Palomar Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "PLNT": {
    "n": "Planet Fitness",
    "type": "EQUITY_STANDARD"
@@ -4409,6 +4493,10 @@
    "n": "Perrigo",
    "type": "EQUITY_STANDARD"
   },
+  "PRI": {
+   "n": "Primerica",
+   "type": "EQUITY_STANDARD"
+  },
   "PRIM": {
    "n": "Primoris Services",
    "type": "EQUITY_STANDARD"
@@ -4452,6 +4540,10 @@
   "PSMT": {
    "n": "PriceSmart",
    "type": "EQUITY_STANDARD"
+  },
+  "PSP": {
+   "n": "Invesco Global Listed Private Equity ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "PSQ": {
    "n": "ProShares Short QQQ",
@@ -4644,6 +4736,10 @@
   "REZ": {
    "n": "iShares Residential and Multisector Real Estate",
    "type": "ETF_PASS_THROUGH"
+  },
+  "RGA": {
+   "n": "Reinsurance Group of America",
+   "type": "EQUITY_STANDARD"
   },
   "RGEN": {
    "n": "Repligen",
@@ -4845,6 +4941,10 @@
    "n": "iShares Global Consumer Discretionary ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "RYAN": {
+   "n": "Ryan Specialty Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "RZG": {
    "n": "Invesco S&P SmallCap 600 Pure Growth ETF",
    "type": "ETF_PASS_THROUGH"
@@ -5001,6 +5101,10 @@
    "n": "SolarEdge Technologies",
    "type": "EQUITY_STANDARD"
   },
+  "SF": {
+   "n": "Stifel Financial",
+   "type": "EQUITY_STANDARD"
+  },
   "SFM": {
    "n": "Sprouts Farmers Market",
    "type": "EQUITY_STANDARD"
@@ -5115,6 +5219,10 @@
   },
   "SKT": {
    "n": "Tanger",
+   "type": "EQUITY_STANDARD"
+  },
+  "SKWD": {
+   "n": "Skyward Specialty Insurance Group",
    "type": "EQUITY_STANDARD"
   },
   "SKX": {
@@ -5761,6 +5869,10 @@
    "n": "Uniti Group",
    "type": "EQUITY_STANDARD"
   },
+  "UNM": {
+   "n": "Unum Group",
+   "type": "EQUITY_STANDARD"
+  },
   "UPRO": {
    "n": "ProShares UltraPro S&P500",
    "type": "ETF_PASS_THROUGH"
@@ -5835,6 +5947,10 @@
   },
   "UUUU": {
    "n": "Energy Fuels",
+   "type": "EQUITY_STANDARD"
+  },
+  "UVE": {
+   "n": "Universal Insurance Holdings",
    "type": "EQUITY_STANDARD"
   },
   "UVV": {
@@ -6040,6 +6156,10 @@
   "VOX": {
    "n": "Vanguard Communication Services",
    "type": "ETF_PASS_THROUGH"
+  },
+  "VOYA": {
+   "n": "Voya Financial",
+   "type": "EQUITY_STANDARD"
   },
   "VPL": {
    "n": "Vanguard FTSE Pacific",
