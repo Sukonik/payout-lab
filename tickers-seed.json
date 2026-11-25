@@ -349,6 +349,10 @@
    "n": "ARK Innovation",
    "type": "ETF_PASS_THROUGH"
   },
+  "ARKO": {
+   "n": "ARKO Corp.",
+   "type": "EQUITY_STANDARD"
+  },
   "ARKQ": {
    "n": "ARK Autonomous Technology and Robotics",
    "type": "ETF_PASS_THROUGH"
@@ -2053,6 +2057,14 @@
    "n": "First Trust Morningstar Dividend Leaders",
    "type": "ETF_PASS_THROUGH"
   },
+  "FDLO": {
+   "n": "Fidelity Low Volatility Factor ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FDMO": {
+   "n": "Fidelity Momentum Factor ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FDN": {
    "n": "First Trust Dow Jones Internet Index",
    "type": "ETF_PASS_THROUGH"
@@ -2181,6 +2193,18 @@
    "n": "iShares Floating Rate Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "FLQL": {
+   "n": "Franklin U.S. Equity Index ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLQM": {
+   "n": "Franklin U.S. Mid Cap Multifactor Index ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FLQS": {
+   "n": "Franklin U.S. Small Cap Multifactor Index ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "FLR": {
    "n": "Fluor",
    "type": "EQUITY_STANDARD"
@@ -2199,6 +2223,10 @@
   },
   "FLUT": {
    "n": "Flutter Entertainment",
+   "type": "EQUITY_STANDARD"
+  },
+  "FLWS": {
+   "n": "1-800-Flowers.com",
    "type": "EQUITY_STANDARD"
   },
   "FMAT": {
@@ -2265,6 +2293,10 @@
    "n": "First Trust Mid Cap Core AlphaDEX Fund",
    "type": "ETF_PASS_THROUGH"
   },
+  "FOR": {
+   "n": "Forestar Group",
+   "type": "EQUITY_STANDARD"
+  },
   "FORM": {
    "n": "FormFactor",
    "type": "EQUITY_STANDARD"
@@ -2279,6 +2311,10 @@
   },
   "FPX": {
    "n": "First Trust US Equity Opportunities",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FQAL": {
+   "n": "Fidelity Quality Factor ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "FR": {
@@ -2303,6 +2339,10 @@
   },
   "FROG": {
    "n": "JFrog",
+   "type": "EQUITY_STANDARD"
+  },
+  "FRPH": {
+   "n": "FRP Holdings",
    "type": "EQUITY_STANDARD"
   },
   "FRPT": {
@@ -2407,6 +2447,10 @@
   },
   "FUTY": {
    "n": "Fidelity MSCI Utilities",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "FVAL": {
+   "n": "Fidelity Value Factor ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "FVD": {
@@ -3449,6 +3493,10 @@
    "n": "SPDR Bloomberg High Yield Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "JOE": {
+   "n": "The St. Joe Company",
+   "type": "EQUITY_STANDARD"
+  },
   "JPST": {
    "n": "JPMorgan Ultra-Short Income",
    "type": "ETF_PASS_THROUGH"
@@ -4025,6 +4073,10 @@
    "n": "Murphy Oil",
    "type": "EQUITY_STANDARD"
   },
+  "MUSA": {
+   "n": "Murphy USA",
+   "type": "EQUITY_STANDARD"
+  },
   "MXI": {
    "n": "iShares Global Materials ETF",
    "type": "ETF_PASS_THROUGH"
@@ -4309,8 +4361,20 @@
    "n": "Old National Bancorp",
    "type": "EQUITY_STANDARD"
   },
+  "ONEO": {
+   "n": "SPDR Russell 1000 Momentum Focus ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "ONEQ": {
    "n": "Fidelity Nasdaq Composite Index",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ONEV": {
+   "n": "SPDR Russell 1000 Low Volatility Focus ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "ONEY": {
+   "n": "SPDR Russell 1000 Yield Focus ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "ONLN": {
@@ -4327,6 +4391,10 @@
   },
   "OPCH": {
    "n": "Option Care Health",
+   "type": "EQUITY_STANDARD"
+  },
+  "OPEN": {
+   "n": "Opendoor Technologies",
    "type": "EQUITY_STANDARD"
   },
   "OPRA": {
@@ -4657,6 +4725,10 @@
    "n": "Privia Health Group",
    "type": "EQUITY_STANDARD"
   },
+  "PSCC": {
+   "n": "Invesco S&P SmallCap Consumer Staples ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "PSCD": {
    "n": "Invesco S&P SmallCap Consumer Discretionary ETF",
    "type": "ETF_PASS_THROUGH"
@@ -4669,6 +4741,10 @@
    "n": "Invesco S&P SmallCap Financials ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "PSCH": {
+   "n": "Invesco S&P SmallCap Health Care ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "PSCI": {
    "n": "Invesco S&P SmallCap Industrials ETF",
    "type": "ETF_PASS_THROUGH"
@@ -4677,12 +4753,24 @@
    "n": "Invesco S&P SmallCap Materials ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "PSCT": {
+   "n": "Invesco S&P SmallCap Information Technology ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PSCU": {
+   "n": "Invesco S&P SmallCap Communication Services ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "PSI": {
    "n": "Invesco Semiconductors",
    "type": "ETF_PASS_THROUGH"
   },
   "PSK": {
    "n": "SPDR ICE Preferred Securities ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "PSL": {
+   "n": "Invesco Dorsey Wright Consumer Staples Momentum ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "PSMT": {
@@ -4893,6 +4981,10 @@
    "n": "iShares Residential and Multisector Real Estate",
    "type": "ETF_PASS_THROUGH"
   },
+  "RFG": {
+   "n": "Invesco S&P MidCap 400 Pure Growth ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "RGA": {
    "n": "Reinsurance Group of America",
    "type": "EQUITY_STANDARD"
@@ -5081,6 +5173,14 @@
    "n": "Sunrun",
    "type": "EQUITY_STANDARD"
   },
+  "RWK": {
+   "n": "Invesco S&P MidCap 400 Revenue ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "RWL": {
+   "n": "Invesco S&P 500 Revenue ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "RWO": {
    "n": "SPDR Dow Jones Global Real Estate ETF",
    "type": "ETF_PASS_THROUGH"
@@ -5147,6 +5247,10 @@
   },
   "SBGI": {
    "n": "Sinclair",
+   "type": "EQUITY_STANDARD"
+  },
+  "SBH": {
+   "n": "Sally Beauty Holdings",
    "type": "EQUITY_STANDARD"
   },
   "SBIO": {
@@ -6268,6 +6372,10 @@
   "VIXY": {
    "n": "ProShares VIX Short-Term Futures",
    "type": "ETF_PASS_THROUGH"
+  },
+  "VLGEA": {
+   "n": "Village Super Market",
+   "type": "EQUITY_STANDARD"
   },
   "VLUE": {
    "n": "iShares MSCI USA Value Factor",
