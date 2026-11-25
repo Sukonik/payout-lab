@@ -145,6 +145,10 @@
    "n": "Argan",
    "type": "EQUITY_STANDARD"
   },
+  "AHT": {
+   "n": "Ashford Hospitality Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "AI": {
    "n": "C3.ai",
    "type": "EQUITY_STANDARD"
@@ -171,6 +175,10 @@
   },
   "ALGM": {
    "n": "Allegro MicroSystems",
+   "type": "EQUITY_STANDARD"
+  },
+  "ALGT": {
+   "n": "Allegiant Travel Company",
    "type": "EQUITY_STANDARD"
   },
   "ALK": {
@@ -621,6 +629,10 @@
    "n": "BHP Group",
    "type": "ADR_VARIABLE"
   },
+  "BHR": {
+   "n": "Braemar Hotels & Resorts",
+   "type": "EQUITY_STANDARD"
+  },
   "BIDU": {
    "n": "Baidu",
    "type": "EQUITY_STANDARD"
@@ -857,6 +869,10 @@
    "n": "VanEck Social Sentiment ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "BVN": {
+   "n": "Compania de Minas Buenaventura",
+   "type": "ADR_VARIABLE"
+  },
   "BWA": {
    "n": "BorgWarner",
    "type": "EQUITY_STANDARD"
@@ -1065,6 +1081,10 @@
    "n": "Core Laboratories",
    "type": "EQUITY_STANDARD"
   },
+  "CLDT": {
+   "n": "Chatham Lodging Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "CLF": {
    "n": "Cleveland-Cliffs",
    "type": "EQUITY_STANDARD"
@@ -1088,6 +1108,10 @@
   "CMC": {
    "n": "Commercial Metals",
    "type": "EQUITY_STANDARD"
+  },
+  "CMCL": {
+   "n": "Caledonia Mining Corporation",
+   "type": "ADR_VARIABLE"
   },
   "CMF": {
    "n": "iShares California Muni Bond",
@@ -1441,6 +1465,10 @@
    "n": "Dimensional Emerging Markets Value",
    "type": "ETF_PASS_THROUGH"
   },
+  "DFH": {
+   "n": "Dream Finders Homes",
+   "type": "EQUITY_STANDARD"
+  },
   "DFIC": {
    "n": "Dimensional International Core Equity 2",
    "type": "ETF_PASS_THROUGH"
@@ -1780,6 +1808,10 @@
   "EQWL": {
    "n": "Invesco S&P 100 Equal Weight ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "EQX": {
+   "n": "Equinox Gold Corp.",
+   "type": "ADR_VARIABLE"
   },
   "ERTH": {
    "n": "Invesco MSCI Sustainable Future ETF",
@@ -2785,6 +2817,10 @@
    "n": "H World Group",
    "type": "ADR_VARIABLE"
   },
+  "HTZ": {
+   "n": "Hertz Global Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "HUBG": {
    "n": "Hub Group",
    "type": "EQUITY_STANDARD"
@@ -2832,6 +2868,10 @@
   "HYS": {
    "n": "PIMCO 0-5 Year High Yield Corporate Bond Index ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "IAG": {
+   "n": "IAMGOLD Corporation",
+   "type": "ADR_VARIABLE"
   },
   "IAGG": {
    "n": "iShares Core International Aggregate Bond ETF",
@@ -3617,6 +3657,10 @@
    "n": "Lucid Group",
    "type": "EQUITY_STANDARD"
   },
+  "LCII": {
+   "n": "LCI Industries",
+   "type": "EQUITY_STANDARD"
+  },
   "LEA": {
    "n": "Lear Corporation",
    "type": "EQUITY_STANDARD"
@@ -3631,6 +3675,10 @@
   },
   "LEVI": {
    "n": "Levi Strauss",
+   "type": "EQUITY_STANDARD"
+  },
+  "LGIH": {
+   "n": "LGI Homes",
    "type": "EQUITY_STANDARD"
   },
   "LGND": {
@@ -3788,6 +3836,14 @@
   "MBB": {
    "n": "iShares MBS",
    "type": "ETF_PASS_THROUGH"
+  },
+  "MBUU": {
+   "n": "Malibu Boats",
+   "type": "EQUITY_STANDARD"
+  },
+  "MCFT": {
+   "n": "MasterCraft Boat Holdings",
+   "type": "EQUITY_STANDARD"
   },
   "MCHI": {
    "n": "iShares MSCI China",
@@ -4193,6 +4249,10 @@
    "n": "iShares S&P 100",
    "type": "ETF_PASS_THROUGH"
   },
+  "OGC": {
+   "n": "OceanaGold Corporation",
+   "type": "ADR_VARIABLE"
+  },
   "OGE": {
    "n": "OGE Energy",
    "type": "EQUITY_STANDARD"
@@ -4347,6 +4407,10 @@
   },
   "PATH": {
    "n": "UiPath",
+   "type": "EQUITY_STANDARD"
+  },
+  "PATK": {
+   "n": "Patrick Industries",
    "type": "EQUITY_STANDARD"
   },
   "PAVE": {
@@ -5653,6 +5717,10 @@
    "n": "Service Properties Trust",
    "type": "EQUITY_STANDARD"
   },
+  "SVM": {
+   "n": "Silvercorp Metals",
+   "type": "ADR_VARIABLE"
+  },
   "SVOL": {
    "n": "Simplify Volatility Premium",
    "type": "ETF_PASS_THROUGH"
@@ -5756,6 +5824,10 @@
   "THNQ": {
    "n": "ROBO Global Artificial Intelligence ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "THO": {
+   "n": "Thor Industries",
+   "type": "EQUITY_STANDARD"
   },
   "TIP": {
    "n": "iShares TIPS Bond",
@@ -5949,6 +6021,10 @@
    "n": "U-Haul Holding",
    "type": "EQUITY_STANDARD"
   },
+  "ULCC": {
+   "n": "Frontier Group Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "ULTY": {
    "n": "YieldMax Ultra Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
@@ -5992,6 +6068,10 @@
   "URNM": {
    "n": "Sprott Uranium Miners",
    "type": "ETF_PASS_THROUGH"
+  },
+  "USAS": {
+   "n": "Americas Gold and Silver Corporation",
+   "type": "ADR_VARIABLE"
   },
   "USFD": {
    "n": "US Foods",
@@ -6393,6 +6473,10 @@
    "n": "Weatherford International",
    "type": "EQUITY_STANDARD"
   },
+  "WGO": {
+   "n": "Winnebago Industries",
+   "type": "EQUITY_STANDARD"
+  },
   "WH": {
    "n": "Wyndham Hotels & Resorts",
    "type": "EQUITY_STANDARD"
@@ -6551,6 +6635,10 @@
   },
   "XPO": {
    "n": "XPO",
+   "type": "EQUITY_STANDARD"
+  },
+  "XPOF": {
+   "n": "Xponential Fitness",
    "type": "EQUITY_STANDARD"
   },
   "XPRO": {
