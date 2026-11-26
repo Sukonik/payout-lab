@@ -413,6 +413,10 @@
    "n": "AST SpaceMobile",
    "type": "EQUITY_STANDARD"
   },
+  "ASX": {
+   "n": "ASE Technology Holding",
+   "type": "ADR_VARIABLE"
+  },
   "ATEN": {
    "n": "A10 Networks",
    "type": "EQUITY_STANDARD"
@@ -463,6 +467,10 @@
   },
   "AVNT": {
    "n": "Avient Corporation",
+   "type": "EQUITY_STANDARD"
+  },
+  "AVNW": {
+   "n": "Aviat Networks",
    "type": "EQUITY_STANDARD"
   },
   "AVO": {
@@ -727,6 +735,10 @@
   },
   "BMBL": {
    "n": "Bumble",
+   "type": "EQUITY_STANDARD"
+  },
+  "BMI": {
+   "n": "Badger Meter",
    "type": "EQUITY_STANDARD"
   },
   "BMRN": {
@@ -1013,6 +1025,10 @@
    "n": "Century Aluminum",
    "type": "EQUITY_STANDARD"
   },
+  "CEVA": {
+   "n": "CEVA Inc.",
+   "type": "EQUITY_STANDARD"
+  },
   "CFR": {
    "n": "Cullen/Frost Bankers",
    "type": "EQUITY_STANDARD"
@@ -1267,6 +1283,10 @@
   },
   "CRS": {
    "n": "Carpenter Technology",
+   "type": "EQUITY_STANDARD"
+  },
+  "CRSR": {
+   "n": "Corsair Gaming",
    "type": "EQUITY_STANDARD"
   },
   "CRTO": {
@@ -1823,6 +1843,10 @@
   },
   "ESAB": {
    "n": "ESAB Corporation",
+   "type": "EQUITY_STANDARD"
+  },
+  "ESE": {
+   "n": "ESCO Technologies",
    "type": "EQUITY_STANDARD"
   },
   "ESGU": {
@@ -2565,6 +2589,10 @@
    "n": "Gold Fields",
    "type": "ADR_VARIABLE"
   },
+  "GFS": {
+   "n": "GlobalFoundries",
+   "type": "EQUITY_STANDARD"
+  },
   "GHYG": {
    "n": "iShares US & Intl High Yield Corp Bond ETF",
    "type": "ETF_PASS_THROUGH"
@@ -3225,6 +3253,14 @@
    "n": "IPG Photonics",
    "type": "EQUITY_STANDARD"
   },
+  "IPO": {
+   "n": "Renaissance IPO ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "IPOS": {
+   "n": "Renaissance International IPO ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "IQLT": {
    "n": "iShares MSCI Intl Quality Factor ETF",
    "type": "ETF_PASS_THROUGH"
@@ -3697,6 +3733,10 @@
    "n": "Lamar Advertising",
    "type": "EQUITY_STANDARD"
   },
+  "LASR": {
+   "n": "nLIGHT",
+   "type": "EQUITY_STANDARD"
+  },
   "LBRT": {
    "n": "Liberty Energy",
    "type": "EQUITY_STANDARD"
@@ -3835,6 +3875,10 @@
   },
   "LW": {
    "n": "Lamb Weston",
+   "type": "EQUITY_STANDARD"
+  },
+  "LWLG": {
+   "n": "Lightwave Logic",
    "type": "EQUITY_STANDARD"
   },
   "LYFT": {
@@ -4007,6 +4051,14 @@
   },
   "MORT": {
    "n": "VanEck Mortgage REIT Income",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MOTI": {
+   "n": "VanEck Morningstar International Moat ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MOTO": {
+   "n": "SmartETFs Smart Transportation & Technology ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "MP": {
@@ -4247,6 +4299,10 @@
   },
   "NVST": {
    "n": "Envista Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "NVTS": {
+   "n": "Navitas Semiconductor",
    "type": "EQUITY_STANDARD"
   },
   "NWE": {
@@ -4509,6 +4565,10 @@
    "n": "Prestige Consumer Healthcare",
    "type": "EQUITY_STANDARD"
   },
+  "PBI": {
+   "n": "Pitney Bowes",
+   "type": "EQUITY_STANDARD"
+  },
   "PBJ": {
    "n": "Invesco Food & Beverage ETF",
    "type": "ETF_PASS_THROUGH"
@@ -4563,6 +4623,10 @@
   },
   "PEN": {
    "n": "Penumbra",
+   "type": "EQUITY_STANDARD"
+  },
+  "PENG": {
+   "n": "Penguin Solutions",
    "type": "EQUITY_STANDARD"
   },
   "PENN": {
@@ -4660,6 +4724,10 @@
   "PNQI": {
    "n": "Invesco NASDAQ Internet ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "POET": {
+   "n": "POET Technologies",
+   "type": "ADR_VARIABLE"
   },
   "POOL": {
    "n": "Pool Corporation",
@@ -4797,6 +4865,10 @@
    "n": "Patterson-UTI Energy",
    "type": "EQUITY_STANDARD"
   },
+  "PTF": {
+   "n": "Invesco Dorsey Wright Technology Momentum ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "PTH": {
    "n": "Invesco Healthcare Select Tilt ETF",
    "type": "ETF_PASS_THROUGH"
@@ -4903,6 +4975,10 @@
   },
   "QTEC": {
    "n": "First Trust NASDAQ-100 Technology Sector Index Fund",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "QTOP": {
+   "n": "iShares Nasdaq Top 30 Stocks ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "QTUM": {
@@ -5793,6 +5869,10 @@
    "n": "iShares 0-5 Year TIPS Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "STM": {
+   "n": "STMicroelectronics",
+   "type": "ADR_VARIABLE"
+  },
   "STNG": {
    "n": "Scorpio Tankers",
    "type": "ADR_VARIABLE"
@@ -6125,6 +6205,10 @@
    "n": "U-Haul Holding",
    "type": "EQUITY_STANDARD"
   },
+  "UI": {
+   "n": "Ubiquiti",
+   "type": "EQUITY_STANDARD"
+  },
   "ULCC": {
    "n": "Frontier Group Holdings",
    "type": "EQUITY_STANDARD"
@@ -6132,6 +6216,10 @@
   "ULTY": {
    "n": "YieldMax Ultra Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
+  },
+  "UMC": {
+   "n": "United Microelectronics",
+   "type": "ADR_VARIABLE"
   },
   "UMH": {
    "n": "UMH Properties",
@@ -6296,6 +6384,10 @@
   "VDE": {
    "n": "Vanguard Energy",
    "type": "ETF_PASS_THROUGH"
+  },
+  "VECO": {
+   "n": "Veeco Instruments",
+   "type": "EQUITY_STANDARD"
   },
   "VEGI": {
    "n": "iShares MSCI Agriculture Producers ETF",
