@@ -1,7 +1,7 @@
 {
  "note": "Stock split history. Dates are the first day trading at the new share count. Entries with ver 1 were cross-checked against company filings or reputable coverage; ver 0 entries come from the public record and are replaced by Tiingo-derived values when the refresh Action reaches that ticker. `upcoming` is hand-kept: add only splits an issuer has announced, with a source link. Nothing here predicts a split.",
- "updated": "2026-11-26T02:31:06.230Z",
- "upcomingAsOf": "2026-11-25",
+ "updated": "2026-11-26T13:06:59.713Z",
+ "upcomingAsOf": "2026-11-26",
  "tickers": {
   "A": {
    "n": "Agilent Technologies",
@@ -28763,26 +28763,92 @@
  },
  "upcoming": [
   {
-   "t": "FNUC",
-   "n": "Frontier Nuclear and Minerals Inc.",
+   "t": "GMEX",
+   "n": "GMEX ROBOTICS CORPORATION",
    "a": 1,
-   "b": 15,
-   "exDate": "2026-11-25",
+   "b": 19,
+   "exDate": "2026-11-27",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
-   "t": "PASG",
-   "n": "Passage Bio, Inc.",
+   "t": "HUDI",
+   "n": "Huadi International Group Co., Ltd.",
    "a": 1,
-   "b": 6,
-   "exDate": "2026-11-25",
+   "b": 8,
+   "exDate": "2026-11-27",
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
+  },
+  {
+   "t": "INEO",
+   "n": "INNEOVA Holdings Limited",
+   "a": 1,
+   "b": 5,
+   "exDate": "2026-11-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-26"
+  },
+  {
+   "t": "INLF",
+   "n": "INLIF LIMITED",
+   "a": 1,
+   "b": 16,
+   "exDate": "2026-11-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-26"
+  },
+  {
+   "t": "PFSA",
+   "n": "Profusa, Inc.",
+   "a": 1,
+   "b": 8,
+   "exDate": "2026-11-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-26"
+  },
+  {
+   "t": "SGLY",
+   "n": "Singularity Future Technology Ltd.",
+   "a": 1,
+   "b": 10,
+   "exDate": "2026-11-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-26"
+  },
+  {
+   "t": "SPRC",
+   "n": "SciSparc Ltd.",
+   "a": 1,
+   "b": 5,
+   "exDate": "2026-11-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-26"
+  },
+  {
+   "t": "YAAS",
+   "n": "Youxin Technology Ltd",
+   "a": 1,
+   "b": 6,
+   "exDate": "2026-11-27",
+   "status": "announced",
+   "src": "Nasdaq calendar",
+   "url": "https://www.nasdaq.com/market-activity/stock-splits",
+   "asOf": "2026-11-26"
   },
   {
    "t": "TOVX",
@@ -28793,7 +28859,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
    "t": "ACP",
@@ -28804,7 +28870,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
    "t": "MYND",
@@ -28815,7 +28881,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
    "t": "SITM",
@@ -28826,7 +28892,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
    "t": "AAOG",
@@ -28837,7 +28903,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
    "t": "AEHG",
@@ -28848,7 +28914,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
    "t": "ASTG",
@@ -28859,7 +28925,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
    "t": "AXTL",
@@ -28870,7 +28936,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
    "t": "CBRG",
@@ -28881,7 +28947,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
    "t": "CIEG",
@@ -28892,7 +28958,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
    "t": "COHH",
@@ -28903,7 +28969,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
    "t": "FOMG",
@@ -28914,7 +28980,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
    "t": "FPSX",
@@ -28925,7 +28991,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   },
   {
    "t": "SNDG",
@@ -28936,7 +29002,7 @@
    "status": "announced",
    "src": "Nasdaq calendar",
    "url": "https://www.nasdaq.com/market-activity/stock-splits",
-   "asOf": "2026-11-25"
+   "asOf": "2026-11-26"
   }
  ]
 }
