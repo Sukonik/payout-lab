@@ -437,6 +437,10 @@
    "n": "Atlantic Union Bankshares",
    "type": "EQUITY_STANDARD"
   },
+  "AUGO": {
+   "n": "Aura Minerals Inc.",
+   "type": "ADR_VARIABLE"
+  },
   "AVA": {
    "n": "Avista",
    "type": "EQUITY_STANDARD"
@@ -1429,6 +1433,10 @@
    "n": "Dropbox",
    "type": "EQUITY_STANDARD"
   },
+  "DC": {
+   "n": "Dakota Gold Corp.",
+   "type": "EQUITY_STANDARD"
+  },
   "DCOM": {
    "n": "Dime Community Bancshares",
    "type": "EQUITY_STANDARD"
@@ -1799,6 +1807,14 @@
   },
   "ENVA": {
    "n": "Enova International",
+   "type": "EQUITY_STANDARD"
+  },
+  "ENVX": {
+   "n": "Enovix Corporation",
+   "type": "EQUITY_STANDARD"
+  },
+  "EOSE": {
+   "n": "Eos Energy Enterprises",
    "type": "EQUITY_STANDARD"
   },
   "EPAM": {
@@ -2549,6 +2565,10 @@
    "n": "GATX",
    "type": "EQUITY_STANDARD"
   },
+  "GAU": {
+   "n": "Galiano Gold Inc.",
+   "type": "ADR_VARIABLE"
+  },
   "GBCI": {
    "n": "Glacier Bancorp",
    "type": "EQUITY_STANDARD"
@@ -2592,6 +2612,10 @@
   "GFS": {
    "n": "GlobalFoundries",
    "type": "EQUITY_STANDARD"
+  },
+  "GGB": {
+   "n": "Gerdau S.A.",
+   "type": "ADR_VARIABLE"
   },
   "GHYG": {
    "n": "iShares US & Intl High Yield Corp Bond ETF",
@@ -2668,6 +2692,10 @@
   "GOOY": {
    "n": "YieldMax GOOGL Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
+  },
+  "GORO": {
+   "n": "Gold Resource Corporation",
+   "type": "EQUITY_STANDARD"
   },
   "GOTU": {
    "n": "Gaotu Techedu",
@@ -2937,6 +2965,10 @@
    "n": "SPDR Nuveen ICE High Yield Municipal Bond ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "HYMC": {
+   "n": "Hycroft Mining Holding",
+   "type": "EQUITY_STANDARD"
+  },
   "HYS": {
    "n": "PIMCO 0-5 Year High Yield Corporate Bond Index ETF",
    "type": "ETF_PASS_THROUGH"
@@ -2972,6 +3004,10 @@
   "IAUM": {
    "n": "iShares Gold Trust Micro",
    "type": "ETF_PASS_THROUGH"
+  },
+  "IAUX": {
+   "n": "i-80 Gold Corp.",
+   "type": "ADR_VARIABLE"
   },
   "IBB": {
    "n": "iShares Biotechnology",
@@ -3040,6 +3076,10 @@
   "IDNA": {
    "n": "iShares Genomics Immunology and Healthcare ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "IDR": {
+   "n": "Idaho Strategic Resources",
+   "type": "EQUITY_STANDARD"
   },
   "IDRV": {
    "n": "iShares Self-Driving EV and Tech",
@@ -3312,6 +3352,10 @@
   "ITOT": {
    "n": "iShares Core S&P Total US Stock Market",
    "type": "ETF_PASS_THROUGH"
+  },
+  "ITRG": {
+   "n": "Integra Resources Corp.",
+   "type": "ADR_VARIABLE"
   },
   "ITRI": {
    "n": "Itron",
@@ -3813,6 +3857,10 @@
    "n": "Lantheus Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "LODE": {
+   "n": "Comstock Inc.",
+   "type": "EQUITY_STANDARD"
+  },
   "LOGI": {
    "n": "Logitech International",
    "type": "EQUITY_STANDARD"
@@ -3963,6 +4011,10 @@
   },
   "MELI": {
    "n": "MercadoLibre",
+   "type": "EQUITY_STANDARD"
+  },
+  "METC": {
+   "n": "Ramaco Resources",
    "type": "EQUITY_STANDARD"
   },
   "MGC": {
@@ -4129,6 +4181,10 @@
    "n": "Murphy USA",
    "type": "EQUITY_STANDARD"
   },
+  "MUX": {
+   "n": "McEwen Mining",
+   "type": "EQUITY_STANDARD"
+  },
   "MXI": {
    "n": "iShares Global Materials ETF",
    "type": "ETF_PASS_THROUGH"
@@ -4140,6 +4196,10 @@
   "MYRG": {
    "n": "MYR Group",
    "type": "EQUITY_STANDARD"
+  },
+  "NB": {
+   "n": "NioCorp Developments",
+   "type": "ADR_VARIABLE"
   },
   "NBIS": {
    "n": "Nebius Group",
@@ -4304,6 +4364,10 @@
   "NVTS": {
    "n": "Navitas Semiconductor",
    "type": "EQUITY_STANDARD"
+  },
+  "NVX": {
+   "n": "NOVONIX Limited",
+   "type": "ADR_VARIABLE"
   },
   "NWE": {
    "n": "NorthWestern Energy Group",
@@ -4969,6 +5033,10 @@
    "n": "Qorvo",
    "type": "EQUITY_STANDARD"
   },
+  "QS": {
+   "n": "QuantumScape",
+   "type": "EQUITY_STANDARD"
+  },
   "QSR": {
    "n": "Restaurant Brands International",
    "type": "EQUITY_STANDARD"
@@ -5289,6 +5357,10 @@
    "n": "SentinelOne",
    "type": "EQUITY_STANDARD"
   },
+  "SA": {
+   "n": "Seabridge Gold",
+   "type": "ADR_VARIABLE"
+  },
   "SABR": {
    "n": "Sabre Corporation",
    "type": "EQUITY_STANDARD"
@@ -5461,6 +5533,10 @@
    "n": "Super Group",
    "type": "ADR_VARIABLE"
   },
+  "SGML": {
+   "n": "Sigma Lithium Corporation",
+   "type": "ADR_VARIABLE"
+  },
   "SGOL": {
    "n": "abrdn Physical Gold Shares",
    "type": "ETF_PASS_THROUGH"
@@ -5579,6 +5655,10 @@
   },
   "SLAB": {
    "n": "Silicon Laboratories",
+   "type": "EQUITY_STANDARD"
+  },
+  "SLDP": {
+   "n": "Solid Power",
    "type": "EQUITY_STANDARD"
   },
   "SLG": {
@@ -5911,6 +5991,10 @@
   },
   "SWX": {
    "n": "Southwest Gas Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "SXC": {
+   "n": "SunCoke Energy",
    "type": "EQUITY_STANDARD"
   },
   "SXI": {
@@ -6425,6 +6509,10 @@
    "n": "Vanguard Short-Term Treasury",
    "type": "ETF_PASS_THROUGH"
   },
+  "VGZ": {
+   "n": "Vista Gold Corp.",
+   "type": "EQUITY_STANDARD"
+  },
   "VIAV": {
    "n": "Viavi Solutions",
    "type": "EQUITY_STANDARD"
@@ -6736,6 +6824,10 @@
   "WPM": {
    "n": "Wheaton Precious Metals",
    "type": "EQUITY_STANDARD"
+  },
+  "WRN": {
+   "n": "Western Copper and Gold Corporation",
+   "type": "ADR_VARIABLE"
   },
   "WSC": {
    "n": "WillScot Holdings",
