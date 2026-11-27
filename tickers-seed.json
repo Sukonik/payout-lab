@@ -141,6 +141,10 @@
    "n": "Alamos Gold",
    "type": "EQUITY_STANDARD"
   },
+  "AGNC": {
+   "n": "AGNC Investment",
+   "type": "EQUITY_STANDARD"
+  },
   "AGX": {
    "n": "Argan",
    "type": "EQUITY_STANDARD"
@@ -159,6 +163,10 @@
   },
   "AIT": {
    "n": "Applied Industrial Technologies",
+   "type": "EQUITY_STANDARD"
+  },
+  "AIV": {
+   "n": "Apartment Investment and Management Company",
    "type": "EQUITY_STANDARD"
   },
   "AKR": {
@@ -375,6 +383,10 @@
   },
   "AROC": {
    "n": "Archrock",
+   "type": "EQUITY_STANDARD"
+  },
+  "ARR": {
+   "n": "ARMOUR Residential REIT",
    "type": "EQUITY_STANDARD"
   },
   "ARRY": {
@@ -817,6 +829,10 @@
    "n": "Coinshares Valkyrie Bitcoin",
    "type": "ETF_PASS_THROUGH"
   },
+  "BRSP": {
+   "n": "BrightSpire Capital",
+   "type": "EQUITY_STANDARD"
+  },
   "BRX": {
    "n": "Brixmor Property Group",
    "type": "EQUITY_STANDARD"
@@ -908,6 +924,10 @@
   "BWZ": {
    "n": "SPDR Bloomberg Short Term International Treasury Bond ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "BXMT": {
+   "n": "Blackstone Mortgage Trust",
+   "type": "EQUITY_STANDARD"
   },
   "BYD": {
    "n": "Boyd Gaming",
@@ -1053,6 +1073,10 @@
    "n": "City Holding Company",
    "type": "EQUITY_STANDARD"
   },
+  "CHCT": {
+   "n": "Community Healthcare Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "CHDN": {
    "n": "Churchill Downs",
    "type": "EQUITY_STANDARD"
@@ -1097,6 +1121,10 @@
    "n": "Ciena",
    "type": "EQUITY_STANDARD"
   },
+  "CIM": {
+   "n": "Chimera Investment",
+   "type": "EQUITY_STANDARD"
+  },
   "CIVI": {
    "n": "Civitas Resources",
    "type": "EQUITY_STANDARD"
@@ -1116,6 +1144,10 @@
   "CLOU": {
    "n": "Global X Cloud Computing",
    "type": "ETF_PASS_THROUGH"
+  },
+  "CLPR": {
+   "n": "Clipper Realty",
+   "type": "EQUITY_STANDARD"
   },
   "CLS": {
    "n": "Celestica",
@@ -1653,6 +1685,10 @@
    "n": "iShares Emerging Markets Dividend",
    "type": "ETF_PASS_THROUGH"
   },
+  "DX": {
+   "n": "Dynex Capital",
+   "type": "EQUITY_STANDARD"
+  },
   "DXJ": {
    "n": "WisdomTree Japan Hedged Equity",
    "type": "ETF_PASS_THROUGH"
@@ -1663,6 +1699,10 @@
   },
   "EA": {
    "n": "Electronic Arts",
+   "type": "EQUITY_STANDARD"
+  },
+  "EARN": {
+   "n": "Ellington Credit Company",
    "type": "EQUITY_STANDARD"
   },
   "EAT": {
@@ -1712,6 +1752,10 @@
   "EFAV": {
    "n": "iShares MSCI EAFE Min Vol Factor ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "EFC": {
+   "n": "Ellington Financial",
+   "type": "EQUITY_STANDARD"
   },
   "EFG": {
    "n": "iShares MSCI EAFE Growth ETF",
@@ -2060,6 +2104,10 @@
   "FBND": {
    "n": "Fidelity Total Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "FBRT": {
+   "n": "Franklin BSP Realty Trust",
+   "type": "EQUITY_STANDARD"
   },
   "FBT": {
    "n": "First Trust NYSE Arca Biotechnology Index Fund",
@@ -2685,6 +2733,10 @@
    "n": "Global X Gold Explorers ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "GOOD": {
+   "n": "Gladstone Commercial",
+   "type": "EQUITY_STANDARD"
+  },
   "GOOS": {
    "n": "Canada Goose Holdings",
    "type": "ADR_VARIABLE"
@@ -3225,6 +3277,10 @@
    "n": "iShares Latin America 40",
    "type": "ETF_PASS_THROUGH"
   },
+  "ILPT": {
+   "n": "Industrial Logistics Properties Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "ILTB": {
    "n": "iShares Core 10+ Year USD Bond ETF",
    "type": "ETF_PASS_THROUGH"
@@ -3392,6 +3448,10 @@
   "IVOV": {
    "n": "Vanguard S&P Mid-Cap 400 Value ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "IVR": {
+   "n": "Invesco Mortgage Capital",
+   "type": "EQUITY_STANDARD"
   },
   "IVV": {
    "n": "iShares Core S&P 500",
@@ -3725,6 +3785,10 @@
    "n": "SPDR S&P Regional Banking",
    "type": "ETF_PASS_THROUGH"
   },
+  "KREF": {
+   "n": "KKR Real Estate Finance Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "KRG": {
    "n": "Kite Realty Group Trust",
    "type": "EQUITY_STANDARD"
@@ -3773,8 +3837,16 @@
    "n": "Lithia Motors",
    "type": "EQUITY_STANDARD"
   },
+  "LADR": {
+   "n": "Ladder Capital",
+   "type": "EQUITY_STANDARD"
+  },
   "LAMR": {
    "n": "Lamar Advertising",
+   "type": "EQUITY_STANDARD"
+  },
+  "LAND": {
+   "n": "Gladstone Land",
    "type": "EQUITY_STANDARD"
   },
   "LASR": {
@@ -4015,6 +4087,10 @@
   },
   "METC": {
    "n": "Ramaco Resources",
+   "type": "EQUITY_STANDARD"
+  },
+  "MFA": {
+   "n": "MFA Financial",
    "type": "EQUITY_STANDARD"
   },
   "MGC": {
@@ -4277,6 +4353,10 @@
    "n": "VanEck Uranium and Nuclear",
    "type": "ETF_PASS_THROUGH"
   },
+  "NLY": {
+   "n": "Annaly Capital Management",
+   "type": "EQUITY_STANDARD"
+  },
   "NMIH": {
    "n": "NMI Holdings",
    "type": "EQUITY_STANDARD"
@@ -4473,6 +4553,10 @@
    "n": "Olin Corporation",
    "type": "EQUITY_STANDARD"
   },
+  "OLP": {
+   "n": "One Liberty Properties",
+   "type": "EQUITY_STANDARD"
+  },
   "OMCL": {
    "n": "Omnicell",
    "type": "EQUITY_STANDARD"
@@ -4517,6 +4601,10 @@
    "n": "Opendoor Technologies",
    "type": "EQUITY_STANDARD"
   },
+  "OPI": {
+   "n": "Office Properties Income Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "OPRA": {
    "n": "Opera",
    "type": "EQUITY_STANDARD"
@@ -4532,6 +4620,10 @@
   "ORBT": {
    "n": "Tema Space and Satellite",
    "type": "ETF_PASS_THROUGH"
+  },
+  "ORC": {
+   "n": "Orchid Island Capital",
+   "type": "EQUITY_STANDARD"
   },
   "ORI": {
    "n": "Old Republic International",
@@ -5345,6 +5437,10 @@
    "n": "Ryan Specialty Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "RYN": {
+   "n": "Rayonier",
+   "type": "EQUITY_STANDARD"
+  },
   "RZG": {
    "n": "Invesco S&P SmallCap 600 Pure Growth ETF",
    "type": "ETF_PASS_THROUGH"
@@ -5507,6 +5603,10 @@
   },
   "SEDG": {
    "n": "SolarEdge Technologies",
+   "type": "EQUITY_STANDARD"
+  },
+  "SELF": {
+   "n": "Global Self Storage",
    "type": "EQUITY_STANDARD"
   },
   "SF": {
@@ -5965,6 +6065,10 @@
    "n": "Strattec Security",
    "type": "EQUITY_STANDARD"
   },
+  "STWD": {
+   "n": "Starwood Property Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "SUB": {
    "n": "iShares Short-Term National Muni Bond",
    "type": "ETF_PASS_THROUGH"
@@ -6193,6 +6297,10 @@
    "n": "Terreno Realty",
    "type": "EQUITY_STANDARD"
   },
+  "TRTX": {
+   "n": "TPG RE Finance Trust",
+   "type": "EQUITY_STANDARD"
+  },
   "TSLY": {
    "n": "YieldMax TSLA Option Income Strategy",
    "type": "ETF_PASS_THROUGH"
@@ -6287,6 +6395,10 @@
   },
   "UHAL": {
    "n": "U-Haul Holding",
+   "type": "EQUITY_STANDARD"
+  },
+  "UHT": {
+   "n": "Universal Health Realty Income Trust",
    "type": "EQUITY_STANDARD"
   },
   "UI": {
