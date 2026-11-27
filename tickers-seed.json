@@ -321,6 +321,10 @@
    "n": "Appian",
    "type": "EQUITY_STANDARD"
   },
+  "APPS": {
+   "n": "Digital Turbine",
+   "type": "EQUITY_STANDARD"
+  },
   "AR": {
    "n": "Antero Resources",
    "type": "EQUITY_STANDARD"
@@ -645,6 +649,10 @@
    "n": "B&G Foods",
    "type": "EQUITY_STANDARD"
   },
+  "BH": {
+   "n": "Biglari Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "BHE": {
    "n": "Benchmark Electronics",
    "type": "EQUITY_STANDARD"
@@ -815,6 +823,14 @@
   },
   "BRBR": {
    "n": "BellRing Brands",
+   "type": "EQUITY_STANDARD"
+  },
+  "BRCC": {
+   "n": "BRC Inc.",
+   "type": "EQUITY_STANDARD"
+  },
+  "BRID": {
+   "n": "Bridgford Foods",
    "type": "EQUITY_STANDARD"
   },
   "BRKR": {
@@ -1425,6 +1441,10 @@
    "n": "Dana Incorporated",
    "type": "EQUITY_STANDARD"
   },
+  "DAO": {
+   "n": "Youdao",
+   "type": "ADR_VARIABLE"
+  },
   "DAPP": {
    "n": "VanEck Digital Transformation",
    "type": "ETF_PASS_THROUGH"
@@ -1597,6 +1617,10 @@
    "n": "iShares Core Dividend",
    "type": "ETF_PASS_THROUGH"
   },
+  "DJCO": {
+   "n": "Daily Journal Corporation",
+   "type": "EQUITY_STANDARD"
+  },
   "DK": {
    "n": "Delek US Holdings",
    "type": "EQUITY_STANDARD"
@@ -1628,6 +1652,10 @@
   "DOCU": {
    "n": "Docusign",
    "type": "EQUITY_STANDARD"
+  },
+  "DOLE": {
+   "n": "Dole plc",
+   "type": "ADR_VARIABLE"
   },
   "DON": {
    "n": "WisdomTree US MidCap Dividend",
@@ -1801,6 +1829,10 @@
    "n": "e.l.f. Beauty",
    "type": "EQUITY_STANDARD"
   },
+  "ELMD": {
+   "n": "Electromed",
+   "type": "EQUITY_STANDARD"
+  },
   "ELS": {
    "n": "Equity LifeStyle Properties",
    "type": "EQUITY_STANDARD"
@@ -1952,6 +1984,10 @@
   "EUSA": {
    "n": "iShares MSCI USA Equal Weighted ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "EVC": {
+   "n": "Entravision Communications",
+   "type": "EQUITY_STANDARD"
   },
   "EWA": {
    "n": "iShares MSCI Australia",
@@ -2545,6 +2581,10 @@
    "n": "First Trust Value Line Dividend Index",
    "type": "ETF_PASS_THROUGH"
   },
+  "FVRR": {
+   "n": "Fiverr International",
+   "type": "ADR_VARIABLE"
+  },
   "FWRG": {
    "n": "First Watch Restaurant Group",
    "type": "EQUITY_STANDARD"
@@ -2801,6 +2841,10 @@
    "n": "Grindr",
    "type": "EQUITY_STANDARD"
   },
+  "GRPN": {
+   "n": "Groupon",
+   "type": "EQUITY_STANDARD"
+  },
   "GSG": {
    "n": "iShares S&P GSCI Commodity-Indexed Trust",
    "type": "ETF_PASS_THROUGH"
@@ -2815,6 +2859,10 @@
   },
   "GTLB": {
    "n": "GitLab",
+   "type": "EQUITY_STANDARD"
+  },
+  "GTN": {
+   "n": "Gray Media",
    "type": "EQUITY_STANDARD"
   },
   "GTY": {
@@ -3641,6 +3689,10 @@
    "n": "JPMorgan Ultra-Short Income",
    "type": "ETF_PASS_THROUGH"
   },
+  "JVA": {
+   "n": "Coffee Holding Co.",
+   "type": "EQUITY_STANDARD"
+  },
   "JWN": {
    "n": "Nordstrom",
    "type": "EQUITY_STANDARD"
@@ -3869,6 +3921,10 @@
    "n": "Lear Corporation",
    "type": "EQUITY_STANDARD"
   },
+  "LEE": {
+   "n": "Lee Enterprises",
+   "type": "EQUITY_STANDARD"
+  },
   "LEMB": {
    "n": "iShares J.P. Morgan EM Local Currency Bond ETF",
    "type": "ETF_PASS_THROUGH"
@@ -3929,6 +3985,10 @@
    "n": "Lantheus Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "LOCO": {
+   "n": "El Pollo Loco Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "LODE": {
    "n": "Comstock Inc.",
    "type": "EQUITY_STANDARD"
@@ -3956,6 +4016,10 @@
   "LQD": {
    "n": "iShares iBoxx Investment Grade Corporate Bond",
    "type": "ETF_PASS_THROUGH"
+  },
+  "LQDT": {
+   "n": "Liquidity Services",
+   "type": "EQUITY_STANDARD"
   },
   "LRNZ": {
    "n": "TrueShares Technology, AI & Deep Learning ETF",
@@ -3995,6 +4059,10 @@
   },
   "LW": {
    "n": "Lamb Weston",
+   "type": "EQUITY_STANDARD"
+  },
+  "LWAY": {
+   "n": "Lifeway Foods",
    "type": "EQUITY_STANDARD"
   },
   "LWLG": {
@@ -4368,6 +4436,10 @@
   "NOG": {
    "n": "Northern Oil and Gas",
    "type": "EQUITY_STANDARD"
+  },
+  "NOMD": {
+   "n": "Nomad Foods",
+   "type": "ADR_VARIABLE"
   },
   "NORW": {
    "n": "Global X MSCI Norway ETF",
@@ -4873,6 +4945,10 @@
    "n": "Planet Fitness",
    "type": "EQUITY_STANDARD"
   },
+  "PLTK": {
+   "n": "Playtika Holding",
+   "type": "EQUITY_STANDARD"
+  },
   "PLXS": {
    "n": "Plexus",
    "type": "EQUITY_STANDARD"
@@ -5101,6 +5177,10 @@
    "n": "Qualys",
    "type": "EQUITY_STANDARD"
   },
+  "QNST": {
+   "n": "QuinStreet",
+   "type": "EQUITY_STANDARD"
+  },
   "QQEW": {
    "n": "First Trust NASDAQ-100 Equal Weighted Index Fund",
    "type": "ETF_PASS_THROUGH"
@@ -5183,6 +5263,10 @@
   },
   "REAL": {
    "n": "The RealReal",
+   "type": "EQUITY_STANDARD"
+  },
+  "REED": {
+   "n": "Reed's Inc.",
    "type": "EQUITY_STANDARD"
   },
   "REET": {
@@ -5409,6 +5493,10 @@
    "n": "Sunrun",
    "type": "EQUITY_STANDARD"
   },
+  "RVLV": {
+   "n": "Revolve Group",
+   "type": "EQUITY_STANDARD"
+  },
   "RWK": {
    "n": "Invesco S&P MidCap 400 Revenue ETF",
    "type": "ETF_PASS_THROUGH"
@@ -5544,6 +5632,10 @@
   "SCHK": {
    "n": "Schwab 1000 Index",
    "type": "ETF_PASS_THROUGH"
+  },
+  "SCHL": {
+   "n": "Scholastic",
+   "type": "EQUITY_STANDARD"
   },
   "SCHM": {
    "n": "Schwab US Mid-Cap",
@@ -5853,6 +5945,10 @@
    "n": "SoFi Technologies",
    "type": "EQUITY_STANDARD"
   },
+  "SOHU": {
+   "n": "Sohu.com Limited",
+   "type": "ADR_VARIABLE"
+  },
   "SONO": {
    "n": "Sonos",
    "type": "EQUITY_STANDARD"
@@ -6041,6 +6137,10 @@
    "n": "ProShares Ultra S&P500",
    "type": "ETF_PASS_THROUGH"
   },
+  "SSP": {
+   "n": "E.W. Scripps Company",
+   "type": "EQUITY_STANDARD"
+  },
   "SSRM": {
    "n": "SSR Mining",
    "type": "EQUITY_STANDARD"
@@ -6124,6 +6224,10 @@
   "TAP": {
    "n": "Molson Coors Beverage",
    "type": "EQUITY_STANDARD"
+  },
+  "TBLA": {
+   "n": "Taboola.com",
+   "type": "ADR_VARIABLE"
   },
   "TCAF": {
    "n": "T. Rowe Price Capital Appreciation Equity ETF",
@@ -6443,6 +6547,10 @@
   },
   "UPST": {
    "n": "Upstart",
+   "type": "EQUITY_STANDARD"
+  },
+  "UPWK": {
+   "n": "Upwork",
    "type": "EQUITY_STANDARD"
   },
   "URA": {
@@ -6828,6 +6936,10 @@
   "WAL": {
    "n": "Western Alliance Bancorporation",
    "type": "EQUITY_STANDARD"
+  },
+  "WB": {
+   "n": "Weibo Corporation",
+   "type": "ADR_VARIABLE"
   },
   "WCBR": {
    "n": "WisdomTree Cybersecurity Fund",
