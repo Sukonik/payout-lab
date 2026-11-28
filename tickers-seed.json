@@ -85,6 +85,10 @@
    "n": "Agree Realty",
    "type": "EQUITY_STANDARD"
   },
+  "ADNT": {
+   "n": "Adient plc",
+   "type": "EQUITY_STANDARD"
+  },
   "ADPT": {
    "n": "Adaptive Biotechnologies",
    "type": "EQUITY_STANDARD"
@@ -161,6 +165,10 @@
    "n": "Global X Artificial Intelligence and Technology",
    "type": "ETF_PASS_THROUGH"
   },
+  "AIR": {
+   "n": "AAR Corp.",
+   "type": "EQUITY_STANDARD"
+  },
   "AIT": {
    "n": "Applied Industrial Technologies",
    "type": "EQUITY_STANDARD"
@@ -223,6 +231,10 @@
   },
   "AMC": {
    "n": "AMC Entertainment Holdings",
+   "type": "EQUITY_STANDARD"
+  },
+  "AMG": {
+   "n": "Affiliated Managers Group",
    "type": "EQUITY_STANDARD"
   },
   "AMH": {
@@ -425,6 +437,10 @@
    "n": "Academy Sports and Outdoors",
    "type": "EQUITY_STANDARD"
   },
+  "ASTE": {
+   "n": "Astec Industries",
+   "type": "EQUITY_STANDARD"
+  },
   "ASTS": {
    "n": "AST SpaceMobile",
    "type": "EQUITY_STANDARD"
@@ -443,6 +459,10 @@
   },
   "ATOM": {
    "n": "Atomera",
+   "type": "EQUITY_STANDARD"
+  },
+  "ATRO": {
+   "n": "Astronics Corporation",
    "type": "EQUITY_STANDARD"
   },
   "AU": {
@@ -627,6 +647,10 @@
   },
   "BBWI": {
    "n": "Bath & Body Works",
+   "type": "EQUITY_STANDARD"
+  },
+  "BC": {
+   "n": "Brunswick Corporation",
    "type": "EQUITY_STANDARD"
   },
   "BCC": {
@@ -1433,6 +1457,10 @@
    "n": "Clearway Energy",
    "type": "EQUITY_STANDARD"
   },
+  "CWH": {
+   "n": "Camping World Holdings",
+   "type": "EQUITY_STANDARD"
+  },
   "CWT": {
    "n": "California Water Service Group",
    "type": "EQUITY_STANDARD"
@@ -1503,6 +1531,10 @@
   },
   "DC": {
    "n": "Dakota Gold Corp.",
+   "type": "EQUITY_STANDARD"
+  },
+  "DCO": {
+   "n": "Ducommun",
    "type": "EQUITY_STANDARD"
   },
   "DCOM": {
@@ -2011,6 +2043,10 @@
   },
   "EVC": {
    "n": "Entravision Communications",
+   "type": "EQUITY_STANDARD"
+  },
+  "EVR": {
+   "n": "Evercore",
    "type": "EQUITY_STANDARD"
   },
   "EWA": {
@@ -2993,6 +3029,10 @@
    "n": "Houlihan Lokey",
    "type": "EQUITY_STANDARD"
   },
+  "HLNE": {
+   "n": "Hamilton Lane",
+   "type": "EQUITY_STANDARD"
+  },
   "HMC": {
    "n": "Honda Motor",
    "type": "EQUITY_STANDARD"
@@ -3004,6 +3044,10 @@
   "HODL": {
    "n": "VanEck Bitcoin",
    "type": "ETF_PASS_THROUGH"
+  },
+  "HOG": {
+   "n": "Harley-Davidson",
+   "type": "EQUITY_STANDARD"
   },
   "HOMB": {
    "n": "Home BancShares",
@@ -3063,6 +3107,10 @@
   },
   "HXL": {
    "n": "Hexcel",
+   "type": "EQUITY_STANDARD"
+  },
+  "HY": {
+   "n": "Hyster-Yale",
    "type": "EQUITY_STANDARD"
   },
   "HYD": {
@@ -3933,6 +3981,10 @@
    "n": "nLIGHT",
    "type": "EQUITY_STANDARD"
   },
+  "LAZ": {
+   "n": "Lazard",
+   "type": "EQUITY_STANDARD"
+  },
   "LBRT": {
    "n": "Liberty Energy",
    "type": "EQUITY_STANDARD"
@@ -4157,6 +4209,10 @@
    "n": "Malibu Boats",
    "type": "EQUITY_STANDARD"
   },
+  "MC": {
+   "n": "Moelis & Company",
+   "type": "EQUITY_STANDARD"
+  },
   "MCFT": {
    "n": "MasterCraft Boat Holdings",
    "type": "EQUITY_STANDARD"
@@ -4257,6 +4313,10 @@
    "n": "Global X MLP & Energy Infrastructure ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "MLR": {
+   "n": "Miller Industries",
+   "type": "EQUITY_STANDARD"
+  },
   "MMSI": {
    "n": "Merit Medical Systems",
    "type": "EQUITY_STANDARD"
@@ -4348,6 +4408,10 @@
   "MTUM": {
    "n": "iShares MSCI USA Momentum Factor",
    "type": "ETF_PASS_THROUGH"
+  },
+  "MTW": {
+   "n": "Manitowoc Company",
+   "type": "EQUITY_STANDARD"
   },
   "MTZ": {
    "n": "MasTec",
@@ -4491,6 +4555,10 @@
   },
   "NOVT": {
    "n": "Novanta",
+   "type": "EQUITY_STANDARD"
+  },
+  "NPK": {
+   "n": "National Presto Industries",
    "type": "EQUITY_STANDARD"
   },
   "NPO": {
@@ -4945,6 +5013,10 @@
    "n": "iShares MSCI Global Metals and Mining Producers",
    "type": "ETF_PASS_THROUGH"
   },
+  "PII": {
+   "n": "Polaris Inc.",
+   "type": "EQUITY_STANDARD"
+  },
   "PINS": {
    "n": "Pinterest",
    "type": "EQUITY_STANDARD"
@@ -4956,6 +5028,10 @@
   "PJP": {
    "n": "Invesco Pharmaceuticals ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "PJT": {
+   "n": "PJT Partners",
+   "type": "EQUITY_STANDARD"
   },
   "PK": {
    "n": "Park Hotels & Resorts",
@@ -5057,6 +5133,10 @@
    "n": "Primoris Services",
    "type": "EQUITY_STANDARD"
   },
+  "PRLB": {
+   "n": "Proto Labs",
+   "type": "EQUITY_STANDARD"
+  },
   "PRNT": {
    "n": "ARK 3D Printing",
    "type": "ETF_PASS_THROUGH"
@@ -5115,6 +5195,10 @@
   },
   "PSMT": {
    "n": "PriceSmart",
+   "type": "EQUITY_STANDARD"
+  },
+  "PSN": {
+   "n": "Parsons Corporation",
    "type": "EQUITY_STANDARD"
   },
   "PSP": {
@@ -5601,6 +5685,10 @@
    "n": "Saia",
    "type": "EQUITY_STANDARD"
   },
+  "SAIC": {
+   "n": "Science Applications International",
+   "type": "EQUITY_STANDARD"
+  },
   "SAM": {
    "n": "Boston Beer",
    "type": "EQUITY_STANDARD"
@@ -5739,6 +5827,10 @@
   },
   "SEDG": {
    "n": "SolarEdge Technologies",
+   "type": "EQUITY_STANDARD"
+  },
+  "SEIC": {
+   "n": "SEI Investments",
    "type": "EQUITY_STANDARD"
   },
   "SELF": {
@@ -6493,6 +6585,10 @@
    "n": "Taiwan Semiconductor Manufacturing",
    "type": "EQUITY_STANDARD"
   },
+  "TTC": {
+   "n": "The Toro Company",
+   "type": "EQUITY_STANDARD"
+  },
   "TTD": {
    "n": "Trade Desk",
    "type": "EQUITY_STANDARD"
@@ -6516,6 +6612,10 @@
   "TUR": {
    "n": "iShares MSCI Turkey",
    "type": "ETF_PASS_THROUGH"
+  },
+  "TW": {
+   "n": "Tradeweb Markets",
+   "type": "EQUITY_STANDARD"
   },
   "TWLO": {
    "n": "Twilio",
@@ -6737,6 +6837,10 @@
    "n": "Vanguard Small-Cap Value",
    "type": "ETF_PASS_THROUGH"
   },
+  "VC": {
+   "n": "Visteon Corporation",
+   "type": "EQUITY_STANDARD"
+  },
   "VCIT": {
    "n": "Vanguard Intermediate-Term Corporate Bond",
    "type": "ETF_PASS_THROUGH"
@@ -6840,6 +6944,10 @@
   "VIOV": {
    "n": "Vanguard S&P Small-Cap 600 Value ETF",
    "type": "ETF_PASS_THROUGH"
+  },
+  "VIRT": {
+   "n": "Virtu Financial",
+   "type": "EQUITY_STANDARD"
   },
   "VIS": {
    "n": "Vanguard Industrials",
@@ -7236,6 +7344,10 @@
   "XOP": {
    "n": "SPDR S&P Oil and Gas Exploration and Production",
    "type": "ETF_PASS_THROUGH"
+  },
+  "XPEL": {
+   "n": "XPEL Inc.",
+   "type": "EQUITY_STANDARD"
   },
   "XPEV": {
    "n": "XPeng",
