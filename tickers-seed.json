@@ -589,6 +589,10 @@
    "n": "Amplify Lithium & Battery Technology ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "BBC": {
+   "n": "Virtus LifeSci Biotech Clinical Trials ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "BBCA": {
    "n": "JPMorgan BetaBuilders Canada",
    "type": "ETF_PASS_THROUGH"
@@ -607,6 +611,10 @@
   },
   "BBJP": {
    "n": "JPMorgan BetaBuilders Japan",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "BBP": {
+   "n": "Virtus LifeSci Biotech Products ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "BBSI": {
@@ -1189,6 +1197,10 @@
    "n": "iShares California Muni Bond",
    "type": "ETF_PASS_THROUGH"
   },
+  "CNBS": {
+   "n": "Amplify Seymour Cannabis ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "CNK": {
    "n": "Cinemark Holdings",
    "type": "EQUITY_STANDARD"
@@ -1332,6 +1344,10 @@
   "CROX": {
    "n": "Crocs",
    "type": "EQUITY_STANDARD"
+  },
+  "CRPT": {
+   "n": "First Trust SkyBridge Crypto Industry and Digital Economy ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "CRS": {
    "n": "Carpenter Technology",
@@ -1709,8 +1725,16 @@
    "n": "DoubleVerify Holdings",
    "type": "EQUITY_STANDARD"
   },
+  "DVYA": {
+   "n": "iShares Asia/Pacific Dividend ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "DVYE": {
    "n": "iShares Emerging Markets Dividend",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "DWAS": {
+   "n": "Invesco Dorsey Wright SmallCap Momentum ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "DX": {
@@ -2172,6 +2196,10 @@
   "FCPT": {
    "n": "Four Corners Property Trust",
    "type": "EQUITY_STANDARD"
+  },
+  "FDIG": {
+   "n": "Fidelity Crypto Industry and Digital Payments ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "FDIS": {
    "n": "Fidelity MSCI Consumer Discretionary",
@@ -3925,6 +3953,10 @@
    "n": "Lee Enterprises",
    "type": "EQUITY_STANDARD"
   },
+  "LEGR": {
+   "n": "First Trust Indxx Innovative Transaction & Process ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "LEMB": {
    "n": "iShares J.P. Morgan EM Local Currency Bond ETF",
    "type": "ETF_PASS_THROUGH"
@@ -3996,6 +4028,10 @@
   "LOGI": {
    "n": "Logitech International",
    "type": "EQUITY_STANDARD"
+  },
+  "LOUP": {
+   "n": "Innovator Loup Frontier Tech ETF",
+   "type": "ETF_PASS_THROUGH"
   },
   "LOVE": {
    "n": "Lovesac",
@@ -4191,6 +4227,10 @@
   },
   "MINT": {
    "n": "PIMCO Enhanced Short Maturity Active",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "MJ": {
+   "n": "Amplify Alternative Harvest ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "MKSI": {
@@ -5573,6 +5613,10 @@
    "n": "SAP",
    "type": "EQUITY_STANDARD"
   },
+  "SATO": {
+   "n": "Invesco Alerian Galaxy Crypto Economy ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "SATS": {
    "n": "EchoStar",
    "type": "EQUITY_STANDARD"
@@ -5901,6 +5945,22 @@
    "n": "iShares MSCI India Small-Cap ETF",
    "type": "ETF_PASS_THROUGH"
   },
+  "SMLF": {
+   "n": "iShares U.S. Small-Cap Equity Factor ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SMLV": {
+   "n": "SPDR SSGA US Small Cap Low Volatility Index ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SMMD": {
+   "n": "iShares Russell 2500 ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SMMV": {
+   "n": "iShares MSCI USA Small-Cap Min Vol Factor ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "SMOG": {
    "n": "VanEck Low Carbon Energy ETF",
    "type": "ETF_PASS_THROUGH"
@@ -6005,6 +6065,10 @@
    "n": "SPDR Portfolio Emerging Markets",
    "type": "ETF_PASS_THROUGH"
   },
+  "SPEU": {
+   "n": "SPDR Portfolio Europe ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "SPFF": {
    "n": "Global X SuperIncome Preferred ETF",
    "type": "ETF_PASS_THROUGH"
@@ -6085,12 +6149,28 @@
    "n": "SPX Technologies",
    "type": "EQUITY_STANDARD"
   },
+  "SPXE": {
+   "n": "ProShares S&P 500 ex-Energy ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "SPXL": {
    "n": "Direxion Daily S&P 500 Bull 3X Shares",
    "type": "ETF_PASS_THROUGH"
   },
+  "SPXN": {
+   "n": "ProShares S&P 500 ex-Financials ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPXT": {
+   "n": "ProShares S&P 500 ex-Technology ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "SPXU": {
    "n": "ProShares UltraPro Short S&P500",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "SPXV": {
+   "n": "ProShares S&P 500 ex-Health Care ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "SPYX": {
@@ -6985,6 +7065,10 @@
    "n": "Weatherford International",
    "type": "EQUITY_STANDARD"
   },
+  "WGMI": {
+   "n": "CoinShares Bitcoin Mining ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "WGO": {
    "n": "Winnebago Industries",
    "type": "EQUITY_STANDARD"
@@ -7129,8 +7213,20 @@
    "n": "SPDR S&P Metals and Mining",
    "type": "ETF_PASS_THROUGH"
   },
+  "XMHQ": {
+   "n": "Invesco S&P MidCap Quality ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "XMLV": {
    "n": "Invesco S&P MidCap Low Volatility ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XMMO": {
+   "n": "Invesco S&P MidCap Momentum ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XMVM": {
+   "n": "Invesco S&P MidCap Value with Momentum ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "XNTK": {
@@ -7173,8 +7269,24 @@
    "n": "SPDR S&P Semiconductor",
    "type": "ETF_PASS_THROUGH"
   },
+  "XSHD": {
+   "n": "Invesco S&P SmallCap High Dividend Low Volatility ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XSHQ": {
+   "n": "Invesco S&P SmallCap Quality ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
   "XSLV": {
    "n": "Invesco S&P SmallCap Low Volatility ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XSMO": {
+   "n": "Invesco S&P SmallCap Momentum ETF",
+   "type": "ETF_PASS_THROUGH"
+  },
+  "XSVM": {
+   "n": "Invesco S&P SmallCap Value with Momentum ETF",
    "type": "ETF_PASS_THROUGH"
   },
   "XSW": {
